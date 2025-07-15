@@ -1,0 +1,37 @@
+@import "./styles/tailwind.css";
+
+/* Styles personnalisés pour l'application kiosque */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  /* Styles pour les boutons de navigation */
+  .btn-primary {
+    @apply bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 font-medium;
+  }
+  
+  /* Styles pour les cartes de produits */
+  .product-card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105;
+  }
+  
+  /* Styles pour les écrans de chargement */
+  .loading-screen {
+    @apply min-h-screen flex items-center justify-center;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto;
+  }
+}

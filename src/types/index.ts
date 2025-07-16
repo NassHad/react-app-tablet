@@ -13,8 +13,7 @@ export type VehicleType = 'car' | 'truck' | 'motorcycle';
 export interface ProductCategory {
   id: number;
   name: string;
-  slug: string;
-  icon?: string;
+  active: boolean;
 }
 
 export interface Product {

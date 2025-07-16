@@ -2,18 +2,20 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import { defineCustomElements } from 'jeep-sqlite/loader';
 import { databaseService } from './db/database';
-
-// Initialize jeep-sqlite for web platform
-defineCustomElements(window);
+import { Capacitor } from '@capacitor/core';
 
 async function main() {
   try {
     console.log('Starting app initialization...');
-    // Initialize database before rendering the app
-    await databaseService.initialize();
-    console.log('Database initialized successfully');
+    
+    // Only initialize database on Android platform
+    if (Capacitor.getPlatform() === 'android') {
+      await databaseService.initialize();
+      console.log('Database initialized successfully');
+    } else {
+      console.log('Web environment - skipping database initialization');
+    }
     
     const root = createRoot(document.getElementById('root')!);
     root.render(

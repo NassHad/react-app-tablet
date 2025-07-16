@@ -58,13 +58,6 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
               onClick={() => handleCategorySelect(category)}
               className="block w-64 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
             >
-              <div className="text-4xl mb-2">
-                {category.icon === 'wiper' && '🌧️'}
-                {category.icon === 'battery' && '🔋'}
-                {category.icon === 'oil' && '🛢️'}
-                {category.icon === 'bulb' && '💡'}
-                {!category.icon && '📦'}
-              </div>
               <h2 className="text-xl font-semibold">{category.name}</h2>
             </button>
           ))}

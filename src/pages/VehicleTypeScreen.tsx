@@ -1,5 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import type { VehicleType } from '../types';
+import motorcycleIcon from '../assets/img/motorcycle.png';
+import carIcon from '../assets/img/car.png';
+import campingCarIcon from '../assets/img/camping-car.png';
 
 interface VehicleTypeScreenProps {
   onVehicleTypeSelect: (vehicleType: VehicleType) => void;
@@ -12,19 +15,19 @@ const VehicleTypeScreen = ({ onVehicleTypeSelect }: VehicleTypeScreenProps) => {
     {
       type: 'motorcycle' as VehicleType,
       name: 'Moto',
-      icon: '🏍️',
+      icon: motorcycleIcon,
       description: 'Deux-roues motorisés'
     },
     {
       type: 'car' as VehicleType,
       name: 'Voiture',
-      icon: '🚗',
+      icon: carIcon,
       description: 'Véhicules particuliers'
     },
     {
       type: 'camping-car' as VehicleType,
       name: 'Camping-car',
-      icon: '🚛',
+      icon: campingCarIcon,
       description: 'Véhicules utilitaires'
     }
   ];
@@ -56,7 +59,7 @@ const VehicleTypeScreen = ({ onVehicleTypeSelect }: VehicleTypeScreenProps) => {
               key={vehicleType.type}
               onClick={() => handleVehicleTypeSelect(vehicleType.type)}
               style={{
-                backgroundImage: `url(./src/assets/img/${vehicleType.type}.png)`,
+                backgroundImage: `url(${vehicleType.icon})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',

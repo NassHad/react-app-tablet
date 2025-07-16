@@ -5,6 +5,7 @@ export interface Vehicle {
   type: VehicleType;
   brand: string;
   model: string;
+  version?: string;
   year?: number;
 }
 
@@ -13,6 +14,8 @@ export type VehicleType = 'car' | 'truck' | 'motorcycle';
 export interface ProductCategory {
   id: number;
   name: string;
+  slug: string;
+  icon?: string;
   active: boolean;
 }
 
@@ -70,8 +73,7 @@ export type AppRoute =
   | '/'
   | '/vehicle-type'
   | '/category'
-  | '/brand'
-  | '/model'
+  | '/vehicle'
   | '/questions'
   | '/products'
   | '/product-details';

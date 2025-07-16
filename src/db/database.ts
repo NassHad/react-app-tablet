@@ -7,10 +7,10 @@ const DB_VERSION = 1;
 
 // Mock data for web environment
 const MOCK_CATEGORIES: ProductCategory[] = [
-  { id: 1, name: 'Balais d\'essuie-glace', active: true },
-  { id: 2, name: 'Batteries', active: true },
-  { id: 3, name: 'Huiles', active: true },
-  { id: 4, name: 'Ampoules', active: true },
+  { id: 1, name: 'Balais d\'essuie-glace', slug: 'wipers', icon: 'wiper', active: true },
+  { id: 2, name: 'Batteries', slug: 'batteries', icon: 'battery', active: true },
+  { id: 3, name: 'Huiles', slug: 'oils', icon: 'oil', active: true },
+  { id: 4, name: 'Ampoules', slug: 'bulbs', icon: 'bulb', active: true },
 ];
 
 class DatabaseService {

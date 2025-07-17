@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import type { VehicleType, ProductCategory, Vehicle } from '../types';
+import { useClickAnimation } from '../hooks/useClickAnimation';
 
 interface VehiclePageProps {
   vehicleType: VehicleType;
@@ -98,16 +100,46 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
       };
       
       onVehicleSelect(vehicle);
-      navigate('/questions');
+      
+      // For batteries, go directly to products (skip questions)
+      if (category.slug === 'batteries') {
+        navigate('/products');
+      } else {
+        navigate('/questions');
+      }
     }
   };
+
+  const submitAnimation = useClickAnimation({
+    onComplete: () => {
+      if (selectedBrand && selectedModel && selectedVersion) {
+        const vehicle: Vehicle = {
+          id: Math.floor(Math.random() * 1000), // Mock ID
+          type: vehicleType,
+          brand: selectedBrand,
+          model: selectedModel,
+          version: selectedVersion,
+          year: new Date().getFullYear() // Mock year
+        };
+        
+        onVehicleSelect(vehicle);
+        
+        // For batteries, go directly to products (skip questions)
+        if (category.slug === 'batteries') {
+          navigate('/products');
+        } else {
+          navigate('/questions');
+        }
+      }
+    }
+  });
 
   const isFormValid = selectedBrand && selectedModel && selectedVersion;
 
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-4xl">
-        <h1 className="text-4xl font-bold text-gray-900 mb-20">Sélection du véhicule</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mt-4 mb-18">Sélection du véhicule</h1>
         
         <form onSubmit={handleSubmit} className="space-y-12">
           {/* Brand Selection */}
@@ -141,7 +173,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
               value={selectedModel}
               onChange={(e) => handleModelChange(e.target.value)}
               className="w-full p-6 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
-              disabled={!selectedBrand}
+              disabled={selectedBrand === '' ? true : false}
               required
             >
               <option value="">
@@ -181,17 +213,19 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
 
           {/* Submit Button */}
           <div className="pt-8">
-            <button
-              type="submit"
+            <motion.button
+              type="button"
               disabled={!isFormValid}
+              onClick={submitAnimation.handleClick}
               className={`w-full p-6 rounded-lg text-2xl font-semibold transition-all ${
                 isFormValid
                   ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
               }`}
+              {...submitAnimation.animationProps}
             >
               Continuer
-            </button>
+            </motion.button>
           </div>
         </form>
       </div>

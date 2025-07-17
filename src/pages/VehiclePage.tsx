@@ -98,7 +98,13 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
       };
       
       onVehicleSelect(vehicle);
-      navigate('/questions');
+      
+      // For batteries, go directly to products (skip questions)
+      if (category.slug === 'batteries') {
+        navigate('/products');
+      } else {
+        navigate('/questions');
+      }
     }
   };
 

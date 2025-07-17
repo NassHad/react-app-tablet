@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import type { Vehicle, ProductCategory } from '../types';
 import WipersQuestions from './questions/WipersQuestions';
-import BatteriesQuestions from './questions/BatteriesQuestions';
 import OilsQuestions from './questions/OilsQuestions';
 import BulbsQuestions from './questions/BulbsQuestions';
 
@@ -19,13 +18,29 @@ const QuestionsScreen = ({ vehicle, category, onAnswersComplete }: QuestionsScre
     navigate('/products');
   };
 
+
+
   // Map category slugs to their respective question components
   const getQuestionsComponent = () => {
     switch (category.slug) {
       case 'wipers':
         return <WipersQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'batteries':
-        return <BatteriesQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
+        // For batteries, show a simple message and auto-continue
+        return (
+          <div className="flex items-center justify-center">
+            <div className="text-center">
+              <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Batteries</h1>
+              <p className="text-xl text-gray-600 mb-8">Aucune question spécifique requise pour les batteries.</p>
+              <button
+                onClick={() => handleAnswersComplete({})}
+                className="bg-blue-600 text-white py-4 px-8 rounded-lg hover:bg-blue-700 transition-colors text-xl font-semibold"
+              >
+                Continuer vers les produits
+              </button>
+            </div>
+          </div>
+        );
       case 'oils':
         return <OilsQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'bulbs':

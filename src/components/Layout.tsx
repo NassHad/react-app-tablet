@@ -1,14 +1,18 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import type { UserSelection } from '../types';
+import UserChoicesSummary from './UserChoicesSummary';
 
 interface LayoutProps {
   children: React.ReactNode;
+  userSelection: UserSelection | null;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, userSelection }: LayoutProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [searchQuery, setSearchQuery] = useState('');
+  const [showChoices, setShowChoices] = useState(true);
 
   const handleHomeClick = () => {
     navigate('/vehicle-type');
@@ -116,10 +120,47 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
       </nav>
 
-      {/* Main Content */}
-      <main className="flex-1 mt-10">
-        {children}
-      </main>
+      {/* Main Content Area */}
+      <div className="flex flex-1">
+        {/* Left Sidebar - User Choices Summary */}
+        {userSelection && (userSelection.vehicleType || userSelection.category || userSelection.vehicle) && (
+          <div className={`bg-white border-r border-gray-200 transition-all duration-300 ${showChoices ? 'w-80' : 'w-12'}`}>
+            {/* Toggle Button */}
+            <div className="p-2 border-b border-gray-200">
+              <button
+                onClick={() => setShowChoices(!showChoices)}
+                className="w-full p-2 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
+                title={showChoices ? "Masquer les choix" : "Afficher les choix"}
+              >
+                {showChoices ? (
+                  <>
+                    <svg className="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                    <span className="text-sm text-gray-600">Masquer</span>
+                  </>
+                ) : (
+                  <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                  </svg>
+                )}
+              </button>
+            </div>
+            
+            {/* Choices Summary */}
+            {showChoices && (
+              <div className="p-4">
+                <UserChoicesSummary userSelection={userSelection} />
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Main Content */}
+        <main className="flex-1">
+          {children}
+        </main>
+      </div>
     </div>
   );
 };

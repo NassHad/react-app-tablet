@@ -18,7 +18,7 @@ const AppRouter = () => {
 
   return (
     <Router>
-      <Layout>
+      <Layout userSelection={userSelection}>
         <Routes>
           {/* Route par défaut - redirige vers la sélection du type de véhicule */}
           <Route 
@@ -95,7 +95,7 @@ const AppRouter = () => {
           <Route 
             path="/products" 
             element={
-              userSelection?.answers ? (
+              (userSelection?.answers || (userSelection?.vehicle && userSelection?.category?.slug === 'batteries')) ? (
                 <ProductsScreen 
                   userSelection={userSelection}
                 />

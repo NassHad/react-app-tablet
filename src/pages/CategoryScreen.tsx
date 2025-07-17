@@ -1,7 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import type { VehicleType, ProductCategory } from '../types';
 import { databaseService } from '../db/database';
+import { useClickAnimation } from '../hooks/useClickAnimation';
 
 interface CategoryScreenProps {
   vehicleType: VehicleType;
@@ -36,6 +38,59 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
     navigate('/vehicle');
   };
 
+  // Create animation hooks for each category at the top level
+  const wiperAnimation = useClickAnimation({
+    onComplete: () => {
+      const category = categories.find(c => c.name === 'Balais d\'essuie-glace');
+      if (category) {
+        handleCategorySelect(category);
+      }
+    }
+  });
+
+  const batteryAnimation = useClickAnimation({
+    onComplete: () => {
+      const category = categories.find(c => c.name === 'Batteries');
+      if (category) {
+        handleCategorySelect(category);
+      }
+    }
+  });
+
+  const oilAnimation = useClickAnimation({
+    onComplete: () => {
+      const category = categories.find(c => c.name === 'Huiles');
+      if (category) {
+        handleCategorySelect(category);
+      }
+    }
+  });
+
+  const bulbAnimation = useClickAnimation({
+    onComplete: () => {
+      const category = categories.find(c => c.name === 'Ampoules');
+      if (category) {
+        handleCategorySelect(category);
+      }
+    }
+  });
+
+  // Create a mapping of category names to their animations
+  const getCategoryAnimation = (categoryName: string) => {
+    switch (categoryName) {
+      case 'Balais d\'essuie-glace':
+        return wiperAnimation;
+      case 'Batteries':
+        return batteryAnimation;
+      case 'Huiles':
+        return oilAnimation;
+      case 'Ampoules':
+        return bulbAnimation;
+      default:
+        return wiperAnimation; // fallback
+    }
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -52,22 +107,26 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Catégories</h1>
         <div className="flex flex-row space-x-8 justify-center">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => handleCategorySelect(category)}
-              className="block w-64 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              <div className="text-6xl mb-4">
-                {category.icon === 'wiper' && '🌧️'}
-                {category.icon === 'battery' && '🔋'}
-                {category.icon === 'oil' && '🛢️'}
-                {category.icon === 'bulb' && '💡'}
-                {!category.icon && '📦'}
-              </div>
-              <h2 className="text-2xl font-semibold">{category.name}</h2>
-            </button>
-          ))}
+          {categories.map((category) => {
+            const animation = getCategoryAnimation(category.name);
+            return (
+              <motion.button
+                key={category.id}
+                onClick={animation.handleClick}
+                className="block w-64 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+                {...animation.animationProps}
+              >
+                <div className="text-6xl mb-4">
+                  {category.icon === 'wiper' && '🌧️'}
+                  {category.icon === 'battery' && '🔋'}
+                  {category.icon === 'oil' && '🛢️'}
+                  {category.icon === 'bulb' && '💡'}
+                  {!category.icon && '📦'}
+                </div>
+                <h2 className="text-2xl font-semibold">{category.name}</h2>
+              </motion.button>
+            );
+          })}
         </div>
       </div>
     </div>

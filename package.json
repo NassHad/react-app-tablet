@@ -22,6 +22,7 @@
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
     "@types/react-router-dom": "^5.3.3",
+    "framer-motion": "^12.23.6",
     "jeep-sqlite": "^2.8.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

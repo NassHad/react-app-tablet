@@ -21,7 +21,14 @@ const WipersQuestions = ({ onAnswersComplete }: WipersQuestionsProps) => {
               className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
             >
               <div className="text-6xl mb-4">🚗</div>
-              <h3 className="text-2xl font-semibold">Avant</h3>
+              <h3 className="text-2xl font-semibold">Conducteur</h3>
+            </button>
+            <button
+              onClick={() => onAnswersComplete({ position: 'arriere' })}
+              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+            >
+              <div className="text-6xl mb-4">🚗</div>
+              <h3 className="text-2xl font-semibold">Passager</h3>
             </button>
             <button
               onClick={() => onAnswersComplete({ position: 'arriere' })}

@@ -1,7 +1,10 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import type { UserSelection } from '../types';
 import UserChoicesSummary from './UserChoicesSummary';
+import HelpModal from './HelpModal';
+import AnimatedLayout from './AnimatedLayout';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,6 +16,7 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
   const location = useLocation();
   const [searchQuery, setSearchQuery] = useState('');
   const [showChoices, setShowChoices] = useState(true);
+  const [showHelpModal, setShowHelpModal] = useState(false);
 
   const handleHomeClick = () => {
     navigate('/vehicle-type');
@@ -38,10 +42,13 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
           {/* Left side - Home and Back */}
           <div className="flex items-center space-x-3">
             {/* Home Logo */}
-            <button
+            <motion.button
               onClick={handleHomeClick}
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="cursor-pointer p-2 rounded-lg hover:bg-gray-100 transition-colors"
               title="Accueil"
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <svg
                 className="w-10 h-10 text-gray-700"
@@ -57,14 +64,17 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
                   d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                 />
               </svg>
-            </button>
+            </motion.button>
 
             {/* Back Arrow */}
             {showBackButton && (
-              <button
+              <motion.button
                 onClick={handleBackClick}
-                className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                className="cursor-pointer p-2 rounded-lg hover:bg-gray-100 transition-colors"
                 title="Retour"
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <svg
                   className="w-10 h-10 text-gray-700"
@@ -80,7 +90,7 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
                     d="M15 19l-7-7 7-7"
                   />
                 </svg>
-              </button>
+              </motion.button>
             )}
           </div>
 
@@ -115,8 +125,22 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
             </form>
           </div>
 
-          {/* Right side - Empty for balance */}
-          <div className="w-12"></div>
+          {/* Right side - Help button */}
+          <div className="flex items-center">
+            <motion.button
+              onClick={() => setShowHelpModal(true)}
+              className="cursor-pointer py-2 px-4 mr-4 text-orange-500 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg flex items-center space-x-1"
+              title="Besoin d'aide ?"
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <svg className="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Besoin d'aide ?</span>
+            </motion.button>
+          </div>
         </div>
       </nav>
 
@@ -127,10 +151,13 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
           <div className={`bg-white border-r border-gray-200 transition-all duration-300 ${showChoices ? 'w-80' : 'w-12'}`}>
             {/* Toggle Button */}
             <div className="p-2 border-b border-gray-200">
-              <button
+              <motion.button
                 onClick={() => setShowChoices(!showChoices)}
-                className="w-full p-2 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
+                className="cursor-pointer w-full p-2 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
                 title={showChoices ? "Masquer les choix" : "Afficher les choix"}
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 {showChoices ? (
                   <>
@@ -144,7 +171,7 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                   </svg>
                 )}
-              </button>
+              </motion.button>
             </div>
             
             {/* Choices Summary */}
@@ -158,9 +185,17 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
 
         {/* Main Content */}
         <main className="flex-1">
-          {children}
+          <AnimatedLayout>
+            {children}
+          </AnimatedLayout>
         </main>
       </div>
+      
+      {/* Help Modal */}
+      <HelpModal 
+        isOpen={showHelpModal} 
+        onClose={() => setShowHelpModal(false)} 
+      />
     </div>
   );
 };

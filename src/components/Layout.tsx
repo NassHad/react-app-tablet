@@ -5,6 +5,7 @@ import type { UserSelection } from '../types';
 import UserChoicesSummary from './UserChoicesSummary';
 import HelpModal from './HelpModal';
 import AnimatedLayout from './AnimatedLayout';
+import Breadcrumbs from './Breadcrumbs';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -143,6 +144,9 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
           </div>
         </div>
       </nav>
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs userSelection={userSelection} />
 
       {/* Main Content Area */}
       <div className="flex flex-1">

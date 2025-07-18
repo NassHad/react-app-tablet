@@ -151,7 +151,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
               id="brand"
               value={selectedBrand}
               onChange={(e) => handleBrandChange(e.target.value)}
-              className="w-full p-6 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
               required
             >
               <option value="">Sélectionnez une marque</option>
@@ -172,7 +172,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
               id="model"
               value={selectedModel}
               onChange={(e) => handleModelChange(e.target.value)}
-              className="w-full p-6 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
               disabled={selectedBrand === '' ? true : false}
               required
             >
@@ -196,7 +196,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
               id="version"
               value={selectedVersion}
               onChange={(e) => handleVersionChange(e.target.value)}
-              className="w-full p-6 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
               disabled={!selectedModel}
               required
             >

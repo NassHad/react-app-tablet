@@ -117,23 +117,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
 
   const submitAnimation = useClickAnimation({
     onComplete: () => {
-      if (selectedBrand && selectedModel && selectedMotorisation && dateCirculation) {
-        const vehicle: Vehicle = {
-          id: Math.floor(Math.random() * 1000), // Mock ID
-          type: vehicleType,
-          brand: selectedBrand,
-          model: selectedModel,
-          version: selectedMotorisation,
-          year: new Date(dateCirculation).getFullYear(),
-          dateCirculation,
-        };
-        onVehicleSelect(vehicle);
-        if (category.slug === 'batteries') {
-          navigate('/products');
-        } else {
-          navigate('/questions');
-        }
-      }
+      // Only animate, do not trigger navigation or onVehicleSelect here
     }
   });
 
@@ -142,18 +126,18 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-4xl">
-        <h1 className="text-4xl font-bold text-gray-900 mt-4 mb-18">Sélection du véhicule</h1>
-        <form onSubmit={handleSubmit} className="space-y-12">
+        <h1 className="text-2xl font-bold text-gray-900 mt-4 mb-8">Sélection du véhicule</h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* Brand Selection */}
-          <div className="space-y-4">
-            <label htmlFor="brand" className="block text-2xl font-semibold text-gray-700">
+          <div className="space-y-3">
+            <label htmlFor="brand" className="block text-lg font-semibold text-gray-700">
               Marque
             </label>
             <select
               id="brand"
               value={selectedBrand}
               onChange={(e) => handleBrandChange(e.target.value)}
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
               required
             >
               <option value="">Sélectionnez une marque</option>
@@ -167,14 +151,14 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
 
           {/* Model Selection */}
           <div className="space-y-4">
-            <label htmlFor="model" className="block text-2xl font-semibold text-gray-700">
+            <label htmlFor="model" className="block text-lg font-semibold text-gray-700">
               Modèle
             </label>
             <select
               id="model"
               value={selectedModel}
               onChange={(e) => handleModelChange(e.target.value)}
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
               disabled={selectedBrand === '' ? true : false}
               required
             >
@@ -191,14 +175,14 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
 
           {/* Motorisation Selection */}
           <div className="space-y-4">
-            <label htmlFor="motorisation" className="block text-2xl font-semibold text-gray-700">
+            <label htmlFor="motorisation" className="block text-lg font-semibold text-gray-700">
               Motorisation
             </label>
             <select
               id="motorisation"
               value={selectedMotorisation}
               onChange={(e) => handleVersionChange(e.target.value)}
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
               required
             >
               <option value="">Sélectionnez une motorisation</option>
@@ -211,7 +195,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
           </div>
           {/* Date de 1ère mise en circulation */}
           <div className="space-y-4">
-            <label htmlFor="dateCirculation" className="block text-2xl font-semibold text-gray-700">
+            <label htmlFor="dateCirculation" className="block text-lg font-semibold text-gray-700">
               Date de 1ère mise en circulation
             </label>
             <input
@@ -219,7 +203,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
               type="date"
               value={dateCirculation}
               onChange={handleDateCirculationChange}
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
               required
             />
           </div>
@@ -229,7 +213,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
               type="submit"
               disabled={!isFormValid}
               onClick={submitAnimation.handleClick}
-              className={`w-full p-6 rounded-lg text-2xl font-semibold transition-all ${
+              className={`w-full p-4 rounded-lg text-lg font-semibold transition-all ${
                 isFormValid
                   ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'

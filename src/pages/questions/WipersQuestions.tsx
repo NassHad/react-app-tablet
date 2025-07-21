@@ -10,7 +10,7 @@ const WipersQuestions = ({ onAnswersComplete }: WipersQuestionsProps) => {
   return (
     <div className="flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Position des balais d'essuie-glace</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Indiquez l’emplacement de l’essuie-glace souhaité</h1>
         
         {/* Question 1: Position */}
         <div className="mb-12">

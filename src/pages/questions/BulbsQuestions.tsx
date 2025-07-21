@@ -10,11 +10,11 @@ const BulbsQuestions = ({ onAnswersComplete }: BulbsQuestionsProps) => {
   return (
     <div className="flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Questions - Ampoules</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Questions - Eclairage</h1>
         
         {/* Question 1: Type d'ampoule */}
         <div className="mb-12">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8">Type d'ampoule</h2>
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8">Type d'eclairage</h2>
           <div className="flex flex-row space-x-8 justify-center">
             <button
               onClick={() => onAnswersComplete({ bulbType: 'phare' })}

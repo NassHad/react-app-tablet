@@ -10,7 +10,8 @@ const MOCK_CATEGORIES: ProductCategory[] = [
   { id: 1, name: 'Balais d\'essuie-glace', slug: 'wipers', icon: 'wiper', active: true },
   { id: 2, name: 'Batteries', slug: 'batteries', icon: 'battery', active: true },
   { id: 3, name: 'Huiles', slug: 'oils', icon: 'oil', active: true },
-  { id: 4, name: 'Ampoules', slug: 'bulbs', icon: 'bulb', active: true },
+  { id: 4, name: 'Eclairage', slug: 'bulbs', icon: 'bulb', active: true },
+  { id: 5, name: 'Filtration', slug: 'filtration', icon: 'filter', active: true },
 ];
 
 class DatabaseService {
@@ -72,7 +73,8 @@ class DatabaseService {
       (1, 'Balais d''essuie-glace', 1),
       (2, 'Batteries', 1),
       (3, 'Huiles', 1),
-      (4, 'Ampoules', 1);
+      (4, 'Eclairage', 1),
+      (5, 'Filtration', 1);
     `);
   }
 

@@ -4,7 +4,8 @@ import {
   WiperProductsScreen,
   BatteryProductsScreen,
   BulbProductsScreen,
-  OilProductsScreen
+  OilProductsScreen,
+  FiltrationProductsScreen
 } from './products';
 
 interface ProductsScreenProps {
@@ -35,6 +36,8 @@ const ProductsScreen = ({ userSelection }: ProductsScreenProps) => {
         return <BulbProductsScreen userSelection={userSelection} />;
       case 'oils':
         return <OilProductsScreen userSelection={userSelection} />;
+      case 'filtration':
+        return <FiltrationProductsScreen userSelection={userSelection} />;
       default:
         return (
           <div className="flex items-center justify-center min-h-screen">

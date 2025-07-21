@@ -68,7 +68,16 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
 
   const bulbAnimation = useClickAnimation({
     onComplete: () => {
-      const category = categories.find(c => c.name === 'Ampoules');
+      const category = categories.find(c => c.name === 'Eclairage');
+      if (category) {
+        handleCategorySelect(category);
+      }
+    }
+  });
+
+  const filtrationAnimation = useClickAnimation({
+    onComplete: () => {
+      const category = categories.find(c => c.name === 'Filtration');
       if (category) {
         handleCategorySelect(category);
       }
@@ -78,14 +87,16 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
   // Create a mapping of category names to their animations
   const getCategoryAnimation = (categoryName: string) => {
     switch (categoryName) {
-      case 'Balais d\'essuie-glace':
+      case "Balais d'essuie-glace":
         return wiperAnimation;
       case 'Batteries':
         return batteryAnimation;
       case 'Huiles':
         return oilAnimation;
-      case 'Ampoules':
+      case 'Eclairage':
         return bulbAnimation;
+      case 'Filtration':
+        return filtrationAnimation;
       default:
         return wiperAnimation; // fallback
     }
@@ -121,6 +132,7 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
                   {category.icon === 'battery' && '🔋'}
                   {category.icon === 'oil' && '🛢️'}
                   {category.icon === 'bulb' && '💡'}
+                  {category.icon === 'filter' && '🧰'}
                   {!category.icon && '📦'}
                 </div>
                 <h2 className="text-2xl font-semibold">{category.name}</h2>

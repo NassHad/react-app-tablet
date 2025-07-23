@@ -51,6 +51,7 @@ const HelpModal = ({ isOpen, onClose }: HelpModalProps) => {
       />
       
       {/* Modal content */}
+      
       <div className="relative bg-white rounded-lg shadow-xl min-w-4xl max-w-4xl max-h-[90vh] overflow-hidden">
         {/* Close button */}
         <button

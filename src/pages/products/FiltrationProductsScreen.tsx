@@ -1,42 +1,27 @@
 import { useNavigate } from 'react-router-dom';
 import type { UserSelection } from '../../types';
 
-interface WiperProductsScreenProps {
+interface FiltrationProductsScreenProps {
   userSelection: UserSelection;
 }
 
-// Mock wiper products data
-const MOCK_WIPER_PRODUCTS = [
-  { id: 1, brand: 'Valeo', type: 'VS70', size: '350mm' },
-  { id: 2, brand: 'Bosch', type: 'Aerotwin', size: '400mm' },
-  { id: 3, brand: 'Valeo', type: 'VS80', size: '380mm' },
-  { id: 4, brand: 'Bosch', type: 'Aerotwin', size: '350mm' },
-  { id: 5, brand: 'Valeo', type: 'VS60', size: '320mm' },
-  { id: 6, brand: 'Bosch', type: 'Aerotwin', size: '420mm' },
-  { id: 7, brand: 'Valeo', type: 'VS90', size: '450mm' },
-  { id: 8, brand: 'Bosch', type: 'Aerotwin', size: '380mm' },
-  { id: 9, brand: 'Valeo', type: 'VS100', size: '500mm' },
-  { id: 10, brand: 'Bosch', type: 'Aerotwin', size: '360mm' },
-  { id: 11, brand: 'Valeo', type: 'VS50', size: '300mm' },
-  { id: 12, brand: 'Bosch', type: 'Aerotwin', size: '440mm' },
+// Mock filtration products data
+const MOCK_FILTRATION_PRODUCTS = [
+  { id: 1, brand: 'Purflux', type: 'Filtre à gazole', reference: 'C123', compatible: true },
+  { id: 2, brand: 'Mann', type: 'Filtre à air', reference: 'A456', compatible: true },
+  { id: 3, brand: 'Bosch', type: 'Filtre d\'habitacle', reference: 'B789', compatible: true },
+  { id: 4, brand: 'Purflux', type: 'Filtre à huile', reference: 'H101', compatible: true },
 ];
 
-const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
-  const navigate = useNavigate();
-
-  const handleProductDetails = (productId: number) => {
-    navigate(`/product-details/${productId}`);
-  };
-
+const FiltrationProductsScreen = ({ userSelection }: FiltrationProductsScreenProps) => {
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-6xl">
-        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Balais d'essuie-glace</h1>
-        
+        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Filtration</h1>
         {/* Vertical scrollable container */}
         <div className="overflow-y-auto max-h-112 pb-8">
           <div className="space-y-4 px-8">
-            {MOCK_WIPER_PRODUCTS.map((product) => (
+            {MOCK_FILTRATION_PRODUCTS.map((product) => (
               <div
                 key={product.id}
                 className="bg-white rounded-lg shadow-lg p-6 flex items-center justify-between"
@@ -47,24 +32,19 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
                     <span className="text-gray-600 text-lg">Marque:</span>
                     <span className="ml-2 text-xl font-bold text-gray-900">{product.brand}</span>
                   </div>
-                  
                   <div className="text-left">
                     <span className="text-gray-600 text-lg">Type:</span>
                     <span className="ml-2 text-xl font-semibold text-gray-900">{product.type}</span>
                   </div>
-                  
                   <div className="text-left">
-                    <span className="text-gray-600 text-lg">Taille:</span>
-                    <span className="ml-2 text-xl font-semibold text-gray-900">{product.size}</span>
+                    <span className="text-gray-600 text-lg">Référence:</span>
+                    <span className="ml-2 text-xl font-semibold text-gray-900">{product.reference}</span>
                   </div>
                 </div>
-
-                {/* Action Button */}
               </div>
             ))}
           </div>
         </div>
-
         {/* Scroll indicator */}
         <div className="mt-8 text-gray-500 text-lg">
           ↑ Faites glisser pour voir plus de produits ↓
@@ -74,4 +54,4 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
   );
 };
 
-export default WiperProductsScreen; 
+export default FiltrationProductsScreen; 

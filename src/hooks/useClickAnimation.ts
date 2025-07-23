@@ -5,7 +5,7 @@ interface UseClickAnimationProps {
   delay?: number;
 }
 
-export const useClickAnimation = ({ onComplete, delay = 500 }: UseClickAnimationProps) => {
+export const useClickAnimation = ({ onComplete, delay = 200 }: UseClickAnimationProps) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClick = () => {

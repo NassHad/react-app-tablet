@@ -3,6 +3,7 @@ import type { Vehicle, ProductCategory } from '../types';
 import WipersQuestions from './questions/WipersQuestions';
 import OilsQuestions from './questions/OilsQuestions';
 import BulbsQuestions from './questions/BulbsQuestions';
+import FiltrationQuestions from './questions/FiltrationQuestions';
 
 interface QuestionsScreenProps {
   vehicle: Vehicle;
@@ -45,6 +46,8 @@ const QuestionsScreen = ({ vehicle, category, onAnswersComplete }: QuestionsScre
         return <OilsQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'bulbs':
         return <BulbsQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
+      case 'filtration':
+        return <FiltrationQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       default:
         // Fallback for unknown categories
         return (

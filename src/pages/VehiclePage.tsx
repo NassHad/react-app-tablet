@@ -38,7 +38,8 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
   const navigate = useNavigate();
   const [selectedBrand, setSelectedBrand] = useState<string>('');
   const [selectedModel, setSelectedModel] = useState<string>('');
-  const [selectedVersion, setSelectedVersion] = useState<string>('');
+  const [selectedMotorisation, setSelectedMotorisation] = useState<string>('');
+  const [dateCirculation, setDateCirculation] = useState<string>('');
   const [availableModels, setAvailableModels] = useState<Array<{id: number, name: string, versions: string[]}>>([]);
   const [availableVersions, setAvailableVersions] = useState<string[]>([]);
 
@@ -49,13 +50,15 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
       if (brand) {
         setAvailableModels(brand.models);
         setSelectedModel('');
-        setSelectedVersion('');
+        setSelectedMotorisation('');
+        setDateCirculation('');
         setAvailableVersions([]);
       }
     } else {
       setAvailableModels([]);
       setSelectedModel('');
-      setSelectedVersion('');
+      setSelectedMotorisation('');
+      setDateCirculation('');
       setAvailableVersions([]);
     }
   }, [selectedBrand]);
@@ -66,11 +69,13 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
       const model = availableModels.find(m => m.name === selectedModel);
       if (model) {
         setAvailableVersions(model.versions);
-        setSelectedVersion('');
+        setSelectedMotorisation('');
+        setDateCirculation('');
       }
     } else {
       setAvailableVersions([]);
-      setSelectedVersion('');
+      setSelectedMotorisation('');
+      setDateCirculation('');
     }
   }, [selectedModel, availableModels]);
 
@@ -82,26 +87,26 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
     setSelectedModel(model);
   };
 
-  const handleVersionChange = (version: string) => {
-    setSelectedVersion(version);
+  const handleVersionChange = (motorisation: string) => {
+    setSelectedMotorisation(motorisation);
+  };
+  const handleDateCirculationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDateCirculation(e.target.value);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (selectedBrand && selectedModel && selectedVersion) {
+    if (selectedBrand && selectedModel && selectedMotorisation && dateCirculation) {
       const vehicle: Vehicle = {
         id: Math.floor(Math.random() * 1000), // Mock ID
         type: vehicleType,
         brand: selectedBrand,
         model: selectedModel,
-        version: selectedVersion,
-        year: new Date().getFullYear() // Mock year
+        version: selectedMotorisation,
+        year: new Date(dateCirculation).getFullYear(),
+        dateCirculation,
       };
-      
       onVehicleSelect(vehicle);
-      
-      // For batteries, go directly to products (skip questions)
       if (category.slug === 'batteries') {
         navigate('/products');
       } else {
@@ -112,46 +117,27 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
 
   const submitAnimation = useClickAnimation({
     onComplete: () => {
-      if (selectedBrand && selectedModel && selectedVersion) {
-        const vehicle: Vehicle = {
-          id: Math.floor(Math.random() * 1000), // Mock ID
-          type: vehicleType,
-          brand: selectedBrand,
-          model: selectedModel,
-          version: selectedVersion,
-          year: new Date().getFullYear() // Mock year
-        };
-        
-        onVehicleSelect(vehicle);
-        
-        // For batteries, go directly to products (skip questions)
-        if (category.slug === 'batteries') {
-          navigate('/products');
-        } else {
-          navigate('/questions');
-        }
-      }
+      // Only animate, do not trigger navigation or onVehicleSelect here
     }
   });
 
-  const isFormValid = selectedBrand && selectedModel && selectedVersion;
+  const isFormValid = selectedBrand && selectedModel && selectedMotorisation && dateCirculation;
 
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-4xl">
-        <h1 className="text-4xl font-bold text-gray-900 mt-4 mb-18">Sélection du véhicule</h1>
-        
-        <form onSubmit={handleSubmit} className="space-y-12">
+        <h1 className="text-2xl font-bold text-gray-900 mt-4 mb-8">Sélection du véhicule</h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* Brand Selection */}
-          <div className="space-y-4">
-            <label htmlFor="brand" className="block text-2xl font-semibold text-gray-700">
+          <div className="space-y-3">
+            <label htmlFor="brand" className="block text-lg font-semibold text-gray-700">
               Marque
             </label>
             <select
               id="brand"
               value={selectedBrand}
               onChange={(e) => handleBrandChange(e.target.value)}
-              className="w-full p-6 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
               required
             >
               <option value="">Sélectionnez une marque</option>
@@ -165,14 +151,14 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
 
           {/* Model Selection */}
           <div className="space-y-4">
-            <label htmlFor="model" className="block text-2xl font-semibold text-gray-700">
+            <label htmlFor="model" className="block text-lg font-semibold text-gray-700">
               Modèle
             </label>
             <select
               id="model"
               value={selectedModel}
               onChange={(e) => handleModelChange(e.target.value)}
-              className="w-full p-6 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
               disabled={selectedBrand === '' ? true : false}
               required
             >
@@ -187,37 +173,47 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
             </select>
           </div>
 
-          {/* Version Selection */}
+          {/* Motorisation Selection */}
           <div className="space-y-4">
-            <label htmlFor="version" className="block text-2xl font-semibold text-gray-700">
-              Version
+            <label htmlFor="motorisation" className="block text-lg font-semibold text-gray-700">
+              Motorisation
             </label>
             <select
-              id="version"
-              value={selectedVersion}
+              id="motorisation"
+              value={selectedMotorisation}
               onChange={(e) => handleVersionChange(e.target.value)}
-              className="w-full p-6 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
-              disabled={!selectedModel}
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
               required
             >
-              <option value="">
-                {selectedModel ? 'Sélectionnez une version' : 'Sélectionnez d\'abord un modèle'}
-              </option>
-              {availableVersions.map((version) => (
-                <option key={version} value={version}>
-                  {version}
+              <option value="">Sélectionnez une motorisation</option>
+              {availableVersions.map((motorisation) => (
+                <option key={motorisation} value={motorisation}>
+                  {motorisation}
                 </option>
               ))}
             </select>
           </div>
-
+          {/* Date de 1ère mise en circulation */}
+          <div className="space-y-4">
+            <label htmlFor="dateCirculation" className="block text-lg font-semibold text-gray-700">
+              Date de 1ère mise en circulation
+            </label>
+            <input
+              id="dateCirculation"
+              type="date"
+              value={dateCirculation}
+              onChange={handleDateCirculationChange}
+              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+              required
+            />
+          </div>
           {/* Submit Button */}
-          <div className="pt-8">
+          <div>
             <motion.button
-              type="button"
+              type="submit"
               disabled={!isFormValid}
               onClick={submitAnimation.handleClick}
-              className={`w-full p-6 rounded-lg text-2xl font-semibold transition-all ${
+              className={`w-full p-4 rounded-lg text-lg font-semibold transition-all ${
                 isFormValid
                   ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
@@ -233,4 +229,4 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
   );
 };
 
-export default VehiclePage; 
+export default VehiclePage;

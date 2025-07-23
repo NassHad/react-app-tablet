@@ -5,6 +5,7 @@ import type { UserSelection } from '../types';
 import UserChoicesSummary from './UserChoicesSummary';
 import HelpModal from './HelpModal';
 import AnimatedLayout from './AnimatedLayout';
+import Breadcrumbs from './Breadcrumbs';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -33,6 +34,7 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
   };
 
   const showBackButton = location.pathname !== '/vehicle-type';
+  const showHelpButton = location.pathname === '/vehicle';
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -126,7 +128,7 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
           </div>
 
           {/* Right side - Help button */}
-          <div className="flex items-center">
+          {showHelpButton && (
             <motion.button
               onClick={() => setShowHelpModal(true)}
               className="cursor-pointer py-2 px-4 mr-4 text-orange-500 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg flex items-center space-x-1"
@@ -140,9 +142,12 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
               </svg>
               <span>Besoin d'aide ?</span>
             </motion.button>
-          </div>
+          )}
         </div>
       </nav>
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs userSelection={userSelection} />
 
       {/* Main Content Area */}
       <div className="flex flex-1">

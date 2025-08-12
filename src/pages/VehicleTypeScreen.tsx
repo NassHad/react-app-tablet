@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import type { VehicleType } from '../types';
 import { useClickAnimation } from '../hooks/useClickAnimation';
+import { FLOW_CONFIG } from '../config/flowConfig';
 
 interface VehicleTypeScreenProps {
   onVehicleTypeSelect: (vehicleType: VehicleType) => void;
@@ -12,7 +13,9 @@ const VehicleTypeScreen = ({ onVehicleTypeSelect }: VehicleTypeScreenProps) => {
 
   const handleVehicleTypeSelect = (vehicleType: VehicleType) => {
     onVehicleTypeSelect(vehicleType);
-    navigate('/category');
+    // Navigate based on flow configuration
+    const nextRoute = FLOW_CONFIG.SELECT_VEHICLE_FIRST ? '/vehicle' : '/category';
+    navigate(nextRoute);
   };
 
   const carAnimation = useClickAnimation({

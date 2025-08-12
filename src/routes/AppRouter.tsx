@@ -1,17 +1,21 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import VehicleTypeScreen from '../pages/VehicleTypeScreen';
+import HomePage from '../pages/HomePage';
 import CategoryScreen from '../pages/CategoryScreen';
 import VehiclePage from '../pages/VehiclePage';
 import QuestionsScreen from '../pages/QuestionsScreen'; 
 import ProductsScreen from '../pages/ProductsScreen';
 import ProductDetailsScreen from '../pages/ProductDetailsScreen';
+import NoProductsAvailableScreen from '../pages/NoProductsAvailableScreen';
 import Layout from '../components/Layout';
 import PageTransition from '../components/PageTransition';
 import type { UserSelection, VehicleType } from '../types';
+import { FLOW_CONFIG } from '../config/flowConfig';
 
 // Define route order for determining direction
-const routeOrder = ['/vehicle-type', '/category', '/vehicle', '/questions', '/products', '/product-details'];
+const routeOrder = FLOW_CONFIG.SELECT_VEHICLE_FIRST 
+  ? ['/', '/vehicle', '/category', '/questions', '/products', '/product-details', '/no-products-available']
+  : ['/', '/category', '/vehicle', '/questions', '/products', '/product-details', '/no-products-available'];
 
 const AppRouterContent = () => {
   const [userSelection, setUserSelection] = useState<UserSelection | null>(null);
@@ -49,83 +53,142 @@ const AppRouterContent = () => {
   }, [location.pathname, previousPath]);
 
   return (
-    <Layout userSelection={userSelection}>
-      <Routes>
-          {/* Route par défaut - redirige vers la sélection du type de véhicule */}
-          <Route 
-            path="/" 
-            element={<Navigate to="/vehicle-type" replace />} 
-          />
-
-          {/* Sélection du type de véhicule */}
-          <Route 
-            path="/vehicle-type" 
-            element={
+    <Routes>
+        {/* Route par défaut - Page d'accueil */}
+        <Route 
+          path="/" 
+          element={
+            <Layout userSelection={userSelection}>
               <PageTransition direction={navigationDirection}>
-                <VehicleTypeScreen 
+                <HomePage 
                   onVehicleTypeSelect={(vehicleType: VehicleType) => {
                     updateUserSelection({ vehicleType });
                   }}
                 />
               </PageTransition>
-            } 
-          />
+            </Layout>
+          } 
+        />
 
-          {/* Sélection de la catégorie de produit */}
-          <Route 
-            path="/category" 
-            element={
-              userSelection?.vehicleType ? (
-                <PageTransition direction={navigationDirection}>
-                  <CategoryScreen 
-                    vehicleType={userSelection.vehicleType}
-                    onCategorySelect={(category) => {
-                      updateUserSelection({ category });
-                    }}
-                  />
-                </PageTransition>
-              ) : (
-                <Navigate to="/vehicle-type" replace />
-              )
-            } 
-          />
+        {/* Sélection du type de véhicule - Redirect to homepage */}
+        <Route 
+          path="/vehicle-type" 
+          element={<Navigate to="/" replace />} 
+        />
 
-          {/* Sélection du véhicule (marque, modèle, version) */}
-          <Route 
-            path="/vehicle" 
-            element={
-              userSelection?.vehicleType && userSelection?.category ? (
-                <PageTransition direction={navigationDirection}>
-                  <VehiclePage 
-                    vehicleType={userSelection.vehicleType}
-                    category={userSelection.category}
-                    onVehicleSelect={(vehicle) => {
-                      updateUserSelection({ vehicle });
-                    }}
-                  />
-                </PageTransition>
-              ) : (
-                <Navigate to="/vehicle-type" replace />
-              )
-            } 
-          />
+          {FLOW_CONFIG.SELECT_VEHICLE_FIRST ? (
+            // New flow: Vehicle first, then category
+            <>
+              {/* Sélection du véhicule (marque, modèle, version) */}
+              <Route 
+                path="/vehicle" 
+                element={
+                  userSelection?.vehicleType ? (
+                    <Layout userSelection={userSelection}>
+                      <PageTransition direction={navigationDirection}>
+                        <VehiclePage 
+                          vehicleType={userSelection.vehicleType}
+                          category={{ id: 0, name: '', slug: '', active: true }}
+                          onVehicleSelect={(vehicle) => {
+                            updateUserSelection({ vehicle });
+                          }}
+                        />
+                      </PageTransition>
+                    </Layout>
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                } 
+              />
+
+              {/* Sélection de la catégorie de produit */}
+              <Route 
+                path="/category" 
+                element={
+                  userSelection?.vehicle ? (
+                    <Layout userSelection={userSelection}>
+                      <PageTransition direction={navigationDirection}>
+                        <CategoryScreen 
+                          vehicleType={userSelection.vehicleType!}
+                          vehicle={userSelection.vehicle}
+                          onCategorySelect={(category) => {
+                            updateUserSelection({ category });
+                          }}
+                        />
+                      </PageTransition>
+                    </Layout>
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                } 
+              />
+            </>
+          ) : (
+            // Original flow: Category first, then vehicle
+            <>
+              {/* Sélection de la catégorie de produit */}
+              <Route 
+                path="/category" 
+                element={
+                  userSelection?.vehicleType ? (
+                    <Layout userSelection={userSelection}>
+                      <PageTransition direction={navigationDirection}>
+                        <CategoryScreen 
+                          vehicleType={userSelection.vehicleType}
+                          onCategorySelect={(category) => {
+                            updateUserSelection({ category });
+                          }}
+                        />
+                      </PageTransition>
+                    </Layout>
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                } 
+              />
+
+              {/* Sélection du véhicule (marque, modèle, version) */}
+              <Route 
+                path="/vehicle" 
+                element={
+                  userSelection?.vehicleType && userSelection?.category ? (
+                    <Layout userSelection={userSelection}>
+                      <PageTransition direction={navigationDirection}>
+                        <VehiclePage 
+                          vehicleType={userSelection.vehicleType}
+                          category={userSelection.category}
+                          onVehicleSelect={(vehicle) => {
+                            updateUserSelection({ vehicle });
+                          }}
+                        />
+                      </PageTransition>
+                    </Layout>
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                } 
+              />
+            </>
+          )}
 
           {/* Questions spécifiques */}
           <Route 
             path="/questions" 
             element={
-              userSelection?.vehicle ? (
-                <PageTransition direction={navigationDirection}>
-                  <QuestionsScreen 
-                    vehicle={userSelection.vehicle}
-                    category={userSelection.category!}
-                    onAnswersComplete={(answers) => {
-                      updateUserSelection({ answers });
-                    }}
-                  />
-                </PageTransition>
+              userSelection?.vehicle && userSelection?.category ? (
+                <Layout userSelection={userSelection}>
+                  <PageTransition direction={navigationDirection}>
+                    <QuestionsScreen 
+                      vehicle={userSelection.vehicle}
+                      category={userSelection.category}
+                      onAnswersComplete={(answers) => {
+                        updateUserSelection({ answers });
+                      }}
+                    />
+                  </PageTransition>
+                </Layout>
               ) : (
-                <Navigate to="/vehicle-type" replace />
+                <Navigate to="/" replace />
               )
             } 
           />
@@ -135,13 +198,15 @@ const AppRouterContent = () => {
             path="/products" 
             element={
               (userSelection?.answers || (userSelection?.vehicle && userSelection?.category?.slug === 'batteries')) ? (
-                <PageTransition direction={navigationDirection}>
-                  <ProductsScreen 
-                    userSelection={userSelection}
-                  />
-                </PageTransition>
+                <Layout userSelection={userSelection}>
+                  <PageTransition direction={navigationDirection}>
+                    <ProductsScreen 
+                      userSelection={userSelection}
+                    />
+                  </PageTransition>
+                </Layout>
               ) : (
-                <Navigate to="/vehicle-type" replace />
+                <Navigate to="/" replace />
               )
             } 
           />
@@ -150,21 +215,37 @@ const AppRouterContent = () => {
           <Route 
             path="/product-details/:productId" 
             element={
-              <PageTransition direction={navigationDirection}>
-                <ProductDetailsScreen 
-                  userSelection={userSelection}
-                />
-              </PageTransition>
+              <Layout userSelection={userSelection}>
+                <PageTransition direction={navigationDirection}>
+                  <ProductDetailsScreen 
+                    userSelection={userSelection}
+                  />
+                </PageTransition>
+              </Layout>
+            } 
+          />
+
+          {/* Page "Aucun produit disponible" */}
+          <Route 
+            path="/no-products-available" 
+            element={
+              <Layout userSelection={userSelection}>
+                <PageTransition direction={navigationDirection}>
+                  <NoProductsAvailableScreen 
+                    vehicle={location.state?.vehicle}
+                    category={location.state?.category}
+                  />
+                </PageTransition>
+              </Layout>
             } 
           />
 
           {/* Route de fallback */}
           <Route 
             path="*" 
-            element={<Navigate to="/vehicle-type" replace />} 
+            element={<Navigate to="/" replace />} 
           />
         </Routes>
-      </Layout>
   );
 };
 

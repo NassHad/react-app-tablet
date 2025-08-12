@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import type { VehicleType, ProductCategory, Vehicle } from '../types';
 import { useClickAnimation } from '../hooks/useClickAnimation';
+import { checkProductAvailability } from '../utils/productAvailability';
+import { FLOW_CONFIG } from '../config/flowConfig';
 
 interface VehiclePageProps {
   vehicleType: VehicleType;
@@ -94,7 +96,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
     setDateCirculation(e.target.value);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedBrand && selectedModel && selectedMotorisation && dateCirculation) {
       const vehicle: Vehicle = {
@@ -106,11 +108,31 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
         year: new Date(dateCirculation).getFullYear(),
         dateCirculation,
       };
+      
       onVehicleSelect(vehicle);
-      if (category.slug === 'batteries') {
-        navigate('/products');
+      
+      // In the new flow, we navigate to category selection first
+      // In the original flow, we check availability and navigate directly
+      if (FLOW_CONFIG.SELECT_VEHICLE_FIRST) {
+        // New flow: navigate to category selection
+        navigate('/category');
       } else {
-        navigate('/questions');
+        // Original flow: check availability and navigate accordingly
+        const productsAvailable = await checkProductAvailability(vehicle, category);
+        
+        if (!productsAvailable) {
+          // Redirect to no products available page
+          navigate('/no-products-available', { 
+            state: { vehicle, category } 
+          });
+        } else {
+          // Continue with normal flow
+          if (category.slug === 'batteries') {
+            navigate('/products');
+          } else {
+            navigate('/questions');
+          }
+        }
       }
     }
   };

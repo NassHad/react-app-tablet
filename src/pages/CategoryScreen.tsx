@@ -1,16 +1,19 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import type { VehicleType, ProductCategory } from '../types';
+import type { VehicleType, ProductCategory, Vehicle } from '../types';
 import { databaseService } from '../db/database';
 import { useClickAnimation } from '../hooks/useClickAnimation';
+import { FLOW_CONFIG } from '../config/flowConfig';
+import { checkProductAvailability } from '../utils/productAvailability';
 
 interface CategoryScreenProps {
   vehicleType: VehicleType;
+  vehicle?: Vehicle; // For new flow where vehicle is already selected
   onCategorySelect: (category: ProductCategory) => void;
 }
 
-const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
+const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScreenProps) => {
   const navigate = useNavigate();
   const [categories, setCategories] = useState<ProductCategory[]>([]);
   const [loading, setLoading] = useState(true);
@@ -32,10 +35,31 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
     loadCategories();
   }, []);
 
-  const handleCategorySelect = (category: ProductCategory) => {
+  const handleCategorySelect = async (category: ProductCategory) => {
     console.log('Category selected:', category);
     onCategorySelect(category);
-    navigate('/vehicle');
+    
+    if (FLOW_CONFIG.SELECT_VEHICLE_FIRST && vehicle) {
+      // New flow: vehicle is already selected, check availability and navigate accordingly
+      const productsAvailable = await checkProductAvailability(vehicle, category);
+      
+      if (!productsAvailable) {
+        // Redirect to no products available page
+        navigate('/no-products-available', { 
+          state: { vehicle, category } 
+        });
+      } else {
+        // Continue with normal flow
+        if (category.slug === 'batteries') {
+          navigate('/products');
+        } else {
+          navigate('/questions');
+        }
+      }
+    } else {
+      // Original flow: navigate to vehicle selection
+      navigate('/vehicle');
+    }
   };
 
   // Create animation hooks for each category at the top level

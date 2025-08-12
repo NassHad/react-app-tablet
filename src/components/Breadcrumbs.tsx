@@ -1,6 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import type { UserSelection } from '../types';
+import { FLOW_CONFIG } from '../config/flowConfig';
 
 interface BreadcrumbsProps {
   userSelection: UserSelection | null;
@@ -10,56 +11,120 @@ const Breadcrumbs = ({ userSelection }: BreadcrumbsProps) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Define the breadcrumb structure based on the current path
+  // Define the breadcrumb structure based on the current path and flow configuration
   const getBreadcrumbs = () => {
     const breadcrumbs = [
       { name: 'Accueil', path: '/vehicle-type', active: false }
     ];
 
-    switch (location.pathname) {
-      case '/vehicle-type':
-        breadcrumbs[0].active = true;
-        break;
-      
-      case '/category':
-        breadcrumbs.push({ name: 'Catégorie', path: '/category', active: true });
-        break;
-      
-      case '/vehicle':
-        breadcrumbs.push(
-          { name: 'Catégorie', path: '/category', active: false },
-          { name: 'Véhicule', path: '/vehicle', active: true }
-        );
-        break;
-      
-      case '/questions':
-        breadcrumbs.push(
-          { name: 'Catégorie', path: '/category', active: false },
-          { name: 'Véhicule', path: '/vehicle', active: false },
-          { name: 'Questions', path: '/questions', active: true }
-        );
-        break;
-      
-      case '/products':
-        breadcrumbs.push(
-          { name: 'Catégorie', path: '/category', active: false },
-          { name: 'Véhicule', path: '/vehicle', active: false },
-          { name: 'Questions', path: '/questions', active: false },
-          { name: 'Produits', path: '/products', active: true }
-        );
-        break;
-      
-      default:
-        if (location.pathname.startsWith('/product-details/')) {
+    if (FLOW_CONFIG.SELECT_VEHICLE_FIRST) {
+      // New flow: Vehicle Type → Vehicle → Category → Questions/Products
+      switch (location.pathname) {
+        case '/vehicle-type':
+          breadcrumbs[0].active = true;
+          break;
+        
+        case '/vehicle':
+          breadcrumbs.push({ name: 'Véhicule', path: '/vehicle', active: true });
+          break;
+        
+        case '/category':
+          breadcrumbs.push(
+            { name: 'Véhicule', path: '/vehicle', active: false },
+            { name: 'Catégorie', path: '/category', active: true }
+          );
+          break;
+        
+        case '/questions':
+          breadcrumbs.push(
+            { name: 'Véhicule', path: '/vehicle', active: false },
+            { name: 'Catégorie', path: '/category', active: false },
+            { name: 'Questions', path: '/questions', active: true }
+          );
+          break;
+        
+        case '/products':
+          breadcrumbs.push(
+            { name: 'Véhicule', path: '/vehicle', active: false },
+            { name: 'Catégorie', path: '/category', active: false },
+            { name: 'Produits', path: '/products', active: true }
+          );
+          break;
+        
+        case '/no-products-available':
+          breadcrumbs.push(
+            { name: 'Véhicule', path: '/vehicle', active: false },
+            { name: 'Catégorie', path: '/category', active: false },
+            { name: 'Aucun produit', path: '/no-products-available', active: true }
+          );
+          break;
+        
+        default:
+          if (location.pathname.startsWith('/product-details/')) {
+            breadcrumbs.push(
+              { name: 'Véhicule', path: '/vehicle', active: false },
+              { name: 'Catégorie', path: '/category', active: false },
+              { name: 'Questions', path: '/questions', active: false },
+              { name: 'Produits', path: '/products', active: false },
+              { name: 'Détails', path: location.pathname, active: true }
+            );
+          }
+          break;
+      }
+    } else {
+      // Original flow: Vehicle Type → Category → Vehicle → Questions/Products
+      switch (location.pathname) {
+        case '/vehicle-type':
+          breadcrumbs[0].active = true;
+          break;
+        
+        case '/category':
+          breadcrumbs.push({ name: 'Catégorie', path: '/category', active: true });
+          break;
+        
+        case '/vehicle':
+          breadcrumbs.push(
+            { name: 'Catégorie', path: '/category', active: false },
+            { name: 'Véhicule', path: '/vehicle', active: true }
+          );
+          break;
+        
+        case '/questions':
           breadcrumbs.push(
             { name: 'Catégorie', path: '/category', active: false },
             { name: 'Véhicule', path: '/vehicle', active: false },
-            { name: 'Questions', path: '/questions', active: false },
-            { name: 'Produits', path: '/products', active: false },
-            { name: 'Détails', path: location.pathname, active: true }
+            { name: 'Questions', path: '/questions', active: true }
           );
-        }
-        break;
+          break;
+        
+        case '/products':
+          breadcrumbs.push(
+            { name: 'Catégorie', path: '/category', active: false },
+            { name: 'Véhicule', path: '/vehicle', active: false },
+            { name: 'Produits', path: '/products', active: true }
+          );
+          break;
+        
+        case '/no-products-available':
+          breadcrumbs.push(
+            { name: 'Catégorie', path: '/category', active: false },
+            { name: 'Véhicule', path: '/vehicle', active: false },
+            { name: 'Aucun produit', path: '/no-products-available', active: true }
+          );
+          break;
+        
+        default:
+          if (location.pathname.startsWith('/product-details/')) {
+            breadcrumbs.push(
+              { name: 'Catégorie', path: '/category', active: false },
+              { name: 'Véhicule', path: '/vehicle', active: false },
+              { name: 'Questions', path: '/questions', active: false },
+              { name: 'Produits', path: '/products', active: false },
+              { name: 'Détails', path: location.pathname, active: true }
+            );
+          }
+          break;
+      }
     }
 
     return breadcrumbs;

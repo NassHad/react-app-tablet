@@ -10,7 +10,7 @@ const OilsQuestions = ({ onAnswersComplete }: OilsQuestionsProps) => {
   return (
     <div className="flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Questions - Huiles</h1>
+        <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Questions - Huiles</h1>
         
         {/* Question 1: Type d'huile */}
         <div className="mb-12">

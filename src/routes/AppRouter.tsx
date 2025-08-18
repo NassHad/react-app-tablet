@@ -58,7 +58,7 @@ const AppRouterContent = () => {
         <Route 
           path="/" 
           element={
-            <Layout userSelection={userSelection}>
+            <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
               <PageTransition direction={navigationDirection}>
                 <HomePage 
                   onVehicleTypeSelect={(vehicleType: VehicleType) => {
@@ -84,17 +84,17 @@ const AppRouterContent = () => {
                 path="/vehicle" 
                 element={
                   userSelection?.vehicleType ? (
-                    <Layout userSelection={userSelection}>
-                      <PageTransition direction={navigationDirection}>
-                        <VehiclePage 
-                          vehicleType={userSelection.vehicleType}
-                          category={{ id: 0, name: '', slug: '', active: true }}
-                          onVehicleSelect={(vehicle) => {
-                            updateUserSelection({ vehicle });
-                          }}
-                        />
-                      </PageTransition>
-                    </Layout>
+                                    <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
+                  <PageTransition direction={navigationDirection}>
+                    <VehiclePage 
+                      vehicleType={userSelection.vehicleType}
+                      category={{ id: 0, name: '', slug: '', active: true }}
+                      onVehicleSelect={(vehicle) => {
+                        updateUserSelection({ vehicle });
+                      }}
+                    />
+                  </PageTransition>
+                </Layout>
                   ) : (
                     <Navigate to="/" replace />
                   )
@@ -106,17 +106,17 @@ const AppRouterContent = () => {
                 path="/category" 
                 element={
                   userSelection?.vehicle ? (
-                    <Layout userSelection={userSelection}>
-                      <PageTransition direction={navigationDirection}>
-                        <CategoryScreen 
-                          vehicleType={userSelection.vehicleType!}
-                          vehicle={userSelection.vehicle}
-                          onCategorySelect={(category) => {
-                            updateUserSelection({ category });
-                          }}
-                        />
-                      </PageTransition>
-                    </Layout>
+                                    <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
+                  <PageTransition direction={navigationDirection}>
+                    <CategoryScreen 
+                      vehicleType={userSelection.vehicleType!}
+                      vehicle={userSelection.vehicle}
+                      onCategorySelect={(category) => {
+                        updateUserSelection({ category });
+                      }}
+                    />
+                  </PageTransition>
+                </Layout>
                   ) : (
                     <Navigate to="/" replace />
                   )
@@ -131,7 +131,7 @@ const AppRouterContent = () => {
                 path="/category" 
                 element={
                   userSelection?.vehicleType ? (
-                    <Layout userSelection={userSelection}>
+                    <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                       <PageTransition direction={navigationDirection}>
                         <CategoryScreen 
                           vehicleType={userSelection.vehicleType}
@@ -152,7 +152,7 @@ const AppRouterContent = () => {
                 path="/vehicle" 
                 element={
                   userSelection?.vehicleType && userSelection?.category ? (
-                    <Layout userSelection={userSelection}>
+                    <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                       <PageTransition direction={navigationDirection}>
                         <VehiclePage 
                           vehicleType={userSelection.vehicleType}
@@ -176,7 +176,7 @@ const AppRouterContent = () => {
             path="/questions" 
             element={
               userSelection?.vehicle && userSelection?.category ? (
-                <Layout userSelection={userSelection}>
+                <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                   <PageTransition direction={navigationDirection}>
                     <QuestionsScreen 
                       vehicle={userSelection.vehicle}
@@ -198,7 +198,7 @@ const AppRouterContent = () => {
             path="/products" 
             element={
               (userSelection?.answers || (userSelection?.vehicle && userSelection?.category?.slug === 'batteries')) ? (
-                <Layout userSelection={userSelection}>
+                <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                   <PageTransition direction={navigationDirection}>
                     <ProductsScreen 
                       userSelection={userSelection}
@@ -215,7 +215,7 @@ const AppRouterContent = () => {
           <Route 
             path="/product-details/:productId" 
             element={
-              <Layout userSelection={userSelection}>
+              <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                 <PageTransition direction={navigationDirection}>
                   <ProductDetailsScreen 
                     userSelection={userSelection}

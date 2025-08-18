@@ -49,16 +49,13 @@ const HomePage = ({ onVehicleTypeSelect }: HomePageProps) => {
       {/* Main content */}
       <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6">
         {/* Welcome title */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-black mb-4">Bienvenue dans l'expérience.</h1>
-        </div>
         
         {/* Prompt text */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-semibold">
-            <span className="text-gray-500">Choisissez votre </span>
-            <span className="text-[#1290AD]">type</span>
-            <span className="text-gray-500"> de véhicule</span>
+          <h2 className="text-5xl font-semibold text-[#1290AD]">
+            <span className="">Choisissez votre </span>
+            <span className="font-bold">type</span>
+            <span className=""> de véhicule</span>
           </h2>
         </div>
 

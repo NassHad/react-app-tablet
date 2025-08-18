@@ -126,6 +126,42 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
     }
   };
 
+  // Get the appropriate image for each category
+  const getCategoryImage = (categoryName: string) => {
+    switch (categoryName) {
+      case "Balais d'essuie-glace":
+        return '/assets/img/car.png'; // Using car.png as sample, should be wiper image
+      case 'Batteries':
+        return '/assets/img/car.png'; // Should be battery image
+      case 'Huiles':
+        return '/assets/img/car.png'; // Should be oil image
+      case 'Eclairage':
+        return '/assets/img/car.png'; // Should be lighting image
+      case 'Filtration':
+        return '/assets/img/car.png'; // Should be filter image
+      default:
+        return '/assets/img/car.png';
+    }
+  };
+
+  // Get the appropriate background color for each category
+  const getCategoryColor = (categoryName: string) => {
+    switch (categoryName) {
+      case "Balais d'essuie-glace":
+        return 'bg-green-500'; // Green for wipers
+      case 'Batteries':
+        return 'bg-red-500'; // Red for batteries
+      case 'Huiles':
+        return 'bg-yellow-500'; // Orange/Yellow for oil
+      case 'Eclairage':
+        return 'bg-blue-600'; // Dark blue for lighting
+      case 'Filtration':
+        return 'bg-blue-400'; // Light blue for filtration
+      default:
+        return 'bg-gray-500';
+    }
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -138,33 +174,75 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
   }
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Catégories</h1>
-        <div className="flex flex-row space-x-8 justify-center">
+    <div className="min-h-screen bg-gray-100 relative overflow-hidden">
+      {/* Background waves effect */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full">
+          {/* Wave shapes - using CSS gradients to create abstract curved shapes */}
+          <div className="absolute top-0 left-0 w-full h-full opacity-20">
+            <div className="absolute top-20 left-10 w-96 h-96 bg-white rounded-full blur-3xl transform rotate-12"></div>
+            <div className="absolute top-40 right-20 w-80 h-80 bg-gray-200 rounded-full blur-3xl transform -rotate-6"></div>
+            <div className="absolute bottom-20 left-1/4 w-72 h-72 bg-white rounded-full blur-3xl transform rotate-45"></div>
+            <div className="absolute bottom-40 right-1/3 w-64 h-64 bg-gray-200 rounded-full blur-3xl transform -rotate-12"></div>
+            <div className="absolute top-1/2 left-1/2 w-56 h-56 bg-white rounded-full blur-3xl transform rotate-30"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main content */}
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6">
+        {/* Main title */}
+        <div className="text-center mb-8">
+          <h1 className="text-5xl font-bold text-[#1290AD] mb-4">Que recherchez-vous ?</h1>
+        </div>
+        
+        {/* Instruction text */}
+        <div className="text-center mb-16">
+          <h2 className="text-2xl text-gray-500">
+            Cliquez sur une catégorie pour voir les produits
+          </h2>
+        </div>
+
+        {/* Category selection cards */}
+        <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
           {categories.map((category) => {
             const animation = getCategoryAnimation(category.name);
+            const imageSrc = getCategoryImage(category.name);
+            const bgColor = getCategoryColor(category.name);
+            
             return (
-              <motion.button
+              <motion.div
                 key={category.id}
                 onClick={animation.handleClick}
-                className="block w-64 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+                className="relative w-80 h-96 bg-white rounded-lg shadow-lg cursor-pointer overflow-hidden hover:shadow-xl transition-shadow duration-300"
                 {...animation.animationProps}
               >
-                <div className="text-6xl mb-4">
-                  {category.icon === 'wiper' && '🌧️'}
-                  {category.icon === 'battery' && '🔋'}
-                  {category.icon === 'oil' && '🛢️'}
-                  {category.icon === 'bulb' && '💡'}
-                  {category.icon === 'filter' && '🧰'}
-                  {!category.icon && '📦'}
+                {/* Image */}
+                <div className="w-full h-64 relative overflow-hidden">
+                  <img 
+                    src={imageSrc} 
+                    alt={category.name}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Overlay for better text readability */}
+                  <div className="absolute inset-0 bg-black/20"></div>
                 </div>
-                <h2 className="text-2xl font-semibold">{category.name}</h2>
-              </motion.button>
+                
+                {/* Bottom bar */}
+                <div className={`absolute bottom-0 left-0 right-0 h-16 ${bgColor} flex items-center justify-center`}>
+                  <span className="text-white font-bold text-xl uppercase">
+                    {category.name === "Balais d'essuie-glace" ? "Balai essuie-glace" : 
+                     category.name === "Eclairage" ? "Éclairage" : category.name}
+                  </span>
+                </div>
+              </motion.div>
             );
           })}
         </div>
-      </div>
+      </main>
+
+      {/* Bottom line */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-blue-300"></div>
     </div>
   );
 };

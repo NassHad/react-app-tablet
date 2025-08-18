@@ -148,86 +148,90 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-4xl">
-        <h1 className="text-2xl font-bold text-gray-900 mt-4 mb-8">Sélection du véhicule</h1>
+        <h1 className="text-5xl text-[#1290AD] mt-10 mb-14">Sélectionnez la <span className="font-bold">marque</span>, le <span className="font-bold">modèle</span>, la <span className="font-bold">version</span> et la <span className="font-bold">date</span> de 1ère mise en circulation de votre véhicule</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
+          <div className='flex flex-row gap-4 space-y-8 justify-around'>
+            <div className="space-y-3">
+              <label htmlFor="brand" className="block text-xl font-bold text-gray-700 text-left pl-2">
+                Marque
+              </label>
+              <select
+                id="brand"
+                value={selectedBrand}
+                onChange={(e) => handleBrandChange(e.target.value)}
+                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                required
+              >
+                <option value="">Sélectionnez une marque</option>
+                {MOCK_BRANDS.map((brand) => (
+                  <option key={brand.id} value={brand.name}>
+                    {brand.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Model Selection */}
+            <div className="space-y-4">
+              <label htmlFor="model" className="block text-xl font-bold text-gray-700 text-left pl-2">
+                Modèle
+              </label>
+              <select
+                id="model"
+                value={selectedModel}
+                onChange={(e) => handleModelChange(e.target.value)}
+                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                disabled={selectedBrand === '' ? true : false}
+                required
+              >
+                <option value="">
+                  {selectedBrand ? 'Sélectionnez un modèle' : 'Sélectionnez d\'abord une marque'}
+                </option>
+                {availableModels.map((model) => (
+                  <option key={model.id} value={model.name}>
+                    {model.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
           {/* Brand Selection */}
-          <div className="space-y-3">
-            <label htmlFor="brand" className="block text-lg font-semibold text-gray-700">
-              Marque
-            </label>
-            <select
-              id="brand"
-              value={selectedBrand}
-              onChange={(e) => handleBrandChange(e.target.value)}
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
-              required
-            >
-              <option value="">Sélectionnez une marque</option>
-              {MOCK_BRANDS.map((brand) => (
-                <option key={brand.id} value={brand.name}>
-                  {brand.name}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Model Selection */}
-          <div className="space-y-4">
-            <label htmlFor="model" className="block text-lg font-semibold text-gray-700">
-              Modèle
-            </label>
-            <select
-              id="model"
-              value={selectedModel}
-              onChange={(e) => handleModelChange(e.target.value)}
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
-              disabled={selectedBrand === '' ? true : false}
-              required
-            >
-              <option value="">
-                {selectedBrand ? 'Sélectionnez un modèle' : 'Sélectionnez d\'abord une marque'}
-              </option>
-              {availableModels.map((model) => (
-                <option key={model.id} value={model.name}>
-                  {model.name}
-                </option>
-              ))}
-            </select>
-          </div>
-
+          
+          <div className='flex flex-row gap-4 justify-around space-y-8'>
           {/* Motorisation Selection */}
-          <div className="space-y-4">
-            <label htmlFor="motorisation" className="block text-lg font-semibold text-gray-700">
-              Motorisation
-            </label>
-            <select
-              id="motorisation"
-              value={selectedMotorisation}
-              onChange={(e) => handleVersionChange(e.target.value)}
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
-              required
-            >
-              <option value="">Sélectionnez une motorisation</option>
-              {availableVersions.map((motorisation) => (
-                <option key={motorisation} value={motorisation}>
-                  {motorisation}
-                </option>
-              ))}
-            </select>
-          </div>
-          {/* Date de 1ère mise en circulation */}
-          <div className="space-y-4">
-            <label htmlFor="dateCirculation" className="block text-lg font-semibold text-gray-700">
-              Date de 1ère mise en circulation
-            </label>
-            <input
-              id="dateCirculation"
-              type="date"
-              value={dateCirculation}
-              onChange={handleDateCirculationChange}
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
-              required
-            />
+            <div className="space-y-4">
+              <label htmlFor="motorisation" className="block text-xl font-bold text-gray-700 text-left pl-2">
+                Motorisation
+              </label>
+              <select
+                id="motorisation"
+                value={selectedMotorisation}
+                onChange={(e) => handleVersionChange(e.target.value)}
+                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                required
+              >
+                <option value="">Sélectionnez une motorisation</option>
+                {availableVersions.map((motorisation) => (
+                  <option key={motorisation} value={motorisation}>
+                    {motorisation}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* Date de 1ère mise en circulation */}
+            <div className="space-y-4">
+              <label htmlFor="dateCirculation" className="block text-xl font-bold text-gray-700 text-left pl-2">
+                Date de 1ère mise en circulation
+              </label>
+              <input
+                id="dateCirculation"
+                type="date"
+                value={dateCirculation}
+                onChange={handleDateCirculationChange}
+                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                required
+              />
+            </div>
           </div>
           {/* Submit Button */}
           <div>
@@ -235,7 +239,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
               type="submit"
               disabled={!isFormValid}
               onClick={submitAnimation.handleClick}
-              className={`w-full p-4 rounded-lg text-lg font-semibold transition-all ${
+              className={`py-4 px-8 rounded-lg text-lg font-semibold transition-all ${
                 isFormValid
                   ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'

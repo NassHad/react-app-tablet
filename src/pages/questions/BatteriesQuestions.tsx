@@ -10,7 +10,7 @@ const BatteriesQuestions = ({ onAnswersComplete }: BatteriesQuestionsProps) => {
   return (
     <div className="flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Questions - Batteries</h1>
+        <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Questions - Batteries</h1>
         
         {/* Question 1: Type de batterie */}
         <div className="mb-12">

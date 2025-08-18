@@ -6,14 +6,16 @@ import UserChoicesSummary from './UserChoicesSummary';
 import HelpModal from './HelpModal';
 import AnimatedLayout from './AnimatedLayout';
 import Breadcrumbs from './Breadcrumbs';
+import CategoryNavigation from './CategoryNavigation';
 import { FLOW_CONFIG } from '../config/flowConfig';
 
 interface LayoutProps {
   children: React.ReactNode;
   userSelection: UserSelection | null;
+  updateUserSelection?: (updates: Partial<UserSelection>) => void;
 }
 
-const Layout = ({ children, userSelection }: LayoutProps) => {
+const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [searchQuery, setSearchQuery] = useState('');
@@ -43,7 +45,7 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
       <nav className="bg-white shadow-sm border-b border-gray-200 px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Left side - Home and Back */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 w-1/3">
             {/* Home Logo */}
             <motion.button
               onClick={handleHomeClick}
@@ -129,6 +131,17 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
               </form>
             </div>
           )}
+          
+          {/* Title */}
+          {location.pathname === '/' && (
+            <div className="flex justify-center items-center w-2/3">
+              <h1 className="text-5xl font-bold text-black text-center">Bienvenue dans l'expérience.</h1>
+            </div>
+          )}
+          {location.pathname === '/vehicle' && (
+            <h1 className="text-5xl text-[#1290AD]">Je choisis mon <span className="font-bold">véhicule</span></h1>
+          )}
+
 
           {/* Right side - Help button */}
           {showHelpButton && (
@@ -148,6 +161,15 @@ const Layout = ({ children, userSelection }: LayoutProps) => {
           )}
         </div>
       </nav>
+
+      {/* Category Navigation */}
+      {userSelection && (userSelection.category || location.pathname === '/questions' || location.pathname === '/products' || location.pathname.startsWith('/product-details/')) && (
+        <CategoryNavigation 
+          selectedCategory={userSelection.category} 
+          updateUserSelection={updateUserSelection}
+          userSelection={userSelection}
+        />
+      )}
 
       {/* Breadcrumbs */}
       <Breadcrumbs userSelection={userSelection} />

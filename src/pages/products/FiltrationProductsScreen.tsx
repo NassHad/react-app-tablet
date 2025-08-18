@@ -17,7 +17,7 @@ const FiltrationProductsScreen = ({ userSelection }: FiltrationProductsScreenPro
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-6xl">
-        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Filtration</h1>
+        <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Filtration</h1>
         {/* Vertical scrollable container */}
         <div className="overflow-y-auto max-h-112 pb-8">
           <div className="space-y-4 px-8">

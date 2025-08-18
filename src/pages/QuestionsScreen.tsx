@@ -31,7 +31,7 @@ const QuestionsScreen = ({ vehicle, category, onAnswersComplete }: QuestionsScre
         return (
           <div className="flex items-center justify-center">
             <div className="text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Batteries</h1>
+              <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Batteries</h1>
               <p className="text-xl text-gray-600 mb-8">Aucune question spécifique requise pour les batteries.</p>
               <button
                 onClick={() => handleAnswersComplete({})}
@@ -53,7 +53,7 @@ const QuestionsScreen = ({ vehicle, category, onAnswersComplete }: QuestionsScre
         return (
           <div className="flex items-center justify-center">
             <div className="text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Questions</h1>
+              <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Questions</h1>
               <div className="space-y-4">
                 <button
                   onClick={() => handleAnswersComplete({ question1: 'Option 1' })}

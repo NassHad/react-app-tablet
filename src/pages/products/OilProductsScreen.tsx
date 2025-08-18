@@ -31,7 +31,7 @@ const OilProductsScreen = ({ userSelection }: OilProductsScreenProps) => {
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-6xl">
-        <h1 className="text-4xl font-bold text-gray-900 mt-12 mb-20">Huiles moteur</h1>
+        <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Huiles moteur</h1>
         
         {/* Vertical scrollable container */}
         <div className="overflow-y-auto max-h-112 pb-8">

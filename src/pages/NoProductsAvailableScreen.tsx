@@ -40,7 +40,7 @@ const NoProductsAvailableScreen = ({ vehicle, category }: NoProductsAvailableScr
           <div className="text-8xl mb-8">😔</div>
           
           {/* Message */}
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Aucun produit disponible
           </h1>
           

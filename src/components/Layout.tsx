@@ -19,7 +19,7 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
   const navigate = useNavigate();
   const location = useLocation();
   const [searchQuery, setSearchQuery] = useState('');
-  const [showChoices, setShowChoices] = useState(true);
+  const [showChoices, setShowChoices] = useState(false);
   const [showHelpModal, setShowHelpModal] = useState(false);
 
   const handleHomeClick = () => {
@@ -45,7 +45,7 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
       <nav className="bg-white shadow-sm border-b border-gray-200 px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Left side - Home and Back */}
-          <div className="flex items-center space-x-3 w-1/3">
+          <div className="flex items-center space-x-3 w-1/2">
             {/* Home Logo */}
             <motion.button
               onClick={handleHomeClick}
@@ -99,48 +99,60 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
             )}
           </div>
 
-          {/* Center - Search Input */}
-          {FLOW_CONFIG.SHOW_SEARCH_INPUT && (
-            <div className="flex-1 max-w-md mx-4">
-              <form onSubmit={handleSearch} className="relative">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Rechercher un produit..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-                  />
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg
-                      className="w-5 h-5 text-gray-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
+          {/* Center - Dynamic Content */}
+          <div className="flex-1 flex justify-left items-left w-1/2">
+            {/* Search Input */}
+            {FLOW_CONFIG.SHOW_SEARCH_INPUT && location.pathname === '/' && (
+              <div className="max-w-md mx-4">
+                <form onSubmit={handleSearch} className="relative">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Rechercher un produit..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                    />
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <svg
+                        className="w-5 h-5 text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </form>
-            </div>
-          )}
-          
-          {/* Title */}
-          {location.pathname === '/' && (
-            <div className="flex justify-center items-center w-2/3">
-              <h1 className="text-5xl font-bold text-black text-center">Bienvenue dans l'expérience.</h1>
-            </div>
-          )}
-          {location.pathname === '/vehicle' && (
-            <h1 className="text-5xl text-[#1290AD]">Je choisis mon <span className="font-bold">véhicule</span></h1>
-          )}
+                </form>
+              </div>
+            )}
+            
+            {/* Title for Home Page */}
+            {location.pathname === '/' && !FLOW_CONFIG.SHOW_SEARCH_INPUT && (
+              <h1 className="text-5xl font-bold text-black text-center ml-[-40%]">Bienvenue dans l'expérience.</h1>
+            )}
+            
+            {/* Title for Vehicle Page */}
+            {location.pathname === '/vehicle' && (
+              <h1 className="text-5xl text-[#1290AD] ml-[-40%]">Je choisis mon <span className="font-bold">véhicule</span></h1>
+            )}
+            
+            {/* Category Navigation */}
+            {userSelection && (userSelection.category || location.pathname === '/questions' || location.pathname === '/products' || location.pathname.startsWith('/product-details/')) && (
+              <CategoryNavigation 
+                selectedCategory={userSelection.category} 
+                updateUserSelection={updateUserSelection}
+                userSelection={userSelection}
+              />
+            )}
+          </div>
 
 
           {/* Right side - Help button */}
@@ -162,17 +174,10 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
         </div>
       </nav>
 
-      {/* Category Navigation */}
-      {userSelection && (userSelection.category || location.pathname === '/questions' || location.pathname === '/products' || location.pathname.startsWith('/product-details/')) && (
-        <CategoryNavigation 
-          selectedCategory={userSelection.category} 
-          updateUserSelection={updateUserSelection}
-          userSelection={userSelection}
-        />
-      )}
 
-      {/* Breadcrumbs */}
-      <Breadcrumbs userSelection={userSelection} />
+
+      {/* Breadcrumbs - Hidden for now */}
+      {/* <Breadcrumbs userSelection={userSelection} /> */}
 
       {/* Main Content Area */}
       <div className="flex flex-1">

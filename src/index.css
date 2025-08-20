@@ -3,11 +3,14 @@
 /* Styles personnalisés pour l'application kiosque */
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-weight: 300;
   }
   
   body {
     @apply antialiased;
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-weight: 300;
   }
 }
 

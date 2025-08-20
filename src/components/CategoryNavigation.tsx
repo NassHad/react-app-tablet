@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import type { ProductCategory } from '../types';
 import { databaseService } from '../db/database';
+import { useCategoryNavigation } from '../hooks/useClickAnimation';
 
 import type { UserSelection } from '../types';
 
@@ -17,6 +18,13 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
   const location = useLocation();
   const [categories, setCategories] = useState<ProductCategory[]>([]);
   const [loading, setLoading] = useState(true);
+  
+  // Use the new category navigation hook
+  const { handleCategoryNavigation } = useCategoryNavigation({
+    updateUserSelection,
+    userSelection,
+    navigate
+  });
 
   useEffect(() => {
     const loadCategories = async () => {
@@ -34,23 +42,8 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
   }, []);
 
   const handleCategoryClick = (category: ProductCategory) => {
-    // Update the user selection with the new category
-    if (updateUserSelection) {
-      updateUserSelection({ category });
-    }
-    
-    // Check if we have a vehicle selected
-    if (userSelection?.vehicle) {
-      // If vehicle is selected, navigate to the next step based on the category
-      if (category.slug === 'batteries') {
-        navigate('/products');
-      } else {
-        navigate('/questions');
-      }
-    } else {
-      // If no vehicle is selected, navigate to vehicle selection
-      navigate('/vehicle');
-    }
+    console.log('Category clicked:', category, 'Current userSelection:', userSelection);
+    handleCategoryNavigation(category);
   };
 
   const handlePreviousClick = () => {
@@ -83,95 +76,93 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
   }
 
   return (
-    <div className="bg-gray-100 border-t border-b border-gray-300 px-6 py-4">
-      <div className="flex items-center justify-between">
-        {/* Left side - Previous button */}
-        <motion.button
-          onClick={handlePreviousClick}
-          className="flex items-center space-x-2 cursor-pointer hover:text-gray-700 transition-colors"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+    <div className="flex items-center justify-between ml-[-50%]">
+      {/* Left side - Previous button */}
+      <motion.button
+        onClick={handlePreviousClick}
+        className="flex items-center space-x-2 cursor-pointer hover:text-gray-700 transition-colors"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <svg
+          className="w-5 h-5 text-gray-500"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
         >
-          <svg
-            className="w-5 h-5 text-gray-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-          <span className="text-gray-500 font-medium">Précédent</span>
-        </motion.button>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+        <span className="text-gray-500 font-medium">Précédent</span>
+      </motion.button>
 
-        {/* Separator line */}
-        <div className="w-px h-6 bg-gray-300"></div>
+      {/* Separator line */}
+      <div className="w-px h-6 bg-gray-300 mx-4"></div>
 
-        {/* Center - Category navigation */}
-        <div className="flex items-center space-x-8">
-          {categories.map((category) => {
-            const isSelected = selectedCategory?.id === category.id;
-            const displayName = category.name === "Balais d'essuie-glace" ? "Balai essuie-glace" : 
-                               category.name === "Eclairage" ? "Éclairage" : category.name;
-            
-            return (
-              <motion.button
-                key={category.id}
-                onClick={() => handleCategoryClick(category)}
-                className={`relative px-4 py-2 font-medium text-lg transition-colors ${
-                  isSelected 
-                    ? 'text-green-600 cursor-default' 
-                    : 'text-gray-500 hover:text-gray-700 cursor-pointer'
-                }`}
-                whileHover={isSelected ? {} : { scale: 1.05 }}
-                whileTap={isSelected ? {} : { scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                {displayName}
-                {/* Green underline for selected category */}
-                {isSelected && (
-                  <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-600"
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
-              </motion.button>
-            );
-          })}
-        </div>
-
-        {/* Separator line */}
-        <div className="w-px h-6 bg-gray-300"></div>
-
-        {/* Right side - Next button */}
-        <motion.button
-          onClick={handleNextClick}
-          className="flex items-center space-x-2 cursor-pointer hover:text-gray-700 transition-colors"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span className="text-gray-500 font-medium">Suivant</span>
-          <svg
-            className="w-5 h-5 text-gray-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </motion.button>
+      {/* Center - Category navigation */}
+      <div className="flex items-center space-x-8">
+        {categories.map((category) => {
+          const isSelected = selectedCategory?.id === category.id;
+          const displayName = category.name === "Balais d'essuie-glace" ? "Balai essuie-glace" : 
+                             category.name === "Eclairage" ? "Éclairage" : category.name;
+          
+          return (
+            <motion.button
+              key={category.id}
+              onClick={() => handleCategoryClick(category)}
+              className={`relative px-4 py-2 font-medium text-lg transition-colors ${
+                isSelected 
+                  ? 'text-green-600 cursor-default' 
+                  : 'text-gray-500 hover:text-gray-700 cursor-pointer'
+              }`}
+              whileHover={isSelected ? {} : { scale: 1.05 }}
+              whileTap={isSelected ? {} : { scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              {displayName}
+              {/* Green underline for selected category */}
+              {isSelected && (
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-600"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              )}
+            </motion.button>
+          );
+        })}
       </div>
+
+      {/* Separator line */}
+      <div className="w-px h-6 bg-gray-300 mx-4"></div>
+
+      {/* Right side - Next button */}
+      <motion.button
+        onClick={handleNextClick}
+        className="flex items-center space-x-2 cursor-pointer hover:text-gray-700 transition-colors"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <span className="text-gray-500 font-medium">Suivant</span>
+        <svg
+          className="w-5 h-5 text-gray-500"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </motion.button>
     </div>
   );
 };

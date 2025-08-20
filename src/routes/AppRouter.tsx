@@ -24,7 +24,12 @@ const AppRouterContent = () => {
   const location = useLocation();
 
   const updateUserSelection = (updates: Partial<UserSelection>) => {
-    setUserSelection(prev => prev ? { ...prev, ...updates } : updates as UserSelection);
+    console.log('updateUserSelection called with:', updates);
+    setUserSelection(prev => {
+      const newState = prev ? { ...prev, ...updates } : updates as UserSelection;
+      console.log('New userSelection state:', newState);
+      return newState;
+    });
   };
 
   // Track navigation direction
@@ -175,21 +180,31 @@ const AppRouterContent = () => {
           <Route 
             path="/questions" 
             element={
-              userSelection?.vehicle && userSelection?.category ? (
-                <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
-                  <PageTransition direction={navigationDirection}>
-                    <QuestionsScreen 
-                      vehicle={userSelection.vehicle}
-                      category={userSelection.category}
-                      onAnswersComplete={(answers) => {
-                        updateUserSelection({ answers });
-                      }}
-                    />
-                  </PageTransition>
-                </Layout>
-              ) : (
-                <Navigate to="/" replace />
-              )
+              (() => {
+                const hasRequiredState = userSelection?.vehicle && userSelection?.category;
+                if (!hasRequiredState) {
+                  console.log('Questions route guard failed:', {
+                    hasVehicle: !!userSelection?.vehicle,
+                    hasCategory: !!userSelection?.category,
+                    userSelection
+                  });
+                }
+                return hasRequiredState && userSelection?.vehicle && userSelection?.category ? (
+                  <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
+                    <PageTransition direction={navigationDirection}>
+                      <QuestionsScreen 
+                        vehicle={userSelection.vehicle}
+                        category={userSelection.category}
+                        onAnswersComplete={(answers) => {
+                          updateUserSelection({ answers });
+                        }}
+                      />
+                    </PageTransition>
+                  </Layout>
+                ) : (
+                  <Navigate to="/" replace />
+                );
+              })()
             } 
           />
 
@@ -197,17 +212,33 @@ const AppRouterContent = () => {
           <Route 
             path="/products" 
             element={
-              (userSelection?.answers || (userSelection?.vehicle && userSelection?.category?.slug === 'batteries')) ? (
-                <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
-                  <PageTransition direction={navigationDirection}>
-                    <ProductsScreen 
-                      userSelection={userSelection}
-                    />
-                  </PageTransition>
-                </Layout>
-              ) : (
-                <Navigate to="/" replace />
-              )
+              (() => {
+                const hasAnswers = !!userSelection?.answers;
+                const hasBatteryCategory = userSelection?.vehicle && userSelection?.category?.slug === 'batteries';
+                const hasRequiredState = hasAnswers || hasBatteryCategory;
+                
+                if (!hasRequiredState) {
+                  console.log('Products route guard failed:', {
+                    hasAnswers,
+                    hasBatteryCategory,
+                    vehicle: userSelection?.vehicle,
+                    category: userSelection?.category,
+                    userSelection
+                  });
+                }
+                
+                return hasRequiredState ? (
+                  <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
+                    <PageTransition direction={navigationDirection}>
+                      <ProductsScreen 
+                        userSelection={userSelection}
+                      />
+                    </PageTransition>
+                  </Layout>
+                ) : (
+                  <Navigate to="/" replace />
+                );
+              })()
             } 
           />
 

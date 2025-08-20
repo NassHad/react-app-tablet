@@ -1,31 +1,86 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
+import type { UserSelection } from '../types';
 
 interface UseClickAnimationProps {
-  onComplete: () => void;
-  delay?: number;
+  onComplete?: () => void;
 }
 
-export const useClickAnimation = ({ onComplete, delay = 200 }: UseClickAnimationProps) => {
+export const useClickAnimation = ({ onComplete }: UseClickAnimationProps = {}) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const handleClick = () => {
-    if (isAnimating) return; // Prevent multiple clicks
-    
+  const handleClick = useCallback(() => {
+    if (isAnimating) return;
+
     setIsAnimating(true);
     
-    // Execute the navigation after the animation delay
+    // Simulate animation duration
     setTimeout(() => {
-      onComplete();
       setIsAnimating(false);
-    }, delay);
+      onComplete?.();
+    }, 200);
+  }, [isAnimating, onComplete]);
+
+  const animationProps = {
+    animate: isAnimating ? { scale: 0.95 } : { scale: 1 },
+    transition: { duration: 0.1 }
   };
 
   return {
-    handleClick,
     isAnimating,
-    animationProps: {
-      whileTap: { scale: 0.85 },
-      transition: { duration: 0.1 }
+    handleClick,
+    animationProps
+  };
+};
+
+// New hook for handling category navigation with proper state management
+interface UseCategoryNavigationProps {
+  updateUserSelection?: (updates: Partial<UserSelection>) => void;
+  userSelection?: UserSelection | null;
+  navigate: (path: string) => void;
+}
+
+export const useCategoryNavigation = ({ 
+  updateUserSelection, 
+  userSelection, 
+  navigate 
+}: UseCategoryNavigationProps) => {
+  
+  const handleCategoryNavigation = useCallback(async (category: any) => {
+    console.log('useCategoryNavigation - Category clicked:', category, 'Current userSelection:', userSelection);
+    
+    // Update the user selection with the new category
+    if (updateUserSelection) {
+      updateUserSelection({ category });
     }
+    
+    // Wait for state to be updated
+    await new Promise(resolve => setTimeout(resolve, 10));
+    
+    // Determine the target path based on current state
+    let targetPath: string;
+    
+    // Check if we have a vehicle selected
+    if (userSelection?.vehicle) {
+      // If vehicle is selected, navigate to the next step based on the category
+      if (category.slug === 'batteries') {
+        targetPath = '/products';
+      } else {
+        targetPath = '/questions';
+      }
+    } else {
+      // If no vehicle is selected, navigate to vehicle selection
+      targetPath = '/vehicle';
+    }
+    
+    console.log('Navigating to:', targetPath, 'with category:', category);
+    
+    // Add a small additional delay to ensure React has processed the state update
+    setTimeout(() => {
+      navigate(targetPath);
+    }, 50);
+  }, [updateUserSelection, userSelection, navigate]);
+
+  return {
+    handleCategoryNavigation
   };
 }; 

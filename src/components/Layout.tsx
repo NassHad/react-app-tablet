@@ -227,7 +227,7 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
     </div>
     
     {/* Footer */}
-    <footer className="bg-white border-t border-gray-200 px-6 py-2">
+    <footer className="bg-white border-t border-gray-200 px-6 py-2 fixed bottom-0 w-full">
       <div className="flex justify-end">
         <span className="text-sm text-gray-400">GTI SODIFAC</span>
       </div>

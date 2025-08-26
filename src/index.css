@@ -14,6 +14,14 @@
   }
 }
 
+@theme {
+  --color-primary: #93c452;
+  --color-secondary: #fe6f28;
+  --color-tertiary: #fd171f;
+  --color-gray-category: #7E7D7D;
+  --color-green-battery-category: #93C452;
+}
+
 @layer components {
   /* Styles pour les boutons de navigation */
   .btn-primary {
@@ -37,4 +45,26 @@
   .loading-spinner {
     @apply animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto;
   }
+}
+
+.background-overlay{
+  height: 100%;
+  width: 100%;
+  background: 
+    linear-gradient(45deg, rgba(225, 201, 203, 0.8), rgba(255,255,255,0.3));
+    /* linear-gradient(135deg, rgba(0,255,0,0.2), rgba(255,255,0,0.2)); */
+  background-size: 50% 50%, 100% 100%;
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  border-radius: 1px 1px 15rem 1px;
+}
+
+.capitalize-first-letter {
+  text-transform: capitalize;
 }

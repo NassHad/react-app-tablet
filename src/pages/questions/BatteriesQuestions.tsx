@@ -1,4 +1,7 @@
 import type { Vehicle, ProductCategory } from '../../types';
+import standardBattery from '../../assets/img/standard-battery.png';
+import efbBattery from '../../assets/img/efb-battery.png';
+import agmBattery from '../../assets/img/agm-battery.png';
 
 interface BatteriesQuestionsProps {
   vehicle: Vehicle;
@@ -6,66 +9,67 @@ interface BatteriesQuestionsProps {
   onAnswersComplete: (answers: Record<string, string | string[]>) => void;
 }
 
-const BatteriesQuestions = ({ onAnswersComplete }: BatteriesQuestionsProps) => {
+const BatteriesQuestions = ({ vehicle, onAnswersComplete }: BatteriesQuestionsProps) => {
+  const batteryTypes = [
+    { id: 'standard', name: 'Standard', color: '#93c452', image: standardBattery },
+    { id: 'efb', name: 'EFB', color: '#fe6f28', image: efbBattery },
+    { id: 'agm', name: 'AGM', color: '#fd171f', image: agmBattery }
+  ];
+
+  const handleBatteryTypeSelect = (batteryType: string) => {
+    onAnswersComplete({ batteryType });
+  };
+
   return (
-    <div className="flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Questions - Batteries</h1>
-        
-        {/* Question 1: Type de batterie */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8">Type de batterie</h2>
-          <div className="flex flex-row space-x-8 justify-center">
-            <button
-              onClick={() => onAnswersComplete({ batteryType: 'plomb' })}
-              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              <div className="text-6xl mb-4">🔋</div>
-              <h3 className="text-2xl font-semibold">Plomb</h3>
-            </button>
-            <button
-              onClick={() => onAnswersComplete({ batteryType: 'gel' })}
-              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              <div className="text-6xl mb-4">🔋</div>
-              <h3 className="text-2xl font-semibold">Gel</h3>
-            </button>
-            <button
-              onClick={() => onAnswersComplete({ batteryType: 'agm' })}
-              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              <div className="text-6xl mb-4">🔋</div>
-              <h3 className="text-2xl font-semibold">AGM</h3>
-            </button>
-          </div>
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col items-center min-h-screen p-8 mt-12">
+        {/* Header */}
+        <div className="text-center mb-24">
+          <h1 className="text-6xl font-extrabold text-red-600 mb-2">
+            Trouver la bonne batterie
+          </h1>
+          <p className="text-5xl text-gray-600">
+            pour votre {vehicle.brand} {vehicle.model}
+          </p>
         </div>
 
-        {/* Question 2: Capacité */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8">Capacité (Ah)</h2>
-          <div className="flex flex-row space-x-8 justify-center">
+        {/* Battery Type Selection */}
+        <div className="flex flex-row space-x-12 justify-around items-center mb-16 w-full">
+          {batteryTypes.map((type) => (
             <button
-              onClick={() => onAnswersComplete({ batteryType: 'plomb', capacity: '45' })}
-              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+              key={type.id}
+              onClick={() => handleBatteryTypeSelect(type.id)}
+              className="flex flex-col items-center space-y-4 group hover:scale-105 transition-transform duration-200 cursor-pointer"
             >
-              <div className="text-6xl mb-4">⚡</div>
-              <h3 className="text-2xl font-semibold">45 Ah</h3>
+              {/* Battery Image */}
+              <div className="relative w-60 h-60">
+                {/* Battery Image */}
+                  <img
+                    src={type.image}
+                    alt={`${type.name} battery`}
+                    className="drop-shadow-lg"
+                  />
+              </div>
+              
+              {/* Battery Label */}
+              <span 
+                className="text-2xl font-semibold text-center"
+                style={{ color: type.color }}
+              >
+                {type.name}
+              </span>
             </button>
-            <button
-              onClick={() => onAnswersComplete({ batteryType: 'plomb', capacity: '60' })}
-              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              <div className="text-6xl mb-4">⚡</div>
-              <h3 className="text-2xl font-semibold">60 Ah</h3>
-            </button>
-            <button
-              onClick={() => onAnswersComplete({ batteryType: 'plomb', capacity: '70' })}
-              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              <div className="text-6xl mb-4">⚡</div>
-              <h3 className="text-2xl font-semibold">70 Ah</h3>
-            </button>
-          </div>
+          ))}
+        </div>
+
+        {/* Help Section */}
+        <div className="flex w-full justify-center flex-col items-center">
+          <div className='relative w-8 h-8 bg-stone-200 rotate-45 top-[15px]'></div>
+          <div className="bg-stone-200 size-fit p-4 rounded-2xl">
+            <p className='text-center mb-2'>Besoin d'aide ?</p>
+            <button className='bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium'>Cliquez ici</button>
+          </div> 
         </div>
       </div>
     </div>

@@ -31,53 +31,49 @@ const BatteryProductsScreen = ({ userSelection }: BatteryProductsScreenProps) =>
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-6xl">
-        <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Batteries</h1>
+        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15">Liste des batteries <span className='text-green-battery-category capitalize-first-letter'>{userSelection.answers?.batteryType}</span> compatible avec votre véhicule {userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</h1>
         
         {/* Vertical scrollable container */}
-        <div className="overflow-y-auto max-h-112 pb-8">
-          <div className="space-y-4 px-8">
+        <div className="overflow-y-auto max-h-110 pb-8">
+          <div className="">
             {MOCK_BATTERY_PRODUCTS.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-lg shadow-lg p-6 flex items-center justify-between"
+                className="bg-white rounded-lg flex items-center justify-between"
               >
                 {/* Product Info - All on same row */}
-                <div className="flex items-center space-x-8">
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Marque:</span>
+                <div className="flex flex-row justify-between w-full border-b-1 border-[#E5E5E5] items-center py-1">
+                  <div className="w-1/5">
                     <span className="ml-2 text-xl font-bold text-gray-900">{product.brand}</span>
                   </div>
                   
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Type:</span>
-                    <span className="ml-2 text-xl font-semibold text-gray-900">{product.type}</span>
+                  <div className="w-1/5">
+                    <span className="ml-2 text-xl font-semibold text-gray-900 text-left">{product.type}</span>
                   </div>
                   
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Puissance:</span>
+                  <div className="w-1/5">
                     <span className="ml-2 text-xl font-semibold text-gray-900">{product.power}</span>
                   </div>
 
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Tension:</span>
+                  <div className="w-1/5">
                     <span className="ml-2 text-xl font-semibold text-gray-900">{product.tension}</span>
                   </div>
+                  <button
+                    onClick={() => handleProductDetails(product.id)}
+                    className="bg-green-battery-category text-white py-1 rounded-lg hover:opacity-80 transition-colors text-lg font-semibold ml-8 w-1/5"
+                  >
+                    Plus d'infos
+                  </button>
                 </div>
 
                 {/* Action Button */}
-                <button
-                  onClick={() => handleProductDetails(product.id)}
-                  className="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-lg font-semibold ml-8"
-                >
-                  Plus d'infos
-                </button>
               </div>
             ))}
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-8 text-gray-500 text-lg">
+        <div className="mt-8 text-gray-500 text-lg leading-2">
           ↑ Faites glisser pour voir plus de produits ↓
         </div>
       </div>

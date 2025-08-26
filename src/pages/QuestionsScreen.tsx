@@ -4,6 +4,7 @@ import WipersQuestions from './questions/WipersQuestions';
 import OilsQuestions from './questions/OilsQuestions';
 import BulbsQuestions from './questions/BulbsQuestions';
 import FiltrationQuestions from './questions/FiltrationQuestions';
+import BatteriesQuestions from './questions/BatteriesQuestions';
 
 interface QuestionsScreenProps {
   vehicle: Vehicle;
@@ -27,21 +28,7 @@ const QuestionsScreen = ({ vehicle, category, onAnswersComplete }: QuestionsScre
       case 'wipers':
         return <WipersQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'batteries':
-        // For batteries, show a simple message and auto-continue
-        return (
-          <div className="flex items-center justify-center">
-            <div className="text-center">
-              <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Batteries</h1>
-              <p className="text-xl text-gray-600 mb-8">Aucune question spécifique requise pour les batteries.</p>
-              <button
-                onClick={() => handleAnswersComplete({})}
-                className="bg-blue-600 text-white py-4 px-8 rounded-lg hover:bg-blue-700 transition-colors text-xl font-semibold"
-              >
-                Continuer vers les produits
-              </button>
-            </div>
-          </div>
-        );
+        return <BatteriesQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'oils':
         return <OilsQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'bulbs':

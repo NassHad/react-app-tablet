@@ -49,12 +49,8 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
           state: { vehicle, category } 
         });
       } else {
-        // Continue with normal flow
-        if (category.slug === 'batteries') {
-          navigate('/products');
-        } else {
-          navigate('/questions');
-        }
+        // Continue with normal flow - all categories go to questions first
+        navigate('/questions');
       }
     } else {
       // Original flow: navigate to vehicle selection
@@ -132,7 +128,7 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
       case "Balais d'essuie-glace":
         return '/assets/img/car.png'; // Using car.png as sample, should be wiper image
       case 'Batteries':
-        return '/assets/img/car.png'; // Should be battery image
+        return '/assets/img/car.png'; // Using car.png as placeholder for battery image
       case 'Huiles':
         return '/assets/img/car.png'; // Should be oil image
       case 'Eclairage':

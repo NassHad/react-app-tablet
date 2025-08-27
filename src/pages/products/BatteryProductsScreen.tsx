@@ -31,7 +31,7 @@ const BatteryProductsScreen = ({ userSelection }: BatteryProductsScreenProps) =>
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-6xl">
-        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15">Liste des batteries <span className='text-green-battery-category capitalize-first-letter'>{userSelection.answers?.batteryType}</span> compatible avec votre véhicule {userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</h1>
+        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15">Liste des batteries <span className='text-green-battery-category capitalize-first-letter'>{userSelection.answers?.batteryType}</span> compatibles avec votre véhicule <span className='text-green-battery-category capitalize-first-letter'>{userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</span></h1>
         
         {/* Vertical scrollable container */}
         <div className="overflow-y-auto max-h-110 pb-8">

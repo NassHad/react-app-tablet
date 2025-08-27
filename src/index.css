@@ -20,6 +20,9 @@
   --color-tertiary: #fd171f;
   --color-gray-category: #7E7D7D;
   --color-green-battery-category: #93C452;
+  --color-blue-bulbs-category: #235387;
+  --color-blue-title-bulbs-category: #235387;
+  --color-orange-bulbs-category: #ED6205;
 }
 
 @layer components {
@@ -67,4 +70,8 @@
 
 .capitalize-first-letter {
   text-transform: capitalize;
+}
+
+.gradient-background {
+  background-image: linear-gradient(90deg, #275384 10%, #EA5F03 90%);
 }

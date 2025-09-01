@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useClickAnimation } from '../hooks/useClickAnimation';
 import type { VehicleType } from '../types';
 import { FLOW_CONFIG } from '../config/flowConfig';
+import { databaseService } from '../db/database';
+import { useEffect } from 'react';
 
 interface HomePageProps {
   onVehicleTypeSelect: (vehicleType: VehicleType) => void;
@@ -10,6 +12,21 @@ interface HomePageProps {
 
 const HomePage = ({ onVehicleTypeSelect }: HomePageProps) => {
   const navigate = useNavigate();
+
+  // Initialize database when homepage loads
+  useEffect(() => {
+    const initDatabase = async () => {
+      console.log('🏠 HomePage: Initializing database...');
+      try {
+        await databaseService.initialize();
+        console.log('🏠 HomePage: Database initialization completed');
+      } catch (error) {
+        console.error('🏠 HomePage: Database initialization failed:', error);
+      }
+    };
+
+    initDatabase();
+  }, []);
 
   const handleVehicleTypeSelect = (vehicleType: VehicleType) => {
     onVehicleTypeSelect(vehicleType);

@@ -215,12 +215,14 @@ const AppRouterContent = () => {
               (() => {
                 const hasAnswers = !!userSelection?.answers;
                 const hasBatteryCategory = userSelection?.vehicle && userSelection?.category?.slug === 'batteries';
-                const hasRequiredState = hasAnswers || hasBatteryCategory;
+                const hasBulbsCategory = userSelection?.vehicle && userSelection?.category?.slug === 'bulbs';
+                const hasRequiredState = hasAnswers || hasBatteryCategory || hasBulbsCategory;
                 
                 if (!hasRequiredState) {
                   console.log('Products route guard failed:', {
                     hasAnswers,
                     hasBatteryCategory,
+                    hasBulbsCategory,
                     vehicle: userSelection?.vehicle,
                     category: userSelection?.category,
                     userSelection

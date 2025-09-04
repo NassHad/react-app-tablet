@@ -331,57 +331,123 @@ private async ensureJeepSQLiteLoaded(): Promise<void> {
   }
 
   async getProductCategories(): Promise<ProductCategory[]> {
-    if (!USE_SQLITE) {
-      console.log('Using mock categories - USE_SQLITE is false');
-      return MOCK_CATEGORIES;
-    }
-
-    if (!this.db) {
-      console.log('Database not initialized, using mock categories');
-      return MOCK_CATEGORIES;
-    }
-
+    // First, try to get categories from Strapi if available
     try {
-      const result = await this.db.query('SELECT * FROM categories WHERE active = 1 ORDER BY name');
-      console.log('Categories loaded from SQLite:', result.values?.length || 0);
-      return result.values as ProductCategory[];
+      const { strapiService } = await import('../services/strapiService');
+      console.log('🌐 Attempting to fetch categories from Strapi...');
+      const strapiCategories = await strapiService.getProductCategories();
+      console.log('✅ Categories loaded from Strapi:', strapiCategories.length);
+      return strapiCategories;
+    } catch (strapiError: any) {
+      console.log('📡 Strapi not available, falling back to local database:', strapiError?.message || 'Unknown error');
+      
+      // Fallback to local database logic
+      if (!USE_SQLITE) {
+        console.log('Using mock categories - USE_SQLITE is false');
+        return MOCK_CATEGORIES;
+      }
+
+      if (!this.db) {
+        console.log('Database not initialized, using mock categories');
+        return MOCK_CATEGORIES;
+      }
+
+      try {
+        const result = await this.db.query('SELECT * FROM categories WHERE active = 1 ORDER BY name');
+        console.log('🗄️ Categories loaded from SQLite:', result.values?.length || 0);
+        return result.values as ProductCategory[];
+      } catch (error) {
+        console.error('❌ Error loading categories from SQLite, falling back to mock data:', error);
+        return MOCK_CATEGORIES;
+      }
+    }
+  }
+
+  async getProductById(id: number): Promise<any | null> {
+    try {
+      if (!USE_SQLITE) {
+        console.log('Using mock products - USE_SQLITE is false');
+        // Search in all mock products
+        const allMockProducts = [
+          ...MOCK_BATTERY_PRODUCTS,
+          ...MOCK_BULB_PRODUCTS,
+          ...MOCK_OIL_PRODUCTS,
+          ...MOCK_FILTRATION_PRODUCTS,
+          ...MOCK_WIPER_PRODUCTS
+        ];
+        return allMockProducts.find(p => p.id === id) || null;
+      }
+
+      if (!this.db) {
+        console.log('Database not initialized, using mock products');
+        const allMockProducts = [
+          ...MOCK_BATTERY_PRODUCTS,
+          ...MOCK_BULB_PRODUCTS,
+          ...MOCK_OIL_PRODUCTS,
+          ...MOCK_FILTRATION_PRODUCTS,
+          ...MOCK_WIPER_PRODUCTS
+        ];
+        return allMockProducts.find(p => p.id === id) || null;
+      }
+
+      const result = await this.db.query('SELECT * FROM products WHERE id = ?', [id]);
+      return result.values?.[0] || null;
     } catch (error) {
-      console.error('Error loading categories from SQLite, falling back to mock data:', error);
-      return MOCK_CATEGORIES;
+      console.error('❌ Error loading product by ID from SQLite, falling back to mock data:', error);
+      const allMockProducts = [
+        ...MOCK_BATTERY_PRODUCTS,
+        ...MOCK_BULB_PRODUCTS,
+        ...MOCK_OIL_PRODUCTS,
+        ...MOCK_FILTRATION_PRODUCTS,
+        ...MOCK_WIPER_PRODUCTS
+      ];
+      return allMockProducts.find(p => p.id === id) || null;
     }
   }
 
   async getProducts(category: string, filters?: Record<string, any>): Promise<any[]> {
-    if (!USE_SQLITE) {
-      console.log('Using mock products - USE_SQLITE is false');
-      return this.getMockProducts(category, filters);
-    }
-
-    if (!this.db) {
-      console.log('Database not initialized, using mock products for category:', category);
-      return this.getMockProducts(category, filters);
-    }
-
+    // First, try to get products from Strapi if available
     try {
-      let query = 'SELECT * FROM products WHERE category = ?';
-      const params: any[] = [category];
-
-      // Add filters
-      if (filters) {
-        Object.entries(filters).forEach(([key, value]) => {
-          if (value) {
-            query += ` AND ${key} = ?`;
-            params.push(value);
-          }
-        });
+      const { strapiService } = await import('../services/strapiService');
+      console.log(`🌐 Attempting to fetch products for ${category} from Strapi...`);
+      const strapiProducts = await strapiService.getProducts(category, filters);
+      console.log(`✅ Products loaded from Strapi for ${category}:`, strapiProducts.length);
+      return strapiProducts;
+    } catch (strapiError: any) {
+      console.log(`📡 Strapi not available for ${category}, falling back to local database:`, strapiError?.message || 'Unknown error');
+      
+      // Fallback to local database logic
+      if (!USE_SQLITE) {
+        console.log('Using mock products - USE_SQLITE is false');
+        return this.getMockProducts(category, filters);
       }
 
-      const result = await this.db.query(query, params);
-      console.log(`Products loaded from SQLite for ${category}:`, result.values?.length || 0);
-      return result.values || [];
-    } catch (error) {
-      console.error(`Error loading products from SQLite for ${category}, falling back to mock data:`, error);
-      return this.getMockProducts(category, filters);
+      if (!this.db) {
+        console.log('Database not initialized, using mock products for category:', category);
+        return this.getMockProducts(category, filters);
+      }
+
+      try {
+        let query = 'SELECT * FROM products WHERE category = ?';
+        const params: any[] = [category];
+
+        // Add filters
+        if (filters) {
+          Object.entries(filters).forEach(([key, value]) => {
+            if (value) {
+              query += ` AND ${key} = ?`;
+              params.push(value);
+            }
+          });
+        }
+
+        const result = await this.db.query(query, params);
+        console.log(`🗄️ Products loaded from SQLite for ${category}:`, result.values?.length || 0);
+        return result.values || [];
+      } catch (error) {
+        console.error(`❌ Error loading products from SQLite for ${category}, falling back to mock data:`, error);
+        return this.getMockProducts(category, filters);
+      }
     }
   }
 

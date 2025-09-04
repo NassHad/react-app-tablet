@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import type { ProductCategory } from '../types';
-import { databaseService } from '../db/database';
+import { dataService } from '../services/dataService';
 import { useCategoryNavigation } from '../hooks/useClickAnimation';
 
 import type { UserSelection } from '../types';
@@ -29,7 +29,7 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
   useEffect(() => {
     const loadCategories = async () => {
       try {
-        const categoriesData = await databaseService.getProductCategories();
+        const categoriesData = await dataService.getProductCategories();
         setCategories(categoriesData);
       } catch (error) {
         console.error('Error loading categories:', error);

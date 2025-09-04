@@ -2,10 +2,17 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import type { VehicleType, ProductCategory, Vehicle } from '../types';
-import { databaseService } from '../db/database';
+import { dataService } from '../services/dataService';
 import { useClickAnimation } from '../hooks/useClickAnimation';
 import { FLOW_CONFIG } from '../config/flowConfig';
 import { checkProductAvailability } from '../utils/productAvailability';
+
+// Import category images
+import batteryImage from '../assets/img/categories/battery.png';
+import begImage from '../assets/img/categories/beg.png';
+import filtrationImage from '../assets/img/categories/filtration.png';
+import lightsImage from '../assets/img/categories/lights.png';
+import oilImage from '../assets/img/categories/oil.png';
 
 interface CategoryScreenProps {
   vehicleType: VehicleType;
@@ -22,7 +29,7 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
     const loadCategories = async () => {
       try {
         console.log("CategoryScreen - Loading categories");
-        const categoriesData = await databaseService.getProductCategories();
+        const categoriesData = await dataService.getProductCategories();
         console.log("Categories loaded:", categoriesData);
         setCategories(categoriesData);
       } catch (error) {
@@ -70,7 +77,7 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
 
   const batteryAnimation = useClickAnimation({
     onComplete: () => {
-      const category = categories.find(c => c.name === 'Batteries');
+      const category = categories.find(c => c.name === 'Batterie');
       if (category) {
         handleCategorySelect(category);
       }
@@ -79,7 +86,7 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
 
   const oilAnimation = useClickAnimation({
     onComplete: () => {
-      const category = categories.find(c => c.name === 'Huiles');
+      const category = categories.find(c => c.name === 'Huile');
       if (category) {
         handleCategorySelect(category);
       }
@@ -88,7 +95,7 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
 
   const bulbAnimation = useClickAnimation({
     onComplete: () => {
-      const category = categories.find(c => c.name === 'Eclairage');
+      const category = categories.find(c => c.name === 'Éclairage');
       if (category) {
         handleCategorySelect(category);
       }
@@ -107,11 +114,11 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
   // Create a mapping of category names to their animations
   const getCategoryAnimation = (categoryName: string) => {
     switch (categoryName) {
-      case "Balais d'essuie-glace":
+      case "Balai essuie-glace":
         return wiperAnimation;
-      case 'Batteries':
+      case 'Batterie':
         return batteryAnimation;
-      case 'Huiles':
+      case 'Huile':
         return oilAnimation;
       case 'Eclairage':
         return bulbAnimation;
@@ -125,34 +132,34 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
   // Get the appropriate image for each category
   const getCategoryImage = (categoryName: string) => {
     switch (categoryName) {
-      case "Balais d'essuie-glace":
-        return '/assets/img/car.png'; // Using car.png as sample, should be wiper image
-      case 'Batteries':
-        return '/assets/img/car.png'; // Using car.png as placeholder for battery image
-      case 'Huiles':
-        return '/assets/img/car.png'; // Should be oil image
-      case 'Eclairage':
-        return '/assets/img/car.png'; // Should be lighting image
+      case "Balai essuie-glace":
+        return begImage; // Wiper blades image
+      case 'Batterie':
+        return batteryImage; // Battery image
+      case 'Huile':
+        return oilImage; // Oil image
+      case 'Éclairage':
+        return lightsImage; // Lighting image
       case 'Filtration':
-        return '/assets/img/car.png'; // Should be filter image
+        return filtrationImage; // Filter image
       default:
-        return '/assets/img/car.png';
+        return batteryImage; // Default to battery image
     }
   };
 
   // Get the appropriate background color for each category
   const getCategoryColor = (categoryName: string) => {
     switch (categoryName) {
-      case "Balais d'essuie-glace":
-        return 'bg-green-500'; // Green for wipers
-      case 'Batteries':
-        return 'bg-red-500'; // Red for batteries
-      case 'Huiles':
-        return 'bg-yellow-500'; // Orange/Yellow for oil
-      case 'Eclairage':
-        return 'bg-blue-600'; // Dark blue for lighting
+      case "Balai essuie-glace":
+        return 'bg-[#93C452]'; // Green for wipers
+      case 'Batterie':
+        return 'bg-[#FD171F]'; // Red for batteries
+      case 'Huile':
+        return 'bg-[#F3B11F]'; // Orange/Yellow for oil
+      case 'Éclairage':
+        return 'bg-[#235387]'; // Dark blue for lighting
       case 'Filtration':
-        return 'bg-blue-400'; // Light blue for filtration
+        return 'bg-[#96A7B9]'; // Light gray for filtration
       default:
         return 'bg-gray-500';
     }
@@ -171,30 +178,11 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
 
   return (
     <div className="min-h-screen bg-gray-100 relative overflow-hidden">
-      {/* Background waves effect */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full">
-          {/* Wave shapes - using CSS gradients to create abstract curved shapes */}
-          <div className="absolute top-0 left-0 w-full h-full opacity-20">
-            <div className="absolute top-20 left-10 w-96 h-96 bg-white rounded-full blur-3xl transform rotate-12"></div>
-            <div className="absolute top-40 right-20 w-80 h-80 bg-gray-200 rounded-full blur-3xl transform -rotate-6"></div>
-            <div className="absolute bottom-20 left-1/4 w-72 h-72 bg-white rounded-full blur-3xl transform rotate-45"></div>
-            <div className="absolute bottom-40 right-1/3 w-64 h-64 bg-gray-200 rounded-full blur-3xl transform -rotate-12"></div>
-            <div className="absolute top-1/2 left-1/2 w-56 h-56 bg-white rounded-full blur-3xl transform rotate-30"></div>
-          </div>
-        </div>
-      </div>
-
       {/* Main content */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6">
-        {/* Main title */}
-        <div className="text-center mb-8">
-          <h1 className="text-5xl font-bold text-[#1290AD] mb-4">Que recherchez-vous ?</h1>
-        </div>
-        
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6 bg-waves-hp">
         {/* Instruction text */}
-        <div className="text-center mb-16">
-          <h2 className="text-2xl text-gray-500">
+        <div className="text-center mb-16 mt-16">
+          <h2 className="text-5xl text-gray-500">
             Cliquez sur une catégorie pour voir les produits
           </h2>
         </div>
@@ -210,30 +198,32 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
               <motion.div
                 key={category.id}
                 onClick={animation.handleClick}
-                className="relative w-80 h-96 bg-white rounded-lg shadow-lg cursor-pointer overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="relative w-80 h-102 rounded-lg shadow-lg cursor-pointer overflow-hidden "
                 {...animation.animationProps}
               >
                 {/* Image */}
-                <div className="w-full h-64 relative overflow-hidden">
+
                   <img 
                     src={imageSrc} 
                     alt={category.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full"
                   />
-                  {/* Overlay for better text readability */}
-                  <div className="absolute inset-0 bg-black/20"></div>
-                </div>
                 
                 {/* Bottom bar */}
                 <div className={`absolute bottom-0 left-0 right-0 h-16 ${bgColor} flex items-center justify-center`}>
-                  <span className="text-white font-bold text-xl uppercase">
-                    {category.name === "Balais d'essuie-glace" ? "Balai essuie-glace" : 
-                     category.name === "Eclairage" ? "Éclairage" : category.name}
+                  <span className="text-white font-bold text-xl uppercase text-shadow-lg">
+                    {category.name}
                   </span>
                 </div>
               </motion.div>
             );
           })}
+        </div>
+
+        <div className="text-center mb-16">
+          <h4 className="text-4xl text-gray-500 mt-14 leading-12">
+            Nos produits sont approuvés par les principaux <br /><span className="font-bold text-[#1290AD]">constructeurs automobiles</span>
+          </h4>
         </div>
       </main>
 

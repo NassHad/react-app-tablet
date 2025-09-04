@@ -5,6 +5,7 @@ import type { VehicleType, ProductCategory, Vehicle } from '../types';
 import { useClickAnimation } from '../hooks/useClickAnimation';
 import { checkProductAvailability } from '../utils/productAvailability';
 import { FLOW_CONFIG } from '../config/flowConfig';
+import { getVehicleTypeDisplayName } from '../utils';
 import { 
   getBrands, 
   getModelsByBrand, 
@@ -126,18 +127,18 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-4xl">
-        <h1 className="text-5xl text-[#1290AD] mt-10 mb-14">Sélectionnez la <span className="font-bold">marque</span>, le <span className="font-bold">modèle</span> et la <span className="font-bold">période</span> de votre véhicule</h1>
+        <h1 className="text-5xl text-[#1290AD] mt-16 mb-14">Sélectionnez la <span className="font-bold">marque</span>, le <span className="font-bold">modèle</span> et la <span className="font-bold">date</span> de mise en circulation de votre {getVehicleTypeDisplayName(vehicleType)}</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className='flex flex-row gap-4 space-y-8 justify-around'>
             <div className="space-y-3">
-              <label htmlFor="brand" className="block text-xl font-bold text-gray-700 text-left pl-2">
+              <label htmlFor="brand" className="block text-xl font-bold text-black text-left pl-2">
                 Marque
               </label>
               <select
                 id="brand"
                 value={selectedBrandId || ''}
                 onChange={(e) => handleBrandChange(Number(e.target.value))}
-                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
                 required
               >
                 <option value="">Sélectionnez une marque</option>
@@ -151,14 +152,14 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
 
             {/* Model Selection */}
             <div className="space-y-4">
-              <label htmlFor="model" className="block text-xl font-bold text-gray-700 text-left pl-2">
+              <label htmlFor="model" className="block text-xl font-bold text-black text-left pl-2">
                 Modèle
               </label>
               <select
                 id="model"
                 value={selectedModelId || ''}
                 onChange={(e) => handleModelChange(Number(e.target.value))}
-                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
                 disabled={!selectedBrandId}
                 required
               >
@@ -177,14 +178,14 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
           <div className='flex flex-row gap-4 justify-around space-y-8'>
             {/* Date Range Selection */}
             <div className="space-y-4">
-              <label htmlFor="dateRange" className="block text-xl font-bold text-gray-700 text-left pl-2">
-                Année
+              <label htmlFor="dateRange" className="block text-xl font-bold text-black text-left pl-2">
+                Date de 1ère mise en circulation
               </label>
               <select
                 id="dateRange"
                 value={selectedDateRange}
                 onChange={(e) => handleDateRangeChange(e.target.value)}
-                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
                 disabled={!selectedModelId}
                 required
               >

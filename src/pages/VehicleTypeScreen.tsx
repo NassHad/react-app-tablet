@@ -4,6 +4,11 @@ import type { VehicleType } from '../types';
 import { useClickAnimation } from '../hooks/useClickAnimation';
 import { FLOW_CONFIG } from '../config/flowConfig';
 
+// Import vehicle images
+import motoImage from '../assets/img/homepage/moto.png';
+import carImage from '../assets/img/homepage/car.png';
+import vanImage from '../assets/img/homepage/van.png';
+
 interface VehicleTypeScreenProps {
   onVehicleTypeSelect: (vehicleType: VehicleType) => void;
 }
@@ -40,7 +45,13 @@ const VehicleTypeScreen = ({ onVehicleTypeSelect }: VehicleTypeScreenProps) => {
             className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
             {...carAnimation.animationProps}
           >
-            <div className="text-6xl mb-4">🚗</div>
+            <div className="flex items-center justify-center mb-4">
+              <img 
+                src={carImage} 
+                alt="Car" 
+                className="w-24 h-24 object-contain"
+              />
+            </div>
             <h2 className="text-2xl font-semibold">Voiture</h2>
           </motion.button>
           <motion.button
@@ -48,7 +59,13 @@ const VehicleTypeScreen = ({ onVehicleTypeSelect }: VehicleTypeScreenProps) => {
             className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
             {...truckAnimation.animationProps}
           >
-            <div className="text-6xl mb-4">🚛</div>
+            <div className="flex items-center justify-center mb-4">
+              <img 
+                src={vanImage} 
+                alt="Truck" 
+                className="w-24 h-24 object-contain"
+              />
+            </div>
             <h2 className="text-2xl font-semibold">Camion</h2>
           </motion.button>
           <motion.button
@@ -56,7 +73,13 @@ const VehicleTypeScreen = ({ onVehicleTypeSelect }: VehicleTypeScreenProps) => {
             className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
             {...motorcycleAnimation.animationProps}
           >
-            <div className="text-6xl mb-4">🏍️</div>
+            <div className="flex items-center justify-center mb-4">
+              <img 
+                src={motoImage} 
+                alt="Motorcycle" 
+                className="w-24 h-24 object-contain"
+              />
+            </div>
             <h2 className="text-2xl font-semibold">Moto</h2>
           </motion.button>
         </div>

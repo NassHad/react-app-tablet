@@ -8,6 +8,8 @@ import AnimatedLayout from './AnimatedLayout';
 import Breadcrumbs from './Breadcrumbs';
 import CategoryNavigation from './CategoryNavigation';
 import { FLOW_CONFIG } from '../config/flowConfig';
+import { getVehicleTypeDisplayName } from '../utils';
+import backToHp from '../assets/img/icons/back-to-hp.svg';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -42,7 +44,7 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation Bar */}
-      <nav className="bg-white shadow-sm border-b border-gray-200 px-4 py-3">
+      <nav className="bg-white shadow-sm border border-[#989898] px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Left side - Home and Back */}
           <div className="flex items-center space-x-3 w-1/2">
@@ -55,20 +57,7 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <svg
-                className="w-10 h-10 text-gray-700"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
+              <img src={backToHp} alt="Back to Home" className="w-15 h-15 border-" />
             </motion.button>
 
             {/* Back Arrow */}
@@ -136,12 +125,16 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
             
             {/* Title for Home Page */}
             {location.pathname === '/' && !FLOW_CONFIG.SHOW_SEARCH_INPUT && (
-              <h1 className="text-5xl font-bold text-black text-center ml-[-40%]">Bienvenue dans l'expérience.</h1>
+              <h1 className="text-5xl font-extrabold text-black text-center ml-[-40%]">Bienvenue dans l'expérience.</h1>
             )}
             
             {/* Title for Vehicle Page */}
             {location.pathname === '/vehicle' && (
-              <h1 className="text-5xl text-[#1290AD] ml-[-40%]">Je choisis mon <span className="font-bold">véhicule</span></h1>
+              <h1 className="text-5xl text-[#1290AD] ml-[-40%]">J'identifie ma <span className="font-bold">{userSelection?.vehicleType ? getVehicleTypeDisplayName(userSelection.vehicleType) : ''}</span></h1>
+            )}
+
+            {location.pathname === '/category' && (
+              <h1 className="text-5xl text-[#1290AD] ml-[-27%]">Que recherchez-vous ?</h1>
             )}
             
             {/* Category Navigation */}
@@ -219,7 +212,7 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
         )}
 
               {/* Main Content */}
-      <main className="flex-1">
+      <main className="flex-1 bg-waves-hp">
         <AnimatedLayout>
           {children}
         </AnimatedLayout>

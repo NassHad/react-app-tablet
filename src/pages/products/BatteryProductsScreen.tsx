@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import type { UserSelection } from '../../types';
-import { databaseService } from '../../db/database';
+import { dataService } from '../../services/dataService';
 
 interface BatteryProductsScreenProps {
   userSelection: UserSelection;
@@ -15,8 +15,7 @@ const BatteryProductsScreen = ({ userSelection }: BatteryProductsScreenProps) =>
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        await databaseService.initialize();
-        const batteryProducts = await databaseService.getProducts('batteries', {
+        const batteryProducts = await dataService.getProducts('batteries', {
           battery_type: userSelection.answers?.batteryType
         });
         setProducts(batteryProducts);

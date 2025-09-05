@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import type { UserSelection } from '../../types';
-import { databaseService } from '../../db/database';
+import { dataService } from '../../services/dataService';
 
 interface WiperProductsScreenProps {
   userSelection: UserSelection;
@@ -15,8 +15,7 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        await databaseService.initialize();
-        const wiperProducts = await databaseService.getProducts('wipers');
+        const wiperProducts = await dataService.getProducts('beg');
         setProducts(wiperProducts);
       } catch (error) {
         console.error('Error loading wiper products:', error);

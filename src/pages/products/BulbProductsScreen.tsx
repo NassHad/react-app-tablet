@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import type { UserSelection } from '../../types';
-import { databaseService } from '../../db/database';
+import { dataService } from '../../services/dataService';
 
 interface BulbProductsScreenProps {
   userSelection: UserSelection;
@@ -15,8 +15,7 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        await databaseService.initialize();
-        const bulbProducts = await databaseService.getProducts('bulbs', {
+        const bulbProducts = await dataService.getProducts('lights', {
           lighting_type: userSelection.answers?.lightingType
         });
         setProducts(bulbProducts);
@@ -59,15 +58,15 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
                 {/* Product Info - All on same row */}
                 <div className="flex flex-row justify-between w-full border-b-1 border-[#E5E5E5] items-center py-1">
                   <div className="w-1/5">
-                    <span className="ml-2 text-xl font-bold text-gray-900">{product.brand}</span>
-                  </div>
-                  
-                  <div className="w-1/5">
-                    <span className="ml-2 text-xl font-semibold text-gray-900 text-left">{product.number}</span>
+                    <span className="ml-2 text-xl font-bold text-gray-900">{product.number} {product.number === '1' ? 'ampoule' : 'ampoules'}</span>
                   </div>
                   
                   <div className="w-1/5">
                     <span className="ml-2 text-xl font-semibold text-gray-900">{product.type}</span>
+                  </div>
+                  
+                  <div className="w-1/5">
+                    <span className="ml-2 text-xl font-semibold text-gray-900 text-left">{product.reference}</span>
                   </div>
 
                   <div className="w-1/5">

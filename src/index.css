@@ -20,6 +20,8 @@
   --color-tertiary: #fd171f;
   --color-gray-category: #7E7D7D;
   --color-green-battery-category: #93C452;
+  --color-orange-battery-category: #FE6F28;
+  --color-red-battery-category: #FD171F;
   --color-blue-bulbs-category: #235387;
   --color-blue-title-bulbs-category: #235387;
   --color-orange-bulbs-category: #ED6205;
@@ -55,10 +57,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.capitalize-first-letter {
-  text-transform: capitalize;
 }
 
 .gradient-background {

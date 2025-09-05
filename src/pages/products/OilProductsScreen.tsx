@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import type { UserSelection } from '../../types';
-import { databaseService } from '../../db/database';
+import { dataService } from '../../services/dataService';
 
 interface OilProductsScreenProps {
   userSelection: UserSelection;
@@ -15,8 +15,7 @@ const OilProductsScreen = ({ userSelection }: OilProductsScreenProps) => {
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        await databaseService.initialize();
-        const oilProducts = await databaseService.getProducts('oils');
+        const oilProducts = await dataService.getProducts('oil');
         setProducts(oilProducts);
       } catch (error) {
         console.error('Error loading oil products:', error);

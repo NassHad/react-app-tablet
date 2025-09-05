@@ -68,7 +68,7 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
   // Create animation hooks for each category at the top level
   const wiperAnimation = useClickAnimation({
     onComplete: () => {
-      const category = categories.find(c => c.name === 'Balais d\'essuie-glace');
+      const category = categories.find(c => c.name === 'Balais essuie-glace');
       if (category) {
         handleCategorySelect(category);
       }
@@ -114,13 +114,13 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
   // Create a mapping of category names to their animations
   const getCategoryAnimation = (categoryName: string) => {
     switch (categoryName) {
-      case "Balai essuie-glace":
+      case "Balais essuie-glace":
         return wiperAnimation;
       case 'Batterie':
         return batteryAnimation;
       case 'Huile':
         return oilAnimation;
-      case 'Eclairage':
+      case 'Éclairage':
         return bulbAnimation;
       case 'Filtration':
         return filtrationAnimation;
@@ -132,7 +132,7 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
   // Get the appropriate image for each category
   const getCategoryImage = (categoryName: string) => {
     switch (categoryName) {
-      case "Balai essuie-glace":
+      case "Balais essuie-glace":
         return begImage; // Wiper blades image
       case 'Batterie':
         return batteryImage; // Battery image
@@ -150,7 +150,7 @@ const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScre
   // Get the appropriate background color for each category
   const getCategoryColor = (categoryName: string) => {
     switch (categoryName) {
-      case "Balai essuie-glace":
+      case "Balais essuie-glace":
         return 'bg-[#93C452]'; // Green for wipers
       case 'Batterie':
         return 'bg-[#FD171F]'; // Red for batteries

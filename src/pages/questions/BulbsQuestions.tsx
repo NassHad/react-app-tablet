@@ -43,13 +43,9 @@ const BulbsQuestions = ({ vehicle, category, onAnswersComplete }: BulbsQuestions
   ];
 
   const handleLightingTypeSelect = (lightingType: string) => {
-    // Navigate to the products page with bulbs category
-    navigate('/products', { 
-      state: { 
-        vehicle, 
-        category,
-        selectedLightingType: lightingType 
-      } 
+    // Call onAnswersComplete to update the userSelection state
+    onAnswersComplete({
+      lightingType: lightingType
     });
   };
 

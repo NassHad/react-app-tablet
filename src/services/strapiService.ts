@@ -125,9 +125,17 @@ class StrapiService {
       
       console.log('📊 Categories loaded from Strapi:', categories.length);
       console.log('📋 Categories data:', categories);
+      
+      // If no categories from Strapi, use mock data
+      if (categories.length === 0) {
+        console.log('📦 No categories found in Strapi, using mock data...');
+        return this.getMockCategories();
+      }
+      
       return categories;
     } catch (error: any) {
       console.error('❌ Failed to load categories from Strapi:', error);
+      console.log('📦 Falling back to mock categories...');
       
       // Log more details about the error
       if (error.response) {
@@ -136,7 +144,8 @@ class StrapiService {
         console.error('📡 Response headers:', error.response.headers);
       }
       
-      throw error;
+      // Return mock data instead of throwing error
+      return this.getMockCategories();
     }
   }
 
@@ -144,6 +153,7 @@ class StrapiService {
   async getProducts(category: string, filters?: Record<string, any>): Promise<Product[]> {
     try {
       console.log(`🌐 Attempting to fetch products for ${category} from Strapi...`);
+      console.log(`🌐 Filters provided:`, filters);
       
       // Try different query approaches
       let response;
@@ -185,10 +195,17 @@ class StrapiService {
         filteredProducts = products.filter(product => product.category === category);
       }
       
+      // If no products from Strapi, use mock data
+      if (filteredProducts.length === 0) {
+        console.log(`📦 No products found in Strapi for ${category}, using mock data...`);
+        return this.getMockProducts(category, filters);
+      }
+      
       console.log(`📊 Products loaded from Strapi for ${category}:`, filteredProducts.length);
       return filteredProducts;
     } catch (error: any) {
       console.error(`❌ Failed to load products for ${category} from Strapi:`, error);
+      console.log(`📦 Falling back to mock data for ${category}...`);
       
       // Log more details about the error
       if (error.response) {
@@ -197,7 +214,8 @@ class StrapiService {
         console.error('📡 Response headers:', error.response.headers);
       }
       
-      throw error;
+      // Return mock data instead of throwing error
+      return this.getMockProducts(category, filters);
     }
   }
 
@@ -250,7 +268,7 @@ class StrapiService {
       
       // First test the base API endpoint
       try {
-        const apiResponse = await strapiClient.get('/');
+        await strapiClient.get('/');
         console.log('✅ Strapi API endpoint accessible');
       } catch (apiError: any) {
         console.log('⚠️ API endpoint test failed:', apiError?.response?.status || 'Unknown error');
@@ -258,7 +276,7 @@ class StrapiService {
       
       // Then test categories endpoint
       try {
-        const response = await strapiClient.get('/categories');
+        await strapiClient.get('/categories');
         console.log('✅ Categories endpoint accessible');
         return true;
       } catch (categoriesError: any) {
@@ -266,7 +284,7 @@ class StrapiService {
         
         // Try products endpoint as fallback
         try {
-          const productsResponse = await strapiClient.get('/products');
+          await strapiClient.get('/products');
           console.log('✅ Products endpoint accessible');
           return true;
         } catch (productsError: any) {
@@ -292,6 +310,300 @@ class StrapiService {
       baseUrl: DATA_SOURCE_CONFIG.strapi.baseUrl,
       isConnected: false // This will be updated when we test the connection
     };
+  }
+
+  // Mock categories data for fallback
+  private getMockCategories(): ProductCategory[] {
+    console.log('🎭 Using mock categories');
+    
+    return [
+      {
+        id: 1,
+        name: 'Batterie',
+        slug: 'battery',
+        icon: 'battery-icon',
+        active: true
+      },
+      {
+        id: 2,
+        name: 'Éclairage',
+        slug: 'lights',
+        icon: 'bulb-icon',
+        active: true
+      },
+      {
+        id: 3,
+        name: 'Huile',
+        slug: 'oil',
+        icon: 'oil-icon',
+        active: true
+      },
+      {
+        id: 4,
+        name: 'Filtration',
+        slug: 'filtration',
+        icon: 'filter-icon',
+        active: true
+      },
+      {
+        id: 5,
+        name: 'Balais essuie-glace',
+        slug: 'beg',
+        icon: 'wiper-icon',
+        active: true
+      }
+    ];
+  }
+
+  // Mock products data for fallback
+  private getMockProducts(category: string, filters?: Record<string, any>): Product[] {
+    console.log(`🎭 Using mock products for category: ${category}`);
+    
+    let mockProducts: Product[] = [];
+    
+    switch (category) {
+      case 'battery':
+        mockProducts = [
+          {
+            id: 1,
+            brand: 'Varta',
+            type: 'Blue Dynamic',
+            category: 'battery',
+            battery_type: 'standard',
+            power: '74Ah',
+            tension: '12V',
+            voltage: '12V',
+            reference: '574012068',
+            size: '242x175x190mm'
+          },
+          {
+            id: 2,
+            brand: 'Bosch',
+            type: 'S4 Silver',
+            category: 'battery',
+            battery_type: 'standard',
+            power: '70Ah',
+            tension: '12V',
+            voltage: '12V',
+            reference: 'S4 007',
+            size: '242x175x190mm'
+          },
+          {
+            id: 3,
+            brand: 'Exide',
+            type: 'Premium',
+            category: 'battery',
+            battery_type: 'efb',
+            power: '70Ah',
+            tension: '12V',
+            voltage: '12V',
+            reference: 'E700',
+            size: '242x175x190mm'
+          },
+          {
+            id: 4,
+            brand: 'ACDelco',
+            type: 'Professional',
+            category: 'battery',
+            battery_type: 'agm',
+            power: '80Ah',
+            tension: '12V',
+            voltage: '12V',
+            reference: 'ACD-80',
+            size: '242x175x190mm'
+          },
+          {
+            id: 5,
+            brand: 'Yuasa',
+            type: 'Silver',
+            category: 'battery',
+            battery_type: 'standard',
+            power: '65Ah',
+            tension: '12V',
+            voltage: '12V',
+            reference: 'YS-65',
+            size: '242x175x190mm'
+          }
+        ];
+        break;
+        
+      case 'lights':
+        mockProducts = [
+          {
+            id: 4,
+            brand: 'Osram',
+            number: '1',
+            type: 'Night Breaker Laser',
+            category: 'lights',
+            lighting_type: 'feu_croisement',
+            power: '55W',
+            voltage: '12V',
+            reference: 'H7',
+            size: 'H7'
+          },
+          {
+            id: 5,
+            brand: 'Philips',
+            number: '2',
+            type: 'Vision Plus',
+            category: 'lights',
+            lighting_type: 'feu_croisement',
+            power: '55W',
+            voltage: '12V',
+            reference: 'H7',
+            size: 'H7'
+          },
+          {
+            id: 6,
+            brand: 'Bosch',
+            number: '1',
+            type: 'Ultra Life',
+            category: 'lights',
+            lighting_type: 'feu_route',
+            power: '55W',
+            voltage: '12V',
+            reference: 'H7',
+            size: 'H7'
+          },
+          {
+            id: 7,
+            brand: 'Valeo',
+            number: '1',
+            type: 'Vision',
+            category: 'lights',
+            lighting_type: 'feu_position',
+            power: '5W',
+            voltage: '12V',
+            reference: 'W5W',
+            size: 'W5W'
+          },
+          {
+            id: 8,
+            brand: 'Hella',
+            number: '1',
+            type: 'Rallye',
+            category: 'lights',
+            lighting_type: 'feux_antibrouillard',
+            power: '55W',
+            voltage: '12V',
+            reference: 'H3',
+            size: 'H3'
+          },
+          {
+            id: 9,
+            brand: 'Osram',
+            number: '1',
+            type: 'LEDriving',
+            category: 'lights',
+            lighting_type: 'eclairage_jour',
+            power: 'LED',
+            voltage: '12V',
+            reference: 'LED',
+            size: 'LED'
+          }
+        ];
+        break;
+        
+      case 'oil':
+        mockProducts = [
+          {
+            id: 6,
+            brand: 'Total',
+            type: 'Quartz 9000',
+            category: 'oil',
+            power: '5W-30',
+            quantity: '5L',
+            reference: '9000 5W-30',
+            size: '5L'
+          },
+          {
+            id: 7,
+            brand: 'Castrol',
+            type: 'GTX',
+            category: 'oil',
+            power: '10W-40',
+            quantity: '4L',
+            reference: 'GTX 10W-40',
+            size: '4L'
+          }
+        ];
+        break;
+        
+      case 'filtration':
+        mockProducts = [
+          {
+            id: 8,
+            brand: 'Mann-Filter',
+            type: 'C 25 001',
+            category: 'filtration',
+            reference: 'C 25 001',
+            size: 'Standard'
+          },
+          {
+            id: 9,
+            brand: 'Bosch',
+            type: 'F 026 400 043',
+            category: 'filtration',
+            reference: 'F 026 400 043',
+            size: 'Standard'
+          }
+        ];
+        break;
+        
+      case 'beg':
+        mockProducts = [
+          {
+            id: 10,
+            brand: 'Valeo',
+            type: 'Silencio XTR',
+            category: 'beg',
+            size: '60cm',
+            reference: 'V60'
+          },
+          {
+            id: 11,
+            brand: 'Bosch',
+            type: 'Aerotwin',
+            category: 'beg',
+            size: '65cm',
+            reference: 'A65'
+          }
+        ];
+        break;
+        
+      default:
+        mockProducts = [];
+    }
+    
+    // Apply filters if provided
+    if (filters) {
+      console.log(`🔍 Applying filters to mock products:`, filters);
+      console.log(`🔍 Mock products before filtering:`, mockProducts.length);
+      
+      Object.entries(filters).forEach(([key, value]) => {
+        if (value) {
+          console.log(`🔍 Filtering by ${key} = ${value}`);
+          const beforeCount = mockProducts.length;
+          mockProducts = mockProducts.filter(product => {
+            const productValue = product[key as keyof Product];
+            const matches = productValue === value;
+            console.log(`🔍 Product ${product.id} (${product.brand}): ${key} = "${productValue}" === "${value}" = ${matches}`);
+            return matches;
+          });
+          console.log(`🔍 After filtering by ${key}: ${beforeCount} -> ${mockProducts.length} products`);
+        }
+      });
+    }
+    
+    console.log(`🎭 Mock products for ${category}:`, mockProducts.length);
+    
+    // If no products match the filter, return all products for the category
+    if (mockProducts.length === 0 && filters && Object.keys(filters).length > 0) {
+      console.log(`⚠️ No products match the filter, returning all products for ${category}`);
+      return this.getMockProducts(category, {}); // Call without filters
+    }
+    
+    return mockProducts;
   }
 }
 

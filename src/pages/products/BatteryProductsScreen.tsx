@@ -15,7 +15,7 @@ const BatteryProductsScreen = ({ userSelection }: BatteryProductsScreenProps) =>
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        const batteryProducts = await dataService.getProducts('batteries', {
+        const batteryProducts = await dataService.getProducts('battery', {
           battery_type: userSelection.answers?.batteryType
         });
         setProducts(batteryProducts);
@@ -45,7 +45,7 @@ const BatteryProductsScreen = ({ userSelection }: BatteryProductsScreenProps) =>
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-6xl">
-        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15">Liste des batteries <span className='text-green-battery-category capitalize-first-letter'>{userSelection.answers?.batteryType}</span> compatibles avec votre véhicule <span className='text-green-battery-category capitalize-first-letter'>{userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</span></h1>
+        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15">Liste des batteries <span className={`${userSelection.answers?.batteryType === 'standard' ? 'text-green-battery-category' : userSelection.answers?.batteryType === 'efb' ? 'text-orange-battery-category' : 'text-red-battery-category'} uppercase`}>{userSelection.answers?.batteryType}</span> <br />compatibles avec votre véhicule <br/><span className={`${userSelection.answers?.batteryType === 'standard' ? 'text-green-battery-category' : userSelection.answers?.batteryType === 'efb' ? 'text-orange-battery-category' : 'text-red-battery-category'} capitalize-first-letter`}>{userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</span></h1>
         
         {/* Vertical scrollable container */}
         <div className="overflow-y-auto max-h-110 pb-8">
@@ -74,7 +74,7 @@ const BatteryProductsScreen = ({ userSelection }: BatteryProductsScreenProps) =>
                   </div>
                   <button
                     onClick={() => handleProductDetails(product.id)}
-                    className="bg-green-battery-category text-white py-1 rounded-lg hover:opacity-80 transition-colors text-lg font-semibold ml-8 w-1/5"
+                    className={`text-white py-1 rounded-lg hover:opacity-80 transition-colors text-lg font-semibold ml-8 w-1/5 ${userSelection.answers?.batteryType === 'standard' ? 'bg-green-battery-category' : userSelection.answers?.batteryType === 'efb' ? 'bg-orange-battery-category' : 'bg-red-battery-category'}`}
                   >
                     Plus d'infos
                   </button>

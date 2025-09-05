@@ -28,13 +28,13 @@ const ProductsScreen = ({ userSelection }: ProductsScreenProps) => {
     }
 
     switch (userSelection.category.slug) {
-      case 'wipers':
+      case 'beg':
         return <WiperProductsScreen userSelection={userSelection} />;
-      case 'batteries':
+      case 'battery':
         return <BatteryProductsScreen userSelection={userSelection} />;
-      case 'bulbs':
+      case 'lights':
         return <BulbProductsScreen userSelection={userSelection} />;
-      case 'oils':
+      case 'oil':
         return <OilProductsScreen userSelection={userSelection} />;
       case 'filtration':
         return <FiltrationProductsScreen userSelection={userSelection} />;

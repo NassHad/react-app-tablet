@@ -1,83 +1,93 @@
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import type { UserSelection } from '../../types';
+import { dataService } from '../../services/dataService';
 
 interface BulbProductsScreenProps {
   userSelection: UserSelection;
 }
 
-// Mock bulb products data
-const MOCK_BULB_PRODUCTS = [
-  { id: 1, brand: 'OSRAM', number: '2', type: 'H4', voltage: '12V' },
-  { id: 2, brand: 'Philips', number: '2', type: 'H7', voltage: '12V' },
-  { id: 3, brand: 'OSRAM', number: '4', type: 'H1', voltage: '12V' },
-  { id: 4, brand: 'Philips', number: '2', type: 'H3', voltage: '12V' },
-  { id: 5, brand: 'OSRAM', number: '2', type: 'H11', voltage: '12V' },
-  { id: 6, brand: 'Philips', number: '2', type: 'H4', voltage: '12V' },
-  { id: 7, brand: 'OSRAM', number: '2', type: 'H8', voltage: '12V' },
-  { id: 8, brand: 'Philips', number: '4', type: 'H7', voltage: '12V' },
-  { id: 9, brand: 'OSRAM', number: '2', type: 'H9', voltage: '12V' },
-  { id: 10, brand: 'Philips', number: '2', type: 'H1', voltage: '12V' },
-  { id: 11, brand: 'OSRAM', number: '2', type: 'H4', voltage: '24V' },
-  { id: 12, brand: 'Philips', number: '2', type: 'H7', voltage: '24V' },
-];
-
 const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
   const navigate = useNavigate();
+  const [products, setProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadProducts = async () => {
+      try {
+        const bulbProducts = await dataService.getProducts('lights', {
+          lighting_type: userSelection.answers?.lightingType
+        });
+        setProducts(bulbProducts);
+      } catch (error) {
+        console.error('Error loading bulb products:', error);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProducts();
+  }, [userSelection.answers?.lightingType]);
 
   const handleProductDetails = (productId: number) => {
     navigate(`/product-details/${productId}`);
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-2xl text-gray-600">Chargement des produits...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-6xl">
-        <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Eclairage</h1>
+        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15">Liste des ampoules <span className='text-blue-title-bulbs-category capitalize-first-letter'>{userSelection.answers?.lightingType || 'compatibles'}</span> compatibles avec votre véhicule <span className='text-blue-title-bulbs-category capitalize-first-letter'>{userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</span></h1>
         
         {/* Vertical scrollable container */}
-        <div className="overflow-y-auto max-h-112 pb-8">
-          <div className="space-y-4 px-8">
-            {MOCK_BULB_PRODUCTS.map((product) => (
+        <div className="overflow-y-auto max-h-110 pb-8">
+          <div className="">
+            {products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-lg shadow-lg p-6 flex items-center justify-between"
+                className="bg-white rounded-lg flex items-center justify-between"
               >
                 {/* Product Info - All on same row */}
-                <div className="flex items-center space-x-8">
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Marque:</span>
-                    <span className="ml-2 text-xl font-bold text-gray-900">{product.brand}</span>
+                <div className="flex flex-row justify-between w-full border-b-1 border-[#E5E5E5] items-center py-1">
+                  <div className="w-1/5">
+                    <span className="ml-2 text-xl font-bold text-gray-900">{product.number} {product.number === '1' ? 'ampoule' : 'ampoules'}</span>
                   </div>
                   
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Nombre:</span>
-                    <span className="ml-2 text-xl font-semibold text-gray-900">{product.number}</span>
-                  </div>
-                  
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Type:</span>
+                  <div className="w-1/5">
                     <span className="ml-2 text-xl font-semibold text-gray-900">{product.type}</span>
                   </div>
+                  
+                  <div className="w-1/5">
+                    <span className="ml-2 text-xl font-semibold text-gray-900 text-left">{product.reference}</span>
+                  </div>
 
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Tension:</span>
+                  <div className="w-1/5">
                     <span className="ml-2 text-xl font-semibold text-gray-900">{product.voltage}</span>
                   </div>
+                  <button
+                    onClick={() => handleProductDetails(product.id)}
+                    className="bg-blue-title-bulbs-category text-white py-1 rounded-lg hover:opacity-80 transition-colors text-lg font-semibold ml-8 w-1/5"
+                  >
+                    Plus d'infos
+                  </button>
                 </div>
 
                 {/* Action Button */}
-                <button
-                  onClick={() => handleProductDetails(product.id)}
-                  className="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-lg font-semibold ml-8"
-                >
-                  Plus d'infos
-                </button>
               </div>
             ))}
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-8 text-gray-500 text-lg">
+        <div className="mt-8 text-gray-500 text-lg leading-2">
           ↑ Faites glisser pour voir plus de produits ↓
         </div>
       </div>

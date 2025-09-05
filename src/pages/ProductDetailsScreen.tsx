@@ -1,4 +1,5 @@
 import type { UserSelection } from '../types';
+import { getVehicleTypeDisplayName } from '../utils';
 
 interface ProductDetailsScreenProps {
   userSelection: UserSelection | null;
@@ -8,7 +9,11 @@ const ProductDetailsScreen = ({ userSelection }: ProductDetailsScreenProps) => {
   return (
     <div className="min-h-screen bg-yellow-50 flex items-center justify-center">
       <div className="text-center">
-        {userSelection?.vehicleType}
+        {userSelection?.vehicleType && (
+          <div className="text-lg text-gray-600 mb-4">
+            Type de véhicule: {getVehicleTypeDisplayName(userSelection.vehicleType)}
+          </div>
+        )}
         <h1 className="text-5xl font-bold text-gray-900 mb-8">Détails Produit</h1>
         <div className="bg-white p-8 rounded-lg shadow-lg max-w-md">
           <h2 className="text-2xl font-semibold mb-4">Balai Bosch AeroTwin</h2>

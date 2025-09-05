@@ -7,7 +7,7 @@ interface AnimatedLayoutProps {
 
 const AnimatedLayout = ({ children }: AnimatedLayoutProps) => {
   return (
-    <div className="relative overflow-hidden" style={{ height: '80vh' }}>
+    <div className="relative overflow-hidden" style={{ height: '85vh' }}>
       <AnimatePresence mode="wait">
         {children}
       </AnimatePresence>

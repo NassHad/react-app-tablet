@@ -1,62 +1,77 @@
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import type { UserSelection } from '../../types';
+import { dataService } from '../../services/dataService';
 
 interface WiperProductsScreenProps {
   userSelection: UserSelection;
 }
 
-// Mock wiper products data
-const MOCK_WIPER_PRODUCTS = [
-  { id: 1, brand: 'Valeo', type: 'VS70', size: '350mm' },
-  { id: 2, brand: 'Bosch', type: 'Aerotwin', size: '400mm' },
-  { id: 3, brand: 'Valeo', type: 'VS80', size: '380mm' },
-  { id: 4, brand: 'Bosch', type: 'Aerotwin', size: '350mm' },
-  { id: 5, brand: 'Valeo', type: 'VS60', size: '320mm' },
-  { id: 6, brand: 'Bosch', type: 'Aerotwin', size: '420mm' },
-  { id: 7, brand: 'Valeo', type: 'VS90', size: '450mm' },
-  { id: 8, brand: 'Bosch', type: 'Aerotwin', size: '380mm' },
-  { id: 9, brand: 'Valeo', type: 'VS100', size: '500mm' },
-  { id: 10, brand: 'Bosch', type: 'Aerotwin', size: '360mm' },
-  { id: 11, brand: 'Valeo', type: 'VS50', size: '300mm' },
-  { id: 12, brand: 'Bosch', type: 'Aerotwin', size: '440mm' },
-];
-
 const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
   const navigate = useNavigate();
+  const [products, setProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadProducts = async () => {
+      try {
+        const wiperProducts = await dataService.getProducts('beg');
+        setProducts(wiperProducts);
+      } catch (error) {
+        console.error('Error loading wiper products:', error);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProducts();
+  }, []);
 
   const handleProductDetails = (productId: number) => {
     navigate(`/product-details/${productId}`);
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-2xl text-gray-600">Chargement des produits...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-6xl">
-        <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Balais d'essuie-glace</h1>
+        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15">Liste des balais d'essuie-glace compatibles avec votre véhicule <span className='text-blue-wiper-category capitalize-first-letter'>{userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</span></h1>
         
         {/* Vertical scrollable container */}
-        <div className="overflow-y-auto max-h-112 pb-8">
-          <div className="space-y-4 px-8">
-            {MOCK_WIPER_PRODUCTS.map((product) => (
+        <div className="overflow-y-auto max-h-110 pb-8">
+          <div className="">
+            {products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-lg shadow-lg p-6 flex items-center justify-between"
+                className="bg-white rounded-lg flex items-center justify-between"
               >
                 {/* Product Info - All on same row */}
-                <div className="flex items-center space-x-8">
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Marque:</span>
+                <div className="flex flex-row justify-between w-full border-b-1 border-[#E5E5E5] items-center py-1">
+                  <div className="w-1/3">
                     <span className="ml-2 text-xl font-bold text-gray-900">{product.brand}</span>
                   </div>
                   
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Type:</span>
-                    <span className="ml-2 text-xl font-semibold text-gray-900">{product.type}</span>
+                  <div className="w-1/3">
+                    <span className="ml-2 text-xl font-semibold text-gray-900 text-left">{product.type}</span>
                   </div>
                   
-                  <div className="text-left">
-                    <span className="text-gray-600 text-lg">Taille:</span>
+                  <div className="w-1/3">
                     <span className="ml-2 text-xl font-semibold text-gray-900">{product.size}</span>
                   </div>
+                  <button
+                    onClick={() => handleProductDetails(product.id)}
+                    className="bg-blue-wiper-category text-white py-1 rounded-lg hover:opacity-80 transition-colors text-lg font-semibold ml-8 w-1/6"
+                  >
+                    Plus d'infos
+                  </button>
                 </div>
 
                 {/* Action Button */}
@@ -66,7 +81,7 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-8 text-gray-500 text-lg">
+        <div className="mt-8 text-gray-500 text-lg leading-2">
           ↑ Faites glisser pour voir plus de produits ↓
         </div>
       </div>

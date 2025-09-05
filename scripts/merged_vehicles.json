@@ -1,0 +1,1758 @@
+{
+  "vehicles": [
+    {
+      "brand": "ALFA ROMEO",
+      "model": "147"
+    },
+    {
+      "brand": "ALFA ROMEO",
+      "model": "159"
+    },
+    {
+      "brand": "ALFA ROMEO",
+      "model": "159 Sportwagon"
+    },
+    {
+      "brand": "ALFA ROMEO",
+      "model": "GIULIETTA"
+    },
+    {
+      "brand": "ALFA ROMEO",
+      "model": "GT"
+    },
+    {
+      "brand": "ALFA ROMEO",
+      "model": "MITO"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A1"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A1 Sportback"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A3"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A3 Convertible"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A3 Sportback"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A4"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A4 Avant"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A4 Convertible"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A5"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A5 Sportback"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A6"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A6 Avant"
+    },
+    {
+      "brand": "AUDI",
+      "model": "Q3"
+    },
+    {
+      "brand": "AUDI",
+      "model": "Q5"
+    },
+    {
+      "brand": "AUDI",
+      "model": "Q7"
+    },
+    {
+      "brand": "BMW",
+      "model": "1"
+    },
+    {
+      "brand": "BMW",
+      "model": "2 Active Tourer"
+    },
+    {
+      "brand": "BMW",
+      "model": "2 Coupe"
+    },
+    {
+      "brand": "BMW",
+      "model": "2 Gran Tourer"
+    },
+    {
+      "brand": "BMW",
+      "model": "3"
+    },
+    {
+      "brand": "BMW",
+      "model": "3 (F30"
+    },
+    {
+      "brand": "BMW",
+      "model": "5"
+    },
+    {
+      "brand": "BMW",
+      "model": "X1"
+    },
+    {
+      "brand": "BMW",
+      "model": "X1  sDrive"
+    },
+    {
+      "brand": "BMW",
+      "model": "X3"
+    },
+    {
+      "brand": "BMW",
+      "model": "X5"
+    },
+    {
+      "brand": "CHEVROLET",
+      "model": "MATIZ"
+    },
+    {
+      "brand": "CHEVROLET",
+      "model": "MATIZ (M200"
+    },
+    {
+      "brand": "CHRYSLER",
+      "model": "PT CRUISER"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "1.4"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "BERLINGO"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "BERLINGO / BERLINGO FIRST Box"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "BERLINGO / BERLINGO FIRST MPV"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "BERLINGO Box"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "BERLINGO Platform/ Chassis"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "BERLINGO Platform/Chassis"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C-CROSSER"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C1"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C1 II"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C15"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C2"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C3 AIRCROSS II"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C3 I"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C3 II"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C3 III"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C3 Picasso"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C3 Pluriel"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C4 AIRCROSS"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C4 CACTUS"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C4 Grand Picasso I"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C4 Grand Picasso II"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C4 I"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C4 II"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C4 Picasso I MPV"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C4 Picasso II"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C5 I"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C5 II"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C5 III"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C5 III Break"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "C8"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "DS3"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "DS4"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "DS5"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "JUMPER Box  | RELAY"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "JUMPER Box | RELAY"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "JUMPER Platform/Chassis | RELAY"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "JUMPY Box | DISPATCH"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "JUMPY Platform/Chassis  | DISPATCH"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "NEMO Box"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "NEMO Estate"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "SAXO"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "XSARA"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "XSARA Box Body / Estate / Hatchback"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "XSARA Break"
+    },
+    {
+      "brand": "CITROËN",
+      "model": "XSARA PICASSO"
+    },
+    {
+      "brand": "DACIA",
+      "model": "DOKKER"
+    },
+    {
+      "brand": "DACIA",
+      "model": "DUSTER"
+    },
+    {
+      "brand": "DACIA",
+      "model": "DUSTER Box"
+    },
+    {
+      "brand": "DACIA",
+      "model": "LODGY"
+    },
+    {
+      "brand": "DACIA",
+      "model": "LOGAN"
+    },
+    {
+      "brand": "DACIA",
+      "model": "LOGAN MCV"
+    },
+    {
+      "brand": "DACIA",
+      "model": "SANDERO"
+    },
+    {
+      "brand": "DACIA",
+      "model": "SANDERO II"
+    },
+    {
+      "brand": "DS",
+      "model": "DS 3"
+    },
+    {
+      "brand": "DS",
+      "model": "DS 4 / DS"
+    },
+    {
+      "brand": "FIAT",
+      "model": "120"
+    },
+    {
+      "brand": "FIAT",
+      "model": "160 Multijet"
+    },
+    {
+      "brand": "FIAT",
+      "model": "2 D"
+    },
+    {
+      "brand": "FIAT",
+      "model": "3 D"
+    },
+    {
+      "brand": "FIAT",
+      "model": "500"
+    },
+    {
+      "brand": "FIAT",
+      "model": "500 C"
+    },
+    {
+      "brand": "FIAT",
+      "model": "500L"
+    },
+    {
+      "brand": "FIAT",
+      "model": "500X"
+    },
+    {
+      "brand": "FIAT",
+      "model": "DOBLO Box Body / Estate"
+    },
+    {
+      "brand": "FIAT",
+      "model": "DOBLO Cargo"
+    },
+    {
+      "brand": "FIAT",
+      "model": "DOBLO MPV"
+    },
+    {
+      "brand": "FIAT",
+      "model": "DUCATO Box"
+    },
+    {
+      "brand": "FIAT",
+      "model": "DUCATO Bus"
+    },
+    {
+      "brand": "FIAT",
+      "model": "DUCATO Platform/Chassis"
+    },
+    {
+      "brand": "FIAT",
+      "model": "GRANDE PUNTO"
+    },
+    {
+      "brand": "FIAT",
+      "model": "MULTIPLA"
+    },
+    {
+      "brand": "FIAT",
+      "model": "PANDA"
+    },
+    {
+      "brand": "FIAT",
+      "model": "PANDA"
+    },
+    {
+      "brand": "FIAT",
+      "model": "PUNTO"
+    },
+    {
+      "brand": "FIAT",
+      "model": "SCUDO Box"
+    },
+    {
+      "brand": "FIAT",
+      "model": "STILO"
+    },
+    {
+      "brand": "FORD",
+      "model": "Box  TRANSIT Box"
+    },
+    {
+      "brand": "FORD",
+      "model": "C-MAX"
+    },
+    {
+      "brand": "FORD",
+      "model": "ECOSPORT"
+    },
+    {
+      "brand": "FORD",
+      "model": "FIESTA IV"
+    },
+    {
+      "brand": "FORD",
+      "model": "FIESTA V"
+    },
+    {
+      "brand": "FORD",
+      "model": "FIESTA VI"
+    },
+    {
+      "brand": "FORD",
+      "model": "FIESTA VII"
+    },
+    {
+      "brand": "FORD",
+      "model": "FOCUS"
+    },
+    {
+      "brand": "FORD",
+      "model": "FOCUS C-MAX"
+    },
+    {
+      "brand": "FORD",
+      "model": "FOCUS II"
+    },
+    {
+      "brand": "FORD",
+      "model": "FOCUS Turnier"
+    },
+    {
+      "brand": "FORD",
+      "model": "FUSION"
+    },
+    {
+      "brand": "FORD",
+      "model": "GALAXY"
+    },
+    {
+      "brand": "FORD",
+      "model": "GALAXY KA"
+    },
+    {
+      "brand": "FORD",
+      "model": "III"
+    },
+    {
+      "brand": "FORD",
+      "model": "KA"
+    },
+    {
+      "brand": "FORD",
+      "model": "KA+"
+    },
+    {
+      "brand": "FORD",
+      "model": "KUGA I MONDEO"
+    },
+    {
+      "brand": "FORD",
+      "model": "MONDEO III"
+    },
+    {
+      "brand": "FORD",
+      "model": "MONDEO III Turnier"
+    },
+    {
+      "brand": "FORD",
+      "model": "RANGER"
+    },
+    {
+      "brand": "FORD",
+      "model": "S-MAX  TRANSIT"
+    },
+    {
+      "brand": "FORD",
+      "model": "TRANSIT Box"
+    },
+    {
+      "brand": "FORD",
+      "model": "TRANSIT CONNECT"
+    },
+    {
+      "brand": "HONDA",
+      "model": "CIVIC VIII Hatchback"
+    },
+    {
+      "brand": "HONDA",
+      "model": "CR-V III"
+    },
+    {
+      "brand": "HONDA",
+      "model": "JAZZ III  | FIT"
+    },
+    {
+      "brand": "HONDA",
+      "model": "JAZZ III  |.2"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "GETZ"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "i10"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "i20"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "i20 (GB"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "i30"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "ix35  | TUCSON"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "MATRIX"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "SANTA FÉ I"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "SANTA FÉ II"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "TUCSON"
+    },
+    {
+      "brand": "IVECO",
+      "model": "DAILY III Box Body / Estate"
+    },
+    {
+      "brand": "IVECO",
+      "model": "DAILY III Platform/Chassi"
+    },
+    {
+      "brand": "JEEP",
+      "model": "RENEGADE Closed Off-Road Vehicle"
+    },
+    {
+      "brand": "KIA",
+      "model": "CEE'D SW"
+    },
+    {
+      "brand": "KIA",
+      "model": "PICANTO"
+    },
+    {
+      "brand": "KIA",
+      "model": "QLE) SPORTAGE"
+    },
+    {
+      "brand": "KIA",
+      "model": "RIO III"
+    },
+    {
+      "brand": "KIA",
+      "model": "RIO III  SORENTO I"
+    },
+    {
+      "brand": "KIA",
+      "model": "SORENTO I"
+    },
+    {
+      "brand": "KIA",
+      "model": "SPORTAGE"
+    },
+    {
+      "brand": "KIA",
+      "model": "VENGA"
+    },
+    {
+      "brand": "LANCIA",
+      "model": "YPSILON"
+    },
+    {
+      "brand": "LAND ROVER",
+      "model": "FREELANDER"
+    },
+    {
+      "brand": "LAND ROVER",
+      "model": "RANGE ROVER EVOQUE"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "5-t Box"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "6-t Box"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "A-CLASS"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "A-CLASS  A"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "B-CLASS"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "B-CLASS  B"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "B-CLASS (W246"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "C- CLASS"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "C-CLASS"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "C-CLASS  C"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "C-CLASS Coupe"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "C-CLASS Coupe C"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "CABRIOLET"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "CLK"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "D"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "E-CLASS"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "E-CLASS  E"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "E-CLASS  E / BlueTEC"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "GLA-CLASS"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "GLA-CLASS  GLA / d / 4-matic"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "GLC"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "GLC  4-matic"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "M- ML"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "M-CLASS"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "M-CLASS  ML"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "M-CLASS / /"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "SL"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "SPRINTER 3"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "SPRINTER 4"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "VITO / MIXTO Box"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "VITO / MIXTO Box  /"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "VITO / MIXTO Box  / 116 /"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "VITO Box"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "VITO Bus"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI  Cooper"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI  Cooper / S"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI  Cooper D"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI (R50"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI COUNTRYMAN"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI COUNTRYMAN  Cooper / S / S ALL4"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI COUNTRYMAN  Cooper D / ALL4"
+    },
+    {
+      "brand": "MITSUBISHI",
+      "model": "L 200 / TRITON  | HUNTER"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "CABSTAR"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "JUKE"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "MICRA II"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "MICRA IV"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "MICRA V"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "NOTE"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "NOTE (E11"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "NP300 NAVARA"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "NV200 Box Body / Estate"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "PATHFINDER III"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "PATHFINDER III  e-NV"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "PRIMERA Hatchback"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "QASHQAI / QASHQAI +2 I"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "QASHQAI II Closed Off- Road Vehicle"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "QASHQAI II Closed Off-Road Vehicle"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "TERRANO II"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "X-TRAIL"
+    },
+    {
+      "brand": "OPEL",
+      "model": "AGILA"
+    },
+    {
+      "brand": "OPEL",
+      "model": "ASTRA G"
+    },
+    {
+      "brand": "OPEL",
+      "model": "ASTRA G Estate"
+    },
+    {
+      "brand": "OPEL",
+      "model": "ASTRA G Hatchback"
+    },
+    {
+      "brand": "OPEL",
+      "model": "ASTRA J"
+    },
+    {
+      "brand": "OPEL",
+      "model": "COMBO Box Body / Estate"
+    },
+    {
+      "brand": "OPEL",
+      "model": "COMBO Box Body /Estate"
+    },
+    {
+      "brand": "OPEL",
+      "model": "CORSA B"
+    },
+    {
+      "brand": "OPEL",
+      "model": "CORSA C"
+    },
+    {
+      "brand": "OPEL",
+      "model": "CORSA D"
+    },
+    {
+      "brand": "OPEL",
+      "model": "CORSA E"
+    },
+    {
+      "brand": "OPEL",
+      "model": "CROSSLAND X"
+    },
+    {
+      "brand": "OPEL",
+      "model": "KARL"
+    },
+    {
+      "brand": "OPEL",
+      "model": "MERIVA A MPV"
+    },
+    {
+      "brand": "OPEL",
+      "model": "MERIVA B MPV"
+    },
+    {
+      "brand": "OPEL",
+      "model": "MOKKA / MOKKA X"
+    },
+    {
+      "brand": "OPEL",
+      "model": "VECTRA C GTS"
+    },
+    {
+      "brand": "OPEL",
+      "model": "ZAFIRA / ZAFIRA FAMILY B"
+    },
+    {
+      "brand": "OPEL",
+      "model": "ZAFIRA A MPV"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "1007"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "106 II"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "107"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "107 (PM_"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "108"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "2008"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "206 CC"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "206 Hatchback"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "206 SW"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "206 Van"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "206+"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "206+ (2L_"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "207  | 207/207+"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "207  |+"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "207 CC"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "207 SW"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "207 Van"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "208 I"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "208 I (CA_"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "3008 MPV"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "3008 SUV"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "306 Hatchback"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "307"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "307 Break"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "307 CC"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "307 SW"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "308 CC"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "308 I"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "308 II"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "308 SW I"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "308 SW II"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "406"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "406 Break"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "407"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "407 SW"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "5008"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "5008 II"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "508 I"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "508 SW I"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "607"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "807"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "BIPPER"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "BIPPER Tepee"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "BOXER Box"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "BOXER Platform/Chassis"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "EXPERT Box"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "EXPERT Tepee"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "PARTNER Box"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "PARTNER Box  | PARTNER ORIGIN | RANCH"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "PARTNER Combispace  | PARTNER ORIGIN | RANCH"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "PARTNER Tepee"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CAPTUR"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO Grandtour"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO Grandtour 1.5 dCi (KR0F"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO Grandtour 1.5 dCi (KR0H"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO I"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO I (B/C57_"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO I Box"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO II"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO II (BB_"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO II Box"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO II Box  1.2 (SB0A"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO III"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO III Box"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO IV"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO IV Grandtour"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "ESPACE II"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "ESPACE III"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "ESPACE IV"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "ESPACE V"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "GRAND SCÉNIC II"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "GRAND SCÉNIC III"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "GRAND SCÉNIC IV"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "GRAND SCÉNIC IV 1.5"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "KADJAR"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "KANGOO"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "KANGOO / GRAND KANGOO"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "KANGOO BE BOP"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "KANGOO Express"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "KOLEOS I"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "LAGUNA I"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "LAGUNA II"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "LAGUNA II Grandtour"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "LAGUNA III"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "LAGUNA III Grandtour"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MASTER II Box"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MASTER II Bus"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MASTER II Platform/Chassis"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MASTER III Box"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MASTER III Platform/ Chassis"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MASTER III Platform/Chassis"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE CC"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE I"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE II"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE II Coupé- Cabriolet"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE II Coupé-Cabriolet"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE II Estate"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE II Hatchback Van"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE III Coupe"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE III Grandtour"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE III Hatchback"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE IV Grandtour"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE IV Hatchback"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE Scenic"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MODUS / GRAND MODUS"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MODUS / GRAND MODUS  1.2 / 16V"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "SCÉNIC I MPV"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "SCÉNIC I MPV (JA0/1_"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "SCÉNIC II"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "SCÉNIC II  1.6 / 16V"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "SCÉNIC III"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "SCÉNIC IV"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TALISMAN"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TRAFIC Box"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TRAFIC Bus"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TRAFIC II Box"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TRAFIC II Bus"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TRAFIC II Platform/ Chassis"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TRAFIC II Platform/Chassis"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TRAFIC III Box"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TRAFIC III Bus"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TWINGO I"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TWINGO I Box"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TWINGO II"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TWINGO II  1.2 / 16V / Turbo"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "TWINGO III"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "VEL SATIS"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "ZOE"
+    },
+    {
+      "brand": "SEAT",
+      "model": "ALTEA"
+    },
+    {
+      "brand": "SEAT",
+      "model": "IBIZA II"
+    },
+    {
+      "brand": "SEAT",
+      "model": "IBIZA II  1.0 / i"
+    },
+    {
+      "brand": "SEAT",
+      "model": "IBIZA III"
+    },
+    {
+      "brand": "SEAT",
+      "model": "IBIZA III  1.2 / 12V"
+    },
+    {
+      "brand": "SEAT",
+      "model": "IBIZA IV"
+    },
+    {
+      "brand": "SEAT",
+      "model": "IBIZA IV (6J5"
+    },
+    {
+      "brand": "SEAT",
+      "model": "LEON"
+    },
+    {
+      "brand": "SKODA",
+      "model": "FABIA II"
+    },
+    {
+      "brand": "SKODA",
+      "model": "OCTAVIA I"
+    },
+    {
+      "brand": "SKODA",
+      "model": "YETI"
+    },
+    {
+      "brand": "SMART",
+      "model": "FORTWO Cabrio"
+    },
+    {
+      "brand": "SMART",
+      "model": "FORTWO Coupe"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "GRAND VITARA II"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "JIMNY Closed Off-Road Vehicle"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "SWIFT III"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "SWIFT III (MZ"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "SWIFT IV"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "SWIFT IV (FZ"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "SX4  | SX4 / SX4 CLASSIC"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "SX4  | SX4 CLASSIC"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "VITARA"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "AURIS"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "AURIS  | COROLLA"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "AVENSIS"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "AYGO"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "COROLLA  | COROLLA / ALLEX"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "HILUX VII Pickup  | HILUX VIGO"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "LAND  | LAND CRUISER COLORADO"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "LAND CRUISER 90  | LAND CRUISER COLORADO"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "LAND CRUISER PRADO"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "RAV"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "RAV 4 II"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "RAV 4 III"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "RAV 4 IV"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "VERSO"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "YARIS  | YARIS/VITZ"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "YARIS  | YARIS/VITZ | ECHO"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "CADDY III Box"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "EOS"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "FOX Hatchback"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "FOX Hatchback (5Z1"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "GOLF III"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "GOLF IV"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "GOLF PLUS"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "GOLF V"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "GOLF VI"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "GOLF VII"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "GOLF VII Variant"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "PASSAT"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "PASSAT Variant"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "POLO"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "POLO .4"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "POLO (6R1"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "POLO (AW1"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "SCIROCCO"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "SHARAN"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "T-ROC"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "TIGUAN"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "TIGUAN ALLSPACE"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "TOUAREG"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "TOURAN"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "TRANSPORTER IV Box"
+    },
+    {
+      "brand": "VOLVO",
+      "model": "V40 Hatchback"
+    },
+    {
+      "brand": "VOLVO",
+      "model": "V40 Hatchback (525"
+    },
+    {
+      "brand": "VOLVO",
+      "model": "XC90 I"
+    }
+  ],
+  "totalCount": 447,
+  "generatedAt": "2025-09-04T14:43:58.957Z",
+  "sourceFiles": [
+    "csv_db_brand_model_date.csv",
+    "ILV-FULMEN-ENDURANCE_manual_complete.csv"
+  ]
+}

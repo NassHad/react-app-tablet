@@ -1,42 +1,56 @@
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import type { UserSelection } from '../../types';
+import { dataService } from '../../services/dataService';
 
 interface BatteryProductsScreenProps {
   userSelection: UserSelection;
 }
 
-// Mock battery products data
-const MOCK_BATTERY_PRODUCTS = [
-  { id: 1, brand: 'Bosch', type: 'E43 Blue Dynamic', power: '72 Ah', tension: '470 A' },
-  { id: 2, brand: 'Varta', type: 'Silver Dynamic', power: '60 Ah', tension: '540 A' },
-  { id: 3, brand: 'Bosch', type: 'S4 Silver', power: '80 Ah', tension: '800 A' },
-  { id: 4, brand: 'Varta', type: 'Blue Dynamic', power: '70 Ah', tension: '660 A' },
-  { id: 5, brand: 'Bosch', type: 'S5 Silver', power: '95 Ah', tension: '850 A' },
-  { id: 6, brand: 'Varta', type: 'Silver Dynamic', power: '65 Ah', tension: '600 A' },
-  { id: 7, brand: 'Bosch', type: 'E44 Blue Dynamic', power: '74 Ah', tension: '680 A' },
-  { id: 8, brand: 'Varta', type: 'Blue Dynamic', power: '55 Ah', tension: '480 A' },
-  { id: 9, brand: 'Bosch', type: 'S6 Silver', power: '110 Ah', tension: '1000 A' },
-  { id: 10, brand: 'Varta', type: 'Silver Dynamic', power: '75 Ah', tension: '700 A' },
-  { id: 11, brand: 'Bosch', type: 'E45 Blue Dynamic', power: '77 Ah', tension: '720 A' },
-  { id: 12, brand: 'Varta', type: 'Blue Dynamic', power: '50 Ah', tension: '440 A' },
-];
-
 const BatteryProductsScreen = ({ userSelection }: BatteryProductsScreenProps) => {
   const navigate = useNavigate();
+  const [products, setProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadProducts = async () => {
+      try {
+        const batteryProducts = await dataService.getProducts('battery', {
+          battery_type: userSelection.answers?.batteryType
+        });
+        setProducts(batteryProducts);
+      } catch (error) {
+        console.error('Error loading battery products:', error);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProducts();
+  }, [userSelection.answers?.batteryType]);
 
   const handleProductDetails = (productId: number) => {
     navigate(`/product-details/${productId}`);
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-2xl text-gray-600">Chargement des produits...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-6xl">
-        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15">Liste des batteries <span className='text-green-battery-category capitalize-first-letter'>{userSelection.answers?.batteryType}</span> compatible avec votre véhicule {userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</h1>
+        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15">Liste des batteries <span className={`${userSelection.answers?.batteryType === 'standard' ? 'text-green-battery-category' : userSelection.answers?.batteryType === 'efb' ? 'text-orange-battery-category' : 'text-red-battery-category'} uppercase`}>{userSelection.answers?.batteryType}</span> <br />compatibles avec votre véhicule <br/><span className={`${userSelection.answers?.batteryType === 'standard' ? 'text-green-battery-category' : userSelection.answers?.batteryType === 'efb' ? 'text-orange-battery-category' : 'text-red-battery-category'} capitalize-first-letter`}>{userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</span></h1>
         
         {/* Vertical scrollable container */}
         <div className="overflow-y-auto max-h-110 pb-8">
           <div className="">
-            {MOCK_BATTERY_PRODUCTS.map((product) => (
+            {products.map((product) => (
               <div
                 key={product.id}
                 className="bg-white rounded-lg flex items-center justify-between"
@@ -60,7 +74,7 @@ const BatteryProductsScreen = ({ userSelection }: BatteryProductsScreenProps) =>
                   </div>
                   <button
                     onClick={() => handleProductDetails(product.id)}
-                    className="bg-green-battery-category text-white py-1 rounded-lg hover:opacity-80 transition-colors text-lg font-semibold ml-8 w-1/5"
+                    className={`text-white py-1 rounded-lg hover:opacity-80 transition-colors text-lg font-semibold ml-8 w-1/5 ${userSelection.answers?.batteryType === 'standard' ? 'bg-green-battery-category' : userSelection.answers?.batteryType === 'efb' ? 'bg-orange-battery-category' : 'bg-red-battery-category'}`}
                   >
                     Plus d'infos
                   </button>

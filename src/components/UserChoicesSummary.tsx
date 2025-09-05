@@ -1,4 +1,5 @@
 import type { UserSelection } from '../types';
+import { getVehicleTypeDisplayName } from '../utils';
 
 interface UserChoicesSummaryProps {
   userSelection: UserSelection | null;
@@ -6,15 +7,6 @@ interface UserChoicesSummaryProps {
 
 const UserChoicesSummary = ({ userSelection }: UserChoicesSummaryProps) => {
   if (!userSelection) return null;
-
-  const formatVehicleType = (type: string) => {
-    switch (type) {
-      case 'car': return 'Voiture';
-      case 'truck': return 'Camion';
-      case 'motorcycle': return 'Moto';
-      default: return type;
-    }
-  };
 
   const formatCategoryName = (category: any) => {
     if (!category) return '';
@@ -70,7 +62,7 @@ const UserChoicesSummary = ({ userSelection }: UserChoicesSummaryProps) => {
         {userSelection.vehicleType && (
           <div className="bg-gray-50 rounded-lg p-2">
             <div className="text-gray-500 text-xs mb-1">Type de véhicule</div>
-            <div className="font-medium text-gray-900 text-sm">{formatVehicleType(userSelection.vehicleType)}</div>
+            <div className="font-medium text-gray-900 text-sm">{getVehicleTypeDisplayName(userSelection.vehicleType)}</div>
           </div>
         )}
 

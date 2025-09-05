@@ -12,7 +12,8 @@
     "android:run": "npx cap run android",
     "android:build": "npm run build && npx cap sync",
     "sync": "npx cap sync",
-    "clean": "rm -rf dist node_modules/.vite"
+    "clean": "rm -rf dist node_modules/.vite",
+    "test:strapi": "node scripts/test-strapi.js"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "^7.0.1",
@@ -22,6 +23,7 @@
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.11.0",
     "framer-motion": "^12.23.6",
     "jeep-sqlite": "^2.8.0",
     "react": "^19.1.0",

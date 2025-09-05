@@ -25,13 +25,13 @@ const QuestionsScreen = ({ vehicle, category, onAnswersComplete }: QuestionsScre
   // Map category slugs to their respective question components
   const getQuestionsComponent = () => {
     switch (category.slug) {
-      case 'wipers':
+      case 'beg':
         return <WipersQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
-      case 'batteries':
+      case 'battery':
         return <BatteriesQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
-      case 'oils':
+      case 'oil':
         return <OilsQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
-      case 'bulbs':
+      case 'lights':
         return <BulbsQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'filtration':
         return <FiltrationQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;

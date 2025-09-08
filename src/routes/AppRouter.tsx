@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import HomePage from '../pages/HomePage';
 import CategoryScreen from '../pages/CategoryScreen';
@@ -114,7 +114,6 @@ const AppRouterContent = () => {
                                     <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                   <PageTransition direction={navigationDirection}>
                     <CategoryScreen 
-                      vehicleType={userSelection.vehicleType!}
                       vehicle={userSelection.vehicle}
                       onCategorySelect={(category) => {
                         updateUserSelection({ category });
@@ -139,7 +138,6 @@ const AppRouterContent = () => {
                     <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                       <PageTransition direction={navigationDirection}>
                         <CategoryScreen 
-                          vehicleType={userSelection.vehicleType}
                           onCategorySelect={(category) => {
                             updateUserSelection({ category });
                           }}

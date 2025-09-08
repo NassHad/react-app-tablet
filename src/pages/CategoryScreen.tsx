@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import type { VehicleType, ProductCategory, Vehicle } from '../types';
+import type { ProductCategory, Vehicle } from '../types';
 import { dataService } from '../services/dataService';
 import { useClickAnimation } from '../hooks/useClickAnimation';
 import { FLOW_CONFIG } from '../config/flowConfig';
@@ -15,12 +15,11 @@ import lightsImage from '../assets/img/categories/lights.png';
 import oilImage from '../assets/img/categories/oil.png';
 
 interface CategoryScreenProps {
-  vehicleType: VehicleType;
   vehicle?: Vehicle; // For new flow where vehicle is already selected
   onCategorySelect: (category: ProductCategory) => void;
 }
 
-const CategoryScreen = ({ vehicleType, vehicle, onCategorySelect }: CategoryScreenProps) => {
+const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
   const navigate = useNavigate();
   const [categories, setCategories] = useState<ProductCategory[]>([]);
   const [loading, setLoading] = useState(true);

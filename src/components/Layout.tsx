@@ -5,7 +5,6 @@ import type { UserSelection } from '../types';
 import UserChoicesSummary from './UserChoicesSummary';
 import HelpModal from './HelpModal';
 import AnimatedLayout from './AnimatedLayout';
-import Breadcrumbs from './Breadcrumbs';
 import CategoryNavigation from './CategoryNavigation';
 import { FLOW_CONFIG } from '../config/flowConfig';
 import { getVehicleTypeDisplayName } from '../utils';

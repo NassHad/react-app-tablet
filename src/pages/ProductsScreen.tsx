@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import type { UserSelection } from '../types';
 import {
   WiperProductsScreen,
@@ -13,7 +12,6 @@ interface ProductsScreenProps {
 }
 
 const ProductsScreen = ({ userSelection }: ProductsScreenProps) => {
-  const navigate = useNavigate();
 
   // Determine which product screen to show based on the selected category
   const renderProductScreen = () => {

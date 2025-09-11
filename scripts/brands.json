@@ -1,0 +1,126 @@
+[
+  {
+    "name": "ALFA ROMEO",
+    "slug": "alfa-romeo"
+  },
+  {
+    "name": "AUDI",
+    "slug": "audi"
+  },
+  {
+    "name": "BMW",
+    "slug": "bmw"
+  },
+  {
+    "name": "CHEVROLET",
+    "slug": "chevrolet"
+  },
+  {
+    "name": "CHRYSLER",
+    "slug": "chrysler"
+  },
+  {
+    "name": "CITROËN",
+    "slug": "citroën"
+  },
+  {
+    "name": "DACIA",
+    "slug": "dacia"
+  },
+  {
+    "name": "DS",
+    "slug": "ds"
+  },
+  {
+    "name": "FIAT",
+    "slug": "fiat"
+  },
+  {
+    "name": "FORD",
+    "slug": "ford"
+  },
+  {
+    "name": "HONDA",
+    "slug": "honda"
+  },
+  {
+    "name": "HYUNDAI",
+    "slug": "hyundai"
+  },
+  {
+    "name": "IVECO",
+    "slug": "iveco"
+  },
+  {
+    "name": "JEEP",
+    "slug": "jeep"
+  },
+  {
+    "name": "KIA",
+    "slug": "kia"
+  },
+  {
+    "name": "LANCIA",
+    "slug": "lancia"
+  },
+  {
+    "name": "LAND ROVER",
+    "slug": "land-rover"
+  },
+  {
+    "name": "MERCEDES-BENZ",
+    "slug": "mercedes-benz"
+  },
+  {
+    "name": "MINI",
+    "slug": "mini"
+  },
+  {
+    "name": "MITSUBISHI",
+    "slug": "mitsubishi"
+  },
+  {
+    "name": "NISSAN",
+    "slug": "nissan"
+  },
+  {
+    "name": "OPEL",
+    "slug": "opel"
+  },
+  {
+    "name": "PEUGEOT",
+    "slug": "peugeot"
+  },
+  {
+    "name": "RENAULT",
+    "slug": "renault"
+  },
+  {
+    "name": "SEAT",
+    "slug": "seat"
+  },
+  {
+    "name": "SKODA",
+    "slug": "skoda"
+  },
+  {
+    "name": "SMART",
+    "slug": "smart"
+  },
+  {
+    "name": "SUZUKI",
+    "slug": "suzuki"
+  },
+  {
+    "name": "TOYOTA",
+    "slug": "toyota"
+  },
+  {
+    "name": "VOLVO",
+    "slug": "volvo"
+  },
+  {
+    "name": "VOLKSWAGEN",
+    "slug": "volkswagen"
+  }
+]

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import type { ProductCategory, Vehicle } from '../types';
 import { dataService } from '../services/dataService';
@@ -19,10 +19,13 @@ interface CategoryScreenProps {
   onCategorySelect: (category: ProductCategory) => void;
 }
 
-const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
+const CategoryScreen = ({ vehicleType: _vehicleType, vehicle, onCategorySelect }: CategoryScreenProps) => {
   const navigate = useNavigate();
   const [categories, setCategories] = useState<ProductCategory[]>([]);
   const [loading, setLoading] = useState(true);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   useEffect(() => {
     const loadCategories = async () => {
@@ -30,7 +33,12 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
         console.log("CategoryScreen - Loading categories");
         const categoriesData = await dataService.getProductCategories();
         console.log("Categories loaded:", categoriesData);
-        setCategories(categoriesData);
+        
+        // Filter only active categories
+        const activeCategories = categoriesData.filter(category => category.active);
+        console.log("Active categories:", activeCategories);
+        
+        setCategories(activeCategories);
       } catch (error) {
         console.error('Error loading categories:', error);
       } finally {
@@ -40,6 +48,54 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
 
     loadCategories();
   }, []);
+
+  // Check scroll state
+  const checkScrollState = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  // Scroll functions
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+    }
+  };
+
+  // Update scroll state when categories change
+  useEffect(() => {
+    checkScrollState();
+    const handleResize = () => checkScrollState();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [categories]);
+
+  // Add scroll event listener with throttling
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (!scrollContainer) return;
+
+    let timeoutId: NodeJS.Timeout;
+    const throttledCheckScrollState = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(checkScrollState, 10);
+    };
+
+    scrollContainer.addEventListener('scroll', throttledCheckScrollState, { passive: true });
+    return () => {
+      scrollContainer.removeEventListener('scroll', throttledCheckScrollState);
+      clearTimeout(timeoutId);
+    };
+  }, [categories]);
 
   const handleCategorySelect = async (category: ProductCategory) => {
     console.log('Category selected:', category);
@@ -178,49 +234,83 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
   return (
     <div className="min-h-screen bg-gray-100 relative overflow-hidden">
       {/* Main content */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6 bg-waves-hp">
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6 bg-waves-hp tablet-main-content">
         {/* Instruction text */}
         <div className="text-center mb-16 mt-16">
-          <h2 className="text-5xl text-gray-500">
+          <h2 className="text-5xl text-gray-500 tablet-title">
             Cliquez sur une catégorie pour voir les produits
           </h2>
         </div>
 
         {/* Category selection cards */}
-        <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-          {categories.map((category) => {
-            const animation = getCategoryAnimation(category.name);
-            const imageSrc = getCategoryImage(category.name);
-            const bgColor = getCategoryColor(category.name);
-            
-            return (
-              <motion.div
-                key={category.id}
-                onClick={animation.handleClick}
-                className="relative w-80 h-102 rounded-lg shadow-lg cursor-pointer overflow-hidden "
-                {...animation.animationProps}
-              >
-                {/* Image */}
+        <div className="relative w-full max-w-full tablet-category-container">
+          {/* Left scroll button */}
+          {canScrollLeft && (
+            <motion.button
+              onClick={scrollLeft}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-200"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </motion.button>
+          )}
 
-                  <img 
-                    src={imageSrc} 
-                    alt={category.name}
-                    className="w-full h-full"
-                  />
+          {/* Right scroll button */}
+          {canScrollRight && (
+            <motion.button
+              onClick={scrollRight}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-200"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </motion.button>
+          )}
+
+          <div 
+            ref={scrollContainerRef}
+            className="w-full max-w-full overflow-x-auto category-scroll-container"
+          >
+            <div className="flex flex-col md:flex-row gap-8 justify-center items-center min-w-max px-4 md:px-0 category-cards-container tablet-category-cards">
+              {categories.map((category) => {
+                const animation = getCategoryAnimation(category.name);
+                const imageSrc = getCategoryImage(category.name);
+                const bgColor = getCategoryColor(category.name);
                 
-                {/* Bottom bar */}
-                <div className={`absolute bottom-0 left-0 right-0 h-16 ${bgColor} flex items-center justify-center`}>
-                  <span className="text-white font-bold text-xl uppercase text-shadow-lg">
-                    {category.name}
-                  </span>
-                </div>
-              </motion.div>
-            );
-          })}
+                return (
+                  <motion.div
+                    key={category.id}
+                    onClick={animation.handleClick}
+                    className="relative w-80 h-102 rounded-lg shadow-lg cursor-pointer overflow-hidden flex-shrink-0 category-card tablet-category-card"
+                    {...animation.animationProps}
+                  >
+                    {/* Image */}
+                    <img 
+                      src={imageSrc} 
+                      alt={category.name}
+                      className="w-full h-full object-cover"
+                    />
+                    
+                    {/* Bottom bar */}
+                    <div className={`absolute bottom-0 left-0 right-0 h-16 ${bgColor} flex items-center justify-center`}>
+                      <span className="text-white font-bold text-xl uppercase text-shadow-lg">
+                        {category.name}
+                      </span>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         <div className="text-center mb-16">
-          <h4 className="text-4xl text-gray-500 mt-14 leading-12">
+          <h4 className="text-4xl text-gray-500 mt-14 leading-12 tablet-subtitle">
             Nos produits sont approuvés par les principaux <br /><span className="font-bold text-[#1290AD]">constructeurs automobiles</span>
           </h4>
         </div>

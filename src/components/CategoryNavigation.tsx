@@ -30,7 +30,10 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
     const loadCategories = async () => {
       try {
         const categoriesData = await dataService.getProductCategories();
-        setCategories(categoriesData);
+        
+        // Filter only active categories
+        const activeCategories = categoriesData.filter(category => category.active);
+        setCategories(activeCategories);
       } catch (error) {
         console.error('Error loading categories:', error);
       } finally {

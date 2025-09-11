@@ -62,3 +62,104 @@
 .gradient-background {
   background-image: linear-gradient(90deg, #275384 10%, #EA5F03 90%);
 }
+
+/* Custom scrollbar styles for category screen */
+.category-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+.category-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.category-scroll-container::-webkit-scrollbar-track {
+  background: #f7fafc;
+  border-radius: 4px;
+}
+
+.category-scroll-container::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.category-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Smooth scrolling for category cards */
+.category-cards-container {
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.category-card {
+  scroll-snap-align: center;
+}
+
+/* Tablet-specific styles for 1200x1980 resolution */
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-height: 1900px) {
+  /* Adjust category screen for tablet */
+  .tablet-category-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .tablet-category-cards {
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+  
+  .tablet-category-card {
+    width: 280px;
+    height: 360px;
+  }
+  
+  /* Adjust text sizes for tablet */
+  .tablet-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+  
+  .tablet-subtitle {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  /* Adjust navigation for tablet */
+  .tablet-nav {
+    padding: 1rem 2rem;
+  }
+  
+  .tablet-nav-title {
+    font-size: 3rem;
+  }
+  
+  /* Adjust main content padding */
+  .tablet-main-content {
+    padding: 2rem;
+  }
+  
+  /* Global tablet optimizations */
+  body {
+    font-size: 1.1rem;
+  }
+  
+  /* Adjust button sizes for tablet */
+  button {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Adjust input sizes for tablet */
+  input, select, textarea {
+    min-height: 48px;
+    font-size: 1.1rem;
+  }
+  
+  /* Adjust spacing for better touch targets */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}

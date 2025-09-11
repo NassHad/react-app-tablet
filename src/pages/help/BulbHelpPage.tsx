@@ -6,7 +6,8 @@ interface BulbHelpPageProps {
   onClose: () => void;
 }
 
-const BulbHelpPage = ({ onClose }: BulbHelpPageProps) => {
+
+const BulbHelpPage = ({ category: _category, onClose }: BulbHelpPageProps) => {
   return (
     <div className="fixed inset-0 z-50 min-h-screen overflow-auto bg-white">
       {/* Full page image */}

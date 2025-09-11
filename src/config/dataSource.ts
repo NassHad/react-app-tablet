@@ -3,10 +3,8 @@ export const DataSource = {
   STRAPI: 'strapi'
 } as const;
 
-export type DataSource = typeof DataSource[keyof typeof DataSource];
-
 export interface DataSourceConfig {
-  currentSource: DataSource;
+  currentSource: typeof DataSource[keyof typeof DataSource];
   strapi: {
     baseUrl: string;
     apiUrl: string;

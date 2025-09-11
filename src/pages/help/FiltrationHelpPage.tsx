@@ -5,7 +5,8 @@ interface FiltrationHelpPageProps {
   onClose: () => void;
 }
 
-const FiltrationHelpPage = ({ onClose }: FiltrationHelpPageProps) => {
+
+const FiltrationHelpPage = ({ category: _category, onClose }: FiltrationHelpPageProps) => {
   return (
     <div className="min-h-screen relative overflow-hidden bg-green-50">
       {/* Background pattern */}

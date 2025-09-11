@@ -2,7 +2,7 @@ import type { Vehicle, ProductCategory } from '../../types';
 import carBulbsPage from '../../assets/img/car-bulbs-page.jpg';
 import { useState } from 'react';
 import { HelpPageRouter } from '../help';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 // Import all bulb icons
 import feuCroisement from '../../assets/img/icons/feu_de_croisement.png';
 import feuRoute from '../../assets/img/icons/feu_de_route.png';
@@ -25,7 +25,7 @@ interface BulbsQuestionsProps {
 
 const BulbsQuestions = ({ vehicle, category, onAnswersComplete }: BulbsQuestionsProps) => {
   const [showHelp, setShowHelp] = useState(false);
-  const navigate = useNavigate();
+  // const _navigate = useNavigate();
   const lightingTypes = [
     { id: 'feu_croisement', name: 'Feu de croisement', icon: feuCroisement },
     { id: 'feu_route', name: 'Feu de route', icon: feuRoute },
@@ -87,7 +87,7 @@ const BulbsQuestions = ({ vehicle, category, onAnswersComplete }: BulbsQuestions
 
           {/* Lighting Types List */}
           <div className="overflow-y-auto max-h-[calc(100vh-80px)]">
-            {lightingTypes.map((type, index) => (
+            {lightingTypes.map((type) => (
               <button
                 key={type.id}
                 onClick={() => handleLightingTypeSelect(type.id)}

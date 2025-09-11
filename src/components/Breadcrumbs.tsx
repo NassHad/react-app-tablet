@@ -7,7 +7,7 @@ interface BreadcrumbsProps {
   userSelection: UserSelection | null;
 }
 
-const Breadcrumbs = ({ userSelection }: BreadcrumbsProps) => {
+const Breadcrumbs = ({ userSelection: _userSelection }: BreadcrumbsProps) => {
   const navigate = useNavigate();
   const location = useLocation();
 

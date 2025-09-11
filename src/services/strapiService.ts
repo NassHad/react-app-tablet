@@ -123,16 +123,20 @@ class StrapiService {
         active: item.isActive // Map isActive to active
       }));
       
-      console.log('📊 Categories loaded from Strapi:', categories.length);
-      console.log('📋 Categories data:', categories);
+      // Filter only active categories
+      const activeCategories = categories.filter(category => category.active);
       
-      // If no categories from Strapi, use mock data
-      if (categories.length === 0) {
-        console.log('📦 No categories found in Strapi, using mock data...');
+      console.log('📊 Categories loaded from Strapi:', categories.length);
+      console.log('📊 Active categories from Strapi:', activeCategories.length);
+      console.log('📋 Active categories data:', activeCategories);
+      
+      // If no active categories from Strapi, use mock data
+      if (activeCategories.length === 0) {
+        console.log('📦 No active categories found in Strapi, using mock data...');
         return this.getMockCategories();
       }
       
-      return categories;
+      return activeCategories;
     } catch (error: any) {
       console.error('❌ Failed to load categories from Strapi:', error);
       console.log('📦 Falling back to mock categories...');

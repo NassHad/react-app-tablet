@@ -31,11 +31,11 @@ const DatabaseDebugger = () => {
     checkStatus();
   };
 
-  const manualInitialize = async () => {
-    console.log('🔧 Manually initializing database...');
-    await databaseService.initialize();
-    checkStatus();
-  };
+  // const _manualInitialize = async () => {
+  //   console.log('🔧 Manually initializing database...');
+  //   await databaseService.initialize();
+  //   checkStatus();
+  // };
 
   const manuallyLoadJeep = async () => {
     setLoadingStatus('Loading jeep-sqlite...');

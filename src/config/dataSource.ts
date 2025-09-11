@@ -1,10 +1,10 @@
-export enum DataSource {
-  LOCAL_DATABASE = 'local_database',
-  STRAPI = 'strapi'
-}
+export const DataSource = {
+  LOCAL_DATABASE: 'local_database',
+  STRAPI: 'strapi'
+} as const;
 
 export interface DataSourceConfig {
-  currentSource: DataSource;
+  currentSource: typeof DataSource[keyof typeof DataSource];
   strapi: {
     baseUrl: string;
     apiUrl: string;

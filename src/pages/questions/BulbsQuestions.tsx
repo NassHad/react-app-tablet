@@ -2,6 +2,7 @@ import type { Vehicle, ProductCategory } from '../../types';
 import carBulbsPage from '../../assets/img/car-bulbs-page.jpg';
 import { useState } from 'react';
 import { HelpPageRouter } from '../help';
+
 // import { useNavigate } from 'react-router-dom';
 // Import all bulb icons
 import feuCroisement from '../../assets/img/icons/feu_de_croisement.png';

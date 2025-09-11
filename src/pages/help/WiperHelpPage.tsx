@@ -5,6 +5,7 @@ interface WiperHelpPageProps {
   onClose: () => void;
 }
 
+
 const WiperHelpPage = ({ category: _category, onClose }: WiperHelpPageProps) => {
   return (
     <div className="min-h-screen relative overflow-hidden bg-gray-50">

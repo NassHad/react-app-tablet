@@ -8,6 +8,7 @@ export interface Vehicle {
   version?: string;
   year?: number;
   dateCirculation?: string;
+  motorisation?: string;
 }
 
 export type VehicleType = 'car' | 'truck' | 'motorcycle';

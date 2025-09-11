@@ -114,7 +114,6 @@ const AppRouterContent = () => {
                                     <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                   <PageTransition direction={navigationDirection}>
                     <CategoryScreen 
-                      vehicleType={userSelection.vehicleType!}
                       vehicle={userSelection.vehicle}
                       onCategorySelect={(category) => {
                         updateUserSelection({ category });
@@ -139,7 +138,6 @@ const AppRouterContent = () => {
                     <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                       <PageTransition direction={navigationDirection}>
                         <CategoryScreen 
-                          vehicleType={userSelection.vehicleType}
                           onCategorySelect={(category) => {
                             updateUserSelection({ category });
                           }}

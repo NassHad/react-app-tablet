@@ -9,6 +9,7 @@ interface BatteryHelpPageProps {
 }
 
 const BatteryHelpPage = ({ category: _category, onClose }: BatteryHelpPageProps) => {
+
   const batteryTypes = [
     {
       id: 'standard',

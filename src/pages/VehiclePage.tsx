@@ -16,6 +16,7 @@ import {
   type Model,
   type DateRange
 } from '../utils/vehicleData';
+import BatteryVehicleForm from '../components/BatteryVehicleForm';
 
 interface VehiclePageProps {
   vehicleType: VehicleType;
@@ -25,6 +26,22 @@ interface VehiclePageProps {
 
 const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProps) => {
   const navigate = useNavigate();
+  
+  // Check if this is a battery category
+  const isBatteryCategory = category.slug === 'batteries' || category.name.toLowerCase().includes('batterie');
+  
+  // If it's a battery category, render the specialized form
+  if (isBatteryCategory) {
+    return (
+      <BatteryVehicleForm
+        vehicleType={vehicleType}
+        category={category}
+        onVehicleSelect={onVehicleSelect}
+      />
+    );
+  }
+  
+  // Original form logic for non-battery categories
   const [selectedBrandId, setSelectedBrandId] = useState<number | null>(null);
   const [selectedModelId, setSelectedModelId] = useState<number | null>(null);
   const [selectedDateRange, setSelectedDateRange] = useState<string>('');

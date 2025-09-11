@@ -4,7 +4,7 @@
 export const FLOW_CONFIG = {
   // Set to true to select vehicle first, then category
   // Set to false to select category first, then vehicle (original flow)
-  SELECT_VEHICLE_FIRST: true,
+  SELECT_VEHICLE_FIRST: false,
   
   // Whether to show the search input in the navigation bar
   SHOW_SEARCH_INPUT: false,

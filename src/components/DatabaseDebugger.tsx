@@ -37,6 +37,7 @@ const DatabaseDebugger = () => {
   //   checkStatus();
   // };
 
+
   const manuallyLoadJeep = async () => {
     setLoadingStatus('Loading jeep-sqlite...');
     try {

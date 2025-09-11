@@ -5,6 +5,7 @@ interface OilHelpPageProps {
   onClose: () => void;
 }
 
+
 const OilHelpPage = ({ category: _category, onClose }: OilHelpPageProps) => {
   return (
     <div className="min-h-screen relative overflow-hidden bg-blue-50">

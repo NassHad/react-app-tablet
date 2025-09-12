@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "battery_models",
+  "info": {
+    "singularName": "battery-model",
+    "pluralName": "battery-models",
+    "displayName": "BatteryModel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "batteryBrand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::battery-brand.battery-brand"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "motorisation": {
+      "type": "string"
+    },
+    "fuel": {
+      "type": "string"
+    }
+  }
+}

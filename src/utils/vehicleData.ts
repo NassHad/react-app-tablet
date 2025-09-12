@@ -630,3 +630,6 @@ export const getBrandById = (brandId: number): Brand | undefined => {
 export const getModelById = (modelId: number): Model | undefined => {
   return models.find(model => model.id === modelId);
 };
+
+// Re-export the new service for easy access
+export { vehicleDataService } from '../services/vehicleDataService';

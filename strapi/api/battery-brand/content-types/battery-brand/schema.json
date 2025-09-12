@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "battery_brands",
+  "info": {
+    "singularName": "battery-brand",
+    "pluralName": "battery-brands",
+    "displayName": "BatteryBrand"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean"
+    }
+  }
+}

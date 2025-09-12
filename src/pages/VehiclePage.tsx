@@ -6,12 +6,14 @@ import { useClickAnimation } from '../hooks/useClickAnimation';
 import { checkProductAvailability } from '../utils/productAvailability';
 import { FLOW_CONFIG } from '../config/flowConfig';
 import { getVehicleTypeDisplayName } from '../utils';
+import { getStrapiVehicleTypeId } from '../config/vehicleTypeMapping';
 import { 
   getBrands, 
   getModelsByBrand, 
   getDateRangesByModel,
   getBrandById,
   getModelById,
+  vehicleDataService,
   type Brand,
   type Model,
   type DateRange
@@ -47,34 +49,96 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
   const [selectedDateRange, setSelectedDateRange] = useState<string>('');
   const [availableModels, setAvailableModels] = useState<Model[]>([]);
   const [availableDateRanges, setAvailableDateRanges] = useState<DateRange[]>([]);
-  const [brands] = useState<Brand[]>(getBrands());
+  const [brands, setBrands] = useState<Brand[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoadingModels, setIsLoadingModels] = useState<boolean>(false);
+  const [isLoadingDateRanges, setIsLoadingDateRanges] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // Load initial brands data
+  useEffect(() => {
+    const loadBrands = async () => {
+      try {
+        setIsLoading(true);
+        setError(null);
+        const brandsData = await vehicleDataService.getBrands();
+        setBrands(brandsData);
+      } catch (err) {
+        console.error('Failed to load brands:', err);
+        setError('Failed to load vehicle data. Please try again.');
+        // Fallback to local data
+        setBrands(getBrands());
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadBrands();
+  }, []);
 
   // Filter models when brand changes
   useEffect(() => {
-    if (selectedBrandId) {
-      const models = getModelsByBrand(selectedBrandId);
-      setAvailableModels(models);
-      setSelectedModelId(null);
-      setSelectedDateRange('');
-      setAvailableDateRanges([]);
-    } else {
-      setAvailableModels([]);
-      setSelectedModelId(null);
-      setSelectedDateRange('');
-      setAvailableDateRanges([]);
-    }
-  }, [selectedBrandId]);
+    const loadModels = async () => {
+      if (selectedBrandId) {
+        try {
+          setIsLoadingModels(true);
+          setError(null);
+          
+          // Convert vehicleType to a number for Strapi
+          const vehicleTypeId = getStrapiVehicleTypeId(vehicleType);
+          
+          const models = await vehicleDataService.getModelsByBrand(selectedBrandId, vehicleTypeId);
+          setAvailableModels(models);
+          setSelectedModelId(null);
+          setSelectedDateRange('');
+          setAvailableDateRanges([]);
+        } catch (err) {
+          console.error('Failed to load models:', err);
+          setError('Failed to load models. Please try again.');
+          // Fallback to local data
+          const models = getModelsByBrand(selectedBrandId);
+          setAvailableModels(models);
+        } finally {
+          setIsLoadingModels(false);
+        }
+      } else {
+        setAvailableModels([]);
+        setSelectedModelId(null);
+        setSelectedDateRange('');
+        setAvailableDateRanges([]);
+      }
+    };
+
+    loadModels();
+  }, [selectedBrandId, vehicleType]);
 
   // Filter date ranges when model changes
   useEffect(() => {
-    if (selectedModelId) {
-      const dateRanges = getDateRangesByModel(selectedModelId);
-      setAvailableDateRanges(dateRanges);
-      setSelectedDateRange('');
-    } else {
-      setAvailableDateRanges([]);
-      setSelectedDateRange('');
-    }
+    const loadDateRanges = async () => {
+      if (selectedModelId) {
+        try {
+          setIsLoadingDateRanges(true);
+          setError(null);
+          
+          const dateRanges = await vehicleDataService.getDateRangesByModel(selectedModelId);
+          setAvailableDateRanges(dateRanges);
+          setSelectedDateRange('');
+        } catch (err) {
+          console.error('Failed to load date ranges:', err);
+          setError('Failed to load date ranges. Please try again.');
+          // Fallback to local data
+          const dateRanges = getDateRangesByModel(selectedModelId);
+          setAvailableDateRanges(dateRanges);
+        } finally {
+          setIsLoadingDateRanges(false);
+        }
+      } else {
+        setAvailableDateRanges([]);
+        setSelectedDateRange('');
+      }
+    };
+
+    loadDateRanges();
   }, [selectedModelId]);
 
   const handleBrandChange = (brandId: number) => {
@@ -92,43 +156,48 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedBrandId && selectedModelId && selectedDateRange) {
-      const brand = getBrandById(selectedBrandId);
-      const model = getModelById(selectedModelId);
-      
-      if (brand && model) {
-        const vehicle: Vehicle = {
-          id: Math.floor(Math.random() * 1000), // Mock ID
-          type: vehicleType,
-          brand: brand.name,
-          model: model.name,
-          dateCirculation: selectedDateRange,
-        };
+      try {
+        const brand = await vehicleDataService.getBrandById(selectedBrandId);
+        const model = await vehicleDataService.getModelById(selectedModelId);
         
-        onVehicleSelect(vehicle);
-        
-        // In the new flow, we navigate to category selection first
-        // In the original flow, we check availability and navigate directly
-        if (FLOW_CONFIG.SELECT_VEHICLE_FIRST) {
-          // New flow: navigate to category selection
-          navigate('/category');
-        } else {
-          // Original flow: check availability and navigate accordingly
-          const productsAvailable = await checkProductAvailability(vehicle, category);
+        if (brand && model) {
+          const vehicle: Vehicle = {
+            id: Math.floor(Math.random() * 1000), // Mock ID
+            type: vehicleType,
+            brand: brand.name,
+            model: model.name,
+            dateCirculation: selectedDateRange,
+          };
           
-          if (!productsAvailable) {
-            // Redirect to no products available page
-            navigate('/no-products-available', { 
-              state: { vehicle, category } 
-            });
+          onVehicleSelect(vehicle);
+          
+          // In the new flow, we navigate to category selection first
+          // In the original flow, we check availability and navigate directly
+          if (FLOW_CONFIG.SELECT_VEHICLE_FIRST) {
+            // New flow: navigate to category selection
+            navigate('/category');
           } else {
-            // Continue with normal flow
-            if (category.slug === 'batteries') {
-              navigate('/products');
+            // Original flow: check availability and navigate accordingly
+            const productsAvailable = await checkProductAvailability(vehicle, category);
+            
+            if (!productsAvailable) {
+              // Redirect to no products available page
+              navigate('/no-products-available', { 
+                state: { vehicle, category } 
+              });
             } else {
-              navigate('/questions');
+              // Continue with normal flow
+              if (category.slug === 'batteries') {
+                navigate('/products');
+              } else {
+                navigate('/questions');
+              }
             }
           }
         }
+      } catch (err) {
+        console.error('Failed to get brand/model data:', err);
+        setError('Failed to process vehicle selection. Please try again.');
       }
     }
   };
@@ -141,10 +210,33 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
 
   const isFormValid = selectedBrandId && selectedModelId && selectedDateRange;
 
+  // Show loading state while initial data is loading
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center">
+        <div className="text-center w-full max-w-4xl">
+          <h1 className="text-5xl text-[#1290AD] mt-16 mb-14">Sélectionnez la <span className="font-bold">marque</span>, le <span className="font-bold">modèle</span> et la <span className="font-bold">date</span> de mise en circulation de votre {getVehicleTypeDisplayName(vehicleType)}</h1>
+          <div className="flex justify-center items-center py-20">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1290AD]"></div>
+            <span className="ml-4 text-lg text-gray-600">Chargement des données véhicules...</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-4xl">
         <h1 className="text-5xl text-[#1290AD] mt-16 mb-14">Sélectionnez la <span className="font-bold">marque</span>, le <span className="font-bold">modèle</span> et la <span className="font-bold">date</span> de mise en circulation de votre {getVehicleTypeDisplayName(vehicleType)}</h1>
+        
+        {/* Error message */}
+        {error && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+            {error}
+          </div>
+        )}
+        
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className='flex flex-row gap-4 space-y-8 justify-around'>
             <div className="space-y-3">
@@ -177,11 +269,16 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
                 value={selectedModelId || ''}
                 onChange={(e) => handleModelChange(Number(e.target.value))}
                 className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
-                disabled={!selectedBrandId}
+                disabled={!selectedBrandId || isLoadingModels}
                 required
               >
                 <option value="">
-                  {selectedBrandId ? 'Sélectionnez un modèle' : 'Sélectionnez d\'abord une marque'}
+                  {isLoadingModels 
+                    ? 'Chargement des modèles...' 
+                    : selectedBrandId 
+                      ? 'Sélectionnez un modèle' 
+                      : 'Sélectionnez d\'abord une marque'
+                  }
                 </option>
                 {availableModels.map((model) => (
                   <option key={model.id} value={model.id}>
@@ -203,11 +300,16 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
                 value={selectedDateRange}
                 onChange={(e) => handleDateRangeChange(e.target.value)}
                 className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
-                disabled={!selectedModelId}
+                disabled={!selectedModelId || isLoadingDateRanges}
                 required
               >
                 <option value="">
-                  {selectedModelId ? 'Sélectionnez une période' : 'Sélectionnez d\'abord un modèle'}
+                  {isLoadingDateRanges 
+                    ? 'Chargement des périodes...' 
+                    : selectedModelId 
+                      ? 'Sélectionnez une période' 
+                      : 'Sélectionnez d\'abord un modèle'
+                  }
                 </option>
                 {availableDateRanges.map((dateRange) => (
                   <option key={dateRange.id} value={dateRange.range}>

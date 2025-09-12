@@ -83,6 +83,54 @@ export interface Product {
   size?: string;
 }
 
+// Vehicle-related interfaces
+export interface StrapiBatteryBrand {
+  id: number;
+  slug: string;
+  name: string;
+  isActive: boolean;
+}
+
+export interface StrapiBatteryModel {
+  id: number;
+  name: string;
+  slug: string;
+  batteryBrand: StrapiBatteryBrand;
+  startDate: string;
+  endDate: string;
+  isActive: boolean;
+  motorisation: string;
+  fuel: string;
+}
+
+export interface StrapiVehicleType {
+  id: number;
+  name: string;
+  slug: string;
+}
+
+export interface StrapiVehicle {
+  id: number;
+  id_brand: number;
+  id_model: number;
+  year: number;
+  vehicle_type: StrapiVehicleType;
+}
+
+// Legacy interfaces for backward compatibility
+export interface StrapiBrand extends StrapiBatteryBrand {}
+export interface StrapiModel {
+  id: number;
+  name: string;
+  brandId: number;
+}
+
+export interface StrapiDateRange {
+  id: number;
+  modelId: number;
+  range: string;
+}
+
 class StrapiService {
   // Get all product categories
   async getProductCategories(): Promise<ProductCategory[]> {
@@ -262,6 +310,107 @@ class StrapiService {
     } catch (error) {
       console.error('❌ Search failed:', error);
       return [];
+    }
+  }
+
+  // Get all battery brands
+  async getBatteryBrands(): Promise<StrapiBatteryBrand[]> {
+    try {
+      console.log('🌐 Fetching battery brands from Strapi...');
+      
+      const response = await strapiClient.get<{ data: StrapiBatteryBrand[] }>('/battery-brands?filters[isActive]=true');
+      
+      console.log('✅ Battery brands loaded from Strapi:', response.data.data.length);
+      return response.data.data;
+    } catch (error: any) {
+      console.error('❌ Error fetching battery brands from Strapi:', error);
+      throw error;
+    }
+  }
+
+  // Get all brands (legacy method for backward compatibility)
+  async getBrands(): Promise<StrapiBrand[]> {
+    return this.getBatteryBrands();
+  }
+
+  // Get battery models by brand
+  async getBatteryModelsByBrand(brandId: number): Promise<StrapiBatteryModel[]> {
+    try {
+      console.log(`🌐 Fetching battery models for brand ${brandId} from Strapi...`);
+      
+      const response = await strapiClient.get<{ data: StrapiBatteryModel[] }>(
+        `/battery-models?filters[batteryBrand][id]=${brandId}&filters[isActive]=true&populate=batteryBrand`
+      );
+      
+      console.log('✅ Battery models loaded from Strapi:', response.data.data.length);
+      return response.data.data;
+    } catch (error: any) {
+      console.error('❌ Error fetching battery models from Strapi:', error);
+      throw error;
+    }
+  }
+
+  // Get all battery models
+  async getAllBatteryModels(): Promise<StrapiBatteryModel[]> {
+    try {
+      console.log('🌐 Fetching all battery models from Strapi...');
+      
+      const response = await strapiClient.get<{ data: StrapiBatteryModel[] }>(
+        '/battery-models?filters[isActive]=true&populate=batteryBrand'
+      );
+      
+      console.log('✅ All battery models loaded from Strapi:', response.data.data.length);
+      return response.data.data;
+    } catch (error: any) {
+      console.error('❌ Error fetching all battery models from Strapi:', error);
+      throw error;
+    }
+  }
+
+  // Get all vehicle types
+  async getVehicleTypes(): Promise<StrapiVehicleType[]> {
+    try {
+      console.log('🌐 Fetching vehicle types from Strapi...');
+      
+      const response = await strapiClient.get<{ data: StrapiVehicleType[] }>('/vehicle-types');
+      
+      console.log('✅ Vehicle types loaded from Strapi:', response.data.data.length);
+      return response.data.data;
+    } catch (error: any) {
+      console.error('❌ Error fetching vehicle types from Strapi:', error);
+      throw error;
+    }
+  }
+
+  // Get vehicles by brand and vehicle type
+  async getVehiclesByBrandAndType(brandId: number, vehicleTypeId: number): Promise<StrapiVehicle[]> {
+    try {
+      console.log(`🌐 Fetching vehicles for brand ${brandId} and type ${vehicleTypeId} from Strapi...`);
+      
+      const response = await strapiClient.get<{ data: StrapiVehicle[] }>(
+        `/vehicles?filters[id_brand]=${brandId}&filters[vehicle_type][id]=${vehicleTypeId}&populate=vehicle_type`
+      );
+      
+      console.log('✅ Vehicles loaded from Strapi:', response.data.data.length);
+      return response.data.data;
+    } catch (error: any) {
+      console.error('❌ Error fetching vehicles from Strapi:', error);
+      throw error;
+    }
+  }
+
+  // Get all vehicles (for processing models and date ranges)
+  async getAllVehicles(): Promise<StrapiVehicle[]> {
+    try {
+      console.log('🌐 Fetching all vehicles from Strapi...');
+      
+      const response = await strapiClient.get<{ data: StrapiVehicle[] }>('/vehicles?populate=vehicle_type');
+      
+      console.log('✅ All vehicles loaded from Strapi:', response.data.data.length);
+      return response.data.data;
+    } catch (error: any) {
+      console.error('❌ Error fetching all vehicles from Strapi:', error);
+      throw error;
     }
   }
 

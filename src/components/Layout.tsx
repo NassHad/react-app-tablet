@@ -5,6 +5,7 @@ import type { UserSelection } from '../types';
 import UserChoicesSummary from './UserChoicesSummary';
 import HelpModal from './HelpModal';
 import AnimatedLayout from './AnimatedLayout';
+// import Breadcrumbs from './Breadcrumbs';
 import CategoryNavigation from './CategoryNavigation';
 import { FLOW_CONFIG } from '../config/flowConfig';
 import { getVehicleTypeDisplayName } from '../utils';
@@ -43,7 +44,7 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation Bar */}
-      <nav className="bg-white shadow-sm border border-[#989898] px-4 py-3">
+      <nav className="bg-white shadow-sm border border-[#989898] px-4 py-3 tablet-nav">
         <div className="flex items-center justify-between">
           {/* Left side - Home and Back */}
           <div className="flex items-center space-x-3 w-1/2">
@@ -124,20 +125,20 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
             
             {/* Title for Home Page */}
             {location.pathname === '/' && !FLOW_CONFIG.SHOW_SEARCH_INPUT && (
-              <h1 className="text-5xl font-extrabold text-black text-center ml-[-40%]">Bienvenue dans l'expérience.</h1>
+              <h1 className="text-5xl font-extrabold text-black text-center ml-[-40%] tablet-nav-title">Bienvenue dans l'expérience.</h1>
             )}
             
             {/* Title for Vehicle Page */}
             {location.pathname === '/vehicle' && (
-              <h1 className="text-5xl text-[#1290AD] ml-[-40%]">J'identifie ma <span className="font-bold">{userSelection?.vehicleType ? getVehicleTypeDisplayName(userSelection.vehicleType) : ''}</span></h1>
+              <h1 className="text-5xl text-[#1290AD] ml-[-40%] tablet-nav-title">J'identifie ma <span className="font-bold">{userSelection?.vehicleType ? getVehicleTypeDisplayName(userSelection.vehicleType) : ''}</span></h1>
             )}
 
             {location.pathname === '/category' && (
-              <h1 className="text-5xl text-[#1290AD] ml-[-27%]">Que recherchez-vous ?</h1>
+              <h1 className="text-5xl text-[#1290AD] ml-[-27%] tablet-nav-title">Que recherchez-vous ?</h1>
             )}
             
             {/* Category Navigation */}
-            {userSelection && (userSelection.category || location.pathname === '/questions' || location.pathname === '/products' || location.pathname.startsWith('/product-details/')) && (
+            {userSelection && (userSelection.category || location.pathname === '/questions' || location.pathname === '/products' || location.pathname.startsWith('/product-details/')) && location.pathname !== '/category' && (
               <CategoryNavigation 
                 selectedCategory={userSelection.category} 
                 updateUserSelection={updateUserSelection}

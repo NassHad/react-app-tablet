@@ -8,7 +8,7 @@ interface BatteryHelpPageProps {
   onClose: () => void;
 }
 
-const BatteryHelpPage = ({ onClose }: BatteryHelpPageProps) => {
+const BatteryHelpPage = ({ category: _category, onClose }: BatteryHelpPageProps) => {
   const batteryTypes = [
     {
       id: 'standard',

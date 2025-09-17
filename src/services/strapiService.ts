@@ -8,6 +8,8 @@ const strapiClient = axios.create({
   timeout: DATA_SOURCE_CONFIG.strapi.timeout,
   headers: {
     'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'User-Agent': 'React-App-Tablet/1.0',
   },
 });
 
@@ -320,10 +322,34 @@ class StrapiService {
       
       const response = await strapiClient.get<{ data: StrapiBatteryBrand[] }>('/battery-brands?filters[isActive]=true');
       
-      console.log('✅ Battery brands loaded from Strapi:', response.data.data.length);
-      return response.data.data;
+      console.log('📊 Raw Strapi response (brands):', response.data);
+      
+      // Handle different response structures
+      if (!response.data) {
+        console.warn('⚠️ No data in response');
+        return [];
+      }
+      
+      if (Array.isArray(response.data)) {
+        console.log('✅ Battery brands loaded from Strapi (direct array):', response.data.length);
+        return response.data;
+      }
+      
+      if (response.data.data && Array.isArray(response.data.data)) {
+        console.log('✅ Battery brands loaded from Strapi (nested data):', response.data.data.length);
+        return response.data.data;
+      }
+      
+      console.warn('⚠️ Unexpected response structure:', response.data);
+      return [];
     } catch (error: any) {
       console.error('❌ Error fetching battery brands from Strapi:', error);
+      
+      if (error.response) {
+        console.error('📡 Response status:', error.response.status);
+        console.error('📡 Response data:', error.response.data);
+      }
+      
       throw error;
     }
   }
@@ -342,10 +368,36 @@ class StrapiService {
         `/battery-models?filters[batteryBrand][id]=${brandId}&filters[isActive]=true&populate=batteryBrand`
       );
       
-      console.log('✅ Battery models loaded from Strapi:', response.data.data.length);
-      return response.data.data;
+      console.log('📊 Raw Strapi response:', response.data);
+      console.log('📊 Response data structure:', typeof response.data, response.data);
+      
+      // Handle different response structures
+      if (!response.data) {
+        console.warn('⚠️ No data in response');
+        return [];
+      }
+      
+      if (Array.isArray(response.data)) {
+        console.log('✅ Battery models loaded from Strapi (direct array):', response.data.length);
+        return response.data;
+      }
+      
+      if (response.data.data && Array.isArray(response.data.data)) {
+        console.log('✅ Battery models loaded from Strapi (nested data):', response.data.data.length);
+        return response.data.data;
+      }
+      
+      console.warn('⚠️ Unexpected response structure:', response.data);
+      return [];
     } catch (error: any) {
       console.error('❌ Error fetching battery models from Strapi:', error);
+      
+      if (error.response) {
+        console.error('📡 Response status:', error.response.status);
+        console.error('📡 Response data:', error.response.data);
+        console.error('📡 Response headers:', error.response.headers);
+      }
+      
       throw error;
     }
   }
@@ -359,10 +411,34 @@ class StrapiService {
         '/battery-models?filters[isActive]=true&populate=batteryBrand'
       );
       
-      console.log('✅ All battery models loaded from Strapi:', response.data.data.length);
-      return response.data.data;
+      console.log('📊 Raw Strapi response (all models):', response.data);
+      
+      // Handle different response structures
+      if (!response.data) {
+        console.warn('⚠️ No data in response');
+        return [];
+      }
+      
+      if (Array.isArray(response.data)) {
+        console.log('✅ All battery models loaded from Strapi (direct array):', response.data.length);
+        return response.data;
+      }
+      
+      if (response.data.data && Array.isArray(response.data.data)) {
+        console.log('✅ All battery models loaded from Strapi (nested data):', response.data.data.length);
+        return response.data.data;
+      }
+      
+      console.warn('⚠️ Unexpected response structure:', response.data);
+      return [];
     } catch (error: any) {
       console.error('❌ Error fetching all battery models from Strapi:', error);
+      
+      if (error.response) {
+        console.error('📡 Response status:', error.response.status);
+        console.error('📡 Response data:', error.response.data);
+      }
+      
       throw error;
     }
   }
@@ -760,4 +836,5 @@ class StrapiService {
   }
 }
 
+export { StrapiService };
 export const strapiService = new StrapiService();

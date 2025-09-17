@@ -146,19 +146,27 @@ class VehicleDataService {
           return this.strapiDataCache.brands;
         }
 
-        const strapiBrands = await this.strapiService.getBatteryBrands();
-        const brands = this.convertStrapiBatteryBrandsToLocal(strapiBrands);
-        
-        // Update cache
-        this.strapiDataCache = {
-          brands,
-          models: this.strapiDataCache?.models || [],
-          dateRanges: this.strapiDataCache?.dateRanges || [],
-          lastFetch: Date.now()
-        };
+        try {
+          const strapiBrands = await this.strapiService.getBatteryBrands();
+          const brands = this.convertStrapiBatteryBrandsToLocal(strapiBrands);
+          
+          // Update cache
+          this.strapiDataCache = {
+            brands,
+            models: this.strapiDataCache?.models || [],
+            dateRanges: this.strapiDataCache?.dateRanges || [],
+            lastFetch: Date.now()
+          };
 
-        console.log('✅ Battery brands loaded from Strapi:', brands.length);
-        return brands;
+          console.log('✅ Battery brands loaded from Strapi:', brands.length);
+          return brands;
+        } catch (error) {
+          console.error('❌ Failed to load brands from Strapi, falling back to local data:', error);
+          // Fallback to local data
+          const localBrands = getBrands();
+          console.log('📦 Using local brands as fallback:', localBrands.length);
+          return localBrands;
+        }
       }
     } catch (error) {
       console.warn('⚠️ Failed to fetch battery brands from Strapi, falling back to local data:', error);
@@ -185,19 +193,27 @@ class VehicleDataService {
         }
 
         // Fetch fresh data from Strapi using battery models
-        const strapiBatteryModels = await this.strapiService.getBatteryModelsByBrand(brandId);
-        const { models } = this.convertStrapiBatteryModelsToLocal(strapiBatteryModels);
-        
-        // Update cache
-        if (this.strapiDataCache) {
-          this.strapiDataCache.models = [
-            ...this.strapiDataCache.models.filter(m => m.brandId !== brandId),
-            ...models
-          ];
-        }
+        try {
+          const strapiBatteryModels = await this.strapiService.getBatteryModelsByBrand(brandId);
+          const { models } = this.convertStrapiBatteryModelsToLocal(strapiBatteryModels);
+          
+          // Update cache
+          if (this.strapiDataCache) {
+            this.strapiDataCache.models = [
+              ...this.strapiDataCache.models.filter(m => m.brandId !== brandId),
+              ...models
+            ];
+          }
 
-        console.log('✅ Battery models loaded from Strapi:', models.length);
-        return models;
+          console.log('✅ Battery models loaded from Strapi:', models.length);
+          return models;
+        } catch (error) {
+          console.error('❌ Failed to load models from Strapi, falling back to local data:', error);
+          // Fallback to local data
+          const localModels = getModelsByBrand(brandId);
+          console.log('📦 Using local models as fallback:', localModels.length);
+          return localModels;
+        }
       }
     } catch (error) {
       console.warn('⚠️ Failed to fetch battery models from Strapi, falling back to local data:', error);

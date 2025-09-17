@@ -11,13 +11,12 @@ import {
   getBrands, 
   getModelsByBrand, 
   getDateRangesByModel,
-  getBrandById,
-  getModelById,
   vehicleDataService,
   type Brand,
   type Model,
   type DateRange
 } from '../utils/vehicleData';
+import { motorisationService } from '../services/motorisationService';
 import BatteryVehicleForm from '../components/BatteryVehicleForm';
 
 interface VehiclePageProps {
@@ -46,12 +45,15 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
   // Original form logic for non-battery categories
   const [selectedBrandId, setSelectedBrandId] = useState<number | null>(null);
   const [selectedModelId, setSelectedModelId] = useState<number | null>(null);
+  const [selectedMotorisation, setSelectedMotorisation] = useState<string>('');
   const [selectedDateRange, setSelectedDateRange] = useState<string>('');
   const [availableModels, setAvailableModels] = useState<Model[]>([]);
+  const [availableMotorisations, setAvailableMotorisations] = useState<string[]>([]);
   const [availableDateRanges, setAvailableDateRanges] = useState<DateRange[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isLoadingModels, setIsLoadingModels] = useState<boolean>(false);
+  const [isLoadingMotorisations, setIsLoadingMotorisations] = useState<boolean>(false);
   const [isLoadingDateRanges, setIsLoadingDateRanges] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -112,15 +114,53 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
     loadModels();
   }, [selectedBrandId, vehicleType]);
 
-  // Filter date ranges when model changes
+  // Load motorisations when model changes
+  useEffect(() => {
+    const loadMotorisations = async () => {
+      if (selectedModelId) {
+        try {
+          setIsLoadingMotorisations(true);
+          setError(null);
+          
+          const motorisations = await motorisationService.getUniqueMotorisationsForModel(selectedModelId);
+          setAvailableMotorisations(motorisations);
+          setSelectedMotorisation('');
+          setSelectedDateRange('');
+          setAvailableDateRanges([]);
+        } catch (err) {
+          console.error('Failed to load motorisations:', err);
+          setError('Failed to load motorisations. Please try again.');
+          setAvailableMotorisations([]);
+        } finally {
+          setIsLoadingMotorisations(false);
+        }
+      } else {
+        setAvailableMotorisations([]);
+        setSelectedMotorisation('');
+        setSelectedDateRange('');
+        setAvailableDateRanges([]);
+      }
+    };
+
+    loadMotorisations();
+  }, [selectedModelId]);
+
+  // Load date ranges when motorisation changes
   useEffect(() => {
     const loadDateRanges = async () => {
-      if (selectedModelId) {
+      if (selectedModelId && selectedMotorisation) {
         try {
           setIsLoadingDateRanges(true);
           setError(null);
           
-          const dateRanges = await vehicleDataService.getDateRangesByModel(selectedModelId);
+          const motorisationData = await motorisationService.getMotorisationDateRanges(selectedModelId, selectedMotorisation);
+          const dateRanges = motorisationData.map((motor, index) => ({
+            id: index + 1,
+            modelId: selectedModelId,
+            range: motor.endDate 
+              ? `${motor.startDate} - ${motor.endDate}`
+              : `${motor.startDate} - présent`
+          }));
           setAvailableDateRanges(dateRanges);
           setSelectedDateRange('');
         } catch (err) {
@@ -139,7 +179,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
     };
 
     loadDateRanges();
-  }, [selectedModelId]);
+  }, [selectedModelId, selectedMotorisation]);
 
   const handleBrandChange = (brandId: number) => {
     setSelectedBrandId(brandId);
@@ -149,13 +189,17 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
     setSelectedModelId(modelId);
   };
 
+  const handleMotorisationChange = (motorisation: string) => {
+    setSelectedMotorisation(motorisation);
+  };
+
   const handleDateRangeChange = (dateRange: string) => {
     setSelectedDateRange(dateRange);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (selectedBrandId && selectedModelId && selectedDateRange) {
+    if (selectedBrandId && selectedModelId && selectedMotorisation && selectedDateRange) {
       try {
         const brand = await vehicleDataService.getBrandById(selectedBrandId);
         const model = await vehicleDataService.getModelById(selectedModelId);
@@ -166,6 +210,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
             type: vehicleType,
             brand: brand.name,
             model: model.name,
+            motorisation: selectedMotorisation,
             dateCirculation: selectedDateRange,
           };
           
@@ -208,7 +253,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
     }
   });
 
-  const isFormValid = selectedBrandId && selectedModelId && selectedDateRange;
+  const isFormValid = selectedBrandId && selectedModelId && selectedMotorisation && selectedDateRange;
 
   // Show loading state while initial data is loading
   if (isLoading) {
@@ -228,7 +273,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-4xl">
-        <h1 className="text-5xl text-[#1290AD] mt-16 mb-14">Sélectionnez la <span className="font-bold">marque</span>, le <span className="font-bold">modèle</span> et la <span className="font-bold">date</span> de mise en circulation de votre {getVehicleTypeDisplayName(vehicleType)}</h1>
+        <h1 className="text-5xl text-[#1290AD] mt-16 mb-14">Sélectionnez la <span className="font-bold">marque</span>, le <span className="font-bold">modèle</span>, la <span className="font-bold">motorisation</span> et la <span className="font-bold">date</span> de mise en circulation de votre {getVehicleTypeDisplayName(vehicleType)}</h1>
         
         {/* Error message */}
         {error && (
@@ -288,6 +333,37 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
               </select>
             </div>
           </div>
+
+          {/* Motorisation Selection */}
+          <div className='flex flex-row gap-4 justify-around space-y-8'>
+            <div className="space-y-3">
+              <label htmlFor="motorisation" className="block text-xl font-bold text-black text-left pl-2">
+                Motorisation
+              </label>
+              <select
+                id="motorisation"
+                value={selectedMotorisation}
+                onChange={(e) => handleMotorisationChange(e.target.value)}
+                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                disabled={!selectedModelId || isLoadingMotorisations}
+                required
+              >
+                <option value="">
+                  {isLoadingMotorisations 
+                    ? 'Chargement des motorisations...' 
+                    : selectedModelId 
+                      ? 'Sélectionnez une motorisation' 
+                      : 'Sélectionnez d\'abord un modèle'
+                  }
+                </option>
+                {availableMotorisations.map((motorisation) => (
+                  <option key={motorisation} value={motorisation}>
+                    {motorisation}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
           
           <div className='flex flex-row gap-4 justify-around space-y-8'>
             {/* Date Range Selection */}
@@ -300,15 +376,15 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
                 value={selectedDateRange}
                 onChange={(e) => handleDateRangeChange(e.target.value)}
                 className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
-                disabled={!selectedModelId || isLoadingDateRanges}
+                disabled={!selectedMotorisation || isLoadingDateRanges}
                 required
               >
                 <option value="">
                   {isLoadingDateRanges 
                     ? 'Chargement des périodes...' 
-                    : selectedModelId 
+                    : selectedMotorisation 
                       ? 'Sélectionnez une période' 
-                      : 'Sélectionnez d\'abord un modèle'
+                      : 'Sélectionnez d\'abord une motorisation'
                   }
                 </option>
                 {availableDateRanges.map((dateRange) => (

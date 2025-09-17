@@ -190,7 +190,7 @@ private async loadFromLocalNodeModules(): Promise<void> {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.type = 'module';
-    script.src = '/node_modules/jeep-sqlite/dist/jeep-sqlite.esm.js';
+    script.src = '/node_modules/jeep-sqlite/dist/esm/jeep-sqlite.entry.js';
     
     script.onload = () => resolve();
     script.onerror = () => reject(new Error('Failed to load from node_modules'));
@@ -204,7 +204,7 @@ private async loadFromCDN(): Promise<void> {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.type = 'module';
-    script.src = 'https://cdn.jsdelivr.net/npm/jeep-sqlite@2.8.0/dist/jeep-sqlite.esm.js';
+    script.src = 'https://cdn.jsdelivr.net/npm/jeep-sqlite@2.8.0/dist/esm/jeep-sqlite.entry.js';
     
     script.onload = () => resolve();
     script.onerror = () => reject(new Error('Failed to load from CDN'));
@@ -218,7 +218,7 @@ private async loadFromUnpkg(): Promise<void> {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.type = 'module';
-    script.src = 'https://unpkg.com/jeep-sqlite@2.8.0/dist/jeep-sqlite.esm.js';
+    script.src = 'https://unpkg.com/jeep-sqlite@2.8.0/dist/esm/jeep-sqlite.entry.js';
     
     script.onload = () => resolve();
     script.onerror = () => reject(new Error('Failed to load from unpkg'));

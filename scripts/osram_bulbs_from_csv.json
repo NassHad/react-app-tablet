@@ -1,0 +1,6242 @@
+[
+  {
+    "id": 1,
+    "brand": "",
+    "model": "124 Spider",
+    "constructionYear": {
+      "start": "03/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H11",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 2,
+    "brand": "",
+    "model": "124 Spider",
+    "constructionYear": {
+      "start": "03/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H15",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 3,
+    "brand": "",
+    "model": "124 Spider",
+    "constructionYear": {
+      "start": "03/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H15",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 4,
+    "brand": "",
+    "model": "124 Spider",
+    "constructionYear": {
+      "start": "03/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 5,
+    "brand": "",
+    "model": "124 Spider",
+    "constructionYear": {
+      "start": "03/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "WY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 6,
+    "brand": "",
+    "model": "124 Spider",
+    "constructionYear": {
+      "start": "03/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "WY21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 7,
+    "brand": "",
+    "model": "124 Spider",
+    "constructionYear": {
+      "start": "03/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 8,
+    "brand": "",
+    "model": "124 Spider",
+    "constructionYear": {
+      "start": "03/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 9,
+    "brand": "",
+    "model": "124 Spider",
+    "constructionYear": {
+      "start": "03/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 10,
+    "brand": "",
+    "model": "124 Spider",
+    "constructionYear": {
+      "start": "03/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 11,
+    "brand": "",
+    "model": "500 / 595 / 695",
+    "constructionYear": {
+      "start": "01/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 12,
+    "brand": "",
+    "model": "500 / 595 / 695",
+    "constructionYear": {
+      "start": "01/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 13,
+    "brand": "",
+    "model": "500 / 595 / 695",
+    "constructionYear": {
+      "start": "01/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "W21",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 14,
+    "brand": "",
+    "model": "500 / 595 / 695",
+    "constructionYear": {
+      "start": "01/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "W21",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 15,
+    "brand": "",
+    "model": "500 / 595 / 695",
+    "constructionYear": {
+      "start": "01/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "WY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 16,
+    "brand": "",
+    "model": "500 / 595 / 695",
+    "constructionYear": {
+      "start": "01/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 17,
+    "brand": "",
+    "model": "500 / 595 / 695",
+    "constructionYear": {
+      "start": "01/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 18,
+    "brand": "",
+    "model": "500 / 595 / 695",
+    "constructionYear": {
+      "start": "01/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 19,
+    "brand": "",
+    "model": "500 / 595 / 695",
+    "constructionYear": {
+      "start": "01/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "C5W",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 20,
+    "brand": "",
+    "model": "500 / 595 / 695",
+    "constructionYear": {
+      "start": "01/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "W5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 21,
+    "brand": "",
+    "model": "500C / 595C / 695C",
+    "constructionYear": {
+      "start": "05/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 22,
+    "brand": "",
+    "model": "500C / 595C / 695C",
+    "constructionYear": {
+      "start": "05/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 23,
+    "brand": "",
+    "model": "500C / 595C / 695C",
+    "constructionYear": {
+      "start": "05/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "W21",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 24,
+    "brand": "",
+    "model": "500C / 595C / 695C",
+    "constructionYear": {
+      "start": "05/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "W21",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 25,
+    "brand": "",
+    "model": "500C / 595C / 695C",
+    "constructionYear": {
+      "start": "05/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "WY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 26,
+    "brand": "",
+    "model": "500C / 595C / 695C",
+    "constructionYear": {
+      "start": "05/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 27,
+    "brand": "",
+    "model": "500C / 595C / 695C",
+    "constructionYear": {
+      "start": "05/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 28,
+    "brand": "",
+    "model": "500C / 595C / 695C",
+    "constructionYear": {
+      "start": "05/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 29,
+    "brand": "",
+    "model": "500C / 595C / 695C",
+    "constructionYear": {
+      "start": "05/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "C5W",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 30,
+    "brand": "",
+    "model": "500C / 595C / 695C",
+    "constructionYear": {
+      "start": "05/08",
+      "end": "Present"
+    },
+    "typeConception": "> 2014, Halogen",
+    "lightType": "W5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 31,
+    "brand": "",
+    "model": "GRANDE PUNTO",
+    "constructionYear": {
+      "start": "12/07",
+      "end": "12/12"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 32,
+    "brand": "",
+    "model": "GRANDE PUNTO",
+    "constructionYear": {
+      "start": "12/07",
+      "end": "12/12"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 33,
+    "brand": "",
+    "model": "GRANDE PUNTO",
+    "constructionYear": {
+      "start": "12/07",
+      "end": "12/12"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 34,
+    "brand": "",
+    "model": "GRANDE PUNTO",
+    "constructionYear": {
+      "start": "12/07",
+      "end": "12/12"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 35,
+    "brand": "",
+    "model": "GRANDE PUNTO",
+    "constructionYear": {
+      "start": "12/07",
+      "end": "12/12"
+    },
+    "typeConception": "Standard",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 36,
+    "brand": "",
+    "model": "GRANDE PUNTO",
+    "constructionYear": {
+      "start": "12/07",
+      "end": "12/12"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 37,
+    "brand": "",
+    "model": "GRANDE PUNTO",
+    "constructionYear": {
+      "start": "12/07",
+      "end": "12/12"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 38,
+    "brand": "",
+    "model": "GRANDE PUNTO",
+    "constructionYear": {
+      "start": "12/07",
+      "end": "12/12"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 39,
+    "brand": "",
+    "model": "GRANDE PUNTO",
+    "constructionYear": {
+      "start": "12/07",
+      "end": "12/12"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 40,
+    "brand": "",
+    "model": "GRANDE PUNTO",
+    "constructionYear": {
+      "start": "12/07",
+      "end": "12/12"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 41,
+    "brand": "",
+    "model": "PUNTO (199_)",
+    "constructionYear": {
+      "start": "07/08",
+      "end": "Present"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 42,
+    "brand": "",
+    "model": "PUNTO (199_)",
+    "constructionYear": {
+      "start": "07/08",
+      "end": "Present"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 43,
+    "brand": "",
+    "model": "PUNTO (199_)",
+    "constructionYear": {
+      "start": "07/08",
+      "end": "Present"
+    },
+    "typeConception": "Standard",
+    "lightType": "W21W",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 44,
+    "brand": "",
+    "model": "PUNTO (199_)",
+    "constructionYear": {
+      "start": "07/08",
+      "end": "Present"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 45,
+    "brand": "",
+    "model": "PUNTO (199_)",
+    "constructionYear": {
+      "start": "07/08",
+      "end": "Present"
+    },
+    "typeConception": "Standard",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 46,
+    "brand": "",
+    "model": "PUNTO (199_)",
+    "constructionYear": {
+      "start": "07/08",
+      "end": "Present"
+    },
+    "typeConception": "Standard",
+    "lightType": "PY21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 47,
+    "brand": "",
+    "model": "PUNTO (199_)",
+    "constructionYear": {
+      "start": "07/08",
+      "end": "Present"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 48,
+    "brand": "",
+    "model": "PUNTO (199_)",
+    "constructionYear": {
+      "start": "07/08",
+      "end": "Present"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 49,
+    "brand": "",
+    "model": "PUNTO (199_)",
+    "constructionYear": {
+      "start": "07/08",
+      "end": "Present"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 50,
+    "brand": "",
+    "model": "PUNTO (199_)",
+    "constructionYear": {
+      "start": "07/08",
+      "end": "Present"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 51,
+    "brand": "ALFA ROMEO",
+    "model": "145 (930_)",
+    "constructionYear": {
+      "start": "07/94",
+      "end": "01/01"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 52,
+    "brand": "ALFA ROMEO",
+    "model": "145 (930_)",
+    "constructionYear": {
+      "start": "07/94",
+      "end": "01/01"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 53,
+    "brand": "ALFA ROMEO",
+    "model": "145 (930_)",
+    "constructionYear": {
+      "start": "07/94",
+      "end": "01/01"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 54,
+    "brand": "ALFA ROMEO",
+    "model": "145 (930_)",
+    "constructionYear": {
+      "start": "07/94",
+      "end": "01/01"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 55,
+    "brand": "ALFA ROMEO",
+    "model": "145 (930_)",
+    "constructionYear": {
+      "start": "07/94",
+      "end": "01/01"
+    },
+    "typeConception": "Standard",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 56,
+    "brand": "ALFA ROMEO",
+    "model": "145 (930_)",
+    "constructionYear": {
+      "start": "07/94",
+      "end": "01/01"
+    },
+    "typeConception": "Standard",
+    "lightType": "PY21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 57,
+    "brand": "ALFA ROMEO",
+    "model": "145 (930_)",
+    "constructionYear": {
+      "start": "07/94",
+      "end": "01/01"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 58,
+    "brand": "ALFA ROMEO",
+    "model": "145 (930_)",
+    "constructionYear": {
+      "start": "07/94",
+      "end": "01/01"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 59,
+    "brand": "ALFA ROMEO",
+    "model": "145 (930_)",
+    "constructionYear": {
+      "start": "07/94",
+      "end": "01/01"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 60,
+    "brand": "ALFA ROMEO",
+    "model": "145 (930_)",
+    "constructionYear": {
+      "start": "07/94",
+      "end": "01/01"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 61,
+    "brand": "ALFA ROMEO",
+    "model": "146 (930_)",
+    "constructionYear": {
+      "start": "12/94",
+      "end": "01/01"
+    },
+    "typeConception": "> 1997",
+    "lightType": "H1",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 62,
+    "brand": "ALFA ROMEO",
+    "model": "146 (930_)",
+    "constructionYear": {
+      "start": "12/94",
+      "end": "01/01"
+    },
+    "typeConception": "> 1997",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 63,
+    "brand": "ALFA ROMEO",
+    "model": "146 (930_)",
+    "constructionYear": {
+      "start": "12/94",
+      "end": "01/01"
+    },
+    "typeConception": "> 1997",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 64,
+    "brand": "ALFA ROMEO",
+    "model": "146 (930_)",
+    "constructionYear": {
+      "start": "12/94",
+      "end": "01/01"
+    },
+    "typeConception": "> 1997",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 65,
+    "brand": "ALFA ROMEO",
+    "model": "146 (930_)",
+    "constructionYear": {
+      "start": "12/94",
+      "end": "01/01"
+    },
+    "typeConception": "> 1997",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 66,
+    "brand": "ALFA ROMEO",
+    "model": "146 (930_)",
+    "constructionYear": {
+      "start": "12/94",
+      "end": "01/01"
+    },
+    "typeConception": "> 1997",
+    "lightType": "PY21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 67,
+    "brand": "ALFA ROMEO",
+    "model": "146 (930_)",
+    "constructionYear": {
+      "start": "12/94",
+      "end": "01/01"
+    },
+    "typeConception": "> 1997",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 68,
+    "brand": "ALFA ROMEO",
+    "model": "146 (930_)",
+    "constructionYear": {
+      "start": "12/94",
+      "end": "01/01"
+    },
+    "typeConception": "> 1997",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 69,
+    "brand": "ALFA ROMEO",
+    "model": "146 (930_)",
+    "constructionYear": {
+      "start": "12/94",
+      "end": "01/01"
+    },
+    "typeConception": "> 1997",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 70,
+    "brand": "ALFA ROMEO",
+    "model": "146 (930_)",
+    "constructionYear": {
+      "start": "12/94",
+      "end": "01/01"
+    },
+    "typeConception": "> 1997",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 71,
+    "brand": "ALFA ROMEO",
+    "model": "147 (937_)",
+    "constructionYear": {
+      "start": "11/00",
+      "end": "03/10"
+    },
+    "typeConception": "> 2004, Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 72,
+    "brand": "ALFA ROMEO",
+    "model": "147 (937_)",
+    "constructionYear": {
+      "start": "11/00",
+      "end": "03/10"
+    },
+    "typeConception": "> 2004, Halogen",
+    "lightType": "H7",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 73,
+    "brand": "ALFA ROMEO",
+    "model": "147 (937_)",
+    "constructionYear": {
+      "start": "11/00",
+      "end": "03/10"
+    },
+    "typeConception": "> 2004, Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 74,
+    "brand": "ALFA ROMEO",
+    "model": "147 (937_)",
+    "constructionYear": {
+      "start": "11/00",
+      "end": "03/10"
+    },
+    "typeConception": "> 2004, Halogen",
+    "lightType": "H6W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 75,
+    "brand": "ALFA ROMEO",
+    "model": "147 (937_)",
+    "constructionYear": {
+      "start": "11/00",
+      "end": "03/10"
+    },
+    "typeConception": "> 2004, Halogen",
+    "lightType": "H21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 76,
+    "brand": "ALFA ROMEO",
+    "model": "147 (937_)",
+    "constructionYear": {
+      "start": "11/00",
+      "end": "03/10"
+    },
+    "typeConception": "> 2004, Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 77,
+    "brand": "ALFA ROMEO",
+    "model": "147 (937_)",
+    "constructionYear": {
+      "start": "11/00",
+      "end": "03/10"
+    },
+    "typeConception": "> 2004, Halogen",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 78,
+    "brand": "ALFA ROMEO",
+    "model": "147 (937_)",
+    "constructionYear": {
+      "start": "11/00",
+      "end": "03/10"
+    },
+    "typeConception": "> 2004, Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 79,
+    "brand": "ALFA ROMEO",
+    "model": "147 (937_)",
+    "constructionYear": {
+      "start": "11/00",
+      "end": "03/10"
+    },
+    "typeConception": "> 2004, Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 80,
+    "brand": "ALFA ROMEO",
+    "model": "147 (937_)",
+    "constructionYear": {
+      "start": "11/00",
+      "end": "03/10"
+    },
+    "typeConception": "> 2004, Halogen",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 81,
+    "brand": "ALFA ROMEO",
+    "model": "155 (167_)",
+    "constructionYear": {
+      "start": "01/92",
+      "end": "12/97"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 82,
+    "brand": "ALFA ROMEO",
+    "model": "155 (167_)",
+    "constructionYear": {
+      "start": "01/92",
+      "end": "12/97"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 83,
+    "brand": "ALFA ROMEO",
+    "model": "155 (167_)",
+    "constructionYear": {
+      "start": "01/92",
+      "end": "12/97"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 84,
+    "brand": "ALFA ROMEO",
+    "model": "155 (167_)",
+    "constructionYear": {
+      "start": "01/92",
+      "end": "12/97"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 85,
+    "brand": "ALFA ROMEO",
+    "model": "155 (167_)",
+    "constructionYear": {
+      "start": "01/92",
+      "end": "12/97"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 86,
+    "brand": "ALFA ROMEO",
+    "model": "155 (167_)",
+    "constructionYear": {
+      "start": "01/92",
+      "end": "12/97"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 87,
+    "brand": "ALFA ROMEO",
+    "model": "155 (167_)",
+    "constructionYear": {
+      "start": "01/92",
+      "end": "12/97"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 88,
+    "brand": "ALFA ROMEO",
+    "model": "155 (167_)",
+    "constructionYear": {
+      "start": "01/92",
+      "end": "12/97"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 89,
+    "brand": "ALFA ROMEO",
+    "model": "155 (167_)",
+    "constructionYear": {
+      "start": "01/92",
+      "end": "12/97"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 90,
+    "brand": "ALFA ROMEO",
+    "model": "155 (167_)",
+    "constructionYear": {
+      "start": "01/92",
+      "end": "12/97"
+    },
+    "typeConception": "Standard",
+    "lightType": "**",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 91,
+    "brand": "ALFA ROMEO",
+    "model": "156 (932_)",
+    "constructionYear": {
+      "start": "09/97",
+      "end": "09/05"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 92,
+    "brand": "ALFA ROMEO",
+    "model": "156 (932_)",
+    "constructionYear": {
+      "start": "09/97",
+      "end": "09/05"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 93,
+    "brand": "ALFA ROMEO",
+    "model": "156 (932_)",
+    "constructionYear": {
+      "start": "09/97",
+      "end": "09/05"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 94,
+    "brand": "ALFA ROMEO",
+    "model": "156 (932_)",
+    "constructionYear": {
+      "start": "09/97",
+      "end": "09/05"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H6W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 95,
+    "brand": "ALFA ROMEO",
+    "model": "156 (932_)",
+    "constructionYear": {
+      "start": "09/97",
+      "end": "09/05"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 96,
+    "brand": "ALFA ROMEO",
+    "model": "156 (932_)",
+    "constructionYear": {
+      "start": "09/97",
+      "end": "09/05"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 97,
+    "brand": "ALFA ROMEO",
+    "model": "156 (932_)",
+    "constructionYear": {
+      "start": "09/97",
+      "end": "09/05"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 98,
+    "brand": "ALFA ROMEO",
+    "model": "156 (932_)",
+    "constructionYear": {
+      "start": "09/97",
+      "end": "09/05"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 99,
+    "brand": "ALFA ROMEO",
+    "model": "156 (932_)",
+    "constructionYear": {
+      "start": "09/97",
+      "end": "09/05"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 100,
+    "brand": "ALFA ROMEO",
+    "model": "156 (932_)",
+    "constructionYear": {
+      "start": "09/97",
+      "end": "09/05"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6413",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 101,
+    "brand": "ALFA ROMEO",
+    "model": "156 Sportwagon (932_)",
+    "constructionYear": {
+      "start": "01/00",
+      "end": "05/06"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 102,
+    "brand": "ALFA ROMEO",
+    "model": "156 Sportwagon (932_)",
+    "constructionYear": {
+      "start": "01/00",
+      "end": "05/06"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 103,
+    "brand": "ALFA ROMEO",
+    "model": "156 Sportwagon (932_)",
+    "constructionYear": {
+      "start": "01/00",
+      "end": "05/06"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 104,
+    "brand": "ALFA ROMEO",
+    "model": "156 Sportwagon (932_)",
+    "constructionYear": {
+      "start": "01/00",
+      "end": "05/06"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H6W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 105,
+    "brand": "ALFA ROMEO",
+    "model": "156 Sportwagon (932_)",
+    "constructionYear": {
+      "start": "01/00",
+      "end": "05/06"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 106,
+    "brand": "ALFA ROMEO",
+    "model": "156 Sportwagon (932_)",
+    "constructionYear": {
+      "start": "01/00",
+      "end": "05/06"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 107,
+    "brand": "ALFA ROMEO",
+    "model": "156 Sportwagon (932_)",
+    "constructionYear": {
+      "start": "01/00",
+      "end": "05/06"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 108,
+    "brand": "ALFA ROMEO",
+    "model": "156 Sportwagon (932_)",
+    "constructionYear": {
+      "start": "01/00",
+      "end": "05/06"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 109,
+    "brand": "ALFA ROMEO",
+    "model": "156 Sportwagon (932_)",
+    "constructionYear": {
+      "start": "01/00",
+      "end": "05/06"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 110,
+    "brand": "ALFA ROMEO",
+    "model": "156 Sportwagon (932_)",
+    "constructionYear": {
+      "start": "01/00",
+      "end": "05/06"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6413",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 111,
+    "brand": "ALFA ROMEO",
+    "model": "159 (939_)",
+    "constructionYear": {
+      "start": "09/05",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 112,
+    "brand": "ALFA ROMEO",
+    "model": "159 (939_)",
+    "constructionYear": {
+      "start": "09/05",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 113,
+    "brand": "ALFA ROMEO",
+    "model": "159 (939_)",
+    "constructionYear": {
+      "start": "09/05",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 114,
+    "brand": "ALFA ROMEO",
+    "model": "159 (939_)",
+    "constructionYear": {
+      "start": "09/05",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 115,
+    "brand": "ALFA ROMEO",
+    "model": "159 (939_)",
+    "constructionYear": {
+      "start": "09/05",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 116,
+    "brand": "ALFA ROMEO",
+    "model": "159 (939_)",
+    "constructionYear": {
+      "start": "09/05",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 117,
+    "brand": "ALFA ROMEO",
+    "model": "159 (939_)",
+    "constructionYear": {
+      "start": "09/05",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 118,
+    "brand": "ALFA ROMEO",
+    "model": "159 (939_)",
+    "constructionYear": {
+      "start": "09/05",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 119,
+    "brand": "ALFA ROMEO",
+    "model": "159 (939_)",
+    "constructionYear": {
+      "start": "09/05",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 120,
+    "brand": "ALFA ROMEO",
+    "model": "159 (939_)",
+    "constructionYear": {
+      "start": "09/05",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 121,
+    "brand": "ALFA ROMEO",
+    "model": "159 Sportwagon (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 122,
+    "brand": "ALFA ROMEO",
+    "model": "159 Sportwagon (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 123,
+    "brand": "ALFA ROMEO",
+    "model": "159 Sportwagon (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 124,
+    "brand": "ALFA ROMEO",
+    "model": "159 Sportwagon (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 125,
+    "brand": "ALFA ROMEO",
+    "model": "159 Sportwagon (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 126,
+    "brand": "ALFA ROMEO",
+    "model": "159 Sportwagon (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 127,
+    "brand": "ALFA ROMEO",
+    "model": "159 Sportwagon (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 128,
+    "brand": "ALFA ROMEO",
+    "model": "159 Sportwagon (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 129,
+    "brand": "ALFA ROMEO",
+    "model": "159 Sportwagon (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 130,
+    "brand": "ALFA ROMEO",
+    "model": "159 Sportwagon (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "11/11"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 131,
+    "brand": "ALFA ROMEO",
+    "model": "164 (164_)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "09/98"
+    },
+    "typeConception": "> 1991",
+    "lightType": "H4",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 132,
+    "brand": "ALFA ROMEO",
+    "model": "164 (164_)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "09/98"
+    },
+    "typeConception": "> 1991",
+    "lightType": "H4",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 133,
+    "brand": "ALFA ROMEO",
+    "model": "164 (164_)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "09/98"
+    },
+    "typeConception": "> 1991",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 134,
+    "brand": "ALFA ROMEO",
+    "model": "164 (164_)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "09/98"
+    },
+    "typeConception": "> 1991",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 135,
+    "brand": "ALFA ROMEO",
+    "model": "164 (164_)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "09/98"
+    },
+    "typeConception": "> 1991",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 136,
+    "brand": "ALFA ROMEO",
+    "model": "164 (164_)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "09/98"
+    },
+    "typeConception": "> 1991",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 137,
+    "brand": "ALFA ROMEO",
+    "model": "164 (164_)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "09/98"
+    },
+    "typeConception": "> 1991",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 138,
+    "brand": "ALFA ROMEO",
+    "model": "164 (164_)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "09/98"
+    },
+    "typeConception": "> 1991",
+    "lightType": "R5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 139,
+    "brand": "ALFA ROMEO",
+    "model": "164 (164_)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "09/98"
+    },
+    "typeConception": "> 1991",
+    "lightType": "C5W",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 140,
+    "brand": "ALFA ROMEO",
+    "model": "164 (164_)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "09/98"
+    },
+    "typeConception": "> 1991",
+    "lightType": "C5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 141,
+    "brand": "ALFA ROMEO",
+    "model": "166 (936_)",
+    "constructionYear": {
+      "start": "09/98",
+      "end": "06/07"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 142,
+    "brand": "ALFA ROMEO",
+    "model": "166 (936_)",
+    "constructionYear": {
+      "start": "09/98",
+      "end": "06/07"
+    },
+    "typeConception": "Halogen",
+    "lightType": "HB3",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 143,
+    "brand": "ALFA ROMEO",
+    "model": "166 (936_)",
+    "constructionYear": {
+      "start": "09/98",
+      "end": "06/07"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 144,
+    "brand": "ALFA ROMEO",
+    "model": "166 (936_)",
+    "constructionYear": {
+      "start": "09/98",
+      "end": "06/07"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H6W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 145,
+    "brand": "ALFA ROMEO",
+    "model": "166 (936_)",
+    "constructionYear": {
+      "start": "09/98",
+      "end": "06/07"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 146,
+    "brand": "ALFA ROMEO",
+    "model": "166 (936_)",
+    "constructionYear": {
+      "start": "09/98",
+      "end": "06/07"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 147,
+    "brand": "ALFA ROMEO",
+    "model": "166 (936_)",
+    "constructionYear": {
+      "start": "09/98",
+      "end": "06/07"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 148,
+    "brand": "ALFA ROMEO",
+    "model": "166 (936_)",
+    "constructionYear": {
+      "start": "09/98",
+      "end": "06/07"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 149,
+    "brand": "ALFA ROMEO",
+    "model": "166 (936_)",
+    "constructionYear": {
+      "start": "09/98",
+      "end": "06/07"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 150,
+    "brand": "ALFA ROMEO",
+    "model": "166 (936_)",
+    "constructionYear": {
+      "start": "09/98",
+      "end": "06/07"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 151,
+    "brand": "ALFA ROMEO",
+    "model": "33 (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 152,
+    "brand": "ALFA ROMEO",
+    "model": "33 (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 153,
+    "brand": "ALFA ROMEO",
+    "model": "33 (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 154,
+    "brand": "ALFA ROMEO",
+    "model": "33 (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 155,
+    "brand": "ALFA ROMEO",
+    "model": "33 (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 156,
+    "brand": "ALFA ROMEO",
+    "model": "33 (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 157,
+    "brand": "ALFA ROMEO",
+    "model": "33 (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 158,
+    "brand": "ALFA ROMEO",
+    "model": "33 (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 159,
+    "brand": "ALFA ROMEO",
+    "model": "33 (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "C5W",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 160,
+    "brand": "ALFA ROMEO",
+    "model": "33 (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "T4W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 161,
+    "brand": "ALFA ROMEO",
+    "model": "33 Sportwagon (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 162,
+    "brand": "ALFA ROMEO",
+    "model": "33 Sportwagon (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 163,
+    "brand": "ALFA ROMEO",
+    "model": "33 Sportwagon (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 164,
+    "brand": "ALFA ROMEO",
+    "model": "33 Sportwagon (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 165,
+    "brand": "ALFA ROMEO",
+    "model": "33 Sportwagon (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 166,
+    "brand": "ALFA ROMEO",
+    "model": "33 Sportwagon (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 167,
+    "brand": "ALFA ROMEO",
+    "model": "33 Sportwagon (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 168,
+    "brand": "ALFA ROMEO",
+    "model": "33 Sportwagon (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "R5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 169,
+    "brand": "ALFA ROMEO",
+    "model": "33 Sportwagon (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "C5W",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 170,
+    "brand": "ALFA ROMEO",
+    "model": "33 Sportwagon (907_)",
+    "constructionYear": {
+      "start": "01/90",
+      "end": "09/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "T4W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 171,
+    "brand": "ALFA ROMEO",
+    "model": "4C (960_)",
+    "constructionYear": {
+      "start": "03/13",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 172,
+    "brand": "ALFA ROMEO",
+    "model": "4C (960_)",
+    "constructionYear": {
+      "start": "03/13",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 173,
+    "brand": "ALFA ROMEO",
+    "model": "4C (960_)",
+    "constructionYear": {
+      "start": "03/13",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 174,
+    "brand": "ALFA ROMEO",
+    "model": "4C (960_)",
+    "constructionYear": {
+      "start": "03/13",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 175,
+    "brand": "ALFA ROMEO",
+    "model": "4C (960_)",
+    "constructionYear": {
+      "start": "03/13",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 176,
+    "brand": "ALFA ROMEO",
+    "model": "4C (960_)",
+    "constructionYear": {
+      "start": "03/13",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 177,
+    "brand": "ALFA ROMEO",
+    "model": "4C (960_)",
+    "constructionYear": {
+      "start": "03/13",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 178,
+    "brand": "ALFA ROMEO",
+    "model": "4C (960_)",
+    "constructionYear": {
+      "start": "03/13",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 179,
+    "brand": "ALFA ROMEO",
+    "model": "4C (960_)",
+    "constructionYear": {
+      "start": "03/13",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 180,
+    "brand": "ALFA ROMEO",
+    "model": "4C (960_)",
+    "constructionYear": {
+      "start": "03/13",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 181,
+    "brand": "ALFA ROMEO",
+    "model": "4C SPIDER (960_)",
+    "constructionYear": {
+      "start": "10/14",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 182,
+    "brand": "ALFA ROMEO",
+    "model": "4C SPIDER (960_)",
+    "constructionYear": {
+      "start": "10/14",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 183,
+    "brand": "ALFA ROMEO",
+    "model": "4C SPIDER (960_)",
+    "constructionYear": {
+      "start": "10/14",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 184,
+    "brand": "ALFA ROMEO",
+    "model": "4C SPIDER (960_)",
+    "constructionYear": {
+      "start": "10/14",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 185,
+    "brand": "ALFA ROMEO",
+    "model": "4C SPIDER (960_)",
+    "constructionYear": {
+      "start": "10/14",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 186,
+    "brand": "ALFA ROMEO",
+    "model": "4C SPIDER (960_)",
+    "constructionYear": {
+      "start": "10/14",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 187,
+    "brand": "ALFA ROMEO",
+    "model": "4C SPIDER (960_)",
+    "constructionYear": {
+      "start": "10/14",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 188,
+    "brand": "ALFA ROMEO",
+    "model": "4C SPIDER (960_)",
+    "constructionYear": {
+      "start": "10/14",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 189,
+    "brand": "ALFA ROMEO",
+    "model": "4C SPIDER (960_)",
+    "constructionYear": {
+      "start": "10/14",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 190,
+    "brand": "ALFA ROMEO",
+    "model": "4C SPIDER (960_)",
+    "constructionYear": {
+      "start": "10/14",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 191,
+    "brand": "ALFA ROMEO",
+    "model": "75 (162_)",
+    "constructionYear": {
+      "start": "05/85",
+      "end": "12/92"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 192,
+    "brand": "ALFA ROMEO",
+    "model": "75 (162_)",
+    "constructionYear": {
+      "start": "05/85",
+      "end": "12/92"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 193,
+    "brand": "ALFA ROMEO",
+    "model": "75 (162_)",
+    "constructionYear": {
+      "start": "05/85",
+      "end": "12/92"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 194,
+    "brand": "ALFA ROMEO",
+    "model": "75 (162_)",
+    "constructionYear": {
+      "start": "05/85",
+      "end": "12/92"
+    },
+    "typeConception": "Standard",
+    "lightType": "T4W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 195,
+    "brand": "ALFA ROMEO",
+    "model": "75 (162_)",
+    "constructionYear": {
+      "start": "05/85",
+      "end": "12/92"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 196,
+    "brand": "ALFA ROMEO",
+    "model": "75 (162_)",
+    "constructionYear": {
+      "start": "05/85",
+      "end": "12/92"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 197,
+    "brand": "ALFA ROMEO",
+    "model": "75 (162_)",
+    "constructionYear": {
+      "start": "05/85",
+      "end": "12/92"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 198,
+    "brand": "ALFA ROMEO",
+    "model": "75 (162_)",
+    "constructionYear": {
+      "start": "05/85",
+      "end": "12/92"
+    },
+    "typeConception": "Standard",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 199,
+    "brand": "ALFA ROMEO",
+    "model": "75 (162_)",
+    "constructionYear": {
+      "start": "05/85",
+      "end": "12/92"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 200,
+    "brand": "ALFA ROMEO",
+    "model": "75 (162_)",
+    "constructionYear": {
+      "start": "05/85",
+      "end": "12/92"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 201,
+    "brand": "ALFA ROMEO",
+    "model": "BRERA (939_)",
+    "constructionYear": {
+      "start": "01/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 202,
+    "brand": "ALFA ROMEO",
+    "model": "BRERA (939_)",
+    "constructionYear": {
+      "start": "01/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 203,
+    "brand": "ALFA ROMEO",
+    "model": "BRERA (939_)",
+    "constructionYear": {
+      "start": "01/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 204,
+    "brand": "ALFA ROMEO",
+    "model": "BRERA (939_)",
+    "constructionYear": {
+      "start": "01/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 205,
+    "brand": "ALFA ROMEO",
+    "model": "BRERA (939_)",
+    "constructionYear": {
+      "start": "01/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 206,
+    "brand": "ALFA ROMEO",
+    "model": "BRERA (939_)",
+    "constructionYear": {
+      "start": "01/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 207,
+    "brand": "ALFA ROMEO",
+    "model": "BRERA (939_)",
+    "constructionYear": {
+      "start": "01/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 208,
+    "brand": "ALFA ROMEO",
+    "model": "BRERA (939_)",
+    "constructionYear": {
+      "start": "01/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 209,
+    "brand": "ALFA ROMEO",
+    "model": "BRERA (939_)",
+    "constructionYear": {
+      "start": "01/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 210,
+    "brand": "ALFA ROMEO",
+    "model": "BRERA (939_)",
+    "constructionYear": {
+      "start": "01/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 211,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIA (952_)",
+    "constructionYear": {
+      "start": "10/15",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 212,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIA (952_)",
+    "constructionYear": {
+      "start": "10/15",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H15",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 213,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIA (952_)",
+    "constructionYear": {
+      "start": "10/15",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H15",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 214,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIA (952_)",
+    "constructionYear": {
+      "start": "10/15",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H15",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 215,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIA (952_)",
+    "constructionYear": {
+      "start": "10/15",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "**",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 216,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIA (952_)",
+    "constructionYear": {
+      "start": "10/15",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 217,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIA (952_)",
+    "constructionYear": {
+      "start": "10/15",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 218,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIA (952_)",
+    "constructionYear": {
+      "start": "10/15",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 219,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIA (952_)",
+    "constructionYear": {
+      "start": "10/15",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 220,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIA (952_)",
+    "constructionYear": {
+      "start": "10/15",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 221,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA (940_)",
+    "constructionYear": {
+      "start": "04/10",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 222,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA (940_)",
+    "constructionYear": {
+      "start": "04/10",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 223,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA (940_)",
+    "constructionYear": {
+      "start": "04/10",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 224,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA (940_)",
+    "constructionYear": {
+      "start": "04/10",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 225,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA (940_)",
+    "constructionYear": {
+      "start": "04/10",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "**",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 226,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA (940_)",
+    "constructionYear": {
+      "start": "04/10",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "R10W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 227,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA (940_)",
+    "constructionYear": {
+      "start": "04/10",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 228,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA (940_)",
+    "constructionYear": {
+      "start": "04/10",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 229,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA (940_)",
+    "constructionYear": {
+      "start": "04/10",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 230,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA (940_)",
+    "constructionYear": {
+      "start": "04/10",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 231,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA Hatchback Van (940_)",
+    "constructionYear": {
+      "start": "04/11",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 232,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA Hatchback Van (940_)",
+    "constructionYear": {
+      "start": "04/11",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 233,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA Hatchback Van (940_)",
+    "constructionYear": {
+      "start": "04/11",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 234,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA Hatchback Van (940_)",
+    "constructionYear": {
+      "start": "04/11",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 235,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA Hatchback Van (940_)",
+    "constructionYear": {
+      "start": "04/11",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "**",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 236,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA Hatchback Van (940_)",
+    "constructionYear": {
+      "start": "04/11",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "R10W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 237,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA Hatchback Van (940_)",
+    "constructionYear": {
+      "start": "04/11",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 238,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA Hatchback Van (940_)",
+    "constructionYear": {
+      "start": "04/11",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 239,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA Hatchback Van (940_)",
+    "constructionYear": {
+      "start": "04/11",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 240,
+    "brand": "ALFA ROMEO",
+    "model": "GIULIETTA Hatchback Van (940_)",
+    "constructionYear": {
+      "start": "04/11",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 241,
+    "brand": "ALFA ROMEO",
+    "model": "GT (937_)",
+    "constructionYear": {
+      "start": "11/03",
+      "end": "09/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 242,
+    "brand": "ALFA ROMEO",
+    "model": "GT (937_)",
+    "constructionYear": {
+      "start": "11/03",
+      "end": "09/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 243,
+    "brand": "ALFA ROMEO",
+    "model": "GT (937_)",
+    "constructionYear": {
+      "start": "11/03",
+      "end": "09/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 244,
+    "brand": "ALFA ROMEO",
+    "model": "GT (937_)",
+    "constructionYear": {
+      "start": "11/03",
+      "end": "09/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H6W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 245,
+    "brand": "ALFA ROMEO",
+    "model": "GT (937_)",
+    "constructionYear": {
+      "start": "11/03",
+      "end": "09/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 246,
+    "brand": "ALFA ROMEO",
+    "model": "GT (937_)",
+    "constructionYear": {
+      "start": "11/03",
+      "end": "09/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 247,
+    "brand": "ALFA ROMEO",
+    "model": "GT (937_)",
+    "constructionYear": {
+      "start": "11/03",
+      "end": "09/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 248,
+    "brand": "ALFA ROMEO",
+    "model": "GT (937_)",
+    "constructionYear": {
+      "start": "11/03",
+      "end": "09/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 249,
+    "brand": "ALFA ROMEO",
+    "model": "GT (937_)",
+    "constructionYear": {
+      "start": "11/03",
+      "end": "09/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 250,
+    "brand": "ALFA ROMEO",
+    "model": "GT (937_)",
+    "constructionYear": {
+      "start": "11/03",
+      "end": "09/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "C5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 251,
+    "brand": "ALFA ROMEO",
+    "model": "GTV (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "10/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "HB3",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 252,
+    "brand": "ALFA ROMEO",
+    "model": "GTV (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "10/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "HB3",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 253,
+    "brand": "ALFA ROMEO",
+    "model": "GTV (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "10/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 254,
+    "brand": "ALFA ROMEO",
+    "model": "GTV (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "10/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 255,
+    "brand": "ALFA ROMEO",
+    "model": "GTV (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "10/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 256,
+    "brand": "ALFA ROMEO",
+    "model": "GTV (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "10/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 257,
+    "brand": "ALFA ROMEO",
+    "model": "GTV (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "10/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 258,
+    "brand": "ALFA ROMEO",
+    "model": "GTV (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "10/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 259,
+    "brand": "ALFA ROMEO",
+    "model": "GTV (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "10/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 260,
+    "brand": "ALFA ROMEO",
+    "model": "GTV (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "10/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 261,
+    "brand": "ALFA ROMEO",
+    "model": "MITO (955_)",
+    "constructionYear": {
+      "start": "09/08",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 262,
+    "brand": "ALFA ROMEO",
+    "model": "MITO (955_)",
+    "constructionYear": {
+      "start": "09/08",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 263,
+    "brand": "ALFA ROMEO",
+    "model": "MITO (955_)",
+    "constructionYear": {
+      "start": "09/08",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W21",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 264,
+    "brand": "ALFA ROMEO",
+    "model": "MITO (955_)",
+    "constructionYear": {
+      "start": "09/08",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W21",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 265,
+    "brand": "ALFA ROMEO",
+    "model": "MITO (955_)",
+    "constructionYear": {
+      "start": "09/08",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "**",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 266,
+    "brand": "ALFA ROMEO",
+    "model": "MITO (955_)",
+    "constructionYear": {
+      "start": "09/08",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 267,
+    "brand": "ALFA ROMEO",
+    "model": "MITO (955_)",
+    "constructionYear": {
+      "start": "09/08",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 268,
+    "brand": "ALFA ROMEO",
+    "model": "MITO (955_)",
+    "constructionYear": {
+      "start": "09/08",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 269,
+    "brand": "ALFA ROMEO",
+    "model": "MITO (955_)",
+    "constructionYear": {
+      "start": "09/08",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 270,
+    "brand": "ALFA ROMEO",
+    "model": "MITO (955_)",
+    "constructionYear": {
+      "start": "09/08",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 271,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (115_)",
+    "constructionYear": {
+      "start": "03/71",
+      "end": "12/93"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 272,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (115_)",
+    "constructionYear": {
+      "start": "03/71",
+      "end": "12/93"
+    },
+    "typeConception": "Standard",
+    "lightType": "H4",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 273,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (115_)",
+    "constructionYear": {
+      "start": "03/71",
+      "end": "12/93"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 274,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (115_)",
+    "constructionYear": {
+      "start": "03/71",
+      "end": "12/93"
+    },
+    "typeConception": "Standard",
+    "lightType": "R5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 275,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (115_)",
+    "constructionYear": {
+      "start": "03/71",
+      "end": "12/93"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 276,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (115_)",
+    "constructionYear": {
+      "start": "03/71",
+      "end": "12/93"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 277,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (115_)",
+    "constructionYear": {
+      "start": "03/71",
+      "end": "12/93"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 278,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (115_)",
+    "constructionYear": {
+      "start": "03/71",
+      "end": "12/93"
+    },
+    "typeConception": "Standard",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 279,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (115_)",
+    "constructionYear": {
+      "start": "03/71",
+      "end": "12/93"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 280,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (115_)",
+    "constructionYear": {
+      "start": "03/71",
+      "end": "12/93"
+    },
+    "typeConception": "Standard",
+    "lightType": "C5W",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 281,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "04/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "HB3",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 282,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "04/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "HB3",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 283,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "04/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 284,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "04/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 285,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "04/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 286,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "04/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 287,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "04/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 288,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "04/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 289,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "04/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 290,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (916_)",
+    "constructionYear": {
+      "start": "09/94",
+      "end": "04/05"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 291,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 292,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 293,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 294,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 295,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 296,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "PY21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 297,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "P21",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 298,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "W5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 299,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 300,
+    "brand": "ALFA ROMEO",
+    "model": "SPIDER (939_)",
+    "constructionYear": {
+      "start": "03/06",
+      "end": "06/10"
+    },
+    "typeConception": "Halogen",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 301,
+    "brand": "ALFA ROMEO",
+    "model": "STELVIO (949_)",
+    "constructionYear": {
+      "start": "12/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 302,
+    "brand": "ALFA ROMEO",
+    "model": "STELVIO (949_)",
+    "constructionYear": {
+      "start": "12/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H15",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 303,
+    "brand": "ALFA ROMEO",
+    "model": "STELVIO (949_)",
+    "constructionYear": {
+      "start": "12/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H15",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 304,
+    "brand": "ALFA ROMEO",
+    "model": "STELVIO (949_)",
+    "constructionYear": {
+      "start": "12/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "H15",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 305,
+    "brand": "ALFA ROMEO",
+    "model": "STELVIO (949_)",
+    "constructionYear": {
+      "start": "12/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "**",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 306,
+    "brand": "ALFA ROMEO",
+    "model": "STELVIO (949_)",
+    "constructionYear": {
+      "start": "12/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 307,
+    "brand": "ALFA ROMEO",
+    "model": "STELVIO (949_)",
+    "constructionYear": {
+      "start": "12/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 308,
+    "brand": "ALFA ROMEO",
+    "model": "STELVIO (949_)",
+    "constructionYear": {
+      "start": "12/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "LED",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 309,
+    "brand": "ALFA ROMEO",
+    "model": "STELVIO (949_)",
+    "constructionYear": {
+      "start": "12/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "**",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 310,
+    "brand": "ALFA ROMEO",
+    "model": "STELVIO (949_)",
+    "constructionYear": {
+      "start": "12/16",
+      "end": "Present"
+    },
+    "typeConception": "Halogen",
+    "lightType": "**",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 311,
+    "brand": "ALPINA",
+    "model": "B10 (E34)",
+    "constructionYear": {
+      "start": "04/88",
+      "end": "04/95"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 312,
+    "brand": "ALPINA",
+    "model": "B10 (E34)",
+    "constructionYear": {
+      "start": "04/88",
+      "end": "04/95"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 313,
+    "brand": "ALPINA",
+    "model": "B10 (E34)",
+    "constructionYear": {
+      "start": "04/88",
+      "end": "04/95"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 314,
+    "brand": "ALPINA",
+    "model": "B10 (E34)",
+    "constructionYear": {
+      "start": "04/88",
+      "end": "04/95"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 315,
+    "brand": "ALPINA",
+    "model": "B10 (E34)",
+    "constructionYear": {
+      "start": "04/88",
+      "end": "04/95"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 316,
+    "brand": "ALPINA",
+    "model": "B10 (E34)",
+    "constructionYear": {
+      "start": "04/88",
+      "end": "04/95"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 317,
+    "brand": "ALPINA",
+    "model": "B10 (E34)",
+    "constructionYear": {
+      "start": "04/88",
+      "end": "04/95"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 318,
+    "brand": "ALPINA",
+    "model": "B10 (E34)",
+    "constructionYear": {
+      "start": "04/88",
+      "end": "04/95"
+    },
+    "typeConception": "Standard",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 319,
+    "brand": "ALPINA",
+    "model": "B10 (E34)",
+    "constructionYear": {
+      "start": "04/88",
+      "end": "04/95"
+    },
+    "typeConception": "Standard",
+    "lightType": "**",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 320,
+    "brand": "ALPINA",
+    "model": "B10 (E34)",
+    "constructionYear": {
+      "start": "04/88",
+      "end": "04/95"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 321,
+    "brand": "ALPINA",
+    "model": "B10 (E39)",
+    "constructionYear": {
+      "start": "12/96",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 322,
+    "brand": "ALPINA",
+    "model": "B10 (E39)",
+    "constructionYear": {
+      "start": "12/96",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "HB3",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 323,
+    "brand": "ALPINA",
+    "model": "B10 (E39)",
+    "constructionYear": {
+      "start": "12/96",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 324,
+    "brand": "ALPINA",
+    "model": "B10 (E39)",
+    "constructionYear": {
+      "start": "12/96",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 325,
+    "brand": "ALPINA",
+    "model": "B10 (E39)",
+    "constructionYear": {
+      "start": "12/96",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 326,
+    "brand": "ALPINA",
+    "model": "B10 (E39)",
+    "constructionYear": {
+      "start": "12/96",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 327,
+    "brand": "ALPINA",
+    "model": "B10 (E39)",
+    "constructionYear": {
+      "start": "12/96",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 328,
+    "brand": "ALPINA",
+    "model": "B10 (E39)",
+    "constructionYear": {
+      "start": "12/96",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 329,
+    "brand": "ALPINA",
+    "model": "B10 (E39)",
+    "constructionYear": {
+      "start": "12/96",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 330,
+    "brand": "ALPINA",
+    "model": "B10 (E39)",
+    "constructionYear": {
+      "start": "12/96",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 331,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E34)",
+    "constructionYear": {
+      "start": "11/93",
+      "end": "04/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 332,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E34)",
+    "constructionYear": {
+      "start": "11/93",
+      "end": "04/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 333,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E34)",
+    "constructionYear": {
+      "start": "11/93",
+      "end": "04/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 334,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E34)",
+    "constructionYear": {
+      "start": "11/93",
+      "end": "04/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 335,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E34)",
+    "constructionYear": {
+      "start": "11/93",
+      "end": "04/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 336,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E34)",
+    "constructionYear": {
+      "start": "11/93",
+      "end": "04/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 337,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E34)",
+    "constructionYear": {
+      "start": "11/93",
+      "end": "04/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 338,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E34)",
+    "constructionYear": {
+      "start": "11/93",
+      "end": "04/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 339,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E34)",
+    "constructionYear": {
+      "start": "11/93",
+      "end": "04/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "**",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 340,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E34)",
+    "constructionYear": {
+      "start": "11/93",
+      "end": "04/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 341,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E39)",
+    "constructionYear": {
+      "start": "01/97",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "H7",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 342,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E39)",
+    "constructionYear": {
+      "start": "01/97",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "HB3",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 343,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E39)",
+    "constructionYear": {
+      "start": "01/97",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 344,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E39)",
+    "constructionYear": {
+      "start": "01/97",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 345,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E39)",
+    "constructionYear": {
+      "start": "01/97",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 346,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E39)",
+    "constructionYear": {
+      "start": "01/97",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 347,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E39)",
+    "constructionYear": {
+      "start": "01/97",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 348,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E39)",
+    "constructionYear": {
+      "start": "01/97",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 349,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E39)",
+    "constructionYear": {
+      "start": "01/97",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 350,
+    "brand": "ALPINA",
+    "model": "B10 Touring (E39)",
+    "constructionYear": {
+      "start": "01/97",
+      "end": "05/04"
+    },
+    "typeConception": "> 2000/08, Halogen",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 351,
+    "brand": "ALPINA",
+    "model": "B11 (E32)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "02/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 352,
+    "brand": "ALPINA",
+    "model": "B11 (E32)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "02/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 353,
+    "brand": "ALPINA",
+    "model": "B11 (E32)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "02/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 354,
+    "brand": "ALPINA",
+    "model": "B11 (E32)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "02/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 355,
+    "brand": "ALPINA",
+    "model": "B11 (E32)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "02/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 356,
+    "brand": "ALPINA",
+    "model": "B11 (E32)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "02/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 357,
+    "brand": "ALPINA",
+    "model": "B11 (E32)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "02/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 358,
+    "brand": "ALPINA",
+    "model": "B11 (E32)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "02/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 359,
+    "brand": "ALPINA",
+    "model": "B11 (E32)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "02/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411/**",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 360,
+    "brand": "ALPINA",
+    "model": "B11 (E32)",
+    "constructionYear": {
+      "start": "01/87",
+      "end": "02/94"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 361,
+    "brand": "ALPINA",
+    "model": "B12 (E38)",
+    "constructionYear": {
+      "start": "12/95",
+      "end": "07/01"
+    },
+    "typeConception": "> 1998/08, Halogen",
+    "lightType": "H1",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 362,
+    "brand": "ALPINA",
+    "model": "B12 (E38)",
+    "constructionYear": {
+      "start": "12/95",
+      "end": "07/01"
+    },
+    "typeConception": "> 1998/08, Halogen",
+    "lightType": "H7",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 363,
+    "brand": "ALPINA",
+    "model": "B12 (E38)",
+    "constructionYear": {
+      "start": "12/95",
+      "end": "07/01"
+    },
+    "typeConception": "> 1998/08, Halogen",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 364,
+    "brand": "ALPINA",
+    "model": "B12 (E38)",
+    "constructionYear": {
+      "start": "12/95",
+      "end": "07/01"
+    },
+    "typeConception": "> 1998/08, Halogen",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 365,
+    "brand": "ALPINA",
+    "model": "B12 (E38)",
+    "constructionYear": {
+      "start": "12/95",
+      "end": "07/01"
+    },
+    "typeConception": "> 1998/08, Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 366,
+    "brand": "ALPINA",
+    "model": "B12 (E38)",
+    "constructionYear": {
+      "start": "12/95",
+      "end": "07/01"
+    },
+    "typeConception": "> 1998/08, Halogen",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 367,
+    "brand": "ALPINA",
+    "model": "B12 (E38)",
+    "constructionYear": {
+      "start": "12/95",
+      "end": "07/01"
+    },
+    "typeConception": "> 1998/08, Halogen",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 368,
+    "brand": "ALPINA",
+    "model": "B12 (E38)",
+    "constructionYear": {
+      "start": "12/95",
+      "end": "07/01"
+    },
+    "typeConception": "> 1998/08, Halogen",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 369,
+    "brand": "ALPINA",
+    "model": "B12 (E38)",
+    "constructionYear": {
+      "start": "12/95",
+      "end": "07/01"
+    },
+    "typeConception": "> 1998/08, Halogen",
+    "lightType": "6411/**",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 370,
+    "brand": "ALPINA",
+    "model": "B12 (E38)",
+    "constructionYear": {
+      "start": "12/95",
+      "end": "07/01"
+    },
+    "typeConception": "> 1998/08, Halogen",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 371,
+    "brand": "ALPINA",
+    "model": "B12 Coupe (E31)",
+    "constructionYear": {
+      "start": "06/90",
+      "end": "12/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 372,
+    "brand": "ALPINA",
+    "model": "B12 Coupe (E31)",
+    "constructionYear": {
+      "start": "06/90",
+      "end": "12/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 373,
+    "brand": "ALPINA",
+    "model": "B12 Coupe (E31)",
+    "constructionYear": {
+      "start": "06/90",
+      "end": "12/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 374,
+    "brand": "ALPINA",
+    "model": "B12 Coupe (E31)",
+    "constructionYear": {
+      "start": "06/90",
+      "end": "12/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 375,
+    "brand": "ALPINA",
+    "model": "B12 Coupe (E31)",
+    "constructionYear": {
+      "start": "06/90",
+      "end": "12/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 376,
+    "brand": "ALPINA",
+    "model": "B12 Coupe (E31)",
+    "constructionYear": {
+      "start": "06/90",
+      "end": "12/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 377,
+    "brand": "ALPINA",
+    "model": "B12 Coupe (E31)",
+    "constructionYear": {
+      "start": "06/90",
+      "end": "12/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 378,
+    "brand": "ALPINA",
+    "model": "B12 Coupe (E31)",
+    "constructionYear": {
+      "start": "06/90",
+      "end": "12/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 379,
+    "brand": "ALPINA",
+    "model": "B12 Coupe (E31)",
+    "constructionYear": {
+      "start": "06/90",
+      "end": "12/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 380,
+    "brand": "ALPINA",
+    "model": "B12 Coupe (E31)",
+    "constructionYear": {
+      "start": "06/90",
+      "end": "12/96"
+    },
+    "typeConception": "Standard",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 381,
+    "brand": "ALPINA",
+    "model": "B3 (E36)",
+    "constructionYear": {
+      "start": "04/93",
+      "end": "05/99"
+    },
+    "typeConception": "> 1994/08",
+    "lightType": "H1",
+    "position": "Feu de croisement",
+    "category": "feu_de_croisement",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 382,
+    "brand": "ALPINA",
+    "model": "B3 (E36)",
+    "constructionYear": {
+      "start": "04/93",
+      "end": "05/99"
+    },
+    "typeConception": "> 1994/08",
+    "lightType": "H1",
+    "position": "Feu de route",
+    "category": "feu_de_route",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 383,
+    "brand": "ALPINA",
+    "model": "B3 (E36)",
+    "constructionYear": {
+      "start": "04/93",
+      "end": "05/99"
+    },
+    "typeConception": "> 1994/08",
+    "lightType": "-",
+    "position": "Feux antibrouillard",
+    "category": "feu_antibrouillard",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 384,
+    "brand": "ALPINA",
+    "model": "B3 (E36)",
+    "constructionYear": {
+      "start": "04/93",
+      "end": "05/99"
+    },
+    "typeConception": "> 1994/08",
+    "lightType": "W5W",
+    "position": "Feux de route supplémentaires",
+    "category": "feu_route_supplementaire",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 385,
+    "brand": "ALPINA",
+    "model": "B3 (E36)",
+    "constructionYear": {
+      "start": "04/93",
+      "end": "05/99"
+    },
+    "typeConception": "> 1994/08",
+    "lightType": "PY21W",
+    "position": "Clignotant avant voiture",
+    "category": "clignotant_avant",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 386,
+    "brand": "ALPINA",
+    "model": "B3 (E36)",
+    "constructionYear": {
+      "start": "04/93",
+      "end": "05/99"
+    },
+    "typeConception": "> 1994/08",
+    "lightType": "PY21W",
+    "position": "Clignotant arrière voiture",
+    "category": "clignotant_arriere",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 387,
+    "brand": "ALPINA",
+    "model": "B3 (E36)",
+    "constructionYear": {
+      "start": "04/93",
+      "end": "05/99"
+    },
+    "typeConception": "> 1994/08",
+    "lightType": "P21W",
+    "position": "Feux de stop",
+    "category": "feu_stop",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 388,
+    "brand": "ALPINA",
+    "model": "B3 (E36)",
+    "constructionYear": {
+      "start": "04/93",
+      "end": "05/99"
+    },
+    "typeConception": "> 1994/08",
+    "lightType": "C5W",
+    "position": "Feux de plaque d'immatriculation",
+    "category": "feu_plaque",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 389,
+    "brand": "ALPINA",
+    "model": "B3 (E36)",
+    "constructionYear": {
+      "start": "04/93",
+      "end": "05/99"
+    },
+    "typeConception": "> 1994/08",
+    "lightType": "6411/**",
+    "position": "Éclairage intérieur",
+    "category": "eclairage_interieur",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  },
+  {
+    "id": 390,
+    "brand": "ALPINA",
+    "model": "B3 (E36)",
+    "constructionYear": {
+      "start": "04/93",
+      "end": "05/99"
+    },
+    "typeConception": "> 1994/08",
+    "lightType": "6411",
+    "position": "Feu de coffre",
+    "category": "feu_coffre",
+    "partNumber": "",
+    "notes": "",
+    "source": "OSRAM CSV Guide"
+  }
+]

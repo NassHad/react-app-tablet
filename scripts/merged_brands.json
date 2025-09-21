@@ -1,0 +1,492 @@
+[
+  {
+    "id": 1,
+    "name": "ABARTH",
+    "slug": "abarth",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 2,
+    "name": "ALFA ROMEO",
+    "slug": "alfa-romeo",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 3,
+    "name": "ALPINA",
+    "slug": "alpina",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 4,
+    "name": "ALPINE",
+    "slug": "alpine",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 5,
+    "name": "AUDI",
+    "slug": "audi",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 6,
+    "name": "AUTOBIANCHI",
+    "slug": "autobianchi",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 7,
+    "name": "BMW",
+    "slug": "bmw",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 8,
+    "name": "CADILLAC",
+    "slug": "cadillac",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 9,
+    "name": "CHEVROLET",
+    "slug": "chevrolet",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 10,
+    "name": "CHRYSLER",
+    "slug": "chrysler",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 11,
+    "name": "CITROËN",
+    "slug": "citroën",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 12,
+    "name": "CITRO�N",
+    "slug": "citron",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 13,
+    "name": "CUPRA",
+    "slug": "cupra",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 14,
+    "name": "DACIA",
+    "slug": "dacia",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 15,
+    "name": "DAEWOO",
+    "slug": "daewoo",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 16,
+    "name": "DAIHATSU",
+    "slug": "daihatsu",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 17,
+    "name": "DAIMLER",
+    "slug": "daimler",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 18,
+    "name": "DS",
+    "slug": "ds",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 19,
+    "name": "FIAT",
+    "slug": "fiat",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 20,
+    "name": "FORD",
+    "slug": "ford",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 21,
+    "name": "FORD USA",
+    "slug": "ford-usa",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 22,
+    "name": "HONDA",
+    "slug": "honda",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 23,
+    "name": "HYUNDAI",
+    "slug": "hyundai",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 24,
+    "name": "INFINITI",
+    "slug": "infiniti",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 25,
+    "name": "IRMSCHER",
+    "slug": "irmscher",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 26,
+    "name": "ISUZU",
+    "slug": "isuzu",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 27,
+    "name": "IVECO",
+    "slug": "iveco",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 28,
+    "name": "JAGUAR",
+    "slug": "jaguar",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 29,
+    "name": "JEEP",
+    "slug": "jeep",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 30,
+    "name": "KIA",
+    "slug": "kia",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 31,
+    "name": "LADA",
+    "slug": "lada",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 32,
+    "name": "LANCIA",
+    "slug": "lancia",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 33,
+    "name": "LAND ROVER",
+    "slug": "land-rover",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 34,
+    "name": "LEXUS",
+    "slug": "lexus",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 35,
+    "name": "LINCOLN",
+    "slug": "lincoln",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 36,
+    "name": "LOTUS",
+    "slug": "lotus",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 37,
+    "name": "MAN",
+    "slug": "man",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 38,
+    "name": "MASERATI",
+    "slug": "maserati",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 39,
+    "name": "MAYBACH",
+    "slug": "maybach",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 40,
+    "name": "MAZDA",
+    "slug": "mazda",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 41,
+    "name": "MERCEDES",
+    "slug": "mercedes",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 42,
+    "name": "MERCEDES-BENZ",
+    "slug": "mercedes-benz",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 43,
+    "name": "MG",
+    "slug": "mg",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 44,
+    "name": "MINI",
+    "slug": "mini",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 45,
+    "name": "MITSUBISHI",
+    "slug": "mitsubishi",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 46,
+    "name": "NISSAN",
+    "slug": "nissan",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 47,
+    "name": "OPEL",
+    "slug": "opel",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 48,
+    "name": "PEUGEOT",
+    "slug": "peugeot",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 49,
+    "name": "PLYMOUTH",
+    "slug": "plymouth",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 50,
+    "name": "PONTIAC",
+    "slug": "pontiac",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 51,
+    "name": "PORSCHE",
+    "slug": "porsche",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 52,
+    "name": "PROTON",
+    "slug": "proton",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 53,
+    "name": "PUCH",
+    "slug": "puch",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 54,
+    "name": "RENAULT",
+    "slug": "renault",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 55,
+    "name": "RENAULT TRUCKS",
+    "slug": "renault-trucks",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 56,
+    "name": "ROLLS ROYCE",
+    "slug": "rolls-royce",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 57,
+    "name": "ROVER",
+    "slug": "rover",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 58,
+    "name": "SAAB",
+    "slug": "saab",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 59,
+    "name": "SEAT",
+    "slug": "seat",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 60,
+    "name": "SKODA",
+    "slug": "skoda",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 61,
+    "name": "SMART",
+    "slug": "smart",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 62,
+    "name": "SSANGYONG",
+    "slug": "ssangyong",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 63,
+    "name": "SUBARU",
+    "slug": "subaru",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 64,
+    "name": "SUZUKI",
+    "slug": "suzuki",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 65,
+    "name": "TAZZARI",
+    "slug": "tazzari",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 66,
+    "name": "TOYOTA",
+    "slug": "toyota",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 67,
+    "name": "UAZ",
+    "slug": "uaz",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 68,
+    "name": "VAUXHALL",
+    "slug": "vauxhall",
+    "isActive": true,
+    "source": "osram"
+  },
+  {
+    "id": 69,
+    "name": "VOLKSWAGEN",
+    "slug": "volkswagen",
+    "isActive": true,
+    "source": "existing"
+  },
+  {
+    "id": 70,
+    "name": "VOLVO",
+    "slug": "volvo",
+    "isActive": true,
+    "source": "existing"
+  }
+]

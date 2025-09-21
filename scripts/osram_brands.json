@@ -1,0 +1,392 @@
+[
+  {
+    "id": 1,
+    "name": "ABARTH",
+    "slug": "abarth",
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "name": "ALFA ROMEO",
+    "slug": "alfa-romeo",
+    "isActive": true
+  },
+  {
+    "id": 3,
+    "name": "ALPINA",
+    "slug": "alpina",
+    "isActive": true
+  },
+  {
+    "id": 4,
+    "name": "ALPINE",
+    "slug": "alpine",
+    "isActive": true
+  },
+  {
+    "id": 5,
+    "name": "AUDI",
+    "slug": "audi",
+    "isActive": true
+  },
+  {
+    "id": 6,
+    "name": "AUTOBIANCHI",
+    "slug": "autobianchi",
+    "isActive": true
+  },
+  {
+    "id": 7,
+    "name": "BMW",
+    "slug": "bmw",
+    "isActive": true
+  },
+  {
+    "id": 8,
+    "name": "CADILLAC",
+    "slug": "cadillac",
+    "isActive": true
+  },
+  {
+    "id": 9,
+    "name": "CHEVROLET",
+    "slug": "chevrolet",
+    "isActive": true
+  },
+  {
+    "id": 10,
+    "name": "CHRYSLER",
+    "slug": "chrysler",
+    "isActive": true
+  },
+  {
+    "id": 11,
+    "name": "CITRO�N",
+    "slug": "citron",
+    "isActive": true
+  },
+  {
+    "id": 12,
+    "name": "CUPRA",
+    "slug": "cupra",
+    "isActive": true
+  },
+  {
+    "id": 13,
+    "name": "DACIA",
+    "slug": "dacia",
+    "isActive": true
+  },
+  {
+    "id": 14,
+    "name": "DAEWOO",
+    "slug": "daewoo",
+    "isActive": true
+  },
+  {
+    "id": 15,
+    "name": "DAIHATSU",
+    "slug": "daihatsu",
+    "isActive": true
+  },
+  {
+    "id": 16,
+    "name": "DAIMLER",
+    "slug": "daimler",
+    "isActive": true
+  },
+  {
+    "id": 17,
+    "name": "FORD USA",
+    "slug": "ford-usa",
+    "isActive": true
+  },
+  {
+    "id": 18,
+    "name": "HONDA",
+    "slug": "honda",
+    "isActive": true
+  },
+  {
+    "id": 19,
+    "name": "HYUNDAI",
+    "slug": "hyundai",
+    "isActive": true
+  },
+  {
+    "id": 20,
+    "name": "INFINITI",
+    "slug": "infiniti",
+    "isActive": true
+  },
+  {
+    "id": 21,
+    "name": "IRMSCHER",
+    "slug": "irmscher",
+    "isActive": true
+  },
+  {
+    "id": 22,
+    "name": "ISUZU",
+    "slug": "isuzu",
+    "isActive": true
+  },
+  {
+    "id": 23,
+    "name": "IVECO",
+    "slug": "iveco",
+    "isActive": true
+  },
+  {
+    "id": 24,
+    "name": "JAGUAR",
+    "slug": "jaguar",
+    "isActive": true
+  },
+  {
+    "id": 25,
+    "name": "JEEP",
+    "slug": "jeep",
+    "isActive": true
+  },
+  {
+    "id": 26,
+    "name": "KIA",
+    "slug": "kia",
+    "isActive": true
+  },
+  {
+    "id": 27,
+    "name": "LADA",
+    "slug": "lada",
+    "isActive": true
+  },
+  {
+    "id": 28,
+    "name": "LANCIA",
+    "slug": "lancia",
+    "isActive": true
+  },
+  {
+    "id": 29,
+    "name": "LAND ROVER",
+    "slug": "land-rover",
+    "isActive": true
+  },
+  {
+    "id": 30,
+    "name": "LEXUS",
+    "slug": "lexus",
+    "isActive": true
+  },
+  {
+    "id": 31,
+    "name": "LINCOLN",
+    "slug": "lincoln",
+    "isActive": true
+  },
+  {
+    "id": 32,
+    "name": "LOTUS",
+    "slug": "lotus",
+    "isActive": true
+  },
+  {
+    "id": 33,
+    "name": "MAN",
+    "slug": "man",
+    "isActive": true
+  },
+  {
+    "id": 34,
+    "name": "MASERATI",
+    "slug": "maserati",
+    "isActive": true
+  },
+  {
+    "id": 35,
+    "name": "MAYBACH",
+    "slug": "maybach",
+    "isActive": true
+  },
+  {
+    "id": 36,
+    "name": "MAZDA",
+    "slug": "mazda",
+    "isActive": true
+  },
+  {
+    "id": 37,
+    "name": "MERCEDES",
+    "slug": "mercedes",
+    "isActive": true
+  },
+  {
+    "id": 38,
+    "name": "MG",
+    "slug": "mg",
+    "isActive": true
+  },
+  {
+    "id": 39,
+    "name": "MINI",
+    "slug": "mini",
+    "isActive": true
+  },
+  {
+    "id": 40,
+    "name": "MITSUBISHI",
+    "slug": "mitsubishi",
+    "isActive": true
+  },
+  {
+    "id": 41,
+    "name": "NISSAN",
+    "slug": "nissan",
+    "isActive": true
+  },
+  {
+    "id": 42,
+    "name": "OPEL",
+    "slug": "opel",
+    "isActive": true
+  },
+  {
+    "id": 43,
+    "name": "PEUGEOT",
+    "slug": "peugeot",
+    "isActive": true
+  },
+  {
+    "id": 44,
+    "name": "PLYMOUTH",
+    "slug": "plymouth",
+    "isActive": true
+  },
+  {
+    "id": 45,
+    "name": "PONTIAC",
+    "slug": "pontiac",
+    "isActive": true
+  },
+  {
+    "id": 46,
+    "name": "PORSCHE",
+    "slug": "porsche",
+    "isActive": true
+  },
+  {
+    "id": 47,
+    "name": "PROTON",
+    "slug": "proton",
+    "isActive": true
+  },
+  {
+    "id": 48,
+    "name": "PUCH",
+    "slug": "puch",
+    "isActive": true
+  },
+  {
+    "id": 49,
+    "name": "RENAULT",
+    "slug": "renault",
+    "isActive": true
+  },
+  {
+    "id": 50,
+    "name": "RENAULT TRUCKS",
+    "slug": "renault-trucks",
+    "isActive": true
+  },
+  {
+    "id": 51,
+    "name": "ROLLS ROYCE",
+    "slug": "rolls-royce",
+    "isActive": true
+  },
+  {
+    "id": 52,
+    "name": "ROVER",
+    "slug": "rover",
+    "isActive": true
+  },
+  {
+    "id": 53,
+    "name": "SAAB",
+    "slug": "saab",
+    "isActive": true
+  },
+  {
+    "id": 54,
+    "name": "SEAT",
+    "slug": "seat",
+    "isActive": true
+  },
+  {
+    "id": 55,
+    "name": "SKODA",
+    "slug": "skoda",
+    "isActive": true
+  },
+  {
+    "id": 56,
+    "name": "SMART",
+    "slug": "smart",
+    "isActive": true
+  },
+  {
+    "id": 57,
+    "name": "SSANGYONG",
+    "slug": "ssangyong",
+    "isActive": true
+  },
+  {
+    "id": 58,
+    "name": "SUBARU",
+    "slug": "subaru",
+    "isActive": true
+  },
+  {
+    "id": 59,
+    "name": "SUZUKI",
+    "slug": "suzuki",
+    "isActive": true
+  },
+  {
+    "id": 60,
+    "name": "TAZZARI",
+    "slug": "tazzari",
+    "isActive": true
+  },
+  {
+    "id": 61,
+    "name": "TOYOTA",
+    "slug": "toyota",
+    "isActive": true
+  },
+  {
+    "id": 62,
+    "name": "UAZ",
+    "slug": "uaz",
+    "isActive": true
+  },
+  {
+    "id": 63,
+    "name": "VAUXHALL",
+    "slug": "vauxhall",
+    "isActive": true
+  },
+  {
+    "id": 64,
+    "name": "VOLKSWAGEN",
+    "slug": "volkswagen",
+    "isActive": true
+  },
+  {
+    "id": 65,
+    "name": "VOLVO",
+    "slug": "volvo",
+    "isActive": true
+  }
+]

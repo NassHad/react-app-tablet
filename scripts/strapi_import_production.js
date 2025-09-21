@@ -89,16 +89,16 @@ const createModelsAndLightData = async (brandIds, positionIds) => {
   console.log('📝 Step 3: Creating models and light data...');
   
   // You would load your actual data here
-  // const osramData = JSON.parse(fs.readFileSync('osram_bulbs_parsed.json', 'utf8'));
+  const osramData = JSON.parse(fs.readFileSync('osram_bulbs_parsed.json', 'utf8'));
   
   // For demonstration, using sample data
-  const osramData = [
-    {
-      "brand": "ABARTH", "model": "124 Spider", "constructionYear": { "start": "03/16", "end": "Present" },
-      "typeConception": "Halogen", "lightType": "H11", "position": "Feu de croisement", "category": "feu_croisement",
-      "partNumber": "", "notes": "", "source": "OSRAM CSV Guide"
-    }
-  ];
+  // const osramData = [
+  //   {
+  //     "brand": "ABARTH", "model": "124 Spider", "constructionYear": { "start": "03/16", "end": "Present" },
+  //     "typeConception": "Halogen", "lightType": "H11", "position": "Feu de croisement", "category": "feu_croisement",
+  //     "partNumber": "", "notes": "", "source": "OSRAM CSV Guide"
+  //   }
+  // ];
   
   const modelIds = {};
   let totalProcessed = 0;
@@ -196,7 +196,7 @@ const runImport = async () => {
 };
 
 // Uncomment the line below to run the import
-// runImport();
+runImport();
 
 console.log('📋 Instructions:');
 console.log('1. Uncomment the last line: runImport();');

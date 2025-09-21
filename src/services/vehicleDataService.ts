@@ -163,7 +163,7 @@ class VehicleDataService {
         } catch (error) {
           console.error('❌ Failed to load brands from Strapi, falling back to local data:', error);
           // Fallback to local data
-          const localBrands = getBrands();
+          const localBrands = getLocalBrands();
           console.log('📦 Using local brands as fallback:', localBrands.length);
           return localBrands;
         }
@@ -210,7 +210,7 @@ class VehicleDataService {
         } catch (error) {
           console.error('❌ Failed to load models from Strapi, falling back to local data:', error);
           // Fallback to local data
-          const localModels = getModelsByBrand(brandId);
+          const localModels = getLocalModelsByBrand(brandId);
           console.log('📦 Using local models as fallback:', localModels.length);
           return localModels;
         }

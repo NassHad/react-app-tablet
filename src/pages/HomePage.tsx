@@ -35,9 +35,8 @@ const HomePage = ({ onVehicleTypeSelect }: HomePageProps) => {
 
   const handleVehicleTypeSelect = (vehicleType: VehicleType) => {
     onVehicleTypeSelect(vehicleType);
-    // Navigate based on flow configuration - skip vehicle-type screen
-    const nextRoute = FLOW_CONFIG.SELECT_VEHICLE_FIRST ? '/vehicle' : '/category';
-    navigate(nextRoute);
+    // Always navigate to vehicle selection first in the enhanced flow
+    navigate('/vehicle-selection');
   };
 
   const motoAnimation = useClickAnimation({

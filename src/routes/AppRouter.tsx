@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import HomePage from '../pages/HomePage';
 import CategoryScreen from '../pages/CategoryScreen';
@@ -7,6 +7,8 @@ import QuestionsScreen from '../pages/QuestionsScreen';
 import ProductsScreen from '../pages/ProductsScreen';
 import ProductDetailsScreen from '../pages/ProductDetailsScreen';
 import NoProductsAvailableScreen from '../pages/NoProductsAvailableScreen';
+import CategorySpecificForm from '../components/CategorySpecificForm';
+import VehicleSelectionForm from '../components/VehicleSelectionForm';
 import Layout from '../components/Layout';
 import PageTransition from '../components/PageTransition';
 import type { UserSelection, VehicleType } from '../types';
@@ -22,6 +24,7 @@ const AppRouterContent = () => {
   const [navigationDirection, setNavigationDirection] = useState<'forward' | 'backward'>('forward');
   const [previousPath, setPreviousPath] = useState<string>('');
   const location = useLocation();
+  const navigate = useNavigate();
 
   const updateUserSelection = (updates: Partial<UserSelection>) => {
     console.log('updateUserSelection called with:', updates);
@@ -81,6 +84,28 @@ const AppRouterContent = () => {
           element={<Navigate to="/" replace />} 
         />
 
+        {/* Sélection du véhicule (marque, modèle, date) */}
+        <Route 
+          path="/vehicle-selection" 
+          element={
+            userSelection?.vehicleType ? (
+              <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
+                <PageTransition direction={navigationDirection}>
+                  <VehicleSelectionForm 
+                    vehicleType={userSelection.vehicleType}
+                    onComplete={() => {
+                      // Navigate to category selection after vehicle is complete
+                      navigate('/category');
+                    }}
+                  />
+                </PageTransition>
+              </Layout>
+            ) : (
+              <Navigate to="/" replace />
+            )
+          } 
+        />
+
           {FLOW_CONFIG.SELECT_VEHICLE_FIRST ? (
             // New flow: Vehicle first, then category
             <>
@@ -128,7 +153,7 @@ const AppRouterContent = () => {
               />
             </>
           ) : (
-            // Original flow: Category first, then vehicle
+            // Enhanced flow: Vehicle type -> Vehicle details -> Category -> Category-specific
             <>
               {/* Sélection de la catégorie de produit */}
               <Route 
@@ -173,6 +198,36 @@ const AppRouterContent = () => {
               />
             </>
           )}
+
+          {/* Formulaire spécifique à la catégorie */}
+          <Route 
+            path="/category-specific" 
+            element={
+              <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
+                <PageTransition direction={navigationDirection}>
+                  <CategorySpecificForm 
+                    onComplete={(finalVehicleData) => {
+                      // Create final vehicle object
+                      const vehicle = {
+                        id: Date.now(),
+                        type: finalVehicleData.vehicleType!,
+                        brand: finalVehicleData.brand,
+                        model: finalVehicleData.model,
+                        dateCirculation: finalVehicleData.dateCirculation,
+                        motorisation: finalVehicleData.motorisation,
+                        position: finalVehicleData.position,
+                        viscosity: finalVehicleData.viscosity,
+                      };
+                      
+                      updateUserSelection({ vehicle });
+                      // Navigate to products
+                      navigate('/products');
+                    }}
+                  />
+                </PageTransition>
+              </Layout>
+            } 
+          />
 
           {/* Questions spécifiques */}
           <Route 

@@ -6,7 +6,7 @@ const DB_NAME = 'react-app-db.db';
 const DB_VERSION = 1;
 
 // Configuration flag to easily switch between SQLite and mock data
-export const USE_SQLITE = true; // Set to false to use mock data
+export const USE_SQLITE = false; // Set to false to use mock data
 
 // Mock data for all categories
 const MOCK_CATEGORIES: ProductCategory[] = [
@@ -541,7 +541,7 @@ private async ensureJeepSQLiteLoaded(): Promise<void> {
         
         const script = document.createElement('script');
         script.type = 'module';
-        script.src = 'https://cdn.jsdelivr.net/npm/jeep-sqlite@2.8.0/dist/jeep-sqlite.esm.js';
+        script.src = 'https://cdn.jsdelivr.net/npm/jeep-sqlite@2.8.0/dist/esm/jeep-sqlite.entry.js';
         
         const scriptLoaded = new Promise<boolean>((resolve, reject) => {
           script.onload = () => resolve(true);

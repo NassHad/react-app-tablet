@@ -9,6 +9,8 @@ export interface Vehicle {
   year?: number;
   dateCirculation?: string;
   motorisation?: string;
+  position?: string;
+  viscosity?: string;
 }
 
 export type VehicleType = 'car' | 'truck' | 'motorcycle';

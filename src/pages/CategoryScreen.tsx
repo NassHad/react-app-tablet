@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import type { ProductCategory, Vehicle } from '../types';
 import { dataService } from '../services/dataService';
 import { useClickAnimation } from '../hooks/useClickAnimation';
-import { FLOW_CONFIG } from '../config/flowConfig';
-import { checkProductAvailability } from '../utils/productAvailability';
+import { useSimpleVehicleContext } from '../contexts/SimpleVehicleContext';
 
 // Import category images
 import batteryImage from '../assets/img/categories/battery.png';
@@ -19,8 +18,9 @@ interface CategoryScreenProps {
   onCategorySelect: (category: ProductCategory) => void;
 }
 
-const CategoryScreen = ({ vehicleType: _vehicleType, vehicle, onCategorySelect }: CategoryScreenProps) => {
+const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
   const navigate = useNavigate();
+  const { vehicleData, setCategory } = useSimpleVehicleContext();
   const [categories, setCategories] = useState<ProductCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -99,24 +99,31 @@ const CategoryScreen = ({ vehicleType: _vehicleType, vehicle, onCategorySelect }
 
   const handleCategorySelect = async (category: ProductCategory) => {
     console.log('Category selected:', category);
+    console.log('Vehicle data from context:', vehicleData);
     onCategorySelect(category);
     
-    if (FLOW_CONFIG.SELECT_VEHICLE_FIRST && vehicle) {
-      // New flow: vehicle is already selected, check availability and navigate accordingly
-      const productsAvailable = await checkProductAvailability(vehicle, category);
-      
-      if (!productsAvailable) {
-        // Redirect to no products available page
-        navigate('/no-products-available', { 
-          state: { vehicle, category } 
-        });
+    // Store category in context
+    setCategory(category);
+    
+    // Check if we have vehicle data from context
+    if (vehicleData.vehicleType && vehicleData.brand && vehicleData.model) {
+      // We have vehicle data, check if category needs specific form
+      if (category.slug === 'batteries' || category.name.toLowerCase().includes('batterie')) {
+        // Navigate to battery-specific form
+        navigate('/category-specific');
+      } else if (category.slug === 'lights' || category.name.toLowerCase().includes('éclairage')) {
+        // Navigate to lights-specific form
+        navigate('/category-specific');
+      } else if (category.slug === 'oil' || category.name.toLowerCase().includes('huile')) {
+        // Navigate to oil-specific form
+        navigate('/category-specific');
       } else {
-        // Continue with normal flow - all categories go to questions first
-        navigate('/questions');
+        // Navigate directly to products for other categories
+        navigate('/products');
       }
     } else {
-      // Original flow: navigate to vehicle selection
-      navigate('/vehicle');
+      // No vehicle data, navigate to vehicle selection
+      navigate('/vehicle-selection');
     }
   };
 

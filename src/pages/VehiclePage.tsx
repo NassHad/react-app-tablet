@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import type { VehicleType, ProductCategory, Vehicle } from '../types';
 import { useClickAnimation } from '../hooks/useClickAnimation';
-import { checkProductAvailability } from '../utils/productAvailability';
-import { FLOW_CONFIG } from '../config/flowConfig';
 import { getVehicleTypeDisplayName } from '../utils';
 import { getStrapiVehicleTypeId } from '../config/vehicleTypeMapping';
 import { 
@@ -18,6 +16,7 @@ import {
 } from '../utils/vehicleData';
 import { motorisationService } from '../services/motorisationService';
 import BatteryVehicleForm from '../components/BatteryVehicleForm';
+import { useSimpleVehicleContext } from '../contexts/SimpleVehicleContext';
 
 interface VehiclePageProps {
   vehicleType: VehicleType;
@@ -27,6 +26,7 @@ interface VehiclePageProps {
 
 const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProps) => {
   const navigate = useNavigate();
+  const { updateVehicleData } = useSimpleVehicleContext();
   
   // Check if this is a battery category
   const isBatteryCategory = category.slug === 'batteries' || category.name.toLowerCase().includes('batterie');
@@ -214,31 +214,19 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
             dateCirculation: selectedDateRange,
           };
           
+          // Store vehicle data in context
+          updateVehicleData({
+            vehicleType,
+            brand: brand.name,
+            model: model.name,
+            dateCirculation: selectedDateRange,
+            motorisation: selectedMotorisation,
+          });
+          
           onVehicleSelect(vehicle);
           
-          // In the new flow, we navigate to category selection first
-          // In the original flow, we check availability and navigate directly
-          if (FLOW_CONFIG.SELECT_VEHICLE_FIRST) {
-            // New flow: navigate to category selection
-            navigate('/category');
-          } else {
-            // Original flow: check availability and navigate accordingly
-            const productsAvailable = await checkProductAvailability(vehicle, category);
-            
-            if (!productsAvailable) {
-              // Redirect to no products available page
-              navigate('/no-products-available', { 
-                state: { vehicle, category } 
-              });
-            } else {
-              // Continue with normal flow
-              if (category.slug === 'batteries') {
-                navigate('/products');
-              } else {
-                navigate('/questions');
-              }
-            }
-          }
+          // Always navigate to category selection in the enhanced flow
+          navigate('/category');
         }
       } catch (err) {
         console.error('Failed to get brand/model data:', err);

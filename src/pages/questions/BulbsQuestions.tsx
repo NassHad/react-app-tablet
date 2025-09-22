@@ -1,5 +1,5 @@
 import type { Vehicle, ProductCategory } from '../../types';
-import carBulbsPage from '../../assets/img/car-bulbs-page.jpg';
+import carBulbsPage from '../../assets/img/car-bulbs-page.JPG';
 import { useState } from 'react';
 import { HelpPageRouter } from '../help';
 // import { useNavigate } from 'react-router-dom';

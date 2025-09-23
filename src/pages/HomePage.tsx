@@ -7,7 +7,7 @@ import { databaseService } from '../db/database';
 import { useEffect } from 'react';
 
 // Import vehicle images
-import motoImage from '../assets/img/homepage/moto.png';
+import motoImage from '../assets/img/homepage/Moto.png';
 import carImage from '../assets/img/homepage/car.png';
 import vanImage from '../assets/img/homepage/van.png';
 

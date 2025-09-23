@@ -12,7 +12,7 @@ function App() {
         <AppRouter />
         <DatabaseDebugger />
         <StrapiStatus />
-        <FlowDemo />
+        {/* <FlowDemo /> */}
       </Router>
     </SimpleVehicleProvider>
   );

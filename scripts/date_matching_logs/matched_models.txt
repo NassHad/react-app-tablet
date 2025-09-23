@@ -1,0 +1,6600 @@
+MATCHED MODELS WITH DATES:
+==================================================
+
+1. abarth - GRANDE PUNTO
+   Model Slug: grande-punto
+   Dates: 07/08 - Present
+   Match Reason: Partial match: abarth-punto
+
+2. abarth - PUNTO (199_)
+   Model Slug: punto-199
+   Dates: 07/08 - Present
+   Match Reason: Partial match: abarth-punto
+
+3. alpina - B10 (E34)
+   Model Slug: b10-e34
+   Dates: 04/88 - 04/95
+   Match Reason: Partial match: alpina-b10
+
+4. alpina - B10 (E39)
+   Model Slug: b10-e39
+   Dates: 04/88 - 04/95
+   Match Reason: Partial match: alpina-b10
+
+5. alpina - B10 Touring (E34)
+   Model Slug: b10-touring-e34
+   Dates: 04/88 - 04/95
+   Match Reason: Partial match: alpina-b10
+
+6. alpina - B10 Touring (E39)
+   Model Slug: b10-touring-e39
+   Dates: 04/88 - 04/95
+   Match Reason: Partial match: alpina-b10
+
+7. alpina - B11 (E32)
+   Model Slug: b11-e32
+   Dates: 01/87 - 02/94
+   Match Reason: Partial match: alpina-b11
+
+8. alpina - B12 (E38)
+   Model Slug: b12-e38
+   Dates: 12/95 - 07/01
+   Match Reason: Partial match: alpina-b12
+
+9. alpina - B12 Coupe (E31)
+   Model Slug: b12-coupe-e31
+   Dates: 12/95 - 07/01
+   Match Reason: Partial match: alpina-b12
+
+10. alpina - D10 (E39)
+   Model Slug: d10-e39
+   Dates: 04/00 - 10/03
+   Match Reason: Partial match: alpina-d10
+
+11. alpina - D10 Estate (E39)
+   Model Slug: d10-estate-e39
+   Dates: 04/00 - 10/03
+   Match Reason: Partial match: alpina-d10
+
+12. alpina - RLE Roadster (Z1)
+   Model Slug: rle-roadster-z1
+   Dates: 06/02 - 10/03
+   Match Reason: Partial match: alpina-roadster
+
+13. alpina - ROADSTER (Z8)
+   Model Slug: roadster-z8
+   Dates: 06/02 - 10/03
+   Match Reason: Partial match: alpina-roadster
+
+14. alpina - ROADSTER S (E85)
+   Model Slug: roadster-s-e85
+   Dates: 06/02 - 10/03
+   Match Reason: Partial match: alpina-roadster
+
+15. alpina - XD3 (F25)
+   Model Slug: xd3-f25
+   Dates: 03/13 - Present
+   Match Reason: Partial match: alpina-xd3
+
+16. alpina - XD3 (G01)
+   Model Slug: xd3-g01
+   Dates: 03/13 - Present
+   Match Reason: Partial match: alpina-xd3
+
+17. alpina - XD4 (G02)
+   Model Slug: xd4-g02
+   Dates: 07/18 - Present
+   Match Reason: Partial match: alpina-xd4
+
+18. audi - A1 City Carver (GBH)
+   Model Slug: a1-city-carver-gbh
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+19. audi - A3 Convertible (8P7)
+   Model Slug: a3-convertible-8p7
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+20. audi - A3 Convertible (8V7, 8VE)
+   Model Slug: a3-convertible-8v7-8ve
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+21. audi - A3 Limousine (8VS, 8VM)
+   Model Slug: a3-limousine-8vs-8vm
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+22. audi - A3 Limousine (8YS)
+   Model Slug: a3-limousine-8ys
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+23. audi - A4 (8EC, B7)
+   Model Slug: a4-8ec-b7
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+24. audi - A4 Avant (8ED, B7)
+   Model Slug: a4-avant-8ed-b7
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+25. audi - A4 B6 (8E2)
+   Model Slug: a4-b6-8e2
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+26. audi - A4 B6 Avant (8E5)
+   Model Slug: a4-b6-avant-8e5
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+27. audi - A4 B6 Convertible (8H7)
+   Model Slug: a4-b6-convertible-8h7
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+28. audi - A4 B7 Convertible (8HE)
+   Model Slug: a4-b7-convertible-8he
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+29. audi - A5 Convertible (8F7)
+   Model Slug: a5-convertible-8f7
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+30. audi - A5 Convertible (F57, F5E)
+   Model Slug: a5-convertible-f57-f5e
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+31. audi - A8 (4E2, 4E8)
+   Model Slug: a8-4e2-4e8
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+32. audi - CABRIOLET B3 (8G7)
+   Model Slug: cabriolet-b3-8g7
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+33. audi - COUPE B3 (89, 8B3)
+   Model Slug: coupe-b3-89-8b3
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+34. audi - E-TRON (GEN)
+   Model Slug: e-tron-gen
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+35. audi - E-TRON GT Saloon (F83)
+   Model Slug: e-tron-gt-saloon-f83
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+36. audi - E-TRON Sportback (GEA)
+   Model Slug: e-tron-sportback-gea
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+37. audi - R8 Spyder (427, 429)
+   Model Slug: r8-spyder-427-429
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+38. audi - R8 Spyder (4S9, 4SR)
+   Model Slug: r8-spyder-4s9-4sr
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+39. audi - TT Roadster (8J9)
+   Model Slug: tt-roadster-8j9
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+40. audi - TT Roadster (8N9)
+   Model Slug: tt-roadster-8n9
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+41. audi - TT Roadster (FV9, FVR)
+   Model Slug: tt-roadster-fv9-fvr
+   Dates: 09/18 - Present
+   Match Reason: Partial match: audi-e-tron
+
+42. autobianchi - Y10
+   Model Slug: y10
+   Dates: 03/85 - 10/95
+
+43. bmw - iX3 (G08)
+   Model Slug: ix3-g08
+   Dates: 09/20 - Present
+   Match Reason: Partial match: bmw-ix3
+
+44. cadillac - CTS
+   Model Slug: cts
+   Dates: 03/02 - 12/07
+
+45. cadillac - ESCALADE
+   Model Slug: escalade
+   Dates: 10/98 - 10/06
+
+46. cadillac - SEVILLE
+   Model Slug: seville
+   Dates: 09/97 - 09/04
+
+47. cadillac - XLR
+   Model Slug: xlr
+   Dates: 09/03 - 09/09
+
+48. chevrolet - ALERO
+   Model Slug: alero
+   Dates: 03/99 - 09/04
+
+49. chevrolet - AVEO / KALOS Hatchback (T250, T255)
+   Model Slug: aveo-kalos-hatchback-t250-t255
+   Dates: 03/05 - Present
+   Match Reason: Partial match: chevrolet-kalos
+
+50. chevrolet - AVEO / KALOS Saloon (T250, T255)
+   Model Slug: aveo-kalos-saloon-t250-t255
+   Dates: 03/05 - Present
+   Match Reason: Partial match: chevrolet-kalos
+
+51. chevrolet - BOLT
+   Model Slug: bolt
+   Dates: 08/16 - Present
+
+52. chevrolet - CAMARO
+   Model Slug: camaro
+   Dates: 12/92 - 12/02
+
+53. chevrolet - CAMARO Convertible
+   Model Slug: camaro-convertible
+   Dates: 12/92 - 12/02
+   Match Reason: Partial match: chevrolet-camaro
+
+54. chevrolet - CAPTIVA (C100, C140)
+   Model Slug: captiva-c100-c140
+   Dates: 06/06 - Present
+   Match Reason: Partial match: chevrolet-captiva
+
+55. chevrolet - CORVETTE
+   Model Slug: corvette
+   Dates: 01/97 - 12/04
+
+56. chevrolet - CORVETTE (C6)
+   Model Slug: corvette-c6
+   Dates: 01/97 - 12/04
+   Match Reason: Partial match: chevrolet-corvette
+
+57. chevrolet - CORVETTE (C7)
+   Model Slug: corvette-c7
+   Dates: 01/97 - 12/04
+   Match Reason: Partial match: chevrolet-corvette
+
+58. chevrolet - CORVETTE Convertible
+   Model Slug: corvette-convertible
+   Dates: 01/97 - 12/04
+   Match Reason: Partial match: chevrolet-corvette
+
+59. chevrolet - CORVETTE Convertible (C7)
+   Model Slug: corvette-convertible-c7
+   Dates: 01/97 - 12/04
+   Match Reason: Partial match: chevrolet-corvette
+
+60. chevrolet - CRUZE (J300)
+   Model Slug: cruze-j300
+   Dates: 05/09 - Present
+   Match Reason: Partial match: chevrolet-cruze
+
+61. chevrolet - CRUZE Hatchback (J305)
+   Model Slug: cruze-hatchback-j305
+   Dates: 05/09 - Present
+   Match Reason: Partial match: chevrolet-cruze
+
+62. chevrolet - CRUZE Station Wagon (J308)
+   Model Slug: cruze-station-wagon-j308
+   Dates: 05/09 - Present
+   Match Reason: Partial match: chevrolet-cruze
+
+63. chevrolet - EPICA (KL1_)
+   Model Slug: epica-kl1
+   Dates: 01/05 - Present
+   Match Reason: Partial match: chevrolet-epica
+
+64. chevrolet - EVANDA
+   Model Slug: evanda
+   Dates: 03/05 - Present
+
+65. chevrolet - HHR
+   Model Slug: hhr
+   Dates: 09/05 - 12/11
+
+66. chevrolet - KALOS
+   Model Slug: kalos
+   Dates: 03/05 - Present
+
+67. chevrolet - KALOS Saloon
+   Model Slug: kalos-saloon
+   Dates: 03/05 - Present
+   Match Reason: Partial match: chevrolet-kalos
+
+68. chevrolet - LACETTI (J200)
+   Model Slug: lacetti-j200
+   Dates: 03/03 - Present
+   Match Reason: Partial match: chevrolet-lacetti
+
+69. chevrolet - MALIBU
+   Model Slug: malibu
+   Dates: 09/15 - Present
+
+70. chevrolet - MALIBU (V300)
+   Model Slug: malibu-v300
+   Dates: 09/15 - Present
+   Match Reason: Partial match: chevrolet-malibu
+
+71. chevrolet - MATIZ (M200, M250)
+   Model Slug: matiz-m200-m250
+   Dates: 03/05 - Present
+   Match Reason: Partial match: chevrolet-matiz
+
+72. chevrolet - NIVA (2123)
+   Model Slug: niva-2123
+   Dates: 09/02 - Present
+   Match Reason: Partial match: chevrolet-niva
+
+73. chevrolet - ORLANDO (J309)
+   Model Slug: orlando-j309
+   Dates: 12/10 - Present
+   Match Reason: Partial match: chevrolet-orlando
+
+74. chevrolet - SPARK (M300)
+   Model Slug: spark-m300
+   Dates: 12/09 - Present
+   Match Reason: Partial match: chevrolet-spark
+
+75. chevrolet - TAHOE (GMT400)
+   Model Slug: tahoe-gmt400
+   Dates: 10/94 - 12/99
+   Match Reason: Partial match: chevrolet-tahoe
+
+76. chevrolet - TRAILBLAZER (KC_)
+   Model Slug: trailblazer-kc
+   Dates: 09/01 - 12/09
+   Match Reason: Partial match: chevrolet-trailblazer
+
+77. chevrolet - TRAX
+   Model Slug: trax
+   Dates: 12/12 - Present
+
+78. chevrolet - VIVANT
+   Model Slug: vivant
+   Dates: 05/00 - Present
+
+79. chevrolet - VOLT
+   Model Slug: volt
+   Dates: 04/11 - Present
+
+80. chrysler - 300C (LX, LE)
+   Model Slug: 300c-lx-le
+   Dates: 09/04 - Present
+   Match Reason: Partial match: chrysler-300c
+
+81. chrysler - 300C (LX)
+   Model Slug: 300c-lx
+   Dates: 09/04 - Present
+   Match Reason: Partial match: chrysler-300c
+
+82. chrysler - 300M (LR)
+   Model Slug: 300m-lr
+   Dates: 07/98 - 09/04
+   Match Reason: Partial match: chrysler-300m
+
+83. chrysler - CROSSFIRE
+   Model Slug: crossfire
+   Dates: 07/03 - 12/08
+
+84. chrysler - CROSSFIRE Roadster
+   Model Slug: crossfire-roadster
+   Dates: 07/03 - 12/08
+   Match Reason: Partial match: chrysler-crossfire
+
+85. chrysler - NEON (PL)
+   Model Slug: neon-pl
+   Dates: 05/94 - 09/00
+   Match Reason: Partial match: chrysler-neon
+
+86. chrysler - NEON II
+   Model Slug: neon-ii
+   Dates: 05/94 - 09/00
+   Match Reason: Partial match: chrysler-neon
+
+87. chrysler - SEBRING (JR)
+   Model Slug: sebring-jr
+   Dates: 09/00 - 06/07
+   Match Reason: Partial match: chrysler-sebring
+
+88. chrysler - SEBRING (JS)
+   Model Slug: sebring-js
+   Dates: 09/00 - 06/07
+   Match Reason: Partial match: chrysler-sebring
+
+89. chrysler - SEBRING Convertible (JR)
+   Model Slug: sebring-convertible-jr
+   Dates: 09/00 - 06/07
+   Match Reason: Partial match: chrysler-sebring
+
+90. chrysler - SEBRING Convertible (JS)
+   Model Slug: sebring-convertible-js
+   Dates: 09/00 - 06/07
+   Match Reason: Partial match: chrysler-sebring
+
+91. chrysler - STRATUS (JA)
+   Model Slug: stratus-ja
+   Dates: 09/94 - 04/01
+   Match Reason: Partial match: chrysler-stratus
+
+92. chrysler - STRATUS Convertible (JX)
+   Model Slug: stratus-convertible-jx
+   Dates: 09/94 - 04/01
+   Match Reason: Partial match: chrysler-stratus
+
+93. chrysler - VISION
+   Model Slug: vision
+   Dates: 09/93 - 12/97
+
+94. cupra - ATECA (KH7, KHP)
+   Model Slug: ateca-kh7-khp
+   Dates: 09/18 - Present
+   Match Reason: Partial match: cupra-ateca
+
+95. cupra - BORN (K11)
+   Model Slug: born-k11
+   Dates: 08/21 - Present
+   Match Reason: Partial match: cupra-born
+
+96. cupra - FORMENTOR (KM7)
+   Model Slug: formentor-km7
+   Dates: 07/20 - Present
+   Match Reason: Partial match: cupra-formentor
+
+97. cupra - LEON (KL1)
+   Model Slug: leon-kl1
+   Dates: 10/20 - Present
+   Match Reason: Partial match: cupra-leon
+
+98. cupra - LEON Sportstourer (KL8)
+   Model Slug: leon-sportstourer-kl8
+   Dates: 10/20 - Present
+   Match Reason: Partial match: cupra-leon
+
+99. dacia - DUSTER (HM_)
+   Model Slug: duster-hm
+   Dates: 10/17 - Present
+   Match Reason: Partial match: dacia-duster
+
+100. dacia - DUSTER (HS_)
+   Model Slug: duster-hs
+   Dates: 10/17 - Present
+   Match Reason: Partial match: dacia-duster
+
+101. dacia - DUSTER SUV Van
+   Model Slug: duster-suv-van
+   Dates: 10/17 - Present
+   Match Reason: Partial match: dacia-duster
+
+102. dacia - JOGGER
+   Model Slug: jogger
+   Dates: 03/22 - Present
+
+103. dacia - LODGY (JS_)
+   Model Slug: lodgy-js
+   Dates: 03/12 - Present
+   Match Reason: Partial match: dacia-lodgy
+
+104. dacia - LOGAN (LS_)
+   Model Slug: logan-ls
+   Dates: 09/04 - Present
+   Match Reason: Partial match: dacia-logan
+
+105. dacia - LOGAN EXPRESS (FS_)
+   Model Slug: logan-express-fs
+   Dates: 09/04 - Present
+   Match Reason: Partial match: dacia-logan
+
+106. dacia - LOGAN II
+   Model Slug: logan-ii
+   Dates: 09/04 - Present
+   Match Reason: Partial match: dacia-logan
+
+107. dacia - LOGAN MCV (KS_)
+   Model Slug: logan-mcv-ks
+   Dates: 09/04 - Present
+   Match Reason: Partial match: dacia-logan
+
+108. dacia - LOGAN MCV II
+   Model Slug: logan-mcv-ii
+   Dates: 09/04 - Present
+   Match Reason: Partial match: dacia-logan
+
+109. dacia - LOGAN Pickup (US_)
+   Model Slug: logan-pickup-us
+   Dates: 09/04 - Present
+   Match Reason: Partial match: dacia-logan
+
+110. dacia - SANDERO
+   Model Slug: sandero
+   Dates: 06/08 - Present
+
+111. dacia - SANDERO II
+   Model Slug: sandero-ii
+   Dates: 06/08 - Present
+   Match Reason: Partial match: dacia-sandero
+
+112. dacia - SANDERO III
+   Model Slug: sandero-iii
+   Dates: 06/08 - Present
+   Match Reason: Partial match: dacia-sandero
+
+113. dacia - SOLENZA (B41_)
+   Model Slug: solenza-b41
+   Dates: 02/03 - Present
+   Match Reason: Partial match: dacia-solenza
+
+114. dacia - SPRING
+   Model Slug: spring
+   Dates: 10/20 - Present
+
+115. daewoo - AVEO
+   Model Slug: aveo
+   Dates: 11/02 - 04/05
+
+116. daewoo - ESPERO (KLEJ)
+   Model Slug: espero-klej
+   Dates: 10/91 - 09/99
+   Match Reason: Partial match: daewoo-espero
+
+117. daewoo - EVANDA (KLAL)
+   Model Slug: evanda-klal
+   Dates: 08/02 - Present
+   Match Reason: Partial match: daewoo-evanda
+
+118. daewoo - KALOS (KLAS)
+   Model Slug: kalos-klas
+   Dates: 09/02 - Present
+   Match Reason: Partial match: daewoo-kalos
+
+119. daewoo - KALOS Saloon (KLAS)
+   Model Slug: kalos-saloon-klas
+   Dates: 09/02 - Present
+   Match Reason: Partial match: daewoo-kalos
+
+120. daewoo - KORANDO (KJ)
+   Model Slug: korando-kj
+   Dates: 01/99 - Present
+   Match Reason: Partial match: daewoo-korando
+
+121. daewoo - KORANDO Cabrio (KJ)
+   Model Slug: korando-cabrio-kj
+   Dates: 01/99 - Present
+   Match Reason: Partial match: daewoo-korando
+
+122. daewoo - LANOS (KLAT)
+   Model Slug: lanos-klat
+   Dates: 05/97 - Present
+   Match Reason: Partial match: daewoo-lanos
+
+123. daewoo - LANOS Saloon (KLAT)
+   Model Slug: lanos-saloon-klat
+   Dates: 05/97 - Present
+   Match Reason: Partial match: daewoo-lanos
+
+124. daewoo - LEGANZA (KLAV)
+   Model Slug: leganza-klav
+   Dates: 06/97 - 04/04
+   Match Reason: Partial match: daewoo-leganza
+
+125. daewoo - MATIZ (M100, M150)
+   Model Slug: matiz-m100-m150
+   Dates: 09/98 - Present
+   Match Reason: Partial match: daewoo-matiz
+
+126. daewoo - MUSSO (FJ)
+   Model Slug: musso-fj
+   Dates: 07/98 - Present
+   Match Reason: Partial match: daewoo-musso
+
+127. daewoo - NEXIA
+   Model Slug: nexia
+   Dates: 02/95 - 08/97
+
+128. daewoo - NEXIA Saloon
+   Model Slug: nexia-saloon
+   Dates: 02/95 - 08/97
+   Match Reason: Partial match: daewoo-nexia
+
+129. daewoo - NUBIRA (J100)
+   Model Slug: nubira-j100
+   Dates: 04/97 - Present
+   Match Reason: Partial match: daewoo-nubira
+
+130. daewoo - NUBIRA Saloon (J100)
+   Model Slug: nubira-saloon-j100
+   Dates: 04/97 - Present
+   Match Reason: Partial match: daewoo-nubira
+
+131. daewoo - NUBIRA Saloon (J200)
+   Model Slug: nubira-saloon-j200
+   Dates: 04/97 - Present
+   Match Reason: Partial match: daewoo-nubira
+
+132. daewoo - NUBIRA Wagon (J100)
+   Model Slug: nubira-wagon-j100
+   Dates: 04/97 - Present
+   Match Reason: Partial match: daewoo-nubira
+
+133. daewoo - REZZO (U100)
+   Model Slug: rezzo-u100
+   Dates: 06/00 - Present
+   Match Reason: Partial match: daewoo-rezzo
+
+134. daihatsu - BEGO
+   Model Slug: bego
+   Dates: 11/05 - Present
+
+135. daihatsu - COPEN (L880_, L881_)
+   Model Slug: copen-l880-l881
+   Dates: 03/02 - 09/12
+   Match Reason: Partial match: daihatsu-copen
+
+136. daihatsu - GRAN MOVE (G3)
+   Model Slug: gran-move-g3
+   Dates: 06/94 - 09/02
+   Match Reason: Partial match: daihatsu-move
+
+137. daihatsu - MATERIA (M4_)
+   Model Slug: materia-m4
+   Dates: 10/06 - Present
+   Match Reason: Partial match: daihatsu-materia
+
+138. daihatsu - MOVE (L9_)
+   Model Slug: move-l9
+   Dates: 06/94 - 09/02
+   Match Reason: Partial match: daihatsu-move
+
+139. daihatsu - SIRION (M1)
+   Model Slug: sirion-m1
+   Dates: 04/98 - 04/05
+   Match Reason: Partial match: daihatsu-sirion
+
+140. daihatsu - SIRION (M3_)
+   Model Slug: sirion-m3
+   Dates: 04/98 - 04/05
+   Match Reason: Partial match: daihatsu-sirion
+
+141. daihatsu - TERIOS (J1_)
+   Model Slug: terios-j1
+   Dates: 05/97 - 10/06
+   Match Reason: Partial match: daihatsu-terios
+
+142. daihatsu - TERIOS (J2_)
+   Model Slug: terios-j2
+   Dates: 05/97 - 10/06
+   Match Reason: Partial match: daihatsu-terios
+
+143. daihatsu - TREVIS
+   Model Slug: trevis
+   Dates: 06/06 - Present
+
+144. daihatsu - YRV (M2)
+   Model Slug: yrv-m2
+   Dates: 02/01 - Present
+   Match Reason: Partial match: daihatsu-yrv
+
+145. daimler - _, FS_ _, FZ_ _, FC_ _)"
+   Model Slug: -fs-fz-fc-
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+146. daimler - 124 Spider (348_)
+   Model Slug: 124-spider-348
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+147. daimler - 500 C (312_)
+   Model Slug: 500-c-312
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+148. daimler - 500e (332_)
+   Model Slug: 500e-332
+   Dates: 10/20 - Present
+   Match Reason: Partial match: daimler-500e
+
+149. daimler - 500e Convertible (332_)
+   Model Slug: 500e-convertible-332
+   Dates: 10/20 - Present
+   Match Reason: Partial match: daimler-500e
+
+150. daimler - 500L (351_, 352_)
+   Model Slug: 500l-351-352
+   Dates: 09/12 - Present
+   Match Reason: Partial match: daimler-500l
+
+151. daimler - 500X (334_)
+   Model Slug: 500x-334
+   Dates: 09/14 - Present
+   Match Reason: Partial match: daimler-500x
+
+152. daimler - AVENGER
+   Model Slug: avenger
+   Dates: 06/07 - Present
+
+153. daimler - B-MAX (JK)
+   Model Slug: b-max-jk
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+154. daimler - B-MAX Van (JK)
+   Model Slug: b-max-van-jk
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+155. daimler - BARCHETTA (183_)
+   Model Slug: barchetta-183
+   Dates: 03/95 - 05/05
+   Match Reason: Partial match: daimler-barchetta
+
+156. daimler - Box Body/MPV"
+   Model Slug: box-bodympv
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+157. daimler - BRAVA (182_)
+   Model Slug: brava-182
+   Dates: 10/95 - 06/03
+   Match Reason: Partial match: daimler-brava
+
+158. daimler - BRAVO I (182_)
+   Model Slug: bravo-i-182
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+159. daimler - BRAVO II (198_)
+   Model Slug: bravo-ii-198
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+160. daimler - C-MAX (DM2)
+   Model Slug: c-max-dm2
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+161. daimler - C-MAX II (DXA/CB7, DXA/ CEU)
+   Model Slug: c-max-ii-dxacb7-dxa-ceu
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+162. daimler - C-MAX II Van
+   Model Slug: c-max-ii-van
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+163. daimler - CALIBER
+   Model Slug: caliber
+   Dates: 06/06 - Present
+
+164. daimler - CARAVAN (RG_)
+   Model Slug: caravan-rg
+   Dates: 02/00 - 12/07
+   Match Reason: Partial match: daimler-caravan
+
+165. daimler - CHARGER
+   Model Slug: charger
+   Dates: 01/11 - Present
+
+166. daimler - CINQUECENTO (170_)
+   Model Slug: cinquecento-170
+   Dates: 07/91 - 07/99
+   Match Reason: Partial match: daimler-cinquecento
+
+167. daimler - COUGAR (EC_)
+   Model Slug: cougar-ec
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+168. daimler - COUPE (175_)
+   Model Slug: coupe-175
+   Dates: 11/93 - 08/00
+   Match Reason: Partial match: daimler-coupe
+
+169. daimler - CROMA (194_)
+   Model Slug: croma-194
+   Dates: 06/05 - Present
+   Match Reason: Partial match: daimler-croma
+
+170. daimler - DART
+   Model Slug: dart
+   Dates: 04/12 - Present
+
+171. daimler - DOBLO Box Body/MPV (223_)
+   Model Slug: doblo-box-bodympv-223
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+172. daimler - DOBLO Cargo (263_)
+   Model Slug: doblo-cargo-263
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+173. daimler - DOBLO MPV (119_, 223_)
+   Model Slug: doblo-mpv-119-223
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+174. daimler - DOBLO MPV (263_)
+   Model Slug: doblo-mpv-263
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+175. daimler - DOBLO Platform/Chassis (263_)
+   Model Slug: doblo-platformchassis-263
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+176. daimler - DS 3 (SA_)
+   Model Slug: ds-3-sa
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+177. daimler - DS 3 Convertible (SB_)
+   Model Slug: ds-3-convertible-sb
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+178. daimler - DS 4 / DS 4 CROSSBACK (NX_)
+   Model Slug: ds-4-ds-4-crossback-nx
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+179. daimler - DS 4 II (F_, FB_, F3_)
+   Model Slug: ds-4-ii-f-fb-f3
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+180. daimler - DS 5 (KF_)
+   Model Slug: ds-5-kf
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+181. daimler - DS 7 Crossback (J4_, JR_, JC_)
+   Model Slug: ds-7-crossback-j4-jr-jc
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+182. daimler - DS 9 (X2_)
+   Model Slug: ds-9-x2
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+183. daimler - DUCATO Bus (230_)
+   Model Slug: ducato-bus-230
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+184. daimler - DUCATO Bus (244_)
+   Model Slug: ducato-bus-244
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+185. daimler - DUCATO Bus (250_)
+   Model Slug: ducato-bus-250
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+186. daimler - DUCATO Panorama
+   Model Slug: ducato-panorama
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+187. daimler - DUCATO Platform/Chassis
+   Model Slug: ducato-platformchassis
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+188. daimler - DUCATO Van (230_)
+   Model Slug: ducato-van-230
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+189. daimler - DUCATO Van (244_)
+   Model Slug: ducato-van-244
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+190. daimler - DUCATO Van (250_)
+   Model Slug: ducato-van-250
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+191. daimler - DUCATO Van (290_)
+   Model Slug: ducato-van-290
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+192. daimler - DURANGO (WD)
+   Model Slug: durango-wd
+   Dates: 12/10 - Present
+   Match Reason: Partial match: daimler-durango
+
+193. daimler - ECOSPORT
+   Model Slug: ecosport
+   Dates: 09/11 - Present
+
+194. daimler - ESCORT CLASSIC (AAL, ABL)
+   Model Slug: escort-classic-aal-abl
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+195. daimler - ESCORT CLASSIC Turnier (ANL)
+   Model Slug: escort-classic-turnier-anl
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+196. daimler - ESCORT IV (GAF, AWF, ABFT)
+   Model Slug: escort-iv-gaf-awf-abft
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+197. daimler - ESCORT V (AAL, ABL)
+   Model Slug: escort-v-aal-abl
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+198. daimler - ESCORT V (GAL)
+   Model Slug: escort-v-gal
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+199. daimler - ESCORT V Convertible (ALL)
+   Model Slug: escort-v-convertible-all
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+200. daimler - ESCORT V Express (AVF)
+   Model Slug: escort-v-express-avf
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+201. daimler - ESCORT V Saloon (AFL)
+   Model Slug: escort-v-saloon-afl
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+202. daimler - ESCORT V Turnier (ANL)
+   Model Slug: escort-v-turnier-anl
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+203. daimler - ESCORT V Turnier (GAL)
+   Model Slug: escort-v-turnier-gal
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+204. daimler - ESCORT VI (GAL, AAL, ABL)
+   Model Slug: escort-vi-gal-aal-abl
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+205. daimler - ESCORT VI Convertible (ALL)
+   Model Slug: escort-vi-convertible-all
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+206. daimler - ESCORT VI Estate Van (AVL)
+   Model Slug: escort-vi-estate-van-avl
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+207. daimler - ESCORT VI Saloon (GAL, AFL)
+   Model Slug: escort-vi-saloon-gal-afl
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+208. daimler - ESCORT VI Turnier (GAL, ANL)
+   Model Slug: escort-vi-turnier-gal-anl
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+209. daimler - FIESTA Box Body/MPV (F3L, F5L)
+   Model Slug: fiesta-box-bodympv-f3l-f5l
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+210. daimler - FIESTA Box Body/MPV (J5_, J3_)
+   Model Slug: fiesta-box-bodympv-j5-j3
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+211. daimler - FIESTA Hatchback Van (JV_)
+   Model Slug: fiesta-hatchback-van-jv
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+212. daimler - FIESTA III (GFJ)
+   Model Slug: fiesta-iii-gfj
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+213. daimler - FIESTA IV (JA_, JB_)
+   Model Slug: fiesta-iv-ja-jb
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+214. daimler - FIESTA V (JH_, JD_)
+   Model Slug: fiesta-v-jh-jd
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+215. daimler - FIESTA V Van
+   Model Slug: fiesta-v-van
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+216. daimler - FIESTA VI (CB1, CCN)
+   Model Slug: fiesta-vi-cb1-ccn
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+217. daimler - FIESTA VI Van
+   Model Slug: fiesta-vi-van
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+218. daimler - FIESTA VII (HJ, HF)
+   Model Slug: fiesta-vii-hj-hf
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+219. daimler - FIESTA VII Van
+   Model Slug: fiesta-vii-van
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+220. daimler - FIORINO (147_)
+   Model Slug: fiorino-147
+   Dates: 01/80 - 10/93
+   Match Reason: Partial match: daimler-fiorino
+
+221. daimler - FIORINO Box Body/MPV
+   Model Slug: fiorino-box-bodympv
+   Dates: 01/80 - 10/93
+   Match Reason: Partial match: daimler-fiorino
+
+222. daimler - FIORINO MPV (225_)
+   Model Slug: fiorino-mpv-225
+   Dates: 01/80 - 10/93
+   Match Reason: Partial match: daimler-fiorino
+
+223. daimler - FIORINO Pick up (146_)
+   Model Slug: fiorino-pick-up-146
+   Dates: 01/80 - 10/93
+   Match Reason: Partial match: daimler-fiorino
+
+224. daimler - FOCUS C-MAX (DM2)
+   Model Slug: focus-c-max-dm2
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+225. daimler - FOCUS I (DAW, DBW)
+   Model Slug: focus-i-daw-dbw
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+226. daimler - FOCUS I Saloon (DFW)
+   Model Slug: focus-i-saloon-dfw
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+227. daimler - FOCUS I Turnier (DNW)
+   Model Slug: focus-i-turnier-dnw
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+228. daimler - FOCUS II (DA_, HCP, DP)
+   Model Slug: focus-ii-da-hcp-dp
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+229. daimler - FOCUS II Convertible
+   Model Slug: focus-ii-convertible
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+230. daimler - FOCUS II Estate Van
+   Model Slug: focus-ii-estate-van
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+231. daimler - FOCUS II Saloon (DB_, FCH, DH)
+   Model Slug: focus-ii-saloon-db-fch-dh
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+232. daimler - FOCUS II Turnier (DA_, FFS, DS)
+   Model Slug: focus-ii-turnier-da-ffs-ds
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+233. daimler - FOCUS III
+   Model Slug: focus-iii
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+234. daimler - FOCUS III Estate Van
+   Model Slug: focus-iii-estate-van
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+235. daimler - FOCUS III Hatchback Van
+   Model Slug: focus-iii-hatchback-van
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+236. daimler - FOCUS III Saloon
+   Model Slug: focus-iii-saloon
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+237. daimler - FOCUS III Turnier
+   Model Slug: focus-iii-turnier
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+238. daimler - FOCUS IV (HN)
+   Model Slug: focus-iv-hn
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+239. daimler - FOCUS IV Saloon (HM)
+   Model Slug: focus-iv-saloon-hm
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+240. daimler - FOCUS IV Turnier (HP)
+   Model Slug: focus-iv-turnier-hp
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+241. daimler - FREEMONT (345_)
+   Model Slug: freemont-345
+   Dates: 08/11 - Present
+   Match Reason: Partial match: daimler-freemont
+
+242. daimler - FULLBACK Pickup (502_,
+   Model Slug: fullback-pickup-502
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+243. daimler - FUSION (JU_)
+   Model Slug: fusion-ju
+   Dates: 08/02 - 12/12
+   Match Reason: Partial match: daimler-fusion
+
+244. daimler - GALAXY (CK)
+   Model Slug: galaxy-ck
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+245. daimler - GALAXY (WM, WA6)
+   Model Slug: galaxy-wm-wa6
+   Dates: 01/15 - Present
+   Match Reason: Partial match: daimler-galaxy
+
+246. daimler - GALAXY I (WGR)
+   Model Slug: galaxy-i-wgr
+   Dates: 01/15 - Present
+   Match Reason: Partial match: daimler-galaxy
+
+247. daimler - GALAXY MK III VAN (CK)
+   Model Slug: galaxy-mk-iii-van-ck
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+248. daimler - GRAND C-MAX (DXA/CB7, DXA/CEU)
+   Model Slug: grand-c-max-dxacb7-dxaceu
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+249. daimler - GRAND C-MAX Van
+   Model Slug: grand-c-max-van
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+250. daimler - GRANDE PUNTO (199_)
+   Model Slug: grande-punto-199
+   Dates: 09/93 - 09/99
+   Match Reason: Partial match: daimler-punto
+
+251. daimler - IDEA (350_)
+   Model Slug: idea-350
+   Dates: 12/03 - Present
+   Match Reason: Partial match: daimler-idea
+
+252. daimler - JOURNEY
+   Model Slug: journey
+   Dates: 06/08 - Present
+
+253. daimler - KA (RB_)
+   Model Slug: ka-rb
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+254. daimler - KA Van (RB)
+   Model Slug: ka-van-rb
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+255. daimler - KA+ III Saloon (TK, FK)
+   Model Slug: ka-iii-saloon-tk-fk
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+256. daimler - LINEA (323_, 110_)
+   Model Slug: linea-323-110
+   Dates: 06/07 - Present
+   Match Reason: Partial match: daimler-linea
+
+257. daimler - MAREA (185_)
+   Model Slug: marea-185
+   Dates: 09/96 - 12/07
+   Match Reason: Partial match: daimler-marea
+
+258. daimler - MAREA Weekend (185_)
+   Model Slug: marea-weekend-185
+   Dates: 09/96 - 12/07
+   Match Reason: Partial match: daimler-marea
+
+259. daimler - MAVERICK
+   Model Slug: maverick
+   Dates: 02/01 - Present
+
+260. daimler - MAVERICK (UDS, UNS)
+   Model Slug: maverick-uds-uns
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+261. daimler - MONDEO I (GBP)
+   Model Slug: mondeo-i-gbp
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+262. daimler - MONDEO I Saloon (GBP)
+   Model Slug: mondeo-i-saloon-gbp
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+263. daimler - MONDEO I Turnier (BNP)
+   Model Slug: mondeo-i-turnier-bnp
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+264. daimler - MONDEO II (BAP)
+   Model Slug: mondeo-ii-bap
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+265. daimler - MONDEO II Saloon (BFP)
+   Model Slug: mondeo-ii-saloon-bfp
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+266. daimler - MONDEO II Turnier (BNP)
+   Model Slug: mondeo-ii-turnier-bnp
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+267. daimler - MONDEO III (B5Y)
+   Model Slug: mondeo-iii-b5y
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+268. daimler - MONDEO III Saloon (B4Y)
+   Model Slug: mondeo-iii-saloon-b4y
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+269. daimler - MONDEO III Turnier (BWY)
+   Model Slug: mondeo-iii-turnier-bwy
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+270. daimler - MONDEO IV (BA7)
+   Model Slug: mondeo-iv-ba7
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+271. daimler - MONDEO IV Saloon (BA7)
+   Model Slug: mondeo-iv-saloon-ba7
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+272. daimler - MONDEO IV Turnier (BA7)
+   Model Slug: mondeo-iv-turnier-ba7
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+273. daimler - MONDEO V Hatchback (CE)
+   Model Slug: mondeo-v-hatchback-ce
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+274. daimler - MONDEO V Saloon (CD)
+   Model Slug: mondeo-v-saloon-cd
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+275. daimler - MONDEO V Turnier (CF)
+   Model Slug: mondeo-v-turnier-cf
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+276. daimler - MULTIPLA (186_)
+   Model Slug: multipla-186
+   Dates: 04/99 - 06/10
+   Match Reason: Partial match: daimler-multipla
+
+277. daimler - NECT Kombi"
+   Model Slug: nect-kombi
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+278. daimler - NEON
+   Model Slug: neon
+   Dates: 05/94 - 08/99
+
+279. daimler - NEON II
+   Model Slug: neon-ii
+   Dates: 05/94 - 08/99
+   Match Reason: Partial match: daimler-neon
+
+280. daimler - NITRO
+   Model Slug: nitro
+   Dates: 09/06 - 12/12
+
+281. daimler - PALIO (178_, 171_)
+   Model Slug: palio-178-171
+   Dates: 04/96 - Present
+   Match Reason: Partial match: daimler-palio
+
+282. daimler - PALIO Weekend (178_,
+   Model Slug: palio-weekend-178
+   Dates: 04/96 - Present
+   Match Reason: Partial match: daimler-palio
+
+283. daimler - PANDA (141_)
+   Model Slug: panda-141
+   Dates: 03/80 - 07/04
+   Match Reason: Partial match: daimler-panda
+
+284. daimler - PANDA (169_)
+   Model Slug: panda-169
+   Dates: 03/80 - 07/04
+   Match Reason: Partial match: daimler-panda
+
+285. daimler - PANDA (312_, 319_)
+   Model Slug: panda-312-319
+   Dates: 03/80 - 07/04
+   Match Reason: Partial match: daimler-panda
+
+286. daimler - PANDA Hatchback Van
+   Model Slug: panda-hatchback-van
+   Dates: 03/80 - 07/04
+   Match Reason: Partial match: daimler-panda
+
+287. daimler - PANDA VAN (312_, 519_)
+   Model Slug: panda-van-312-519
+   Dates: 03/80 - 07/04
+   Match Reason: Partial match: daimler-panda
+
+288. daimler - PUMA (EC_)
+   Model Slug: puma-ec
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+289. daimler - PUMA (J2K, CF7)
+   Model Slug: puma-j2k-cf7
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+290. daimler - PUNTO (176_)
+   Model Slug: punto-176
+   Dates: 09/93 - 09/99
+   Match Reason: Partial match: daimler-punto
+
+291. daimler - PUNTO (188_)
+   Model Slug: punto-188
+   Dates: 09/93 - 09/99
+   Match Reason: Partial match: daimler-punto
+
+292. daimler - PUNTO (199_)
+   Model Slug: punto-199
+   Dates: 09/93 - 09/99
+   Match Reason: Partial match: daimler-punto
+
+293. daimler - PUNTO Convertible
+   Model Slug: punto-convertible
+   Dates: 09/93 - 09/99
+   Match Reason: Partial match: daimler-punto
+
+294. daimler - PUNTO EVO (199_)
+   Model Slug: punto-evo-199
+   Dates: 09/93 - 09/99
+   Match Reason: Partial match: daimler-punto
+
+295. daimler - PUNTO Hatchback Van
+   Model Slug: punto-hatchback-van
+   Dates: 09/93 - 09/99
+   Match Reason: Partial match: daimler-punto
+
+296. daimler - PUNTO Van (176_)
+   Model Slug: punto-van-176
+   Dates: 09/93 - 09/99
+   Match Reason: Partial match: daimler-punto
+
+297. daimler - QUBO (225_)
+   Model Slug: qubo-225
+   Dates: 02/08 - Present
+   Match Reason: Partial match: daimler-qubo
+
+298. daimler - RANGER (ER, EQ, R_)
+   Model Slug: ranger-er-eq-r
+   Dates: 03/98 - 06/06
+   Match Reason: Partial match: daimler-ranger
+
+299. daimler - RANGER (ET)
+   Model Slug: ranger-et
+   Dates: 03/98 - 06/06
+   Match Reason: Partial match: daimler-ranger
+
+300. daimler - RANGER (TKE)
+   Model Slug: ranger-tke
+   Dates: 03/98 - 06/06
+   Match Reason: Partial match: daimler-ranger
+
+301. daimler - S-MAX (CJ)
+   Model Slug: s-max-cj
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+302. daimler - S-MAX (WS, WA6)
+   Model Slug: s-max-ws-wa6
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+303. daimler - SCORPIO I (GAE, GGE)
+   Model Slug: scorpio-i-gae-gge
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+304. daimler - SCORPIO I Saloon (GGE)
+   Model Slug: scorpio-i-saloon-gge
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+305. daimler - SCORPIO I Turnier (GGE)
+   Model Slug: scorpio-i-turnier-gge
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+306. daimler - SCORPIO II (GFR, GGR)
+   Model Slug: scorpio-ii-gfr-ggr
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+307. daimler - SCORPIO II Turnier (GNR, GGR)
+   Model Slug: scorpio-ii-turnier-gnr-ggr
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+308. daimler - SCUDO Bus (220_)
+   Model Slug: scudo-bus-220
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+309. daimler - SCUDO Bus (270_, 272_)
+   Model Slug: scudo-bus-270-272
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+310. daimler - SCUDO Platform/Chassis
+   Model Slug: scudo-platformchassis
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+311. daimler - SCUDO Van (220_)
+   Model Slug: scudo-van-220
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+312. daimler - SCUDO Van (270_, 272_)
+   Model Slug: scudo-van-270-272
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+313. daimler - SEDICI (189_)
+   Model Slug: sedici-189
+   Dates: 06/06 - Present
+   Match Reason: Partial match: daimler-sedici
+
+314. daimler - SEICENTO / 600 (187_)
+   Model Slug: seicento-600-187
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+315. daimler - SEICENTO / 600 Hatch-
+   Model Slug: seicento-600-hatch-
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+316. daimler - SIENA (178_, 172_)
+   Model Slug: siena-178-172
+   Dates: 04/96 - 12/09
+   Match Reason: Partial match: daimler-siena
+
+317. daimler - STILO (192_)
+   Model Slug: stilo-192
+   Dates: 10/01 - 11/10
+   Match Reason: Partial match: daimler-stilo
+
+318. daimler - STILO Multi Wagon
+   Model Slug: stilo-multi-wagon
+   Dates: 10/01 - 11/10
+   Match Reason: Partial match: daimler-stilo
+
+319. daimler - STRADA Pickup (178_,
+   Model Slug: strada-pickup-178
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+320. daimler - STREET KA (RL2)
+   Model Slug: street-ka-rl2
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+321. daimler - TALENTO Box Body/ Estate (296_)
+   Model Slug: talento-box-body-estate-296
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+322. daimler - TALENTO Bus (296_)
+   Model Slug: talento-bus-296
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+323. daimler - TALENTO Platform/ Chassis (296_)
+   Model Slug: talento-platform-chassis-296
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+324. daimler - TEMPRA (159_)
+   Model Slug: tempra-159
+   Dates: 03/90 - 12/98
+   Match Reason: Partial match: daimler-tempra
+
+325. daimler - TEMPRA S.W. (159_)
+   Model Slug: tempra-sw-159
+   Dates: 03/90 - 12/98
+   Match Reason: Partial match: daimler-tempra
+
+326. daimler - TIPO (160_)
+   Model Slug: tipo-160
+   Dates: 07/87 - 10/95
+   Match Reason: Partial match: daimler-tipo
+
+327. daimler - TIPO Estate (356_, 357_)
+   Model Slug: tipo-estate-356-357
+   Dates: 07/87 - 10/95
+   Match Reason: Partial match: daimler-tipo
+
+328. daimler - TIPO Hatchback (356_)
+   Model Slug: tipo-hatchback-356
+   Dates: 07/87 - 10/95
+   Match Reason: Partial match: daimler-tipo
+
+329. daimler - TIPO Saloon (356_, 357_)
+   Model Slug: tipo-saloon-356-357
+   Dates: 07/87 - 10/95
+   Match Reason: Partial match: daimler-tipo
+
+330. daimler - TOURNEO CONNECT
+   Model Slug: tourneo-connect
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+331. daimler - TOURNEO COURIER B460 MPV
+   Model Slug: tourneo-courier-b460-mpv
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+332. daimler - TOURNEO CUSTOM V362 Bus (F3)
+   Model Slug: tourneo-custom-v362-bus-f3
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+333. daimler - TRANSIT Bus (E_ _)
+   Model Slug: transit-bus-e-
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+334. daimler - TRANSIT CONNECT (P65_, P70_, P80_)
+   Model Slug: transit-connect-p65-p70-p80
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+335. daimler - TRANSIT CONNECT MPV
+   Model Slug: transit-connect-mpv
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+336. daimler - TRANSIT COURIER B460 MPV
+   Model Slug: transit-courier-b460-mpv
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+337. daimler - TRANSIT CUSTOM V362 Bus (F3)
+   Model Slug: transit-custom-v362-bus-f3
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+338. daimler - TRANSIT CUSTOM V362 Van (FY, FZ)
+   Model Slug: transit-custom-v362-van-fy-fz
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+339. daimler - TRANSIT Platform/ Chassis (E_ _)
+   Model Slug: transit-platform-chassis-e-
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+340. daimler - TRANSIT Platform/ Chassis (FM_ _, FN_ _, FF_ _)
+   Model Slug: transit-platform-chassis-fm-fn-ff-
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+341. daimler - TRANSIT Platform/ Chassis (FM_ _, FN_ _)
+   Model Slug: transit-platform-chassis-fm-fn-
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+342. daimler - TRANSIT TOURNEO Bus
+   Model Slug: transit-tourneo-bus
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+343. daimler - TRANSIT V363 Box (FCD, FDD)
+   Model Slug: transit-v363-box-fcd-fdd
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+344. daimler - TRANSIT V363 Bus (FAD, FBD)
+   Model Slug: transit-v363-bus-fad-fbd
+   Dates: 10/12 - Present
+   Match Reason: Partial match: daimler-b-max
+
+345. daimler - TRANSIT V363 Platform/ Chassis (FED, FFD)
+   Model Slug: transit-v363-platform-chassis-fed-ffd
+   Dates: 02/07 - Present
+   Match Reason: Partial match: daimler-c-max
+
+346. daimler - TRANSIT Van (E_ _)
+   Model Slug: transit-van-e-
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+347. daimler - TRANSIT Van (FA_ _)
+   Model Slug: transit-van-fa-
+   Dates:  - Present
+   Match Reason: Partial match: daimler-s-max
+
+348. daimler - ULYSSE (179_)
+   Model Slug: ulysse-179
+   Dates: 08/02 - 06/11
+   Match Reason: Partial match: daimler-ulysse
+
+349. daimler - ULYSSE (220_)
+   Model Slug: ulysse-220
+   Dates: 08/02 - 06/11
+   Match Reason: Partial match: daimler-ulysse
+
+350. daimler - UNO (146_)
+   Model Slug: uno-146
+   Dates: 01/83 - 06/06
+   Match Reason: Partial match: daimler-uno
+
+351. daimler - UNO (195_)
+   Model Slug: uno-195
+   Dates: 01/83 - 06/06
+   Match Reason: Partial match: daimler-uno
+
+352. honda - ACCORD IX Saloon (CR)
+   Model Slug: accord-ix-saloon-cr
+   Dates: 10/95 - 02/02
+   Match Reason: Partial match: honda-cr-v i
+
+353. honda - CR-V I (RD)
+   Model Slug: cr-v-i-rd
+   Dates: 10/95 - 02/02
+   Match Reason: Partial match: honda-cr-v i
+
+354. honda - CR-V II (RD_)
+   Model Slug: cr-v-ii-rd
+   Dates: 10/95 - 02/02
+   Match Reason: Partial match: honda-cr-v i
+
+355. honda - CR-V III (RE_)
+   Model Slug: cr-v-iii-re
+   Dates: 10/95 - 02/02
+   Match Reason: Partial match: honda-cr-v i
+
+356. honda - CR-V IV (RM_)
+   Model Slug: cr-v-iv-rm
+   Dates: 10/95 - 02/02
+   Match Reason: Partial match: honda-cr-v i
+
+357. honda - CR-V V (RW_, RT_)
+   Model Slug: cr-v-v-rw-rt
+   Dates: 10/95 - 02/02
+   Match Reason: Partial match: honda-cr-v i
+
+358. honda - CR-Z (ZF)
+   Model Slug: cr-z-zf
+   Dates: 10/95 - 02/02
+   Match Reason: Partial match: honda-cr-v i
+
+359. honda - CROSSTOUR I
+   Model Slug: crosstour-i
+   Dates: 10/95 - 02/02
+   Match Reason: Partial match: honda-cr-v i
+
+360. honda - CRX III (EH, EG)
+   Model Slug: crx-iii-eh-eg
+   Dates: 10/95 - 02/02
+   Match Reason: Partial match: honda-cr-v i
+
+361. honda - FR-V (BE)
+   Model Slug: fr-v-be
+   Dates: 08/04 - Present
+   Match Reason: Partial match: honda-fr-v
+
+362. honda - HR-V (GH)
+   Model Slug: hr-v-gh
+   Dates: 03/99 - Present
+   Match Reason: Partial match: honda-hr-v
+
+363. honda - HR-V (RU)
+   Model Slug: hr-v-ru
+   Dates: 03/99 - Present
+   Match Reason: Partial match: honda-hr-v
+
+364. honda - INSIGHT (ZE_)
+   Model Slug: insight-ze
+   Dates: 04/00 - 12/06
+   Match Reason: Partial match: honda-insight
+
+365. honda - INSIGHT (ZE)
+   Model Slug: insight-ze
+   Dates: 04/00 - 12/06
+   Match Reason: Partial match: honda-insight
+
+366. honda - LOGO (GA)
+   Model Slug: logo-ga
+   Dates: 03/99 - 03/02
+   Match Reason: Partial match: honda-logo
+
+367. honda - S2000 (AP)
+   Model Slug: s2000-ap
+   Dates: 03/99 - Present
+   Match Reason: Partial match: honda-s2000
+
+368. honda - SHUTTLE (RA)
+   Model Slug: shuttle-ra
+   Dates: 06/94 - 06/04
+   Match Reason: Partial match: honda-shuttle
+
+369. honda - STREAM (RN)
+   Model Slug: stream-rn
+   Dates: 05/01 - Present
+   Match Reason: Partial match: honda-stream
+
+370. hyundai - ACCENT V Saloon (HC)
+   Model Slug: accent-v-saloon-hc
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+371. hyundai - ATOS (MX)
+   Model Slug: atos-mx
+   Dates: 02/98 - Present
+   Match Reason: Partial match: hyundai-atos
+
+372. hyundai - ATOS PRIME (MX)
+   Model Slug: atos-prime-mx
+   Dates: 02/98 - Present
+   Match Reason: Partial match: hyundai-atos
+
+373. hyundai - BAYON (BC3)
+   Model Slug: bayon-bc3
+   Dates: 05/21 - Present
+   Match Reason: Partial match: hyundai-bayon
+
+374. hyundai - CRETA
+   Model Slug: creta
+   Dates: 01/16 - Present
+
+375. hyundai - CRETA (SU2_)
+   Model Slug: creta-su2
+   Dates: 01/16 - Present
+   Match Reason: Partial match: hyundai-creta
+
+376. hyundai - ELANTRA IV Saloon (HD)
+   Model Slug: elantra-iv-saloon-hd
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+377. hyundai - GENESIS (BH)
+   Model Slug: genesis-bh
+   Dates: 01/08 - Present
+   Match Reason: Partial match: hyundai-genesis
+
+378. hyundai - GENESIS (DH)
+   Model Slug: genesis-dh
+   Dates: 01/08 - Present
+   Match Reason: Partial match: hyundai-genesis
+
+379. hyundai - GENESIS (HI )
+   Model Slug: genesis-hi-
+   Dates: 01/08 - Present
+   Match Reason: Partial match: hyundai-genesis
+
+380. hyundai - GENESIS Coupe
+   Model Slug: genesis-coupe
+   Dates: 01/08 - Present
+   Match Reason: Partial match: hyundai-genesis
+
+381. hyundai - GETZ (TB)
+   Model Slug: getz-tb
+   Dates: 08/02 - 12/10
+   Match Reason: Partial match: hyundai-getz
+
+382. hyundai - GRANDEUR (HG)
+   Model Slug: grandeur-hg
+   Dates: 01/11 - Present
+   Match Reason: Partial match: hyundai-grandeur
+
+383. hyundai - GRANDEUR (IG)
+   Model Slug: grandeur-ig
+   Dates: 01/11 - Present
+   Match Reason: Partial match: hyundai-grandeur
+
+384. hyundai - GRANDEUR (TG)
+   Model Slug: grandeur-tg
+   Dates: 01/11 - Present
+   Match Reason: Partial match: hyundai-grandeur
+
+385. hyundai - H-1 / STAREX Bus (A1)
+   Model Slug: h-1-starex-bus-a1
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+386. hyundai - H-1 Cargo (TQ)
+   Model Slug: h-1-cargo-tq
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+387. hyundai - H-1 Platform/Chassis
+   Model Slug: h-1-platformchassis
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+388. hyundai - H-1 Travel (TQ)
+   Model Slug: h-1-travel-tq
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+389. hyundai - H-1 Van (A1)
+   Model Slug: h-1-van-a1
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+390. hyundai - H100 Bus (P)
+   Model Slug: h100-bus-p
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+391. hyundai - H100 Van
+   Model Slug: h100-van
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+392. hyundai - H350 Bus
+   Model Slug: h350-bus
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+393. hyundai - H350 Platform/Chassis
+   Model Slug: h350-platformchassis
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+394. hyundai - H350 Van
+   Model Slug: h350-van
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+395. hyundai - HIGHWAY VAN
+   Model Slug: highway-van
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+396. hyundai - i10 (PA)
+   Model Slug: i10-pa
+   Dates: 10/07 - 12/13
+   Match Reason: Partial match: hyundai-i10
+
+397. hyundai - i10 II (BA, IA)
+   Model Slug: i10-ii-ba-ia
+   Dates: 10/07 - 12/13
+   Match Reason: Partial match: hyundai-i10
+
+398. hyundai - i10 III (AC3, AI3)
+   Model Slug: i10-iii-ac3-ai3
+   Dates: 10/07 - 12/13
+   Match Reason: Partial match: hyundai-i10
+
+399. hyundai - i20 (PB, PBT)
+   Model Slug: i20-pb-pbt
+   Dates: 08/08 - Present
+   Match Reason: Partial match: hyundai-i20
+
+400. hyundai - i20 ACTIVE (IB, GB)
+   Model Slug: i20-active-ib-gb
+   Dates: 08/08 - Present
+   Match Reason: Partial match: hyundai-i20
+
+401. hyundai - i20 II (GB, IB)
+   Model Slug: i20-ii-gb-ib
+   Dates: 08/08 - Present
+   Match Reason: Partial match: hyundai-i20
+
+402. hyundai - i20 II Coupe (GB)
+   Model Slug: i20-ii-coupe-gb
+   Dates: 08/08 - Present
+   Match Reason: Partial match: hyundai-i20
+
+403. hyundai - i20 II Hatchback Van (GB,
+   Model Slug: i20-ii-hatchback-van-gb
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+404. hyundai - i20 III (BC3, BI3)
+   Model Slug: i20-iii-bc3-bi3
+   Dates: 08/08 - Present
+   Match Reason: Partial match: hyundai-i20
+
+405. hyundai - i30 (FD)
+   Model Slug: i30-fd
+   Dates: 10/07 - 11/11
+   Match Reason: Partial match: hyundai-i30
+
+406. hyundai - i30 (GD)
+   Model Slug: i30-gd
+   Dates: 10/07 - 11/11
+   Match Reason: Partial match: hyundai-i30
+
+407. hyundai - i30 (PDE, PD, PDEN)
+   Model Slug: i30-pde-pd-pden
+   Dates: 10/07 - 11/11
+   Match Reason: Partial match: hyundai-i30
+
+408. hyundai - i30 Coupe
+   Model Slug: i30-coupe
+   Dates: 10/07 - 11/11
+   Match Reason: Partial match: hyundai-i30
+
+409. hyundai - i30 Estate (FD)
+   Model Slug: i30-estate-fd
+   Dates: 10/07 - 11/11
+   Match Reason: Partial match: hyundai-i30
+
+410. hyundai - i30 Estate (GD)
+   Model Slug: i30-estate-gd
+   Dates: 10/07 - 11/11
+   Match Reason: Partial match: hyundai-i30
+
+411. hyundai - i30 Estate (PDE)
+   Model Slug: i30-estate-pde
+   Dates: 10/07 - 11/11
+   Match Reason: Partial match: hyundai-i30
+
+412. hyundai - i30 FASTBACK (PDE,
+   Model Slug: i30-fastback-pde
+   Dates: 10/07 - 11/11
+   Match Reason: Partial match: hyundai-i30
+
+413. hyundai - i30 Hatchback Van (GDE)
+   Model Slug: i30-hatchback-van-gde
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+414. hyundai - i30 Hatchback Van (PDE)
+   Model Slug: i30-hatchback-van-pde
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+415. hyundai - i30 Kombi Van (GDE, GD)
+   Model Slug: i30-kombi-van-gde-gd
+   Dates: 10/07 - 11/11
+   Match Reason: Partial match: hyundai-i30
+
+416. hyundai - i40 (VF)
+   Model Slug: i40-vf
+   Dates: 03/12 - Present
+   Match Reason: Partial match: hyundai-i40
+
+417. hyundai - i40 CW (VF)
+   Model Slug: i40-cw-vf
+   Dates: 03/12 - Present
+   Match Reason: Partial match: hyundai-i40
+
+418. hyundai - IONIQ (AE)
+   Model Slug: ioniq-ae
+   Dates: 03/16 - Present
+   Match Reason: Partial match: hyundai-ioniq
+
+419. hyundai - IONIQ 5 (NE)
+   Model Slug: ioniq-5-ne
+   Dates: 03/16 - Present
+   Match Reason: Partial match: hyundai-ioniq
+
+420. hyundai - ix20 (JC)
+   Model Slug: ix20-jc
+   Dates: 11/10 - Present
+   Match Reason: Partial match: hyundai-ix20
+
+421. hyundai - ix35 (LM, EL, ELH)
+   Model Slug: ix35-lm-el-elh
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+422. hyundai - ix55
+   Model Slug: ix55
+   Dates: 09/06 - Present
+
+423. hyundai - KONA (OS)
+   Model Slug: kona-os
+   Dates: 06/17 - Present
+   Match Reason: Partial match: hyundai-kona
+
+424. hyundai - KONA SUV Van (OS, OSE,OSI)
+   Model Slug: kona-suv-van-os-oseosi
+   Dates: 06/17 - Present
+   Match Reason: Partial match: hyundai-kona
+
+425. hyundai - MATRIX (FC)
+   Model Slug: matrix-fc
+   Dates: 06/01 - 08/10
+   Match Reason: Partial match: hyundai-matrix
+
+426. hyundai - NEXO
+   Model Slug: nexo
+   Dates: 03/18 - Present
+
+427. hyundai - PDEN)
+   Model Slug: pden
+   Dates:  - Present
+   Match Reason: Partial match: hyundai-pden)
+
+428. hyundai - PONY (X-2)
+   Model Slug: pony-x-2
+   Dates: 10/89 - 01/95
+   Match Reason: Partial match: hyundai-pony
+
+429. hyundai - SANTAMO
+   Model Slug: santamo
+   Dates: 10/98 - 12/02
+
+430. hyundai - SOLARIS Saloon (HCR)
+   Model Slug: solaris-saloon-hcr
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+431. hyundai - TERRACAN (HP)
+   Model Slug: terracan-hp
+   Dates: 06/97 - 12/07
+   Match Reason: Partial match: hyundai-h-1 / starex bus
+
+432. hyundai - TRAJET (FO)
+   Model Slug: trajet-fo
+   Dates: 03/00 - 07/08
+   Match Reason: Partial match: hyundai-trajet
+
+433. hyundai - TUCSON (JM)
+   Model Slug: tucson-jm
+   Dates: 08/04 - 11/10
+   Match Reason: Partial match: hyundai-tucson
+
+434. hyundai - TUCSON (NX4E, NX4A)
+   Model Slug: tucson-nx4e-nx4a
+   Dates: 08/04 - 11/10
+   Match Reason: Partial match: hyundai-tucson
+
+435. hyundai - TUCSON (TL, TLE)
+   Model Slug: tucson-tl-tle
+   Dates: 08/04 - 11/10
+   Match Reason: Partial match: hyundai-tucson
+
+436. hyundai - TUCSON SUV Van (TLE)
+   Model Slug: tucson-suv-van-tle
+   Dates: 08/04 - 11/10
+   Match Reason: Partial match: hyundai-tucson
+
+437. hyundai - VELOSTER (FS)
+   Model Slug: veloster-fs
+   Dates: 03/11 - Present
+   Match Reason: Partial match: hyundai-veloster
+
+438. hyundai - VELOSTER (JS, JSN)
+   Model Slug: veloster-js-jsn
+   Dates: 03/11 - Present
+   Match Reason: Partial match: hyundai-veloster
+
+439. infiniti - M35
+   Model Slug: m35
+   Dates: 01/05 - Present
+
+440. infiniti - M45
+   Model Slug: m45
+   Dates: 01/05 - Present
+
+441. infiniti - Q30
+   Model Slug: q30
+   Dates: 11/15 - Present
+
+442. infiniti - Q50
+   Model Slug: q50
+   Dates: 04/13 - Present
+
+443. infiniti - QX30
+   Model Slug: qx30
+   Dates: 04/16 - Present
+
+444. irmscher - COUPE
+   Model Slug: coupe
+   Dates: 01/97 - Present
+
+445. isuzu - D-MAX II (TFR, TFS)
+   Model Slug: d-max-ii-tfr-tfs
+   Dates: 06/12 - Present
+   Match Reason: Partial match: isuzu-d-max ii
+
+446. isuzu - D-MAX II Platform/ Chassis (TFR, TFS)
+   Model Slug: d-max-ii-platform-chassis-tfr-tfs
+   Dates: 06/12 - Present
+   Match Reason: Partial match: isuzu-d-max ii
+
+447. isuzu - D-MAX III (TFR, TFS)
+   Model Slug: d-max-iii-tfr-tfs
+   Dates: 06/12 - Present
+   Match Reason: Partial match: isuzu-d-max ii
+
+448. isuzu - MU-X SUV (UCS/UCR)
+   Model Slug: mu-x-suv-ucsucr
+   Dates: 11/13 - Present
+   Match Reason: Partial match: isuzu-mu-x suv
+
+449. isuzu - Road Vehicle (UB)"
+   Model Slug: road-vehicle-ub
+   Dates: 06/12 - Present
+   Match Reason: Partial match: isuzu-d-max ii
+
+450. isuzu - Road Vehicle"
+   Model Slug: road-vehicle
+   Dates: 06/12 - Present
+   Match Reason: Partial match: isuzu-d-max ii
+
+451. jaguar - E-PACE (X540)
+   Model Slug: e-pace-x540
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+452. jaguar - F-PACE (X761)
+   Model Slug: f-pace-x761
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+453. jaguar - F-TYPE Convertible (X152)
+   Model Slug: f-type-convertible-x152
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+454. jaguar - F-TYPE Coupe (X152)
+   Model Slug: f-type-coupe-x152
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+455. jaguar - I-PACE (X590)
+   Model Slug: i-pace-x590
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+456. jaguar - S-TYPE II (X200)
+   Model Slug: s-type-ii-x200
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+457. jaguar - X-TYPE I (X400)
+   Model Slug: x-type-i-x400
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+458. jaguar - X-TYPE I Estate (X400)
+   Model Slug: x-type-i-estate-x400
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+459. jaguar - XE (X760)
+   Model Slug: xe-x760
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+460. jaguar - XF I (X250)
+   Model Slug: xf-i-x250
+   Dates: 09/15 - Present
+   Match Reason: Partial match: jaguar-f-pace
+
+461. jaguar - XF II (X260)
+   Model Slug: xf-ii-x260
+   Dates: 09/15 - Present
+   Match Reason: Partial match: jaguar-f-pace
+
+462. jaguar - XF SPORTBRAKE (X250)
+   Model Slug: xf-sportbrake-x250
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+463. jaguar - XF SPORTBRAKE (X260)
+   Model Slug: xf-sportbrake-x260
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+464. jaguar - XJ (X300, X330)
+   Model Slug: xj-x300-x330
+   Dates: 06/01 - 11/09
+   Match Reason: Partial match: jaguar-x-type i
+
+465. jaguar - XJ (X308)
+   Model Slug: xj-x308
+   Dates: 06/01 - 11/09
+   Match Reason: Partial match: jaguar-x-type i
+
+466. jaguar - XJ (X350, X358)
+   Model Slug: xj-x350-x358
+   Dates: 06/01 - 11/09
+   Match Reason: Partial match: jaguar-x-type i
+
+467. jaguar - XJ (X351)
+   Model Slug: xj-x351
+   Dates: 06/01 - 11/09
+   Match Reason: Partial match: jaguar-x-type i
+
+468. jaguar - XK 8 Convertible (X100)
+   Model Slug: xk-8-convertible-x100
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+469. jaguar - XK 8 Coupe (X100)
+   Model Slug: xk-8-coupe-x100
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+470. jaguar - XK II Convertible (X150)
+   Model Slug: xk-ii-convertible-x150
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+471. jaguar - XK II Coupe (X150)
+   Model Slug: xk-ii-coupe-x150
+   Dates: 09/17 - Present
+   Match Reason: Partial match: jaguar-e-pace
+
+472. jeep - CHEROKEE (KJ)
+   Model Slug: cherokee-kj
+   Dates: 09/01 - 01/08
+   Match Reason: Partial match: jeep-cherokee
+
+473. jeep - CHEROKEE (KK)
+   Model Slug: cherokee-kk
+   Dates: 09/01 - 01/08
+   Match Reason: Partial match: jeep-cherokee
+
+474. jeep - CHEROKEE (KL)
+   Model Slug: cherokee-kl
+   Dates: 09/01 - 01/08
+   Match Reason: Partial match: jeep-cherokee
+
+475. jeep - CHEROKEE (XJ)
+   Model Slug: cherokee-xj
+   Dates: 09/01 - 01/08
+   Match Reason: Partial match: jeep-cherokee
+
+476. jeep - COMMANDER (XK, XH)
+   Model Slug: commander-xk-xh
+   Dates: 09/05 - 12/10
+   Match Reason: Partial match: jeep-commander
+
+477. jeep - COMPASS (MK49)
+   Model Slug: compass-mk49
+   Dates: 08/06 - Present
+   Match Reason: Partial match: jeep-compass
+
+478. jeep - COMPASS (MP, M6, MV, M7)
+   Model Slug: compass-mp-m6-mv-m7
+   Dates: 08/06 - Present
+   Match Reason: Partial match: jeep-compass
+
+479. jeep - GRAND CHEROKEE I (ZJ, ZG)
+   Model Slug: grand-cherokee-i-zj-zg
+   Dates: 09/01 - 01/08
+   Match Reason: Partial match: jeep-cherokee
+
+480. jeep - GRAND CHEROKEE II (WJ, WG)
+   Model Slug: grand-cherokee-ii-wj-wg
+   Dates: 09/01 - 01/08
+   Match Reason: Partial match: jeep-cherokee
+
+481. jeep - GRAND CHEROKEE III (WH, WK)
+   Model Slug: grand-cherokee-iii-wh-wk
+   Dates: 09/01 - 01/08
+   Match Reason: Partial match: jeep-cherokee
+
+482. jeep - GRAND CHEROKEE IV (WK, WK2)
+   Model Slug: grand-cherokee-iv-wk-wk2
+   Dates: 09/01 - 01/08
+   Match Reason: Partial match: jeep-cherokee
+
+483. jeep - PATRIOT (MK74)
+   Model Slug: patriot-mk74
+   Dates: 02/07 - Present
+   Match Reason: Partial match: jeep-patriot
+
+484. kia - CEE'D (JD)
+   Model Slug: ceed-jd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+485. kia - CEE'D Combi Van (JD)
+   Model Slug: ceed-combi-van-jd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+486. kia - CEE'D Hatchback (ED)
+   Model Slug: ceed-hatchback-ed
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+487. kia - CEE'D Sportswagon (JD)
+   Model Slug: ceed-sportswagon-jd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+488. kia - CEE'D SW (ED)
+   Model Slug: ceed-sw-ed
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+489. kia - CEED (CD)
+   Model Slug: ceed-cd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+490. kia - CEED Combi Van (CD)
+   Model Slug: ceed-combi-van-cd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+491. kia - CEED Hatchback Van (CD)
+   Model Slug: ceed-hatchback-van-cd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+492. kia - CEED Sportswagon (CD)
+   Model Slug: ceed-sportswagon-cd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+493. kia - CLARUS (K9A)
+   Model Slug: clarus-k9a
+   Dates: 07/96 - Present
+   Match Reason: Partial match: kia-clarus
+
+494. kia - CLARUS Estate (GC)
+   Model Slug: clarus-estate-gc
+   Dates: 07/96 - Present
+   Match Reason: Partial match: kia-clarus
+
+495. kia - EV6 (CV)
+   Model Slug: ev6-cv
+   Dates: 07/21 - Present
+   Match Reason: Partial match: kia-ev6
+
+496. kia - JOICE
+   Model Slug: joice
+   Dates: 02/00 - Present
+
+497. kia - OPIRUS (GH)
+   Model Slug: opirus-gh
+   Dates: 09/03 - Present
+   Match Reason: Partial match: kia-opirus
+
+498. kia - OPTIMA
+   Model Slug: optima
+   Dates: 09/15 - Present
+
+499. kia - OPTIMA (JF)
+   Model Slug: optima-jf
+   Dates: 09/15 - Present
+   Match Reason: Partial match: kia-optima
+
+500. kia - OPTIMA Sportswagon (JF)
+   Model Slug: optima-sportswagon-jf
+   Dates: 09/15 - Present
+   Match Reason: Partial match: kia-optima
+
+501. kia - PRIDE (DA)
+   Model Slug: pride-da
+   Dates: 01/90 - Present
+   Match Reason: Partial match: kia-pride
+
+502. kia - PRIDE Estate
+   Model Slug: pride-estate
+   Dates: 01/90 - Present
+   Match Reason: Partial match: kia-pride
+
+503. kia - PRO CEE'D (ED)
+   Model Slug: pro-ceed-ed
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+504. kia - PRO CEE�D (JD)
+   Model Slug: pro-ceed-jd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+505. kia - PROCEED (CD)
+   Model Slug: proceed-cd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+506. kia - PROCEED Combi Van (CD)
+   Model Slug: proceed-combi-van-cd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+507. kia - SELTOS (SP2, SP2I)
+   Model Slug: seltos-sp2-sp2i
+   Dates: 08/19 - Present
+   Match Reason: Partial match: kia-seltos
+
+508. kia - SEPHIA (FA)
+   Model Slug: sephia-fa
+   Dates: 01/95 - 10/97
+   Match Reason: Partial match: kia-sephia
+
+509. kia - SEPHIA Saloon (FA)
+   Model Slug: sephia-saloon-fa
+   Dates: 01/95 - 10/97
+   Match Reason: Partial match: kia-sephia
+
+510. kia - SHUMA (FB)
+   Model Slug: shuma-fb
+   Dates: 09/96 - 12/01
+   Match Reason: Partial match: kia-shuma
+
+511. kia - SHUMA II (FB)
+   Model Slug: shuma-ii-fb
+   Dates: 09/96 - 12/01
+   Match Reason: Partial match: kia-shuma
+
+512. kia - SHUMA II Saloon (FB)
+   Model Slug: shuma-ii-saloon-fb
+   Dates: 09/96 - 12/01
+   Match Reason: Partial match: kia-shuma
+
+513. kia - SHUMA Saloon (FB)
+   Model Slug: shuma-saloon-fb
+   Dates: 09/96 - 12/01
+   Match Reason: Partial match: kia-shuma
+
+514. kia - STINGER (CK)
+   Model Slug: stinger-ck
+   Dates: 06/17 - Present
+   Match Reason: Partial match: kia-stinger
+
+515. kia - STINGER Hatchback Van (CK)
+   Model Slug: stinger-hatchback-van-ck
+   Dates: 06/17 - Present
+   Match Reason: Partial match: kia-stinger
+
+516. kia - STONIC (YB)
+   Model Slug: stonic-yb
+   Dates: 07/17 - Present
+   Match Reason: Partial match: kia-stonic
+
+517. kia - STONIC Hatchback Van (YB)
+   Model Slug: stonic-hatchback-van-yb
+   Dates: 07/17 - Present
+   Match Reason: Partial match: kia-stonic
+
+518. kia - VENGA (YN)
+   Model Slug: venga-yn
+   Dates: 02/10 - Present
+   Match Reason: Partial match: kia-venga
+
+519. kia - VENGA Hatchback Van (YN)
+   Model Slug: venga-hatchback-van-yn
+   Dates: 02/10 - Present
+   Match Reason: Partial match: kia-venga
+
+520. kia - XCEED (CD)
+   Model Slug: xceed-cd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+521. kia - XCEED Van (CD)
+   Model Slug: xceed-van-cd
+   Dates: 03/18 - Present
+   Match Reason: Partial match: kia-ceed
+
+522. lada - GRANTA (2190_)
+   Model Slug: granta-2190
+   Dates: 10/11 - Present
+   Match Reason: Partial match: lada-granta
+
+523. lada - GRANTA Estate (2194_)
+   Model Slug: granta-estate-2194
+   Dates: 10/11 - Present
+   Match Reason: Partial match: lada-granta
+
+524. lada - GRANTA Hatchback (2192_)
+   Model Slug: granta-hatchback-2192
+   Dates: 10/11 - Present
+   Match Reason: Partial match: lada-granta
+
+525. lada - GRANTA Liftback (2191_)
+   Model Slug: granta-liftback-2191
+   Dates: 10/11 - Present
+   Match Reason: Partial match: lada-granta
+
+526. lada - LARGUS (KS0_, RS0_, KSA_)
+   Model Slug: largus-ks0-rs0-ksa
+   Dates: 03/12 - Present
+   Match Reason: Partial match: lada-largus
+
+527. lada - LARGUS Estate Van (KS0_, RS0_, KSA_)
+   Model Slug: largus-estate-van-ks0-rs0-ksa
+   Dates: 03/12 - Present
+   Match Reason: Partial match: lada-largus
+
+528. lada - LARGUS Van (FS0_, FSA_)
+   Model Slug: largus-van-fs0-fsa
+   Dates: 03/12 - Present
+   Match Reason: Partial match: lada-largus
+
+529. lada - VESTA (GFL_)
+   Model Slug: vesta-gfl
+   Dates: 11/15 - Present
+   Match Reason: Partial match: lada-vesta
+
+530. lada - VESTA SW Estate (GFK_)
+   Model Slug: vesta-sw-estate-gfk
+   Dates: 11/15 - Present
+   Match Reason: Partial match: lada-vesta
+
+531. lada - XRAY (GAB_)
+   Model Slug: xray-gab
+   Dates: 02/16 - Present
+   Match Reason: Partial match: lada-xray
+
+532. lancia - DEDRA (835_)
+   Model Slug: dedra-835
+   Dates: 01/89 - 07/99
+   Match Reason: Partial match: lancia-dedra
+
+533. lancia - DEDRA SW (835_)
+   Model Slug: dedra-sw-835
+   Dates: 01/89 - 07/99
+   Match Reason: Partial match: lancia-dedra
+
+534. lancia - KAPPA (838_)
+   Model Slug: kappa-838
+   Dates: 08/94 - 10/01
+   Match Reason: Partial match: lancia-kappa
+
+535. lancia - KAPPA Coupe (838_)
+   Model Slug: kappa-coupe-838
+   Dates: 08/94 - 10/01
+   Match Reason: Partial match: lancia-kappa
+
+536. lancia - KAPPA SW (838_)
+   Model Slug: kappa-sw-838
+   Dates: 08/94 - 10/01
+   Match Reason: Partial match: lancia-kappa
+
+537. lancia - LYBRA (839_)
+   Model Slug: lybra-839
+   Dates: 07/99 - 10/05
+   Match Reason: Partial match: lancia-lybra
+
+538. lancia - LYBRA SW (839_)
+   Model Slug: lybra-sw-839
+   Dates: 07/99 - 10/05
+   Match Reason: Partial match: lancia-lybra
+
+539. lancia - MUSA (350_)
+   Model Slug: musa-350
+   Dates: 10/04 - 09/12
+   Match Reason: Partial match: lancia-musa
+
+540. lancia - PHEDRA (179_)
+   Model Slug: phedra-179
+   Dates: 09/02 - 11/10
+   Match Reason: Partial match: lancia-phedra
+
+541. lancia - THEMA (834_)
+   Model Slug: thema-834
+   Dates: 11/84 - 07/94
+   Match Reason: Partial match: lancia-thema
+
+542. lancia - THEMA (LX_)
+   Model Slug: thema-lx
+   Dates: 11/84 - 07/94
+   Match Reason: Partial match: lancia-thema
+
+543. lancia - THEMA SW (834_)
+   Model Slug: thema-sw-834
+   Dates: 11/84 - 07/94
+   Match Reason: Partial match: lancia-thema
+
+544. lancia - THESIS (841_)
+   Model Slug: thesis-841
+   Dates: 07/02 - 07/09
+   Match Reason: Partial match: lancia-thesis
+
+545. lancia - Y10 (156_)
+   Model Slug: y10-156
+   Dates: 03/85 - 12/95
+   Match Reason: Partial match: lancia-y10
+
+546. lancia - YPSILON (312_)
+   Model Slug: ypsilon-312
+   Dates: 05/11 - Present
+   Match Reason: Partial match: lancia-ypsilon
+
+547. lancia - YPSILON (843_)
+   Model Slug: ypsilon-843
+   Dates: 05/11 - Present
+   Match Reason: Partial match: lancia-ypsilon
+
+548. lancia - ZETA (22_)
+   Model Slug: zeta-22
+   Dates: 05/95 - 09/02
+   Match Reason: Partial match: lancia-zeta
+
+549. lexus - LFA (LFA10_)
+   Model Slug: lfa-lfa10
+   Dates: 12/10 - 11/12
+   Match Reason: Partial match: lexus-lfa
+
+550. lotus - ELISE
+   Model Slug: elise
+   Dates: 11/00 - Present
+
+551. mazda - 121 II (DB)
+   Model Slug: 121-ii-db
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+552. mazda - 121 III (JASM, JBSM)
+   Model Slug: 121-iii-jasm-jbsm
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+553. mazda - 3 (BK)
+   Model Slug: 3-bk
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+554. mazda - 3 (BL)
+   Model Slug: 3-bl
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+555. mazda - 3 (BM, BN)
+   Model Slug: 3-bm-bn
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+556. mazda - 3 Hatchback (BP)
+   Model Slug: 3-hatchback-bp
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+557. mazda - 3 Hatchback Van (BM)
+   Model Slug: 3-hatchback-van-bm
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+558. mazda - 3 Saloon (BK)
+   Model Slug: 3-saloon-bk
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+559. mazda - 3 Saloon (BL)
+   Model Slug: 3-saloon-bl
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+560. mazda - 3 Saloon (BM, BN)
+   Model Slug: 3-saloon-bm-bn
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+561. mazda - 3 Saloon (BP_)
+   Model Slug: 3-saloon-bp
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+562. mazda - 323 C IV (BG)
+   Model Slug: 323-c-iv-bg
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+563. mazda - 323 C V (BA)
+   Model Slug: 323-c-v-ba
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+564. mazda - 323 F IV (BG)
+   Model Slug: 323-f-iv-bg
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+565. mazda - 323 F V (BA)
+   Model Slug: 323-f-v-ba
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+566. mazda - 323 F VI (BJ)
+   Model Slug: 323-f-vi-bj
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+567. mazda - 323 III Station Wagon (BW)
+   Model Slug: 323-iii-station-wagon-bw
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+568. mazda - 323 P V (BA)
+   Model Slug: 323-p-v-ba
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+569. mazda - 323 S IV (BG)
+   Model Slug: 323-s-iv-bg
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+570. mazda - 323 S V (BA)
+   Model Slug: 323-s-v-ba
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+571. mazda - 323 S VI (BJ)
+   Model Slug: 323-s-vi-bj
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+572. mazda - 6 Hatchback (GG)
+   Model Slug: 6-hatchback-gg
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+573. mazda - 6 Hatchback (GH)
+   Model Slug: 6-hatchback-gh
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+574. mazda - 626 III Hatchback (GD)
+   Model Slug: 626-iii-hatchback-gd
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+575. mazda - 626 IV Hatchback (GE)
+   Model Slug: 626-iv-hatchback-ge
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+576. mazda - 626 V Hatchback (GF)
+   Model Slug: 626-v-hatchback-gf
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+577. mazda - B-SERIE (UF)
+   Model Slug: b-serie-uf
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+578. mazda - B-SERIE (UN)
+   Model Slug: b-serie-un
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+579. mazda - BT-50 II Pickup (B22,
+   Model Slug: bt-50-ii-pickup-b22
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+580. mazda - BT-50 Pickup (CD, UN)
+   Model Slug: bt-50-pickup-cd-un
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+581. mazda - BT-50 Platform/Chassis
+   Model Slug: bt-50-platformchassis
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+582. mazda - CX-3 (DK)
+   Model Slug: cx-3-dk
+   Dates: 01/15 - Present
+   Match Reason: Partial match: mazda-cx-3
+
+583. mazda - CX-30 (DM)
+   Model Slug: cx-30-dm
+   Dates: 01/15 - Present
+   Match Reason: Partial match: mazda-cx-3
+
+584. mazda - CX-5 (KE, GH)
+   Model Slug: cx-5-ke-gh
+   Dates: 01/15 - Present
+   Match Reason: Partial match: mazda-cx-3
+
+585. mazda - CX-5 (KF)
+   Model Slug: cx-5-kf
+   Dates: 01/15 - Present
+   Match Reason: Partial match: mazda-cx-3
+
+586. mazda - CX-7 (ER)
+   Model Slug: cx-7-er
+   Dates: 01/15 - Present
+   Match Reason: Partial match: mazda-cx-3
+
+587. mazda - CX-9 (TB)
+   Model Slug: cx-9-tb
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+588. mazda - CX-9 (TC)
+   Model Slug: cx-9-tc
+   Dates: 01/15 - Present
+   Match Reason: Partial match: mazda-cx-3
+
+589. mazda - DEMIO (DW)
+   Model Slug: demio-dw
+   Dates: 10/96 - 07/03
+   Match Reason: Partial match: mazda-demio
+
+590. mazda - E Bus (SR1)
+   Model Slug: e-bus-sr1
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+591. mazda - MX-3 (EC)
+   Model Slug: mx-3-ec
+   Dates: 07/91 - 05/98
+   Match Reason: Partial match: mazda-mx-3
+
+592. mazda - MX-30 (DR)
+   Model Slug: mx-30-dr
+   Dates: 07/91 - 05/98
+   Match Reason: Partial match: mazda-mx-3
+
+593. mazda - MX-5 I (NA)
+   Model Slug: mx-5-i-na
+   Dates: 07/91 - 05/98
+   Match Reason: Partial match: mazda-mx-3
+
+594. mazda - MX-5 II (NB)
+   Model Slug: mx-5-ii-nb
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+595. mazda - MX-5 III (NC)
+   Model Slug: mx-5-iii-nc
+   Dates: 07/91 - 05/98
+   Match Reason: Partial match: mazda-mx-3
+
+596. mazda - MX-5 IV (ND)
+   Model Slug: mx-5-iv-nd
+   Dates: 07/91 - 05/98
+   Match Reason: Partial match: mazda-mx-3
+
+597. mazda - MX-5 RF Targa (ND)
+   Model Slug: mx-5-rf-targa-nd
+   Dates: 07/91 - 05/98
+   Match Reason: Partial match: mazda-mx-3
+
+598. mazda - MX-6 (GE)
+   Model Slug: mx-6-ge
+   Dates: 07/91 - 05/98
+   Match Reason: Partial match: mazda-mx-3
+
+599. mazda - PREMACY (CP)
+   Model Slug: premacy-cp
+   Dates: 07/99 - 03/05
+   Match Reason: Partial match: mazda-premacy
+
+600. mazda - RX-7 III (FD)
+   Model Slug: rx-7-iii-fd
+   Dates: 07/92 - 08/02
+   Match Reason: Partial match: mazda-rx-7 iii
+
+601. mazda - RX-8 (SE, FE)
+   Model Slug: rx-8-se-fe
+   Dates: 07/92 - 08/02
+   Match Reason: Partial match: mazda-rx-7 iii
+
+602. mazda - TRIBUTE (EP)
+   Model Slug: tribute-ep
+   Dates: 01/85 - 12/99
+   Match Reason: Partial match: mazda-b-serie
+
+603. mercedes - (A124)
+   Model Slug: a124
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+604. mercedes - (X117)
+   Model Slug: x117
+   Dates: 09/17 - Present
+   Match Reason: Partial match: mercedes-x-class
+
+605. mercedes - (X118)
+   Model Slug: x118
+   Dates: 09/17 - Present
+   Match Reason: Partial match: mercedes-x-class
+
+606. mercedes - (X218)
+   Model Slug: x218
+   Dates: 09/17 - Present
+   Match Reason: Partial match: mercedes-x-class
+
+607. mercedes - 124 Convertible (A124)
+   Model Slug: 124-convertible-a124
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+608. mercedes - 124 Coupe (C124)
+   Model Slug: 124-coupe-c124
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+609. mercedes - 124 Saloon (W124)
+   Model Slug: 124-saloon-w124
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+610. mercedes - 124 T-Model (S124)
+   Model Slug: 124-t-model-s124
+   Dates: 02/93 - 06/96
+   Match Reason: Partial match: mercedes-e-class
+
+611. mercedes - A-CLASS (W168)
+   Model Slug: a-class-w168
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+612. mercedes - A-CLASS (W169)
+   Model Slug: a-class-w169
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+613. mercedes - A-CLASS (W176)
+   Model Slug: a-class-w176
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+614. mercedes - A-CLASS (W177)
+   Model Slug: a-class-w177
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+615. mercedes - A-CLASS Saloon (V177)
+   Model Slug: a-class-saloon-v177
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+616. mercedes - AMG GT (C190)
+   Model Slug: amg-gt-c190
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+617. mercedes - AMG GT (X290)
+   Model Slug: amg-gt-x290
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+618. mercedes - AMG GT Roadster (R190)
+   Model Slug: amg-gt-roadster-r190
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+619. mercedes - B-CLASS (W246, W242)
+   Model Slug: b-class-w246-w242
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+620. mercedes - B-CLASS Sports Tourer
+   Model Slug: b-class-sports-tourer
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+621. mercedes - B668)
+   Model Slug: b668
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+622. mercedes - C-CLASS (W202)
+   Model Slug: c-class-w202
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+623. mercedes - C-CLASS (W203)
+   Model Slug: c-class-w203
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+624. mercedes - C-CLASS (W204)
+   Model Slug: c-class-w204
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+625. mercedes - C-CLASS (W205)
+   Model Slug: c-class-w205
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+626. mercedes - C-CLASS (W206)
+   Model Slug: c-class-w206
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+627. mercedes - C-CLASS Convertible
+   Model Slug: c-class-convertible
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+628. mercedes - C-CLASS Coupe (C204)
+   Model Slug: c-class-coupe-c204
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+629. mercedes - C-CLASS Coupe (C205)
+   Model Slug: c-class-coupe-c205
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+630. mercedes - C-CLASS Coupe (CL203)
+   Model Slug: c-class-coupe-cl203
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+631. mercedes - C-CLASS T-Model (S202)
+   Model Slug: c-class-t-model-s202
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+632. mercedes - C-CLASS T-Model (S203)
+   Model Slug: c-class-t-model-s203
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+633. mercedes - C-CLASS T-Model (S204)
+   Model Slug: c-class-t-model-s204
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+634. mercedes - C-CLASS T-Model (S205)
+   Model Slug: c-class-t-model-s205
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+635. mercedes - C-CLASS T-MODEL (S206)
+   Model Slug: c-class-t-model-s206
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+636. mercedes - Cabin) (W447)
+   Model Slug: cabin-w447
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+637. mercedes - CITAN Box Body/MPV
+   Model Slug: citan-box-bodympv
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+638. mercedes - CITAN Combi (415)
+   Model Slug: citan-combi-415
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+639. mercedes - CITAN Mixto (Double
+   Model Slug: citan-mixto-double
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+640. mercedes - CITAN Tourer (W420)
+   Model Slug: citan-tourer-w420
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+641. mercedes - CLA Coupe (C117)
+   Model Slug: cla-coupe-c117
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+642. mercedes - CLA Shooting Brake
+   Model Slug: cla-shooting-brake
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+643. mercedes - CLC-CLASS (CL203)
+   Model Slug: clc-class-cl203
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+644. mercedes - CLK (C208)
+   Model Slug: clk-c208
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+645. mercedes - CLK (C209)
+   Model Slug: clk-c209
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+646. mercedes - CLK Convertible (A208)
+   Model Slug: clk-convertible-a208
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+647. mercedes - CLK Convertible (A209)
+   Model Slug: clk-convertible-a209
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+648. mercedes - CLS (C218)
+   Model Slug: cls-c218
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+649. mercedes - CLS (C219)
+   Model Slug: cls-c219
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+650. mercedes - CLS (C257)
+   Model Slug: cls-c257
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+651. mercedes - CLS Shooting Brake
+   Model Slug: cls-shooting-brake
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+652. mercedes - E-CLASS (W124)
+   Model Slug: e-class-w124
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+653. mercedes - E-CLASS (W210)
+   Model Slug: e-class-w210
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+654. mercedes - E-CLASS (W211)
+   Model Slug: e-class-w211
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+655. mercedes - E-CLASS (W212)
+   Model Slug: e-class-w212
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+656. mercedes - E-CLASS (W213)
+   Model Slug: e-class-w213
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+657. mercedes - E-CLASS All-Terrain
+   Model Slug: e-class-all-terrain
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+658. mercedes - E-CLASS Convertible
+   Model Slug: e-class-convertible
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+659. mercedes - E-CLASS Coupe (C124)
+   Model Slug: e-class-coupe-c124
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+660. mercedes - E-CLASS Coupe (C207)
+   Model Slug: e-class-coupe-c207
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+661. mercedes - E-CLASS Coupe (C238)
+   Model Slug: e-class-coupe-c238
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+662. mercedes - E-CLASS T-Model (S124)
+   Model Slug: e-class-t-model-s124
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+663. mercedes - E-CLASS T-Model (S210)
+   Model Slug: e-class-t-model-s210
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+664. mercedes - E-CLASS T-Model (S211)
+   Model Slug: e-class-t-model-s211
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+665. mercedes - E-CLASS T-Model (S212)
+   Model Slug: e-class-t-model-s212
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+666. mercedes - E-CLASS T-Model (S213)
+   Model Slug: e-class-t-model-s213
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+667. mercedes - EQA (H243)
+   Model Slug: eqa-h243
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+668. mercedes - EQB (X243)
+   Model Slug: eqb-x243
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+669. mercedes - EQC (N293)
+   Model Slug: eqc-n293
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+670. mercedes - EQE (V295)
+   Model Slug: eqe-v295
+   Dates: 02/93 - 06/96
+   Match Reason: Partial match: mercedes-e-class
+
+671. mercedes - EQS (V297)
+   Model Slug: eqs-v297
+   Dates: 02/93 - 06/96
+   Match Reason: Partial match: mercedes-e-class
+
+672. mercedes - eSPRINTER Van (B910)
+   Model Slug: esprinter-van-b910
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+673. mercedes - G-CLASS (W461)
+   Model Slug: g-class-w461
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+674. mercedes - G-CLASS (W463)
+   Model Slug: g-class-w463
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+675. mercedes - G-CLASS Cabrio (W463)
+   Model Slug: g-class-cabrio-w463
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+676. mercedes - GL-CLASS (X164)
+   Model Slug: gl-class-x164
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+677. mercedes - GL-CLASS (X166)
+   Model Slug: gl-class-x166
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+678. mercedes - GLA (H247)
+   Model Slug: gla-h247
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+679. mercedes - GLA-CLASS (X156)
+   Model Slug: gla-class-x156
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+680. mercedes - GLB (X247)
+   Model Slug: glb-x247
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+681. mercedes - GLC (X253)
+   Model Slug: glc-x253
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+682. mercedes - GLC Coupe (C253)
+   Model Slug: glc-coupe-c253
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+683. mercedes - GLE (W166)
+   Model Slug: gle-w166
+   Dates: 02/93 - 06/96
+   Match Reason: Partial match: mercedes-e-class
+
+684. mercedes - GLE Coupe (C167)
+   Model Slug: gle-coupe-c167
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+685. mercedes - GLE Coupe (C292)
+   Model Slug: gle-coupe-c292
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+686. mercedes - GLK-CLASS (X204)
+   Model Slug: glk-class-x204
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+687. mercedes - GLS (X166)
+   Model Slug: gls-x166
+   Dates: 02/90 - Present
+   Match Reason: Partial match: mercedes-g-class
+
+688. mercedes - M-CLASS (W163)
+   Model Slug: m-class-w163
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+689. mercedes - M-CLASS (W164)
+   Model Slug: m-class-w164
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+690. mercedes - M-CLASS (W166)
+   Model Slug: m-class-w166
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+691. mercedes - MARCO POLO Camper (W447)
+   Model Slug: marco-polo-camper-w447
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+692. mercedes - MB Bus (W631)
+   Model Slug: mb-bus-w631
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+693. mercedes - MB Platform/Chassis
+   Model Slug: mb-platformchassis
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+694. mercedes - MB Van (W631)
+   Model Slug: mb-van-w631
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+695. mercedes - R-CLASS (W251, V251)
+   Model Slug: r-class-w251-v251
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+696. mercedes - S-CLASS (V223)
+   Model Slug: s-class-v223
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+697. mercedes - S-CLASS (W140)
+   Model Slug: s-class-w140
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+698. mercedes - S-CLASS (W220)
+   Model Slug: s-class-w220
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+699. mercedes - S-CLASS (W221)
+   Model Slug: s-class-w221
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+700. mercedes - S-CLASS (W222, V222, X222)
+   Model Slug: s-class-w222-v222-x222
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+701. mercedes - S-CLASS (W223)
+   Model Slug: s-class-w223
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+702. mercedes - S-CLASS Convertible (A217)
+   Model Slug: s-class-convertible-a217
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+703. mercedes - S-CLASS Coupe (C140)
+   Model Slug: s-class-coupe-c140
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+704. mercedes - S-CLASS Coupe (C215)
+   Model Slug: s-class-coupe-c215
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+705. mercedes - S-CLASS Coupe (C216)
+   Model Slug: s-class-coupe-c216
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+706. mercedes - S-CLASS Coupe (C217)
+   Model Slug: s-class-coupe-c217
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+707. mercedes - SL (R129)
+   Model Slug: sl-r129
+   Dates: 01/06 - Present
+   Match Reason: Partial match: mercedes-r-class
+
+708. mercedes - SL (R230)
+   Model Slug: sl-r230
+   Dates: 01/06 - Present
+   Match Reason: Partial match: mercedes-r-class
+
+709. mercedes - SL (R231)
+   Model Slug: sl-r231
+   Dates: 01/06 - Present
+   Match Reason: Partial match: mercedes-r-class
+
+710. mercedes - SLC (R172)
+   Model Slug: slc-r172
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+711. mercedes - SLK (R170)
+   Model Slug: slk-r170
+   Dates: 01/06 - Present
+   Match Reason: Partial match: mercedes-r-class
+
+712. mercedes - SLK (R171)
+   Model Slug: slk-r171
+   Dates: 01/06 - Present
+   Match Reason: Partial match: mercedes-r-class
+
+713. mercedes - SLK (R172)
+   Model Slug: slk-r172
+   Dates: 01/06 - Present
+   Match Reason: Partial match: mercedes-r-class
+
+714. mercedes - SLR (R199)
+   Model Slug: slr-r199
+   Dates: 01/06 - Present
+   Match Reason: Partial match: mercedes-r-class
+
+715. mercedes - SLR ROADSTER (R199)
+   Model Slug: slr-roadster-r199
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+716. mercedes - SLS AMG (C197)
+   Model Slug: sls-amg-c197
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+717. mercedes - SLS AMG Roadster (R197)
+   Model Slug: sls-amg-roadster-r197
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+718. mercedes - SPRINTER 2-t Bus (B901, B902)
+   Model Slug: sprinter-2-t-bus-b901-b902
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+719. mercedes - SPRINTER 2-t Platform/ Chassis (B901, B902)
+   Model Slug: sprinter-2-t-platform-chassis-b901-b902
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+720. mercedes - SPRINTER 2-t Van (B901, B902)
+   Model Slug: sprinter-2-t-van-b901-b902
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+721. mercedes - SPRINTER 3-t Bus (B903)
+   Model Slug: sprinter-3-t-bus-b903
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+722. mercedes - SPRINTER 3-t Bus (B906)
+   Model Slug: sprinter-3-t-bus-b906
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+723. mercedes - SPRINTER 3-t Platform/ Chassis (B903)
+   Model Slug: sprinter-3-t-platform-chassis-b903
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+724. mercedes - SPRINTER 3-t Platform/ Chassis (B906)
+   Model Slug: sprinter-3-t-platform-chassis-b906
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+725. mercedes - SPRINTER 3-t Platform/ Chassis (B910, B907)
+   Model Slug: sprinter-3-t-platform-chassis-b910-b907
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+726. mercedes - SPRINTER 3-t Tourer Bus (B907)
+   Model Slug: sprinter-3-t-tourer-bus-b907
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+727. mercedes - SPRINTER 3-t Van (B903)
+   Model Slug: sprinter-3-t-van-b903
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+728. mercedes - SPRINTER 3-t Van (B906)
+   Model Slug: sprinter-3-t-van-b906
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+729. mercedes - SPRINTER 3-t Van (B910)
+   Model Slug: sprinter-3-t-van-b910
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+730. mercedes - SPRINTER 3,5-t Bus (B906)
+   Model Slug: sprinter-35-t-bus-b906
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+731. mercedes - SPRINTER 3,5-t Platform/ Chassis (B906)
+   Model Slug: sprinter-35-t-platform-chassis-b906
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+732. mercedes - SPRINTER 3,5-t Platform/ Chassis (B907, B910)
+   Model Slug: sprinter-35-t-platform-chassis-b907-b910
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+733. mercedes - SPRINTER 3,5-t Tourer Bus (B907)
+   Model Slug: sprinter-35-t-tourer-bus-b907
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+734. mercedes - SPRINTER 3,5-t Van (B906)
+   Model Slug: sprinter-35-t-van-b906
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+735. mercedes - SPRINTER 3,5-t Van (B907, B910)
+   Model Slug: sprinter-35-t-van-b907-b910
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+736. mercedes - SPRINTER 4-t Bus (B904)
+   Model Slug: sprinter-4-t-bus-b904
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+737. mercedes - SPRINTER 4-t Platform/
+   Model Slug: sprinter-4-t-platform
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+738. mercedes - SPRINTER 4-t Platform/ Chassis (B904)
+   Model Slug: sprinter-4-t-platform-chassis-b904
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+739. mercedes - SPRINTER 4-t Van (B904)
+   Model Slug: sprinter-4-t-van-b904
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+740. mercedes - SPRINTER 4-t Van (B907, B910)
+   Model Slug: sprinter-4-t-van-b907-b910
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+741. mercedes - SPRINTER 4,6-t Platform/ Chassis (906)
+   Model Slug: sprinter-46-t-platform-chassis-906
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+742. mercedes - SPRINTER 4,6-t Van (B906)
+   Model Slug: sprinter-46-t-van-b906
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+743. mercedes - SPRINTER 5-t Platform/
+   Model Slug: sprinter-5-t-platform
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+744. mercedes - SPRINTER 5-t Van (B906)
+   Model Slug: sprinter-5-t-van-b906
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+745. mercedes - SPRINTER 5-t Van (B907)
+   Model Slug: sprinter-5-t-van-b907
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+746. mercedes - SPRINTER CLASSIC 3,5-t
+   Model Slug: sprinter-classic-35-t
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+747. mercedes - SPRINTER CLASSIC 4,6-t
+   Model Slug: sprinter-classic-46-t
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+748. mercedes - SPRINTER Dump Truck
+   Model Slug: sprinter-dump-truck
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+749. mercedes - T1 Bus (602)
+   Model Slug: t1-bus-602
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+750. mercedes - T2/LN1 Bus
+   Model Slug: t2ln1-bus
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+751. mercedes - T2/LN1 Cab with engine
+   Model Slug: t2ln1-cab-with-engine
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+752. mercedes - T2/LN1 Dump Truck
+   Model Slug: t2ln1-dump-truck
+   Dates: 03/93 - 05/00
+   Match Reason: Partial match: mercedes-c-class
+
+753. mercedes - T2/LN1 Platform/Chassis
+   Model Slug: t2ln1-platformchassis
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+754. mercedes - T2/LN1 Van
+   Model Slug: t2ln1-van
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+755. mercedes - V-CLASS (638/2)
+   Model Slug: v-class-6382
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+756. mercedes - V-CLASS (W447)
+   Model Slug: v-class-w447
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+757. mercedes - VANEO (414)
+   Model Slug: vaneo-414
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+758. mercedes - VARIO Bus
+   Model Slug: vario-bus
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+759. mercedes - VARIO Cab with engine
+   Model Slug: vario-cab-with-engine
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+760. mercedes - VARIO Dump Truck
+   Model Slug: vario-dump-truck
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+761. mercedes - VARIO Platform/Chassis
+   Model Slug: vario-platformchassis
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+762. mercedes - VARIO Van (B667, B670,
+   Model Slug: vario-van-b667-b670
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+763. mercedes - VIANO (W639)
+   Model Slug: viano-w639
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+764. mercedes - VITO / MIXTO Van (W639)
+   Model Slug: vito-mixto-van-w639
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+765. mercedes - VITO Bus (W638)
+   Model Slug: vito-bus-w638
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+766. mercedes - VITO Bus (W639)
+   Model Slug: vito-bus-w639
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+767. mercedes - VITO Mixto (Double
+   Model Slug: vito-mixto-double
+   Dates: 03/05 - 11/11
+   Match Reason: Partial match: mercedes-b-class sports tourer
+
+768. mercedes - VITO Tourer (W447)
+   Model Slug: vito-tourer-w447
+   Dates: 02/93 - 06/96
+   Match Reason: Partial match: mercedes-e-class
+
+769. mercedes - VITO Van (W447)
+   Model Slug: vito-van-w447
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+770. mercedes - VITO Van (W638)
+   Model Slug: vito-van-w638
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+771. mercedes - X-CLASS (470)
+   Model Slug: x-class-470
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+772. mercedes - X-CLASS Platform/
+   Model Slug: x-class-platform
+   Dates: 07/97 - 08/04
+   Match Reason: Partial match: mercedes-a-class
+
+773. mg - MGF (RD)
+   Model Slug: mgf-rd
+   Dates: 03/95 - 03/02
+   Match Reason: Partial match: mg-mgf
+
+774. mini - MINI (F55)
+   Model Slug: mini-f55
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+775. mini - MINI (F56)
+   Model Slug: mini-f56
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+776. mini - MINI (R50, R53)
+   Model Slug: mini-r50-r53
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+777. mini - MINI (R56)
+   Model Slug: mini-r56
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+778. mini - MINI CLUBMAN (F54)
+   Model Slug: mini-clubman-f54
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+779. mini - MINI CLUBMAN (R55)
+   Model Slug: mini-clubman-r55
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+780. mini - MINI CLUBVAN (R55)
+   Model Slug: mini-clubvan-r55
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+781. mini - MINI Convertible (F57)
+   Model Slug: mini-convertible-f57
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+782. mini - MINI Convertible (R52)
+   Model Slug: mini-convertible-r52
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+783. mini - MINI Convertible (R57)
+   Model Slug: mini-convertible-r57
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+784. mini - MINI COUNTRYMAN (F60)
+   Model Slug: mini-countryman-f60
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+785. mini - MINI COUNTRYMAN (R60)
+   Model Slug: mini-countryman-r60
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+786. mini - MINI Coupe (R58)
+   Model Slug: mini-coupe-r58
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+787. mini - MINI PACEMAN (R61)
+   Model Slug: mini-paceman-r61
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+788. mini - MINI Roadster (R59)
+   Model Slug: mini-roadster-r59
+   Dates: 09/13 - Present
+   Match Reason: Partial match: mini-mini
+
+789. mitsubishi - ASX (GA_W_)
+   Model Slug: asx-gaw
+   Dates: 02/10 - Present
+   Match Reason: Partial match: mitsubishi-asx
+
+790. mitsubishi - ASX Van (GA_W_)
+   Model Slug: asx-van-gaw
+   Dates: 02/10 - Present
+   Match Reason: Partial match: mitsubishi-asx
+
+791. mitsubishi - CARISMA (DA_)
+   Model Slug: carisma-da
+   Dates: 07/95 - 06/06
+   Match Reason: Partial match: mitsubishi-carisma
+
+792. mitsubishi - CARISMA Saloon (DA_)
+   Model Slug: carisma-saloon-da
+   Dates: 07/95 - 06/06
+   Match Reason: Partial match: mitsubishi-carisma
+
+793. mitsubishi - GALLOPER (JK-01)
+   Model Slug: galloper-jk-01
+   Dates: 09/98 - 12/03
+   Match Reason: Partial match: mitsubishi-galloper
+
+794. mitsubishi - GRANDIS (NA_W)
+   Model Slug: grandis-naw
+   Dates: 03/03 - Present
+   Match Reason: Partial match: mitsubishi-grandis
+
+795. mitsubishi - L200 (K3_T, K2_T, K1_T,
+   Model Slug: l200-k3t-k2t-k1t
+   Dates: 01/86 - 10/96
+   Match Reason: Partial match: mitsubishi-l200
+
+796. mitsubishi - L200 (K7_T, K6_T, K5_T)
+   Model Slug: l200-k7t-k6t-k5t
+   Dates: 01/86 - 10/96
+   Match Reason: Partial match: mitsubishi-l200
+
+797. mitsubishi - L200 / TRITON (KA_T,
+   Model Slug: l200-triton-kat
+   Dates: 01/86 - 10/96
+   Match Reason: Partial match: mitsubishi-l200
+
+798. mitsubishi - L200 / TRITON Platform/
+   Model Slug: l200-triton-platform
+   Dates: 01/86 - 10/96
+   Match Reason: Partial match: mitsubishi-l200
+
+799. mitsubishi - L200 Platform/Chassis
+   Model Slug: l200-platformchassis
+   Dates: 01/86 - 10/96
+   Match Reason: Partial match: mitsubishi-l200
+
+800. mitsubishi - SANTAMO
+   Model Slug: santamo
+   Dates: 03/99 - 12/04
+
+801. mitsubishi - SIGMA (F2_A, F1_A)
+   Model Slug: sigma-f2a-f1a
+   Dates: 10/90 - 07/96
+   Match Reason: Partial match: mitsubishi-sigma
+
+802. mitsubishi - SIGMA Station Wagon (F0_W)
+   Model Slug: sigma-station-wagon-f0w
+   Dates: 10/90 - 07/96
+   Match Reason: Partial match: mitsubishi-sigma
+
+803. nissan - (X82)
+   Model Slug: x82
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+804. nissan - 100NX (B13)
+   Model Slug: 100nx-b13
+   Dates: 03/90 - 01/96
+   Match Reason: Partial match: nissan-100nx
+
+805. nissan - 200SX Coupe (S14)
+   Model Slug: 200sx-coupe-s14
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+806. nissan - 300ZX (Z32)
+   Model Slug: 300zx-z32
+   Dates: 09/89 - 12/00
+   Match Reason: Partial match: nissan-300zx
+
+807. nissan - ARIYA (FE0)
+   Model Slug: ariya-fe0
+   Dates: 07/20 - Present
+   Match Reason: Partial match: nissan-ariya
+
+808. nissan - CUBE (Z12)
+   Model Slug: cube-z12
+   Dates: 09/07 - Present
+   Match Reason: Partial match: nissan-cube
+
+809. nissan - GT-R (R35)
+   Model Slug: gt-r-r35
+   Dates: 12/07 - Present
+   Match Reason: Partial match: nissan-gt-r
+
+810. nissan - INTERSTAR Bus (X70)
+   Model Slug: interstar-bus-x70
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+811. nissan - INTERSTAR Platform/ Chassis (X62B)
+   Model Slug: interstar-platform-chassis-x62b
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+812. nissan - INTERSTAR Platform/ Chassis (X70)
+   Model Slug: interstar-platform-chassis-x70
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+813. nissan - INTERSTAR Van (X62B)
+   Model Slug: interstar-van-x62b
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+814. nissan - INTERSTAR Van (X70)
+   Model Slug: interstar-van-x70
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+815. nissan - JUKE (F15)
+   Model Slug: juke-f15
+   Dates: 06/10 - Present
+   Match Reason: Partial match: nissan-juke
+
+816. nissan - JUKE (F16_)
+   Model Slug: juke-f16
+   Dates: 06/10 - Present
+   Match Reason: Partial match: nissan-juke
+
+817. nissan - KICKS (P15_)
+   Model Slug: kicks-p15
+   Dates: 01/16 - Present
+   Match Reason: Partial match: nissan-kicks
+
+818. nissan - KUBISTAR MPV (X76)
+   Model Slug: kubistar-mpv-x76
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+819. nissan - KUBISTAR Van (X76)
+   Model Slug: kubistar-van-x76
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+820. nissan - LEAF (ZE0)
+   Model Slug: leaf-ze0
+   Dates: 11/10 - Present
+   Match Reason: Partial match: nissan-leaf
+
+821. nissan - LEAF (ZE1)
+   Model Slug: leaf-ze1
+   Dates: 11/10 - Present
+   Match Reason: Partial match: nissan-leaf
+
+822. nissan - MAXIMA / MAXIMA QX IV
+   Model Slug: maxima-maxima-qx-iv
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+823. nissan - MAXIMA / MAXIMA QX V
+   Model Slug: maxima-maxima-qx-v
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+824. nissan - NOTE (E11, NE11)
+   Model Slug: note-e11-ne11
+   Dates: 03/06 - Present
+   Match Reason: Partial match: nissan-note
+
+825. nissan - NOTE (E12)
+   Model Slug: note-e12
+   Dates: 03/06 - Present
+   Match Reason: Partial match: nissan-note
+
+826. nissan - NP200
+   Model Slug: np200
+   Dates: 10/08 - Present
+
+827. nissan - NV250 Bus (X61)
+   Model Slug: nv250-bus-x61
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+828. nissan - NV250 Van (X61)
+   Model Slug: nv250-van-x61
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+829. nissan - NV300 Kombi (X82)
+   Model Slug: nv300-kombi-x82
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+830. nissan - NV300 Van (X82)
+   Model Slug: nv300-van-x82
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+831. nissan - NV400 Bus (X62, X62B)
+   Model Slug: nv400-bus-x62-x62b
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+832. nissan - NV400 Van (X62, X62B)
+   Model Slug: nv400-van-x62-x62b
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+833. nissan - PIXO (UA0)
+   Model Slug: pixo-ua0
+   Dates: 03/09 - Present
+   Match Reason: Partial match: nissan-pixo
+
+834. nissan - PRIMASTAR Bus (X83)
+   Model Slug: primastar-bus-x83
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+835. nissan - PRIMASTAR Van (X82)
+   Model Slug: primastar-van-x82
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+836. nissan - PRIMASTAR Van (X83)
+   Model Slug: primastar-van-x83
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+837. nissan - PRIMERA (P10)
+   Model Slug: primera-p10
+   Dates: 06/90 - 06/96
+   Match Reason: Partial match: nissan-primera
+
+838. nissan - PRIMERA (P11)
+   Model Slug: primera-p11
+   Dates: 06/90 - 06/96
+   Match Reason: Partial match: nissan-primera
+
+839. nissan - PRIMERA (P12)
+   Model Slug: primera-p12
+   Dates: 06/90 - 06/96
+   Match Reason: Partial match: nissan-primera
+
+840. nissan - PRIMERA Estate (WP12)
+   Model Slug: primera-estate-wp12
+   Dates: 06/90 - 06/96
+   Match Reason: Partial match: nissan-primera
+
+841. nissan - PRIMERA Hatchback
+   Model Slug: primera-hatchback
+   Dates: 06/90 - 06/96
+   Match Reason: Partial match: nissan-primera
+
+842. nissan - PRIMERA Traveller
+   Model Slug: primera-traveller
+   Dates: 06/90 - 06/96
+   Match Reason: Partial match: nissan-primera
+
+843. nissan - PRIMERA Traveller (W10)
+   Model Slug: primera-traveller-w10
+   Dates: 06/90 - 06/96
+   Match Reason: Partial match: nissan-primera
+
+844. nissan - SERENA (C23)
+   Model Slug: serena-c23
+   Dates: 07/92 - 09/01
+   Match Reason: Partial match: nissan-serena
+
+845. nissan - TERRANO (D10)
+   Model Slug: terrano-d10
+   Dates: 08/13 - Present
+   Match Reason: Partial match: nissan-terrano
+
+846. nissan - TERRANO II (R20)
+   Model Slug: terrano-ii-r20
+   Dates: 08/13 - Present
+   Match Reason: Partial match: nissan-terrano
+
+847. nissan - X-TRAIL I (T30)
+   Model Slug: x-trail-i-t30
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+848. nissan - X-TRAIL II (T31)
+   Model Slug: x-trail-ii-t31
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+849. nissan - X-TRAIL III (T32_, T32R, T32RR)
+   Model Slug: x-trail-iii-t32-t32r-t32rr
+   Dates: 06/01 - 01/13
+   Match Reason: Partial match: nissan-x-trail i
+
+850. opel - ADAM (M13)
+   Model Slug: adam-m13
+   Dates: 10/12 - Present
+   Match Reason: Partial match: opel-adam
+
+851. opel - AGILA (A) (H00)
+   Model Slug: agila-a-h00
+   Dates: 09/00 - 12/07
+   Match Reason: Partial match: opel-agila
+
+852. opel - AGILA (B) (H08)
+   Model Slug: agila-b-h08
+   Dates: 09/00 - 12/07
+   Match Reason: Partial match: opel-agila
+
+853. opel - AMPERA (R12)
+   Model Slug: ampera-r12
+   Dates: 11/11 - Present
+   Match Reason: Partial match: opel-ampera
+
+854. opel - AMPERA-E (F17)
+   Model Slug: ampera-e-f17
+   Dates: 11/11 - Present
+   Match Reason: Partial match: opel-ampera
+
+855. opel - ASTRA F Hatchback (T92)
+   Model Slug: astra-f-hatchback-t92
+   Dates: 01/09 - Present
+   Match Reason: Partial match: opel-back
+
+856. opel - ASTRA G Hatchback (T98)
+   Model Slug: astra-g-hatchback-t98
+   Dates: 01/09 - Present
+   Match Reason: Partial match: opel-back
+
+857. opel - back (A04)"
+   Model Slug: back-a04
+   Dates: 01/09 - Present
+   Match Reason: Partial match: opel-back
+
+858. opel - back (T92)"
+   Model Slug: back-t92
+   Dates: 01/09 - Present
+   Match Reason: Partial match: opel-back
+
+859. opel - CAMPO (TF0, TF1)
+   Model Slug: campo-tf0-tf1
+   Dates: 08/87 - Present
+   Match Reason: Partial match: opel-campo
+
+860. opel - CASCADA (W13)
+   Model Slug: cascada-w13
+   Dates: 03/13 - Present
+   Match Reason: Partial match: opel-cascada
+
+861. opel - CORSA E Hatchback Van (X15)
+   Model Slug: corsa-e-hatchback-van-x15
+   Dates: 01/09 - Present
+   Match Reason: Partial match: opel-back
+
+862. peugeot - BIPPER (AA_)
+   Model Slug: bipper-aa
+   Dates: 02/08 - Present
+   Match Reason: Partial match: peugeot-bipper
+
+863. peugeot - BIPPER Tepee
+   Model Slug: bipper-tepee
+   Dates: 02/08 - Present
+   Match Reason: Partial match: peugeot-bipper
+
+864. peugeot - EXPERT (224_)
+   Model Slug: expert-224
+   Dates: 10/95 - Present
+   Match Reason: Partial match: peugeot-expert
+
+865. peugeot - EXPERT Bus (V_)
+   Model Slug: expert-bus-v
+   Dates: 10/95 - Present
+   Match Reason: Partial match: peugeot-expert
+
+866. peugeot - EXPERT Platform/Chassis
+   Model Slug: expert-platformchassis
+   Dates: 10/95 - Present
+   Match Reason: Partial match: peugeot-expert
+
+867. peugeot - EXPERT Tepee (VF3X_)
+   Model Slug: expert-tepee-vf3x
+   Dates: 10/95 - Present
+   Match Reason: Partial match: peugeot-expert
+
+868. peugeot - EXPERT Van (222)
+   Model Slug: expert-van-222
+   Dates: 10/95 - Present
+   Match Reason: Partial match: peugeot-expert
+
+869. peugeot - EXPERT Van (V_)
+   Model Slug: expert-van-v
+   Dates: 10/95 - Present
+   Match Reason: Partial match: peugeot-expert
+
+870. peugeot - EXPERT Van (VF3A_,
+   Model Slug: expert-van-vf3a
+   Dates: 10/95 - Present
+   Match Reason: Partial match: peugeot-expert
+
+871. peugeot - ION
+   Model Slug: ion
+   Dates: 11/10 - Present
+
+872. peugeot - RCZ
+   Model Slug: rcz
+   Dates: 03/10 - Present
+
+873. peugeot - RIFTER
+   Model Slug: rifter
+   Dates: 09/18 - Present
+
+874. porsche - 718 BOXSTER (982)
+   Model Slug: 718-boxster-982
+   Dates: 04/12 - Present
+   Match Reason: Partial match: porsche-boxster
+
+875. porsche - 968
+   Model Slug: 968
+   Dates: 06/91 - 11/95
+   Match Reason: Partial match: porsche-968 convertible
+
+876. porsche - BOXSTER (981)
+   Model Slug: boxster-981
+   Dates: 04/12 - Present
+   Match Reason: Partial match: porsche-boxster
+
+877. porsche - BOXSTER (986)
+   Model Slug: boxster-986
+   Dates: 04/12 - Present
+   Match Reason: Partial match: porsche-boxster
+
+878. porsche - BOXSTER (987)
+   Model Slug: boxster-987
+   Dates: 04/12 - Present
+   Match Reason: Partial match: porsche-boxster
+
+879. porsche - BOXSTER Spyder (981)
+   Model Slug: boxster-spyder-981
+   Dates: 04/12 - Present
+   Match Reason: Partial match: porsche-boxster
+
+880. porsche - CAYENNE (92A)
+   Model Slug: cayenne-92a
+   Dates: 06/10 - Present
+   Match Reason: Partial match: porsche-cayenne
+
+881. porsche - CAYENNE (9PA)
+   Model Slug: cayenne-9pa
+   Dates: 06/10 - Present
+   Match Reason: Partial match: porsche-cayenne
+
+882. porsche - CAYENNE (9YA)
+   Model Slug: cayenne-9ya
+   Dates: 06/10 - Present
+   Match Reason: Partial match: porsche-cayenne
+
+883. porsche - CAYMAN (981)
+   Model Slug: cayman-981
+   Dates: 03/13 - Present
+   Match Reason: Partial match: porsche-cayman
+
+884. porsche - CAYMAN (987)
+   Model Slug: cayman-987
+   Dates: 03/13 - Present
+   Match Reason: Partial match: porsche-cayman
+
+885. porsche - MACAN (95B)
+   Model Slug: macan-95b
+   Dates: 02/14 - Present
+   Match Reason: Partial match: porsche-macan
+
+886. porsche - PANAMERA (970)
+   Model Slug: panamera-970
+   Dates: 09/09 - Present
+   Match Reason: Partial match: porsche-panamera
+
+887. porsche - PANAMERA (971)
+   Model Slug: panamera-971
+   Dates: 09/09 - Present
+   Match Reason: Partial match: porsche-panamera
+
+888. porsche - PANAMERA Sport Turis-
+   Model Slug: panamera-sport-turis-
+   Dates: 09/09 - Present
+   Match Reason: Partial match: porsche-panamera
+
+889. puch - G-MODELL (W461)
+   Model Slug: g-modell-w461
+   Dates: 02/90 - Present
+   Match Reason: Partial match: puch-g-modell
+
+890. puch - G-MODELL (W463)
+   Model Slug: g-modell-w463
+   Dates: 02/90 - Present
+   Match Reason: Partial match: puch-g-modell
+
+891. renault - ALASKAN
+   Model Slug: alaskan
+   Dates: 10/16 - Present
+
+892. renault - AVANTIME (DE0_)
+   Model Slug: avantime-de0
+   Dates: 09/01 - 05/03
+   Match Reason: Partial match: renault-avantime
+
+893. renault - Chassis (ED/HD/UD)
+   Model Slug: chassis-edhdud
+   Dates:  - Present
+   Match Reason: Partial match: renault-chassis
+
+894. renault - Chassis (EG_)
+   Model Slug: chassis-eg
+   Dates:  - Present
+   Match Reason: Partial match: renault-chassis
+
+895. renault - Chassis (EL)
+   Model Slug: chassis-el
+   Dates:  - Present
+   Match Reason: Partial match: renault-chassis
+
+896. renault - DOKKER
+   Model Slug: dokker
+   Dates: 12/13 - Present
+
+897. renault - DUSTER (HS_)
+   Model Slug: duster-hs
+   Dates: 01/11 - Present
+   Match Reason: Partial match: renault-duster
+
+898. renault - FLUENCE (L3_)
+   Model Slug: fluence-l3
+   Dates: 02/10 - Present
+   Match Reason: Partial match: renault-fluence
+
+899. renault - KADJAR (HA_, HL_)
+   Model Slug: kadjar-ha-hl
+   Dates: 06/15 - Present
+   Match Reason: Partial match: renault-kadjar
+
+900. renault - KANGOO (KC0/1_)
+   Model Slug: kangoo-kc01
+   Dates: 08/97 - Present
+   Match Reason: Partial match: renault-kangoo
+
+901. renault - KANGOO / GRAND KAN-
+   Model Slug: kangoo-grand-kan-
+   Dates: 08/97 - Present
+   Match Reason: Partial match: renault-kangoo
+
+902. renault - KANGOO BE BOP
+   Model Slug: kangoo-be-bop
+   Dates: 08/97 - Present
+   Match Reason: Partial match: renault-kangoo
+
+903. renault - KANGOO Express
+   Model Slug: kangoo-express
+   Dates: 08/97 - Present
+   Match Reason: Partial match: renault-kangoo
+
+904. renault - KANGOO III Box Body/
+   Model Slug: kangoo-iii-box-body
+   Dates: 08/97 - Present
+   Match Reason: Partial match: renault-kangoo
+
+905. renault - KANGOO III MPV
+   Model Slug: kangoo-iii-mpv
+   Dates: 08/97 - Present
+   Match Reason: Partial match: renault-kangoo
+
+906. renault - KAPTUR (H5_)
+   Model Slug: kaptur-h5
+   Dates: 03/16 - Present
+   Match Reason: Partial match: renault-kaptur
+
+907. renault - KWID (BW_, BE_, B6_)
+   Model Slug: kwid-bw-be-b6
+   Dates: 09/15 - Present
+   Match Reason: Partial match: renault-kwid
+
+908. renault - LATITUDE (L70_)
+   Model Slug: latitude-l70
+   Dates: 07/10 - Present
+   Match Reason: Partial match: renault-latitude
+
+909. renault - TALISMAN (LP_)
+   Model Slug: talisman-lp
+   Dates: 07/13 - Present
+   Match Reason: Partial match: renault-talisman
+
+910. renault - TALISMAN Grandtour
+   Model Slug: talisman-grandtour
+   Dates: 07/13 - Present
+   Match Reason: Partial match: renault-talisman
+
+911. renault - TRAFIC Platform/Chassis
+   Model Slug: trafic-platformchassis
+   Dates:  - Present
+   Match Reason: Partial match: renault-chassis
+
+912. renault - TWIZY (MAM_)
+   Model Slug: twizy-mam
+   Dates: 04/12 - Present
+   Match Reason: Partial match: renault-twizy
+
+913. renault - WIND (E4M_)
+   Model Slug: wind-e4m
+   Dates: 07/10 - Present
+   Match Reason: Partial match: renault-wind
+
+914. renault - ZOE (BFM_)
+   Model Slug: zoe-bfm
+   Dates: 06/12 - Present
+   Match Reason: Partial match: renault-zoe
+
+915. renault - ZOE Hatchback Van
+   Model Slug: zoe-hatchback-van
+   Dates: 06/12 - Present
+   Match Reason: Partial match: renault-zoe
+
+916. rover - 200 Coupe (XW)
+   Model Slug: 200-coupe-xw
+   Dates: 03/96 - 11/99
+   Match Reason: Partial match: rover-coupe
+
+917. rover - 800 Coupe
+   Model Slug: 800-coupe
+   Dates: 03/96 - 11/99
+   Match Reason: Partial match: rover-coupe
+
+918. rover - COUPE
+   Model Slug: coupe
+   Dates: 03/96 - 11/99
+
+919. saab - 9-3 (YS3D)
+   Model Slug: 9-3-ys3d
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+920. saab - 9-3 (YS3F, E79, D79, D75)
+   Model Slug: 9-3-ys3f-e79-d79-d75
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+921. saab - 9-3 Cabriolet (YS3D)
+   Model Slug: 9-3-cabriolet-ys3d
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+922. saab - 9-3 Convertible (YS3F)
+   Model Slug: 9-3-convertible-ys3f
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+923. saab - 9-3 Estate (E50)
+   Model Slug: 9-3-estate-e50
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+924. saab - 9-3X (YS3)
+   Model Slug: 9-3x-ys3
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+925. saab - 9-5 (YS3E)
+   Model Slug: 9-5-ys3e
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+926. saab - 9-5 (YS3G)
+   Model Slug: 9-5-ys3g
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+927. saab - 9-5 Estate (YS3E)
+   Model Slug: 9-5-estate-ys3e
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+928. saab - 9-7X
+   Model Slug: 9-7x
+   Dates: 12/05 - Present
+
+929. saab - 900 II
+   Model Slug: 900-ii
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+930. saab - 900 II Convertible
+   Model Slug: 900-ii-convertible
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+931. saab - 900 II Coupe
+   Model Slug: 900-ii-coupe
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+932. saab - 9000
+   Model Slug: 9000
+   Dates: 09/84 - 12/98
+   Match Reason: Partial match: saab-9000 hatchback
+
+933. saab - 9000 Hatchback
+   Model Slug: 9000-hatchback
+   Dates: 02/98 - 08/03
+   Match Reason: Partial match: saab-9-3
+
+934. seat - ALHAMBRA (710, 711)
+   Model Slug: alhambra-710-711
+   Dates: 06/10 - Present
+   Match Reason: Partial match: seat-alhambra
+
+935. seat - ALHAMBRA (7V8, 7V9)
+   Model Slug: alhambra-7v8-7v9
+   Dates: 06/10 - Present
+   Match Reason: Partial match: seat-alhambra
+
+936. seat - ALTEA (5P1)
+   Model Slug: altea-5p1
+   Dates: 03/04 - Present
+   Match Reason: Partial match: seat-altea
+
+937. seat - ALTEA XL (5P5, 5P8)
+   Model Slug: altea-xl-5p5-5p8
+   Dates: 03/04 - Present
+   Match Reason: Partial match: seat-altea
+
+938. seat - ARONA (KJ7, KJP)
+   Model Slug: arona-kj7-kjp
+   Dates: 07/17 - Present
+   Match Reason: Partial match: seat-arona
+
+939. seat - AROSA (6H1)
+   Model Slug: arosa-6h1
+   Dates: 05/97 - 06/04
+   Match Reason: Partial match: seat-arosa
+
+940. seat - ATECA (KH7, KHP)
+   Model Slug: ateca-kh7-khp
+   Dates: 04/16 - Present
+   Match Reason: Partial match: seat-ateca
+
+941. seat - CORDOBA (6K1, 6K2)
+   Model Slug: cordoba-6k1-6k2
+   Dates: 02/93 - 10/99
+   Match Reason: Partial match: seat-cordoba
+
+942. seat - CORDOBA (6K2)
+   Model Slug: cordoba-6k2
+   Dates: 02/93 - 10/99
+   Match Reason: Partial match: seat-cordoba
+
+943. seat - CORDOBA (6L2)
+   Model Slug: cordoba-6l2
+   Dates: 02/93 - 10/99
+   Match Reason: Partial match: seat-cordoba
+
+944. seat - CORDOBA Vario (6K5)
+   Model Slug: cordoba-vario-6k5
+   Dates: 02/93 - 10/99
+   Match Reason: Partial match: seat-cordoba
+
+945. seat - EXEO (3R2)
+   Model Slug: exeo-3r2
+   Dates: 12/08 - Present
+   Match Reason: Partial match: seat-exeo
+
+946. seat - EXEO ST (3R5)
+   Model Slug: exeo-st-3r5
+   Dates: 12/08 - Present
+   Match Reason: Partial match: seat-exeo
+
+947. seat - INCA (6K9)
+   Model Slug: inca-6k9
+   Dates: 11/95 - 06/03
+   Match Reason: Partial match: seat-inca
+
+948. seat - LEON (1M1)
+   Model Slug: leon-1m1
+   Dates: 11/99 - 06/06
+   Match Reason: Partial match: seat-leon
+
+949. seat - LEON (1P1)
+   Model Slug: leon-1p1
+   Dates: 11/99 - 06/06
+   Match Reason: Partial match: seat-leon
+
+950. seat - LEON (5F1)
+   Model Slug: leon-5f1
+   Dates: 11/99 - 06/06
+   Match Reason: Partial match: seat-leon
+
+951. seat - LEON (KL1)
+   Model Slug: leon-kl1
+   Dates: 11/99 - 06/06
+   Match Reason: Partial match: seat-leon
+
+952. seat - LEON Hatchback Van (5F1)
+   Model Slug: leon-hatchback-van-5f1
+   Dates: 11/99 - 06/06
+   Match Reason: Partial match: seat-leon
+
+953. seat - LEON SC (5F5)
+   Model Slug: leon-sc-5f5
+   Dates: 11/99 - 06/06
+   Match Reason: Partial match: seat-leon
+
+954. seat - LEON Sportstourer (KL8)
+   Model Slug: leon-sportstourer-kl8
+   Dates: 11/99 - 06/06
+   Match Reason: Partial match: seat-leon
+
+955. seat - LEON ST (5F8)
+   Model Slug: leon-st-5f8
+   Dates: 11/99 - 06/06
+   Match Reason: Partial match: seat-leon
+
+956. seat - LEON ST Estate Van (5F8)
+   Model Slug: leon-st-estate-van-5f8
+   Dates: 11/99 - 06/06
+   Match Reason: Partial match: seat-leon
+
+957. seat - MARBELLA (28A)
+   Model Slug: marbella-28a
+   Dates: 08/86 - 10/98
+   Match Reason: Partial match: seat-marbella
+
+958. seat - Mii (KF1, KE1)
+   Model Slug: mii-kf1-ke1
+   Dates: 10/11 - Present
+   Match Reason: Partial match: seat-mii
+
+959. skoda - CITIGO
+   Model Slug: citigo
+   Dates: 10/11 - Present
+
+960. skoda - E-CITIGO (NE1)
+   Model Slug: e-citigo-ne1
+   Dates: 10/11 - Present
+   Match Reason: Partial match: skoda-citigo
+
+961. skoda - ENYAQ iV SUV (5AZ)
+   Model Slug: enyaq-iv-suv-5az
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+962. skoda - FABIA III Estate (NJ5)
+   Model Slug: fabia-iii-estate-nj5
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+963. skoda - FAVORIT (781)
+   Model Slug: favorit-781
+   Dates: 05/89 - 09/94
+   Match Reason: Partial match: skoda-favorit
+
+964. skoda - FAVORIT Forman (785)
+   Model Slug: favorit-forman-785
+   Dates: 05/89 - 09/94
+   Match Reason: Partial match: skoda-favorit
+
+965. skoda - FAVORIT Pickup (787)
+   Model Slug: favorit-pickup-787
+   Dates: 05/89 - 09/94
+   Match Reason: Partial match: skoda-favorit
+
+966. skoda - FELICIA I (6U1)
+   Model Slug: felicia-i-6u1
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+967. skoda - FELICIA I Estate (6U5)
+   Model Slug: felicia-i-estate-6u5
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+968. skoda - FELICIA I Pickup (6UF, 6U7)
+   Model Slug: felicia-i-pickup-6uf-6u7
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+969. skoda - FELICIA II (6U1)
+   Model Slug: felicia-ii-6u1
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+970. skoda - FELICIA II Estate (6U5)
+   Model Slug: felicia-ii-estate-6u5
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+971. skoda - KAMIQ (NW4)
+   Model Slug: kamiq-nw4
+   Dates: 07/19 - Present
+   Match Reason: Partial match: skoda-kamiq
+
+972. skoda - KAROQ (NU7, ND7)
+   Model Slug: karoq-nu7-nd7
+   Dates: 07/17 - Present
+   Match Reason: Partial match: skoda-karoq
+
+973. skoda - KODIAQ (NS7, NV7, NS6)
+   Model Slug: kodiaq-ns7-nv7-ns6
+   Dates: 10/16 - Present
+   Match Reason: Partial match: skoda-kodiaq
+
+974. skoda - OCTAVIA III (5E3, NL3, NR3)
+   Model Slug: octavia-iii-5e3-nl3-nr3
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+975. skoda - OCTAVIA III Combi (5E5, 5E6)
+   Model Slug: octavia-iii-combi-5e5-5e6
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+976. skoda - RAPID (NA2)
+   Model Slug: rapid-na2
+   Dates: 10/11 - Present
+   Match Reason: Partial match: skoda-rapid
+
+977. skoda - RAPID (NH3)
+   Model Slug: rapid-nh3
+   Dates: 10/11 - Present
+   Match Reason: Partial match: skoda-rapid
+
+978. skoda - RAPID Spaceback (NH1)
+   Model Slug: rapid-spaceback-nh1
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+979. skoda - ROOMSTER (5J7)
+   Model Slug: roomster-5j7
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+980. skoda - ROOMSTER Praktik (5J)
+   Model Slug: roomster-praktik-5j
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+981. skoda - SUPERB I (3U4)
+   Model Slug: superb-i-3u4
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+982. skoda - SUPERB II (3T4)
+   Model Slug: superb-ii-3t4
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+983. skoda - SUPERB II Estate (3T5)
+   Model Slug: superb-ii-estate-3t5
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+984. skoda - SUPERB III (3V3)
+   Model Slug: superb-iii-3v3
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+985. skoda - SUPERB III Estate (3V5)
+   Model Slug: superb-iii-estate-3v5
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+986. skoda - YETI (5L)
+   Model Slug: yeti-5l
+   Dates: 09/19 - Present
+   Match Reason: Partial match: skoda-e-citigo
+
+987. smart - CABRIO (450)
+   Model Slug: cabrio-450
+   Dates: 03/00 - 01/04
+   Match Reason: Partial match: smart-cabrio
+
+988. smart - CITY-COUPE (450)
+   Model Slug: city-coupe-450
+   Dates: 07/98 - 01/04
+   Match Reason: Partial match: smart-city-coupe
+
+989. smart - CROSSBLADE (450)
+   Model Slug: crossblade-450
+   Dates: 06/02 - 12/03
+   Match Reason: Partial match: smart-crossblade
+
+990. smart - FORFOUR (454)
+   Model Slug: forfour-454
+   Dates: 01/04 - 06/06
+   Match Reason: Partial match: smart-forfour
+
+991. smart - FORFOUR Hatchback (453)
+   Model Slug: forfour-hatchback-453
+   Dates: 01/04 - 06/06
+   Match Reason: Partial match: smart-forfour
+
+992. smart - FORTWO Cabrio (450)
+   Model Slug: fortwo-cabrio-450
+   Dates: 03/00 - 01/04
+   Match Reason: Partial match: smart-cabrio
+
+993. smart - FORTWO Cabrio (451)
+   Model Slug: fortwo-cabrio-451
+   Dates: 03/00 - 01/04
+   Match Reason: Partial match: smart-cabrio
+
+994. smart - ROADSTER (452)
+   Model Slug: roadster-452
+   Dates: 04/03 - 11/05
+   Match Reason: Partial match: smart-roadster
+
+995. smart - ROADSTER Coupe (452)
+   Model Slug: roadster-coupe-452
+   Dates: 04/03 - 11/05
+   Match Reason: Partial match: smart-roadster
+
+996. ssangyong - KORANDO (C300)
+   Model Slug: korando-c300
+   Dates: 02/19 - Present
+   Match Reason: Partial match: ssangyong-korando
+
+997. ssangyong - KORANDO (CK)
+   Model Slug: korando-ck
+   Dates: 02/19 - Present
+   Match Reason: Partial match: ssangyong-korando
+
+998. ssangyong - KORANDO (KJ)
+   Model Slug: korando-kj
+   Dates: 02/19 - Present
+   Match Reason: Partial match: ssangyong-korando
+
+999. ssangyong - KORANDO Cabrio (KJ)
+   Model Slug: korando-cabrio-kj
+   Dates: 02/19 - Present
+   Match Reason: Partial match: ssangyong-korando
+
+1000. ssangyong - KORANDO SPORTS
+   Model Slug: korando-sports
+   Dates: 02/19 - Present
+   Match Reason: Partial match: ssangyong-korando
+
+1001. ssangyong - KYRON
+   Model Slug: kyron
+   Dates: 05/05 - Present
+
+1002. ssangyong - MUSSO (FJ)
+   Model Slug: musso-fj
+   Dates: 01/93 - Present
+   Match Reason: Partial match: ssangyong-musso
+
+1003. ssangyong - MUSSO (QK)
+   Model Slug: musso-qk
+   Dates: 01/93 - Present
+   Match Reason: Partial match: ssangyong-musso
+
+1004. ssangyong - MUSSO GRAND
+   Model Slug: musso-grand
+   Dates: 01/93 - Present
+   Match Reason: Partial match: ssangyong-musso
+
+1005. ssangyong - MUSSO SPORTS
+   Model Slug: musso-sports
+   Dates: 01/93 - Present
+   Match Reason: Partial match: ssangyong-musso
+
+1006. ssangyong - REXTON (Y400)
+   Model Slug: rexton-y400
+   Dates: 07/17 - Present
+   Match Reason: Partial match: ssangyong-rexton
+
+1007. ssangyong - REXTON / REXTON II (GAB_)
+   Model Slug: rexton-rexton-ii-gab
+   Dates: 07/17 - Present
+   Match Reason: Partial match: ssangyong-rexton
+
+1008. ssangyong - REXTON W / REXTON
+   Model Slug: rexton-w-rexton
+   Dates: 07/17 - Present
+   Match Reason: Partial match: ssangyong-rexton
+
+1009. ssangyong - STAVIC
+   Model Slug: stavic
+   Dates: 02/05 - Present
+
+1010. ssangyong - TIVOLI
+   Model Slug: tivoli
+   Dates: 01/15 - Present
+
+1011. subaru - BRZ
+   Model Slug: brz
+   Dates: 06/12 - Present
+
+1012. subaru - FORESTER (SF_)
+   Model Slug: forester-sf
+   Dates: 03/97 - 09/02
+   Match Reason: Partial match: subaru-forester
+
+1013. subaru - FORESTER (SG_)
+   Model Slug: forester-sg
+   Dates: 03/97 - 09/02
+   Match Reason: Partial match: subaru-forester
+
+1014. subaru - FORESTER (SH_)
+   Model Slug: forester-sh
+   Dates: 03/97 - 09/02
+   Match Reason: Partial match: subaru-forester
+
+1015. subaru - FORESTER (SJ)
+   Model Slug: forester-sj
+   Dates: 03/97 - 09/02
+   Match Reason: Partial match: subaru-forester
+
+1016. subaru - FORESTER (SK_)
+   Model Slug: forester-sk
+   Dates: 03/97 - 09/02
+   Match Reason: Partial match: subaru-forester
+
+1017. subaru - LEVORG
+   Model Slug: levorg
+   Dates: 03/15 - Present
+
+1018. subaru - OUTBACK (BE, BH)
+   Model Slug: outback-be-bh
+   Dates: 10/98 - 08/03
+   Match Reason: Partial match: subaru-outback
+
+1019. subaru - OUTBACK (BL, BP)
+   Model Slug: outback-bl-bp
+   Dates: 10/98 - 08/03
+   Match Reason: Partial match: subaru-outback
+
+1020. subaru - OUTBACK (BR)
+   Model Slug: outback-br
+   Dates: 10/98 - 08/03
+   Match Reason: Partial match: subaru-outback
+
+1021. subaru - OUTBACK (BS)
+   Model Slug: outback-bs
+   Dates: 10/98 - 08/03
+   Match Reason: Partial match: subaru-outback
+
+1022. subaru - OUTBACK (BT)
+   Model Slug: outback-bt
+   Dates: 10/98 - 08/03
+   Match Reason: Partial match: subaru-outback
+
+1023. subaru - SVX (CX)
+   Model Slug: svx-cx
+   Dates: 09/92 - 12/97
+   Match Reason: Partial match: subaru-svx
+
+1024. subaru - TREZIA
+   Model Slug: trezia
+   Dates: 03/11 - Present
+
+1025. subaru - TRIBECA (B9)
+   Model Slug: tribeca-b9
+   Dates: 01/05 - Present
+   Match Reason: Partial match: subaru-tribeca
+
+1026. subaru - VIVIO
+   Model Slug: vivio
+   Dates: 03/92 - 04/00
+
+1027. suzuki - ACROSS (A5Z_)
+   Model Slug: across-a5z
+   Dates: 06/20 - Present
+   Match Reason: Partial match: suzuki-across
+
+1028. suzuki - ALTO (GF)
+   Model Slug: alto-gf
+   Dates: 01/09 - Present
+   Match Reason: Partial match: suzuki-alto
+
+1029. suzuki - ALTO IV (EF)
+   Model Slug: alto-iv-ef
+   Dates: 01/09 - Present
+   Match Reason: Partial match: suzuki-alto
+
+1030. suzuki - ALTO VI (FF)
+   Model Slug: alto-vi-ff
+   Dates: 01/09 - Present
+   Match Reason: Partial match: suzuki-alto
+
+1031. suzuki - BALENO (EG)
+   Model Slug: baleno-eg
+   Dates: 03/95 - 05/02
+   Match Reason: Partial match: suzuki-baleno
+
+1032. suzuki - BALENO (FW, EW)
+   Model Slug: baleno-fw-ew
+   Dates: 03/95 - 05/02
+   Match Reason: Partial match: suzuki-baleno
+
+1033. suzuki - BALENO Estate (EG)
+   Model Slug: baleno-estate-eg
+   Dates: 03/95 - 05/02
+   Match Reason: Partial match: suzuki-baleno
+
+1034. suzuki - BALENO Hatchback (EG)
+   Model Slug: baleno-hatchback-eg
+   Dates: 03/95 - 05/02
+   Match Reason: Partial match: suzuki-baleno
+
+1035. suzuki - CELERIO (LF)
+   Model Slug: celerio-lf
+   Dates: 02/14 - Present
+   Match Reason: Partial match: suzuki-celerio
+
+1036. suzuki - GRAND VITARA I (FT, HT)
+   Model Slug: grand-vitara-i-ft-ht
+   Dates: 07/88 - 08/99
+   Match Reason: Partial match: suzuki-vitara
+
+1037. suzuki - GRAND VITARA II (JT, TE, TD)
+   Model Slug: grand-vitara-ii-jt-te-td
+   Dates: 07/88 - 08/99
+   Match Reason: Partial match: suzuki-vitara
+
+1038. suzuki - IGNIS I (FH)
+   Model Slug: ignis-i-fh
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1039. suzuki - IGNIS II (MH)
+   Model Slug: ignis-ii-mh
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1040. suzuki - IGNIS III (MF)
+   Model Slug: ignis-iii-mf
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1041. suzuki - JIMNY Closed Off-Road Vehicle (SN)
+   Model Slug: jimny-closed-off-road-vehicle-sn
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1042. suzuki - KIZASHI (FR)
+   Model Slug: kizashi-fr
+   Dates: 10/10 - Present
+   Match Reason: Partial match: suzuki-kizashi
+
+1043. suzuki - LIANA (ER, RH_)
+   Model Slug: liana-er-rh
+   Dates: 10/01 - Present
+   Match Reason: Partial match: suzuki-liana
+
+1044. suzuki - S-CROSS
+   Model Slug: s-cross
+   Dates: 01/22 - Present
+
+1045. suzuki - SAMURAI Closed Off- Road Vehicle (SJ_)
+   Model Slug: samurai-closed-off-road-vehicle-sj
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1046. suzuki - SPLASH (EX)
+   Model Slug: splash-ex
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1047. suzuki - SUPER CARRY Bus (ED)
+   Model Slug: super-carry-bus-ed
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1048. suzuki - SWACE (AMZ_)
+   Model Slug: swace-amz
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1049. suzuki - SWIFT II Hatchback (EA, MA)
+   Model Slug: swift-ii-hatchback-ea-ma
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1050. suzuki - SWIFT II Saloon (AH, AJ)
+   Model Slug: swift-ii-saloon-ah-aj
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1051. suzuki - SWIFT III (MZ, EZ)
+   Model Slug: swift-iii-mz-ez
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1052. suzuki - SWIFT IV (FZ, NZ)
+   Model Slug: swift-iv-fz-nz
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1053. suzuki - SWIFT V (AZ)
+   Model Slug: swift-v-az
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1054. suzuki - SX4 (EY, GY)
+   Model Slug: sx4-ey-gy
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1055. suzuki - SX4 S-Cross (JY)
+   Model Slug: sx4-s-cross-jy
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1056. suzuki - SX4 Saloon (GY, RW)
+   Model Slug: sx4-saloon-gy-rw
+   Dates: 01/22 - Present
+   Match Reason: Partial match: suzuki-s-cross
+
+1057. suzuki - VITARA (ET, TA, TD)
+   Model Slug: vitara-et-ta-td
+   Dates: 07/88 - 08/99
+   Match Reason: Partial match: suzuki-vitara
+
+1058. suzuki - VITARA (LY)
+   Model Slug: vitara-ly
+   Dates: 07/88 - 08/99
+   Match Reason: Partial match: suzuki-vitara
+
+1059. suzuki - VITARA Cabrio (ET, TA)
+   Model Slug: vitara-cabrio-et-ta
+   Dates: 07/88 - 08/99
+   Match Reason: Partial match: suzuki-vitara
+
+1060. suzuki - X-90 (EL)
+   Model Slug: x-90-el
+   Dates: 09/95 - 12/97
+   Match Reason: Partial match: suzuki-x-90
+
+1061. tazzari - ZERO
+   Model Slug: zero
+   Dates: 01/10 - Present
+
+1062. toyota - AURIS (_E15_)
+   Model Slug: auris-e15
+   Dates: 10/06 - 09/12
+   Match Reason: Partial match: toyota-auris
+
+1063. toyota - AURIS (_E18_)
+   Model Slug: auris-e18
+   Dates: 10/06 - 09/12
+   Match Reason: Partial match: toyota-auris
+
+1064. toyota - AURIS VAN Hatchback Van (_E18_)
+   Model Slug: auris-van-hatchback-van-e18
+   Dates: 10/06 - 09/12
+   Match Reason: Partial match: toyota-auris
+
+1065. toyota - AVENSIS (_T22_)
+   Model Slug: avensis-t22
+   Dates: 09/97 - 02/03
+   Match Reason: Partial match: toyota-avensis
+
+1066. toyota - AVENSIS (_T25_)
+   Model Slug: avensis-t25
+   Dates: 09/97 - 02/03
+   Match Reason: Partial match: toyota-avensis
+
+1067. toyota - AVENSIS Estate (_T22_)
+   Model Slug: avensis-estate-t22
+   Dates: 07/13 - Present
+   Match Reason: Partial match: toyota-estate
+
+1068. toyota - AVENSIS Estate (_T25_)
+   Model Slug: avensis-estate-t25
+   Dates: 07/13 - Present
+   Match Reason: Partial match: toyota-estate
+
+1069. toyota - AVENSIS Estate (_T27_)
+   Model Slug: avensis-estate-t27
+   Dates: 07/13 - Present
+   Match Reason: Partial match: toyota-estate
+
+1070. toyota - AVENSIS Liftback (_T22_)
+   Model Slug: avensis-liftback-t22
+   Dates: 09/97 - 02/03
+   Match Reason: Partial match: toyota-avensis
+
+1071. toyota - AVENSIS Saloon (_T25_)
+   Model Slug: avensis-saloon-t25
+   Dates: 09/97 - 02/03
+   Match Reason: Partial match: toyota-avensis
+
+1072. toyota - AVENSIS Saloon (_T27_)
+   Model Slug: avensis-saloon-t27
+   Dates: 09/97 - 02/03
+   Match Reason: Partial match: toyota-avensis
+
+1073. toyota - AVENSIS VERSO (_M2_)
+   Model Slug: avensis-verso-m2
+   Dates: 09/97 - 02/03
+   Match Reason: Partial match: toyota-avensis
+
+1074. toyota - AYGO (_B1_)
+   Model Slug: aygo-b1
+   Dates: 02/05 - Present
+   Match Reason: Partial match: toyota-aygo
+
+1075. toyota - AYGO (_B4_)
+   Model Slug: aygo-b4
+   Dates: 02/05 - Present
+   Match Reason: Partial match: toyota-aygo
+
+1076. toyota - C-HR (_X1_)
+   Model Slug: c-hr-x1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1077. toyota - CAMRY (_V1_)
+   Model Slug: camry-v1
+   Dates: 06/91 - 09/97
+   Match Reason: Partial match: toyota-camry
+
+1078. toyota - CAMRY (_V2_)
+   Model Slug: camry-v2
+   Dates: 06/91 - 09/97
+   Match Reason: Partial match: toyota-camry
+
+1079. toyota - CAMRY Estate (_V1_)
+   Model Slug: camry-estate-v1
+   Dates: 07/13 - Present
+   Match Reason: Partial match: toyota-estate
+
+1080. toyota - CAMRY Estate (_V2_)
+   Model Slug: camry-estate-v2
+   Dates: 07/13 - Present
+   Match Reason: Partial match: toyota-estate
+
+1081. toyota - CAMRY Saloon (_V3_)
+   Model Slug: camry-saloon-v3
+   Dates: 06/91 - 09/97
+   Match Reason: Partial match: toyota-camry
+
+1082. toyota - CARINA E VI (_T19_)
+   Model Slug: carina-e-vi-t19
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1083. toyota - CARINA E VI Saloon (_ T19_)
+   Model Slug: carina-e-vi-saloon-t19
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1084. toyota - CARINA E VI Sportswagon (_T19_)
+   Model Slug: carina-e-vi-sportswagon-t19
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1085. toyota - CELICA Convertible (_ T18_)
+   Model Slug: celica-convertible-t18
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1086. toyota - CELICA Convertible (_ T20_)
+   Model Slug: celica-convertible-t20
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1087. toyota - CELICA Coupe (_T18_)
+   Model Slug: celica-coupe-t18
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1088. toyota - CELICA Coupe (_T20_)
+   Model Slug: celica-coupe-t20
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1089. toyota - CELICA Coupe (_T23_)
+   Model Slug: celica-coupe-t23
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1090. toyota - COROLLA (_E10_)
+   Model Slug: corolla-e10
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1091. toyota - COROLLA (_E11_)
+   Model Slug: corolla-e11
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1092. toyota - COROLLA (_E12_)
+   Model Slug: corolla-e12
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1093. toyota - COROLLA (_E9_)
+   Model Slug: corolla-e9
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1094. toyota - COROLLA Compact (_ E10_)
+   Model Slug: corolla-compact-e10
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1095. toyota - COROLLA Compact (_ E11_)
+   Model Slug: corolla-compact-e11
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1096. toyota - COROLLA Compact (_ E9_)
+   Model Slug: corolla-compact-e9
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1097. toyota - COROLLA Estate (_E10_)
+   Model Slug: corolla-estate-e10
+   Dates: 07/13 - Present
+   Match Reason: Partial match: toyota-estate
+
+1098. toyota - COROLLA Estate (_E11_)
+   Model Slug: corolla-estate-e11
+   Dates: 07/13 - Present
+   Match Reason: Partial match: toyota-estate
+
+1099. toyota - COROLLA Estate (_E12_)
+   Model Slug: corolla-estate-e12
+   Dates: 07/13 - Present
+   Match Reason: Partial match: toyota-estate
+
+1100. toyota - COROLLA Liftback (_ E10_)
+   Model Slug: corolla-liftback-e10
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1101. toyota - COROLLA Liftback (_ E11_)
+   Model Slug: corolla-liftback-e11
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1102. toyota - COROLLA Liftback (_E9_)
+   Model Slug: corolla-liftback-e9
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1103. toyota - COROLLA Saloon (_E12_)
+   Model Slug: corolla-saloon-e12
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1104. toyota - COROLLA Saloon (_E15_)
+   Model Slug: corolla-saloon-e15
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1105. toyota - COROLLA Saloon (_E18_, ZRE1_)
+   Model Slug: corolla-saloon-e18-zre1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1106. toyota - COROLLA Verso (_E12_)
+   Model Slug: corolla-verso-e12
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1107. toyota - COROLLA Verso (ZER_, ZZE12_, R1_)
+   Model Slug: corolla-verso-zer-zze12-r1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1108. toyota - Estate (_E18_)"
+   Model Slug: estate-e18
+   Dates: 07/13 - Present
+   Match Reason: Partial match: toyota-estate
+
+1109. toyota - FJ CRUISER (GSJ1_)
+   Model Slug: fj-cruiser-gsj1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1110. toyota - GT 86 Coupe (ZN6_)
+   Model Slug: gt-86-coupe-zn6
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1111. toyota - HIACE IV Bus (_H1_, _ H2_)
+   Model Slug: hiace-iv-bus-h1-h2
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1112. toyota - HIACE IV Bus (_H1_)
+   Model Slug: hiace-iv-bus-h1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1113. toyota - HIACE IV Van (_H1_)
+   Model Slug: hiace-iv-van-h1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1114. toyota - HIACE IV Van (����H1_, ���� H2_)
+   Model Slug: hiace-iv-van-h1-h2
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1115. toyota - HILUX VIII Pickup (_N1_)
+   Model Slug: hilux-viii-pickup-n1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1116. toyota - LAND CRUISER (_J7_)
+   Model Slug: land-cruiser-j7
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1117. toyota - LAND CRUISER 100 (_ J1_)
+   Model Slug: land-cruiser-100-j1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1118. toyota - LAND CRUISER 200 (_ J2_)
+   Model Slug: land-cruiser-200-j2
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1119. toyota - LAND CRUISER 80 (_J8_)
+   Model Slug: land-cruiser-80-j8
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1120. toyota - LAND CRUISER 90 (_J9_)
+   Model Slug: land-cruiser-90-j9
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1121. toyota - LAND CRUISER Hardtop (_J7_)
+   Model Slug: land-cruiser-hardtop-j7
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1122. toyota - LAND CRUISER PRADO (_J12_)
+   Model Slug: land-cruiser-prado-j12
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1123. toyota - LAND CRUISER PRADO (_J15_)
+   Model Slug: land-cruiser-prado-j15
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1124. toyota - LITEACE Bus (_R2_)
+   Model Slug: liteace-bus-r2
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1125. toyota - LITEACE Van (_R2    V)
+   Model Slug: liteace-van-r2-v
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1126. toyota - MIRAI (JPD1_)
+   Model Slug: mirai-jpd1
+   Dates: 10/14 - Present
+   Match Reason: Partial match: toyota-mirai
+
+1127. toyota - PASEO Convertible (_L5_)
+   Model Slug: paseo-convertible-l5
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1128. toyota - PASEO Coupe (_L5_)
+   Model Slug: paseo-coupe-l5
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1129. toyota - PICNIC (_XM1_)
+   Model Slug: picnic-xm1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1130. toyota - PRIUS (_W3_)
+   Model Slug: prius-w3
+   Dates: 04/09 - Present
+   Match Reason: Partial match: toyota-prius
+
+1131. toyota - PRIUS (_W5_)
+   Model Slug: prius-w5
+   Dates: 04/09 - Present
+   Match Reason: Partial match: toyota-prius
+
+1132. toyota - PRIUS C (NHP10_)
+   Model Slug: prius-c-nhp10
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1133. toyota - PRIUS Liftback (_W2_)
+   Model Slug: prius-liftback-w2
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1134. toyota - PRIUS PLUS (_W4_)
+   Model Slug: prius-plus-w4
+   Dates: 04/09 - Present
+   Match Reason: Partial match: toyota-prius
+
+1135. toyota - PRIUS Saloon (_W1_)
+   Model Slug: prius-saloon-w1
+   Dates: 04/09 - Present
+   Match Reason: Partial match: toyota-prius
+
+1136. toyota - PROACE Bus (MDZ_)
+   Model Slug: proace-bus-mdz
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1137. toyota - PROACE CITY Box Body/ MPV
+   Model Slug: proace-city-box-body-mpv
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1138. toyota - PROACE CITY VERSO MPV
+   Model Slug: proace-city-verso-mpv
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1139. toyota - PROACE Van (MDX_)
+   Model Slug: proace-van-mdx
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1140. toyota - PROACE Van (MDZ_)
+   Model Slug: proace-van-mdz
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1141. toyota - RAV 4 I Cabrio (_A1_)
+   Model Slug: rav-4-i-cabrio-a1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1142. toyota - STARLET (_P9_)
+   Model Slug: starlet-p9
+   Dates: 11/95 - 10/99
+   Match Reason: Partial match: toyota-starlet
+
+1143. toyota - SUPRA (_A8_)
+   Model Slug: supra-a8
+   Dates: 05/93 - 08/02
+   Match Reason: Partial match: toyota-supra
+
+1144. toyota - SUPRA (DB_)
+   Model Slug: supra-db
+   Dates: 05/93 - 08/02
+   Match Reason: Partial match: toyota-supra
+
+1145. toyota - URBAN CRUISER (_P1_)
+   Model Slug: urban-cruiser-p1
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1146. toyota - VERSO (_R2_)
+   Model Slug: verso-r2
+   Dates: 04/09 - Present
+   Match Reason: Partial match: toyota-verso
+
+1147. toyota - VERSO S (_P12_)
+   Model Slug: verso-s-p12
+   Dates: 04/09 - Present
+   Match Reason: Partial match: toyota-verso
+
+1148. toyota - YARIS (_P1_)
+   Model Slug: yaris-p1
+   Dates: 01/99 - 12/05
+   Match Reason: Partial match: toyota-yaris
+
+1149. toyota - YARIS (_P13_)
+   Model Slug: yaris-p13
+   Dates: 01/99 - 12/05
+   Match Reason: Partial match: toyota-yaris
+
+1150. toyota - YARIS (_P15_)
+   Model Slug: yaris-p15
+   Dates: 01/99 - 12/05
+   Match Reason: Partial match: toyota-yaris
+
+1151. toyota - YARIS (_P21_, _PA1_, _ PH1_)
+   Model Slug: yaris-p21-pa1-ph1
+   Dates: 01/99 - 12/05
+   Match Reason: Partial match: toyota-yaris
+
+1152. toyota - YARIS (_P9_)
+   Model Slug: yaris-p9
+   Dates: 01/99 - 12/05
+   Match Reason: Partial match: toyota-yaris
+
+1153. toyota - YARIS CROSS (MXP_)
+   Model Slug: yaris-cross-mxp
+   Dates: 10/16 - Present
+   Match Reason: Partial match: toyota-c-hr
+
+1154. toyota - YARIS VERSO (_P2_)
+   Model Slug: yaris-verso-p2
+   Dates: 04/09 - Present
+   Match Reason: Partial match: toyota-verso
+
+1155. uaz - HUNTER (31519_)
+   Model Slug: hunter-31519
+   Dates: 10/92 - Present
+   Match Reason: Partial match: uaz-hunter
+
+1156. uaz - HUNTER Open Off-Road Vehicle (31519_)
+   Model Slug: hunter-open-off-road-vehicle-31519
+   Dates: 10/92 - Present
+   Match Reason: Partial match: uaz-hunter
+
+1157. uaz - PATRIOT
+   Model Slug: patriot
+   Dates: 07/04 - Present
+
+1158. uaz - PICKUP
+   Model Slug: pickup
+   Dates: 01/09 - Present
+
+1159. vauxhall - ADAM (M13)
+   Model Slug: adam-m13
+   Dates: 10/12 - Present
+   Match Reason: Partial match: vauxhall-adam
+
+1160. vauxhall - AMPERA (R12)
+   Model Slug: ampera-r12
+   Dates: 03/12 - Present
+   Match Reason: Partial match: vauxhall-ampera
+
+1161. vauxhall - back (G09)"
+   Model Slug: back-g09
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1162. vauxhall - back (J89)"
+   Model Slug: back-j89
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1163. vauxhall - back (T92)"
+   Model Slug: back-t92
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1164. vauxhall - back (T98)"
+   Model Slug: back-t98
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1165. vauxhall - back (Z18)"
+   Model Slug: back-z18
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1166. vauxhall - CALIBRA (C89)
+   Model Slug: calibra-c89
+   Dates: 06/90 - 07/97
+   Match Reason: Partial match: vauxhall-calibra
+
+1167. vauxhall - Hatchback Van (S07)"
+   Model Slug: hatchback-van-s07
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1168. vauxhall - Hatchback Van (S93)"
+   Model Slug: hatchback-van-s93
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1169. vauxhall - Hatchback Van (X01)"
+   Model Slug: hatchback-van-x01
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1170. vauxhall - Hatchback Van (X15)"
+   Model Slug: hatchback-van-x15
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1171. vauxhall - INSIGNIA Mk I (A) Country Tourer (G09)
+   Model Slug: insignia-mk-i-a-country-tourer-g09
+   Dates: 03/17 - Present
+   Match Reason: Partial match: vauxhall-tourer
+
+1172. vauxhall - INSIGNIA Mk I (A) Sports Tourer (G09)
+   Model Slug: insignia-mk-i-a-sports-tourer-g09
+   Dates: 03/17 - Present
+   Match Reason: Partial match: vauxhall-tourer
+
+1173. vauxhall - MOKKA
+   Model Slug: mokka
+   Dates: 06/20 - Present
+
+1174. vauxhall - MOKKA / MOKKA X (J13)
+   Model Slug: mokka-mokka-x-j13
+   Dates: 06/20 - Present
+   Match Reason: Partial match: vauxhall-mokka
+
+1175. vauxhall - MONTEREY (M92)
+   Model Slug: monterey-m92
+   Dates: 09/91 - 07/98
+   Match Reason: Partial match: vauxhall-monterey
+
+1176. vauxhall - MONTEREY Mk II (M98)
+   Model Slug: monterey-mk-ii-m98
+   Dates: 09/91 - 07/98
+   Match Reason: Partial match: vauxhall-monterey
+
+1177. vauxhall - NOVAVAN Hatchback Van (S83)
+   Model Slug: novavan-hatchback-van-s83
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1178. vauxhall - SIGNUM (Z03)
+   Model Slug: signum-z03
+   Dates: 03/03 - 10/08
+   Match Reason: Partial match: vauxhall-signum
+
+1179. vauxhall - SINTRA (APV)
+   Model Slug: sintra-apv
+   Dates: 09/96 - 04/99
+   Match Reason: Partial match: vauxhall-sintra
+
+1180. vauxhall - Tourer (Z18)"
+   Model Slug: tourer-z18
+   Dates: 03/17 - Present
+   Match Reason: Partial match: vauxhall-tourer
+
+1181. vauxhall - try Tourer (Z18)"
+   Model Slug: try-tourer-z18
+   Dates: 03/17 - Present
+   Match Reason: Partial match: vauxhall-tourer
+
+1182. vauxhall - VECTRA (B) Hatchback (J96)
+   Model Slug: vectra-b-hatchback-j96
+   Dates: 09/91 - 02/98
+   Match Reason: Partial match: vauxhall-back
+
+1183. vauxhall - VIVA (C16)
+   Model Slug: viva-c16
+   Dates: 01/15 - Present
+   Match Reason: Partial match: vauxhall-viva
+
+1184. vauxhall - VIVARO A Box (X83)
+   Model Slug: vivaro-a-box-x83
+   Dates: 01/15 - Present
+   Match Reason: Partial match: vauxhall-viva
+
+1185. vauxhall - VIVARO A Bus (X83)
+   Model Slug: vivaro-a-bus-x83
+   Dates: 01/15 - Present
+   Match Reason: Partial match: vauxhall-viva
+
+1186. vauxhall - VIVARO A Platform/ Chassis (X83)
+   Model Slug: vivaro-a-platform-chassis-x83
+   Dates: 01/15 - Present
+   Match Reason: Partial match: vauxhall-viva
+
+1187. vauxhall - VIVARO B Box (X82)
+   Model Slug: vivaro-b-box-x82
+   Dates: 01/15 - Present
+   Match Reason: Partial match: vauxhall-viva
+
+1188. vauxhall - VIVARO B Bus (X82)
+   Model Slug: vivaro-b-bus-x82
+   Dates: 01/15 - Present
+   Match Reason: Partial match: vauxhall-viva
+
+1189. vauxhall - VIVARO B Platform/ Chassis (X82)
+   Model Slug: vivaro-b-platform-chassis-x82
+   Dates: 01/15 - Present
+   Match Reason: Partial match: vauxhall-viva
+
+1190. vauxhall - VIVARO C Platform Cabin (K0)
+   Model Slug: vivaro-c-platform-cabin-k0
+   Dates: 01/15 - Present
+   Match Reason: Partial match: vauxhall-viva
+
+1191. vauxhall - VIVARO C Van (K0)
+   Model Slug: vivaro-c-van-k0
+   Dates: 01/15 - Present
+   Match Reason: Partial match: vauxhall-viva
+
+1192. vauxhall - VIVARO LIFE Bus (K0)
+   Model Slug: vivaro-life-bus-k0
+   Dates: 01/15 - Present
+   Match Reason: Partial match: vauxhall-viva
+
+1193. volkswagen - -365
+   Model Slug: -365
+   Dates:  - Present
+
+1194. volkswagen - AMAROK (2HA, 2HB, S1B, S6B, S7A, S7B)
+   Model Slug: amarok-2ha-2hb-s1b-s6b-s7a-s7b
+   Dates: 09/10 - Present
+   Match Reason: Partial match: volkswagen-amarok
+
+1195. volkswagen - AMAROK Platform/ Chassis (S1B, S6B, S7B)
+   Model Slug: amarok-platform-chassis-s1b-s6b-s7b
+   Dates: 09/10 - Present
+   Match Reason: Partial match: volkswagen-amarok
+
+1196. volkswagen - ARTEON (3H7, 3H8)
+   Model Slug: arteon-3h7-3h8
+   Dates: 04/17 - Present
+   Match Reason: Partial match: volkswagen-arteon
+
+1197. volkswagen - ARTEON SHOOTING
+   Model Slug: arteon-shooting
+   Dates: 04/17 - Present
+   Match Reason: Partial match: volkswagen-arteon
+
+1198. volkswagen - BEETLE (5C1, 5C2)
+   Model Slug: beetle-5c1-5c2
+   Dates: 04/11 - Present
+   Match Reason: Partial match: volkswagen-beetle
+
+1199. volkswagen - BEETLE Convertible (5C7, 5C8)
+   Model Slug: beetle-convertible-5c7-5c8
+   Dates: 04/11 - Present
+   Match Reason: Partial match: volkswagen-beetle
+
+1200. volkswagen - BORA I (1J2)
+   Model Slug: bora-i-1j2
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1201. volkswagen - BORA Variant (1J6)
+   Model Slug: bora-variant-1j6
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1202. volkswagen - CADDY ALLTRACK Box Body/MPV (SAA)
+   Model Slug: caddy-alltrack-box-bodympv-saa
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1203. volkswagen - CADDY ALLTRACK MPV (SAB)
+   Model Slug: caddy-alltrack-mpv-sab
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1204. volkswagen - CADDY II Box Body/MPV (9K9A)
+   Model Slug: caddy-ii-box-bodympv-9k9a
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1205. volkswagen - CADDY II MPV (9K9B)
+   Model Slug: caddy-ii-mpv-9k9b
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1206. volkswagen - CADDY II Pickup (9U7)
+   Model Slug: caddy-ii-pickup-9u7
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1207. volkswagen - CADDY III Box Body/MPV (2KA, 2KH, 2CA, 2CH)
+   Model Slug: caddy-iii-box-bodympv-2ka-2kh-2ca-2ch
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1208. volkswagen - CADDY III MPV (2KB, 2KJ,2CB,2CJ)
+   Model Slug: caddy-iii-mpv-2kb-2kj2cb2cj
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1209. volkswagen - CADDY IV Box Body/MPV (SAA, SAH)
+   Model Slug: caddy-iv-box-bodympv-saa-sah
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1210. volkswagen - CADDY IV MPV (SAB, SAJ)
+   Model Slug: caddy-iv-mpv-sab-saj
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1211. volkswagen - CADDY V Box Body/MPV (SBA, SBH)
+   Model Slug: caddy-v-box-bodympv-sba-sbh
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1212. volkswagen - CADDY V MPV (SBB, SBJ)
+   Model Slug: caddy-v-mpv-sbb-sbj
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1213. volkswagen - CALIFORNIA T6 Camper (SGC, SGG, SHC)
+   Model Slug: california-t6-camper-sgc-sgg-shc
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1214. volkswagen - CC (358)
+   Model Slug: cc-358
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1215. volkswagen - CORRADO (53I)
+   Model Slug: corrado-53i
+   Dates: 08/87 - 12/95
+   Match Reason: Partial match: volkswagen-corrado
+
+1216. volkswagen - CRAFTER 30-35 Bus (2E_)
+   Model Slug: crafter-30-35-bus-2e
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1217. volkswagen - CRAFTER 30-50 Platform/Chassis (2F_)
+   Model Slug: crafter-30-50-platformchassis-2f
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1218. volkswagen - CRAFTER 30-50 Van (2E_)
+   Model Slug: crafter-30-50-van-2e
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1219. volkswagen - CRAFTER Bus (SYI, SYJ)
+   Model Slug: crafter-bus-syi-syj
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1220. volkswagen - CRAFTER Platform/Chassis (SZ_)
+   Model Slug: crafter-platformchassis-sz
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1221. volkswagen - CRAFTER Van (SY_, SX_)
+   Model Slug: crafter-van-sy-sx
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1222. volkswagen - EOS (1F7, 1F8)
+   Model Slug: eos-1f7-1f8
+   Dates: 03/06 - 08/15
+   Match Reason: Partial match: volkswagen-eos
+
+1223. volkswagen - FOX Hatchback (5Z1, 5Z3, 5Z4)
+   Model Slug: fox-hatchback-5z1-5z3-5z4
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1224. volkswagen - GOLF ALLTRACK VII Variant (BA5, BV5)
+   Model Slug: golf-alltrack-vii-variant-ba5-bv5
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1225. volkswagen - GOLF II (19E, 1G1)
+   Model Slug: golf-ii-19e-1g1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1226. volkswagen - GOLF III (1H1)
+   Model Slug: golf-iii-1h1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1227. volkswagen - GOLF III Cabriolet (1E7)
+   Model Slug: golf-iii-cabriolet-1e7
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1228. volkswagen - GOLF III Variant (1H5)
+   Model Slug: golf-iii-variant-1h5
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1229. volkswagen - GOLF IV (1J1)
+   Model Slug: golf-iv-1j1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1230. volkswagen - GOLF IV Cabriolet (1E7)
+   Model Slug: golf-iv-cabriolet-1e7
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1231. volkswagen - GOLF IV Variant (1J5)
+   Model Slug: golf-iv-variant-1j5
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1232. volkswagen - GOLF PLUS (5M1, 521)
+   Model Slug: golf-plus-5m1-521
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1233. volkswagen - GOLF SPORTSVAN (AM1,AN1)
+   Model Slug: golf-sportsvan-am1an1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1234. volkswagen - GOLF V (1K1)
+   Model Slug: golf-v-1k1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1235. volkswagen - GOLF V Variant (1K5)
+   Model Slug: golf-v-variant-1k5
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1236. volkswagen - GOLF VAN VII Variant (BA5)
+   Model Slug: golf-van-vii-variant-ba5
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1237. volkswagen - GOLF VI (5K1)
+   Model Slug: golf-vi-5k1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1238. volkswagen - GOLF VI Convertible (517)
+   Model Slug: golf-vi-convertible-517
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1239. volkswagen - GOLF VI Variant (AJ5)
+   Model Slug: golf-vi-variant-aj5
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1240. volkswagen - GOLF VII (5G1, BQ1, BE1, BE2)
+   Model Slug: golf-vii-5g1-bq1-be1-be2
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1241. volkswagen - GOLF VII Variant (BA5,BV5)
+   Model Slug: golf-vii-variant-ba5bv5
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1242. volkswagen - GOLF VIII (CD1)
+   Model Slug: golf-viii-cd1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1243. volkswagen - GOLF VIII Variant (CG5)
+   Model Slug: golf-viii-variant-cg5
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1244. volkswagen - GRAND CALIFORNIA
+   Model Slug: grand-california
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1245. volkswagen - ID.3 (E11)
+   Model Slug: id3-e11
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1246. volkswagen - ID.4 (E21)
+   Model Slug: id4-e21
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1247. volkswagen - ID.5 (E39)
+   Model Slug: id5-e39
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1248. volkswagen - JETTA II (19E, 1G2, 165)
+   Model Slug: jetta-ii-19e-1g2-165
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1249. volkswagen - JETTA III (1K2)
+   Model Slug: jetta-iii-1k2
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1250. volkswagen - JETTA IV (162, 163, AV3, AV2)
+   Model Slug: jetta-iv-162-163-av3-av2
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1251. volkswagen - LOAD UP (121, 122, BL1, BL2)
+   Model Slug: load-up-121-122-bl1-bl2
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1252. volkswagen - LT 28-35 I Bus (281-363)
+   Model Slug: lt-28-35-i-bus-281-363
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1253. volkswagen - LT 28-35 I Platform/Chassis (281-363)
+   Model Slug: lt-28-35-i-platformchassis-281-363
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1254. volkswagen - LT 28-35 I Van (281-363)
+   Model Slug: lt-28-35-i-van-281-363
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1255. volkswagen - LT 28-35 II Bus (2DB,2DE, 2DK)
+   Model Slug: lt-28-35-ii-bus-2db2de-2dk
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1256. volkswagen - LT 28-46 II Platform/Chassis (2DC, 2DF, 2DG,2DL, 2DM)
+   Model Slug: lt-28-46-ii-platformchassis-2dc-2df-2dg2dl-2dm
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1257. volkswagen - LT 28-46 II Van (2DA,2DD, 2DH)
+   Model Slug: lt-28-46-ii-van-2da2dd-2dh
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1258. volkswagen - LT 40-55 I Platform/
+   Model Slug: lt-40-55-i-platform
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1259. volkswagen - LT 40-55 I Van (291-512)
+   Model Slug: lt-40-55-i-van-291-512
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1260. volkswagen - LUPO I (6X1, 6E1)
+   Model Slug: lupo-i-6x1-6e1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1261. volkswagen - MULTIVAN T7 (STM, STN)
+   Model Slug: multivan-t7-stm-stn
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1262. volkswagen - MULTIVAN V (7HM, 7HN, 7HF, 7EF, 7EM, 7EN)
+   Model Slug: multivan-v-7hm-7hn-7hf-7ef-7em-7en
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1263. volkswagen - MULTIVAN VI (SGF, SGM, SGN, SHM, SHN)
+   Model Slug: multivan-vi-sgf-sgm-sgn-shm-shn
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1264. volkswagen - NEW BEETLE (9C1, 1C1)
+   Model Slug: new-beetle-9c1-1c1
+   Dates: 04/11 - Present
+   Match Reason: Partial match: volkswagen-beetle
+
+1265. volkswagen - NEW BEETLE Convertible (1Y7)
+   Model Slug: new-beetle-convertible-1y7
+   Dates: 04/11 - Present
+   Match Reason: Partial match: volkswagen-beetle
+
+1266. volkswagen - PASSAT (362)
+   Model Slug: passat-362
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1267. volkswagen - PASSAT (3G2, CB2)
+   Model Slug: passat-3g2-cb2
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1268. volkswagen - PASSAT ALLTRACK (3G5, CB5)
+   Model Slug: passat-alltrack-3g5-cb5
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1269. volkswagen - PASSAT ALLTRACK B7
+   Model Slug: passat-alltrack-b7
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1270. volkswagen - PASSAT B3/B4 (3A2, 35I)
+   Model Slug: passat-b3b4-3a2-35i
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1271. volkswagen - PASSAT B3/B4 Variant (3A5, 35I)
+   Model Slug: passat-b3b4-variant-3a5-35i
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1272. volkswagen - PASSAT B5 (3B2)
+   Model Slug: passat-b5-3b2
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1273. volkswagen - PASSAT B5.5 (3B3)
+   Model Slug: passat-b55-3b3
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1274. volkswagen - PASSAT B5.5 Variant (3B6)
+   Model Slug: passat-b55-variant-3b6
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1275. volkswagen - PASSAT B6 (3C2)
+   Model Slug: passat-b6-3c2
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1276. volkswagen - PASSAT B7 Estate Van
+   Model Slug: passat-b7-estate-van
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1277. volkswagen - PASSAT CC B6 (357)
+   Model Slug: passat-cc-b6-357
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1278. volkswagen - PASSAT Variant (365)
+   Model Slug: passat-variant-365
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1279. volkswagen - PASSAT Variant (3B5)
+   Model Slug: passat-variant-3b5
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1280. volkswagen - PASSAT Variant (3C5)
+   Model Slug: passat-variant-3c5
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1281. volkswagen - PASSAT Variant (3G5,
+   Model Slug: passat-variant-3g5
+   Dates: 08/10 - 12/14
+   Match Reason: Partial match: volkswagen-passat
+
+1282. volkswagen - PHAETON (3D1, 3D2, 3D3, 3D4, 3D6, 3D7, 3D8, 3D9)
+   Model Slug: phaeton-3d1-3d2-3d3-3d4-3d6-3d7-3d8-3d9
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1283. volkswagen - POLO (6N2)
+   Model Slug: polo-6n2
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1284. volkswagen - POLO (6R1, 6C1)
+   Model Slug: polo-6r1-6c1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1285. volkswagen - POLO (9N_, 9A_)
+   Model Slug: polo-9n-9a
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1286. volkswagen - POLO CLASSIC (86C, 80)
+   Model Slug: polo-classic-86c-80
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1287. volkswagen - POLO Coupe (86C, 80)
+   Model Slug: polo-coupe-86c-80
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1288. volkswagen - POLO Hatchback Van (86CF)
+   Model Slug: polo-hatchback-van-86cf
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1289. volkswagen - POLO II (86C, 80)
+   Model Slug: polo-ii-86c-80
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1290. volkswagen - POLO III (6N1)
+   Model Slug: polo-iii-6n1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1291. volkswagen - POLO III CLASSIC (6V2)
+   Model Slug: polo-iii-classic-6v2
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1292. volkswagen - POLO IV Saloon (9A4, 9A2, 9N2, 9A6)
+   Model Slug: polo-iv-saloon-9a4-9a2-9n2-9a6
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1293. volkswagen - POLO V Saloon (602, 604, 612, 614)
+   Model Slug: polo-v-saloon-602-604-612-614
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1294. volkswagen - POLO Van (6R)
+   Model Slug: polo-van-6r
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1295. volkswagen - POLO Van Hatchback Van (6N1)
+   Model Slug: polo-van-hatchback-van-6n1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1296. volkswagen - POLO Variant (6V5)
+   Model Slug: polo-variant-6v5
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1297. volkswagen - POLO VI (AW1, BZ1, AE1)
+   Model Slug: polo-vi-aw1-bz1-ae1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1298. volkswagen - ROUTAN
+   Model Slug: routan
+   Dates: 09/08 - Present
+
+1299. volkswagen - SANTANA
+   Model Slug: santana
+   Dates: 02/93 - Present
+
+1300. volkswagen - SCIROCCO (53B)
+   Model Slug: scirocco-53b
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1301. volkswagen - SCIROCCO III (137, 138)
+   Model Slug: scirocco-iii-137-138
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1302. volkswagen - SHARAN (7M8, 7M9, 7M6)
+   Model Slug: sharan-7m8-7m9-7m6
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1303. volkswagen - SHARAN (7N1, 7N2)
+   Model Slug: sharan-7n1-7n2
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1304. volkswagen - T-ROC (A11, D11)
+   Model Slug: t-roc-a11-d11
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1305. volkswagen - T-ROC Convertible (AC7, AC8)
+   Model Slug: t-roc-convertible-ac7-ac8
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1306. volkswagen - TARO
+   Model Slug: taro
+   Dates: 04/89 - 03/97
+
+1307. volkswagen - TIGUAN (5N_)
+   Model Slug: tiguan-5n
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1308. volkswagen - TIGUAN (AD1, AX1)
+   Model Slug: tiguan-ad1-ax1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1309. volkswagen - TIGUAN VAN (5N_)
+   Model Slug: tiguan-van-5n
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1310. volkswagen - TOUAREG (7P5, 7P6)
+   Model Slug: touareg-7p5-7p6
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1311. volkswagen - TOUAREG (CR7)
+   Model Slug: touareg-cr7
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1312. volkswagen - TOURAN (1T1, 1T2)
+   Model Slug: touran-1t1-1t2
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1313. volkswagen - TOURAN (1T3)
+   Model Slug: touran-1t3
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1314. volkswagen - TOURAN (5T1)
+   Model Slug: touran-5t1
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1315. volkswagen - TOURAN VAN (1T3)
+   Model Slug: touran-van-1t3
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1316. volkswagen - TRANSPORTER IV Bus (70B, 70C, 7DB, 7DK, 70J, 70K, 7DC, 7DJ)
+   Model Slug: transporter-iv-bus-70b-70c-7db-7dk-70j-70k-7dc-7dj
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1317. volkswagen - TRANSPORTER IV Platform/Chassis (70E, 70L, 70M, 7DE, 7DL, 7D)
+   Model Slug: transporter-iv-platformchassis-70e-70l-70m-7de-7dl-7d
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1318. volkswagen - TRANSPORTER IV Van (70A, 70H, 7DA, 7DH)
+   Model Slug: transporter-iv-van-70a-70h-7da-7dh
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1319. volkswagen - TRANSPORTER V Bus (7HB, 7HJ, 7EB, 7EJ)
+   Model Slug: transporter-v-bus-7hb-7hj-7eb-7ej
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1320. volkswagen - TRANSPORTER V Platform/Chassis (7JD, 7JE, 7JL, 7JY, 7JZ, 7FD
+   Model Slug: transporter-v-platformchassis-7jd-7je-7jl-7jy-7jz-7fd
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1321. volkswagen - TRANSPORTER V Van (7HA, 7HH, 7EA, 7EH)
+   Model Slug: transporter-v-van-7ha-7hh-7ea-7eh
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1322. volkswagen - TRANSPORTER VI / CARAVELLE VI Bus (SGB,SGJ, SHB, SHJ)
+   Model Slug: transporter-vi-caravelle-vi-bus-sgbsgj-shb-shj
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1323. volkswagen - TRANSPORTER VI Platform/Chassis (SFD, SFE,SFL, SFZ, SJD, SJ)
+   Model Slug: transporter-vi-platformchassis-sfd-sfesfl-sfz-sjd-sj
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1324. volkswagen - TRANSPORTER VI Van (SGA, SGH, SHA, SHH)
+   Model Slug: transporter-vi-van-sga-sgh-sha-shh
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1325. volkswagen - UP (121, 122, BL1, BL2,BL3, 123)
+   Model Slug: up-121-122-bl1-bl2bl3-123
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1326. volkswagen - VENTO (1H2)
+   Model Slug: vento-1h2
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1327. volkswagen - VOYAGE (5U4, 5U2, 5U6, 5UG)
+   Model Slug: voyage-5u4-5u2-5u6-5ug
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1328. volkswagen - XL1 (6Z!)
+   Model Slug: xl1-6z
+   Dates:  - Present
+   Match Reason: Partial match: volkswagen--365
+
+1329. volvo - C30 (533)
+   Model Slug: c30-533
+   Dates: 09/06 - 12/13
+   Match Reason: Partial match: volvo-c30
+
+1330. volvo - S70 (874)
+   Model Slug: s70-874
+   Dates: 11/96 - 11/00
+   Match Reason: Partial match: volvo-s70
+
+1331. volvo - V50 (545)
+   Model Slug: v50-545
+   Dates: 12/03 - 12/12
+   Match Reason: Partial match: volvo-v50
+
+1332. volvo - V60 (155)
+   Model Slug: v60-155
+   Dates: 09/10 - Present
+   Match Reason: Partial match: volvo-v60
+
+1333. volvo - V60 II (225)
+   Model Slug: v60-ii-225
+   Dates: 09/10 - Present
+   Match Reason: Partial match: volvo-v60
+
+1334. volvo - XC40 (536)
+   Model Slug: xc40-536
+   Dates: 10/17 - Present
+   Match Reason: Partial match: volvo-xc40
+

@@ -1,0 +1,16 @@
+SLUG MATCHING SUMMARY
+============================================================
+
+Total models processed: 2605
+Models with dates: 286 (11.0%)
+Models without dates: 2319 (89.0%)
+
+Matching method: Exact brandSlug + modelSlug matching
+Source file: osram_bulbs_with_slugs.json
+
+Log files created:
+- matched_models_slugs.txt: 286 models with dates
+- unmatched_models_slugs.txt: 2319 models without dates
+- slug_matching_summary.txt: This summary
+
+Generated on: 2025-09-23T11:03:34.568Z

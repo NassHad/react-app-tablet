@@ -93,6 +93,8 @@ const AppRouterContent = () => {
                 <PageTransition direction={navigationDirection}>
                   <VehicleSelectionForm 
                     vehicleType={userSelection.vehicleType}
+                    userSelection={userSelection}
+                    updateUserSelection={updateUserSelection}
                     onComplete={() => {
                       // Navigate to category selection after vehicle is complete
                       navigate('/category');
@@ -163,6 +165,7 @@ const AppRouterContent = () => {
                     <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                       <PageTransition direction={navigationDirection}>
                         <CategoryScreen 
+                          vehicle={userSelection?.vehicle}
                           onCategorySelect={(category) => {
                             updateUserSelection({ category });
                           }}

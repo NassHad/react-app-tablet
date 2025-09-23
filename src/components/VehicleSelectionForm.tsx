@@ -1,36 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useSimpleVehicleContext } from '../contexts/SimpleVehicleContext';
 import { useClickAnimation } from '../hooks/useClickAnimation';
 import { getVehicleTypeDisplayName } from '../utils';
-import { getStrapiVehicleTypeId } from '../config/vehicleTypeMapping';
 import { 
   getBrands, 
-  getModelsByBrand, 
-  getDateRangesByModel,
   vehicleDataService,
   type Brand,
-  type Model,
-  type DateRange
+  type Model
 } from '../utils/vehicleData';
+import type { UserSelection } from '../types';
 
 interface VehicleSelectionFormProps {
   vehicleType: string;
+  userSelection: UserSelection | null;
+  updateUserSelection: (updates: Partial<UserSelection>) => void;
   onComplete: () => void;
 }
 
-const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType, onComplete }) => {
-  const { updateVehicleData } = useSimpleVehicleContext();
+const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType, userSelection, updateUserSelection, onComplete }) => {
   
-  const [selectedBrandId, setSelectedBrandId] = useState<number | null>(null);
-  const [selectedModelId, setSelectedModelId] = useState<number | null>(null);
-  const [selectedDateRange, setSelectedDateRange] = useState<string>('');
+  const [selectedBrandSlug, setSelectedBrandSlug] = useState<string>('');
+  const [selectedModelSlug, setSelectedModelSlug] = useState<string>('');
+  const [selectedDate, setSelectedDate] = useState<string>('');
   const [availableModels, setAvailableModels] = useState<Model[]>([]);
-  const [availableDateRanges, setAvailableDateRanges] = useState<DateRange[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isLoadingModels, setIsLoadingModels] = useState<boolean>(false);
-  const [isLoadingDateRanges, setIsLoadingDateRanges] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   // Load initial brands data
@@ -54,106 +49,64 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
     loadBrands();
   }, []);
 
-  // Filter models when brand changes
+  // Load models when brand changes
   useEffect(() => {
-    const loadModels = async () => {
-      if (selectedBrandId) {
+    const loadModelsForBrand = async () => {
+      if (selectedBrandSlug) {
         try {
           setIsLoadingModels(true);
           setError(null);
-          
-          // Convert vehicleType to a number for Strapi
-          const vehicleTypeId = getStrapiVehicleTypeId(vehicleType as any);
-          
-          const models = await vehicleDataService.getModelsByBrand(selectedBrandId, vehicleTypeId);
-          setAvailableModels(models);
-          setSelectedModelId(null);
-          setSelectedDateRange('');
-          setAvailableDateRanges([]);
+          const modelsData = await vehicleDataService.getModelsByBrandSlug(selectedBrandSlug);
+          setAvailableModels(modelsData);
+          setSelectedModelSlug(''); // Reset model selection
         } catch (err) {
           console.error('Failed to load models:', err);
           setError('Failed to load models. Please try again.');
-          // Fallback to local data
-          const models = getModelsByBrand(selectedBrandId);
-          setAvailableModels(models);
+          setAvailableModels([]);
         } finally {
           setIsLoadingModels(false);
         }
       } else {
         setAvailableModels([]);
-        setSelectedModelId(null);
-        setSelectedDateRange('');
-        setAvailableDateRanges([]);
+        setSelectedModelSlug('');
       }
     };
 
-    loadModels();
-  }, [selectedBrandId, vehicleType]);
+    loadModelsForBrand();
+  }, [selectedBrandSlug]);
 
-  // Load date ranges when model changes
-  useEffect(() => {
-    const loadDateRanges = async () => {
-      if (selectedModelId) {
-        try {
-          setIsLoadingDateRanges(true);
-          setError(null);
-          
-          const dateRanges = await vehicleDataService.getDateRangesByModel(selectedModelId);
-          setAvailableDateRanges(dateRanges);
-          setSelectedDateRange('');
-        } catch (err) {
-          console.error('Failed to load date ranges:', err);
-          setError('Failed to load date ranges. Please try again.');
-          // Fallback to local data
-          const dateRanges = getDateRangesByModel(selectedModelId);
-          setAvailableDateRanges(dateRanges);
-        } finally {
-          setIsLoadingDateRanges(false);
-        }
-      } else {
-        setAvailableDateRanges([]);
-        setSelectedDateRange('');
-      }
-    };
-
-    loadDateRanges();
-  }, [selectedModelId]);
-
-  const handleBrandChange = (brandId: number) => {
-    setSelectedBrandId(brandId);
+  const handleBrandChange = (brandSlug: string) => {
+    setSelectedBrandSlug(brandSlug);
   };
 
-  const handleModelChange = (modelId: number) => {
-    setSelectedModelId(modelId);
-  };
-
-  const handleDateRangeChange = (dateRange: string) => {
-    setSelectedDateRange(dateRange);
+  const handleModelChange = (modelSlug: string) => {
+    setSelectedModelSlug(modelSlug);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (selectedBrandId && selectedModelId && selectedDateRange) {
+    if (selectedBrandSlug && selectedModelSlug && selectedDate) {
       try {
-        const brand = await vehicleDataService.getBrandById(selectedBrandId);
-        const model = await vehicleDataService.getModelById(selectedModelId);
+        const selectedBrand = brands.find(b => b.slug === selectedBrandSlug);
+        const selectedModel = availableModels.find(m => m.modelSlug === selectedModelSlug);
         
-        if (brand && model) {
-          // Store vehicle data in context
-          const vehicleData = {
-            vehicleType,
-            brand: brand.name,
-            model: model.name,
-            dateCirculation: selectedDateRange,
+        if (selectedBrand && selectedModel) {
+          // Create vehicle object for main userSelection state
+          const vehicle = {
+            id: Date.now(),
+            type: vehicleType as any,
+            brand: selectedBrand.name,
+            model: selectedModel.name,
+            dateCirculation: selectedDate,
           };
-          console.log('Storing vehicle data in context:', vehicleData);
-          updateVehicleData(vehicleData);
+          console.log('Storing vehicle data in userSelection:', vehicle);
+          updateUserSelection({ vehicle });
           
           // Navigate to category selection
           onComplete();
         }
       } catch (err) {
-        console.error('Failed to get brand/model data:', err);
+        console.error('Failed to process vehicle selection:', err);
         setError('Failed to process vehicle selection. Please try again.');
       }
     }
@@ -165,7 +118,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
     }
   });
 
-  const isFormValid = selectedBrandId && selectedModelId && selectedDateRange;
+  const isFormValid = selectedBrandSlug && selectedModelSlug && selectedDate;
 
   // Show loading state while initial data is loading
   if (isLoading) {
@@ -193,7 +146,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
           </div>
         )}
         
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-8">
           <div className='flex flex-row gap-4 space-y-8 justify-around'>
             <div className="space-y-3">
               <label htmlFor="brand" className="block text-xl font-bold text-black text-left pl-2">
@@ -201,14 +154,14 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
               </label>
               <select
                 id="brand"
-                value={selectedBrandId || ''}
-                onChange={(e) => handleBrandChange(Number(e.target.value))}
+                value={selectedBrandSlug}
+                onChange={(e) => handleBrandChange(e.target.value)}
                 className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
                 required
               >
                 <option value="">Sélectionnez une marque</option>
                 {brands.map((brand) => (
-                  <option key={brand.id} value={brand.id}>
+                  <option key={brand.id} value={brand.slug}>
                     {brand.name}
                   </option>
                 ))}
@@ -222,22 +175,22 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
               </label>
               <select
                 id="model"
-                value={selectedModelId || ''}
-                onChange={(e) => handleModelChange(Number(e.target.value))}
+                value={selectedModelSlug}
+                onChange={(e) => handleModelChange(e.target.value)}
                 className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
-                disabled={!selectedBrandId || isLoadingModels}
+                disabled={!selectedBrandSlug || isLoadingModels}
                 required
               >
                 <option value="">
                   {isLoadingModels 
                     ? 'Chargement des modèles...' 
-                    : selectedBrandId 
+                    : selectedBrandSlug 
                       ? 'Sélectionnez un modèle' 
                       : 'Sélectionnez d\'abord une marque'
                   }
                 </option>
                 {availableModels.map((model) => (
-                  <option key={model.id} value={model.id}>
+                  <option key={model.id} value={model.modelSlug}>
                     {model.name}
                   </option>
                 ))}
@@ -245,34 +198,56 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
             </div>
           </div>
           
-          <div className='flex flex-row gap-4 justify-around space-y-8'>
-            {/* Date Range Selection */}
-            <div className="space-y-4">
-              <label htmlFor="dateRange" className="block text-xl font-bold text-black text-left pl-2">
+          {/* Date Selection */}
+          <div className="flex justify-center">
+            <div className="space-y-3 w-full max-w-md">
+              <label htmlFor="date" className="block text-xl font-bold text-black text-left pl-2">
                 Date de 1ère mise en circulation
               </label>
-              <select
-                id="dateRange"
-                value={selectedDateRange}
-                onChange={(e) => handleDateRangeChange(e.target.value)}
-                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
-                disabled={!selectedModelId || isLoadingDateRanges}
-                required
-              >
-                <option value="">
-                  {isLoadingDateRanges 
-                    ? 'Chargement des périodes...' 
-                    : selectedModelId 
-                      ? 'Sélectionnez une période' 
-                      : 'Sélectionnez d\'abord un modèle'
-                  }
-                </option>
-                {availableDateRanges.map((dateRange) => (
-                  <option key={dateRange.id} value={dateRange.range}>
-                    {dateRange.range}
-                  </option>
-                ))}
-              </select>
+              <div className="flex gap-4">
+                <select
+                  id="month"
+                  value={selectedDate.split('-')[1] || ''}
+                  onChange={(e) => {
+                    const year = selectedDate.split('-')[0] || '';
+                    setSelectedDate(year ? `${year}-${e.target.value}` : `2024-${e.target.value}`);
+                  }}
+                  className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                  required
+                >
+                  <option value="">Mois</option>
+                  <option value="01">Janvier</option>
+                  <option value="02">Février</option>
+                  <option value="03">Mars</option>
+                  <option value="04">Avril</option>
+                  <option value="05">Mai</option>
+                  <option value="06">Juin</option>
+                  <option value="07">Juillet</option>
+                  <option value="08">Août</option>
+                  <option value="09">Septembre</option>
+                  <option value="10">Octobre</option>
+                  <option value="11">Novembre</option>
+                  <option value="12">Décembre</option>
+                </select>
+                
+                <select
+                  id="year"
+                  value={selectedDate.split('-')[0] || ''}
+                  onChange={(e) => {
+                    const month = selectedDate.split('-')[1] || '';
+                    setSelectedDate(month ? `${e.target.value}-${month}` : `${e.target.value}-01`);
+                  }}
+                  className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                  required
+                >
+                  <option value="">Année</option>
+                  {Array.from({ length: 30 }, (_, i) => new Date().getFullYear() - i).map((year) => (
+                    <option key={year} value={year}>
+                      {year}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
           

@@ -1,0 +1,1147 @@
+MATCHED MODELS WITH DATES (USING SLUGS):
+============================================================
+
+1. abarth - 124 Spider
+   Model Slug: 124-spider
+   Dates: 03/16 - Present
+
+2. abarth - 500 / 595 / 695
+   Model Slug: 500-595-695
+   Dates: 01/08 - Present
+
+3. abarth - 500C / 595C / 695C
+   Model Slug: 500c-595c-695c
+   Dates: 05/08 - Present
+
+4. abarth - GRANDE PUNTO
+   Model Slug: grande-punto
+   Dates: 12/07 - 12/12
+
+5. alpine - A110 II
+   Model Slug: a110-ii
+   Dates: 12/17 - Present
+
+6. autobianchi - Y10
+   Model Slug: y10
+   Dates: 03/85 - 10/95
+
+7. cadillac - CTS
+   Model Slug: cts
+   Dates: 03/02 - 12/07
+
+8. cadillac - ESCALADE
+   Model Slug: escalade
+   Dates: 10/98 - 10/06
+
+9. cadillac - SEVILLE
+   Model Slug: seville
+   Dates: 09/97 - 09/04
+
+10. cadillac - XLR
+   Model Slug: xlr
+   Dates: 09/03 - 09/09
+
+11. chevrolet - ALERO
+   Model Slug: alero
+   Dates: 03/99 - 09/04
+
+12. chevrolet - BOLT
+   Model Slug: bolt
+   Dates: 08/16 - Present
+
+13. chevrolet - CAMARO
+   Model Slug: camaro
+   Dates: 12/92 - 12/02
+
+14. chevrolet - CAMARO Convertible
+   Model Slug: camaro-convertible
+   Dates: 01/11 - Present
+
+15. chevrolet - CORVETTE
+   Model Slug: corvette
+   Dates: 01/97 - 12/04
+
+16. chevrolet - CORVETTE Convertible
+   Model Slug: corvette-convertible
+   Dates: 09/97 - 09/04
+
+17. chevrolet - EVANDA
+   Model Slug: evanda
+   Dates: 03/05 - Present
+
+18. chevrolet - HHR
+   Model Slug: hhr
+   Dates: 09/05 - 12/11
+
+19. chevrolet - IMPALA Saloon
+   Model Slug: impala-saloon
+   Dates: 01/99 - 12/05
+
+20. chevrolet - KALOS
+   Model Slug: kalos
+   Dates: 03/05 - Present
+
+21. chevrolet - KALOS Saloon
+   Model Slug: kalos-saloon
+   Dates: 03/05 - Present
+
+22. chevrolet - MALIBU
+   Model Slug: malibu
+   Dates: 09/15 - Present
+
+23. chevrolet - NUBIRA Estate
+   Model Slug: nubira-estate
+   Dates: 01/05 - Present
+
+24. chevrolet - NUBIRA Saloon
+   Model Slug: nubira-saloon
+   Dates: 01/05 - Present
+
+25. chevrolet - TRANS SPORT
+   Model Slug: trans-sport
+   Dates: 08/96 - 09/05
+
+26. chevrolet - TRAX
+   Model Slug: trax
+   Dates: 12/12 - Present
+
+27. chevrolet - VIVANT
+   Model Slug: vivant
+   Dates: 05/00 - Present
+
+28. chevrolet - VOLT
+   Model Slug: volt
+   Dates: 04/11 - Present
+
+29. chrysler - CROSSFIRE
+   Model Slug: crossfire
+   Dates: 07/03 - 12/08
+
+30. chrysler - CROSSFIRE Roadster
+   Model Slug: crossfire-roadster
+   Dates: 05/04 - 12/08
+
+31. chrysler - NEON II
+   Model Slug: neon-ii
+   Dates: 08/99 - 12/06
+
+32. chrysler - NEW YORKER
+   Model Slug: new-yorker
+   Dates: 01/92 - 09/98
+
+33. chrysler - PT CRUISER Convertible
+   Model Slug: pt-cruiser-convertible
+   Dates: 06/00 - 12/10
+
+34. chrysler - VISION
+   Model Slug: vision
+   Dates: 09/93 - 12/97
+
+35. dacia - DOKKER Pickup
+   Model Slug: dokker-pickup
+   Dates: 07/18 - Present
+
+36. dacia - DUSTER SUV Van
+   Model Slug: duster-suv-van
+   Dates: 04/11 - Present
+
+37. dacia - JOGGER
+   Model Slug: jogger
+   Dates: 03/22 - Present
+
+38. dacia - LOGAN II
+   Model Slug: logan-ii
+   Dates: 10/12 - Present
+
+39. dacia - LOGAN MCV II
+   Model Slug: logan-mcv-ii
+   Dates: 02/13 - Present
+
+40. dacia - SANDERO
+   Model Slug: sandero
+   Dates: 06/08 - Present
+
+41. dacia - SANDERO II
+   Model Slug: sandero-ii
+   Dates: 10/12 - Present
+
+42. dacia - SANDERO III
+   Model Slug: sandero-iii
+   Dates: 01/21 - Present
+
+43. dacia - SPRING
+   Model Slug: spring
+   Dates: 10/20 - Present
+
+44. daewoo - AVEO
+   Model Slug: aveo
+   Dates: 11/02 - 04/05
+
+45. daewoo - LACETTI Kombi
+   Model Slug: lacetti-kombi
+   Dates: 04/97 - 05/99
+
+46. daewoo - LACETTI Saloon
+   Model Slug: lacetti-saloon
+   Dates: 04/97 - 05/99
+
+47. daewoo - NEXIA
+   Model Slug: nexia
+   Dates: 02/95 - 08/97
+
+48. daewoo - NEXIA Saloon
+   Model Slug: nexia-saloon
+   Dates: 02/95 - 06/08
+
+49. daihatsu - ALTIS Saloon
+   Model Slug: altis-saloon
+   Dates: 08/01 - 12/05
+
+50. daihatsu - BEGO
+   Model Slug: bego
+   Dates: 11/05 - Present
+
+51. daihatsu - MIRA GINO I
+   Model Slug: mira-gino-i
+   Dates: 08/98 - 09/03
+
+52. daihatsu - TREVIS
+   Model Slug: trevis
+   Dates: 06/06 - Present
+
+53. daimler - AVENGER
+   Model Slug: avenger
+   Dates: 06/07 - Present
+
+54. daimler - C-MAX II Van
+   Model Slug: c-max-ii-van
+   Dates: 12/10 - Present
+
+55. daimler - CALIBER
+   Model Slug: caliber
+   Dates: 06/06 - Present
+
+56. daimler - CHARGER
+   Model Slug: charger
+   Dates: 01/11 - Present
+
+57. daimler - DART
+   Model Slug: dart
+   Dates: 04/12 - Present
+
+58. daimler - DUCATO Panorama
+   Model Slug: ducato-panorama
+   Dates: 01/90 - 05/94
+
+59. daimler - ECOSPORT
+   Model Slug: ecosport
+   Dates: 09/11 - Present
+
+60. daimler - FIESTA V Van
+   Model Slug: fiesta-v-van
+   Dates: 10/03 - Present
+
+61. daimler - FIESTA VI Van
+   Model Slug: fiesta-vi-van
+   Dates: 08/08 - Present
+
+62. daimler - FIESTA VII Van
+   Model Slug: fiesta-vii-van
+   Dates: 09/18 - Present
+
+63. daimler - FOCUS II Convertible
+   Model Slug: focus-ii-convertible
+   Dates: 10/06 - Present
+
+64. daimler - FOCUS II Estate Van
+   Model Slug: focus-ii-estate-van
+   Dates: 07/04 - 07/11
+
+65. daimler - FOCUS III
+   Model Slug: focus-iii
+   Dates: 07/10 - Present
+
+66. daimler - FOCUS III Estate Van
+   Model Slug: focus-iii-estate-van
+   Dates: 02/12 - Present
+
+67. daimler - FOCUS III Hatchback Van
+   Model Slug: focus-iii-hatchback-van
+   Dates: 01/11 - Present
+
+68. daimler - FOCUS III Saloon
+   Model Slug: focus-iii-saloon
+   Dates: 07/10 - Present
+
+69. daimler - FOCUS III Turnier
+   Model Slug: focus-iii-turnier
+   Dates: 07/10 - Present
+
+70. daimler - GRAND C-MAX Van
+   Model Slug: grand-c-max-van
+   Dates: 12/10 - Present
+
+71. daimler - JOURNEY
+   Model Slug: journey
+   Dates: 06/08 - Present
+
+72. daimler - KUGA I
+   Model Slug: kuga-i
+   Dates: 03/08 - Present
+
+73. daimler - KUGA II Van
+   Model Slug: kuga-ii-van
+   Dates: 05/12 - Present
+
+74. daimler - MAVERICK
+   Model Slug: maverick
+   Dates: 02/01 - Present
+
+75. daimler - MONDEO IV Van
+   Model Slug: mondeo-iv-van
+   Dates: 03/07 - 01/15
+
+76. daimler - NECT Kombi"
+   Model Slug: nect-kombi
+   Dates: 09/13 - Present
+
+77. daimler - NEON
+   Model Slug: neon
+   Dates: 05/94 - 08/99
+
+78. daimler - NEON II
+   Model Slug: neon-ii
+   Dates: 08/99 - Present
+
+79. daimler - NITRO
+   Model Slug: nitro
+   Dates: 09/06 - 12/12
+
+80. daimler - PANDA Hatchback Van
+   Model Slug: panda-hatchback-van
+   Dates: 01/86 - 02/04
+
+81. daimler - PUNTO Convertible
+   Model Slug: punto-convertible
+   Dates: 04/94 - 06/00
+
+82. daimler - PUNTO Hatchback Van
+   Model Slug: punto-hatchback-van
+   Dates: 02/00 - 10/09
+
+83. daimler - SEICENTO / 600 Hatch-
+   Model Slug: seicento-600-hatch-
+   Dates: 01/98 - 01/10
+
+84. daimler - STILO Multi Wagon
+   Model Slug: stilo-multi-wagon
+   Dates: 01/03 - 08/08
+
+85. daimler - TOURNEO CONNECT
+   Model Slug: tourneo-connect
+   Dates: 06/02 - 12/13
+
+86. daimler - TOURNEO COURIER B460 MPV
+   Model Slug: tourneo-courier-b460-mpv
+   Dates: 02/14 - Present
+
+87. daimler - TRANSIT CONNECT MPV
+   Model Slug: transit-connect-mpv
+   Dates: 02/13 - Present
+
+88. daimler - TRANSIT COURIER B460 MPV
+   Model Slug: transit-courier-b460-mpv
+   Dates: 02/14 - Present
+
+89. daimler - TRANSIT TOURNEO Bus
+   Model Slug: transit-tourneo-bus
+   Dates: 07/06 - Present
+
+90. ford-usa - EDGE
+   Model Slug: edge
+   Dates: 01/14 - Present
+
+91. ford-usa - F-150
+   Model Slug: f-150
+   Dates: 10/03 - 09/07
+
+92. ford-usa - MUSTANG Convertible
+   Model Slug: mustang-convertible
+   Dates: 02/14 - Present
+
+93. ford-usa - MUSTANG Coupe
+   Model Slug: mustang-coupe
+   Dates: 02/14 - Present
+
+94. honda - CROSSTOUR I
+   Model Slug: crosstour-i
+   Dates: 09/09 - Present
+
+95. hyundai - CRETA
+   Model Slug: creta
+   Dates: 01/16 - Present
+
+96. hyundai - GENESIS Coupe
+   Model Slug: genesis-coupe
+   Dates: 01/08 - Present
+
+97. hyundai - H100 Van
+   Model Slug: h100-van
+   Dates: 07/93 - 12/04
+
+98. hyundai - H350 Bus
+   Model Slug: h350-bus
+   Dates: 04/15 - Present
+
+99. hyundai - H350 Van
+   Model Slug: h350-van
+   Dates: 04/15 - Present
+
+100. hyundai - HIGHWAY VAN
+   Model Slug: highway-van
+   Dates: 03/00 - 03/04
+
+101. hyundai - i30 Coupe
+   Model Slug: i30-coupe
+   Dates: 05/13 - Present
+
+102. hyundai - ix55
+   Model Slug: ix55
+   Dates: 09/06 - Present
+
+103. hyundai - NEXO
+   Model Slug: nexo
+   Dates: 03/18 - Present
+
+104. hyundai - SANTAMO
+   Model Slug: santamo
+   Dates: 10/98 - 12/02
+
+105. infiniti - G Convertible
+   Model Slug: g-convertible
+   Dates: 09/10 - Present
+
+106. infiniti - G Coupe
+   Model Slug: g-coupe
+   Dates: 09/07 - Present
+
+107. infiniti - G Saloon
+   Model Slug: g-saloon
+   Dates: 01/07 - Present
+
+108. infiniti - M35
+   Model Slug: m35
+   Dates: 01/05 - Present
+
+109. infiniti - M45
+   Model Slug: m45
+   Dates: 01/05 - Present
+
+110. infiniti - Q30
+   Model Slug: q30
+   Dates: 11/15 - Present
+
+111. infiniti - Q50
+   Model Slug: q50
+   Dates: 04/13 - Present
+
+112. infiniti - QX30
+   Model Slug: qx30
+   Dates: 04/16 - Present
+
+113. infiniti - QX50 I
+   Model Slug: qx50-i
+   Dates: 08/13 - Present
+
+114. irmscher - COUPE
+   Model Slug: coupe
+   Dates: 01/97 - Present
+
+115. isuzu - Road Vehicle"
+   Model Slug: road-vehicle
+   Dates: 08/91 - 07/98
+
+116. isuzu - TROOPER III
+   Model Slug: trooper-iii
+   Dates: 05/98 - Present
+
+117. iveco - DAILY I Van
+   Model Slug: daily-i-van
+   Dates: 01/78 - 08/98
+
+118. iveco - DAILY III Van
+   Model Slug: daily-iii-van
+   Dates: 11/97 - 10/09
+
+119. iveco - DAILY IV Bus
+   Model Slug: daily-iv-bus
+   Dates: 05/06 - 08/11
+
+120. iveco - DAILY IV Dump Truck
+   Model Slug: daily-iv-dump-truck
+   Dates: 05/06 - 08/11
+
+121. iveco - DAILY IV Van
+   Model Slug: daily-iv-van
+   Dates: 05/06 - 03/12
+
+122. iveco - DAILY LINE Bus
+   Model Slug: daily-line-bus
+   Dates: 06/14 - Present
+
+123. iveco - DAILY TOURYS Bus
+   Model Slug: daily-tourys-bus
+   Dates: 06/14 - Present
+
+124. iveco - DAILY V Dumptruck
+   Model Slug: daily-v-dumptruck
+   Dates: 09/11 - 02/14
+
+125. iveco - DAILY V Van
+   Model Slug: daily-v-van
+   Dates: 09/11 - 02/14
+
+126. iveco - DAILY VI Van
+   Model Slug: daily-vi-van
+   Dates: 03/14 - Present
+
+127. iveco - MASSIF Pickup
+   Model Slug: massif-pickup
+   Dates: 10/08 - 02/11
+
+128. iveco - MASSIF Single Cab
+   Model Slug: massif-single-cab
+   Dates: 10/08 - 02/11
+
+129. iveco - MASSIF Station Wagon
+   Model Slug: massif-station-wagon
+   Dates: 10/08 - 02/11
+
+130. kia - BESTA Van
+   Model Slug: besta-van
+   Dates: 01/93 - 12/03
+
+131. kia - CARENS IV
+   Model Slug: carens-iv
+   Dates: 03/13 - Present
+
+132. kia - JOICE
+   Model Slug: joice
+   Dates: 02/00 - Present
+
+133. kia - OPTIMA
+   Model Slug: optima
+   Dates: 09/15 - Present
+
+134. kia - PRIDE Estate
+   Model Slug: pride-estate
+   Dates: 08/99 - Present
+
+135. land-rover - RANGE ROVER I
+   Model Slug: range-rover-i
+   Dates: 07/70 - 04/96
+
+136. lincoln - TOWN CAR III
+   Model Slug: town-car-iii
+   Dates: 11/96 - 12/11
+
+137. lotus - ELISE
+   Model Slug: elise
+   Dates: 11/00 - Present
+
+138. man - TGE Van
+   Model Slug: tge-van
+   Dates: 02/17 - Present
+
+139. maserati - 3200 GT Coupe
+   Model Slug: 3200-gt-coupe
+   Dates: 10/98 - 03/02
+
+140. mazda - 626 V Station Wagon
+   Model Slug: 626-v-station-wagon
+   Dates: 01/98 - 12/02
+
+141. mercedes - B-CLASS Sports Tourer
+   Model Slug: b-class-sports-tourer
+   Dates: 03/05 - 11/11
+
+142. mercedes - C-CLASS Convertible
+   Model Slug: c-class-convertible
+   Dates: 06/16 - Present
+
+143. mercedes - CLA Shooting Brake
+   Model Slug: cla-shooting-brake
+   Dates: 01/15 - Present
+
+144. mercedes - CLS Shooting Brake
+   Model Slug: cls-shooting-brake
+   Dates: 10/12 - Present
+
+145. mercedes - E-CLASS All-Terrain
+   Model Slug: e-class-all-terrain
+   Dates: 01/17 - Present
+
+146. mercedes - E-CLASS Convertible
+   Model Slug: e-class-convertible
+   Dates: 05/93 - 03/98
+
+147. mercedes - SPRINTER Dump Truck
+   Model Slug: sprinter-dump-truck
+   Dates: 04/01 - Present
+
+148. mercedes - VARIO Bus
+   Model Slug: vario-bus
+   Dates: 09/96 - Present
+
+149. mercedes - VARIO Cab with engine
+   Model Slug: vario-cab-with-engine
+   Dates: 09/96 - Present
+
+150. mercedes - VARIO Dump Truck
+   Model Slug: vario-dump-truck
+   Dates: 09/96 - Present
+
+151. mg - MARVEL R
+   Model Slug: marvel-r
+   Dates: 02/21 - Present
+
+152. mg - MG 3
+   Model Slug: mg-3
+   Dates: 04/11 - Present
+
+153. mg - MG 5 Estate
+   Model Slug: mg-5-estate
+   Dates: 10/20 - Present
+
+154. mg - MG 6 Hatchback
+   Model Slug: mg-6-hatchback
+   Dates: 11/10 - Present
+
+155. mg - MG 6 Saloon
+   Model Slug: mg-6-saloon
+   Dates: 11/10 - Present
+
+156. mg - MG GS
+   Model Slug: mg-gs
+   Dates: 09/16 - Present
+
+157. mg - MG TF
+   Model Slug: mg-tf
+   Dates: 03/02 - 12/09
+
+158. mg - MG ZR
+   Model Slug: mg-zr
+   Dates: 06/01 - 04/05
+
+159. mg - MG ZS
+   Model Slug: mg-zs
+   Dates: 07/01 - 04/05
+
+160. mg - MG ZS Hatchback
+   Model Slug: mg-zs-hatchback
+   Dates: 07/01 - 10/05
+
+161. mg - MG ZT
+   Model Slug: mg-zt
+   Dates: 06/01 - 07/05
+
+162. mitsubishi - LANCER IV Hatchback
+   Model Slug: lancer-iv-hatchback
+   Dates: 04/88 - 05/94
+
+163. mitsubishi - LANCER V Station Wagon
+   Model Slug: lancer-v-station-wagon
+   Dates: 09/92 - 10/03
+
+164. mitsubishi - LANCER VIII Sportback
+   Model Slug: lancer-viii-sportback
+   Dates: 10/07 - Present
+
+165. mitsubishi - MIRAGE / SPACE STAR VI
+   Model Slug: mirage-space-star-vi
+   Dates: 05/12 - Present
+
+166. mitsubishi - OUTLANDER II Van
+   Model Slug: outlander-ii-van
+   Dates: 12/06 - Present
+
+167. mitsubishi - OUTLANDER III Van
+   Model Slug: outlander-iii-van
+   Dates: 08/12 - Present
+
+168. mitsubishi - PAJERO II Canvas Top
+   Model Slug: pajero-ii-canvas-top
+   Dates: 12/90 - 04/00
+
+169. mitsubishi - SANTAMO
+   Model Slug: santamo
+   Dates: 03/99 - 12/04
+
+170. nissan - MAXIMA / MAXIMA QX IV
+   Model Slug: maxima-maxima-qx-iv
+   Dates: 03/94 - 08/00
+
+171. nissan - MAXIMA / MAXIMA QX V
+   Model Slug: maxima-maxima-qx-v
+   Dates: 04/99 - 11/03
+
+172. nissan - NP200
+   Model Slug: np200
+   Dates: 10/08 - Present
+
+173. nissan - NP300 NAVARA Pickup
+   Model Slug: np300-navara-pickup
+   Dates: 07/14 - Present
+
+174. nissan - NV200 / EVALIA Bus
+   Model Slug: nv200-evalia-bus
+   Dates: 07/10 - Present
+
+175. nissan - NV200 Van
+   Model Slug: nv200-van
+   Dates: 02/10 - Present
+
+176. nissan - PATROL GR V Wagon
+   Model Slug: patrol-gr-v-wagon
+   Dates: 06/97 - Present
+
+177. nissan - PRIMERA Hatchback
+   Model Slug: primera-hatchback
+   Dates: 06/90 - 06/96
+
+178. nissan - PRIMERA Traveller
+   Model Slug: primera-traveller
+   Dates: 07/90 - 03/98
+
+179. opel - ASTRA J GTC
+   Model Slug: astra-j-gtc
+   Dates: 10/11 - Present
+
+180. opel - ASTRA J Saloon
+   Model Slug: astra-j-saloon
+   Dates: 06/12 - Present
+
+181. opel - ASTRA L
+   Model Slug: astra-l
+   Dates: 10/21 - Present
+
+182. opel - ASTRA L Sports Tourer
+   Model Slug: astra-l-sports-tourer
+   Dates: 10/21 - Present
+
+183. opel - COMBO Tour
+   Model Slug: combo-tour
+   Dates: 10/01 - Present
+
+184. opel - CORSA F
+   Model Slug: corsa-f
+   Dates: 07/19 - Present
+
+185. peugeot - 205 Hatchback Van
+   Model Slug: 205-hatchback-van
+   Dates: 03/94 - Present
+
+186. peugeot - 206 Saloon
+   Model Slug: 206-saloon
+   Dates: 03/07 - Present
+
+187. peugeot - 206 Van
+   Model Slug: 206-van
+   Dates: 04/99 - Present
+
+188. peugeot - 207 Saloon
+   Model Slug: 207-saloon
+   Dates: 12/07 - Present
+
+189. peugeot - 308 SW II Estate Van
+   Model Slug: 308-sw-ii-estate-van
+   Dates: 04/14 - Present
+
+190. peugeot - BIPPER Tepee
+   Model Slug: bipper-tepee
+   Dates: 04/08 - Present
+
+191. peugeot - BOXER Bus
+   Model Slug: boxer-bus
+   Dates: 04/06 - Present
+
+192. peugeot - BOXER Van
+   Model Slug: boxer-van
+   Dates: 04/06 - Present
+
+193. peugeot - ION
+   Model Slug: ion
+   Dates: 11/10 - Present
+
+194. peugeot - PARTNER ORIGIN Box
+   Model Slug: partner-origin-box
+   Dates: 07/08 - 12/15
+
+195. peugeot - PARTNER ORIGIN MPV
+   Model Slug: partner-origin-mpv
+   Dates: 07/08 - 12/13
+
+196. peugeot - PARTNER Tepee
+   Model Slug: partner-tepee
+   Dates: 04/08 - Present
+
+197. peugeot - PORTER Bus
+   Model Slug: porter-bus
+   Dates: 01/95 - Present
+
+198. peugeot - PORTER Dump Truck
+   Model Slug: porter-dump-truck
+   Dates: 01/95 - Present
+
+199. peugeot - PORTER Van
+   Model Slug: porter-van
+   Dates: 12/92 - Present
+
+200. peugeot - QUARGO Platform/ Chassis
+   Model Slug: quargo-platform-chassis
+   Dates: 01/04 - Present
+
+201. peugeot - RCZ
+   Model Slug: rcz
+   Dates: 03/10 - Present
+
+202. peugeot - RIFTER
+   Model Slug: rifter
+   Dates: 09/18 - Present
+
+203. plymouth - NEON II Saloon
+   Model Slug: neon-ii-saloon
+   Dates: 08/99 - Present
+
+204. pontiac - TRANS SPORT
+   Model Slug: trans-sport
+   Dates: 03/97 - 12/99
+
+205. porsche - 968 Convertible
+   Model Slug: 968-convertible
+   Dates: 06/91 - 11/95
+
+206. porsche - PANAMERA Sport Turis-
+   Model Slug: panamera-sport-turis-
+   Dates: 03/17 - Present
+
+207. proton - PERSONA 400 Hatchback
+   Model Slug: persona-400-hatchback
+   Dates: 01/94 - Present
+
+208. renault - ALASKAN
+   Model Slug: alaskan
+   Dates: 10/16 - Present
+
+209. renault - CLIO I Hatchback Van
+   Model Slug: clio-i-hatchback-van
+   Dates: 01/91 - 09/98
+
+210. renault - CLIO II Hatchback Van
+   Model Slug: clio-ii-hatchback-van
+   Dates: 09/98 - Present
+
+211. renault - CLIO III Grandtour
+   Model Slug: clio-iii-grandtour
+   Dates: 02/08 - Present
+
+212. renault - CLIO III Hatchback Van
+   Model Slug: clio-iii-hatchback-van
+   Dates: 06/05 - Present
+
+213. renault - CLIO IV Hatchback Van
+   Model Slug: clio-iv-hatchback-van
+   Dates: 01/14 - Present
+
+214. renault - DOKKER
+   Model Slug: dokker
+   Dates: 12/13 - Present
+
+215. renault - KANGOO / GRAND KAN-
+   Model Slug: kangoo-grand-kan-
+   Dates: 02/08 - Present
+
+216. renault - KANGOO BE BOP
+   Model Slug: kangoo-be-bop
+   Dates: 02/09 - Present
+
+217. renault - KANGOO Express
+   Model Slug: kangoo-express
+   Dates: 08/97 - Present
+
+218. renault - KANGOO III MPV
+   Model Slug: kangoo-iii-mpv
+   Dates: 07/21 - Present
+
+219. renault - LAGUNA I Grandtour
+   Model Slug: laguna-i-grandtour
+   Dates: 09/95 - 03/01
+
+220. renault - LAGUNA II Grandtour
+   Model Slug: laguna-ii-grandtour
+   Dates: 03/01 - Present
+
+221. renault - LAGUNA III Grandtour
+   Model Slug: laguna-iii-grandtour
+   Dates: 10/07 - Present
+
+222. renault - MEGANE I Cabriolet
+   Model Slug: megane-i-cabriolet
+   Dates: 10/96 - 08/03
+
+223. renault - MEGANE I Classic
+   Model Slug: megane-i-classic
+   Dates: 09/96 - 08/08
+
+224. renault - MEGANE I Coach
+   Model Slug: megane-i-coach
+   Dates: 03/96 - 08/03
+
+225. renault - MEGANE I Grandtour
+   Model Slug: megane-i-grandtour
+   Dates: 03/99 - 08/03
+
+226. renault - MEGANE II Estate
+   Model Slug: megane-ii-estate
+   Dates: 08/03 - 08/12
+
+227. renault - MEGANE II Saloon
+   Model Slug: megane-ii-saloon
+   Dates: 09/03 - Present
+
+228. renault - MEGANE III Coupe
+   Model Slug: megane-iii-coupe
+   Dates: 11/08 - Present
+
+229. renault - MEGANE III Grandtour
+   Model Slug: megane-iii-grandtour
+   Dates: 11/08 - Present
+
+230. renault - MEGANE III Hatchback
+   Model Slug: megane-iii-hatchback
+   Dates: 11/08 - Present
+
+231. renault - MEGANE IV Grandtour
+   Model Slug: megane-iv-grandtour
+   Dates: 04/16 - Present
+
+232. renault - MEGANE IV Hatchback
+   Model Slug: megane-iv-hatchback
+   Dates: 11/15 - Present
+
+233. renault - MEGANE IV Saloon
+   Model Slug: megane-iv-saloon
+   Dates: 10/16 - Present
+
+234. renault - MODUS / GRAND MODUS
+   Model Slug: modus-grand-modus
+   Dates: 09/04 - Present
+
+235. renault - TALISMAN Grandtour
+   Model Slug: talisman-grandtour
+   Dates: 03/16 - Present
+
+236. renault - TWINGO I Hatchback Van
+   Model Slug: twingo-i-hatchback-van
+   Dates: 03/93 - Present
+
+237. renault - ZOE Hatchback Van
+   Model Slug: zoe-hatchback-van
+   Dates: 04/19 - Present
+
+238. renault-trucks - B Van
+   Model Slug: b-van
+   Dates: 01/83 - 01/92
+
+239. renault-trucks - MASCOTT Dumptruck
+   Model Slug: mascott-dumptruck
+   Dates: 01/00 - 12/10
+
+240. renault-trucks - MASCOTT Platform/ Chassis
+   Model Slug: mascott-platform-chassis
+   Dates: 01/99 - 12/13
+
+241. renault-trucks - MASCOTT Van
+   Model Slug: mascott-van
+   Dates: 01/99 - 12/10
+
+242. renault-trucks - MESSENGER Dump Truck
+   Model Slug: messenger-dump-truck
+   Dates: 09/96 - 06/99
+
+243. renault-trucks - MESSENGER Platform/ Chassis
+   Model Slug: messenger-platform-chassis
+   Dates: 09/90 - 06/99
+
+244. renault-trucks - MESSENGER Van
+   Model Slug: messenger-van
+   Dates: 09/90 - 06/99
+
+245. renault-trucks - Tractor"
+   Model Slug: tractor
+   Dates: 01/94 - 06/99
+
+246. rover - 800 Coupe
+   Model Slug: 800-coupe
+   Dates: 08/92 - 02/99
+
+247. rover - COUPE
+   Model Slug: coupe
+   Dates: 03/96 - 11/99
+
+248. rover - MINI Hatchback
+   Model Slug: mini-hatchback
+   Dates: 01/91 - 11/00
+
+249. rover - STREETWISE Hatchback
+   Model Slug: streetwise-hatchback
+   Dates: 08/03 - 05/05
+
+250. saab - 9-7X
+   Model Slug: 9-7x
+   Dates: 12/05 - Present
+
+251. saab - 900 II
+   Model Slug: 900-ii
+   Dates: 07/93 - 04/99
+
+252. saab - 900 II Convertible
+   Model Slug: 900-ii-convertible
+   Dates: 09/93 - 04/99
+
+253. saab - 900 II Coupe
+   Model Slug: 900-ii-coupe
+   Dates: 12/93 - 04/99
+
+254. saab - 9000 Hatchback
+   Model Slug: 9000-hatchback
+   Dates: 09/84 - 12/98
+
+255. skoda - CITIGO
+   Model Slug: citigo
+   Dates: 10/11 - Present
+
+256. ssangyong - ACTYON I
+   Model Slug: actyon-i
+   Dates: 11/05 - Present
+
+257. ssangyong - KORANDO SPORTS
+   Model Slug: korando-sports
+   Dates: 08/13 - Present
+
+258. ssangyong - KYRON
+   Model Slug: kyron
+   Dates: 05/05 - Present
+
+259. ssangyong - MUSSO GRAND
+   Model Slug: musso-grand
+   Dates: 01/19 - Present
+
+260. ssangyong - MUSSO SPORTS
+   Model Slug: musso-sports
+   Dates: 08/04 - Present
+
+261. ssangyong - REXTON W / REXTON
+   Model Slug: rexton-w-rexton
+   Dates: 07/12 - Present
+
+262. ssangyong - RODIUS I
+   Model Slug: rodius-i
+   Dates: 05/05 - Present
+
+263. ssangyong - RODIUS II
+   Model Slug: rodius-ii
+   Dates: 07/13 - Present
+
+264. ssangyong - STAVIC
+   Model Slug: stavic
+   Dates: 02/05 - Present
+
+265. ssangyong - TIVOLI
+   Model Slug: tivoli
+   Dates: 01/15 - Present
+
+266. ssangyong - XLV SUV
+   Model Slug: xlv-suv
+   Dates: 04/16 - Present
+
+267. subaru - BRZ
+   Model Slug: brz
+   Dates: 06/12 - Present
+
+268. subaru - JUSTY IV
+   Model Slug: justy-iv
+   Dates: 01/07 - Present
+
+269. subaru - LEVORG
+   Model Slug: levorg
+   Dates: 03/15 - Present
+
+270. subaru - TREZIA
+   Model Slug: trezia
+   Dates: 03/11 - Present
+
+271. subaru - VIVIO
+   Model Slug: vivio
+   Dates: 03/92 - 04/00
+
+272. suzuki - S-CROSS
+   Model Slug: s-cross
+   Dates: 01/22 - Present
+
+273. tazzari - ZERO
+   Model Slug: zero
+   Dates: 01/10 - Present
+
+274. toyota - PROACE CITY Box Body/ MPV
+   Model Slug: proace-city-box-body-mpv
+   Dates: 10/19 - Present
+
+275. toyota - PROACE CITY VERSO MPV
+   Model Slug: proace-city-verso-mpv
+   Dates: 10/19 - Present
+
+276. uaz - PATRIOT
+   Model Slug: patriot
+   Dates: 07/04 - Present
+
+277. uaz - PICKUP
+   Model Slug: pickup
+   Dates: 01/09 - Present
+
+278. vauxhall - MOKKA
+   Model Slug: mokka
+   Dates: 06/20 - Present
+
+279. volkswagen - -365
+   Model Slug: -365
+   Dates:  - Present
+
+280. volkswagen - ARTEON SHOOTING
+   Model Slug: arteon-shooting
+   Dates: 06/20 - Present
+
+281. volkswagen - GRAND CALIFORNIA
+   Model Slug: grand-california
+   Dates: 04/19 - Present
+
+282. volkswagen - PASSAT ALLTRACK B7
+   Model Slug: passat-alltrack-b7
+   Dates: 01/12 - 12/14
+
+283. volkswagen - PASSAT B7 Estate Van
+   Model Slug: passat-b7-estate-van
+   Dates: 08/10 - 12/14
+
+284. volkswagen - ROUTAN
+   Model Slug: routan
+   Dates: 09/08 - Present
+
+285. volkswagen - SANTANA
+   Model Slug: santana
+   Dates: 02/93 - Present
+
+286. volkswagen - TARO
+   Model Slug: taro
+   Dates: 04/89 - 03/97
+

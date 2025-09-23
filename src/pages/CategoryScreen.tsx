@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import type { ProductCategory, Vehicle } from '../types';
 import { dataService } from '../services/dataService';
 import { useClickAnimation } from '../hooks/useClickAnimation';
-import { useSimpleVehicleContext } from '../contexts/SimpleVehicleContext';
 
 // Import category images
 import batteryImage from '../assets/img/categories/battery.png';
@@ -18,9 +17,8 @@ interface CategoryScreenProps {
   onCategorySelect: (category: ProductCategory) => void;
 }
 
-const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
+const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
   const navigate = useNavigate();
-  const { vehicleData, setCategory } = useSimpleVehicleContext();
   const [categories, setCategories] = useState<ProductCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -99,21 +97,18 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
 
   const handleCategorySelect = async (category: ProductCategory) => {
     console.log('Category selected:', category);
-    console.log('Vehicle data from context:', vehicleData);
+    console.log('Vehicle data from props:', vehicle);
     onCategorySelect(category);
     
-    // Store category in context
-    setCategory(category);
-    
-    // Check if we have vehicle data from context
-    if (vehicleData.vehicleType && vehicleData.brand && vehicleData.model) {
+    // Check if we have vehicle data from props
+    if (vehicle && vehicle.type && vehicle.brand && vehicle.model) {
       // We have vehicle data, check if category needs specific form
       if (category.slug === 'batteries' || category.name.toLowerCase().includes('batterie')) {
         // Navigate to battery-specific form
         navigate('/category-specific');
       } else if (category.slug === 'lights' || category.name.toLowerCase().includes('éclairage')) {
-        // Navigate to lights-specific form
-        navigate('/category-specific');
+        // Navigate directly to questions page for lights
+        navigate('/questions');
       } else if (category.slug === 'oil' || category.name.toLowerCase().includes('huile')) {
         // Navigate to oil-specific form
         navigate('/category-specific');

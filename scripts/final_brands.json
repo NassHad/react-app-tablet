@@ -61,14 +61,8 @@
   },
   {
     "id": 11,
-    "name": "CITROËN",
-    "slug": "citroën",
-    "isActive": true
-  },
-  {
-    "id": 12,
-    "name": "CITRO�N",
-    "slug": "citron",
+    "name": "CITROEN",
+    "slug": "citroen",
     "isActive": true
   },
   {

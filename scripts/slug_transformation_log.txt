@@ -1,0 +1,1407 @@
+OSRAM Bulbs Slug Transformation Log
+=====================================
+
+Generated on: 2025-09-22T14:50:54.559Z
+
+STATISTICS:
+Total entries processed: 2492
+Matched entries: 2353 (94.4%)
+Unmatched entries: 139 (5.6%)
+
+UNMATCHED BREAKDOWN:
+  - Brand only matched: 75
+  - Model only matched: 0
+  - Neither matched: 64
+
+UNMATCHED ENTRIES DETAILS:
+==========================
+
+1. ID: 622
+   Original Brand: "DAIMLER"
+   Original Model: "TEMPRA S.W."
+   Generated Brand Slug: "daimler"
+   Generated Model Slug: "tempra-s.w."
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+2. ID: 692
+   Original Brand: "DAIMLER"
+   Original Model: "KA+ III"
+   Generated Brand Slug: "daimler"
+   Generated Model Slug: "ka+-iii"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+3. ID: 693
+   Original Brand: "DAIMLER"
+   Original Model: "KA+ III Saloon"
+   Generated Brand Slug: "daimler"
+   Generated Model Slug: "ka+-iii-saloon"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+4. ID: 855
+   Original Brand: "HYUNDAI"
+   Original Model: "GRAND SANTA FE�"
+   Generated Brand Slug: "hyundai"
+   Generated Model Slug: "grand-santa-fe�"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+5. ID: 887
+   Original Brand: "HYUNDAI"
+   Original Model: "PDEN)"
+   Generated Brand Slug: "hyundai"
+   Generated Model Slug: "pden)"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+6. ID: 908
+   Original Brand: "HYUNDAI"
+   Original Model: "SANTA F� I"
+   Generated Brand Slug: "hyundai"
+   Generated Model Slug: "santa-f�-i"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+7. ID: 909
+   Original Brand: "HYUNDAI"
+   Original Model: "SANTA F� II"
+   Generated Brand Slug: "hyundai"
+   Generated Model Slug: "santa-f�-ii"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+8. ID: 910
+   Original Brand: "HYUNDAI"
+   Original Model: "SANTA F� III"
+   Generated Brand Slug: "hyundai"
+   Generated Model Slug: "santa-f�-iii"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+9. ID: 1017
+   Original Brand: "KIA"
+   Original Model: "CEE'D Combi Van"
+   Generated Brand Slug: "kia"
+   Generated Model Slug: "cee'd-combi-van"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+10. ID: 1019
+   Original Brand: "KIA"
+   Original Model: "CEE'D"
+   Generated Brand Slug: "kia"
+   Generated Model Slug: "cee'd"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+11. ID: 1021
+   Original Brand: "KIA"
+   Original Model: "CEE'D Hatchback"
+   Generated Brand Slug: "kia"
+   Generated Model Slug: "cee'd-hatchback"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+12. ID: 1024
+   Original Brand: "KIA"
+   Original Model: "CEE'D Sportswagon"
+   Generated Brand Slug: "kia"
+   Generated Model Slug: "cee'd-sportswagon"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+13. ID: 1025
+   Original Brand: "KIA"
+   Original Model: "CEE'D SW"
+   Generated Brand Slug: "kia"
+   Generated Model Slug: "cee'd-sw"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+14. ID: 1049
+   Original Brand: "KIA"
+   Original Model: "PRO CEE�D"
+   Generated Brand Slug: "kia"
+   Generated Model Slug: "pro-cee�d"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+15. ID: 1050
+   Original Brand: "KIA"
+   Original Model: "PRO CEE'D"
+   Generated Brand Slug: "kia"
+   Generated Model Slug: "pro-cee'd"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+16. ID: 1406
+   Original Brand: "MERCEDES"
+   Original Model: "SPRINTER 3,5-t Van"
+   Generated Brand Slug: "mercedes"
+   Generated Model Slug: "sprinter-3,5-t-van"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+17. ID: 1407
+   Original Brand: "MERCEDES"
+   Original Model: "SPRINTER 3,5-t Bus"
+   Generated Brand Slug: "mercedes"
+   Generated Model Slug: "sprinter-3,5-t-bus"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+18. ID: 1408
+   Original Brand: "MERCEDES"
+   Original Model: "SPRINTER 3,5-t Tourer Bus"
+   Generated Brand Slug: "mercedes"
+   Generated Model Slug: "sprinter-3,5-t-tourer-bus"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+19. ID: 1409
+   Original Brand: "MERCEDES"
+   Original Model: "SPRINTER 3,5-t Van"
+   Generated Brand Slug: "mercedes"
+   Generated Model Slug: "sprinter-3,5-t-van"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+20. ID: 1421
+   Original Brand: "MERCEDES"
+   Original Model: "SPRINTER 4,6-t Van"
+   Generated Brand Slug: "mercedes"
+   Generated Model Slug: "sprinter-4,6-t-van"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+21. ID: 1433
+   Original Brand: "MERCEDES"
+   Original Model: "SPRINTER CLASSIC 3,5-t"
+   Generated Brand Slug: "mercedes"
+   Generated Model Slug: "sprinter-classic-3,5-t"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+22. ID: 1434
+   Original Brand: "MERCEDES"
+   Original Model: "SPRINTER CLASSIC 4,6-t"
+   Generated Brand Slug: "mercedes"
+   Generated Model Slug: "sprinter-classic-4,6-t"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+23. ID: 1444
+   Original Brand: "MERCEDES"
+   Original Model: "B668)"
+   Generated Brand Slug: "mercedes"
+   Generated Model Slug: "b668)"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+24. ID: 1458
+   Original Brand: "MERCEDES"
+   Original Model: "Cabin)"
+   Generated Brand Slug: "mercedes"
+   Generated Model Slug: "cabin)"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+25. ID: 1473
+   Original Brand: "MG"
+   Original Model: "MG ZT- T"
+   Generated Brand Slug: "mg"
+   Generated Model Slug: "mg-zt--t"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+26. ID: 1512
+   Original Brand: "MITSUBISHI"
+   Original Model: "K0_T)"
+   Generated Brand Slug: "mitsubishi"
+   Generated Model Slug: "k0_t)"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+27. ID: 1538
+   Original Brand: "MITSUBISHI"
+   Original Model: "GF_W, ZJ, ZL)"
+   Generated Brand Slug: "mitsubishi"
+   Generated Model Slug: "gf_w,-zj,-zl)"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+28. ID: 1591
+   Original Brand: "NISSAN"
+   Original Model: "MICRA C+C III"
+   Generated Brand Slug: "nissan"
+   Generated Model Slug: "micra-c+c-iii"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+29. ID: 1645
+   Original Brand: "NISSAN"
+   Original Model: "QASHQAI II Closed Off- Road Vehicle"
+   Generated Brand Slug: "nissan"
+   Generated Model Slug: "qashqai-ii-closed-off--road-vehicle"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+30. ID: 1726
+   Original Brand: "*";W5W/LED;P21/5W/ LED;LED;W5W;-"
+   Original Model: "FRONTERA A"
+   Generated Brand Slug: "*";w5w/led;p21/5w/-led;led;w5w;-"
+   Generated Model Slug: "frontera-a"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+31. ID: 1727
+   Original Brand: "*";W5W/LED;P21/5W/ LED;LED;W5W;-"
+   Original Model: "FRONTERA A Sport"
+   Generated Brand Slug: "*";w5w/led;p21/5w/-led;led;w5w;-"
+   Generated Model Slug: "frontera-a-sport"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+32. ID: 1728
+   Original Brand: "*";W5W/LED;P21/5W/ LED;LED;W5W;-"
+   Original Model: "FRONTERA B"
+   Generated Brand Slug: "*";w5w/led;p21/5w/-led;led;w5w;-"
+   Generated Model Slug: "frontera-b"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+33. ID: 1729
+   Original Brand: "*";W5W/LED;P21/5W/ LED;LED;W5W;-"
+   Original Model: "GRANDLAND X"
+   Generated Brand Slug: "*";w5w/led;p21/5w/-led;led;w5w;-"
+   Generated Model Slug: "grandland-x"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+34. ID: 1730
+   Original Brand: "*";W5W/LED;P21/5W/ LED;LED;W5W;-"
+   Original Model: "GRANDLAND X Van"
+   Generated Brand Slug: "*";w5w/led;p21/5w/-led;led;w5w;-"
+   Generated Model Slug: "grandland-x-van"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+35. ID: 1731
+   Original Brand: "*";W5W/LED;P21/5W/ LED;LED;W5W;-"
+   Original Model: "GT Convertible"
+   Generated Brand Slug: "*";w5w/led;p21/5w/-led;led;w5w;-"
+   Generated Model Slug: "gt-convertible"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+36. ID: 1732
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "INSIGNIA A"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "insignia-a"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+37. ID: 1733
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "INSIGNIA A Country Tourer"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "insignia-a-country-tourer"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+38. ID: 1734
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "INSIGNIA A Saloon"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "insignia-a-saloon"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+39. ID: 1735
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "INSIGNIA A Sports Tourer"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "insignia-a-sports-tourer"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+40. ID: 1736
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "INSIGNIA B Country Tourer"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "insignia-b-country-tourer"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+41. ID: 1737
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "INSIGNIA B Grand Sport"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "insignia-b-grand-sport"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+42. ID: 1738
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "INSIGNIA B Sports Tourer"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "insignia-b-sports-tourer"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+43. ID: 1739
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "KADETT E"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "kadett-e"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+44. ID: 1740
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "KADETT E Combo"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "kadett-e-combo"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+45. ID: 1741
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "KADETT E Hatchback"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "kadett-e-hatchback"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+46. ID: 1742
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "KARL"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "karl"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+47. ID: 1743
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MERIVA A MPV"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "meriva-a-mpv"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+48. ID: 1744
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MERIVA B MPV"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "meriva-b-mpv"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+49. ID: 1745
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOKKA"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "mokka"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+50. ID: 1746
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOKKA / MOKKA X"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "mokka-mokka-x"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+51. ID: 1747
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MONTEREY A"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "monterey-a"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+52. ID: 1748
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MONTEREY B"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "monterey-b"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+53. ID: 1749
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOVANO B Bus"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "movano-b-bus"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+54. ID: 1750
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOVANO B Box"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "movano-b-box"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+55. ID: 1751
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOVANO B Platform/ Chassis"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "movano-b-platform-chassis"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+56. ID: 1752
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOVANO A Van"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "movano-a-van"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+57. ID: 1753
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOVANO C Van"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "movano-c-van"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+58. ID: 1754
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOVANO C Platform/ Chassis"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "movano-c-platform-chassis"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+59. ID: 1755
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOVANO A Bus"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "movano-a-bus"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+60. ID: 1756
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOVANO Dump Truck"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "movano-dump-truck"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+61. ID: 1757
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "MOVANO A Platform/ Chassis"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "movano-a-platform-chassis"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+62. ID: 1758
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "OMEGA A"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "omega-a"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+63. ID: 1759
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "OMEGA A Estate"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "omega-a-estate"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+64. ID: 1760
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "OMEGA B"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "omega-b"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+65. ID: 1761
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "OMEGA B Estate"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "omega-b-estate"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+66. ID: 1762
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "ROCKS-E"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "rocks-e"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+67. ID: 1763
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "SENATOR B"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "senator-b"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+68. ID: 1764
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "SIGNUM Hatchback"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "signum-hatchback"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+69. ID: 1765
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "SINTRA"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "sintra"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+70. ID: 1766
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "SPEEDSTER"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "speedster"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+71. ID: 1767
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "TIGRA"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "tigra"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+72. ID: 1768
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "TIGRA TwinTop"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "tigra-twintop"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+73. ID: 1769
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VECTRA A"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vectra-a"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+74. ID: 1770
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VECTRA B"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vectra-b"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+75. ID: 1771
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VECTRA B Estate"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vectra-b-estate"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+76. ID: 1772
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VECTRA B Hatchback"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vectra-b-hatchback"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+77. ID: 1773
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VECTRA C"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vectra-c"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+78. ID: 1774
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VECTRA C Estate"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vectra-c-estate"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+79. ID: 1775
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VECTRA C GTS"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vectra-c-gts"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+80. ID: 1776
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VIVARO A Van"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vivaro-a-van"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+81. ID: 1777
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VIVARO A Combi"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vivaro-a-combi"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+82. ID: 1778
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VIVARO A Platform/ Chassis"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vivaro-a-platform-chassis"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+83. ID: 1779
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VIVARO B Box"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vivaro-b-box"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+84. ID: 1780
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VIVARO B Combi"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vivaro-b-combi"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+85. ID: 1781
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VIVARO B Platform/ Chassis"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vivaro-b-platform-chassis"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+86. ID: 1782
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VIVARO C Bus"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vivaro-c-bus"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+87. ID: 1783
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VIVARO C Van"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vivaro-c-van"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+88. ID: 1784
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "VIVARO C Platform Cabin"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "vivaro-c-platform-cabin"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+89. ID: 1785
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "ZAFIRA A MPV"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "zafira-a-mpv"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+90. ID: 1786
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "ZAFIRA / ZAFIRA FAMILY B"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "zafira-zafira-family-b"
+   Brand Exists: false
+   Model Exists: true
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+91. ID: 1787
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "ZAFIRA B Van"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "zafira-b-van"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+92. ID: 1788
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "ZAFIRA LIFE Bus"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "zafira-life-bus"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+93. ID: 1789
+   Original Brand: "*";**;P27/7W;P27/7W;**;-;-"
+   Original Model: "ZAFIRA TOURER C"
+   Generated Brand Slug: "*";**;p27/7w;p27/7w;**;-;-"
+   Generated Model Slug: "zafira-tourer-c"
+   Brand Exists: false
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Brand slug not found in brands.json
+
+94. ID: 1805
+   Original Brand: "PEUGEOT"
+   Original Model: "206+"
+   Generated Brand Slug: "peugeot"
+   Generated Model Slug: "206+"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+95. ID: 1963
+   Original Brand: "RENAULT"
+   Original Model: "GRAND SC�NIC II"
+   Generated Brand Slug: "renault"
+   Generated Model Slug: "grand-sc�nic-ii"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+96. ID: 1965
+   Original Brand: "RENAULT"
+   Original Model: "GRAND SC�NIC III"
+   Generated Brand Slug: "renault"
+   Generated Model Slug: "grand-sc�nic-iii"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+97. ID: 1967
+   Original Brand: "RENAULT"
+   Original Model: "GRAND SC�NIC IV"
+   Generated Brand Slug: "renault"
+   Generated Model Slug: "grand-sc�nic-iv"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+98. ID: 2011
+   Original Brand: "RENAULT"
+   Original Model: "MEGANE II Coup�-Cabrio-"
+   Generated Brand Slug: "renault"
+   Generated Model Slug: "megane-ii-coup�-cabrio-"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+99. ID: 2029
+   Original Brand: "RENAULT"
+   Original Model: "SC�NIC II"
+   Generated Brand Slug: "renault"
+   Generated Model Slug: "sc�nic-ii"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+100. ID: 2030
+   Original Brand: "RENAULT"
+   Original Model: "SC�NIC III"
+   Generated Brand Slug: "renault"
+   Generated Model Slug: "sc�nic-iii"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+101. ID: 2031
+   Original Brand: "RENAULT"
+   Original Model: "SC�NIC IV"
+   Generated Brand Slug: "renault"
+   Generated Model Slug: "sc�nic-iv"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+102. ID: 2280
+   Original Brand: "SUZUKI"
+   Original Model: "SAMURAI Closed Off- Road Vehicle"
+   Generated Brand Slug: "suzuki"
+   Generated Model Slug: "samurai-closed-off--road-vehicle"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+103. ID: 2296
+   Original Brand: "SUZUKI"
+   Original Model: "WAGON R+ Hatchback"
+   Generated Brand Slug: "suzuki"
+   Generated Model Slug: "wagon-r+-hatchback"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+104. ID: 2297
+   Original Brand: "SUZUKI"
+   Original Model: "WAGON R+ Hatchback"
+   Generated Brand Slug: "suzuki"
+   Generated Model Slug: "wagon-r+-hatchback"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+105. ID: 2419
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk IIIConver- tible"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-iiiconver--tible"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+106. ID: 2420
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk IIIEstate"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-iiiestate"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+107. ID: 2422
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk II I Saloon"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-ii-i-saloon"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+108. ID: 2423
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk IVConver- tible"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-ivconver--tible"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+109. ID: 2424
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk IVCoupe"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-ivcoupe"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+110. ID: 2425
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk IVEstate"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-ivestate"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+111. ID: 2427
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk IVSaloon"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-ivsaloon"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+112. ID: 2429
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk VEstate"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-vestate"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+113. ID: 2430
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk VSport Hatch"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-vsport-hatch"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+114. ID: 2431
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk VTwinTop"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-vtwintop"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+115. ID: 2433
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk VIGTC"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-vigtc"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+116. ID: 2434
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk VIEstate"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-viestate"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+117. ID: 2435
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk V I Saloon"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-v-i-saloon"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+118. ID: 2437
+   Original Brand: "VAUXHALL"
+   Original Model: "ASTRA Mk VIIEstate"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "astra-mk-viiestate"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+119. ID: 2464
+   Original Brand: "VAUXHALL"
+   Original Model: "FRONTERA Mk ISport"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "frontera-mk-isport"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+120. ID: 2467
+   Original Brand: "VAUXHALL"
+   Original Model: "INSIGNIA Mk ICountry Tourer"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "insignia-mk-icountry-tourer"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+121. ID: 2469
+   Original Brand: "VAUXHALL"
+   Original Model: "INSIGNIA Mk ISaloon"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "insignia-mk-isaloon"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+122. ID: 2470
+   Original Brand: "VAUXHALL"
+   Original Model: "INSIGNIA Mk ISports Tourer"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "insignia-mk-isports-tourer"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+123. ID: 2482
+   Original Brand: "VAUXHALL"
+   Original Model: "MOVANO Mk ICombi"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "movano-mk-icombi"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+124. ID: 2483
+   Original Brand: "VAUXHALL"
+   Original Model: "MOVANO Mk IVan"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "movano-mk-ivan"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+125. ID: 2485
+   Original Brand: "VAUXHALL"
+   Original Model: "MOVANO Mk IICombi"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "movano-mk-iicombi"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+126. ID: 2486
+   Original Brand: "VAUXHALL"
+   Original Model: "MOVANO Mk IIVAN"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "movano-mk-iivan"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+127. ID: 2488
+   Original Brand: "VAUXHALL"
+   Original Model: "MOVANO Mk IIIVAN"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "movano-mk-iiivan"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+128. ID: 2490
+   Original Brand: "VAUXHALL"
+   Original Model: "OMEGAEstate"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "omegaestate"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+129. ID: 2491
+   Original Brand: "VAUXHALL"
+   Original Model: "OMEGASaloon"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "omegasaloon"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+130. ID: 2497
+   Original Brand: "VAUXHALL"
+   Original Model: "VECTRAEstate"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "vectraestate"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+131. ID: 2498
+   Original Brand: "VAUXHALL"
+   Original Model: "VECTRAHatchback"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "vectrahatchback"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+132. ID: 2499
+   Original Brand: "VAUXHALL"
+   Original Model: "VECTRASaloon"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "vectrasaloon"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+133. ID: 2501
+   Original Brand: "VAUXHALL"
+   Original Model: "VECTRA Mk IIEstate"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "vectra-mk-iiestate"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+134. ID: 2502
+   Original Brand: "VAUXHALL"
+   Original Model: "VECTRA Mk IIGTS"
+   Generated Brand Slug: "vauxhall"
+   Generated Model Slug: "vectra-mk-iigts"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+135. ID: 2612
+   Original Brand: "VOLKSWAGEN"
+   Original Model: "ID.3"
+   Generated Brand Slug: "volkswagen"
+   Generated Model Slug: "id.3"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+136. ID: 2613
+   Original Brand: "VOLKSWAGEN"
+   Original Model: "ID.4"
+   Generated Brand Slug: "volkswagen"
+   Generated Model Slug: "id.4"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+137. ID: 2614
+   Original Brand: "VOLKSWAGEN"
+   Original Model: "ID.5"
+   Generated Brand Slug: "volkswagen"
+   Generated Model Slug: "id.5"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+138. ID: 2636
+   Original Brand: "VOLKSWAGEN"
+   Original Model: "PASSAT B5.5"
+   Generated Brand Slug: "volkswagen"
+   Generated Model Slug: "passat-b5.5"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json
+
+139. ID: 2647
+   Original Brand: "VOLKSWAGEN"
+   Original Model: "PASSAT B5.5 Variant"
+   Generated Brand Slug: "volkswagen"
+   Generated Model Slug: "passat-b5.5-variant"
+   Brand Exists: true
+   Model Exists: false
+   Model Belongs to Brand: false
+   Issues: Model slug not found in cleaned_models.json

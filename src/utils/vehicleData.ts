@@ -8,12 +8,17 @@ export interface VehicleDataEntry {
 export interface Brand {
   id: number;
   name: string;
+  slug?: string;
+  isActive?: boolean;
 }
 
 export interface Model {
   id: number;
-  brandId: number;
+  brandId?: number;
   name: string;
+  brandSlug?: string;
+  modelSlug?: string;
+  brand?: string;
 }
 
 export interface DateRange {

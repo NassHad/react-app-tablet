@@ -23,11 +23,11 @@
       "type": "boolean",
       "default": true
     },
-    "lightsModel": {
+    "lights_products": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::lights-model.lights-model",
-      "inversedBy": "positions"
+      "relation": "oneToMany",
+      "target": "api::lights-product.lights-product",
+      "mappedBy": "lights_position"
     }
   }
 }

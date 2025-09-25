@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { vehicleDataService } from '../services/vehicleDataService';
-import { getStrapiVehicleTypeId } from '../config/vehicleTypeMapping';
+// import { getStrapiVehicleTypeId } from '../config/vehicleTypeMapping';
 
 const VehicleDataTest = () => {
   const [testResults, setTestResults] = useState<string[]>([]);

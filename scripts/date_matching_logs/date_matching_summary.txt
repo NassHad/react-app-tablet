@@ -1,0 +1,13 @@
+DATE MATCHING SUMMARY
+==================================================
+
+Total models processed: 2605
+Models with dates: 1334 (51.2%)
+Models without dates: 1271 (48.8%)
+
+Log files created:
+- matched_models.txt: 1334 models with dates
+- unmatched_models.txt: 1271 models without dates
+- date_matching_summary.txt: This summary
+
+Generated on: 2025-09-23T10:58:55.185Z

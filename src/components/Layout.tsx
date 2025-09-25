@@ -133,12 +133,17 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
               <h1 className="text-5xl text-[#1290AD] ml-[-40%] tablet-nav-title">J'identifie ma <span className="font-bold">{userSelection?.vehicleType ? getVehicleTypeDisplayName(userSelection.vehicleType) : ''}</span></h1>
             )}
 
+            {/* Title for Vehicle Selection Page */}
+            {location.pathname === '/vehicle-selection' && (
+              <h1 className="text-5xl text-[#1290AD] ml-[-40%] tablet-nav-title">J'identifie ma <span className="font-bold">{userSelection?.vehicleType ? getVehicleTypeDisplayName(userSelection.vehicleType) : ''}</span></h1>
+            )}
+
             {location.pathname === '/category' && (
               <h1 className="text-5xl text-[#1290AD] ml-[-27%] tablet-nav-title">Que recherchez-vous ?</h1>
             )}
             
             {/* Category Navigation */}
-            {userSelection && (userSelection.category || location.pathname === '/questions' || location.pathname === '/products' || location.pathname.startsWith('/product-details/')) && location.pathname !== '/category' && (
+            {userSelection && (userSelection.category || location.pathname === '/questions' || location.pathname === '/products' || location.pathname.startsWith('/product-details/')) && location.pathname !== '/category' && location.pathname !== '/vehicle-selection' && location.pathname !== '/vehicle' && (
               <CategoryNavigation 
                 selectedCategory={userSelection.category} 
                 updateUserSelection={updateUserSelection}

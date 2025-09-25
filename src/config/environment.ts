@@ -1,58 +1,39 @@
-// Configuration des variables d'environnement
-export const config = {
-  // Configuration Strapi
-  strapi: {
-    url: import.meta.env.VITE_STRAPI_URL || 'https://your-strapi-instance.com',
-    apiToken: import.meta.env.VITE_STRAPI_API_TOKEN || 'your-api-token',
-  },
+// Environment configuration for Vite
+export const ENV = {
+  // API Configuration
+  STRAPI_API_URL: import.meta.env.VITE_STRAPI_API_URL || 'http://localhost:1338/api',
+  
+  // Feature Flags
+  USE_MOCK_LIGHTS_API: import.meta.env.VITE_USE_MOCK_LIGHTS_API === 'true' || false,
+  MOCK_API_DELAYS: import.meta.env.VITE_MOCK_API_DELAYS === 'true' || false,
+  
+  // Development
+  DEV: import.meta.env.DEV || false,
+  PROD: import.meta.env.PROD || false,
+  
+  // Mode
+  MODE: import.meta.env.MODE || 'development',
+} as const;
 
-  // Configuration de l'application
-  app: {
-    name: import.meta.env.VITE_APP_NAME || 'AutoParts Kiosk',
-    version: import.meta.env.VITE_APP_VERSION || '1.0.0',
-  },
-
-  // Configuration de développement
-  development: {
-    debugMode: import.meta.env.VITE_DEBUG_MODE === 'true',
-    mockData: import.meta.env.VITE_MOCK_DATA === 'true',
-  },
-
-  // Configuration de synchronisation
-  sync: {
-    interval: parseInt(import.meta.env.VITE_SYNC_INTERVAL || '3600000'), // 1 heure par défaut
-    offlineMode: import.meta.env.VITE_OFFLINE_MODE === 'true',
-  },
-
-  // Configuration de la base de données
-  database: {
-    name: 'autoparts_kiosk.db',
-    version: 1,
-  },
+// Type-safe environment variable access
+export const getEnvVar = (key: string, defaultValue?: string): string => {
+  const value = import.meta.env[key];
+  return value || defaultValue || '';
 };
 
-// Fonction pour vérifier si l'application est en mode développement
-export const isDevelopment = () => {
-  return import.meta.env.DEV;
+// Boolean environment variable helper
+export const getBooleanEnvVar = (key: string, defaultValue: boolean = false): boolean => {
+  const value = import.meta.env[key];
+  if (value === undefined) return defaultValue;
+  return value === 'true' || value === '1';
 };
 
-// Fonction pour vérifier si l'application est en mode production
-export const isProduction = () => {
-  return import.meta.env.PROD;
+// Number environment variable helper
+export const getNumberEnvVar = (key: string, defaultValue: number = 0): number => {
+  const value = import.meta.env[key];
+  if (value === undefined) return defaultValue;
+  const parsed = parseInt(value, 10);
+  return isNaN(parsed) ? defaultValue : parsed;
 };
 
-// Fonction pour obtenir la configuration selon l'environnement
-export const getConfig = () => {
-  if (isDevelopment()) {
-    return {
-      ...config,
-      development: {
-        ...config.development,
-        debugMode: true,
-        mockData: true,
-      },
-    };
-  }
-
-  return config;
-}; 
+export default ENV;

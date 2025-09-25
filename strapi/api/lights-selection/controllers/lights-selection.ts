@@ -7,20 +7,23 @@ export default {
         return ctx.badRequest('Category ID is required');
       }
 
-      // Get all products for this category
-      const products = await strapi.entityService.findMany('api::product.product', {
+      // Get all lights products
+      const lightsProducts = await strapi.entityService.findMany('api::lights-product.lights-product', {
         filters: {
-          category: {
-            id: categoryId
-          },
           isActive: true
         },
         populate: {
-          category: true
+          brand: true,
+          model: {
+            populate: {
+              brand: true
+            }
+          },
+          lights_position: true
         }
       });
 
-      if (!products || products.length === 0) {
+      if (!lightsProducts || lightsProducts.length === 0) {
         return ctx.send({
           category: null,
           brands: [],
@@ -28,61 +31,15 @@ export default {
         });
       }
 
-      const productIds = products.map((p: any) => p.id);
-
-      // Get all compatibilities for these products
-      const compatibilities = await strapi.entityService.findMany('api::compatibility.compatibility', {
-        filters: {
-          product: {
-            id: {
-              $in: productIds
-            }
-          }
-        },
-        populate: {
-          vehicle: true
-        }
-      });
-
-      if (!compatibilities || compatibilities.length === 0) {
-      return ctx.send({
-        category: (products[0] as any).category,
-        brands: [],
-        models: []
-      });
-      }
-
-      const vehicleIds = compatibilities.map((c: any) => c.vehicle.id);
-
-      // Get all light position data for these vehicles
-      const lightData = await strapi.entityService.findMany('api::light-position-data.light-position-data', {
-        filters: {
-          isActive: true
-        },
-        populate: {
-          lightsPosition: {
-            populate: {
-              lightsModel: {
-                populate: {
-                  lightsBrand: true
-                }
-              }
-            }
-          }
-        }
-      });
-
-      // Filter by vehicle compatibility (this would need to be implemented based on your vehicle matching logic)
-      // For now, we'll return all available brands and models
+      // Extract unique brands and models
       const brandsMap = new Map();
       const modelsMap = new Map();
 
-      lightData.forEach((data: any) => {
-        const position = data.lightsPosition;
-        if (position && position.lightsModel && position.lightsModel.lightsBrand) {
-          const brand = position.lightsModel.lightsBrand;
-          const model = position.lightsModel;
+      lightsProducts.forEach((product: any) => {
+        const model = product.model;
+        const brand = product.brand;
 
+        if (model && brand) {
           // Add brand
           if (!brandsMap.has(brand.id)) {
             brandsMap.set(brand.id, {
@@ -99,8 +56,6 @@ export default {
               id: model.id,
               name: model.name,
               slug: model.slug,
-              constructionYearStart: model.constructionYearStart,
-              constructionYearEnd: model.constructionYearEnd,
               brand: {
                 id: brand.id,
                 name: brand.name,
@@ -112,7 +67,7 @@ export default {
       });
 
       return ctx.send({
-        category: (products[0] as any).category,
+        category: { id: categoryId, name: 'Lights Category' },
         brands: Array.from(brandsMap.values()),
         models: Array.from(modelsMap.values())
       });
@@ -131,31 +86,23 @@ export default {
         return ctx.badRequest('Category ID is required');
       }
 
-      // Get all light position data
-      const lightData = await strapi.entityService.findMany('api::light-position-data.light-position-data', {
+      // Get all lights products
+      const lightsProducts = await strapi.entityService.findMany('api::lights-product.lights-product', {
         filters: {
           isActive: true
         },
         populate: {
-          lightsPosition: {
-            populate: {
-              lightsModel: {
-                populate: {
-                  lightsBrand: true
-                }
-              }
-            }
-          }
+          brand: true,
+          model: true
         }
       });
 
       const brandsMap = new Map();
 
-      lightData.forEach((data: any) => {
-        const position = data.lightsPosition;
-        if (position && position.lightsModel && position.lightsModel.lightsBrand) {
-          const brand = position.lightsModel.lightsBrand;
+      lightsProducts.forEach((product: any) => {
+        const brand = product.brand;
 
+        if (brand) {
           if (!brandsMap.has(brand.id)) {
             brandsMap.set(brand.id, {
               id: brand.id,
@@ -182,19 +129,19 @@ export default {
         return ctx.badRequest('Category ID and Brand ID are required');
       }
 
-      // Get all light position data for this brand
-      const lightData = await strapi.entityService.findMany('api::light-position-data.light-position-data', {
+      // Get all lights products for this brand
+      const lightsProducts = await strapi.entityService.findMany('api::lights-product.lights-product', {
         filters: {
-          isActive: true
+          isActive: true,
+          brand: {
+            id: brandId
+          }
         },
         populate: {
-          lightsPosition: {
+          brand: true,
+          model: {
             populate: {
-              lightsModel: {
-                populate: {
-                  lightsBrand: true
-                }
-              }
+              brand: true
             }
           }
         }
@@ -202,28 +149,23 @@ export default {
 
       const modelsMap = new Map();
 
-      lightData.forEach((data: any) => {
-        const position = data.lightsPosition;
-        if (position && position.lightsModel && position.lightsModel.lightsBrand) {
-          const brand = position.lightsModel.lightsBrand;
-          const model = position.lightsModel;
+      lightsProducts.forEach((product: any) => {
+        const model = product.model;
+        const brand = product.brand;
 
-          if (brand.id == brandId) {
-            const modelKey = `${brand.id}-${model.id}`;
-            if (!modelsMap.has(modelKey)) {
-              modelsMap.set(modelKey, {
-                id: model.id,
-                name: model.name,
-                slug: model.slug,
-                constructionYearStart: model.constructionYearStart,
-                constructionYearEnd: model.constructionYearEnd,
-                brand: {
-                  id: brand.id,
-                  name: brand.name,
-                  slug: brand.slug
-                }
-              });
-            }
+        if (model && brand && brand.id == brandId) {
+          const modelKey = `${brand.id}-${model.id}`;
+          if (!modelsMap.has(modelKey)) {
+            modelsMap.set(modelKey, {
+              id: model.id,
+              name: model.name,
+              slug: model.slug,
+              brand: {
+                id: brand.id,
+                name: brand.name,
+                slug: brand.slug
+              }
+            });
           }
         }
       });
@@ -244,24 +186,43 @@ export default {
         return ctx.badRequest('Model ID is required');
       }
 
-      // Get all positions for this model
-      const positions = await strapi.entityService.findMany('api::lights-position.lights-position', {
+      // Get the lights product for this model
+      const lightsProduct = await strapi.entityService.findMany('api::lights-product.lights-product', {
         filters: {
-          lightsModel: {
+          isActive: true,
+          model: {
             id: modelId
-          },
-          isActive: true
+          }
         },
         populate: {
-          lightsModel: {
+          brand: true,
+          model: {
             populate: {
-              lightsBrand: true
+              brand: true
             }
           }
         }
       });
 
-      return ctx.send(positions);
+      if (lightsProduct.length === 0) {
+        return ctx.send([]);
+      }
+
+      // Extract positions from the lightPositions JSON field
+      const product = lightsProduct[0];
+      const positions = (product as any).lightPositions || [];
+
+      // Transform positions to match expected format
+      const formattedPositions = positions.map((pos: any, index: number) => ({
+        id: `pos-${index}`,
+        name: pos.position,
+        slug: pos.position.toLowerCase().replace(/\s+/g, '-'),
+        isActive: true,
+        ref: pos.ref,
+        category: pos.category
+      }));
+
+      return ctx.send(formattedPositions);
 
     } catch (error) {
       console.error('Error fetching positions by model:', error);
@@ -277,25 +238,54 @@ export default {
         return ctx.badRequest('Position ID is required');
       }
 
-      // Get all light data for this position
-      const lightData = await strapi.entityService.findMany('api::light-position-data.light-position-data', {
+      // For grouped positions, we need to find the product and extract the specific position
+      // The positionId format is "pos-{index}" where index is the position in the array
+      const positionIndex = parseInt(positionId.replace('pos-', ''));
+      
+      if (isNaN(positionIndex)) {
+        return ctx.badRequest('Invalid position ID format');
+      }
+
+      // Get all lights products and find the one with the requested position
+      const lightsProducts = await strapi.entityService.findMany('api::lights-product.lights-product', {
         filters: {
-          lightsPosition: {
-            id: positionId
-          },
           isActive: true
         },
         populate: {
-          lightsPosition: {
+          brand: true,
+          model: {
             populate: {
-              lightsModel: {
-                populate: {
-                  lightsBrand: true
-                }
-              }
+              brand: true
             }
           }
         }
+      });
+
+      // Find products that have the requested position
+      const matchingProducts = lightsProducts.filter((product: any) => {
+        const positions = (product as any).lightPositions || [];
+        return positions.length > positionIndex;
+      });
+
+      // Transform to match the expected format
+      const lightData = matchingProducts.map((product: any) => {
+        const positions = (product as any).lightPositions || [];
+        const position = positions[positionIndex];
+        
+        return {
+          id: `${product.id}-${positionIndex}`,
+          lightType: position.ref,
+          position: position.position,
+          category: position.category,
+          typeConception: product.typeConception,
+          partNumber: product.partNumber,
+          notes: product.notes,
+          source: product.source,
+          constructionYearStart: product.constructionYearStart,
+          constructionYearEnd: product.constructionYearEnd,
+          brand: product.brand,
+          model: product.model
+        };
       });
 
       return ctx.send(lightData);
@@ -303,6 +293,94 @@ export default {
     } catch (error) {
       console.error('Error fetching light data by position:', error);
       return ctx.internalServerError('Failed to fetch light data');
+    }
+  },
+
+  async getProducts(ctx: any) {
+    try {
+      const { brandSlug, modelSlug, positionSlug } = ctx.query;
+      
+      if (!brandSlug || !modelSlug || !positionSlug) {
+        return ctx.badRequest('brandSlug, modelSlug, and positionSlug are required');
+      }
+
+      // Get all lights products
+      const lightsProducts = await strapi.entityService.findMany('api::lights-product.lights-product', {
+        filters: {
+          isActive: true
+        },
+        populate: {
+          brand: true,
+          model: {
+            populate: {
+              brand: true
+            }
+          }
+        }
+      });
+
+      // Filter products by brand and model slugs
+      const matchingProducts = lightsProducts.filter((product: any) => {
+        const productBrandSlug = product.brand?.slug?.toLowerCase();
+        const productModelSlug = product.model?.slug?.toLowerCase();
+        
+        return productBrandSlug === brandSlug.toLowerCase() && 
+               productModelSlug === modelSlug.toLowerCase();
+      });
+
+      // Filter by position and extract the specific position data
+      const productsWithPosition = matchingProducts.map((product: any) => {
+        const positions = (product as any).lightPositions || [];
+        const matchingPosition = positions.find((pos: any) => {
+          const posSlug = pos.position.toLowerCase().replace(/\s+/g, '-');
+          return posSlug === positionSlug.toLowerCase();
+        });
+
+        if (matchingPosition) {
+          return {
+            id: product.id,
+            name: product.name,
+            ref: matchingPosition.ref,
+            description: product.description,
+            brand: product.brand,
+            model: product.model,
+            lightPositions: [{
+              id: `pos-${positions.indexOf(matchingPosition)}`,
+              name: matchingPosition.position,
+              slug: matchingPosition.position.toLowerCase().replace(/\s+/g, '-'),
+              ref: matchingPosition.ref,
+              category: matchingPosition.category
+            }],
+            constructionYearStart: product.constructionYearStart,
+            constructionYearEnd: product.constructionYearEnd,
+            typeConception: product.typeConception,
+            partNumber: product.partNumber,
+            notes: product.notes,
+            source: product.source,
+            category: product.category,
+            isActive: product.isActive,
+            slug: product.slug
+          };
+        }
+        return null;
+      }).filter(Boolean);
+
+      if (productsWithPosition.length === 0) {
+        return ctx.send({
+          data: [],
+          success: true,
+          message: 'No products found for the specified brand, model, and position'
+        });
+      }
+
+      return ctx.send({
+        data: productsWithPosition,
+        success: true
+      });
+
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      return ctx.internalServerError('Failed to fetch products');
     }
   }
 };

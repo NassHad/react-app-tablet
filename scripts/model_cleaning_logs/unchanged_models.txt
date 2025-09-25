@@ -1,0 +1,929 @@
+UNCHANGED MODELS (NO PARENTHESES):
+================================================================================
+
+Total unchanged: 308
+
+1. abarth - 124 Spider
+   Slug: 124-spider
+
+2. abarth - 500 / 595 / 695
+   Slug: 500-595-695
+
+3. abarth - 500C / 595C / 695C
+   Slug: 500c-595c-695c
+
+4. abarth - GRANDE PUNTO
+   Slug: grande-punto
+
+5. alpine - A110 II
+   Slug: a110-ii
+
+6. autobianchi - Y10
+   Slug: y10
+
+7. cadillac - CTS
+   Slug: cts
+
+8. cadillac - ESCALADE
+   Slug: escalade
+
+9. cadillac - SEVILLE
+   Slug: seville
+
+10. cadillac - XLR
+   Slug: xlr
+
+11. chevrolet - ALERO
+   Slug: alero
+
+12. chevrolet - BOLT
+   Slug: bolt
+
+13. chevrolet - CAMARO
+   Slug: camaro
+
+14. chevrolet - CAMARO Convertible
+   Slug: camaro-convertible
+
+15. chevrolet - CORVETTE
+   Slug: corvette
+
+16. chevrolet - CORVETTE Convertible
+   Slug: corvette-convertible
+
+17. chevrolet - EVANDA
+   Slug: evanda
+
+18. chevrolet - HHR
+   Slug: hhr
+
+19. chevrolet - IMPALA Saloon
+   Slug: impala-saloon
+
+20. chevrolet - KALOS
+   Slug: kalos
+
+21. chevrolet - KALOS Saloon
+   Slug: kalos-saloon
+
+22. chevrolet - MALIBU
+   Slug: malibu
+
+23. chevrolet - NUBIRA Estate
+   Slug: nubira-estate
+
+24. chevrolet - NUBIRA Saloon
+   Slug: nubira-saloon
+
+25. chevrolet - TRANS SPORT
+   Slug: trans-sport
+
+26. chevrolet - TRAX
+   Slug: trax
+
+27. chevrolet - VIVANT
+   Slug: vivant
+
+28. chevrolet - VOLT
+   Slug: volt
+
+29. chrysler - CROSSFIRE
+   Slug: crossfire
+
+30. chrysler - CROSSFIRE Roadster
+   Slug: crossfire-roadster
+
+31. chrysler - NEON II
+   Slug: neon-ii
+
+32. chrysler - NEW YORKER
+   Slug: new-yorker
+
+33. chrysler - PT CRUISER Convertible
+   Slug: pt-cruiser-convertible
+
+34. chrysler - VISION
+   Slug: vision
+
+35. citron - C-ZERO
+   Slug: c-zero
+
+36. citron - C3 AIRCROSS I
+   Slug: c3-aircross-i
+
+37. citron - C4 AIRCROSS
+   Slug: c4-aircross
+
+38. citron - C4 CACTUS
+   Slug: c4-cactus
+
+39. citron - C4 Grand Picasso II
+   Slug: c4-grand-picasso-ii
+
+40. citron - C4 I Saloon
+   Slug: c4-i-saloon
+
+41. citron - C4 Picasso II
+   Slug: c4-picasso-ii
+
+42. citron - DS3 Convertible
+   Slug: ds3-convertible
+
+43. citron - DS5
+   Slug: ds5
+
+44. citron - E-MEHARI
+   Slug: e-mehari
+
+45. citron - JUMPER Bus
+   Slug: jumper-bus
+
+46. citron - JUMPER Platform/ Chassis
+   Slug: jumper-platform-chassis
+
+47. citron - JUMPER Van
+   Slug: jumper-van
+
+48. citron - JUMPY Van
+   Slug: jumpy-van
+
+49. citron - NEMO MPV
+   Slug: nemo-mpv
+
+50. dacia - DOKKER Pickup
+   Slug: dokker-pickup
+
+51. dacia - DUSTER SUV Van
+   Slug: duster-suv-van
+
+52. dacia - JOGGER
+   Slug: jogger
+
+53. dacia - LOGAN II
+   Slug: logan-ii
+
+54. dacia - LOGAN MCV II
+   Slug: logan-mcv-ii
+
+55. dacia - SANDERO
+   Slug: sandero
+
+56. dacia - SANDERO II
+   Slug: sandero-ii
+
+57. dacia - SANDERO III
+   Slug: sandero-iii
+
+58. dacia - SPRING
+   Slug: spring
+
+59. daewoo - AVEO
+   Slug: aveo
+
+60. daewoo - LACETTI Kombi
+   Slug: lacetti-kombi
+
+61. daewoo - LACETTI Saloon
+   Slug: lacetti-saloon
+
+62. daewoo - NEXIA
+   Slug: nexia
+
+63. daewoo - NEXIA Saloon
+   Slug: nexia-saloon
+
+64. daihatsu - ALTIS Saloon
+   Slug: altis-saloon
+
+65. daihatsu - BEGO
+   Slug: bego
+
+66. daihatsu - MIRA GINO I
+   Slug: mira-gino-i
+
+67. daihatsu - TREVIS
+   Slug: trevis
+
+68. daimler - AVENGER
+   Slug: avenger
+
+69. daimler - C-MAX II Van
+   Slug: c-max-ii-van
+
+70. daimler - CALIBER
+   Slug: caliber
+
+71. daimler - CHARGER
+   Slug: charger
+
+72. daimler - DART
+   Slug: dart
+
+73. daimler - DUCATO Panorama
+   Slug: ducato-panorama
+
+74. daimler - ECOSPORT
+   Slug: ecosport
+
+75. daimler - FIESTA V Van
+   Slug: fiesta-v-van
+
+76. daimler - FIESTA VI Van
+   Slug: fiesta-vi-van
+
+77. daimler - FIESTA VII Van
+   Slug: fiesta-vii-van
+
+78. daimler - FOCUS II Convertible
+   Slug: focus-ii-convertible
+
+79. daimler - FOCUS II Estate Van
+   Slug: focus-ii-estate-van
+
+80. daimler - FOCUS III
+   Slug: focus-iii
+
+81. daimler - FOCUS III Estate Van
+   Slug: focus-iii-estate-van
+
+82. daimler - FOCUS III Hatchback Van
+   Slug: focus-iii-hatchback-van
+
+83. daimler - FOCUS III Saloon
+   Slug: focus-iii-saloon
+
+84. daimler - FOCUS III Turnier
+   Slug: focus-iii-turnier
+
+85. daimler - GRAND C-MAX Van
+   Slug: grand-c-max-van
+
+86. daimler - JOURNEY
+   Slug: journey
+
+87. daimler - KUGA I
+   Slug: kuga-i
+
+88. daimler - KUGA II Van
+   Slug: kuga-ii-van
+
+89. daimler - MAVERICK
+   Slug: maverick
+
+90. daimler - MONDEO IV Van
+   Slug: mondeo-iv-van
+
+91. daimler - NEON
+   Slug: neon
+
+92. daimler - NEON II
+   Slug: neon-ii
+
+93. daimler - NITRO
+   Slug: nitro
+
+94. daimler - PANDA Hatchback Van
+   Slug: panda-hatchback-van
+
+95. daimler - PUNTO Convertible
+   Slug: punto-convertible
+
+96. daimler - PUNTO Hatchback Van
+   Slug: punto-hatchback-van
+
+97. daimler - SEICENTO / 600 Hatch-
+   Slug: seicento-600-hatch-
+
+98. daimler - STILO Multi Wagon
+   Slug: stilo-multi-wagon
+
+99. daimler - TOURNEO CONNECT
+   Slug: tourneo-connect
+
+100. daimler - TOURNEO COURIER B460 MPV
+   Slug: tourneo-courier-b460-mpv
+
+101. daimler - TRANSIT CONNECT MPV
+   Slug: transit-connect-mpv
+
+102. daimler - TRANSIT COURIER B460 MPV
+   Slug: transit-courier-b460-mpv
+
+103. daimler - TRANSIT TOURNEO Bus
+   Slug: transit-tourneo-bus
+
+104. ford-usa - EDGE
+   Slug: edge
+
+105. ford-usa - F-150
+   Slug: f-150
+
+106. ford-usa - MUSTANG Convertible
+   Slug: mustang-convertible
+
+107. ford-usa - MUSTANG Coupe
+   Slug: mustang-coupe
+
+108. honda - CROSSTOUR I
+   Slug: crosstour-i
+
+109. hyundai - CRETA
+   Slug: creta
+
+110. hyundai - GENESIS Coupe
+   Slug: genesis-coupe
+
+111. hyundai - H100 Van
+   Slug: h100-van
+
+112. hyundai - H350 Bus
+   Slug: h350-bus
+
+113. hyundai - H350 Van
+   Slug: h350-van
+
+114. hyundai - HIGHWAY VAN
+   Slug: highway-van
+
+115. hyundai - i30 Coupe
+   Slug: i30-coupe
+
+116. hyundai - ix55
+   Slug: ix55
+
+117. hyundai - NEXO
+   Slug: nexo
+
+118. hyundai - SANTAMO
+   Slug: santamo
+
+119. infiniti - EX
+   Slug: ex
+
+120. infiniti - FX
+   Slug: fx
+
+121. infiniti - G Convertible
+   Slug: g-convertible
+
+122. infiniti - G Coupe
+   Slug: g-coupe
+
+123. infiniti - G Saloon
+   Slug: g-saloon
+
+124. infiniti - M35
+   Slug: m35
+
+125. infiniti - M45
+   Slug: m45
+
+126. infiniti - Q30
+   Slug: q30
+
+127. infiniti - Q50
+   Slug: q50
+
+128. infiniti - QX30
+   Slug: qx30
+
+129. infiniti - QX50 I
+   Slug: qx50-i
+
+130. irmscher - COUPE
+   Slug: coupe
+
+131. isuzu - TROOPER III
+   Slug: trooper-iii
+
+132. iveco - DAILY I Van
+   Slug: daily-i-van
+
+133. iveco - DAILY III Van
+   Slug: daily-iii-van
+
+134. iveco - DAILY IV Bus
+   Slug: daily-iv-bus
+
+135. iveco - DAILY IV Dump Truck
+   Slug: daily-iv-dump-truck
+
+136. iveco - DAILY IV Van
+   Slug: daily-iv-van
+
+137. iveco - DAILY LINE Bus
+   Slug: daily-line-bus
+
+138. iveco - DAILY TOURYS Bus
+   Slug: daily-tourys-bus
+
+139. iveco - DAILY V Dumptruck
+   Slug: daily-v-dumptruck
+
+140. iveco - DAILY V Van
+   Slug: daily-v-van
+
+141. iveco - DAILY VI Van
+   Slug: daily-vi-van
+
+142. iveco - MASSIF Pickup
+   Slug: massif-pickup
+
+143. iveco - MASSIF Single Cab
+   Slug: massif-single-cab
+
+144. iveco - MASSIF Station Wagon
+   Slug: massif-station-wagon
+
+145. kia - BESTA Van
+   Slug: besta-van
+
+146. kia - CARENS IV
+   Slug: carens-iv
+
+147. kia - JOICE
+   Slug: joice
+
+148. kia - OPTIMA
+   Slug: optima
+
+149. kia - PRIDE Estate
+   Slug: pride-estate
+
+150. land-rover - RANGE ROVER I
+   Slug: range-rover-i
+
+151. lincoln - TOWN CAR III
+   Slug: town-car-iii
+
+152. lotus - ELISE
+   Slug: elise
+
+153. man - TGE Van
+   Slug: tge-van
+
+154. maserati - 3200 GT Coupe
+   Slug: 3200-gt-coupe
+
+155. mazda - 626 V Station Wagon
+   Slug: 626-v-station-wagon
+
+156. mercedes - B-CLASS Sports Tourer
+   Slug: b-class-sports-tourer
+
+157. mercedes - C-CLASS Convertible
+   Slug: c-class-convertible
+
+158. mercedes - CLA Shooting Brake
+   Slug: cla-shooting-brake
+
+159. mercedes - CLS Shooting Brake
+   Slug: cls-shooting-brake
+
+160. mercedes - E-CLASS All-Terrain
+   Slug: e-class-all-terrain
+
+161. mercedes - E-CLASS Convertible
+   Slug: e-class-convertible
+
+162. mercedes - SPRINTER Dump Truck
+   Slug: sprinter-dump-truck
+
+163. mercedes - VARIO Bus
+   Slug: vario-bus
+
+164. mercedes - VARIO Cab with engine
+   Slug: vario-cab-with-engine
+
+165. mercedes - VARIO Dump Truck
+   Slug: vario-dump-truck
+
+166. mg - MARVEL R
+   Slug: marvel-r
+
+167. mg - MG 3
+   Slug: mg-3
+
+168. mg - MG 5 Estate
+   Slug: mg-5-estate
+
+169. mg - MG 6 Hatchback
+   Slug: mg-6-hatchback
+
+170. mg - MG 6 Saloon
+   Slug: mg-6-saloon
+
+171. mg - MG GS
+   Slug: mg-gs
+
+172. mg - MG TF
+   Slug: mg-tf
+
+173. mg - MG ZR
+   Slug: mg-zr
+
+174. mg - MG ZS
+   Slug: mg-zs
+
+175. mg - MG ZS Hatchback
+   Slug: mg-zs-hatchback
+
+176. mg - MG ZT
+   Slug: mg-zt
+
+177. mitsubishi - LANCER IV Hatchback
+   Slug: lancer-iv-hatchback
+
+178. mitsubishi - LANCER V Station Wagon
+   Slug: lancer-v-station-wagon
+
+179. mitsubishi - LANCER VIII Sportback
+   Slug: lancer-viii-sportback
+
+180. mitsubishi - MIRAGE / SPACE STAR VI
+   Slug: mirage-space-star-vi
+
+181. mitsubishi - OUTLANDER II Van
+   Slug: outlander-ii-van
+
+182. mitsubishi - OUTLANDER III Van
+   Slug: outlander-iii-van
+
+183. mitsubishi - PAJERO II Canvas Top
+   Slug: pajero-ii-canvas-top
+
+184. mitsubishi - SANTAMO
+   Slug: santamo
+
+185. nissan - MAXIMA / MAXIMA QX IV
+   Slug: maxima-maxima-qx-iv
+
+186. nissan - MAXIMA / MAXIMA QX V
+   Slug: maxima-maxima-qx-v
+
+187. nissan - NP200
+   Slug: np200
+
+188. nissan - NP300 NAVARA Pickup
+   Slug: np300-navara-pickup
+
+189. nissan - NV200 / EVALIA Bus
+   Slug: nv200-evalia-bus
+
+190. nissan - NV200 Van
+   Slug: nv200-van
+
+191. nissan - PATROL GR V Wagon
+   Slug: patrol-gr-v-wagon
+
+192. nissan - PRIMERA Hatchback
+   Slug: primera-hatchback
+
+193. nissan - PRIMERA Traveller
+   Slug: primera-traveller
+
+194. opel - ASTRA J GTC
+   Slug: astra-j-gtc
+
+195. opel - ASTRA J Saloon
+   Slug: astra-j-saloon
+
+196. opel - ASTRA L
+   Slug: astra-l
+
+197. opel - ASTRA L Sports Tourer
+   Slug: astra-l-sports-tourer
+
+198. opel - COMBO Tour
+   Slug: combo-tour
+
+199. opel - CORSA F
+   Slug: corsa-f
+
+200. peugeot - 107
+   Slug: 107
+
+201. peugeot - 108
+   Slug: 108
+
+202. peugeot - 205 Hatchback Van
+   Slug: 205-hatchback-van
+
+203. peugeot - 206 Saloon
+   Slug: 206-saloon
+
+204. peugeot - 206 Van
+   Slug: 206-van
+
+205. peugeot - 207 Saloon
+   Slug: 207-saloon
+
+206. peugeot - 301
+   Slug: 301
+
+207. peugeot - 308 SW II Estate Van
+   Slug: 308-sw-ii-estate-van
+
+208. peugeot - 4008
+   Slug: 4008
+
+209. peugeot - 408
+   Slug: 408
+
+210. peugeot - BIPPER Tepee
+   Slug: bipper-tepee
+
+211. peugeot - BOXER Bus
+   Slug: boxer-bus
+
+212. peugeot - BOXER Van
+   Slug: boxer-van
+
+213. peugeot - ION
+   Slug: ion
+
+214. peugeot - PARTNER ORIGIN Box
+   Slug: partner-origin-box
+
+215. peugeot - PARTNER ORIGIN MPV
+   Slug: partner-origin-mpv
+
+216. peugeot - PARTNER Tepee
+   Slug: partner-tepee
+
+217. peugeot - PORTER Bus
+   Slug: porter-bus
+
+218. peugeot - PORTER Dump Truck
+   Slug: porter-dump-truck
+
+219. peugeot - PORTER Van
+   Slug: porter-van
+
+220. peugeot - QUARGO Platform/ Chassis
+   Slug: quargo-platform-chassis
+
+221. peugeot - RCZ
+   Slug: rcz
+
+222. peugeot - RIFTER
+   Slug: rifter
+
+223. plymouth - NEON II Saloon
+   Slug: neon-ii-saloon
+
+224. pontiac - TRANS SPORT
+   Slug: trans-sport
+
+225. porsche - 928
+   Slug: 928
+
+226. porsche - 968
+   Slug: 968
+
+227. porsche - 968 Convertible
+   Slug: 968-convertible
+
+228. porsche - PANAMERA Sport Turis-
+   Slug: panamera-sport-turis-
+
+229. proton - PERSONA 400 Hatchback
+   Slug: persona-400-hatchback
+
+230. renault - ALASKAN
+   Slug: alaskan
+
+231. renault - CLIO I Hatchback Van
+   Slug: clio-i-hatchback-van
+
+232. renault - CLIO II Hatchback Van
+   Slug: clio-ii-hatchback-van
+
+233. renault - CLIO III Grandtour
+   Slug: clio-iii-grandtour
+
+234. renault - CLIO III Hatchback Van
+   Slug: clio-iii-hatchback-van
+
+235. renault - CLIO IV Hatchback Van
+   Slug: clio-iv-hatchback-van
+
+236. renault - DOKKER
+   Slug: dokker
+
+237. renault - KANGOO / GRAND KAN-
+   Slug: kangoo-grand-kan-
+
+238. renault - KANGOO BE BOP
+   Slug: kangoo-be-bop
+
+239. renault - KANGOO Express
+   Slug: kangoo-express
+
+240. renault - KANGOO III MPV
+   Slug: kangoo-iii-mpv
+
+241. renault - LAGUNA I Grandtour
+   Slug: laguna-i-grandtour
+
+242. renault - LAGUNA II Grandtour
+   Slug: laguna-ii-grandtour
+
+243. renault - LAGUNA III Grandtour
+   Slug: laguna-iii-grandtour
+
+244. renault - MEGANE I Cabriolet
+   Slug: megane-i-cabriolet
+
+245. renault - MEGANE I Classic
+   Slug: megane-i-classic
+
+246. renault - MEGANE I Coach
+   Slug: megane-i-coach
+
+247. renault - MEGANE I Grandtour
+   Slug: megane-i-grandtour
+
+248. renault - MEGANE II Estate
+   Slug: megane-ii-estate
+
+249. renault - MEGANE II Saloon
+   Slug: megane-ii-saloon
+
+250. renault - MEGANE III Coupe
+   Slug: megane-iii-coupe
+
+251. renault - MEGANE III Grandtour
+   Slug: megane-iii-grandtour
+
+252. renault - MEGANE III Hatchback
+   Slug: megane-iii-hatchback
+
+253. renault - MEGANE IV Grandtour
+   Slug: megane-iv-grandtour
+
+254. renault - MEGANE IV Hatchback
+   Slug: megane-iv-hatchback
+
+255. renault - MEGANE IV Saloon
+   Slug: megane-iv-saloon
+
+256. renault - MODUS / GRAND MODUS
+   Slug: modus-grand-modus
+
+257. renault - TALISMAN Grandtour
+   Slug: talisman-grandtour
+
+258. renault - TWINGO I Hatchback Van
+   Slug: twingo-i-hatchback-van
+
+259. renault - ZOE Hatchback Van
+   Slug: zoe-hatchback-van
+
+260. renault-trucks - B Van
+   Slug: b-van
+
+261. renault-trucks - MASCOTT Dumptruck
+   Slug: mascott-dumptruck
+
+262. renault-trucks - MASCOTT Platform/ Chassis
+   Slug: mascott-platform-chassis
+
+263. renault-trucks - MASCOTT Van
+   Slug: mascott-van
+
+264. renault-trucks - MESSENGER Dump Truck
+   Slug: messenger-dump-truck
+
+265. renault-trucks - MESSENGER Platform/ Chassis
+   Slug: messenger-platform-chassis
+
+266. renault-trucks - MESSENGER Van
+   Slug: messenger-van
+
+267. rover - 800 Coupe
+   Slug: 800-coupe
+
+268. rover - COUPE
+   Slug: coupe
+
+269. rover - MINI Hatchback
+   Slug: mini-hatchback
+
+270. rover - STREETWISE Hatchback
+   Slug: streetwise-hatchback
+
+271. saab - 9-7X
+   Slug: 9-7x
+
+272. saab - 900 II
+   Slug: 900-ii
+
+273. saab - 900 II Convertible
+   Slug: 900-ii-convertible
+
+274. saab - 900 II Coupe
+   Slug: 900-ii-coupe
+
+275. saab - 9000
+   Slug: 9000
+
+276. saab - 9000 Hatchback
+   Slug: 9000-hatchback
+
+277. skoda - CITIGO
+   Slug: citigo
+
+278. ssangyong - ACTYON I
+   Slug: actyon-i
+
+279. ssangyong - KORANDO SPORTS
+   Slug: korando-sports
+
+280. ssangyong - KYRON
+   Slug: kyron
+
+281. ssangyong - MUSSO GRAND
+   Slug: musso-grand
+
+282. ssangyong - MUSSO SPORTS
+   Slug: musso-sports
+
+283. ssangyong - REXTON W / REXTON
+   Slug: rexton-w-rexton
+
+284. ssangyong - RODIUS I
+   Slug: rodius-i
+
+285. ssangyong - RODIUS II
+   Slug: rodius-ii
+
+286. ssangyong - STAVIC
+   Slug: stavic
+
+287. ssangyong - TIVOLI
+   Slug: tivoli
+
+288. ssangyong - XLV SUV
+   Slug: xlv-suv
+
+289. subaru - BRZ
+   Slug: brz
+
+290. subaru - JUSTY IV
+   Slug: justy-iv
+
+291. subaru - LEVORG
+   Slug: levorg
+
+292. subaru - TREZIA
+   Slug: trezia
+
+293. subaru - VIVIO
+   Slug: vivio
+
+294. suzuki - S-CROSS
+   Slug: s-cross
+
+295. tazzari - ZERO
+   Slug: zero
+
+296. toyota - PROACE CITY Box Body/ MPV
+   Slug: proace-city-box-body-mpv
+
+297. toyota - PROACE CITY VERSO MPV
+   Slug: proace-city-verso-mpv
+
+298. uaz - PATRIOT
+   Slug: patriot
+
+299. uaz - PICKUP
+   Slug: pickup
+
+300. vauxhall - MOKKA
+   Slug: mokka
+
+301. volkswagen - -365
+   Slug: -365
+
+302. volkswagen - ARTEON SHOOTING
+   Slug: arteon-shooting
+
+303. volkswagen - GRAND CALIFORNIA
+   Slug: grand-california
+
+304. volkswagen - PASSAT ALLTRACK B7
+   Slug: passat-alltrack-b7
+
+305. volkswagen - PASSAT B7 Estate Van
+   Slug: passat-b7-estate-van
+
+306. volkswagen - ROUTAN
+   Slug: routan
+
+307. volkswagen - SANTANA
+   Slug: santana
+
+308. volkswagen - TARO
+   Slug: taro
+

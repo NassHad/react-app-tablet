@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import type { ProductCategory, Vehicle } from '../types';
 import { dataService } from '../services/dataService';
 import { useClickAnimation } from '../hooks/useClickAnimation';
-import { useSimpleVehicleContext } from '../contexts/SimpleVehicleContext';
 
 // Import category images
 import batteryImage from '../assets/img/categories/battery.png';
@@ -18,9 +17,8 @@ interface CategoryScreenProps {
   onCategorySelect: (category: ProductCategory) => void;
 }
 
-const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
+const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
   const navigate = useNavigate();
-  const { vehicleData, setCategory } = useSimpleVehicleContext();
   const [categories, setCategories] = useState<ProductCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -99,21 +97,18 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
 
   const handleCategorySelect = async (category: ProductCategory) => {
     console.log('Category selected:', category);
-    console.log('Vehicle data from context:', vehicleData);
+    console.log('Vehicle data from props:', vehicle);
     onCategorySelect(category);
     
-    // Store category in context
-    setCategory(category);
-    
-    // Check if we have vehicle data from context
-    if (vehicleData.vehicleType && vehicleData.brand && vehicleData.model) {
+    // Check if we have vehicle data from props
+    if (vehicle && vehicle.type && vehicle.brand && vehicle.model) {
       // We have vehicle data, check if category needs specific form
       if (category.slug === 'batteries' || category.name.toLowerCase().includes('batterie')) {
         // Navigate to battery-specific form
         navigate('/category-specific');
       } else if (category.slug === 'lights' || category.name.toLowerCase().includes('éclairage')) {
-        // Navigate to lights-specific form
-        navigate('/category-specific');
+        // Navigate directly to questions page for lights
+        navigate('/questions');
       } else if (category.slug === 'oil' || category.name.toLowerCase().includes('huile')) {
         // Navigate to oil-specific form
         navigate('/category-specific');
@@ -177,12 +172,16 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
   const getCategoryAnimation = (categoryName: string) => {
     switch (categoryName) {
       case "Balais essuie-glace":
+      case "Essuie-glaces":
         return wiperAnimation;
       case 'Batterie':
+      case 'Batteries':
         return batteryAnimation;
       case 'Huile':
+      case 'Huiles':
         return oilAnimation;
       case 'Éclairage':
+      case 'Eclairage':
         return bulbAnimation;
       case 'Filtration':
         return filtrationAnimation;
@@ -195,12 +194,16 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
   const getCategoryImage = (categoryName: string) => {
     switch (categoryName) {
       case "Balais essuie-glace":
+      case "Essuie-glaces":
         return begImage; // Wiper blades image
       case 'Batterie':
+      case 'Batteries':
         return batteryImage; // Battery image
       case 'Huile':
+      case 'Huiles':
         return oilImage; // Oil image
       case 'Éclairage':
+      case 'Eclairage':
         return lightsImage; // Lighting image
       case 'Filtration':
         return filtrationImage; // Filter image
@@ -213,12 +216,16 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
   const getCategoryColor = (categoryName: string) => {
     switch (categoryName) {
       case "Balais essuie-glace":
+      case "Essuie-glaces":
         return 'bg-[#93C452]'; // Green for wipers
       case 'Batterie':
+      case 'Batteries':
         return 'bg-[#FD171F]'; // Red for batteries
       case 'Huile':
+      case 'Huiles':
         return 'bg-[#F3B11F]'; // Orange/Yellow for oil
       case 'Éclairage':
+      case 'Eclairage':
         return 'bg-[#235387]'; // Dark blue for lighting
       case 'Filtration':
         return 'bg-[#96A7B9]'; // Light gray for filtration
@@ -292,7 +299,7 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
                 return (
                   <motion.div
                     key={category.id}
-                    onClick={animation.handleClick}
+                    onClick={() => handleCategorySelect(category)}
                     className="relative w-80 h-102 rounded-lg shadow-lg cursor-pointer overflow-hidden flex-shrink-0 category-card tablet-category-card"
                     {...animation.animationProps}
                   >

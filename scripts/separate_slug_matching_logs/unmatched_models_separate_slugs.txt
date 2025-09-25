@@ -1,0 +1,619 @@
+UNMATCHED MODELS (NO DATES) - SEPARATE SLUG SEARCH:
+======================================================================
+
+Total unmatched: 118
+
+
+CITRON:
+--------------------------------------------------
+1. AX
+   Original Model Slug: ax
+   Clean Model Slug: ax
+   Search Key: citron-ax
+
+2. BERLINGO
+   Original Model Slug: berlingo
+   Clean Model Slug: berlingo
+   Search Key: citron-berlingo
+
+3. BERLINGO
+   Original Model Slug: berlingo
+   Clean Model Slug: berlingo
+   Search Key: citron-berlingo
+
+4. BERLINGO / BERLINGO FIRST MPV
+   Original Model Slug: berlingo-berlingo-first-mpv
+   Clean Model Slug: berlingo-berlingo-first-mpv
+   Search Key: citron-berlingo-berlingo-first-mpv
+
+5. BERLINGO Box Body/MPV
+   Original Model Slug: berlingo-box-body-mpv
+   Clean Model Slug: berlingo-box-body-mpv
+   Search Key: citron-berlingo-box-body-mpv
+
+6. BERLINGO Platform/ Chassis
+   Original Model Slug: berlingo-platform-chassis
+   Clean Model Slug: berlingo-platform-chassis
+   Search Key: citron-berlingo-platform-chassis
+
+7. BX
+   Original Model Slug: bx
+   Clean Model Slug: bx
+   Search Key: citron-bx
+
+8. BX Break
+   Original Model Slug: bx-break
+   Clean Model Slug: bx-break
+   Search Key: citron-bx-break
+
+9. C-CROSSER
+   Original Model Slug: c-crosser
+   Clean Model Slug: c-crosser
+   Search Key: citron-c-crosser
+
+10. C-CROSSER ENTERPRISE
+   Original Model Slug: c-crosser-enterprise
+   Clean Model Slug: c-crosser-enterprise
+   Search Key: citron-c-crosser-enterprise
+
+11. C-ELYSEE
+   Original Model Slug: c-elysee
+   Clean Model Slug: c-elysee
+   Search Key: citron-c-elysee
+
+12. C-ZERO
+   Original Model Slug: c-zero
+   Clean Model Slug: c-zero
+   Search Key: citron-c-zero
+
+13. C1
+   Original Model Slug: c1
+   Clean Model Slug: c1
+   Search Key: citron-c1
+
+14. C1 II
+   Original Model Slug: c1-ii
+   Clean Model Slug: c1-ii
+   Search Key: citron-c1-ii
+
+15. C15 Box Body/MPV
+   Original Model Slug: c15-box-body-mpv
+   Clean Model Slug: c15-box-body-mpv
+   Search Key: citron-c15-box-body-mpv
+
+16. C2
+   Original Model Slug: c2
+   Clean Model Slug: c2
+   Search Key: citron-c2
+
+17. C2 ENTERPRISE
+   Original Model Slug: c2-enterprise
+   Clean Model Slug: c2-enterprise
+   Search Key: citron-c2-enterprise
+
+18. C3 AIRCROSS I
+   Original Model Slug: c3-aircross-i
+   Clean Model Slug: c3-aircross-i
+   Search Key: citron-c3-aircross-i
+
+19. C3 AIRCROSS II
+   Original Model Slug: c3-aircross-ii
+   Clean Model Slug: c3-aircross-ii
+   Search Key: citron-c3-aircross-ii
+
+20. C3 AIRCROSS II Van
+   Original Model Slug: c3-aircross-ii-van
+   Clean Model Slug: c3-aircross-ii-van
+   Search Key: citron-c3-aircross-ii-van
+
+21. C3 I
+   Original Model Slug: c3-i
+   Clean Model Slug: c3-i
+   Search Key: citron-c3-i
+
+22. C3 II
+   Original Model Slug: c3-ii
+   Clean Model Slug: c3-ii
+   Search Key: citron-c3-ii
+
+23. C3 III
+   Original Model Slug: c3-iii
+   Clean Model Slug: c3-iii
+   Search Key: citron-c3-iii
+
+24. C3 III Van
+   Original Model Slug: c3-iii-van
+   Clean Model Slug: c3-iii-van
+   Search Key: citron-c3-iii-van
+
+25. C3 Picasso
+   Original Model Slug: c3-picasso
+   Clean Model Slug: c3-picasso
+   Search Key: citron-c3-picasso
+
+26. C3 Pluriel
+   Original Model Slug: c3-pluriel
+   Clean Model Slug: c3-pluriel
+   Search Key: citron-c3-pluriel
+
+27. C4 AIRCROSS
+   Original Model Slug: c4-aircross
+   Clean Model Slug: c4-aircross
+   Search Key: citron-c4-aircross
+
+28. C4 CACTUS
+   Original Model Slug: c4-cactus
+   Clean Model Slug: c4-cactus
+   Search Key: citron-c4-cactus
+
+29. C4 CACTUS Van
+   Original Model Slug: c4-cactus-van
+   Clean Model Slug: c4-cactus-van
+   Search Key: citron-c4-cactus-van
+
+30. C4 Coupe
+   Original Model Slug: c4-coupe
+   Clean Model Slug: c4-coupe
+   Search Key: citron-c4-coupe
+
+31. C4 Grand Picasso I
+   Original Model Slug: c4-grand-picasso-i
+   Clean Model Slug: c4-grand-picasso-i
+   Search Key: citron-c4-grand-picasso-i
+
+32. C4 Grand Picasso II
+   Original Model Slug: c4-grand-picasso-ii
+   Clean Model Slug: c4-grand-picasso-ii
+   Search Key: citron-c4-grand-picasso-ii
+
+33. C4 I
+   Original Model Slug: c4-i
+   Clean Model Slug: c4-i
+   Search Key: citron-c4-i
+
+34. C4 I Saloon
+   Original Model Slug: c4-i-saloon
+   Clean Model Slug: c4-i-saloon
+   Search Key: citron-c4-i-saloon
+
+35. C4 II
+   Original Model Slug: c4-ii
+   Clean Model Slug: c4-ii
+   Search Key: citron-c4-ii
+
+36. C4 II Saloon
+   Original Model Slug: c4-ii-saloon
+   Clean Model Slug: c4-ii-saloon
+   Search Key: citron-c4-ii-saloon
+
+37. C4 III
+   Original Model Slug: c4-iii
+   Clean Model Slug: c4-iii
+   Search Key: citron-c4-iii
+
+38. C4 Picasso I MPV
+   Original Model Slug: c4-picasso-i-mpv
+   Clean Model Slug: c4-picasso-i-mpv
+   Search Key: citron-c4-picasso-i-mpv
+
+39. C4 Picasso II
+   Original Model Slug: c4-picasso-ii
+   Clean Model Slug: c4-picasso-ii
+   Search Key: citron-c4-picasso-ii
+
+40. C4 PICASSO II Van
+   Original Model Slug: c4-picasso-ii-van
+   Clean Model Slug: c4-picasso-ii-van
+   Search Key: citron-c4-picasso-ii-van
+
+41. C4 SPACETOURER
+   Original Model Slug: c4-spacetourer
+   Clean Model Slug: c4-spacetourer
+   Search Key: citron-c4-spacetourer
+
+42. C5 AIRCROSS
+   Original Model Slug: c5-aircross
+   Clean Model Slug: c5-aircross
+   Search Key: citron-c5-aircross
+
+43. C5 I
+   Original Model Slug: c5-i
+   Clean Model Slug: c5-i
+   Search Key: citron-c5-i
+
+44. C5 I Break
+   Original Model Slug: c5-i-break
+   Clean Model Slug: c5-i-break
+   Search Key: citron-c5-i-break
+
+45. C5 II
+   Original Model Slug: c5-ii
+   Clean Model Slug: c5-ii
+   Search Key: citron-c5-ii
+
+46. C5 II Break
+   Original Model Slug: c5-ii-break
+   Clean Model Slug: c5-ii-break
+   Search Key: citron-c5-ii-break
+
+47. C5 III
+   Original Model Slug: c5-iii
+   Clean Model Slug: c5-iii
+   Search Key: citron-c5-iii
+
+48. C5 III Break
+   Original Model Slug: c5-iii-break
+   Clean Model Slug: c5-iii-break
+   Search Key: citron-c5-iii-break
+
+49. C6
+   Original Model Slug: c6
+   Clean Model Slug: c6
+   Search Key: citron-c6
+
+50. C8
+   Original Model Slug: c8
+   Clean Model Slug: c8
+   Search Key: citron-c8
+
+51. DS3
+   Original Model Slug: ds3
+   Clean Model Slug: ds3
+   Search Key: citron-ds3
+
+52. DS3 Convertible
+   Original Model Slug: ds3-convertible
+   Clean Model Slug: ds3-convertible
+   Search Key: citron-ds3-convertible
+
+53. DS4
+   Original Model Slug: ds4
+   Clean Model Slug: ds4
+   Search Key: citron-ds4
+
+54. DS5
+   Original Model Slug: ds5
+   Clean Model Slug: ds5
+   Search Key: citron-ds5
+
+55. E-MEHARI
+   Original Model Slug: e-mehari
+   Clean Model Slug: e-mehari
+   Search Key: citron-e-mehari
+
+56. EVASION MPV
+   Original Model Slug: evasion-mpv
+   Clean Model Slug: evasion-mpv
+   Search Key: citron-evasion-mpv
+
+57. FIRST Box Body/MPV"
+   Original Model Slug: first-box-body-mpv"
+   Clean Model Slug: first-box-body-mpv"
+   Search Key: citron-first-box-body-mpv"
+
+58. GRAND C4 SPACETOURER
+   Original Model Slug: grand-c4-spacetourer
+   Clean Model Slug: grand-c4-spacetourer
+   Search Key: citron-grand-c4-spacetourer
+
+59. JUMPER Bus
+   Original Model Slug: jumper-bus
+   Clean Model Slug: jumper-bus
+   Search Key: citron-jumper-bus
+
+60. JUMPER Bus
+   Original Model Slug: jumper-bus
+   Clean Model Slug: jumper-bus
+   Search Key: citron-jumper-bus
+
+61. JUMPER Bus
+   Original Model Slug: jumper-bus
+   Clean Model Slug: jumper-bus
+   Search Key: citron-jumper-bus
+
+62. JUMPER Platform/ Chassis
+   Original Model Slug: jumper-platform-chassis
+   Clean Model Slug: jumper-platform-chassis
+   Search Key: citron-jumper-platform-chassis
+
+63. JUMPER Platform/ Chassis
+   Original Model Slug: jumper-platform-chassis
+   Clean Model Slug: jumper-platform-chassis
+   Search Key: citron-jumper-platform-chassis
+
+64. JUMPER Platform/ Chassis
+   Original Model Slug: jumper-platform-chassis
+   Clean Model Slug: jumper-platform-chassis
+   Search Key: citron-jumper-platform-chassis
+
+65. JUMPER Van
+   Original Model Slug: jumper-van
+   Clean Model Slug: jumper-van
+   Search Key: citron-jumper-van
+
+66. JUMPER Van
+   Original Model Slug: jumper-van
+   Clean Model Slug: jumper-van
+   Search Key: citron-jumper-van
+
+67. JUMPER Van
+   Original Model Slug: jumper-van
+   Clean Model Slug: jumper-van
+   Search Key: citron-jumper-van
+
+68. JUMPY
+   Original Model Slug: jumpy
+   Clean Model Slug: jumpy
+   Search Key: citron-jumpy
+
+69. JUMPY
+   Original Model Slug: jumpy
+   Clean Model Slug: jumpy
+   Search Key: citron-jumpy
+
+70. JUMPY Bus
+   Original Model Slug: jumpy-bus
+   Clean Model Slug: jumpy-bus
+   Search Key: citron-jumpy-bus
+
+71. JUMPY Platform/Chassis
+   Original Model Slug: jumpy-platform-chassis
+   Clean Model Slug: jumpy-platform-chassis
+   Search Key: citron-jumpy-platform-chassis
+
+72. JUMPY Platform/Chassis
+   Original Model Slug: jumpy-platform-chassis
+   Clean Model Slug: jumpy-platform-chassis
+   Search Key: citron-jumpy-platform-chassis
+
+73. JUMPY Platform/Chassis
+   Original Model Slug: jumpy-platform-chassis
+   Clean Model Slug: jumpy-platform-chassis
+   Search Key: citron-jumpy-platform-chassis
+
+74. JUMPY Van
+   Original Model Slug: jumpy-van
+   Clean Model Slug: jumpy-van
+   Search Key: citron-jumpy-van
+
+75. JUMPY Van
+   Original Model Slug: jumpy-van
+   Clean Model Slug: jumpy-van
+   Search Key: citron-jumpy-van
+
+76. JUMPY Van
+   Original Model Slug: jumpy-van
+   Clean Model Slug: jumpy-van
+   Search Key: citron-jumpy-van
+
+77. NEMO Box Body/MPV
+   Original Model Slug: nemo-box-body-mpv
+   Clean Model Slug: nemo-box-body-mpv
+   Search Key: citron-nemo-box-body-mpv
+
+78. NEMO MPV
+   Original Model Slug: nemo-mpv
+   Clean Model Slug: nemo-mpv
+   Search Key: citron-nemo-mpv
+
+79. SAXO
+   Original Model Slug: saxo
+   Clean Model Slug: saxo
+   Search Key: citron-saxo
+
+80. SPACETOURER Bus
+   Original Model Slug: spacetourer-bus
+   Clean Model Slug: spacetourer-bus
+   Search Key: citron-spacetourer-bus
+
+81. XANTIA
+   Original Model Slug: xantia
+   Clean Model Slug: xantia
+   Search Key: citron-xantia
+
+82. XANTIA
+   Original Model Slug: xantia
+   Clean Model Slug: xantia
+   Search Key: citron-xantia
+
+83. XANTIA Break
+   Original Model Slug: xantia-break
+   Clean Model Slug: xantia-break
+   Search Key: citron-xantia-break
+
+84. XANTIA Break
+   Original Model Slug: xantia-break
+   Clean Model Slug: xantia-break
+   Search Key: citron-xantia-break
+
+85. XM
+   Original Model Slug: xm
+   Clean Model Slug: xm
+   Search Key: citron-xm
+
+86. XM
+   Original Model Slug: xm
+   Clean Model Slug: xm
+   Search Key: citron-xm
+
+87. XM Break
+   Original Model Slug: xm-break
+   Clean Model Slug: xm-break
+   Search Key: citron-xm-break
+
+88. XM Break
+   Original Model Slug: xm-break
+   Clean Model Slug: xm-break
+   Search Key: citron-xm-break
+
+89. XSARA
+   Original Model Slug: xsara
+   Clean Model Slug: xsara
+   Search Key: citron-xsara
+
+90. XSARA Break
+   Original Model Slug: xsara-break
+   Clean Model Slug: xsara-break
+   Search Key: citron-xsara-break
+
+91. XSARA Coupe
+   Original Model Slug: xsara-coupe
+   Clean Model Slug: xsara-coupe
+   Search Key: citron-xsara-coupe
+
+92. XSARA PICASSO
+   Original Model Slug: xsara-picasso
+   Clean Model Slug: xsara-picasso
+   Search Key: citron-xsara-picasso
+
+93. ZX
+   Original Model Slug: zx
+   Clean Model Slug: zx
+   Search Key: citron-zx
+
+94. ZX Break
+   Original Model Slug: zx-break
+   Clean Model Slug: zx-break
+   Search Key: citron-zx-break
+
+
+DAIMLER:
+--------------------------------------------------
+1. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+
+MERCEDES:
+--------------------------------------------------
+1. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+2. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+3. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+4. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+5. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+6. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+
+MITSUBISHI:
+--------------------------------------------------
+1. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+
+NISSAN:
+--------------------------------------------------
+1. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+2. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+3. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+
+PEUGEOT:
+--------------------------------------------------
+1. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+
+PROTON:
+--------------------------------------------------
+1. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+
+RENAULT:
+--------------------------------------------------
+1. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+2. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+3. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+4. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+5. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+6. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+7. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+8. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+9. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+10. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+
+11. MISSING
+   Original Model Slug: MISSING
+   Clean Model Slug: N/A
+   Search Key: MISSING_SLUGS
+

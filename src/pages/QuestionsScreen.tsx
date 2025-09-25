@@ -26,12 +26,18 @@ const QuestionsScreen = ({ vehicle, category, onAnswersComplete }: QuestionsScre
   const getQuestionsComponent = () => {
     switch (category.slug) {
       case 'beg':
+      case 'wipers':
+      case 'essuie-glaces':
         return <WipersQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'battery':
+      case 'batteries':
         return <BatteriesQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'oil':
+      case 'oils':
+      case 'huiles':
         return <OilsQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'lights':
+      case 'eclairage':
         return <BulbsQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;
       case 'filtration':
         return <FiltrationQuestions vehicle={vehicle} category={category} onAnswersComplete={handleAnswersComplete} />;

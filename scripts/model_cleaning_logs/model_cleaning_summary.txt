@@ -1,0 +1,19 @@
+MODEL CLEANING SUMMARY
+================================================================================
+
+Total models processed: 2605
+Models cleaned: 2297 (88.2%)
+Models unchanged: 308 (11.8%)
+
+Cleaning operations:
+- Removed parentheses content from model names
+- Updated model slugs to match cleaned names
+- Replaced forward slashes with dashes in slugs
+- Converted to lowercase and replaced spaces with dashes
+
+Log files created:
+- cleaned_models.txt: 2297 models that were cleaned
+- unchanged_models.txt: 308 models that were unchanged
+- model_cleaning_summary.txt: This summary
+
+Generated on: 2025-09-23T12:35:03.137Z

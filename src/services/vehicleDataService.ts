@@ -47,11 +47,11 @@ class VehicleDataService {
         }
 
         try {
-          // Try new API endpoints
-          const response = await fetch('/api/brands');
+          // Use the lights-selection brands endpoint - more reliable as it's from actual products
+          const response = await fetch('http://localhost:1338/api/lights-selection/brands');
           if (response.ok) {
             const data = await response.json();
-            const brands = data.data.map((brand: any) => ({
+            const brands = data.map((brand: any) => ({
               id: brand.id,
               name: brand.name,
               slug: brand.slug,
@@ -66,13 +66,13 @@ class VehicleDataService {
               lastFetch: Date.now()
             };
 
-            console.log('✅ Brands loaded from new API:', brands.length);
+            console.log('✅ Brands loaded from lights-selection API:', brands.length);
             return brands;
           } else {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
         } catch (error) {
-          console.error('❌ Failed to load brands from new API, falling back to local data:', error);
+          console.error('❌ Failed to load brands from lights-selection API, falling back to local data:', error);
           // Fallback to local data
           const localBrands = getLocalBrands();
           console.log('📦 Using local brands as fallback:', localBrands.length);
@@ -205,14 +205,15 @@ class VehicleDataService {
         }
 
         try {
-          // Use the specific brand filter URL
-          const response = await fetch(`/api/models?filters[brand][slug][$eq]=${brandSlug}&populate=*&sort[0]=name:asc`);
+          // Use the new models-from-products endpoint - more reliable as it extracts from actual products
+          const response = await fetch(`http://localhost:1338/api/lights-selection/models-from-products?brandSlug=${brandSlug}`);
           if (response.ok) {
-            const data = await response.json();
-            const models = data.data.map((model: any) => ({
+            const responseData = await response.json();
+            const data = responseData.data || responseData; // Handle both wrapped and direct responses
+            const models = data.map((model: any) => ({
               id: model.id,
               name: model.name,
-              brandSlug: model.brand?.slug || '',
+              brandSlug: model.brand?.slug || brandSlug,
               modelSlug: model.slug,
               brand: model.brand?.name || '',
               brandId: model.brand?.id || 0
@@ -227,13 +228,13 @@ class VehicleDataService {
               ];
             }
 
-            console.log(`✅ Models loaded from new API for brand ${brandSlug}:`, models.length);
+            console.log(`✅ Models loaded from products API for brand ${brandSlug}:`, models.length);
             return models;
           } else {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
         } catch (error) {
-          console.error(`❌ Failed to load models for brand ${brandSlug} from new API:`, error);
+          console.error(`❌ Failed to load models for brand ${brandSlug} from products API:`, error);
           throw error;
         }
       }
@@ -259,8 +260,8 @@ class VehicleDataService {
         }
 
         try {
-          // Try new API endpoints
-          const response = await fetch('/api/models?populate=*&sort[0]=name:asc');
+          // Try new API endpoints - fetch all models by setting large page size
+          const response = await fetch('http://localhost:1338/api/models?populate=*&sort[0]=name:asc&pagination[pageSize]=1000');
           if (response.ok) {
             const data = await response.json();
             const models = data.data.map((model: any) => ({

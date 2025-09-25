@@ -165,7 +165,7 @@ class StrapiService {
       }
       
       // Transform Strapi response to match your existing interface
-      const categories = response.data.data.map((item: StrapiProductCategory) => ({
+      const categories = (response.data as any).data.map((item: StrapiProductCategory) => ({
         id: item.id,
         name: item.name,
         slug: item.slug,
@@ -174,7 +174,7 @@ class StrapiService {
       }));
       
       // Filter only active categories
-      const activeCategories = categories.filter(category => category.active);
+      const activeCategories = categories.filter((category: any) => category.active);
       
       console.log('📊 Categories loaded from Strapi:', categories.length);
       console.log('📊 Active categories from Strapi:', activeCategories.length);

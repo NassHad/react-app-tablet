@@ -172,12 +172,16 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
   const getCategoryAnimation = (categoryName: string) => {
     switch (categoryName) {
       case "Balais essuie-glace":
+      case "Essuie-glaces":
         return wiperAnimation;
       case 'Batterie':
+      case 'Batteries':
         return batteryAnimation;
       case 'Huile':
+      case 'Huiles':
         return oilAnimation;
       case 'Éclairage':
+      case 'Eclairage':
         return bulbAnimation;
       case 'Filtration':
         return filtrationAnimation;
@@ -190,12 +194,16 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
   const getCategoryImage = (categoryName: string) => {
     switch (categoryName) {
       case "Balais essuie-glace":
+      case "Essuie-glaces":
         return begImage; // Wiper blades image
       case 'Batterie':
+      case 'Batteries':
         return batteryImage; // Battery image
       case 'Huile':
+      case 'Huiles':
         return oilImage; // Oil image
       case 'Éclairage':
+      case 'Eclairage':
         return lightsImage; // Lighting image
       case 'Filtration':
         return filtrationImage; // Filter image
@@ -208,12 +216,16 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
   const getCategoryColor = (categoryName: string) => {
     switch (categoryName) {
       case "Balais essuie-glace":
+      case "Essuie-glaces":
         return 'bg-[#93C452]'; // Green for wipers
       case 'Batterie':
+      case 'Batteries':
         return 'bg-[#FD171F]'; // Red for batteries
       case 'Huile':
+      case 'Huiles':
         return 'bg-[#F3B11F]'; // Orange/Yellow for oil
       case 'Éclairage':
+      case 'Eclairage':
         return 'bg-[#235387]'; // Dark blue for lighting
       case 'Filtration':
         return 'bg-[#96A7B9]'; // Light gray for filtration
@@ -287,7 +299,7 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
                 return (
                   <motion.div
                     key={category.id}
-                    onClick={animation.handleClick}
+                    onClick={() => handleCategorySelect(category)}
                     className="relative w-80 h-102 rounded-lg shadow-lg cursor-pointer overflow-hidden flex-shrink-0 category-card tablet-category-card"
                     {...animation.animationProps}
                   >

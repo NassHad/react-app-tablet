@@ -294,5 +294,93 @@ export default {
       console.error('Error fetching light data by position:', error);
       return ctx.internalServerError('Failed to fetch light data');
     }
+  },
+
+  async getProducts(ctx: any) {
+    try {
+      const { brandSlug, modelSlug, positionSlug } = ctx.query;
+      
+      if (!brandSlug || !modelSlug || !positionSlug) {
+        return ctx.badRequest('brandSlug, modelSlug, and positionSlug are required');
+      }
+
+      // Get all lights products
+      const lightsProducts = await strapi.entityService.findMany('api::lights-product.lights-product', {
+        filters: {
+          isActive: true
+        },
+        populate: {
+          brand: true,
+          model: {
+            populate: {
+              brand: true
+            }
+          }
+        }
+      });
+
+      // Filter products by brand and model slugs
+      const matchingProducts = lightsProducts.filter((product: any) => {
+        const productBrandSlug = product.brand?.slug?.toLowerCase();
+        const productModelSlug = product.model?.slug?.toLowerCase();
+        
+        return productBrandSlug === brandSlug.toLowerCase() && 
+               productModelSlug === modelSlug.toLowerCase();
+      });
+
+      // Filter by position and extract the specific position data
+      const productsWithPosition = matchingProducts.map((product: any) => {
+        const positions = (product as any).lightPositions || [];
+        const matchingPosition = positions.find((pos: any) => {
+          const posSlug = pos.position.toLowerCase().replace(/\s+/g, '-');
+          return posSlug === positionSlug.toLowerCase();
+        });
+
+        if (matchingPosition) {
+          return {
+            id: product.id,
+            name: product.name,
+            ref: matchingPosition.ref,
+            description: product.description,
+            brand: product.brand,
+            model: product.model,
+            lightPositions: [{
+              id: `pos-${positions.indexOf(matchingPosition)}`,
+              name: matchingPosition.position,
+              slug: matchingPosition.position.toLowerCase().replace(/\s+/g, '-'),
+              ref: matchingPosition.ref,
+              category: matchingPosition.category
+            }],
+            constructionYearStart: product.constructionYearStart,
+            constructionYearEnd: product.constructionYearEnd,
+            typeConception: product.typeConception,
+            partNumber: product.partNumber,
+            notes: product.notes,
+            source: product.source,
+            category: product.category,
+            isActive: product.isActive,
+            slug: product.slug
+          };
+        }
+        return null;
+      }).filter(Boolean);
+
+      if (productsWithPosition.length === 0) {
+        return ctx.send({
+          data: [],
+          success: true,
+          message: 'No products found for the specified brand, model, and position'
+        });
+      }
+
+      return ctx.send({
+        data: productsWithPosition,
+        success: true
+      });
+
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      return ctx.internalServerError('Failed to fetch products');
+    }
   }
 };

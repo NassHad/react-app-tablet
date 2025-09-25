@@ -17,7 +17,7 @@ interface VehicleSelectionFormProps {
   onComplete: () => void;
 }
 
-const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType, userSelection, updateUserSelection, onComplete }) => {
+const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType, updateUserSelection, onComplete }) => {
   
   const [selectedBrandSlug, setSelectedBrandSlug] = useState<string>('');
   const [selectedModelSlug, setSelectedModelSlug] = useState<string>('');
@@ -96,7 +96,10 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
             id: Date.now(),
             type: vehicleType as any,
             brand: selectedBrand.name,
+            brandSlug: selectedBrand.slug,  // Store the brand slug
             model: selectedModel.name,
+            modelSlug: selectedModel.modelSlug,  // Store the model slug
+            year: parseInt(selectedDate.split('-')[0]),  // Extract year from date string
             dateCirculation: selectedDate,
           };
           console.log('Storing vehicle data in userSelection:', vehicle);

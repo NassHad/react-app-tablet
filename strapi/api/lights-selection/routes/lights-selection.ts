@@ -30,5 +30,11 @@ export default {
       handler: 'lights-selection.getLightDataByPosition',
       config: { policies: [] },
     },
+    {
+      method: 'GET',
+      path: '/lights-selection/products',
+      handler: 'lights-selection.getProducts',
+      config: { policies: [] },
+    },
   ],
 };

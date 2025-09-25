@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useClickAnimation } from '../hooks/useClickAnimation';
 import type { VehicleType } from '../types';
-import { FLOW_CONFIG } from '../config/flowConfig';
+// import { FLOW_CONFIG } from '../config/flowConfig';
 import { databaseService } from '../db/database';
 import { useEffect } from 'react';
 

@@ -24,10 +24,19 @@ const EnhancedAppRouterContent = () => {
   const location = useLocation();
 
   const updateUserSelection = (updates: Partial<UserSelection>) => {
-    console.log('updateUserSelection called with:', updates);
+    console.log('🔄 updateUserSelection called with:', updates);
     setUserSelection(prev => {
       const newState = prev ? { ...prev, ...updates } : updates as UserSelection;
-      console.log('New userSelection state:', newState);
+      console.log('✅ New userSelection state:', newState);
+      if (newState.vehicle) {
+        console.log('🚗 Vehicle data preserved:', {
+          brand: newState.vehicle.brand,
+          model: newState.vehicle.model,
+          year: newState.vehicle.year,
+          brandSlug: newState.vehicle.brandSlug,
+          modelSlug: newState.vehicle.modelSlug
+        });
+      }
       return newState;
     });
   };
@@ -83,6 +92,9 @@ const EnhancedAppRouterContent = () => {
             <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
               <PageTransition direction={navigationDirection}>
                 <VehicleSelectionForm 
+                  vehicleType={vehicleData.vehicleType}
+                  userSelection={userSelection}
+                  updateUserSelection={updateUserSelection}
                   onComplete={() => {
                     // Navigate to category selection after vehicle is complete
                     window.location.href = '/category';
@@ -126,23 +138,33 @@ const EnhancedAppRouterContent = () => {
             <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
               <PageTransition direction={navigationDirection}>
                 <CategorySpecificForm 
-                  category={vehicleData.selectedCategory}
+                  category={userSelection?.category}
+                  vehicle={userSelection?.vehicle}
                   onComplete={(finalVehicleData) => {
-                    // Create final vehicle object
+                    // Create final vehicle object, preserving all existing vehicle data
                     const vehicle = {
-                      id: Date.now(),
-                      type: finalVehicleData.vehicleType!,
-                      brand: finalVehicleData.brand,
-                      model: finalVehicleData.model,
-                      dateCirculation: finalVehicleData.dateCirculation,
+                      id: userSelection?.vehicle?.id || Date.now(), // Preserve existing ID
+                      type: finalVehicleData.vehicleType || userSelection?.vehicle?.type!,
+                      brand: finalVehicleData.brand || userSelection?.vehicle?.brand,
+                      model: finalVehicleData.model || userSelection?.vehicle?.model,
+                      dateCirculation: finalVehicleData.dateCirculation || userSelection?.vehicle?.dateCirculation,
+                      year: finalVehicleData.year || userSelection?.vehicle?.year,
+                      brandSlug: finalVehicleData.brandSlug || userSelection?.vehicle?.brandSlug,
+                      modelSlug: finalVehicleData.modelSlug || userSelection?.vehicle?.modelSlug,
                       motorisation: finalVehicleData.motorisation,
                       position: finalVehicleData.position,
                       viscosity: finalVehicleData.viscosity,
                     };
                     
+                    console.log('Updating userSelection with preserved vehicle data:', vehicle);
                     updateUserSelection({ vehicle });
-                    // Navigate to products
-                    window.location.href = '/products';
+                    
+                    // For battery category, let the form handle navigation to questions
+                    // For other categories, navigate to products
+                    if (userSelection?.category?.slug !== 'batteries') {
+                      window.location.href = '/products';
+                    }
+                    // If it's batteries, the form will handle navigation to /questions
                   }}
                 />
               </PageTransition>

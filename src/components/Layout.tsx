@@ -141,6 +141,11 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
               <h1 className="text-5xl text-[#1290AD] text-center tablet-nav-title py-6 w-full">J'identifie ma <span className="font-bold">{userSelection?.vehicleType ? getVehicleTypeDisplayName(userSelection.vehicleType) : ''}</span></h1>
             )}
 
+            {/* Title for Vehicle Selection Page */}
+            {location.pathname === '/vehicle-selection' && (
+              <h1 className="text-5xl text-[#1290AD] ml-[-40%] tablet-nav-title">J'identifie ma <span className="font-bold">{userSelection?.vehicleType ? getVehicleTypeDisplayName(userSelection.vehicleType) : ''}</span></h1>
+            )}
+
             {location.pathname === '/category' && (
               <h1 className="text-5xl text-[#1290AD] text-center tablet-nav-title py-6 w-full">Que recherchez-vous ?</h1>
             )}

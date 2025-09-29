@@ -1,6 +1,10 @@
 import type { Vehicle, ProductCategory } from '../../types';
 import type { LightPosition, LightData } from '../../types/lights';
+<<<<<<< HEAD
 import carBulbsPage from '../../assets/img/car-light-category.svg';
+=======
+import carBulbsPage from '../../assets/img/car-bulbs-page.jpg';
+>>>>>>> 3430162d13ff5da26c1266cb2de7e4fe89c4b896
 import { useState, useEffect } from 'react';
 import { HelpPageRouter } from '../help';
 import { useLightsData } from '../../hooks/useLightsData';
@@ -48,6 +52,7 @@ const BulbsQuestions = ({ vehicle, category, onAnswersComplete }: BulbsQuestions
     clearError
   } = useLightsData();
 
+<<<<<<< HEAD
   // Icon mapping for light positions (updated to match database slugs)
   const iconMap: Record<string, string> = {
     'feu-de-croisement': feuCroisement,
@@ -64,6 +69,10 @@ const BulbsQuestions = ({ vehicle, category, onAnswersComplete }: BulbsQuestions
     'eclairage-coffre': eclairageCoffre,
     'feu-de-route-suppl': feuxRouteSuppl,
     // Fallback mappings for old format
+=======
+  // Icon mapping for light positions
+  const iconMap: Record<string, string> = {
+>>>>>>> 3430162d13ff5da26c1266cb2de7e4fe89c4b896
     'feu_croisement': feuCroisement,
     'feu_route': feuRoute,
     'eclairage_jour': eclairageJour,
@@ -220,7 +229,11 @@ const BulbsQuestions = ({ vehicle, category, onAnswersComplete }: BulbsQuestions
                   >
                     <div className="flex items-center space-x-3">
                       <img 
+<<<<<<< HEAD
                         src={iconMap[position.slug] || iconMap['feu-de-croisement'] || feuCroisement} 
+=======
+                        src={iconMap[position.category] || iconMap['feu_croisement']} 
+>>>>>>> 3430162d13ff5da26c1266cb2de7e4fe89c4b896
                         alt={position.name}
                         className="w-8 h-8 object-contain"
                       />

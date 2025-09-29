@@ -50,7 +50,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
         setBrands(brandsData);
       } catch (err) {
         console.error('Failed to load brands:', err);
-        setError('Failed to load brands. Please try again.');
+        setError('Échec du chargement des marques. Veuillez réessayer.');
       } finally {
         setIsLoading(false);
       }
@@ -71,7 +71,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
           setSelectedModelSlug(''); // Reset model selection
         } catch (err) {
           console.error('Failed to load models:', err);
-          setError('Failed to load models. Please try again.');
+          setError('Échec du chargement des modèles. Veuillez réessayer.');
           setFilteredModels([]);
         } finally {
           setIsLoadingModels(false);
@@ -117,7 +117,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
               const year = selectedDate.split('-')[0] || '';
               setSelectedDate(year ? `${year}-${e.target.value}` : `2024-${e.target.value}`);
             }}
-            className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+            className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
             required
           >
             <option value="">Mois</option>
@@ -135,7 +135,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
               const month = selectedDate.split('-')[1] || '';
               setSelectedDate(month ? `${e.target.value}-${month}` : `${e.target.value}-01`);
             }}
-            className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+            className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
             required
           >
             <option value="">Année</option>
@@ -172,7 +172,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
         }
       } catch (err) {
         console.error('Failed to process vehicle selection:', err);
-        setError('Failed to process vehicle selection. Please try again.');
+        setError('Échec du traitement de la sélection véhicule. Veuillez réessayer.');
       }
     }
   };
@@ -227,7 +227,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
                 id="brand"
                 value={selectedBrandSlug}
                 onChange={(e) => setSelectedBrandSlug(e.target.value)}
-                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
                 required
               >
                 <option value="">Sélectionnez une marque</option>
@@ -248,7 +248,7 @@ const VehiclePage = ({ vehicleType, category, onVehicleSelect }: VehiclePageProp
                 id="model"
                 value={selectedModelSlug}
                 onChange={(e) => setSelectedModelSlug(e.target.value)}
-                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
                 disabled={!selectedBrandSlug || isLoadingModels}
                 required
               >

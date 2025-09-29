@@ -296,15 +296,117 @@ export default {
     }
   },
 
-  async getProducts(ctx: any) {
+  // New endpoint: Get all brands
+  async getBrands(ctx: any) {
     try {
-      const { brandSlug, modelSlug, positionSlug } = ctx.query;
-      
-      if (!brandSlug || !modelSlug || !positionSlug) {
-        return ctx.badRequest('brandSlug, modelSlug, and positionSlug are required');
+      const brands = await strapi.entityService.findMany('api::brand.brand', {
+        filters: {
+          isActive: true
+        },
+        sort: ['name:asc']
+      });
+
+      return ctx.send(brands);
+
+    } catch (error) {
+      console.error('Error fetching brands:', error);
+      return ctx.internalServerError('Failed to fetch brands');
+    }
+  },
+
+  // New endpoint: Get models by brand ID
+  async getModelsByBrand(ctx: any) {
+    try {
+      const { brandId } = ctx.params;
+
+      if (!brandId) {
+        return ctx.badRequest('Brand ID is required');
       }
 
-      // Get all lights products
+      const models = await strapi.entityService.findMany('api::model.model', {
+        filters: {
+          isActive: true,
+          brand: {
+            id: brandId
+          }
+        },
+        populate: {
+          brand: true
+        },
+        sort: ['name:asc']
+      });
+
+      return ctx.send(models);
+
+    } catch (error) {
+      console.error('Error fetching models by brand:', error);
+      return ctx.internalServerError('Failed to fetch models');
+    }
+  },
+
+  // New endpoint: Get models by brand slug
+  async getModelsByBrandSlug(ctx: any) {
+    try {
+      const { brandSlug } = ctx.params;
+
+      if (!brandSlug) {
+        return ctx.badRequest('Brand slug is required');
+      }
+
+      // First get the brand by slug
+      const brands = await strapi.entityService.findMany('api::brand.brand', {
+        filters: {
+          slug: brandSlug,
+          isActive: true
+        }
+      });
+
+      if (brands.length === 0) {
+        return ctx.send({
+          data: [],
+          success: true,
+          message: `No brand found with slug: ${brandSlug}`
+        });
+      }
+
+      const brand = brands[0];
+
+      // Get models for this brand
+      const models = await strapi.entityService.findMany('api::model.model', {
+        filters: {
+          isActive: true,
+          brand: {
+            id: brand.id
+          }
+        },
+        populate: {
+          brand: true
+        },
+        sort: ['name:asc']
+      });
+
+      return ctx.send({
+        data: models,
+        success: true,
+        message: `Found ${models.length} models for brand: ${brand.name}`
+      });
+
+    } catch (error) {
+      console.error('Error fetching models by brand slug:', error);
+      return ctx.internalServerError('Failed to fetch models');
+    }
+  },
+
+  // Alternative endpoint: Get models from products (works even without brand relationships)
+  async getModelsFromProducts(ctx: any) {
+    try {
+      const { brandSlug } = ctx.query;
+
+      if (!brandSlug) {
+        return ctx.badRequest('Brand slug is required');
+      }
+
+      // Get all lights products and extract unique models
       const lightsProducts = await strapi.entityService.findMany('api::lights-product.lights-product', {
         filters: {
           isActive: true
@@ -319,67 +421,237 @@ export default {
         }
       });
 
-      // Filter products by brand and model slugs
-      const matchingProducts = lightsProducts.filter((product: any) => {
-        const productBrandSlug = product.brand?.slug?.toLowerCase();
-        const productModelSlug = product.model?.slug?.toLowerCase();
-        
-        return productBrandSlug === brandSlug.toLowerCase() && 
-               productModelSlug === modelSlug.toLowerCase();
+      // Filter products by brand slug and extract unique models
+      const modelsMap = new Map();
+      
+      lightsProducts.forEach((product: any) => {
+        if (product.brand && product.brand.slug === brandSlug && product.model) {
+          const model = product.model;
+          if (!modelsMap.has(model.id)) {
+            modelsMap.set(model.id, {
+              id: model.id,
+              name: model.name,
+              slug: model.slug,
+              brand: product.brand
+            });
+          }
+        }
       });
 
-      // Filter by position and extract the specific position data
-      const productsWithPosition = matchingProducts.map((product: any) => {
-        const positions = (product as any).lightPositions || [];
-        const matchingPosition = positions.find((pos: any) => {
-          const posSlug = pos.position.toLowerCase().replace(/\s+/g, '-');
-          return posSlug === positionSlug.toLowerCase();
-        });
-
-        if (matchingPosition) {
-          return {
-            id: product.id,
-            name: product.name,
-            ref: matchingPosition.ref,
-            description: product.description,
-            brand: product.brand,
-            model: product.model,
-            lightPositions: [{
-              id: `pos-${positions.indexOf(matchingPosition)}`,
-              name: matchingPosition.position,
-              slug: matchingPosition.position.toLowerCase().replace(/\s+/g, '-'),
-              ref: matchingPosition.ref,
-              category: matchingPosition.category
-            }],
-            constructionYearStart: product.constructionYearStart,
-            constructionYearEnd: product.constructionYearEnd,
-            typeConception: product.typeConception,
-            partNumber: product.partNumber,
-            notes: product.notes,
-            source: product.source,
-            category: product.category,
-            isActive: product.isActive,
-            slug: product.slug
-          };
-        }
-        return null;
-      }).filter(Boolean);
-
-      if (productsWithPosition.length === 0) {
-        return ctx.send({
-          data: [],
-          success: true,
-          message: 'No products found for the specified brand, model, and position'
-        });
-      }
+      const models = Array.from(modelsMap.values()).sort((a, b) => a.name.localeCompare(b.name));
 
       return ctx.send({
-        data: productsWithPosition,
-        success: true
+        data: models,
+        success: true,
+        message: `Found ${models.length} models for brand: ${brandSlug}`
       });
 
     } catch (error) {
-      console.error('Error fetching products:', error);
+      console.error('Error fetching models from products:', error);
+      return ctx.internalServerError('Failed to fetch models');
+    }
+  },
+
+  // New endpoint: Get positions by brand and model slugs
+  async getPositionsBySlugs(ctx: any) {
+    try {
+      const { brandSlug, modelSlug } = ctx.query;
+
+      if (!brandSlug || !modelSlug) {
+        return ctx.badRequest('Brand slug and model slug are required');
+      }
+
+      // Find the model by slug and brand slug
+      const models = await strapi.entityService.findMany('api::model.model', {
+        filters: {
+          slug: modelSlug,
+          brand: {
+            slug: brandSlug
+          }
+        },
+        populate: {
+          brand: true
+        }
+      });
+
+      if (models.length === 0) {
+        return ctx.send([]);
+      }
+
+      const model = models[0];
+
+      // Get the lights product for this model
+      const lightsProduct = await strapi.entityService.findMany('api::lights-product.lights-product', {
+        filters: {
+          isActive: true,
+          model: {
+            id: model.id
+          }
+        },
+        populate: {
+          brand: true,
+          model: {
+            populate: {
+              brand: true
+            }
+          }
+        }
+      });
+
+      if (lightsProduct.length === 0) {
+        return ctx.send([]);
+      }
+
+      // Extract positions from the lightPositions JSON field
+      const product = lightsProduct[0];
+      const positions = (product as any).lightPositions || [];
+
+      // Transform positions to match expected format
+      const formattedPositions = positions.map((pos: any, index: number) => ({
+        id: `pos-${index}`,
+        name: pos.position,
+        slug: pos.position.toLowerCase().replace(/\s+/g, '-'),
+        isActive: true,
+        ref: pos.ref,
+        category: pos.category
+      }));
+
+      return ctx.send(formattedPositions);
+
+    } catch (error) {
+      console.error('Error fetching positions by slugs:', error);
+      return ctx.internalServerError('Failed to fetch positions');
+    }
+  },
+
+  // New endpoint: Get all light positions (master list)
+  async getAllPositions(ctx: any) {
+    try {
+      const positions = await strapi.entityService.findMany('api::lights-position.lights-position', {
+        filters: { isActive: true },
+        sort: ['sort:asc']
+      });
+
+      return ctx.send({
+        data: positions,
+        success: true,
+        message: `Found ${positions.length} light positions`
+      });
+
+    } catch (error) {
+      console.error('Error fetching all positions:', error);
+      return ctx.internalServerError('Failed to fetch positions');
+    }
+  },
+
+  // New endpoint: Get products by brand, model, and optional position slugs
+  async getProductsBySlugs(ctx: any) {
+    try {
+      const { brandSlug, modelSlug, positionSlug } = ctx.query;
+
+      if (!brandSlug || !modelSlug) {
+        return ctx.badRequest('Brand slug and model slug are required');
+      }
+
+      // Find the model by slug and brand slug
+      const models = await strapi.entityService.findMany('api::model.model', {
+        filters: {
+          slug: modelSlug,
+          brand: {
+            slug: brandSlug
+          }
+        },
+        populate: {
+          brand: true
+        }
+      });
+
+      if (models.length === 0) {
+        return ctx.send({
+          data: [],
+          success: true,
+          message: 'No products found for the specified brand and model'
+        });
+      }
+
+      const model = models[0];
+
+      // Get the lights product for this model
+      const lightsProducts = await strapi.entityService.findMany('api::lights-product.lights-product', {
+        filters: {
+          isActive: true,
+          model: {
+            id: model.id
+          }
+        },
+        populate: {
+          brand: true,
+          model: {
+            populate: {
+              brand: true
+            }
+          }
+        }
+      });
+
+      if (lightsProducts.length === 0) {
+        return ctx.send({
+          data: [],
+          success: true,
+          message: 'No products found for the specified brand and model'
+        });
+      }
+
+      // Filter by position if specified
+      let filteredProducts = lightsProducts;
+      if (positionSlug) {
+        filteredProducts = lightsProducts.filter((product: any) => {
+          const positions = (product as any).lightPositions || [];
+          return positions.some((pos: any) => 
+            pos.position.toLowerCase().replace(/\s+/g, '-') === positionSlug
+          );
+        });
+      }
+
+      // Transform products to match expected format
+      const formattedProducts = filteredProducts.map((product: any) => {
+        const positions = (product as any).lightPositions || [];
+        
+        return {
+          id: product.id,
+          name: product.name,
+          ref: product.ref,
+          description: product.description,
+          brand: product.brand,
+          model: product.model,
+          lightPositions: positions.map((pos: any, index: number) => ({
+            id: `pos-${index}`,
+            name: pos.position,
+            slug: pos.position.toLowerCase().replace(/\s+/g, '-'),
+            isActive: true,
+            ref: pos.ref,
+            category: pos.category
+          })),
+          constructionYearStart: product.constructionYearStart,
+          constructionYearEnd: product.constructionYearEnd,
+          typeConception: product.typeConception,
+          partNumber: product.partNumber,
+          notes: product.notes,
+          source: product.source,
+          category: product.category,
+          isActive: product.isActive,
+          slug: product.slug
+        };
+      });
+
+      return ctx.send({
+        data: formattedProducts,
+        success: true,
+        message: `Found ${formattedProducts.length} product(s)`
+      });
+
+    } catch (error) {
+      console.error('Error fetching products by slugs:', error);
       return ctx.internalServerError('Failed to fetch products');
     }
   }

@@ -6,7 +6,7 @@ const DB_NAME = 'react-app-db.db';
 const DB_VERSION = 1;
 
 // Configuration flag to easily switch between SQLite and mock data
-export const USE_SQLITE = false; // Set to false to use mock data
+export const USE_SQLITE = true; // Set to true to use SQLite database
 
 // Mock data for all categories
 const MOCK_CATEGORIES: ProductCategory[] = [
@@ -103,6 +103,10 @@ class DatabaseService {
     
     this.isWebEnvironment = Capacitor.getPlatform() === 'web';
     console.log('🔧 isWebEnvironment set to:', this.isWebEnvironment);
+  }
+
+  async getDb(): Promise<SQLiteDBConnection | null> {
+    return this.db;
   }
 
   async initialize(): Promise<void> {
@@ -295,15 +299,124 @@ private async ensureJeepSQLiteLoaded(): Promise<void> {
       );
     `);
 
-    // Insert categories
+    // Create brands table
     await this.db.execute(`
-      INSERT OR IGNORE INTO categories (id, name, slug, icon, active) VALUES
-      (1, 'Balais d''essuie-glace', 'wipers', 'wiper', 1),
-      (2, 'Batteries', 'batteries', 'battery', 1),
-      (3, 'Huiles', 'oils', 'oil', 1),
-      (4, 'Eclairage', 'bulbs', 'bulb', 1),
-      (5, 'Filtration', 'filtration', 'filter', 1);
+      CREATE TABLE IF NOT EXISTS brands (
+        id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL,
+        slug TEXT NOT NULL,
+        isActive BOOLEAN DEFAULT 1
+      );
     `);
+
+    // Create models table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS models (
+        id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL,
+        slug TEXT NOT NULL,
+        brand_slug TEXT NOT NULL,
+        brand_name TEXT,
+        isActive BOOLEAN DEFAULT 1
+      );
+    `);
+
+    // Create light_data table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS light_data (
+        id INTEGER PRIMARY KEY,
+        ref TEXT NOT NULL,
+        description TEXT,
+        brandImg TEXT,
+        img TEXT,
+        specifications TEXT,
+        created_at TEXT,
+        updated_at TEXT
+      );
+    `);
+
+    // Create battery_data table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS battery_data (
+        id INTEGER PRIMARY KEY,
+        ref TEXT NOT NULL,
+        description TEXT,
+        brandImg TEXT,
+        img TEXT,
+        specifications TEXT,
+        created_at TEXT,
+        updated_at TEXT
+      );
+    `);
+
+    // Create vehicles table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS vehicles (
+        id INTEGER PRIMARY KEY,
+        brand TEXT NOT NULL,
+        model TEXT NOT NULL,
+        year INTEGER,
+        motorisation TEXT,
+        created_at TEXT,
+        updated_at TEXT
+      );
+    `);
+
+    // Create compatibilities table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS compatibilities (
+        id INTEGER PRIMARY KEY,
+        vehicle_id INTEGER,
+        product_id INTEGER,
+        created_at TEXT,
+        updated_at TEXT
+      );
+    `);
+
+    // Create questions table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS questions (
+        id INTEGER PRIMARY KEY,
+        question TEXT NOT NULL,
+        category TEXT,
+        created_at TEXT,
+        updated_at TEXT
+      );
+    `);
+
+    // Create positions table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS positions (
+        id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL,
+        slug TEXT NOT NULL,
+        icon TEXT,
+        created_at TEXT,
+        updated_at TEXT
+      );
+    `);
+
+    // Create motorisations table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS motorisations (
+        id INTEGER PRIMARY KEY,
+        motorisation TEXT NOT NULL,
+        batteryTypes TEXT,
+        created_at TEXT,
+        updated_at TEXT
+      );
+    `);
+
+    // Create db_version table for sync tracking
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS db_version (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        version TEXT NOT NULL,
+        timestamp TEXT NOT NULL
+      );
+    `);
+
+    // Categories are now loaded from Strapi sync, no need to hardcode them
 
     // Insert products
     const allProducts = [
@@ -331,35 +444,24 @@ private async ensureJeepSQLiteLoaded(): Promise<void> {
   }
 
   async getProductCategories(): Promise<ProductCategory[]> {
-    // First, try to get categories from Strapi if available
+    // Use SQLite as primary source for offline-first approach
+    if (!USE_SQLITE) {
+      console.log('Using mock categories - USE_SQLITE is false');
+      return MOCK_CATEGORIES;
+    }
+
+    if (!this.db) {
+      console.log('Database not initialized, using mock categories');
+      return MOCK_CATEGORIES;
+    }
+
     try {
-      const { strapiService } = await import('../services/strapiService');
-      console.log('🌐 Attempting to fetch categories from Strapi...');
-      const strapiCategories = await strapiService.getProductCategories();
-      console.log('✅ Categories loaded from Strapi:', strapiCategories.length);
-      return strapiCategories;
-    } catch (strapiError: any) {
-      console.log('📡 Strapi not available, falling back to local database:', strapiError?.message || 'Unknown error');
-      
-      // Fallback to local database logic
-      if (!USE_SQLITE) {
-        console.log('Using mock categories - USE_SQLITE is false');
-        return MOCK_CATEGORIES;
-      }
-
-      if (!this.db) {
-        console.log('Database not initialized, using mock categories');
-        return MOCK_CATEGORIES;
-      }
-
-      try {
-        const result = await this.db.query('SELECT * FROM categories WHERE active = 1 ORDER BY name');
-        console.log('🗄️ Categories loaded from SQLite:', result.values?.length || 0);
-        return result.values as ProductCategory[];
-      } catch (error) {
-        console.error('❌ Error loading categories from SQLite, falling back to mock data:', error);
-        return MOCK_CATEGORIES;
-      }
+      const result = await this.db.query('SELECT * FROM categories WHERE active = 1 ORDER BY name');
+      console.log('🗄️ Categories loaded from SQLite:', result.values?.length || 0);
+      return result.values as ProductCategory[];
+    } catch (error) {
+      console.error('❌ Error loading categories from SQLite, falling back to mock data:', error);
+      return MOCK_CATEGORIES;
     }
   }
 
@@ -406,48 +508,37 @@ private async ensureJeepSQLiteLoaded(): Promise<void> {
   }
 
   async getProducts(category: string, filters?: Record<string, any>): Promise<any[]> {
-    // First, try to get products from Strapi if available
+    // Use SQLite as primary source for offline-first approach
+    if (!USE_SQLITE) {
+      console.log('Using mock products - USE_SQLITE is false');
+      return this.getMockProducts(category, filters);
+    }
+
+    if (!this.db) {
+      console.log('Database not initialized, using mock products for category:', category);
+      return this.getMockProducts(category, filters);
+    }
+
     try {
-      const { strapiService } = await import('../services/strapiService');
-      console.log(`🌐 Attempting to fetch products for ${category} from Strapi...`);
-      const strapiProducts = await strapiService.getProducts(category, filters);
-      console.log(`✅ Products loaded from Strapi for ${category}:`, strapiProducts.length);
-      return strapiProducts;
-    } catch (strapiError: any) {
-      console.log(`📡 Strapi not available for ${category}, falling back to local database:`, strapiError?.message || 'Unknown error');
-      
-      // Fallback to local database logic
-      if (!USE_SQLITE) {
-        console.log('Using mock products - USE_SQLITE is false');
-        return this.getMockProducts(category, filters);
+      let query = 'SELECT * FROM products WHERE category = ?';
+      const params: any[] = [category];
+
+      // Add filters
+      if (filters) {
+        Object.entries(filters).forEach(([key, value]) => {
+          if (value) {
+            query += ` AND ${key} = ?`;
+            params.push(value);
+          }
+        });
       }
 
-      if (!this.db) {
-        console.log('Database not initialized, using mock products for category:', category);
-        return this.getMockProducts(category, filters);
-      }
-
-      try {
-        let query = 'SELECT * FROM products WHERE category = ?';
-        const params: any[] = [category];
-
-        // Add filters
-        if (filters) {
-          Object.entries(filters).forEach(([key, value]) => {
-            if (value) {
-              query += ` AND ${key} = ?`;
-              params.push(value);
-            }
-          });
-        }
-
-        const result = await this.db.query(query, params);
-        console.log(`🗄️ Products loaded from SQLite for ${category}:`, result.values?.length || 0);
-        return result.values || [];
-      } catch (error) {
-        console.error(`❌ Error loading products from SQLite for ${category}, falling back to mock data:`, error);
-        return this.getMockProducts(category, filters);
-      }
+      const result = await this.db.query(query, params);
+      console.log(`🗄️ Products loaded from SQLite for ${category}:`, result.values?.length || 0);
+      return result.values || [];
+    } catch (error) {
+      console.error(`❌ Error loading products from SQLite for ${category}, falling back to mock data:`, error);
+      return this.getMockProducts(category, filters);
     }
   }
 
@@ -489,6 +580,150 @@ private async ensureJeepSQLiteLoaded(): Promise<void> {
       this.db = null;
       console.log('🔒 Database connection closed');
     }
+  }
+
+  // Methods for lights data (replacing API calls)
+  async getLightDataByRef(ref: string): Promise<any[]> {
+    if (!USE_SQLITE || !this.db) {
+      console.log('Using mock light data - SQLite not available');
+      return this.getMockLightData(ref);
+    }
+
+    try {
+      const result = await this.db.query('SELECT * FROM light_data WHERE ref = ?', [ref]);
+      console.log(`💡 Light data loaded from SQLite for ref ${ref}:`, result.values?.length || 0);
+      return result.values || [];
+    } catch (error) {
+      console.error(`❌ Error loading light data from SQLite for ref ${ref}:`, error);
+      return this.getMockLightData(ref);
+    }
+  }
+
+  // Methods for battery data (replacing API calls)
+  async getBatteryDataByRef(ref: string): Promise<any[]> {
+    if (!USE_SQLITE || !this.db) {
+      console.log('Using mock battery data - SQLite not available');
+      return this.getMockBatteryData(ref);
+    }
+
+    try {
+      const result = await this.db.query('SELECT * FROM battery_data WHERE ref = ?', [ref]);
+      console.log(`🔋 Battery data loaded from SQLite for ref ${ref}:`, result.values?.length || 0);
+      return result.values || [];
+    } catch (error) {
+      console.error(`❌ Error loading battery data from SQLite for ref ${ref}:`, error);
+      return this.getMockBatteryData(ref);
+    }
+  }
+
+  // Methods for vehicle data (replacing API calls)
+  async getBrands(): Promise<any[]> {
+    if (!USE_SQLITE || !this.db) {
+      console.log('Using mock brands - SQLite not available');
+      return this.getMockBrands();
+    }
+
+    try {
+      const result = await this.db.query('SELECT * FROM brands ORDER BY name ASC');
+      console.log(`🚗 Brands loaded from SQLite:`, result.values?.length || 0);
+      return result.values || [];
+    } catch (error) {
+      console.error(`❌ Error loading brands from SQLite:`, error);
+      return this.getMockBrands();
+    }
+  }
+
+  // Web fallback: Load data from the static database file
+  async getBrandsFromWebDB(): Promise<any[]> {
+    try {
+      console.log('🌐 Loading brands from web database file...');
+      const response = await fetch('/assets/databases/react-app-db.db');
+      if (!response.ok) {
+        throw new Error('Database file not found');
+      }
+      
+      // For now, return mock data since we can't easily read SQLite in browser
+      // In a real implementation, you'd use sql.js or similar
+      console.log('⚠️ Web SQLite reading not implemented, using mock data');
+      return this.getMockBrands();
+    } catch (error) {
+      console.error('❌ Error loading brands from web DB:', error);
+      return this.getMockBrands();
+    }
+  }
+
+  async getModelsByBrand(brandSlug: string): Promise<any[]> {
+    if (!USE_SQLITE || !this.db) {
+      console.log('Using mock models - SQLite not available');
+      return this.getMockModelsByBrand(brandSlug);
+    }
+
+    try {
+      const result = await this.db.query('SELECT * FROM models WHERE brand_slug = ? ORDER BY name ASC', [brandSlug]);
+      console.log(`🚗 Models loaded from SQLite for brand ${brandSlug}:`, result.values?.length || 0);
+      return result.values || [];
+    } catch (error) {
+      console.error(`❌ Error loading models from SQLite for brand ${brandSlug}:`, error);
+      return this.getMockModelsByBrand(brandSlug);
+    }
+  }
+
+  async getAllModels(): Promise<any[]> {
+    if (!USE_SQLITE || !this.db) {
+      console.log('Using mock models - SQLite not available');
+      return [];
+    }
+
+    try {
+      const result = await this.db.query('SELECT * FROM models ORDER BY name ASC');
+      console.log(`🚗 All models loaded from SQLite:`, result.values?.length || 0);
+      return result.values || [];
+    } catch (error) {
+      console.error(`❌ Error loading all models from SQLite:`, error);
+      return [];
+    }
+  }
+
+  // Mock data methods for fallback
+  private getMockLightData(_ref: string): any[] {
+    // Return empty array for now - will be populated with real data during sync
+    return [];
+  }
+
+  private getMockBatteryData(_ref: string): any[] {
+    // Return empty array for now - will be populated with real data during sync
+    return [];
+  }
+
+  private getMockBrands(): any[] {
+    return [
+      { id: 1, name: 'Audi', slug: 'audi' },
+      { id: 2, name: 'BMW', slug: 'bmw' },
+      { id: 3, name: 'Mercedes', slug: 'mercedes' },
+      { id: 4, name: 'Volkswagen', slug: 'volkswagen' },
+      { id: 5, name: 'Peugeot', slug: 'peugeot' },
+    ];
+  }
+
+  private getMockModelsByBrand(brandSlug: string): any[] {
+    const modelsByBrand: Record<string, any[]> = {
+      'audi': [
+        { id: 1, name: 'A3', slug: 'a3', brand_slug: 'audi' },
+        { id: 2, name: 'A4', slug: 'a4', brand_slug: 'audi' },
+        { id: 3, name: 'A6', slug: 'a6', brand_slug: 'audi' },
+      ],
+      'bmw': [
+        { id: 4, name: 'Série 1', slug: 'serie-1', brand_slug: 'bmw' },
+        { id: 5, name: 'Série 3', slug: 'serie-3', brand_slug: 'bmw' },
+        { id: 6, name: 'Série 5', slug: 'serie-5', brand_slug: 'bmw' },
+      ],
+      'mercedes': [
+        { id: 7, name: 'Classe A', slug: 'classe-a', brand_slug: 'mercedes' },
+        { id: 8, name: 'Classe C', slug: 'classe-c', brand_slug: 'mercedes' },
+        { id: 9, name: 'Classe E', slug: 'classe-e', brand_slug: 'mercedes' },
+      ],
+    };
+    return modelsByBrand[brandSlug] || [];
   }
 
   // Public method to check database status

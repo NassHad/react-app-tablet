@@ -30,16 +30,7 @@ export default {
     {
       method: 'GET',
       path: '/battery-selection/motorisations',
-      handler: 'battery-selection.getMotorisations',
-      config: {
-        policies: [],
-        middlewares: [],
-      },
-    },
-    {
-      method: 'GET',
-      path: '/battery-selection/models',
-      handler: 'battery-selection.getModels',
+      handler: 'battery-selection.getMotorisationsByBrandAndModel',
       config: {
         policies: [],
         middlewares: [],

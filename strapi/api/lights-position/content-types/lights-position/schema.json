@@ -19,15 +19,27 @@
       "type": "uid",
       "targetField": "name"
     },
+    "description": {
+      "type": "text"
+    },
+    "category": {
+      "type": "string"
+    },
+    "ref": {
+      "type": "string"
+    },
+    "sortOrder": {
+      "type": "integer"
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "usageCount": {
+      "type": "integer"
+    },
     "isActive": {
       "type": "boolean",
       "default": true
-    },
-    "lights_products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::lights-product.lights-product",
-      "mappedBy": "lights_position"
     }
   }
 }

@@ -35,6 +35,8 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
         // Filter only active categories
         const activeCategories = categoriesData.filter(category => category.active);
         console.log("Active categories:", activeCategories);
+        console.log("Categories count:", activeCategories.length);
+        console.log("Categories IDs:", activeCategories.map(c => c.id));
         
         setCategories(activeCategories);
       } catch (error) {
@@ -250,7 +252,7 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
       {/* Main content */}
       <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6 bg-waves-hp tablet-main-content">
         {/* Instruction text */}
-        <div className="text-center mb-16 mt-16">
+        <div className="text-center mb-16 mt-8">
           <h2 className="text-5xl text-gray-500 tablet-title">
             Cliquez sur une catégorie pour voir les produits
           </h2>
@@ -291,6 +293,7 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
             className="w-full max-w-full overflow-x-auto category-scroll-container"
           >
             <div className="flex flex-col md:flex-row gap-8 justify-center items-center min-w-max px-4 md:px-0 category-cards-container tablet-category-cards">
+              {(() => { console.log("Rendering categories:", categories.map(c => ({ id: c.id, name: c.name }))); return null; })()}
               {categories.map((category) => {
                 const animation = getCategoryAnimation(category.name);
                 const imageSrc = getCategoryImage(category.name);

@@ -1,5 +1,4 @@
-import { useNavigate } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import type { UserSelection } from '../../types';
 import { useLightsData } from '../../hooks/useLightsData';
 
@@ -7,10 +6,46 @@ interface BulbProductsScreenProps {
   userSelection: UserSelection;
 }
 
+interface LightData {
+  id: number;
+  ref: string;
+  brand: string;
+  img?: { 
+    url: string;
+    formats?: {
+      thumbnail?: { url: string };
+      small?: { url: string };
+      medium?: { url: string };
+      large?: { url: string };
+    };
+  };
+  brandImg?: { 
+    url: string;
+    formats?: {
+      thumbnail?: { url: string };
+      small?: { url: string };
+      medium?: { url: string };
+      large?: { url: string };
+    };
+  };
+  isActive: boolean;
+  description?: string;
+  category: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
-  const navigate = useNavigate();
-  const { products, loadingProducts, fetchProductsBySlugsAndPosition } = useLightsData();
+  const { products, loadingProducts, fetchProductsBySlugs, fetchProductsBySlugsAndPosition } = useLightsData();
   const hasLoadedRef = useRef(false);
+  const lightDataFetchedRef = useRef(false);
+  
+  // State for light data (now stores arrays of light data per reference)
+  const [lightData, setLightData] = useState<Record<string, LightData[]>>({});
+  const [loadingLightData, setLoadingLightData] = useState(false);
+  
+  // State for image zoom modal
+  const [zoomedImage, setZoomedImage] = useState<{url: string, alt: string} | null>(null);
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -19,10 +54,11 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
           // Only fetch if we haven't loaded products yet for this specific combination
           if (!hasLoadedRef.current) {
             hasLoadedRef.current = true;
-            await fetchProductsBySlugsAndPosition(
+            console.log(`🔍 Fetching ALL products for ${userSelection.vehicle.brandSlug}/${userSelection.vehicle.modelSlug}`);
+            // Fetch ALL products first, then filter by position on frontend
+            await fetchProductsBySlugs(
               userSelection.vehicle.brandSlug,
-              userSelection.vehicle.modelSlug,
-              userSelection.answers.positionSlug as string
+              userSelection.vehicle.modelSlug
             );
           }
         }
@@ -36,14 +72,131 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
     loadProducts();
   }, [userSelection.vehicle?.brandSlug, userSelection.vehicle?.modelSlug, userSelection.answers?.positionSlug]);
 
-  const handleProductDetails = (productId: string | number) => {
-    navigate(`/product-details/${productId}`);
+  // Function to handle image zoom
+  const handleImageZoom = (imageUrl: string, alt: string) => {
+    setZoomedImage({ url: imageUrl, alt });
   };
 
-  if (loadingProducts) {
+  // Function to close zoom modal
+  const closeZoomModal = () => {
+    setZoomedImage(null);
+  };
+
+  // Function to fetch light data for a specific reference (now returns array)
+  const fetchLightDataByRef = async (ref: string): Promise<LightData[]> => {
+    try {
+      const response = await fetch(`http://localhost:1338/api/lights-data/ref/${ref}`);
+      if (!response.ok) {
+        console.warn(`No light data found for reference: ${ref}`);
+        return [];
+      }
+      const result = await response.json();
+      return result.data || [];
+    } catch (error) {
+      console.error(`Error fetching light data for ${ref}:`, error);
+      return [];
+    }
+  };
+
+  // Function to fetch light data for all light references in products
+  const fetchAllLightData = useCallback(async () => {
+    if (products.length === 0 || lightDataFetchedRef.current) return;
+    
+    lightDataFetchedRef.current = true;
+    setLoadingLightData(true);
+    const lightDataMap: Record<string, LightData[]> = {};
+    
+    // Collect all unique light references
+    const lightRefs = new Set<string>();
+    products.forEach(product => {
+      console.log(`💡 Processing product: ${product.typeConception}`);
+      
+      // Find the matching light position ref
+      const matchingPosition = product.lightPositions?.find((pos: any) => 
+        pos.slug === userSelection.answers?.positionSlug
+      );
+      const positionRef = matchingPosition?.ref || product.ref;
+      
+      if (positionRef) {
+        console.log(`   Adding light ref: ${positionRef}`);
+        lightRefs.add(positionRef);
+      }
+    });
+    
+    console.log('💡 Fetching light data for refs:', Array.from(lightRefs));
+    
+    // Fetch data for each light reference
+    const promises = Array.from(lightRefs).map(async (ref) => {
+      console.log(`💡 Fetching data for light ref: ${ref}`);
+      const dataArray = await fetchLightDataByRef(ref);
+      if (dataArray && dataArray.length > 0) {
+        console.log(`✅ Found ${dataArray.length} light data entries for ${ref}:`, dataArray);
+        lightDataMap[ref] = dataArray;
+      } else {
+        console.log(`❌ No data found for ${ref}`);
+        lightDataMap[ref] = [];
+      }
+    });
+    
+    await Promise.all(promises);
+    
+    console.log('💡 Light data fetched:', lightDataMap);
+    setLightData(lightDataMap);
+    setLoadingLightData(false);
+  }, [products, userSelection.answers?.positionSlug]);
+
+  // Helper function to get light data for a specific reference (returns first item)
+  const getLightDataForRef = (ref: string) => {
+    const dataArray = lightData[ref];
+    if (!dataArray || dataArray.length === 0) {
+      console.log(`⚠️  No light data found for ref: ${ref}`);
+      return null;
+    }
+    // For now, return the first item. Later we can enhance this to show all variants
+    return dataArray[0];
+  };
+
+  // Helper function to get all light data for a specific reference
+  const getAllLightDataForRef = (ref: string) => {
+    const dataArray = lightData[ref];
+    if (!dataArray || dataArray.length === 0) {
+      console.log(`⚠️  No light data found for ref: ${ref}`);
+      return [];
+    }
+    return dataArray;
+  };
+
+  // Filter products by the selected position
+  const filteredProducts = useMemo(() => {
+    if (!userSelection.answers?.positionSlug) return products;
+    
+    return products.filter(product => {
+      // Check if this product has the selected position
+      const hasPosition = product.lightPositions?.some((pos: any) => 
+        pos.slug === userSelection.answers?.positionSlug
+      );
+      return hasPosition;
+    });
+  }, [products, userSelection.answers?.positionSlug]);
+
+  // Reset light data fetch flag when position changes
+  useEffect(() => {
+    lightDataFetchedRef.current = false;
+  }, [userSelection.answers?.positionSlug]);
+
+  // Fetch light data when products change
+  useEffect(() => {
+    if (products.length > 0) {
+      fetchAllLightData();
+    }
+  }, [fetchAllLightData]);
+
+  if (loadingProducts || loadingLightData) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="text-2xl text-gray-600">Chargement des produits...</div>
+        <div className="text-2xl text-gray-600">
+          {loadingProducts ? 'Chargement des produits...' : 'Chargement des détails des produits...'}
+        </div>
       </div>
     );
   }
@@ -51,76 +204,129 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
   return (
     <div className="flex items-center justify-center">
       <div className="text-center w-full max-w-6xl">
-        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15">Liste des ampoules <span className='text-blue-title-bulbs-category capitalize-first-letter'>{userSelection.answers?.lightingType || 'compatibles'}</span> compatibles avec votre <span className='text-blue-title-bulbs-category capitalize-first-letter'>{userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</span></h1>
+        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-20 leading-15"><span className='text-blue-title-bulbs-category capitalize-first-letter'>{userSelection.answers?.lightingType || 'compatibles'}</span> pour votre <span className='text-blue-title-bulbs-category capitalize-first-letter'>{userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</span></h1>
         
         {/* Vertical scrollable container */}
         <div className="overflow-y-auto max-h-110 pb-8">
           <div className="">
-            {/* Column Headers */}
-            <div className="flex flex-row justify-between w-full border-b-2 border-gray-300 items-center py-3 bg-gray-50 rounded-t-lg">
-              <div className="w-1/5">
-                <span className="ml-2 text-lg font-bold text-gray-700">Type</span>
-              </div>
-              
-              <div className="w-1/5">
-                <span className="ml-2 text-lg font-bold text-gray-700">Référence</span>
-              </div>
-
-              <div className="w-1/5">
-                <span className="ml-2 text-lg font-bold text-gray-700">Année début</span>
-              </div>
-
-              <div className="w-1/5">
-                <span className="ml-2 text-lg font-bold text-gray-700">Année fin</span>
-              </div>
-              
-              <div className="w-1/5">
-                <span className="ml-2 text-lg font-bold text-gray-700">Action</span>
-              </div>
-            </div>
-            
-            {products.map((product) => {
-              // Find the matching light position ref
-              const matchingPosition = product.lightPositions?.find((pos: any) => 
-                pos.slug === userSelection.answers?.positionSlug
-              );
-              const positionRef = matchingPosition?.ref || product.ref || 'N/A';
-              
-              return (
-                <div
-                  key={product.id}
-                  className="bg-white rounded-lg flex items-center justify-between"
-                >
-                  {/* Product Info - All on same row */}
-                  <div className="flex flex-row justify-between w-full border-b-1 border-[#E5E5E5] items-center py-4">
-                    <div className="w-1/5">
-                      <span className="ml-2 text-xl font-semibold text-gray-900">{product.typeConception}</span>
-                    </div>
-                    
-                    <div className="w-1/5">
-                      <span className="ml-2 text-xl font-semibold text-gray-900 text-left">{positionRef}</span>
-                    </div>
-
-                    <div className="w-1/5">
-                      <span className="ml-2 text-xl font-semibold text-gray-900">{product.constructionYearStart}</span>
-                    </div>
-
-                    <div className="w-1/5">
-                      <span className="ml-2 text-xl font-semibold text-gray-900">{product.constructionYearEnd}</span>
-                    </div>
-                    
-                    <button
-                      onClick={() => handleProductDetails(product.id)}
-                      className="bg-blue-title-bulbs-category text-white py-2 px-4 rounded-lg hover:opacity-80 transition-colors text-lg font-semibold ml-8 w-1/5"
-                    >
-                      Plus d'infos
-                    </button>
+            {(() => {
+              console.log(`💡 Total products fetched: ${products.length}`);
+              console.log(`💡 Filtered products for position: ${filteredProducts.length}`);
+              console.log(`💡 Position slug: ${userSelection.answers?.positionSlug}`);
+              return null;
+            })()}
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((product, index) => {
+                // Find the matching light position ref
+                const matchingPosition = product.lightPositions?.find((pos: any) => 
+                  pos.slug === userSelection.answers?.positionSlug
+                );
+                const positionRef = matchingPosition?.ref || product.ref;
+                
+                console.log(`💡 Product ${index + 1}/${filteredProducts.length}:`, {
+                  productId: product.id,
+                  typeConception: product.typeConception,
+                  positionRef,
+                  hasLightData: !!getLightDataForRef(positionRef)
+                });
+                
+                // Show all products, even if they don't have light data
+                if (!positionRef) {
+                  console.log(`❌ Skipping product ${product.id} - no position ref`);
+                  return null;
+                }
+                
+                // Get all light data variants for this reference
+                const allLightData = getAllLightDataForRef(positionRef);
+                
+                return (
+                  <div key={`${product.id}-${positionRef}`}>
+                    {allLightData.length > 0 ? (
+                      // Show all light data variants for this reference
+                      allLightData.map((lightDataItem, lightIndex) => (
+                        <div
+                          key={`${product.id}-${positionRef}-${lightDataItem.id}`}
+                          className="bg-white rounded-lg flex items-center justify-between"
+                        >
+                          {/* Light Product Info */}
+                          <div className="flex flex-row justify-center w-full border-b-1 border-[#E5E5E5] items-center">
+                            <div className="w-full max-w-4xl">
+                              <div className="ml-2 text-sm text-gray-700">
+                                <div className="flex flex-row items-center ">
+                                  {/* 1. Brand Image */}
+                                  {lightDataItem.brandImg?.url ? (
+                                    <img 
+                                      src={`http://localhost:1338${lightDataItem.brandImg.url}`}
+                                      alt="Marque"
+                                      className="w-32 h-16 object-contain ml-4"
+                                    />
+                                  ) : (
+                                    <div className="w-32 h-16 ml-4 flex items-center justify-center text-gray-400 text-xs">
+                                      Aucune image de marque
+                                    </div>
+                                  )}
+                                  
+                                  {/* 2. Description */}
+                                  {lightDataItem.description ? (
+                                    <div className="text-xl text-black flex-1 ml-4">
+                                      {lightDataItem.description}
+                                    </div>
+                                  ) : (
+                                    <div className="text-xl text-orange-600 italic flex-1 ml-4">
+                                          Données d'éclairage non disponibles dans la base de données
+                                    </div>
+                                  )}
+                                  
+                                  {/* 3. Light Image */}
+                                  {lightDataItem.img ? (
+                                    <img 
+                                      src={`http://localhost:1338${lightDataItem.img.formats?.medium?.url || lightDataItem.img.url}`}
+                                      alt="Ampoule"
+                                      className="w-24 h-24 object-contain cursor-pointer hover:opacity-80 transition-opacity ml-4"
+                                      onClick={() => handleImageZoom(
+                                        `http://localhost:1338${lightDataItem.img.formats?.large?.url || lightDataItem.img.url}`,
+                                        `Light ${positionRef} - ${lightDataItem.description}`
+                                      )}
+                                    />
+                                  ) : (
+                                    <div className="w-24 h-24 ml-4 flex items-center justify-center text-gray-400 text-xs">
+                                             Aucune image
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      // Fallback: show product without light data
+                      <div
+                        key={`${product.id}-${positionRef}-no-data`}
+                        className="bg-white rounded-lg flex items-center justify-between"
+                      >
+                        <div className="flex flex-row justify-center w-full border-b-1 border-[#E5E5E5] items-center py-4">
+                          <div className="w-full max-w-4xl">
+                            <div className="ml-2 text-sm text-gray-700">
+                              <div className="flex flex-row items-center p-3">
+                                <div className="font-semibold text-lg">{positionRef}</div>
+                                <div className="text-2xl text-orange-600 italic flex-1 ml-4">
+                                          Données d'éclairage non disponibles dans la base de données
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
-
-                  {/* Action Button */}
-                </div>
-              );
-            })}
+                );
+              })
+            ) : (
+              <div className="text-center py-8">
+                <p className="text-xl text-gray-600">Aucune ampoule trouvée pour ce véhicule.</p>
+              </div>
+            )}
           </div>
         </div>
 
@@ -129,6 +335,29 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
           ↑ Faites glisser pour voir plus de produits ↓
         </div>
       </div>
+
+      {/* Image Zoom Modal */}
+      {zoomedImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closeZoomModal}
+        >
+          <div className="relative max-w-4xl max-h-full p-4">
+            <button
+              onClick={closeZoomModal}
+              className="absolute top-2 right-2 text-white text-2xl font-bold hover:text-gray-300 z-10"
+            >
+              ×
+            </button>
+            <img
+              src={zoomedImage.url}
+              alt={zoomedImage.alt}
+              className="max-w-full max-h-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

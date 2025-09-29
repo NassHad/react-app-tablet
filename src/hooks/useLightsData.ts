@@ -1,5 +1,8 @@
 import { useState, useCallback } from 'react';
 import { lightsApiService } from '../services/lightsApiService';
+import { databaseService } from '../db/database';
+import { shouldUseLocalDatabase } from '../config/dataSource';
+import { useMockData } from './useMockData';
 import type { 
   LightPosition, 
   LightData, 
@@ -59,6 +62,9 @@ export const useLightsData = (): UseLightsDataReturn => {
   
   // Error state
   const [error, setError] = useState<{ message: string; code?: string } | null>(null);
+
+  // Mock data hook
+  const { isMockMode, getMockBrands, getMockModelsByBrand, getMockLightPositions, getMockLightProducts } = useMockData();
 
   // Clear error function
   const clearError = useCallback(() => {
@@ -252,16 +258,35 @@ export const useLightsData = (): UseLightsDataReturn => {
     setError(null);
     
     try {
-      const response = await lightsApiService.getAllMasterPositions();
-      if (response.success && response.data) {
-        setPositions(response.data);
+      if (isMockMode) {
+        console.log('🎭 Using mock positions data...');
+        const mockPositions = getMockLightPositions();
+        setPositions(mockPositions);
+      } else if (shouldUseLocalDatabase()) {
+        console.log('🗄️ Fetching positions from local database...');
+        const db = await databaseService.getDb();
+        if (db) {
+          const result = await db.query('SELECT * FROM positions ORDER BY name');
+          const positions = result.values as LightPosition[];
+          console.log('✅ Positions loaded from database:', positions.length);
+          setPositions(positions);
+        } else {
+          throw new Error('Database not initialized');
+        }
       } else {
-        setError({
-          message: response.message || 'Failed to fetch master positions',
-          code: 'FETCH_MASTER_POSITIONS_ERROR'
-        });
+        console.log('🌐 Fetching positions from API...');
+        const response = await lightsApiService.getAllMasterPositions();
+        if (response.success && response.data) {
+          setPositions(response.data);
+        } else {
+          setError({
+            message: response.message || 'Failed to fetch master positions',
+            code: 'FETCH_MASTER_POSITIONS_ERROR'
+          });
+        }
       }
     } catch (err) {
+      console.error('❌ Error fetching positions:', err);
       setError({
         message: err instanceof Error ? err.message : 'Unknown error occurred',
         code: 'FETCH_MASTER_POSITIONS_ERROR'
@@ -269,7 +294,7 @@ export const useLightsData = (): UseLightsDataReturn => {
     } finally {
       setLoadingPositions(false);
     }
-  }, []);
+  }, [isMockMode, getMockLightPositions]);
 
   // Fetch products by brand, model slugs and position
   const fetchProductsBySlugsAndPosition = useCallback(async (brandSlug: string, modelSlug: string, positionSlug: string) => {
@@ -277,22 +302,108 @@ export const useLightsData = (): UseLightsDataReturn => {
     setError(null);
     
     try {
-      console.log(`🔍 API Call: getProductsBySlugsAndPosition(${brandSlug}, ${modelSlug}, ${positionSlug})`);
-      const response = await lightsApiService.getProductsBySlugsAndPosition(brandSlug, modelSlug, positionSlug);
-      console.log(`📡 API Response:`, response);
-      
-      if (response.success && response.data) {
-        console.log(`✅ Setting products:`, response.data);
-        setProducts(response.data);
+      if (isMockMode) {
+        console.log(`🎭 Using mock light products for: ${brandSlug} ${modelSlug} - ${positionSlug}`);
+        const mockProducts = getMockLightProducts(brandSlug, modelSlug, positionSlug);
+        setProducts(mockProducts);
+      } else if (shouldUseLocalDatabase()) {
+        console.log(`🗄️ Fetching light products from local database for: ${brandSlug} ${modelSlug} - ${positionSlug}`);
+        const db = await databaseService.getDb();
+        if (db) {
+          // Step 1: Find lights_products for this vehicle using model_slug
+          const lightsProductsResult = await db.query(
+            'SELECT * FROM lights_products WHERE brand_slug = ? AND model_slug = ?',
+            [brandSlug, modelSlug]
+          );
+          const lightsProducts = lightsProductsResult.values || [];
+          console.log(`🔍 Found ${lightsProducts.length} lights products for ${brandSlug} ${modelSlug}`);
+          
+          if (lightsProducts.length === 0) {
+            console.log(`❌ No lights products found for ${brandSlug} ${modelSlug}`);
+            setProducts([]);
+            return;
+          }
+          
+          // Step 2: Extract refs for the specific position
+          const refsForPosition = new Set<string>();
+          lightsProducts.forEach((product: any) => {
+            if (product.light_positions) {
+              try {
+                const positions = JSON.parse(product.light_positions);
+                positions.forEach((pos: any) => {
+                  // Match position by slug or name
+                  // Convert positionSlug from "feu-de-route" to "feu_route" format
+                  // Remove "de" from "feu-de-route" to match "feu_route"
+                  const normalizedPositionSlug = positionSlug.replace(/-/g, '_').replace(/_de_/g, '_');
+                  const normalizedCategory = pos.category?.replace(/-/g, '_');
+                  
+                  if (pos.category === positionSlug || 
+                      normalizedCategory === normalizedPositionSlug ||
+                      pos.position?.toLowerCase().includes(positionSlug.toLowerCase()) ||
+                      positionSlug.toLowerCase().includes(pos.category?.toLowerCase())) {
+                    refsForPosition.add(pos.ref);
+                    console.log(`✅ Found ref ${pos.ref} for position ${pos.position} (${pos.category})`);
+                  }
+                });
+              } catch (error) {
+                console.warn('Error parsing light_positions:', error);
+              }
+            }
+          });
+          
+          console.log(`📋 Refs needed for position ${positionSlug}:`, Array.from(refsForPosition));
+          
+          if (refsForPosition.size === 0) {
+            console.log(`❌ No refs found for position ${positionSlug}`);
+            setProducts([]);
+            return;
+          }
+          
+          // Step 3: Get light_data for these refs
+          const refsArray = Array.from(refsForPosition);
+          const placeholders = refsArray.map(() => '?').join(',');
+          const lightDataResult = await db.query(
+            `SELECT * FROM light_data WHERE ref IN (${placeholders})`,
+            refsArray
+          );
+          const lightData = lightDataResult.values || [];
+          console.log(`💡 Found ${lightData.length} light data entries for refs:`, refsArray);
+          
+          // Step 4: Transform to match the expected format
+          const transformedProducts = lightData.map((light: any) => ({
+            id: light.id,
+            ref: light.ref,
+            description: light.description,
+            brandImg: light.brandImg,
+            img: light.img,
+            specifications: light.specifications,
+            position: positionSlug,
+            category: 'lights'
+          })) as any;
+          
+          console.log(`✅ Filtered products for ${positionSlug}:`, transformedProducts.length);
+          setProducts(transformedProducts);
+        } else {
+          throw new Error('Database not initialized');
+        }
       } else {
-        console.log(`❌ API Error:`, response.message);
-        setError({
-          message: response.message || 'Failed to fetch products for position',
-          code: 'FETCH_PRODUCTS_POSITION_ERROR'
-        });
+        console.log(`🔍 API Call: getProductsBySlugsAndPosition(${brandSlug}, ${modelSlug}, ${positionSlug})`);
+        const response = await lightsApiService.getProductsBySlugsAndPosition(brandSlug, modelSlug, positionSlug);
+        console.log(`📡 API Response:`, response);
+        
+        if (response.success && response.data) {
+          console.log(`✅ Setting products:`, response.data);
+          setProducts(response.data);
+        } else {
+          console.log(`❌ API Error:`, response.message);
+          setError({
+            message: response.message || 'Failed to fetch products for position',
+            code: 'FETCH_PRODUCTS_POSITION_ERROR'
+          });
+        }
       }
     } catch (err) {
-      console.log(`💥 API Exception:`, err);
+      console.log(`💥 Error fetching products:`, err);
       setError({
         message: err instanceof Error ? err.message : 'Unknown error occurred',
         code: 'FETCH_PRODUCTS_POSITION_ERROR'
@@ -300,7 +411,7 @@ export const useLightsData = (): UseLightsDataReturn => {
     } finally {
       setLoadingProducts(false);
     }
-  }, []);
+  }, [isMockMode, getMockLightProducts]);
 
   return {
     // Data

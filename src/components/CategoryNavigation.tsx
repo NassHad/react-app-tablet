@@ -79,7 +79,7 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
   }
 
   return (
-    <div className="flex items-center justify-between ml-[-50%]">
+    <div className="flex items-center justify-center text-center w-full h-20">
       {/* Left side - Previous button */}
       <motion.button
         onClick={handlePreviousClick}

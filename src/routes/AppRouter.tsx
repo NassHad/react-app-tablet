@@ -41,6 +41,13 @@ const AppRouterContent = () => {
           modelSlug: newState.vehicle.modelSlug
         });
       }
+      if (newState.category) {
+        console.log('📂 Category data preserved:', {
+          name: newState.category.name,
+          slug: newState.category.slug,
+          id: newState.category.id
+        });
+      }
       return newState;
     });
   };
@@ -240,12 +247,12 @@ const AppRouterContent = () => {
                       console.log('Updating userSelection with preserved vehicle data:', vehicle);
                       updateUserSelection({ vehicle });
                       
-                      // For battery category, let the form handle navigation to questions
+                      // For battery category, let the form handle navigation to products
                       // For other categories, navigate to products
                       if (userSelection?.category?.slug !== 'batteries') {
                         navigate('/products');
                       }
-                      // If it's batteries, the form will handle navigation to /questions
+                      // If it's batteries, the form will handle navigation to /products
                     }}
                   />
                 </PageTransition>
@@ -291,11 +298,11 @@ const AppRouterContent = () => {
             element={
               (() => {
                 const hasAnswers = !!userSelection?.answers;
-                const hasBatteryCategory = userSelection?.vehicle && userSelection?.category?.slug === 'battery';
+                const hasBatteryCategory = userSelection?.vehicle && userSelection?.category?.slug === 'batteries';
                 const hasLightsCategory = userSelection?.vehicle && userSelection?.category?.slug === 'lights';
-                const hasOilCategory = userSelection?.vehicle && userSelection?.category?.slug === 'oil';
+                const hasOilCategory = userSelection?.vehicle && userSelection?.category?.slug === 'oils';
                 const hasFiltrationCategory = userSelection?.vehicle && userSelection?.category?.slug === 'filtration';
-                const hasWipersCategory = userSelection?.vehicle && userSelection?.category?.slug === 'beg';
+                const hasWipersCategory = userSelection?.vehicle && userSelection?.category?.slug === 'wipers';
                 const hasRequiredState = hasAnswers || hasBatteryCategory || hasLightsCategory || hasOilCategory || hasFiltrationCategory || hasWipersCategory;
                 
                 if (!hasRequiredState) {

@@ -1,5 +1,7 @@
-import { shouldUseStrapi } from '../config/dataSource';
+import { shouldUseStrapi, shouldUseLocalDatabase, DATA_SOURCE_CONFIG } from '../config/dataSource';
 import type { Brand, Model, DateRange } from '../utils/vehicleData';
+
+const API_URL = DATA_SOURCE_CONFIG.strapi.apiUrl;
 
 // Import the original local data functions as fallback
 import { 
@@ -37,6 +39,25 @@ class VehicleDataService {
   // Get brands with Strapi integration and local fallback
   async getBrands(): Promise<Brand[]> {
     try {
+      // Use SQLite if configured for local database
+      if (shouldUseLocalDatabase()) {
+        console.log('🗄️ Using SQLite for brands data');
+        const { databaseService } = await import('../db/database');
+        const brands = await databaseService.getBrands();
+        if (brands && brands.length > 0) {
+          const brandsData = brands.map((brand: any) => ({
+            id: brand.id,
+            name: brand.name,
+            slug: brand.slug,
+            isActive: brand.isActive
+          }));
+          
+          console.log('✅ Brands loaded from SQLite:', brandsData.length);
+          return brandsData;
+        }
+      }
+      
+      // Use Strapi if configured
       if (shouldUseStrapi()) {
         console.log('🔄 Fetching brands from Strapi...');
         
@@ -47,11 +68,12 @@ class VehicleDataService {
         }
 
         try {
-          // Use the lights-selection brands endpoint - more reliable as it's from actual products
-          const response = await fetch('http://localhost:1338/api/lights-selection/brands');
+          const response = await fetch(`${API_URL}/lights-selection/brands`);
           if (response.ok) {
             const data = await response.json();
-            const brands = data.map((brand: any) => ({
+            // /lights-selection/brands returns array directly, not {data: [...]}
+            const brands = Array.isArray(data) ? data : data.data || [];
+            const mappedBrands = brands.map((brand: any) => ({
               id: brand.id,
               name: brand.name,
               slug: brand.slug,
@@ -60,31 +82,27 @@ class VehicleDataService {
             
             // Update cache
             this.strapiDataCache = {
-              brands,
+              brands: mappedBrands,
               models: this.strapiDataCache?.models || [],
               dateRanges: this.strapiDataCache?.dateRanges || [],
               lastFetch: Date.now()
             };
 
-            console.log('✅ Brands loaded from lights-selection API:', brands.length);
-            return brands;
+            console.log('✅ Brands loaded from Strapi:', mappedBrands.length);
+            return mappedBrands;
           } else {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
         } catch (error) {
-          console.error('❌ Failed to load brands from lights-selection API, falling back to local data:', error);
-          // Fallback to local data
-          const localBrands = getLocalBrands();
-          console.log('📦 Using local brands as fallback:', localBrands.length);
-          return localBrands;
+          console.error('❌ Failed to load brands from Strapi, falling back to local data:', error);
         }
       }
     } catch (error) {
-      console.warn('⚠️ Failed to fetch brands from Strapi, falling back to local data:', error);
+      console.warn('⚠️ Failed to fetch brands, falling back to local data:', error);
     }
 
-    // Fallback to local data
-    console.log('🔄 Using local brands data');
+    // Fallback to local mock data
+    console.log('🔄 Using local mock brands data');
     return getLocalBrands();
   }
 
@@ -192,6 +210,27 @@ class VehicleDataService {
   // Get models by brand slug with new API integration
   async getModelsByBrandSlug(brandSlug: string): Promise<Model[]> {
     try {
+      // Use SQLite if configured for local database
+      if (shouldUseLocalDatabase()) {
+        console.log(`🗄️ Using SQLite for models data for brand ${brandSlug}`);
+        const { databaseService } = await import('../db/database');
+        const models = await databaseService.getModelsByBrand(brandSlug);
+        if (models && models.length > 0) {
+          const modelsData = models.map((model: any) => ({
+            id: model.id,
+            name: model.name,
+            brandSlug: model.brand_slug || brandSlug,
+            modelSlug: model.slug,
+            brand: model.brand_name || '',
+            brandId: 0 // Not needed for this flow
+          }));
+          
+          console.log(`✅ Models loaded from SQLite for brand ${brandSlug}:`, modelsData.length);
+          return modelsData;
+        }
+      }
+      
+      // Use Strapi if configured
       if (shouldUseStrapi()) {
         console.log(`🔄 Fetching models for brand ${brandSlug} from Strapi...`);
         
@@ -205,12 +244,12 @@ class VehicleDataService {
         }
 
         try {
-          // Use the new models-from-products endpoint - more reliable as it extracts from actual products
-          const response = await fetch(`http://localhost:1338/api/lights-selection/models-from-products?brandSlug=${brandSlug}`);
+          // Make actual API call to Strapi
+          const response = await fetch(`${API_URL}/models?filters[brand][slug][$eq]=${brandSlug}&populate=*`);
           if (response.ok) {
-            const responseData = await response.json();
-            const data = responseData.data || responseData; // Handle both wrapped and direct responses
-            const models = data.map((model: any) => ({
+            const data = await response.json();
+            const models = data.data || [];
+            const modelsData = models.map((model: any) => ({
               id: model.id,
               name: model.name,
               brandSlug: model.brand?.slug || brandSlug,
@@ -224,12 +263,12 @@ class VehicleDataService {
               // Remove existing models for this brand and add new ones
               this.strapiDataCache.models = [
                 ...this.strapiDataCache.models.filter(m => m.brandSlug !== brandSlug),
-                ...models
+                ...modelsData
               ];
             }
 
-            console.log(`✅ Models loaded from products API for brand ${brandSlug}:`, models.length);
-            return models;
+            console.log(`✅ Models loaded from Strapi API for brand ${brandSlug}:`, modelsData.length);
+            return modelsData;
           } else {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
@@ -260,17 +299,18 @@ class VehicleDataService {
         }
 
         try {
-          // Try new API endpoints - fetch all models by setting large page size
-          const response = await fetch('http://localhost:1338/api/models?populate=*&sort[0]=name:asc&pagination[pageSize]=1000');
-          if (response.ok) {
-            const data = await response.json();
-            const models = data.data.map((model: any) => ({
+          // Use local database for offline-first approach
+          const { databaseService } = await import('../db/database');
+          const models = await databaseService.getAllModels();
+          if (models && models.length > 0) {
+            const data = { data: models };
+            const modelsData = data.data.map((model: any) => ({
               id: model.id,
               name: model.name,
-              brandSlug: model.brand?.slug || '',
+              brandSlug: model.brand_slug || '',
               modelSlug: model.slug,
-              brand: model.brand?.name || '',
-              brandId: model.brand?.id || 0
+              brand: model.brand_name || '',
+              brandId: model.brand_id || 0
             }));
             
             // Update cache
@@ -282,9 +322,9 @@ class VehicleDataService {
             };
 
             console.log('✅ Models loaded from new API:', models.length);
-            return models;
+            return modelsData;
           } else {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`No models found in API response`);
           }
         } catch (error) {
           console.error('❌ Failed to load models from new API:', error);

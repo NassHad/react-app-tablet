@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useClickAnimation } from '../hooks/useClickAnimation';
 import { getVehicleTypeDisplayName } from '../utils';
@@ -8,6 +8,7 @@ import {
   type Brand,
   type Model
 } from '../utils/vehicleData';
+import { useMockData } from '../hooks/useMockData';
 import type { UserSelection } from '../types';
 
 interface VehicleSelectionFormProps {
@@ -28,52 +29,82 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
   const [isLoadingModels, setIsLoadingModels] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Mock data hook
+  const { isMockMode, getMockBrands, getMockModelsByBrand } = useMockData();
+
   // Load initial brands data
-  useEffect(() => {
-    const loadBrands = async () => {
-      try {
-        setIsLoading(true);
-        setError(null);
+  const loadBrands = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      setError(null);
+      
+      if (isMockMode) {
+        console.log('🎭 Loading mock brands for vehicle selection...');
+        const mockBrands = getMockBrands();
+        const formattedBrands: Brand[] = mockBrands.map(brand => ({
+          id: brand.id,
+          slug: brand.slug,
+          name: brand.name
+        }));
+        setBrands(formattedBrands);
+      } else {
         const brandsData = await vehicleDataService.getBrands();
         setBrands(brandsData);
-      } catch (err) {
-        console.error('Failed to load brands:', err);
-        setError('Failed to load vehicle data. Please try again.');
-        // Fallback to local data
-        setBrands(getBrands());
-      } finally {
-        setIsLoading(false);
       }
-    };
+    } catch (err) {
+      console.error('Failed to load brands:', err);
+      setError('Échec du chargement des données véhicule. Veuillez réessayer.');
+      // Fallback to local data
+      setBrands(getBrands());
+    } finally {
+      setIsLoading(false);
+    }
+  }, [isMockMode]);
 
+  useEffect(() => {
     loadBrands();
-  }, []);
+  }, [loadBrands]);
 
   // Load models when brand changes
-  useEffect(() => {
-    const loadModelsForBrand = async () => {
-      if (selectedBrandSlug) {
-        try {
-          setIsLoadingModels(true);
-          setError(null);
+  const loadModelsForBrand = useCallback(async () => {
+    if (selectedBrandSlug) {
+      try {
+        setIsLoadingModels(true);
+        setError(null);
+        
+        if (isMockMode) {
+          console.log(`🎭 Loading mock models for brand: ${selectedBrandSlug}`);
+          const mockModels = getMockModelsByBrand(selectedBrandSlug);
+          const formattedModels: Model[] = mockModels.map(model => ({
+            id: model.id,
+            slug: model.slug,
+            name: model.name,
+            brandSlug: model.brand_slug,
+            startDate: '2018',
+            endDate: '2021'
+          }));
+          setAvailableModels(formattedModels);
+        } else {
           const modelsData = await vehicleDataService.getModelsByBrandSlug(selectedBrandSlug);
           setAvailableModels(modelsData);
-          setSelectedModelSlug(''); // Reset model selection
-        } catch (err) {
-          console.error('Failed to load models:', err);
-          setError('Failed to load models. Please try again.');
-          setAvailableModels([]);
-        } finally {
-          setIsLoadingModels(false);
         }
-      } else {
+        setSelectedModelSlug(''); // Reset model selection
+      } catch (err) {
+        console.error('Failed to load models:', err);
+        setError('Échec du chargement des modèles. Veuillez réessayer.');
         setAvailableModels([]);
-        setSelectedModelSlug('');
+      } finally {
+        setIsLoadingModels(false);
       }
-    };
+    } else {
+      setAvailableModels([]);
+      setSelectedModelSlug('');
+    }
+  }, [selectedBrandSlug, isMockMode]);
 
+  useEffect(() => {
     loadModelsForBrand();
-  }, [selectedBrandSlug]);
+  }, [loadModelsForBrand]);
 
   const handleBrandChange = (brandSlug: string) => {
     setSelectedBrandSlug(brandSlug);
@@ -102,7 +133,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
             year: parseInt(selectedDate.split('-')[0]),  // Extract year from date string
             dateCirculation: selectedDate,
           };
-          console.log('Storing vehicle data in userSelection:', vehicle);
+          console.log('Stockage des données véhicule dans userSelection:', vehicle);
           updateUserSelection({ vehicle });
           
           // Navigate to category selection
@@ -110,7 +141,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
         }
       } catch (err) {
         console.error('Failed to process vehicle selection:', err);
-        setError('Failed to process vehicle selection. Please try again.');
+        setError('Échec du traitement de la sélection véhicule. Veuillez réessayer.');
       }
     }
   };
@@ -136,7 +167,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex justify-center min-h-screen">
       <div className="text-center w-full max-w-4xl">
         <h1 className="text-5xl text-[#1290AD] mt-16 mb-14">
           Sélectionnez la <span className="font-bold">marque</span>, le <span className="font-bold">modèle</span> et la <span className="font-bold">date</span> de mise en circulation de votre {getVehicleTypeDisplayName(vehicleType as any)}
@@ -159,7 +190,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
                 id="brand"
                 value={selectedBrandSlug}
                 onChange={(e) => handleBrandChange(e.target.value)}
-                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
                 required
               >
                 <option value="">Sélectionnez une marque</option>
@@ -180,7 +211,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
                 id="model"
                 value={selectedModelSlug}
                 onChange={(e) => handleModelChange(e.target.value)}
-                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
                 disabled={!selectedBrandSlug || isLoadingModels}
                 required
               >
@@ -215,7 +246,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
                     const year = selectedDate.split('-')[0] || '';
                     setSelectedDate(year ? `${year}-${e.target.value}` : `2024-${e.target.value}`);
                   }}
-                  className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                  className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
                   required
                 >
                   <option value="">Mois</option>
@@ -240,7 +271,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
                     const month = selectedDate.split('-')[1] || '';
                     setSelectedDate(month ? `${e.target.value}-${month}` : `${e.target.value}-01`);
                   }}
-                  className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                  className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
                   required
                 >
                   <option value="">Année</option>
@@ -262,7 +293,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
               onClick={submitAnimation.handleClick}
               className={`py-4 px-8 rounded-lg text-lg font-semibold transition-all mt-10 ${
                 isFormValid
-                  ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
+                  ? 'bg-[#1290AD] text-white hover:opacity-80 shadow-lg hover:shadow-xl hover:cursor-pointer'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
               }`}
               {...submitAnimation.animationProps}

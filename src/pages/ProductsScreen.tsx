@@ -29,12 +29,18 @@ const ProductsScreen = ({ userSelection }: ProductsScreenProps) => {
 
     switch (userSelection.category.slug) {
       case 'beg':
+      case 'wipers':
+      case 'essuie-glaces':
         return <WiperProductsScreen userSelection={userSelection} />;
       case 'battery':
-        return <BatteryProductsScreen userSelection={userSelection} />;
+      case 'batteries':
+        return <BatteryProductsScreen userSelection={userSelection} category={userSelection.category} />;
       case 'lights':
+      case 'eclairage':
         return <BulbProductsScreen userSelection={userSelection} />;
       case 'oil':
+      case 'oils':
+      case 'huiles':
         return <OilProductsScreen userSelection={userSelection} />;
       case 'filtration':
         return <FiltrationProductsScreen userSelection={userSelection} />;
@@ -42,7 +48,7 @@ const ProductsScreen = ({ userSelection }: ProductsScreenProps) => {
         return (
           <div className="flex items-center justify-center min-h-screen">
             <div className="text-center">
-              <p className="text-lg text-gray-600">Catégorie non reconnue</p>
+              <p className="text-lg text-gray-600">Catégorie non reconnue: {userSelection.category.slug}</p>
             </div>
           </div>
         );

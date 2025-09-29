@@ -18,7 +18,7 @@ export interface DataSourceConfig {
 
 // Configuration to easily switch between data sources
 export const DATA_SOURCE_CONFIG: DataSourceConfig = {
-  currentSource: DataSource.STRAPI, // Change this to switch between sources
+  currentSource: DataSource.STRAPI, // Use Strapi for web development, LOCAL_DATABASE for Android
   
   strapi: {
     baseUrl: 'http://localhost:1338',

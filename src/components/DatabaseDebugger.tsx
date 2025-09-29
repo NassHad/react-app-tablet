@@ -60,7 +60,7 @@ const DatabaseDebugger = () => {
       <button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-red-600 text-white p-2 rounded-full shadow-lg z-50"
-        title="Database Debugger"
+        title="Débogueur de base de données"
       >
         🗄️
       </button>

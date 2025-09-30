@@ -10,8 +10,8 @@ function App() {
     <SimpleVehicleProvider>
       <Router>
         <AppRouter />
-        <DatabaseDebugger />
-        <StrapiStatus />
+        {/* <DatabaseDebugger />
+        <StrapiStatus /> */}
         {/* <FlowDemo /> */}
       </Router>
     </SimpleVehicleProvider>

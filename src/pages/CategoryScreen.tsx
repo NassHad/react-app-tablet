@@ -34,11 +34,29 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
         
         // Filter only active categories
         const activeCategories = categoriesData.filter(category => category.active);
-        console.log("Active categories:", activeCategories);
-        console.log("Categories count:", activeCategories.length);
-        console.log("Categories IDs:", activeCategories.map(c => c.id));
         
-        setCategories(activeCategories);
+        // Sort categories: available first, then disabled
+        const sortedCategories = activeCategories.sort((a, b) => {
+          const aDisabled = a.slug === 'wipers' || a.slug === 'oil' || a.slug === 'filters' ||
+                           a.name.toLowerCase().includes('balai') || 
+                           a.name.toLowerCase().includes('huile') ||
+                           a.name.toLowerCase().includes('filtration');
+          const bDisabled = b.slug === 'wipers' || b.slug === 'oil' || b.slug === 'filters' ||
+                           b.name.toLowerCase().includes('balai') || 
+                           b.name.toLowerCase().includes('huile') ||
+                           b.name.toLowerCase().includes('filtration');
+          
+          // Available categories (not disabled) come first
+          if (!aDisabled && bDisabled) return -1;
+          if (aDisabled && !bDisabled) return 1;
+          return 0; // Keep original order for same type
+        });
+        
+        console.log("Active categories:", sortedCategories);
+        console.log("Categories count:", sortedCategories.length);
+        console.log("Categories IDs:", sortedCategories.map(c => c.id));
+        
+        setCategories(sortedCategories);
       } catch (error) {
         console.error('Error loading categories:', error);
       } finally {
@@ -248,13 +266,13 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Main content */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6 bg-waves-hp tablet-main-content">
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6 tablet-main-content">
         {/* Instruction text */}
         <div className="text-center mb-16 mt-8">
           <h2 className="text-5xl text-gray-500 tablet-title">
-            Cliquez sur une catégorie pour voir les produits
+            Choisissez une catégorie
           </h2>
         </div>
 
@@ -299,12 +317,20 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
                 const imageSrc = getCategoryImage(category.name);
                 const bgColor = getCategoryColor(category.name);
                 
+                // Check if category should be disabled
+                const isDisabled = category.slug === 'wipers' || category.slug === 'oil' || category.slug === 'filters' ||
+                                 category.name.toLowerCase().includes('balai') || 
+                                 category.name.toLowerCase().includes('huile') ||
+                                 category.name.toLowerCase().includes('filtration');
+                
                 return (
                   <motion.div
                     key={category.id}
-                    onClick={() => handleCategorySelect(category)}
-                    className="relative w-80 h-102 rounded-lg shadow-lg cursor-pointer overflow-hidden flex-shrink-0 category-card tablet-category-card"
-                    {...animation.animationProps}
+                    onClick={isDisabled ? undefined : () => handleCategorySelect(category)}
+                    className={`relative w-80 h-102 rounded-lg shadow-lg overflow-hidden flex-shrink-0 category-card tablet-category-card ${
+                      isDisabled ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'
+                    }`}
+                    {...(isDisabled ? {} : animation.animationProps)}
                   >
                     {/* Image */}
                     <img 

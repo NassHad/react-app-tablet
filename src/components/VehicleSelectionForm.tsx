@@ -8,10 +8,7 @@ import {
   type Brand,
   type Model
 } from '../utils/vehicleData';
-<<<<<<< HEAD
 import { useMockData } from '../hooks/useMockData';
-=======
->>>>>>> 3430162d13ff5da26c1266cb2de7e4fe89c4b896
 import type { UserSelection } from '../types';
 
 interface VehicleSelectionFormProps {

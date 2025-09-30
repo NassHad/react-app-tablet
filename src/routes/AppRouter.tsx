@@ -247,11 +247,7 @@ const AppRouterContent = () => {
                       console.log('Updating userSelection with preserved vehicle data:', vehicle);
                       updateUserSelection({ vehicle });
                       
-<<<<<<< HEAD
                       // For battery category, let the form handle navigation to products
-=======
-                      // For battery category, let the form handle navigation to questions
->>>>>>> 3430162d13ff5da26c1266cb2de7e4fe89c4b896
                       // For other categories, navigate to products
                       if (userSelection?.category?.slug !== 'batteries') {
                         navigate('/products');

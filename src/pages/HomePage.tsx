@@ -10,6 +10,9 @@ import { useEffect } from 'react';
 import motoImage from '../assets/img/homepage/Moto.png';
 import carImage from '../assets/img/homepage/car.png';
 import vanImage from '../assets/img/homepage/van.png';
+import motoEncart from '../assets/img/layout/moto-encart.png';
+import carEncart from '../assets/img/layout/car-encart.png';
+
 
 interface HomePageProps {
   onVehicleTypeSelect: (vehicleType: VehicleType) => void;
@@ -52,15 +55,15 @@ const HomePage = ({ onVehicleTypeSelect }: HomePageProps) => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-100 relative overflow-hidden">
+    <div className="relative overflow-hidden max-h-[75vh]">
 
       {/* Main content */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-56px)] px-6">
+      <main className="z-10 flex flex-col items-center justify-center px-6">
         {/* Welcome title */}
         
         {/* Prompt text */}
-        <div className="text-center mb-32">
-          <h2 className="text-5xl text-[#1290AD]">
+        <div className="text-center my-16">
+          <h2 className="text-6xl text-[#1290AD]">
             <span className="">Choisissez votre </span>
             <span className="font-bold">type</span>
             <span className=""> de véhicule</span>
@@ -69,28 +72,25 @@ const HomePage = ({ onVehicleTypeSelect }: HomePageProps) => {
 
         {/* Vehicle selection cards */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-          {/* Moto Card */}
+          {/* Moto Card - Disabled */}
           <motion.div
-            onClick={motoAnimation.handleClick}
-            className="relative cursor-pointer overflow-hidden shadow-lg"
-            {...motoAnimation.animationProps}
+            className="relative cursor-not-allowed overflow-hidden opacity-70"
           >
                 <img 
                   src={motoImage} 
                   alt="Motorcycle"
                 />
-
-            
             {/* Bottom bar */}
-            <div className="h-26 bg-[#FF9E00] flex items-center justify-center">
-              <span className="text-white font-bold text-4xl uppercase text-shadow-lg">Moto</span>
+            <div className="flex items-center justify-center relative bottom-10 shadow-lg">
+              <img src={motoEncart} alt="Motorcycle" />
+              {/* <span className="text-white font-bold text-4xl uppercase text-shadow-lg">Moto</span> */}
             </div>
           </motion.div>
 
           {/* Voiture Card */}
           <motion.div
             onClick={carAnimation.handleClick}
-            className="relative cursor-pointer overflow-hidden shadow-lg"
+            className="relative cursor-pointer overflow-hidden "
             {...carAnimation.animationProps}
           >
 
@@ -100,13 +100,14 @@ const HomePage = ({ onVehicleTypeSelect }: HomePageProps) => {
                 />
 
             {/* Bottom bar */}
-            <div className="h-26 bg-[#0EA6BB] flex items-center justify-center px-4">
-              <span className="text-white font-bold text-4xl uppercase text-shadow-lg">Voiture</span>
+            <div className="flex items-center justify-center relative bottom-10 shadow-lg">
+            <img src={carEncart} alt="Car" />
+              {/* <span className="text-white font-bold text-4xl uppercase text-shadow-lg">Voiture</span> */}
             </div>
           </motion.div>
 
           {/* Camping-car Card */}
-          <motion.div
+          {/* <motion.div
             onClick={campingCarAnimation.handleClick}
             className="relative cursor-pointer overflow-hidden shadow-lg"
             {...campingCarAnimation.animationProps}
@@ -115,19 +116,16 @@ const HomePage = ({ onVehicleTypeSelect }: HomePageProps) => {
                 <img 
                   src={vanImage} 
                   alt="Camping Car" 
-                />
+                /> */}
 
             
             {/* Bottom bar */}
-            <div className="h-26 bg-[#908008] flex items-center justify-center px-4">
+            {/* <div className="h-26 bg-[#908008] flex items-center justify-center px-4">
               <span className="text-white font-bold text-4xl uppercase text-shadow-lg">Camping-car</span>
-            </div>
-          </motion.div>
+            </div> */}
+          {/* </motion.div> */}
         </div>
       </main>
-
-      {/* Bottom line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-blue-300"></div>
     </div>
   );
 };

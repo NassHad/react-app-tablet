@@ -128,6 +128,7 @@ const BulbsQuestions = ({ vehicle, category, onAnswersComplete }: BulbsQuestions
       
       <div className="flex">
         {/* Left/Center Area */}
+
         <div className="flex w-full flex-col items-center mt-14">
           {/* Header */}
           <div className="mb-8 text-center flex flex-col items-center">

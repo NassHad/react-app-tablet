@@ -8,6 +8,7 @@ import {
   type Brand,
   type Model
 } from '../utils/vehicleData';
+
 import { useMockData } from '../hooks/useMockData';
 import type { UserSelection } from '../types';
 

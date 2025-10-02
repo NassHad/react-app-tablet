@@ -268,8 +268,8 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
     />
 
     {/* Development Tools */}
-    <DataModeToggle />
-    <MockVehicleSelector />
+    {/* <DataModeToggle /> */}
+    {/* <MockVehicleSelector /> */}
   </div>
   );
 };

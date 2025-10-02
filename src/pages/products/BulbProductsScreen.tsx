@@ -111,15 +111,52 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
     products.forEach(product => {
       console.log(`💡 Processing product: ${product.typeConception}`);
       
-      // Find the matching light position ref
-      const matchingPosition = product.lightPositions?.find((pos: any) => 
-        pos.slug === userSelection.answers?.positionSlug
-      );
-      const positionRef = matchingPosition?.ref || product.ref;
-      
-      if (positionRef) {
-        console.log(`   Adding light ref: ${positionRef}`);
-        lightRefs.add(positionRef);
+      // Extract refs from lightPositions array (API) or light_positions JSON (local DB)
+      if (product.lightPositions && Array.isArray(product.lightPositions)) {
+        // API format: lightPositions is already an array
+        product.lightPositions.forEach((pos: any) => {
+          // Match position by slug
+          const positionSlug = Array.isArray(userSelection.answers?.positionSlug) 
+            ? userSelection.answers.positionSlug[0] 
+            : userSelection.answers?.positionSlug;
+          const normalizedPositionSlug = positionSlug?.replace(/-/g, '_').replace(/_de_/g, '_');
+          const normalizedCategory = pos.category?.replace(/-/g, '_');
+          
+          if (pos.category === positionSlug || 
+              normalizedCategory === normalizedPositionSlug ||
+              pos.position?.toLowerCase().includes(positionSlug?.toLowerCase() || '') ||
+              positionSlug?.toLowerCase().includes(pos.category?.toLowerCase() || '')) {
+            lightRefs.add(pos.ref);
+            console.log(`   Adding light ref: ${pos.ref} for position ${pos.position} (${pos.category})`);
+          }
+        });
+      } else if (product.light_positions) {
+        // Local DB format: light_positions is a JSON string
+        try {
+          const positions = JSON.parse(product.light_positions);
+          positions.forEach((pos: any) => {
+            // Match position by slug
+            const positionSlug = Array.isArray(userSelection.answers?.positionSlug) 
+              ? userSelection.answers.positionSlug[0] 
+              : userSelection.answers?.positionSlug;
+            const normalizedPositionSlug = positionSlug?.replace(/-/g, '_').replace(/_de_/g, '_');
+            const normalizedCategory = pos.category?.replace(/-/g, '_');
+            
+            if (pos.category === positionSlug || 
+                normalizedCategory === normalizedPositionSlug ||
+                pos.position?.toLowerCase().includes(positionSlug?.toLowerCase() || '') ||
+                positionSlug?.toLowerCase().includes(pos.category?.toLowerCase() || '')) {
+              lightRefs.add(pos.ref);
+              console.log(`   Adding light ref: ${pos.ref} for position ${pos.position} (${pos.category})`);
+            }
+          });
+        } catch (error) {
+          console.warn('Error parsing light_positions:', error);
+        }
+      } else if (product.ref && product.ref !== 'Multiple') {
+        // Fallback: use product ref if no light_positions JSON
+        lightRefs.add(product.ref);
+        console.log(`   Adding product ref as fallback: ${product.ref}`);
       }
     });
     
@@ -171,11 +208,43 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
     if (!userSelection.answers?.positionSlug) return products;
     
     return products.filter(product => {
-      // Check if this product has the selected position
-      const hasPosition = product.lightPositions?.some((pos: any) => 
-        pos.slug === userSelection.answers?.positionSlug
-      );
-      return hasPosition;
+      // Check if this product has the selected position in lightPositions array (API) or light_positions JSON (local DB)
+      if (product.lightPositions && Array.isArray(product.lightPositions)) {
+        // API format: lightPositions is already an array
+        return product.lightPositions.some((pos: any) => {
+          const positionSlug = Array.isArray(userSelection.answers?.positionSlug) 
+            ? userSelection.answers.positionSlug[0] 
+            : userSelection.answers?.positionSlug;
+          const normalizedPositionSlug = positionSlug?.replace(/-/g, '_').replace(/_de_/g, '_');
+          const normalizedCategory = pos.category?.replace(/-/g, '_');
+          
+          return pos.category === positionSlug || 
+                 normalizedCategory === normalizedPositionSlug ||
+                 pos.position?.toLowerCase().includes(positionSlug?.toLowerCase() || '') ||
+                 positionSlug?.toLowerCase().includes(pos.category?.toLowerCase() || '');
+        });
+      } else if (product.light_positions) {
+        // Local DB format: light_positions is a JSON string
+        try {
+          const positions = JSON.parse(product.light_positions);
+          return positions.some((pos: any) => {
+            const positionSlug = Array.isArray(userSelection.answers?.positionSlug) 
+              ? userSelection.answers.positionSlug[0] 
+              : userSelection.answers?.positionSlug;
+            const normalizedPositionSlug = positionSlug?.replace(/-/g, '_').replace(/_de_/g, '_');
+            const normalizedCategory = pos.category?.replace(/-/g, '_');
+            
+            return pos.category === positionSlug || 
+                   normalizedCategory === normalizedPositionSlug ||
+                   pos.position?.toLowerCase().includes(positionSlug?.toLowerCase() || '') ||
+                   positionSlug?.toLowerCase().includes(pos.category?.toLowerCase() || '');
+          });
+        } catch (error) {
+          console.warn('Error parsing light_positions in filter:', error);
+          return false;
+        }
+      }
+      return false;
     });
   }, [products, userSelection.answers?.positionSlug]);
 
@@ -217,11 +286,49 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
             })()}
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product, index) => {
-                // Find the matching light position ref
-                const matchingPosition = product.lightPositions?.find((pos: any) => 
-                  pos.slug === userSelection.answers?.positionSlug
-                );
-                const positionRef = matchingPosition?.ref || product.ref;
+                // Find the matching light position ref from lightPositions array (API) or light_positions JSON (local DB)
+                let positionRef = null;
+                if (product.lightPositions && Array.isArray(product.lightPositions)) {
+                  // API format: lightPositions is already an array
+                  const matchingPosition = product.lightPositions.find((pos: any) => {
+                    const positionSlug = Array.isArray(userSelection.answers?.positionSlug) 
+                      ? userSelection.answers.positionSlug[0] 
+                      : userSelection.answers?.positionSlug;
+                    const normalizedPositionSlug = positionSlug?.replace(/-/g, '_').replace(/_de_/g, '_');
+                    const normalizedCategory = pos.category?.replace(/-/g, '_');
+                    
+                    return pos.category === positionSlug || 
+                           normalizedCategory === normalizedPositionSlug ||
+                           pos.position?.toLowerCase().includes(positionSlug?.toLowerCase() || '') ||
+                           positionSlug?.toLowerCase().includes(pos.category?.toLowerCase() || '');
+                  });
+                  positionRef = matchingPosition?.ref;
+                } else if (product.light_positions) {
+                  // Local DB format: light_positions is a JSON string
+                  try {
+                    const positions = JSON.parse(product.light_positions);
+                    const matchingPosition = positions.find((pos: any) => {
+                      const positionSlug = Array.isArray(userSelection.answers?.positionSlug) 
+                        ? userSelection.answers.positionSlug[0] 
+                        : userSelection.answers?.positionSlug;
+                      const normalizedPositionSlug = positionSlug?.replace(/-/g, '_').replace(/_de_/g, '_');
+                      const normalizedCategory = pos.category?.replace(/-/g, '_');
+                      
+                      return pos.category === positionSlug || 
+                             normalizedCategory === normalizedPositionSlug ||
+                             pos.position?.toLowerCase().includes(positionSlug?.toLowerCase() || '') ||
+                             positionSlug?.toLowerCase().includes(pos.category?.toLowerCase() || '');
+                    });
+                    positionRef = matchingPosition?.ref;
+                  } catch (error) {
+                    console.warn('Error parsing light_positions in display:', error);
+                  }
+                }
+                
+                // Fallback to product ref if no position found
+                if (!positionRef && product.ref && product.ref !== 'Multiple') {
+                  positionRef = product.ref;
+                }
                 
                 console.log(`💡 Product ${index + 1}/${filteredProducts.length}:`, {
                   productId: product.id,
@@ -256,7 +363,10 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
                                   {/* 1. Brand Image */}
                                   {lightDataItem.brandImg?.url ? (
                                     <img 
-                                      src={`http://localhost:1338${lightDataItem.brandImg.url}`}
+                                      src={lightDataItem.brandImg?.url ? `http://localhost:1338${lightDataItem.brandImg.url}` : '/assets/img/placeholder-brand.svg'}
+                                      onError={(e) => {
+                                        e.currentTarget.src = '/assets/img/placeholder-brand.svg';
+                                      }}
                                       alt="Marque"
                                       className="w-32 h-16 object-contain ml-4"
                                     />
@@ -280,11 +390,14 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
                                   {/* 3. Light Image */}
                                   {lightDataItem.img ? (
                                     <img 
-                                      src={`http://localhost:1338${lightDataItem.img.formats?.medium?.url || lightDataItem.img.url}`}
+                                      src={lightDataItem.img?.url ? `http://localhost:1338${lightDataItem.img.url}` : '/assets/img/placeholder-product.svg'}
+                                      onError={(e) => {
+                                        e.currentTarget.src = '/assets/img/placeholder-product.svg';
+                                      }}
                                       alt="Ampoule"
                                       className="w-24 h-24 object-contain cursor-pointer hover:opacity-80 transition-opacity ml-4"
                                       onClick={() => handleImageZoom(
-                                        `http://localhost:1338${lightDataItem.img.formats?.large?.url || lightDataItem.img.url}`,
+                                        lightDataItem.img?.url ? `http://localhost:1338${lightDataItem.img.url}` : '/assets/img/placeholder-product.svg',
                                         `Light ${positionRef} - ${lightDataItem.description}`
                                       )}
                                     />

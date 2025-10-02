@@ -232,15 +232,62 @@ export const useLightsData = (): UseLightsDataReturn => {
     setLoadingProducts(true);
     setError(null);
     
+    console.log(`🔍 fetchProductsBySlugs called with: ${brandSlug} ${modelSlug}`);
+    console.log(`🔍 isMockMode: ${isMockMode}`);
+    console.log(`🔍 shouldUseLocalDatabase(): ${shouldUseLocalDatabase()}`);
+    
     try {
-      const response = await lightsApiService.getProductsBySlugs(brandSlug, modelSlug);
-      if (response.success && response.data) {
-        setProducts(response.data);
+      if (isMockMode) {
+        console.log(`🎭 Using mock light products for: ${brandSlug} ${modelSlug}`);
+        const mockProducts = getMockLightProducts(brandSlug, modelSlug, '');
+        setProducts(mockProducts as any);
+      } else if (shouldUseLocalDatabase()) {
+        console.log(`🗄️ Fetching light products from local database for: ${brandSlug} ${modelSlug}`);
+        const db = await databaseService.getDb();
+        if (db) {
+          // Find lights_products for this vehicle
+          const lightsProductsResult = await db.query(
+            'SELECT * FROM lights_products WHERE brand_slug = ? AND model_slug = ?',
+            [brandSlug, modelSlug]
+          );
+          const lightsProducts = lightsProductsResult.values || [];
+          console.log(`🔍 Found ${lightsProducts.length} lights products for ${brandSlug} ${modelSlug}`);
+          
+          if (lightsProducts.length === 0) {
+            console.log(`❌ No lights products found for ${brandSlug} ${modelSlug}`);
+            setProducts([]);
+            return;
+          }
+          
+          // Transform to match the expected format
+          const transformedProducts = lightsProducts.map((product: any) => ({
+            id: product.id,
+            ref: product.ref,
+            description: product.description,
+            brandImg: product.brandImg,
+            img: product.img,
+            specifications: product.specifications,
+            typeConception: product.typeConception,
+            light_positions: product.light_positions,
+            category: 'lights'
+          })) as any;
+          
+          console.log(`✅ Transformed to ${transformedProducts.length} products`);
+          setProducts(transformedProducts);
+        } else {
+          throw new Error('Database not initialized');
+        }
       } else {
-        setError({
-          message: response.message || 'Failed to fetch products',
-          code: 'FETCH_PRODUCTS_ERROR'
-        });
+        console.log(`🔍 API Call: getProductsBySlugs(${brandSlug}, ${modelSlug})`);
+        const response = await lightsApiService.getProductsBySlugs(brandSlug, modelSlug);
+        if (response.success && response.data) {
+          setProducts(response.data);
+        } else {
+          setError({
+            message: response.message || 'Failed to fetch products',
+            code: 'FETCH_PRODUCTS_ERROR'
+          });
+        }
       }
     } catch (err) {
       setError({
@@ -250,7 +297,7 @@ export const useLightsData = (): UseLightsDataReturn => {
     } finally {
       setLoadingProducts(false);
     }
-  }, []);
+  }, [isMockMode, getMockLightProducts]);
 
   // Fetch all master positions
   const fetchAllMasterPositions = useCallback(async () => {
@@ -261,7 +308,7 @@ export const useLightsData = (): UseLightsDataReturn => {
       if (isMockMode) {
         console.log('🎭 Using mock positions data...');
         const mockPositions = getMockLightPositions();
-        setPositions(mockPositions);
+        setPositions(mockPositions as any);
       } else if (shouldUseLocalDatabase()) {
         console.log('🗄️ Fetching positions from local database...');
         const db = await databaseService.getDb();
@@ -301,11 +348,15 @@ export const useLightsData = (): UseLightsDataReturn => {
     setLoadingProducts(true);
     setError(null);
     
+    console.log(`🔍 fetchProductsBySlugsAndPosition called with: ${brandSlug} ${modelSlug} - ${positionSlug}`);
+    console.log(`🔍 isMockMode: ${isMockMode}`);
+    console.log(`🔍 shouldUseLocalDatabase(): ${shouldUseLocalDatabase()}`);
+    
     try {
       if (isMockMode) {
         console.log(`🎭 Using mock light products for: ${brandSlug} ${modelSlug} - ${positionSlug}`);
         const mockProducts = getMockLightProducts(brandSlug, modelSlug, positionSlug);
-        setProducts(mockProducts);
+        setProducts(mockProducts as any);
       } else if (shouldUseLocalDatabase()) {
         console.log(`🗄️ Fetching light products from local database for: ${brandSlug} ${modelSlug} - ${positionSlug}`);
         const db = await databaseService.getDb();
@@ -348,6 +399,10 @@ export const useLightsData = (): UseLightsDataReturn => {
               } catch (error) {
                 console.warn('Error parsing light_positions:', error);
               }
+            } else if (product.ref && product.ref !== 'Multiple') {
+              // Fallback: use product ref if no light_positions JSON
+              refsForPosition.add(product.ref);
+              console.log(`✅ Using product ref ${product.ref} as fallback`);
             }
           });
           
@@ -369,6 +424,17 @@ export const useLightsData = (): UseLightsDataReturn => {
           const lightData = lightDataResult.values || [];
           console.log(`💡 Found ${lightData.length} light data entries for refs:`, refsArray);
           
+          if (lightData.length === 0) {
+            console.log(`❌ No light data found for refs:`, refsArray);
+            setProducts([]);
+            return;
+          }
+          
+          // Log sample data
+          if (lightData.length > 0) {
+            console.log(`📋 Sample light data:`, lightData[0]);
+          }
+          
           // Step 4: Transform to match the expected format
           const transformedProducts = lightData.map((light: any) => ({
             id: light.id,
@@ -382,6 +448,9 @@ export const useLightsData = (): UseLightsDataReturn => {
           })) as any;
           
           console.log(`✅ Filtered products for ${positionSlug}:`, transformedProducts.length);
+          if (transformedProducts.length > 0) {
+            console.log(`📋 Sample transformed product:`, transformedProducts[0]);
+          }
           setProducts(transformedProducts);
         } else {
           throw new Error('Database not initialized');

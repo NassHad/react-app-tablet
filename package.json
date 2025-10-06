@@ -17,7 +17,8 @@
     "test:strapi": "node scripts/test-strapi.js",
     "generate:seed": "node scripts/generateSeed.js",
     "build:apk": "node scripts/buildAPK.js",
-    "build:apk:auto": "node scripts/buildAPKWithSetup.js"
+    "build:apk:auto": "node scripts/buildAPKWithSetup.js",
+    "switch:mode": "node scripts/switchMode.cjs"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "^7.0.1",

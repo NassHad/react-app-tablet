@@ -99,11 +99,59 @@ export const useBatteryData = (): UseBatteryDataReturn => {
           console.log(`✅ Battery products fetched:`, response.data);
           setMotorisations(response.data);
         } else {
-          console.log(`❌ Failed to fetch battery products:`, response.message);
-          setError({
-            message: response.message || 'Failed to fetch battery products',
-            code: 'FETCH_BATTERY_PRODUCTS_ERROR'
-          });
+          console.log(`❌ Failed to fetch battery products from API, falling back to local database:`, response.message);
+          
+          // Fallback to local database when API fails
+          const db = await databaseService.getDb();
+          if (db) {
+            const result = await db.query(
+              'SELECT * FROM battery_products WHERE brand_slug = ? AND model_slug = ?',
+              [brandSlug, modelSlug]
+            );
+            const batteryProducts = result.values || [];
+            console.log(`🔋 Found ${batteryProducts.length} battery products in local database`);
+            
+            if (batteryProducts.length > 0) {
+              // Transform to match the expected format
+              const motorisations: BatteryMotorisation[] = [];
+              batteryProducts.forEach((product: any) => {
+                if (product.motorisations) {
+                  try {
+                    const motorisationsData = JSON.parse(product.motorisations);
+                    motorisationsData.forEach((motor: any) => {
+                      motorisations.push({
+                        id: `${product.id}-${motor.motorisation}`,
+                        motorisation: motor.motorisation,
+                        fuel: motor.fuel,
+                        startDate: motor.startDate,
+                        endDate: motor.endDate,
+                        batteryTypes: {
+                          AGM: motor.batteryAGM || '',
+                          EFB: motor.batteryEFB || '',
+                          Conventional: motor.batteryConventional || ''
+                        }
+                      });
+                    });
+                  } catch (error) {
+                    console.warn('Error parsing motorisations:', error);
+                  }
+                }
+              });
+              
+              console.log(`✅ Transformed to ${motorisations.length} motorisations from local database`);
+              setMotorisations(motorisations);
+            } else {
+              setError({
+                message: 'No battery products found for this vehicle',
+                code: 'NO_BATTERY_PRODUCTS_FOUND'
+              });
+            }
+          } else {
+            setError({
+              message: 'Database not initialized',
+              code: 'DATABASE_NOT_INITIALIZED'
+            });
+          }
         }
       }
     } catch (err) {

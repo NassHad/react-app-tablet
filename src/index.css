@@ -59,6 +59,35 @@
   background-repeat: no-repeat;
 }
 
+.bg-waves-batteries{
+  background-image: url('assets/img/homepage/background-waves-batteries.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+.bg-waves-lights{
+  background-image: url('assets/img/homepage/background-waves-lights.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+.bg-waves-wipers{
+  background-image: url('assets/img/homepage/background-waves-wipers.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+
+.bg-waves-oil{
+  background-image: url('assets/img/homepage/background-waves-oil.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
 .gradient-background {
   background-image: linear-gradient(90deg, #275384 10%, #EA5F03 90%);
 }

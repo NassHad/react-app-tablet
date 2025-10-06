@@ -26,6 +26,7 @@ export interface LightsProduct {
   brand: BrandData;
   model: ModelData;
   lightPositions: LightPosition[];
+  light_positions?: string; // JSON string from database
   constructionYearStart: string;
   constructionYearEnd: string;
   typeConception: string;

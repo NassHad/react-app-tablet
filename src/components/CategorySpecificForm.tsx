@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import type { ProductCategory, Vehicle } from '../types';
 import { useSimpleVehicleContext } from '../contexts/SimpleVehicleContext';
 import { useBatteryData } from '../hooks/useBatteryData';
+import HelpModal from './HelpModal';
 
 interface CategorySpecificFormProps {
   onComplete: (vehicleData: any) => void;
@@ -17,6 +19,7 @@ const CategorySpecificForm: React.FC<CategorySpecificFormProps> = ({ onComplete,
   
   const [categoryData] = useState<any>({});
   const [selectedMotorisation, setSelectedMotorisation] = useState<string>('');
+  const [showHelpModal, setShowHelpModal] = useState(false);
 
   // Fetch motorisations when component mounts or vehicle changes
   useEffect(() => {
@@ -94,7 +97,7 @@ const CategorySpecificForm: React.FC<CategorySpecificFormProps> = ({ onComplete,
 
   const BatteryForm = () => (
     <div className="flex flex-col gap-8">
-      <h2 className="text-5xl text-[#1590AD] text-center mt-16 mb-10">
+      <h2 className="text-5xl text-[#FD171E] text-center mt-16 mb-10">
         Configuration complémentaire
       </h2>
       
@@ -248,13 +251,33 @@ const CategorySpecificForm: React.FC<CategorySpecificFormProps> = ({ onComplete,
             {/* Show submit button for all categories */}
             <button
               type="submit"
-              className="flex-1 py-4 rounded-xl font-bold text-lg bg-[#1590AD] text-white shadow-lg hover:shadow-xl transition-all duration-200"
+              className="flex-1 py-4 rounded-xl font-bold text-lg bg-[#FD171E] text-white shadow-lg hover:shadow-xl transition-all duration-200"
             >
               Voir la sélection de {category?.name.toLowerCase()}
             </button>
           </div>
         </form>
+        
+        {/* Help Button */}
+        <div className="flex w-full justify-center flex-col items-center mt-12">
+          <div className='relative w-8 h-8 bg-stone-200 rotate-45 top-[15px]'></div>
+          <div className="bg-stone-200 size-fit p-4 rounded-2xl">
+            <p className='text-center mb-2'>Besoin d'aide ?</p>
+            <button 
+              onClick={() => setShowHelpModal(true)}
+              className='bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium cursor-pointer'
+            >
+              Cliquez ici
+            </button>
+          </div> 
+        </div>
       </div>
+      
+      {/* Help Modal */}
+      <HelpModal 
+        isOpen={showHelpModal} 
+        onClose={() => setShowHelpModal(false)} 
+      />
     </div>
   );
 };

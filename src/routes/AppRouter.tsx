@@ -8,6 +8,8 @@ import ProductsScreen from '../pages/ProductsScreen';
 import ProductDetailsScreen from '../pages/ProductDetailsScreen';
 import NoProductsAvailableScreen from '../pages/NoProductsAvailableScreen';
 import LightsTestPage from '../pages/test/LightsTestPage';
+import WipersTestPage from '../pages/test/WipersTestPage';
+import WipersTestPageNew from '../pages/test/WipersTestPageNew';
 import CategorySpecificForm from '../components/CategorySpecificForm';
 import VehicleSelectionForm from '../components/VehicleSelectionForm';
 import Layout from '../components/Layout';
@@ -367,6 +369,22 @@ const AppRouterContent = () => {
             path="/test/lights" 
             element={
               <LightsTestPage />
+            } 
+          />
+
+          {/* Test Page for Wipers Integration */}
+          <Route 
+            path="/test/wipers" 
+            element={
+              <WipersTestPage />
+            } 
+          />
+
+          {/* Test Page for NEW Wipers Position-Based Filtering */}
+          <Route 
+            path="/test/wipers-new" 
+            element={
+              <WipersTestPageNew />
             } 
           />
 

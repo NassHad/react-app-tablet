@@ -73,6 +73,8 @@ export interface SyncData {
   categories: ProductCategory[];
   products: Product[];
   compatibilities: VehicleCompatibility[];
+  wipersProducts?: any[];
+  wipersPositions?: any[];
   lastSync: string;
 }
 

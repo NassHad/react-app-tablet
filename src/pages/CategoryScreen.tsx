@@ -37,12 +37,10 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
         
         // Sort categories: available first, then disabled
         const sortedCategories = activeCategories.sort((a, b) => {
-          const aDisabled = a.slug === 'wipers' || a.slug === 'oil' || a.slug === 'filters' ||
-                           a.name.toLowerCase().includes('balai') || 
+          const aDisabled = a.slug === 'oil' || a.slug === 'filters' ||
                            a.name.toLowerCase().includes('huile') ||
                            a.name.toLowerCase().includes('filtration');
-          const bDisabled = b.slug === 'wipers' || b.slug === 'oil' || b.slug === 'filters' ||
-                           b.name.toLowerCase().includes('balai') || 
+          const bDisabled = b.slug === 'oil' || b.slug === 'filters' ||
                            b.name.toLowerCase().includes('huile') ||
                            b.name.toLowerCase().includes('filtration');
           
@@ -128,6 +126,9 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
         navigate('/category-specific');
       } else if (category.slug === 'lights' || category.name.toLowerCase().includes('éclairage')) {
         // Navigate directly to questions page for lights
+        navigate('/questions');
+      } else if (category.slug === 'wipers' || category.slug === 'beg' || category.name.toLowerCase().includes('essuie-glace') || category.name.toLowerCase().includes('balais')) {
+        // Navigate directly to questions page for wipers
         navigate('/questions');
       } else if (category.slug === 'oil' || category.name.toLowerCase().includes('huile')) {
         // Navigate to oil-specific form
@@ -318,8 +319,7 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
                 const bgColor = getCategoryColor(category.name);
                 
                 // Check if category should be disabled
-                const isDisabled = category.slug === 'wipers' || category.slug === 'oil' || category.slug === 'filters' ||
-                                 category.name.toLowerCase().includes('balai') || 
+                const isDisabled = category.slug === 'oil' || category.slug === 'filters' ||
                                  category.name.toLowerCase().includes('huile') ||
                                  category.name.toLowerCase().includes('filtration');
                 

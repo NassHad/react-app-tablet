@@ -37,10 +37,12 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
         
         // Sort categories: available first, then disabled
         const sortedCategories = activeCategories.sort((a, b) => {
-          const aDisabled = a.slug === 'oil' || a.slug === 'filters' ||
+          const aDisabled = a.slug === 'wipers' || a.slug === 'oil' || a.slug === 'filters' ||
+                           a.name.toLowerCase().includes('balai') || 
                            a.name.toLowerCase().includes('huile') ||
                            a.name.toLowerCase().includes('filtration');
-          const bDisabled = b.slug === 'oil' || b.slug === 'filters' ||
+          const bDisabled = b.slug === 'wipers' || b.slug === 'oil' || b.slug === 'filters' ||
+                           b.name.toLowerCase().includes('balai') || 
                            b.name.toLowerCase().includes('huile') ||
                            b.name.toLowerCase().includes('filtration');
           
@@ -319,7 +321,8 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
                 const bgColor = getCategoryColor(category.name);
                 
                 // Check if category should be disabled
-                const isDisabled = category.slug === 'oil' || category.slug === 'filters' ||
+                const isDisabled = category.slug === 'wipers' || category.slug === 'oil' || category.slug === 'filters' ||
+                                 category.name.toLowerCase().includes('balai') || 
                                  category.name.toLowerCase().includes('huile') ||
                                  category.name.toLowerCase().includes('filtration');
                 

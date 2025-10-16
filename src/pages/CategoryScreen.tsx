@@ -129,6 +129,9 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
       } else if (category.slug === 'lights' || category.name.toLowerCase().includes('éclairage')) {
         // Navigate directly to questions page for lights
         navigate('/questions');
+      } else if (category.slug === 'wipers' || category.slug === 'beg' || category.name.toLowerCase().includes('essuie-glace') || category.name.toLowerCase().includes('balais')) {
+        // Navigate directly to questions page for wipers
+        navigate('/questions');
       } else if (category.slug === 'oil' || category.name.toLowerCase().includes('huile')) {
         // Navigate to oil-specific form
         navigate('/category-specific');

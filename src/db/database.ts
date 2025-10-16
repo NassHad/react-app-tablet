@@ -407,6 +407,76 @@ private async ensureJeepSQLiteLoaded(): Promise<void> {
       );
     `);
 
+    // Create wipers_products table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS wipers_products (
+        id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL,
+        slug TEXT UNIQUE,
+        ref TEXT,
+        description TEXT,
+        brand_id INTEGER,
+        model_id INTEGER,
+        brand_slug TEXT,
+        model_slug TEXT,
+        wipers_positions TEXT,
+        construction_year_start TEXT,
+        construction_year_end TEXT,
+        direction TEXT,
+        wiper_brand TEXT,
+        source TEXT,
+        category TEXT,
+        is_active BOOLEAN,
+        created_at TEXT,
+        updated_at TEXT,
+        FOREIGN KEY (brand_id) REFERENCES brands(id),
+        FOREIGN KEY (model_id) REFERENCES models(id)
+      );
+    `);
+
+    // Create wipers_positions table  
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS wipers_positions (
+        id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL,
+        slug TEXT UNIQUE,
+        description TEXT,
+        category TEXT,
+        ref TEXT,
+        sort_order INTEGER,
+        is_active BOOLEAN,
+        created_at TEXT,
+        updated_at TEXT
+      );
+    `);
+
+    // Create wipers_brands table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS wipers_brands (
+        id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL,
+        slug TEXT UNIQUE,
+        is_active BOOLEAN DEFAULT 1,
+        created_at TEXT,
+        updated_at TEXT
+      );
+    `);
+
+    // Create wipers_models table
+    await this.db.execute(`
+      CREATE TABLE IF NOT EXISTS wipers_models (
+        id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL,
+        slug TEXT UNIQUE,
+        brand_id INTEGER,
+        brand_slug TEXT,
+        is_active BOOLEAN DEFAULT 1,
+        created_at TEXT,
+        updated_at TEXT,
+        FOREIGN KEY (brand_id) REFERENCES wipers_brands(id)
+      );
+    `);
+
     // Create db_version table for sync tracking
     await this.db.execute(`
       CREATE TABLE IF NOT EXISTS db_version (

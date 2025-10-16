@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useWipersData } from '../../hooks/useWipersData';
-import { useClickAnimation } from '../../hooks/useClickAnimation';
 import { WipersPositionSelectorNew } from '../../components/WipersPositionSelectorNew';
+import { WipersProductDisplay } from '../../components/WipersProductDisplay';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import HelpModal from '../../components/HelpModal';
 import type { Vehicle, ProductCategory } from '../../types';
 import type { WipersProduct } from '../../types/wipers';
 
-// Import wipers position icons - using existing icons and fallbacks
-import begIcon from '../../assets/img/categories/beg.png';
-import carIcon from '../../assets/img/car.png';
-
-interface WipersQuestionsProps {
+interface WipersQuestionsNewProps {
   vehicle: Vehicle;
   category: ProductCategory;
   onAnswersComplete: (answers: Record<string, string | string[]>) => void;
 }
 
-const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestionsProps) => {
+const WipersQuestionsNew = ({ vehicle, category, onAnswersComplete }: WipersQuestionsNewProps) => {
   const navigate = useNavigate();
   const [showHelp, setShowHelp] = useState(false);
   const [selectedPosition, setSelectedPosition] = useState<string | null>(null);
@@ -32,45 +28,20 @@ const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestio
     clearError
   } = useWipersData();
 
-  // Get the model slug from vehicle data
-  const getModelSlugFromVehicle = (vehicle: Vehicle): string => {
-    // Convert model name to slug format
-    const modelSlug = vehicle.model.toLowerCase().replace(/\s+/g, '-');
-    console.log(`🔍 WipersQuestions Debug:`, { 
-      vehicle: `${vehicle.brand} ${vehicle.model}`, 
-      modelSlug,
-      originalModel: vehicle.model 
-    });
-    return modelSlug;
-  };
-
-  // Animation hook for position selection
-  const positionAnimation = useClickAnimation({
-    onComplete: () => {
-      if (selectedPosition) {
-        handlePositionSelect(selectedPosition);
-      }
-    }
-  });
-
   const handlePositionSelect = async (position: string) => {
     console.log('🎯 Wiper position selected:', position);
     setSelectedPosition(position);
     
     try {
-      // Get model slug from vehicle data
-      const modelSlug = getModelSlugFromVehicle(vehicle);
-      console.log('🔍 Current data mode:', localStorage.getItem('dataMode'));
-      console.log('🔍 About to fetch products for:', { modelSlug, position });
-      
-      // Fetch products using the new position-based filtering API
-      await fetchProductsByModelAndPosition(modelSlug, position);
+      // Use the new position-based filtering endpoint
+      // For now, we'll use a mock modelId since we don't have the actual modelId from the vehicle
+      const modelId = '1'; // This should come from the vehicle data
+      await fetchProductsByModelAndPosition(modelId, position);
       
       // Complete the answers
       const answers = {
         position: position,
-        positionName: getPositionDisplayName(position),
-        modelSlug: modelSlug
+        positionName: getPositionDisplayName(position)
       };
       
       onAnswersComplete(answers);
@@ -102,14 +73,6 @@ const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestio
   const handleBackClick = () => {
     navigate(-1);
   };
-
-  if (loadingProducts) {
-    return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <LoadingSpinner />
-      </div>
-    );
-  }
 
   if (error) {
     return (
@@ -191,7 +154,7 @@ const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestio
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <p className="text-sm text-gray-600">
-                  <span className="font-medium">Position :</span> {selectedPosition}
+                  <span className="font-medium">Position :</span> {getPositionDisplayName(selectedPosition)}
                 </p>
                 <p className="text-sm text-gray-600">
                   <span className="font-medium">Véhicule :</span> {vehicle.brand} {vehicle.model}
@@ -199,21 +162,49 @@ const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestio
               </div>
               <div>
                 <p className="text-sm text-gray-600">
-                  <span className="font-medium">Année :</span> {vehicle.year}
-                </p>
-                <p className="text-sm text-gray-600">
-                  <span className="font-medium">Type :</span> {vehicle.type}
+                  <span className="font-medium">Catégorie :</span> {category.name}
                 </p>
               </div>
             </div>
           </div>
         )}
 
-        {/* Loading State for Products */}
+        {/* Loading State */}
         {loadingProducts && (
           <div className="mt-8 flex items-center justify-center">
             <LoadingSpinner />
             <span className="ml-2 text-gray-600">Chargement des produits...</span>
+          </div>
+        )}
+
+        {/* Products Display */}
+        {products.length > 0 && (
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Produits disponibles pour {getPositionDisplayName(selectedPosition || '')}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {products.map((product) => (
+                <div key={product.id} className="bg-white rounded-lg shadow-sm border p-6">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    {product.name}
+                  </h4>
+                  <div className="space-y-2 text-sm text-gray-600">
+                    <p><span className="font-medium">Marque :</span> {product.brand.name}</p>
+                    <p><span className="font-medium">Modèle :</span> {product.model.name}</p>
+                    {product.selectedPosition && (
+                      <>
+                        <p><span className="font-medium">Position :</span> {product.selectedPosition.position}</p>
+                        <p><span className="font-medium">Référence :</span> {product.selectedPosition.ref}</p>
+                        <p><span className="font-medium">Description :</span> {product.selectedPosition.description}</p>
+                      </>
+                    )}
+                    <p><span className="font-medium">Années :</span> {product.constructionYearStart} - {product.constructionYearEnd}</p>
+                    <p><span className="font-medium">Direction :</span> {product.direction}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>
@@ -229,4 +220,4 @@ const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestio
   );
 };
 
-export default WipersQuestions;
+export default WipersQuestionsNew;

@@ -64,6 +64,8 @@ export const useCategoryNavigation = ({
       // If vehicle is selected, navigate to the next step based on the category
       if (category.slug === 'batteries') {
         targetPath = '/products';
+      } else if (category.slug === 'wipers' || category.slug === 'beg' || category.name.toLowerCase().includes('essuie-glace') || category.name.toLowerCase().includes('balais')) {
+        targetPath = '/questions';
       } else {
         targetPath = '/questions';
       }

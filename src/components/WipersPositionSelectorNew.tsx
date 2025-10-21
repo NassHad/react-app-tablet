@@ -11,22 +11,22 @@ interface WipersPositionSelectorNewProps {
 // Simplified position options as mentioned by backend team
 const POSITION_OPTIONS = [
   {
-    id: 'conducteur',
-    name: 'Conducteur',
+    id: 'driver',
+    name: 'Driver',
     displayName: 'Côté Conducteur',
     description: 'Essuie-glace côté conducteur',
     icon: begIcon
   },
   {
-    id: 'passager',
-    name: 'Passager',
+    id: 'passenger',
+    name: 'Passenger',
     displayName: 'Côté Passager',
     description: 'Essuie-glace côté passager',
     icon: begIcon
   },
   {
-    id: 'arriere',
-    name: 'Arrière',
+    id: 'back',
+    name: 'Back',
     displayName: 'Arrière',
     description: 'Essuie-glace arrière',
     icon: begIcon
@@ -128,9 +128,6 @@ export const WipersPositionSelectorNew: React.FC<WipersPositionSelectorNewProps>
                 {position.name}
               </div>
             </div>
-
-            {/* Hover effect overlay */}
-            <div className="absolute inset-0 rounded-lg bg-blue-500 bg-opacity-0 hover:bg-opacity-5 transition-all duration-200 pointer-events-none" />
           </div>
         );
       })}

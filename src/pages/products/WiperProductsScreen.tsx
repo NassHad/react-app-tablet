@@ -1,11 +1,31 @@
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import type { UserSelection } from '../../types';
 import { useWipersData } from '../../hooks/useWipersData';
 import type { WipersProduct } from '../../types/wipers';
 
 interface WiperProductsScreenProps {
   userSelection: UserSelection;
+}
+
+interface WiperData {
+  id: number;
+  ref: string;
+  brand: string;
+  description: string;
+  category: string;
+  gtiCode: string;
+  genCode: string;
+  isActive: boolean;
+  brandImg?: { 
+    url: string;
+    formats?: {
+      thumbnail?: { url: string };
+      small?: { url: string };
+      medium?: { url: string };
+      large?: { url: string };
+    };
+  };
 }
 
 const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
@@ -15,21 +35,188 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
   const {
     products,
     loadingProducts,
-    error
+    error,
+    fetchProductsBySlugsAndPosition
   } = useWipersData();
 
+  // State for wiper data (stores arrays of wiper data per reference)
+  const [wiperData, setWiperData] = useState<Record<string, WiperData[]>>({});
+  const [loadingWiperData, setLoadingWiperData] = useState(false);
+
+  console.log('🔍 products:', products);
+  console.log('🔍 userSelection:', userSelection);
+  console.log('🔍 loadingProducts:', loadingProducts);
+  
   // Get the selected position from userSelection answers
   const selectedPosition = userSelection?.answers?.position;
   const positionName = userSelection?.answers?.positionName;
+
+  // Function to fetch wiper data for a specific reference
+  const fetchWiperDataByRef = async (ref: string): Promise<WiperData[]> => {
+    try {
+      console.log(`🔍 Searching for wiper data with ref: "${ref}"`);
+      
+       const searchStrategies = [
+         { type: 'exact', query: `filters[ref][$eq]=${encodeURIComponent(ref)}&populate=brandImg` },
+         { type: 'contains', query: `filters[ref][$contains]=${encodeURIComponent(ref)}&populate=brandImg` },
+       ];
+
+      // Try each search strategy
+      for (const strategy of searchStrategies) {
+        const response = await fetch(`http://localhost:1338/api/wipers-data?${strategy.query}`);
+        const result = await response.json();
+
+        if (result.data?.length > 0) {
+          console.log(`✅ Found ${result.data.length} ${strategy.type} matches for "${ref}"`);
+          return result.data;
+        }
+      }
+
+       // Try clean ref as last resort
+       const cleanRef = ref.replace(/[^a-zA-Z0-9]/g, '');
+       if (cleanRef !== ref) {
+         console.log(`🔍 Trying clean ref match for "${cleanRef}"`);
+         const response = await fetch(`http://localhost:1338/api/wipers-data?filters[ref][$contains]=${encodeURIComponent(cleanRef)}&populate=brandImg`);
+         const result = await response.json();
+        
+        if (result.data?.length > 0) {
+          console.log(`✅ Found ${result.data.length} clean ref matches for "${cleanRef}"`);
+          return result.data;
+        }
+      }
+      
+      console.log(`❌ No wiper data found for reference: "${ref}"`);
+      return [];
+
+    } catch (error) {
+      console.error(`Error fetching wiper data for ${ref}:`, error);
+      return [];
+    }
+  };
+
+  // Function to get all wiper data to debug what's in the database
+  const getAllWiperData = async () => {
+    try {
+      const response = await fetch('http://localhost:1338/api/wipers-data?populate=brandImg');
+      const result = await response.json();
+      console.log('🔍 All wiper data in database:', result.data);
+      return result.data || [];
+    } catch (error) {
+      console.error('Error fetching all wiper data:', error);
+      return [];
+    }
+  };
+
+  // Function to fetch wiper data for all wiper references in products
+  const fetchAllWiperData = useCallback(async () => {
+    if (products.length === 0) return;
+    
+    setLoadingWiperData(true);
+    const wiperDataMap: Record<string, WiperData[]> = {};
+    
+    // First, let's see what's in the database
+    console.log('🔍 Getting all wiper data to debug...');
+    await getAllWiperData();
+    
+    // Collect all unique wiper references from products
+    const wiperRefs = new Set<string>();
+    products.forEach(product => {
+      console.log(`🔍 Processing wiper product: ${product.name}`);
+      
+      // Extract refs from wipersPositions array
+      if (product.wipersPositions && Array.isArray(product.wipersPositions)) {
+        product.wipersPositions.forEach((pos: any) => {
+          // Match position by slug
+          const selectedPos = Array.isArray(selectedPosition) ? selectedPosition[0] : selectedPosition;
+          if (pos.slug === selectedPos || pos.name.toLowerCase() === selectedPos?.toLowerCase()) {
+            wiperRefs.add(pos.ref);
+            console.log(`   Adding wiper ref: ${pos.ref} for position ${pos.position} (${pos.category})`);
+          }
+        });
+      }
+      
+      // Fallback: use product ref if no wipersPositions
+      if (product.ref && product.ref !== 'Multiple') {
+        wiperRefs.add(product.ref);
+        console.log(`   Adding product ref as fallback: ${product.ref}`);
+      }
+    });
+    
+    console.log('🔍 Fetching wiper data for refs:', Array.from(wiperRefs));
+    
+    // Fetch data for each wiper reference
+    const promises = Array.from(wiperRefs).map(async (ref) => {
+      console.log(`🔍 Fetching data for wiper ref: ${ref}`);
+      const dataArray = await fetchWiperDataByRef(ref);
+      if (dataArray && dataArray.length > 0) {
+        console.log(`✅ Found ${dataArray.length} wiper data entries for ${ref}:`, dataArray);
+        wiperDataMap[ref] = dataArray;
+      } else {
+        console.log(`❌ No data found for ${ref}`);
+        wiperDataMap[ref] = [];
+      }
+    });
+    
+    await Promise.all(promises);
+    
+    console.log('🔍 Wiper data fetched:', wiperDataMap);
+    setWiperData(wiperDataMap);
+    setLoadingWiperData(false);
+  }, [products, selectedPosition]);
+
+  // Helper function to get wiper data for a specific reference (returns first item)
+  const getWiperDataForRef = (ref: string) => {
+    const dataArray = wiperData[ref];
+    if (!dataArray || dataArray.length === 0) {
+      console.log(`⚠️  No wiper data found for ref: ${ref}`);
+      return null;
+    }
+    return dataArray[0];
+  };
+
+  // Helper function to get all wiper data for a specific reference
+  const getAllWiperDataForRef = (ref: string) => {
+    const dataArray = wiperData[ref];
+    if (!dataArray || dataArray.length === 0) {
+      console.log(`⚠️  No wiper data found for ref: ${ref}`);
+      return [];
+    }
+    return dataArray;
+  };
+  
+  // Fetch products when component mounts if we have the required data
+  useEffect(() => {
+    const fetchProducts = async () => {
+      if (userSelection?.answers && userSelection?.vehicle && !products.length) {
+        const { brandSlug, modelSlug, position } = userSelection.answers;
+        const brandSlugStr = Array.isArray(brandSlug) ? brandSlug[0] : brandSlug;
+        const modelSlugStr = Array.isArray(modelSlug) ? modelSlug[0] : modelSlug;
+        const positionSlug = Array.isArray(position) ? position[0] : position;
+        console.log('🔄 Fetching products in WiperProductsScreen:', { brandSlugStr, modelSlugStr, positionSlug });
+        await fetchProductsBySlugsAndPosition(brandSlugStr, modelSlugStr, positionSlug);
+      }
+    };
+    
+    fetchProducts();
+  }, [userSelection, products.length, fetchProductsBySlugsAndPosition]);
+
+  // Fetch wiper data when products change
+  useEffect(() => {
+    if (products.length > 0) {
+      fetchAllWiperData();
+    }
+  }, [fetchAllWiperData]);
 
   const handleProductDetails = (productId: string) => {
     navigate(`/product-details/${productId}`);
   };
 
-  if (loadingProducts) {
+  if (loadingProducts || loadingWiperData) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="text-2xl text-gray-600">Chargement des produits...</div>
+        <div className="text-2xl text-gray-600">
+          {loadingProducts ? 'Chargement des produits...' : 'Chargement des détails des produits...'}
+        </div>
       </div>
     );
   }
@@ -63,73 +250,108 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
                 <p className="text-xl text-gray-600">Aucun produit trouvé pour cette position.</p>
               </div>
             ) : (
-              products.map((product: WipersProduct) => (
-                <div
-                  key={product.id}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 mb-4 p-6"
-                >
-                  {/* Product Header */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{product.name}</h3>
-                      <p className="text-lg text-gray-600">{product.brand.name} - {product.model.name}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-lg font-semibold text-blue-600">{product.ref}</p>
-                      <p className="text-sm text-gray-500">{product.wiperBrand}</p>
-                    </div>
-                  </div>
-
-                  {/* Product Details */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <p className="text-sm text-gray-600">
-                        <span className="font-medium">Description:</span> {product.description}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-600">
-                        <span className="font-medium">Années:</span> {product.constructionYearStart} - {product.constructionYearEnd}
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        <span className="font-medium">Direction:</span> {product.direction}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Selected Position Info */}
-                  {product.selectedPosition && (
-                    <div className="bg-blue-50 rounded-lg p-4 mb-4">
-                      <h4 className="text-lg font-semibold text-blue-900 mb-2">
-                        Position: {product.selectedPosition.position}
-                      </h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        <p className="text-sm text-blue-800">
-                          <span className="font-medium">Référence:</span> {product.selectedPosition.ref}
-                        </p>
-                        <p className="text-sm text-blue-800">
-                          <span className="font-medium">Catégorie:</span> {product.selectedPosition.category}
-                        </p>
+              products.map((product: WipersProduct) => {
+                // Find the matching wiper position from wipersPositions array
+                let positionRef = null;
+                let positionData = null;
+                
+                if (product.wipersPositions && Array.isArray(product.wipersPositions)) {
+                  // Find the position that matches the selected position
+                  const matchingPosition = product.wipersPositions.find((pos: any) => {
+                    const selectedPos = Array.isArray(selectedPosition) ? selectedPosition[0] : selectedPosition;
+                    return pos.slug === selectedPos || pos.name.toLowerCase() === selectedPos?.toLowerCase();
+                  });
+                  console.log('🔍 matchingPosition:', matchingPosition);
+                  positionRef = matchingPosition?.ref;
+                  positionData = matchingPosition;
+                }
+                
+                // Fallback to product ref if no position found
+                if (!positionRef && product.ref) {
+                  positionRef = product.ref;
+                }
+                
+                console.log(`🔍 Product ${product.id}:`, {
+                  productName: product.name,
+                  positionRef,
+                  hasPositionData: !!positionData,
+                  wipersPositions: product.wipersPositions
+                });
+                
+                // Get all wiper data variants for this reference
+                const allWiperData = positionRef ? getAllWiperDataForRef(positionRef) : [];
+                console.log('🔍 allWiperData:', allWiperData);
+                
+                return (
+                  <div key={product.id}>
+                    {allWiperData.length > 0 ? (
+                      // Show all wiper data variants for this reference
+                      allWiperData.map((wiperDataItem, wiperIndex) => (
+                        <div
+                          key={`${product.id}-${positionRef}-${wiperDataItem.id}`}
+                          className="bg-white rounded-lg flex items-center justify-between"
+                        >
+                          {/* Wiper Product Info */}
+                          <div className="flex flex-row justify-center w-full border-b-1 border-[#E5E5E5] items-center">
+                            <div className="w-full max-w-4xl">
+                              <div className="ml-2 text-sm text-gray-700">
+                                <div className="flex flex-row items-center">
+                                    {/* 1. Brand Image */}
+                                    <div className="w-32 h-16 ml-4 flex items-center justify-center">
+                                      {wiperDataItem.brandImg?.url ? (
+                                        <img 
+                                          src={`http://localhost:1338${wiperDataItem.brandImg.url}`}
+                                          alt={`${wiperDataItem.brand} Logo`}
+                                          className="w-32 h-16 object-contain"
+                                          onError={(e) => {
+                                            e.currentTarget.src = '/assets/img/placeholder-brand.svg';
+                                          }}
+                                        />
+                                      ) : (
+                                        <div className="w-32 h-16 flex items-center justify-center text-gray-400 text-xs">
+                                          {wiperDataItem.brand}
+                                        </div>
+                                      )}
+                                    </div>
+                                  
+                                  {/* 2. Description */}
+                                  <div className="text-xl text-black flex-1 ml-4">
+                                    {wiperDataItem.description}
+                                  </div>
+                                  
+                                  {/* 3. Reference */}
+                                  <div className="w-24 h-24 ml-4 flex items-center justify-center text-blue-600 text-sm font-semibold">
+                                    {wiperDataItem.ref}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      // Fallback: show product without wiper data
+                      <div
+                        key={`${product.id}-${positionRef}-no-data`}
+                        className="bg-white rounded-lg flex items-center justify-between"
+                      >
+                        <div className="flex flex-row justify-center w-full border-b-1 border-[#E5E5E5] items-center py-4">
+                          <div className="w-full max-w-4xl">
+                            <div className="ml-2 text-sm text-gray-700">
+                              <div className="flex flex-row items-center p-3">
+                                <div className="font-semibold text-lg">{positionRef}</div>
+                                <div className="text-2xl text-orange-600 italic flex-1 ml-4">
+                                  Données d'essuie-glace non disponibles dans la base de données
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      {product.selectedPosition.description && (
-                        <p className="text-sm text-blue-800 mt-2">
-                          <span className="font-medium">Description:</span> {product.selectedPosition.description}
-                        </p>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Action Button */}
-                  <div className="flex justify-end">
-                    <button
-                      onClick={() => handleProductDetails(product.id)}
-                      className="bg-blue-wiper-category text-white px-6 py-2 rounded-lg hover:opacity-80 transition-colors text-lg font-semibold"
-                    >
-                      Plus d'infos
-                    </button>
+                    )}
                   </div>
-                </div>
-              ))
+                );
+              })
             )}
           </div>
         </div>
@@ -143,4 +365,4 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
   );
 };
 
-export default WiperProductsScreen; 
+export default WiperProductsScreen;

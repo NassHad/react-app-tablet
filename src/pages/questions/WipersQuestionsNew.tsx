@@ -24,7 +24,7 @@ const WipersQuestionsNew = ({ vehicle, category, onAnswersComplete }: WipersQues
   const {
     loadingProducts,
     error,
-    fetchProductsByModelAndPosition,
+    fetchProductsBySlugsAndPosition,
     clearError
   } = useWipersData();
 
@@ -33,15 +33,20 @@ const WipersQuestionsNew = ({ vehicle, category, onAnswersComplete }: WipersQues
     setSelectedPosition(position);
     
     try {
-      // Use the new position-based filtering endpoint
-      // For now, we'll use a mock modelId since we don't have the actual modelId from the vehicle
-      const modelId = '1'; // This should come from the vehicle data
-      await fetchProductsByModelAndPosition(modelId, position);
+      // Get slugs from vehicle data
+      const modelSlug = vehicle.modelSlug || vehicle.model.toLowerCase().replace(/\s+/g, '-');
+      const brandSlug = vehicle.brandSlug || vehicle.brand.toLowerCase().replace(/\s+/g, '-');
+      console.log('🔍 About to fetch products for:', { brandSlug, modelSlug, position });
+      
+      // Fetch products using the slugs and position API
+      await fetchProductsBySlugsAndPosition(brandSlug, modelSlug, position);
       
       // Complete the answers
       const answers = {
         position: position,
-        positionName: getPositionDisplayName(position)
+        positionName: getPositionDisplayName(position),
+        modelSlug: modelSlug,
+        brandSlug: brandSlug
       };
       
       onAnswersComplete(answers);
@@ -55,11 +60,11 @@ const WipersQuestionsNew = ({ vehicle, category, onAnswersComplete }: WipersQues
 
   const getPositionDisplayName = (position: string): string => {
     switch (position) {
-      case 'conducteur':
+      case 'driver':
         return 'Côté Conducteur';
-      case 'passager':
+      case 'passenger':
         return 'Côté Passager';
-      case 'arriere':
+      case 'back':
         return 'Arrière';
       default:
         return position;

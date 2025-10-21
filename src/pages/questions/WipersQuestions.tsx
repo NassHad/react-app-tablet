@@ -28,7 +28,7 @@ const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestio
   const {
     loadingProducts,
     error,
-    fetchProductsByModelAndPosition,
+    fetchProductsBySlugsAndPosition,
     clearError
   } = useWipersData();
 
@@ -60,17 +60,19 @@ const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestio
     try {
       // Get model slug from vehicle data
       const modelSlug = getModelSlugFromVehicle(vehicle);
+      const brandSlug = vehicle.brandSlug || vehicle.brand.toLowerCase().replace(/\s+/g, '-');
       console.log('🔍 Current data mode:', localStorage.getItem('dataMode'));
-      console.log('🔍 About to fetch products for:', { modelSlug, position });
+      console.log('🔍 About to fetch products for:', { brandSlug, modelSlug, position });
       
-      // Fetch products using the new position-based filtering API
-      await fetchProductsByModelAndPosition(modelSlug, position);
+      // Fetch products using the slugs and position API
+      await fetchProductsBySlugsAndPosition(brandSlug, modelSlug, position);
       
       // Complete the answers
       const answers = {
         position: position,
         positionName: getPositionDisplayName(position),
-        modelSlug: modelSlug
+        modelSlug: modelSlug,
+        brandSlug: brandSlug
       };
       
       onAnswersComplete(answers);
@@ -84,11 +86,11 @@ const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestio
 
   const getPositionDisplayName = (position: string): string => {
     switch (position) {
-      case 'conducteur':
+      case 'driver':
         return 'Côté Conducteur';
-      case 'passager':
+      case 'passenger':
         return 'Côté Passager';
-      case 'arriere':
+      case 'back':
         return 'Arrière';
       default:
         return position;

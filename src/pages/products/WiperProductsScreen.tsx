@@ -17,6 +17,16 @@ interface WiperData {
   gtiCode: string;
   genCode: string;
   isActive: boolean;
+  size: string;
+  img?: {
+    url: string;
+    formats?: {
+      thumbnail?: { url: string };
+      small?: { url: string };
+      medium?: { url: string };
+      large?: { url: string };
+    };
+  };
   brandImg?: { 
     url: string;
     formats?: {
@@ -57,8 +67,8 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
       console.log(`🔍 Searching for wiper data with ref: "${ref}"`);
       
        const searchStrategies = [
-         { type: 'exact', query: `filters[ref][$eq]=${encodeURIComponent(ref)}&populate=brandImg` },
-         { type: 'contains', query: `filters[ref][$contains]=${encodeURIComponent(ref)}&populate=brandImg` },
+         { type: 'exact', query: `filters[ref][$eq]=${encodeURIComponent(ref)}&populate=brandImg,img` },
+         { type: 'contains', query: `filters[ref][$contains]=${encodeURIComponent(ref)}&populate=brandImg,img` },
        ];
 
       // Try each search strategy
@@ -76,7 +86,7 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
        const cleanRef = ref.replace(/[^a-zA-Z0-9]/g, '');
        if (cleanRef !== ref) {
          console.log(`🔍 Trying clean ref match for "${cleanRef}"`);
-         const response = await fetch(`http://localhost:1338/api/wipers-data?filters[ref][$contains]=${encodeURIComponent(cleanRef)}&populate=brandImg`);
+         const response = await fetch(`http://localhost:1338/api/wipers-data?filters[ref][$contains]=${encodeURIComponent(cleanRef)}&populate=brandImg,img`);
          const result = await response.json();
         
         if (result.data?.length > 0) {
@@ -97,7 +107,7 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
   // Function to get all wiper data to debug what's in the database
   const getAllWiperData = async () => {
     try {
-      const response = await fetch('http://localhost:1338/api/wipers-data?populate=brandImg');
+      const response = await fetch('http://localhost:1338/api/wipers-data?populate=brandImg,img');
       const result = await response.json();
       console.log('🔍 All wiper data in database:', result.data);
       return result.data || [];
@@ -234,8 +244,11 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="text-center w-full max-w-6xl">
-        <h1 className="text-5xl font-bold text-gray-category mt-12 mb-8 leading-15">
+      <div className="w-1/4">
+        <img src="/src/assets/img/categories/wiper/beg_classique.png" alt="Wiper" className="max-w-3xl h-auto object-contain m-[-5rem]" />
+      </div>
+      <div className="text-center w-1/2 flex flex-col">
+        <h1 className="text-5xl font-bold text-gray-category mb-8 leading-15">
           Balais d'essuie-glace pour {positionName || 'position sélectionnée'}
         </h1>
         <p className="text-2xl text-gray-600 mb-12">
@@ -316,12 +329,29 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
                                   
                                   {/* 2. Description */}
                                   <div className="text-xl text-black flex-1 ml-4">
-                                    {wiperDataItem.description}
+                                    {wiperDataItem.ref}
                                   </div>
                                   
                                   {/* 3. Reference */}
-                                  <div className="w-24 h-24 ml-4 flex items-center justify-center text-blue-600 text-sm font-semibold">
-                                    {wiperDataItem.ref}
+                                  <div className="w-24 h-24 ml-4 flex items-center justify-center text-xl text-black">
+                                    {wiperDataItem.size}
+                                  </div>
+
+                                  <div className="w-24 h-24 ml-4 flex items-center justify-center text-xl text-black">
+                                  {wiperDataItem.img?.url ? (
+                                        <img 
+                                          src={`http://localhost:1338${wiperDataItem.img.url}`}
+                                          alt={`Image de l'essuie-glace ${wiperDataItem.ref}`}
+                                          className="w-24 h-24 object-contain"
+                                          onError={(e) => {
+                                            e.currentTarget.src = '/assets/img/placeholder-brand.svg';
+                                          }}
+                                        />
+                                      ) : (
+                                        <div className="w-24 h-24 flex items-center justify-center text-gray-400 text-xs">
+                                          Aucune image disponible
+                                        </div>
+                                      )}
                                   </div>
                                 </div>
                               </div>
@@ -360,6 +390,9 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
         <div className="mt-8 text-gray-500 text-lg leading-2">
           ↑ Faites glisser pour voir plus de produits ↓
         </div>
+      </div>
+      <div className="w-1/4">
+        <img src="/src/assets/img/categories/wiper/beg_plat.png" alt="Wiper" className="max-w-3xl h-auto object-contain ml-[-15rem]" />
       </div>
     </div>
   );

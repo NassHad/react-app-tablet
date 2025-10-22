@@ -305,6 +305,11 @@ export const useWipersData = (): UseWipersDataReturn => {
       } else {
         console.log(`🌐 Fetching wipers products from API for: ${brandSlug} ${modelSlug} ${positionSlug}`);
         const response = await wipersApiService.getProductsBySlugsAndPosition(brandSlug, modelSlug, positionSlug);
+        console.log('🔍 API Response:', response);
+        console.log('🔍 API Response data:', response.data);
+        console.log('🔍 API Response success:', response.success);
+        console.log('🔍 API Response message:', response.message);
+        console.log('🔍 API Response data length:', response.data?.length);
         if (response.success && response.data) {
           setProducts(response.data);
         } else {

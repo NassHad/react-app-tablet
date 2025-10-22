@@ -150,6 +150,8 @@ class WipersApiService {
     brandSlug: string, 
     modelSlug: string
   ): Promise<WipersSelectionResponse<WipersProduct[]>> {
+    console.log('🔍 Fetching wipers products by brand and model:', { brandSlug, modelSlug });
+    console.log('🔍 API URL:', `/wipers-selection/products?brandSlug=${brandSlug}&modelSlug=${modelSlug}`);
     return this.makeRequest<WipersProduct[]>(
       `/wipers-selection/products?brandSlug=${brandSlug}&modelSlug=${modelSlug}`
     );
@@ -163,8 +165,10 @@ class WipersApiService {
     modelSlug: string,
     positionSlug: string
   ): Promise<WipersSelectionResponse<WipersProduct[]>> {
+    console.log('🔍 Fetching wipers products by slugs and position:', { brandSlug, modelSlug, positionSlug });
+    console.log('🔍 API URL:', `/wipers-selection/products-by-slugs?brandSlug=${brandSlug}&modelSlug=${modelSlug}&positionSlug=${positionSlug}`);
     return this.makeRequest<WipersProduct[]>(
-      `/wipers-selection/products?brandSlug=${brandSlug}&modelSlug=${modelSlug}&positionSlug=${positionSlug}`
+      `/wipers-selection/products-by-slugs?brandSlug=${brandSlug}&modelSlug=${modelSlug}&positionSlug=${positionSlug}`
     );
   }
 
@@ -175,6 +179,8 @@ class WipersApiService {
     modelSlug: string,
     position: string
   ): Promise<WipersSelectionResponse<WipersProduct[]>> {
+    console.log('🔍 Fetching wipers products by model and position:', { modelSlug, position });
+    console.log('🔍 API URL:', `/wipers-selection/products/${modelSlug}/${position}`);
     return this.makeRequest<WipersProduct[]>(
       `/wipers-selection/products/${modelSlug}/${position}`
     );

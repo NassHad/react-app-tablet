@@ -16,7 +16,7 @@ const HelpPageRouter = ({ category, onClose }: HelpPageRouterProps) => {
   console.log('category', category);
   const renderHelpPage = () => {
     switch (category.slug) {
-      case 'battery':
+      case 'batteries':
         return <BatteryHelpPage category={category} onClose={onClose} />;
       case 'oil':
         return <OilHelpPage category={category} onClose={onClose} />;
@@ -24,7 +24,7 @@ const HelpPageRouter = ({ category, onClose }: HelpPageRouterProps) => {
         return <BulbHelpPage category={category} onClose={onClose} />;
       case 'filtration':
         return <FiltrationHelpPage category={category} onClose={onClose} />;
-      case 'beg':
+      case 'wipers':
         return <WiperHelpPage category={category} onClose={onClose} />;
       default:
         return (

@@ -11,9 +11,14 @@
     "android": "npm run build && npx cap sync && npx cap open android",
     "android:run": "npx cap run android",
     "android:build": "npm run build && npx cap sync",
+    "android:offline": "node scripts/buildOffline.js",
     "sync": "npx cap sync",
     "clean": "rm -rf dist node_modules/.vite",
-    "test:strapi": "node scripts/test-strapi.js"
+    "test:strapi": "node scripts/test-strapi.js",
+    "generate:seed": "node scripts/generateSeed.js",
+    "build:apk": "node scripts/buildAPK.js",
+    "build:apk:auto": "node scripts/buildAPKWithSetup.js",
+    "switch:mode": "node scripts/switchMode.cjs"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "^7.0.1",
@@ -26,6 +31,7 @@
     "axios": "^1.11.0",
     "framer-motion": "^12.23.6",
     "jeep-sqlite": "^2.8.0",
+    "pdf-parse": "^1.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3"
@@ -42,6 +48,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "postcss": "^8.5.6",
+    "sqlite3": "^5.1.7",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.3"

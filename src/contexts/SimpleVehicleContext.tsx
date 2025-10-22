@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, type ReactNode } from 'react';
 
 // Define types locally to avoid import issues
 export interface SimpleVehicleContextData {
@@ -10,6 +10,9 @@ export interface SimpleVehicleContextData {
   position?: string;
   viscosity?: string;
   selectedCategory: any | null;
+  selectedBatteryModel?: any;
+  batteryModelId?: number;
+  batteryModelSlug?: string;
 }
 
 interface SimpleVehicleContextType {

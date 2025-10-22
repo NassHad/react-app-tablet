@@ -17,11 +17,13 @@ class SyncService {
    */
   async fetchAllData(): Promise<SyncData> {
     try {
-      const [vehicles, categories, products, compatibilities] = await Promise.all([
+      const [vehicles, categories, products, compatibilities, wipersProducts, wipersPositions] = await Promise.all([
         this.fetchVehicles(),
         this.fetchCategories(),
         this.fetchProducts(),
-        this.fetchCompatibilities()
+        this.fetchCompatibilities(),
+        this.fetchWipersProducts(),
+        this.fetchWipersPositions()
       ]);
 
       return {
@@ -29,6 +31,8 @@ class SyncService {
         categories,
         products,
         compatibilities,
+        wipersProducts,
+        wipersPositions,
         lastSync: new Date().toISOString()
       };
     } catch (error) {
@@ -132,6 +136,75 @@ class SyncService {
       id: item.id,
       vehicleId: item.attributes.vehicle_id,
       productId: item.attributes.product_id
+    }));
+  }
+
+  /**
+   * Récupère les produits wipers depuis Strapi
+   */
+  private async fetchWipersProducts() {
+    const response = await fetch(`${this.config.baseUrl}/api/wipers-products?populate=*`, {
+      headers: {
+        'Authorization': `Bearer ${this.config.apiToken}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data.map((item: any) => ({
+      id: item.id,
+      name: item.attributes.name,
+      slug: item.attributes.slug,
+      ref: item.attributes.ref,
+      description: item.attributes.description,
+      brand_id: item.attributes.brand?.data?.id,
+      model_id: item.attributes.model?.data?.id,
+      brand_slug: item.attributes.brand?.data?.attributes?.slug,
+      model_slug: item.attributes.model?.data?.attributes?.slug,
+      wipers_positions: JSON.stringify(item.attributes.wipersPositions),
+      construction_year_start: item.attributes.constructionYearStart,
+      construction_year_end: item.attributes.constructionYearEnd,
+      direction: item.attributes.direction,
+      wiper_brand: item.attributes.wiperBrand,
+      source: item.attributes.source,
+      category: item.attributes.category,
+      is_active: item.attributes.isActive,
+      created_at: item.attributes.createdAt,
+      updated_at: item.attributes.updatedAt
+    }));
+  }
+
+  /**
+   * Récupère les positions wipers depuis Strapi
+   */
+  private async fetchWipersPositions() {
+    const response = await fetch(`${this.config.baseUrl}/api/wipers-positions`, {
+      headers: {
+        'Authorization': `Bearer ${this.config.apiToken}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data.map((item: any) => ({
+      id: item.id,
+      name: item.attributes.name,
+      slug: item.attributes.slug,
+      description: item.attributes.description,
+      category: item.attributes.category,
+      ref: item.attributes.ref,
+      sort_order: item.attributes.sortOrder,
+      is_active: item.attributes.isActive,
+      created_at: item.attributes.createdAt,
+      updated_at: item.attributes.updatedAt
     }));
   }
 

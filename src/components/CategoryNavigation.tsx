@@ -69,6 +69,19 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
     }
   };
 
+  // Function to get category-specific colors
+  const getCategoryColors = (categorySlug: string) => {
+    const colorMap: Record<string, { text: string; underline: string; hover: string }> = {
+      'wipers': { text: 'text-[#93C452]', underline: 'bg-[#93C452]', hover: 'hover:text-[#93C452]' },
+      'lights': { text: 'text-[#385383]', underline: 'bg-[#385383]', hover: 'hover:text-[#385383]' },
+      'batteries': { text: 'text-[#FD171E]', underline: 'bg-[#FD171E]', hover: 'hover:text-[#FD171E]' },
+      'filters': { text: 'text-orange-600', underline: 'bg-orange-600', hover: 'hover:text-orange-700' },
+      'oil': { text: 'text-yellow-600', underline: 'bg-yellow-600', hover: 'hover:text-yellow-700' },
+    };
+    
+    return colorMap[categorySlug] || { text: 'text-gray-600', underline: 'bg-gray-600', hover: 'hover:text-gray-700' };
+  };
+
   // Don't show category navigation on home page or vehicle type selection
   if (location.pathname === '/' || location.pathname === '/vehicle-type' || location.pathname === '/vehicle') {
     return null;
@@ -79,9 +92,9 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
   }
 
   return (
-    <div className="flex items-center justify-between ml-[-50%]">
-      {/* Left side - Previous button */}
-      <motion.button
+    <div className="flex items-center justify-center text-center w-full h-20">
+      {/* Left side - Previous button - Hidden */}
+      {/* <motion.button
         onClick={handlePreviousClick}
         className="flex items-center space-x-2 cursor-pointer hover:text-gray-700 transition-colors"
         whileHover={{ scale: 1.05 }}
@@ -101,10 +114,10 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
           />
         </svg>
         <span className="text-gray-500 font-medium">Précédent</span>
-      </motion.button>
+      </motion.button> */}
 
-      {/* Separator line */}
-      <div className="w-px h-6 bg-gray-300 mx-4"></div>
+      {/* Separator line - Hidden */}
+      {/* <div className="w-px h-6 bg-gray-300 mx-4"></div> */}
 
       {/* Center - Category navigation */}
       <div className="flex items-center space-x-8">
@@ -112,25 +125,33 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
           const isSelected = selectedCategory?.id === category.id;
           const displayName = category.name === "Balais d'essuie-glace" ? "Balai essuie-glace" : 
                              category.name === "Eclairage" ? "Éclairage" : category.name;
+          const colors = getCategoryColors(category.slug);
+          
+          // Check if category should be disabled
+          const isDisabled = category.slug === 'oil' || category.slug === 'filters' ||
+                           category.name.toLowerCase().includes('huile') ||
+                           category.name.toLowerCase().includes('filtration');
           
           return (
             <motion.button
               key={category.id}
-              onClick={() => handleCategoryClick(category)}
+              onClick={isDisabled ? undefined : () => handleCategoryClick(category)}
               className={`relative px-4 py-2 font-medium text-lg transition-colors ${
-                isSelected 
-                  ? 'text-green-600 cursor-default' 
-                  : 'text-gray-500 hover:text-gray-700 cursor-pointer'
+                isDisabled
+                  ? 'text-gray-300 cursor-not-allowed opacity-70'
+                  : isSelected 
+                    ? `${colors.text} cursor-default` 
+                    : `text-gray-500 ${colors.hover} cursor-pointer`
               }`}
-              whileHover={isSelected ? {} : { scale: 1.05 }}
-              whileTap={isSelected ? {} : { scale: 0.95 }}
+              whileHover={isDisabled || isSelected ? {} : { scale: 1.05 }}
+              whileTap={isDisabled || isSelected ? {} : { scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               {displayName}
-              {/* Green underline for selected category */}
-              {isSelected && (
+              {/* Category-specific colored underline for selected category */}
+              {isSelected && !isDisabled && (
                 <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-600"
+                  className={`absolute bottom-0 left-0 right-0 h-0.5 ${colors.underline}`}
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
@@ -141,11 +162,11 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
         })}
       </div>
 
-      {/* Separator line */}
-      <div className="w-px h-6 bg-gray-300 mx-4"></div>
+      {/* Separator line - Hidden */}
+      {/* <div className="w-px h-6 bg-gray-300 mx-4"></div> */}
 
-      {/* Right side - Next button */}
-      <motion.button
+      {/* Right side - Next button - Hidden */}
+      {/* <motion.button
         onClick={handleNextClick}
         className="flex items-center space-x-2 cursor-pointer hover:text-gray-700 transition-colors"
         whileHover={{ scale: 1.05 }}
@@ -165,7 +186,7 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
             d="M9 5l7 7-7 7"
           />
         </svg>
-      </motion.button>
+      </motion.button> */}
     </div>
   );
 };

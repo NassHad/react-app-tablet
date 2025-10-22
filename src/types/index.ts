@@ -4,7 +4,9 @@ export interface Vehicle {
   id: number;
   type: VehicleType;
   brand: string;
+  brandSlug?: string;  // Added for API compatibility
   model: string;
+  modelSlug?: string;  // Added for API compatibility
   version?: string;
   year?: number;
   dateCirculation?: string;
@@ -53,6 +55,8 @@ export interface UserSelection {
   category?: ProductCategory;
   vehicle?: Vehicle;
   answers?: Record<string, string | string[]>;
+  lightingType?: string;
+  lightData?: any; // Will be typed properly when we implement Phase 2
 }
 
 export interface SearchFilters {
@@ -69,6 +73,8 @@ export interface SyncData {
   categories: ProductCategory[];
   products: Product[];
   compatibilities: VehicleCompatibility[];
+  wipersProducts?: any[];
+  wipersPositions?: any[];
   lastSync: string;
 }
 

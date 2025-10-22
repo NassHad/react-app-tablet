@@ -1,6 +1,7 @@
-import { StrapiService } from './strapiService';
-import { shouldUseStrapi } from '../config/dataSource';
+import { shouldUseStrapi, shouldUseLocalDatabase, DATA_SOURCE_CONFIG } from '../config/dataSource';
 import type { Brand, Model, DateRange } from '../utils/vehicleData';
+
+const API_URL = DATA_SOURCE_CONFIG.strapi.apiUrl;
 
 // Import the original local data functions as fallback
 import { 
@@ -12,7 +13,6 @@ import {
 } from '../utils/vehicleData';
 
 class VehicleDataService {
-  private strapiService: StrapiService;
   private strapiDataCache: {
     brands: Brand[];
     models: Model[];
@@ -23,110 +23,12 @@ class VehicleDataService {
   private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
   constructor() {
-    this.strapiService = new StrapiService();
+    // No longer need StrapiService since we use direct fetch calls
   }
 
-  // Convert Strapi battery brands to local format
-  private convertStrapiBatteryBrandsToLocal(strapiBrands: any[]): Brand[] {
-    return strapiBrands.map((brand) => ({
-      id: brand.id,
-      name: brand.name
-    }));
-  }
 
-  // Convert Strapi battery models to local format
-  private convertStrapiBatteryModelsToLocal(strapiModels: any[]): { models: Model[], dateRanges: DateRange[] } {
-    const models: Model[] = [];
-    const dateRanges: DateRange[] = [];
-    let modelId = 1;
-    let dateRangeId = 1;
 
-    strapiModels.forEach((batteryModel) => {
-      // Create model entry
-      const model: Model = {
-        id: modelId,
-        brandId: batteryModel.batteryBrand.id,
-        name: batteryModel.name
-      };
-      models.push(model);
 
-      // Create date range entry from startDate and endDate
-      const dateRange = this.formatDateRange(batteryModel.startDate, batteryModel.endDate);
-      dateRanges.push({
-        id: dateRangeId,
-        modelId: modelId,
-        range: dateRange
-      });
-
-      modelId++;
-      dateRangeId++;
-    });
-
-    return { models, dateRanges };
-  }
-
-  private formatDateRange(startDate: string, endDate: string): string {
-    if (!startDate || !endDate) {
-      return 'Date non spécifiée';
-    }
-    
-    const start = new Date(startDate);
-    const end = new Date(endDate);
-    
-    const formatDate = (date: Date) => {
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      return `${year}-${month}`;
-    };
-    
-    return `de ${formatDate(start)} à ${formatDate(end)}`;
-  }
-
-  private convertStrapiVehiclesToLocal(strapiVehicles: any[], vehicleTypeId: number): { models: Model[], dateRanges: DateRange[] } {
-    const models: Model[] = [];
-    const dateRanges: DateRange[] = [];
-    const modelMap = new Map<string, number>();
-    let modelId = 1;
-    let dateRangeId = 1;
-
-    // Filter vehicles by vehicle type and process them
-    const filteredVehicles = strapiVehicles.filter(vehicle => 
-      vehicle.vehicle_type?.id === vehicleTypeId
-    );
-
-    filteredVehicles.forEach(vehicle => {
-      // Create model entry
-      const modelKey = `${vehicle.id_brand}-${vehicle.id_model}`;
-      if (!modelMap.has(modelKey)) {
-        modelMap.set(modelKey, modelId);
-        models.push({
-          id: modelId,
-          brandId: vehicle.id_brand,
-          name: `Model ${vehicle.id_model}` // Since we don't have model names in Strapi
-        });
-        modelId++;
-      }
-
-      const currentModelId = modelMap.get(modelKey)!;
-
-      // Create date range entry
-      const yearRange = this.formatYearToRange(vehicle.year);
-      dateRanges.push({
-        id: dateRangeId,
-        modelId: currentModelId,
-        range: yearRange
-      });
-      dateRangeId++;
-    });
-
-    return { models, dateRanges };
-  }
-
-  private formatYearToRange(year: number): string {
-    const startYear = year;
-    const endYear = year + 1;
-    return `de ${startYear}-01 à ${endYear}-12`;
-  }
 
   // Check if cache is still valid
   private isCacheValid(): boolean {
@@ -137,8 +39,27 @@ class VehicleDataService {
   // Get brands with Strapi integration and local fallback
   async getBrands(): Promise<Brand[]> {
     try {
+      // Use SQLite if configured for local database
+      if (shouldUseLocalDatabase()) {
+        console.log('🗄️ Using SQLite for brands data');
+        const { databaseService } = await import('../db/database');
+        const brands = await databaseService.getBrands();
+        if (brands && brands.length > 0) {
+          const brandsData = brands.map((brand: any) => ({
+            id: brand.id,
+            name: brand.name,
+            slug: brand.slug,
+            isActive: brand.isActive
+          }));
+          
+          console.log('✅ Brands loaded from SQLite:', brandsData.length);
+          return brandsData;
+        }
+      }
+      
+      // Use Strapi if configured
       if (shouldUseStrapi()) {
-        console.log('🔄 Fetching battery brands from Strapi...');
+        console.log('🔄 Fetching brands from Strapi...');
         
         // Check cache first
         if (this.isCacheValid() && this.strapiDataCache?.brands) {
@@ -147,41 +68,49 @@ class VehicleDataService {
         }
 
         try {
-          const strapiBrands = await this.strapiService.getBatteryBrands();
-          const brands = this.convertStrapiBatteryBrandsToLocal(strapiBrands);
-          
-          // Update cache
-          this.strapiDataCache = {
-            brands,
-            models: this.strapiDataCache?.models || [],
-            dateRanges: this.strapiDataCache?.dateRanges || [],
-            lastFetch: Date.now()
-          };
+          const response = await fetch(`${API_URL}/lights-selection/brands`);
+          if (response.ok) {
+            const data = await response.json();
+            // /lights-selection/brands returns array directly, not {data: [...]}
+            const brands = Array.isArray(data) ? data : data.data || [];
+            const mappedBrands = brands.map((brand: any) => ({
+              id: brand.id,
+              name: brand.name,
+              slug: brand.slug,
+              isActive: brand.isActive
+            }));
+            
+            // Update cache
+            this.strapiDataCache = {
+              brands: mappedBrands,
+              models: this.strapiDataCache?.models || [],
+              dateRanges: this.strapiDataCache?.dateRanges || [],
+              lastFetch: Date.now()
+            };
 
-          console.log('✅ Battery brands loaded from Strapi:', brands.length);
-          return brands;
+            console.log('✅ Brands loaded from Strapi:', mappedBrands.length);
+            return mappedBrands;
+          } else {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
         } catch (error) {
           console.error('❌ Failed to load brands from Strapi, falling back to local data:', error);
-          // Fallback to local data
-          const localBrands = getLocalBrands();
-          console.log('📦 Using local brands as fallback:', localBrands.length);
-          return localBrands;
         }
       }
     } catch (error) {
-      console.warn('⚠️ Failed to fetch battery brands from Strapi, falling back to local data:', error);
+      console.warn('⚠️ Failed to fetch brands, falling back to local data:', error);
     }
 
-    // Fallback to local data
-    console.log('🔄 Using local brands data');
+    // Fallback to local mock data
+    console.log('🔄 Using local mock brands data');
     return getLocalBrands();
   }
 
   // Get models by brand with Strapi integration and local fallback
-  async getModelsByBrand(brandId: number, vehicleTypeId?: number): Promise<Model[]> {
+  async getModelsByBrand(brandId: number, _vehicleTypeId?: number): Promise<Model[]> {
     try {
       if (shouldUseStrapi()) {
-        console.log(`🔄 Fetching battery models for brand ${brandId} from Strapi...`);
+        console.log(`🔄 Fetching models for brand ${brandId} from Strapi...`);
         
         // Check cache first
         if (this.isCacheValid() && this.strapiDataCache?.models) {
@@ -192,31 +121,15 @@ class VehicleDataService {
           }
         }
 
-        // Fetch fresh data from Strapi using battery models
-        try {
-          const strapiBatteryModels = await this.strapiService.getBatteryModelsByBrand(brandId);
-          const { models } = this.convertStrapiBatteryModelsToLocal(strapiBatteryModels);
-          
-          // Update cache
-          if (this.strapiDataCache) {
-            this.strapiDataCache.models = [
-              ...this.strapiDataCache.models.filter(m => m.brandId !== brandId),
-              ...models
-            ];
-          }
-
-          console.log('✅ Battery models loaded from Strapi:', models.length);
-          return models;
-        } catch (error) {
-          console.error('❌ Failed to load models from Strapi, falling back to local data:', error);
-          // Fallback to local data
-          const localModels = getLocalModelsByBrand(brandId);
-          console.log('📦 Using local models as fallback:', localModels.length);
-          return localModels;
-        }
+        // Get all models and filter by brandId
+        const allModels = await this.getAllModels();
+        const brandModels = allModels.filter(model => model.brandId === brandId);
+        
+        console.log('✅ Models loaded from Strapi for brand:', brandModels.length);
+        return brandModels;
       }
     } catch (error) {
-      console.warn('⚠️ Failed to fetch battery models from Strapi, falling back to local data:', error);
+      console.warn('⚠️ Failed to fetch models from Strapi, falling back to local data:', error);
     }
 
     // Fallback to local data
@@ -232,29 +145,17 @@ class VehicleDataService {
         
         // Check cache first
         if (this.isCacheValid() && this.strapiDataCache?.dateRanges) {
-          const cachedDateRanges = this.strapiDataCache.dateRanges.filter(dr => dr.modelId === modelId);
+          const cachedDateRanges = this.strapiDataCache.dateRanges.filter((dr: DateRange) => dr.modelId === modelId);
           if (cachedDateRanges.length > 0) {
             console.log('📦 Using cached date ranges from Strapi');
             return cachedDateRanges;
           }
         }
 
-        // For battery models, date ranges are created when we fetch models
-        // So we need to get all battery models and find the one matching our modelId
-        const strapiBatteryModels = await this.strapiService.getAllBatteryModels();
-        const { dateRanges } = this.convertStrapiBatteryModelsToLocal(strapiBatteryModels);
-        
-        // Update cache
-        if (this.strapiDataCache) {
-          this.strapiDataCache.dateRanges = [
-            ...this.strapiDataCache.dateRanges.filter(dr => dr.modelId !== modelId),
-            ...dateRanges.filter(dr => dr.modelId === modelId)
-          ];
-        }
-
-        const modelDateRanges = dateRanges.filter(dr => dr.modelId === modelId);
-        console.log('✅ Date ranges loaded from Strapi:', modelDateRanges.length);
-        return modelDateRanges;
+        // For now, return empty array since the new API doesn't have date ranges
+        // This method is mainly used by the battery form which has its own logic
+        console.log('⚠️ Date ranges not available in new API, returning empty array');
+        return [];
       }
     } catch (error) {
       console.warn('⚠️ Failed to fetch date ranges from Strapi, falling back to local data:', error);
@@ -304,6 +205,139 @@ class VehicleDataService {
   clearCache(): void {
     this.strapiDataCache = null;
     console.log('🗑️ Vehicle data cache cleared');
+  }
+
+  // Get models by brand slug with new API integration
+  async getModelsByBrandSlug(brandSlug: string): Promise<Model[]> {
+    try {
+      // Use SQLite if configured for local database
+      if (shouldUseLocalDatabase()) {
+        console.log(`🗄️ Using SQLite for models data for brand ${brandSlug}`);
+        const { databaseService } = await import('../db/database');
+        const models = await databaseService.getModelsByBrand(brandSlug);
+        if (models && models.length > 0) {
+          const modelsData = models.map((model: any) => ({
+            id: model.id,
+            name: model.name,
+            brandSlug: model.brand_slug || brandSlug,
+            modelSlug: model.slug,
+            brand: model.brand_name || '',
+            brandId: 0 // Not needed for this flow
+          }));
+          
+          console.log(`✅ Models loaded from SQLite for brand ${brandSlug}:`, modelsData.length);
+          return modelsData;
+        }
+      }
+      
+      // Use Strapi if configured
+      if (shouldUseStrapi()) {
+        console.log(`🔄 Fetching models for brand ${brandSlug} from Strapi...`);
+        
+        // Check cache first
+        if (this.isCacheValid() && this.strapiDataCache?.models) {
+          const cachedModels = this.strapiDataCache.models.filter(model => model.brandSlug === brandSlug);
+          if (cachedModels.length > 0) {
+            console.log('📦 Using cached models from Strapi');
+            return cachedModels;
+          }
+        }
+
+        try {
+          // Make actual API call to Strapi
+          const response = await fetch(`${API_URL}/models?filters[brand][slug][$eq]=${brandSlug}&populate=*`);
+          if (response.ok) {
+            const data = await response.json();
+            const models = data.data || [];
+            const modelsData = models.map((model: any) => ({
+              id: model.id,
+              name: model.name,
+              brandSlug: model.brand?.slug || brandSlug,
+              modelSlug: model.slug,
+              brand: model.brand?.name || '',
+              brandId: model.brand?.id || 0
+            }));
+            
+            // Update cache
+            if (this.strapiDataCache) {
+              // Remove existing models for this brand and add new ones
+              this.strapiDataCache.models = [
+                ...this.strapiDataCache.models.filter(m => m.brandSlug !== brandSlug),
+                ...modelsData
+              ];
+            }
+
+            console.log(`✅ Models loaded from Strapi API for brand ${brandSlug}:`, modelsData.length);
+            return modelsData;
+          } else {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+        } catch (error) {
+          console.error(`❌ Failed to load models for brand ${brandSlug} from products API:`, error);
+          throw error;
+        }
+      }
+    } catch (error) {
+      console.warn(`⚠️ Failed to fetch models for brand ${brandSlug} from Strapi:`, error);
+    }
+
+    // Fallback to empty array
+    console.log(`🔄 Using empty models array as fallback for brand ${brandSlug}`);
+    return [];
+  }
+
+  // Get all models with new API integration (for backward compatibility)
+  async getAllModels(): Promise<Model[]> {
+    try {
+      if (shouldUseStrapi()) {
+        console.log('🔄 Fetching all models from Strapi...');
+        
+        // Check cache first
+        if (this.isCacheValid() && this.strapiDataCache?.models) {
+          console.log('📦 Using cached models from Strapi');
+          return this.strapiDataCache.models;
+        }
+
+        try {
+          // Use local database for offline-first approach
+          const { databaseService } = await import('../db/database');
+          const models = await databaseService.getAllModels();
+          if (models && models.length > 0) {
+            const data = { data: models };
+            const modelsData = data.data.map((model: any) => ({
+              id: model.id,
+              name: model.name,
+              brandSlug: model.brand_slug || '',
+              modelSlug: model.slug,
+              brand: model.brand_name || '',
+              brandId: model.brand_id || 0
+            }));
+            
+            // Update cache
+            this.strapiDataCache = {
+              brands: this.strapiDataCache?.brands || [],
+              models,
+              dateRanges: this.strapiDataCache?.dateRanges || [],
+              lastFetch: Date.now()
+            };
+
+            console.log('✅ Models loaded from new API:', models.length);
+            return modelsData;
+          } else {
+            throw new Error(`No models found in API response`);
+          }
+        } catch (error) {
+          console.error('❌ Failed to load models from new API:', error);
+          throw error;
+        }
+      }
+    } catch (error) {
+      console.warn('⚠️ Failed to fetch models from Strapi:', error);
+    }
+
+    // Fallback to empty array
+    console.log('🔄 Using empty models array as fallback');
+    return [];
   }
 
   // Get cache status

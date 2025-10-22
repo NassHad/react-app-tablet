@@ -1,160 +1,148 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { useSimpleVehicleContext } from '../contexts/SimpleVehicleContext';
 import { useClickAnimation } from '../hooks/useClickAnimation';
 import { getVehicleTypeDisplayName } from '../utils';
-import { getStrapiVehicleTypeId } from '../config/vehicleTypeMapping';
 import { 
   getBrands, 
-  getModelsByBrand, 
-  getDateRangesByModel,
   vehicleDataService,
   type Brand,
-  type Model,
-  type DateRange
+  type Model
 } from '../utils/vehicleData';
+
+import { useMockData } from '../hooks/useMockData';
+import type { UserSelection } from '../types';
 
 interface VehicleSelectionFormProps {
   vehicleType: string;
+  userSelection: UserSelection | null;
+  updateUserSelection: (updates: Partial<UserSelection>) => void;
   onComplete: () => void;
 }
 
-const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType, onComplete }) => {
-  const { updateVehicleData } = useSimpleVehicleContext();
+const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType, updateUserSelection, onComplete }) => {
   
-  const [selectedBrandId, setSelectedBrandId] = useState<number | null>(null);
-  const [selectedModelId, setSelectedModelId] = useState<number | null>(null);
-  const [selectedDateRange, setSelectedDateRange] = useState<string>('');
+  const [selectedBrandSlug, setSelectedBrandSlug] = useState<string>('');
+  const [selectedModelSlug, setSelectedModelSlug] = useState<string>('');
+  const [selectedDate, setSelectedDate] = useState<string>('');
   const [availableModels, setAvailableModels] = useState<Model[]>([]);
-  const [availableDateRanges, setAvailableDateRanges] = useState<DateRange[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isLoadingModels, setIsLoadingModels] = useState<boolean>(false);
-  const [isLoadingDateRanges, setIsLoadingDateRanges] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Mock data hook
+  const { isMockMode, getMockBrands, getMockModelsByBrand } = useMockData();
+
   // Load initial brands data
-  useEffect(() => {
-    const loadBrands = async () => {
-      try {
-        setIsLoading(true);
-        setError(null);
+  const loadBrands = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      setError(null);
+      
+      if (isMockMode) {
+        console.log('🎭 Loading mock brands for vehicle selection...');
+        const mockBrands = getMockBrands();
+        const formattedBrands: Brand[] = mockBrands.map(brand => ({
+          id: brand.id,
+          slug: brand.slug,
+          name: brand.name
+        }));
+        setBrands(formattedBrands);
+      } else {
         const brandsData = await vehicleDataService.getBrands();
         setBrands(brandsData);
-      } catch (err) {
-        console.error('Failed to load brands:', err);
-        setError('Failed to load vehicle data. Please try again.');
-        // Fallback to local data
-        setBrands(getBrands());
-      } finally {
-        setIsLoading(false);
       }
-    };
+    } catch (err) {
+      console.error('Failed to load brands:', err);
+      setError('Échec du chargement des données véhicule. Veuillez réessayer.');
+      // Fallback to local data
+      setBrands(getBrands());
+    } finally {
+      setIsLoading(false);
+    }
+  }, [isMockMode]);
 
+  useEffect(() => {
     loadBrands();
-  }, []);
+  }, [loadBrands]);
 
-  // Filter models when brand changes
-  useEffect(() => {
-    const loadModels = async () => {
-      if (selectedBrandId) {
-        try {
-          setIsLoadingModels(true);
-          setError(null);
-          
-          // Convert vehicleType to a number for Strapi
-          const vehicleTypeId = getStrapiVehicleTypeId(vehicleType as any);
-          
-          const models = await vehicleDataService.getModelsByBrand(selectedBrandId, vehicleTypeId);
-          setAvailableModels(models);
-          setSelectedModelId(null);
-          setSelectedDateRange('');
-          setAvailableDateRanges([]);
-        } catch (err) {
-          console.error('Failed to load models:', err);
-          setError('Failed to load models. Please try again.');
-          // Fallback to local data
-          const models = getModelsByBrand(selectedBrandId);
-          setAvailableModels(models);
-        } finally {
-          setIsLoadingModels(false);
+  // Load models when brand changes
+  const loadModelsForBrand = useCallback(async () => {
+    if (selectedBrandSlug) {
+      try {
+        setIsLoadingModels(true);
+        setError(null);
+        
+        if (isMockMode) {
+          console.log(`🎭 Loading mock models for brand: ${selectedBrandSlug}`);
+          const mockModels = getMockModelsByBrand(selectedBrandSlug);
+          const formattedModels: Model[] = mockModels.map(model => ({
+            id: model.id,
+            slug: model.slug,
+            name: model.name,
+            brandSlug: model.brand_slug,
+            startDate: '2018',
+            endDate: '2021'
+          }));
+          setAvailableModels(formattedModels);
+        } else {
+          const modelsData = await vehicleDataService.getModelsByBrandSlug(selectedBrandSlug);
+          setAvailableModels(modelsData);
         }
-      } else {
+        setSelectedModelSlug(''); // Reset model selection
+      } catch (err) {
+        console.error('Failed to load models:', err);
+        setError('Échec du chargement des modèles. Veuillez réessayer.');
         setAvailableModels([]);
-        setSelectedModelId(null);
-        setSelectedDateRange('');
-        setAvailableDateRanges([]);
+      } finally {
+        setIsLoadingModels(false);
       }
-    };
+    } else {
+      setAvailableModels([]);
+      setSelectedModelSlug('');
+    }
+  }, [selectedBrandSlug, isMockMode]);
 
-    loadModels();
-  }, [selectedBrandId, vehicleType]);
-
-  // Load date ranges when model changes
   useEffect(() => {
-    const loadDateRanges = async () => {
-      if (selectedModelId) {
-        try {
-          setIsLoadingDateRanges(true);
-          setError(null);
-          
-          const dateRanges = await vehicleDataService.getDateRangesByModel(selectedModelId);
-          setAvailableDateRanges(dateRanges);
-          setSelectedDateRange('');
-        } catch (err) {
-          console.error('Failed to load date ranges:', err);
-          setError('Failed to load date ranges. Please try again.');
-          // Fallback to local data
-          const dateRanges = getDateRangesByModel(selectedModelId);
-          setAvailableDateRanges(dateRanges);
-        } finally {
-          setIsLoadingDateRanges(false);
-        }
-      } else {
-        setAvailableDateRanges([]);
-        setSelectedDateRange('');
-      }
-    };
+    loadModelsForBrand();
+  }, [loadModelsForBrand]);
 
-    loadDateRanges();
-  }, [selectedModelId]);
-
-  const handleBrandChange = (brandId: number) => {
-    setSelectedBrandId(brandId);
+  const handleBrandChange = (brandSlug: string) => {
+    setSelectedBrandSlug(brandSlug);
   };
 
-  const handleModelChange = (modelId: number) => {
-    setSelectedModelId(modelId);
-  };
-
-  const handleDateRangeChange = (dateRange: string) => {
-    setSelectedDateRange(dateRange);
+  const handleModelChange = (modelSlug: string) => {
+    setSelectedModelSlug(modelSlug);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (selectedBrandId && selectedModelId && selectedDateRange) {
+    if (selectedBrandSlug && selectedModelSlug && selectedDate) {
       try {
-        const brand = await vehicleDataService.getBrandById(selectedBrandId);
-        const model = await vehicleDataService.getModelById(selectedModelId);
+        const selectedBrand = brands.find(b => b.slug === selectedBrandSlug);
+        const selectedModel = availableModels.find(m => m.modelSlug === selectedModelSlug);
         
-        if (brand && model) {
-          // Store vehicle data in context
-          const vehicleData = {
-            vehicleType,
-            brand: brand.name,
-            model: model.name,
-            dateCirculation: selectedDateRange,
+        if (selectedBrand && selectedModel) {
+          // Create vehicle object for main userSelection state
+          const vehicle = {
+            id: Date.now(),
+            type: vehicleType as any,
+            brand: selectedBrand.name,
+            brandSlug: selectedBrand.slug,  // Store the brand slug
+            model: selectedModel.name,
+            modelSlug: selectedModel.modelSlug,  // Store the model slug
+            year: parseInt(selectedDate.split('-')[0]),  // Extract year from date string
+            dateCirculation: selectedDate,
           };
-          console.log('Storing vehicle data in context:', vehicleData);
-          updateVehicleData(vehicleData);
+          console.log('Stockage des données véhicule dans userSelection:', vehicle);
+          updateUserSelection({ vehicle });
           
           // Navigate to category selection
           onComplete();
         }
       } catch (err) {
-        console.error('Failed to get brand/model data:', err);
-        setError('Failed to process vehicle selection. Please try again.');
+        console.error('Failed to process vehicle selection:', err);
+        setError('Échec du traitement de la sélection véhicule. Veuillez réessayer.');
       }
     }
   };
@@ -165,7 +153,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
     }
   });
 
-  const isFormValid = selectedBrandId && selectedModelId && selectedDateRange;
+  const isFormValid = selectedBrandSlug && selectedModelSlug && selectedDate;
 
   // Show loading state while initial data is loading
   if (isLoading) {
@@ -180,7 +168,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex justify-center min-h-screen">
       <div className="text-center w-full max-w-4xl">
         <h1 className="text-5xl text-[#1290AD] mt-16 mb-14">
           Sélectionnez la <span className="font-bold">marque</span>, le <span className="font-bold">modèle</span> et la <span className="font-bold">date</span> de mise en circulation de votre {getVehicleTypeDisplayName(vehicleType as any)}
@@ -193,7 +181,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
           </div>
         )}
         
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-8">
           <div className='flex flex-row gap-4 space-y-8 justify-around'>
             <div className="space-y-3">
               <label htmlFor="brand" className="block text-xl font-bold text-black text-left pl-2">
@@ -201,14 +189,14 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
               </label>
               <select
                 id="brand"
-                value={selectedBrandId || ''}
-                onChange={(e) => handleBrandChange(Number(e.target.value))}
-                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                value={selectedBrandSlug}
+                onChange={(e) => handleBrandChange(e.target.value)}
+                className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
                 required
               >
                 <option value="">Sélectionnez une marque</option>
                 {brands.map((brand) => (
-                  <option key={brand.id} value={brand.id}>
+                  <option key={brand.id} value={brand.slug}>
                     {brand.name}
                   </option>
                 ))}
@@ -222,22 +210,22 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
               </label>
               <select
                 id="model"
-                value={selectedModelId || ''}
-                onChange={(e) => handleModelChange(Number(e.target.value))}
-                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
-                disabled={!selectedBrandId || isLoadingModels}
+                value={selectedModelSlug}
+                onChange={(e) => handleModelChange(e.target.value)}
+                className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
+                disabled={!selectedBrandSlug || isLoadingModels}
                 required
               >
                 <option value="">
                   {isLoadingModels 
                     ? 'Chargement des modèles...' 
-                    : selectedBrandId 
+                    : selectedBrandSlug 
                       ? 'Sélectionnez un modèle' 
                       : 'Sélectionnez d\'abord une marque'
                   }
                 </option>
                 {availableModels.map((model) => (
-                  <option key={model.id} value={model.id}>
+                  <option key={model.id} value={model.modelSlug}>
                     {model.name}
                   </option>
                 ))}
@@ -245,34 +233,56 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
             </div>
           </div>
           
-          <div className='flex flex-row gap-4 justify-around space-y-8'>
-            {/* Date Range Selection */}
-            <div className="space-y-4">
-              <label htmlFor="dateRange" className="block text-xl font-bold text-black text-left pl-2">
+          {/* Date Selection */}
+          <div className="flex justify-center">
+            <div className="space-y-3 w-full max-w-md">
+              <label htmlFor="date" className="block text-xl font-bold text-black text-left pl-2">
                 Date de 1ère mise en circulation
               </label>
-              <select
-                id="dateRange"
-                value={selectedDateRange}
-                onChange={(e) => handleDateRangeChange(e.target.value)}
-                className="w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base min-w-[320px]"
-                disabled={!selectedModelId || isLoadingDateRanges}
-                required
-              >
-                <option value="">
-                  {isLoadingDateRanges 
-                    ? 'Chargement des périodes...' 
-                    : selectedModelId 
-                      ? 'Sélectionnez une période' 
-                      : 'Sélectionnez d\'abord un modèle'
-                  }
-                </option>
-                {availableDateRanges.map((dateRange) => (
-                  <option key={dateRange.id} value={dateRange.range}>
-                    {dateRange.range}
-                  </option>
-                ))}
-              </select>
+              <div className="flex gap-4">
+                <select
+                  id="month"
+                  value={selectedDate.split('-')[1] || ''}
+                  onChange={(e) => {
+                    const year = selectedDate.split('-')[0] || '';
+                    setSelectedDate(year ? `${year}-${e.target.value}` : `2024-${e.target.value}`);
+                  }}
+                  className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                  required
+                >
+                  <option value="">Mois</option>
+                  <option value="01">Janvier</option>
+                  <option value="02">Février</option>
+                  <option value="03">Mars</option>
+                  <option value="04">Avril</option>
+                  <option value="05">Mai</option>
+                  <option value="06">Juin</option>
+                  <option value="07">Juillet</option>
+                  <option value="08">Août</option>
+                  <option value="09">Septembre</option>
+                  <option value="10">Octobre</option>
+                  <option value="11">Novembre</option>
+                  <option value="12">Décembre</option>
+                </select>
+                
+                <select
+                  id="year"
+                  value={selectedDate.split('-')[0] || ''}
+                  onChange={(e) => {
+                    const month = selectedDate.split('-')[1] || '';
+                    setSelectedDate(month ? `${e.target.value}-${month}` : `${e.target.value}-01`);
+                  }}
+                  className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                  required
+                >
+                  <option value="">Année</option>
+                  {Array.from({ length: 30 }, (_, i) => new Date().getFullYear() - i).map((year) => (
+                    <option key={year} value={year}>
+                      {year}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
           
@@ -284,7 +294,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
               onClick={submitAnimation.handleClick}
               className={`py-4 px-8 rounded-lg text-lg font-semibold transition-all mt-10 ${
                 isFormValid
-                  ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
+                  ? 'bg-[#1290AD] text-white hover:opacity-80 shadow-lg hover:shadow-xl hover:cursor-pointer'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
               }`}
               {...submitAnimation.animationProps}

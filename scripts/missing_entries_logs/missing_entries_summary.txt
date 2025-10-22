@@ -1,0 +1,12 @@
+MISSING ENTRIES MERGE SUMMARY
+============================================================
+
+Original entries in osram_bulbs_with_slugs.json: 2492
+Missing entries found: 2247
+New entries added: 2247
+Final total: 4739
+
+Source: osram_bulbs_parsed.json
+Target: osram_bulbs_with_slugs.json
+
+Generated on: 2025-09-23T12:46:44.743Z

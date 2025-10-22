@@ -457,15 +457,15 @@
   },
   {
     "id": 77,
-    "name": "814, 819, 853)\"",
+    "name": "814, 819, 853)",
     "brandSlug": "audi",
-    "modelSlug": "814-819-853"
+    "modelSlug": "814,-819,-853)"
   },
   {
     "id": 78,
-    "name": "8A2)\"",
+    "name": "8A2)",
     "brandSlug": "audi",
-    "modelSlug": "8a2"
+    "modelSlug": "8a2)"
   },
   {
     "id": 79,
@@ -727,15 +727,15 @@
   },
   {
     "id": 122,
-    "name": "A8 D4 (4H2, 4H8, 4HC,",
+    "name": "A8 D4",
     "brandSlug": "audi",
-    "modelSlug": "a8-d4-4h2-4h8-4hc"
+    "modelSlug": "a8-d4"
   },
   {
     "id": 123,
-    "name": "A8 D5 (4N2, 4N8, 4NC,",
+    "name": "A8 D5",
     "brandSlug": "audi",
-    "modelSlug": "a8-d5-4n2-4n8-4nc"
+    "modelSlug": "a8-d5"
   },
   {
     "id": 124,
@@ -1497,7 +1497,7 @@
     "id": 250,
     "name": "VOYAGER / GRAND VOYA- GER III",
     "brandSlug": "chrysler",
-    "modelSlug": "voyager-grand-voya-ger-iii"
+    "modelSlug": "voyager-grand-voya--ger-iii"
   },
   {
     "id": 251,
@@ -1514,751 +1514,751 @@
   {
     "id": 253,
     "name": "",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": ""
   },
   {
     "id": 254,
     "name": "1.4",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "14"
   },
   {
     "id": 255,
     "name": "BERLINGO",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "berlingo"
   },
   {
     "id": 256,
     "name": "BERLINGO / BERLINGO FIRST Box",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "berlingo-berlingo-first-box"
   },
   {
     "id": 257,
     "name": "BERLINGO / BERLINGO FIRST MPV",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "berlingo-berlingo-first-mpv"
   },
   {
     "id": 258,
     "name": "BERLINGO Box",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "berlingo-box"
   },
   {
     "id": 259,
     "name": "BERLINGO Platform/Chassis",
-    "brandSlug": "citroën",
-    "modelSlug": "berlingo-platformchassis"
+    "brandSlug": "citroen",
+    "modelSlug": "berlingo-platform-chassis"
   },
   {
     "id": 260,
     "name": "C-CROSSER",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c-crosser"
   },
   {
     "id": 261,
     "name": "C1",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c1"
   },
   {
     "id": 262,
     "name": "C1 II",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c1-ii"
   },
   {
     "id": 263,
     "name": "C15",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c15"
   },
   {
     "id": 264,
     "name": "C2",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c2"
   },
   {
     "id": 265,
     "name": "C3 AIRCROSS II",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c3-aircross-ii"
   },
   {
     "id": 266,
     "name": "C3 I",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c3-i"
   },
   {
     "id": 267,
     "name": "C3 II",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c3-ii"
   },
   {
     "id": 268,
     "name": "C3 III",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c3-iii"
   },
   {
     "id": 269,
     "name": "C3 Picasso",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c3-picasso"
   },
   {
     "id": 270,
     "name": "C3 Pluriel",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c3-pluriel"
   },
   {
     "id": 271,
     "name": "C4 AIRCROSS",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c4-aircross"
   },
   {
     "id": 272,
     "name": "C4 CACTUS",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c4-cactus"
   },
   {
     "id": 273,
     "name": "C4 Grand Picasso I",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c4-grand-picasso-i"
   },
   {
     "id": 274,
     "name": "C4 Grand Picasso II",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c4-grand-picasso-ii"
   },
   {
     "id": 275,
     "name": "C4 I",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c4-i"
   },
   {
     "id": 276,
     "name": "C4 II",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c4-ii"
   },
   {
     "id": 277,
     "name": "C4 Picasso I MPV",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c4-picasso-i-mpv"
   },
   {
     "id": 278,
     "name": "C4 Picasso II",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c4-picasso-ii"
   },
   {
     "id": 279,
     "name": "C5 I",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c5-i"
   },
   {
     "id": 280,
     "name": "C5 II",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c5-ii"
   },
   {
     "id": 281,
     "name": "C5 III",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c5-iii"
   },
   {
     "id": 282,
     "name": "C5 III Break",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c5-iii-break"
   },
   {
     "id": 283,
     "name": "C8",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "c8"
   },
   {
     "id": 284,
     "name": "DS3",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "ds3"
   },
   {
     "id": 285,
     "name": "DS4",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "ds4"
   },
   {
     "id": 286,
     "name": "DS5",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "ds5"
   },
   {
     "id": 287,
     "name": "JUMPER Box",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "jumper-box"
   },
   {
     "id": 288,
     "name": "JUMPER Box | RELAY",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "jumper-box-relay"
   },
   {
     "id": 289,
     "name": "JUMPER Platform/Chassis | RELAY",
-    "brandSlug": "citroën",
-    "modelSlug": "jumper-platformchassis-relay"
+    "brandSlug": "citroen",
+    "modelSlug": "jumper-platform-chassis-|-relay"
   },
   {
     "id": 290,
     "name": "JUMPY Box",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "jumpy-box"
   },
   {
     "id": 291,
     "name": "JUMPY Box | DISPATCH",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "jumpy-box-dispatch"
   },
   {
     "id": 292,
     "name": "JUMPY Platform/Chassis",
-    "brandSlug": "citroën",
-    "modelSlug": "jumpy-platformchassis"
+    "brandSlug": "citroen",
+    "modelSlug": "jumpy-platform-chassis"
   },
   {
     "id": 293,
     "name": "NEMO Box",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "nemo-box"
   },
   {
     "id": 294,
     "name": "NEMO Estate",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "nemo-estate"
   },
   {
     "id": 295,
     "name": "SAXO",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "saxo"
   },
   {
     "id": 296,
     "name": "XSARA",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "xsara"
   },
   {
     "id": 297,
     "name": "XSARA Box Body / Estate / Hatchback",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "xsara-box-body-estate-hatchback"
   },
   {
     "id": 298,
     "name": "XSARA Break",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "xsara-break"
   },
   {
     "id": 299,
     "name": "XSARA PICASSO",
-    "brandSlug": "citroën",
+    "brandSlug": "citroen",
     "modelSlug": "xsara-picasso"
   },
   {
     "id": 300,
     "name": "AX",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "ax"
   },
   {
     "id": 301,
     "name": "BERLINGO",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "berlingo"
   },
   {
     "id": 302,
     "name": "BERLINGO / BERLINGO FIRST MPV",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "berlingo-berlingo-first-mpv"
   },
   {
     "id": 303,
     "name": "BERLINGO Box Body/MPV",
-    "brandSlug": "citron",
-    "modelSlug": "berlingo-box-bodympv"
+    "brandSlug": "citroen",
+    "modelSlug": "berlingo-box-body-mpv"
   },
   {
     "id": 304,
     "name": "BERLINGO Platform/ Chassis",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "berlingo-platform-chassis"
   },
   {
     "id": 305,
     "name": "BX",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "bx"
   },
   {
     "id": 306,
     "name": "BX Break",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "bx-break"
   },
   {
     "id": 307,
     "name": "C-CROSSER",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c-crosser"
   },
   {
     "id": 308,
     "name": "C-CROSSER ENTERPRISE",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c-crosser-enterprise"
   },
   {
     "id": 309,
     "name": "C-ELYSEE",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c-elysee"
   },
   {
     "id": 310,
     "name": "C-ZERO",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c-zero"
   },
   {
     "id": 311,
     "name": "C1",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c1"
   },
   {
     "id": 312,
     "name": "C1 II",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c1-ii"
   },
   {
     "id": 313,
     "name": "C15 Box Body/MPV",
-    "brandSlug": "citron",
-    "modelSlug": "c15-box-bodympv"
+    "brandSlug": "citroen",
+    "modelSlug": "c15-box-body-mpv"
   },
   {
     "id": 314,
     "name": "C2",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c2"
   },
   {
     "id": 315,
     "name": "C2 ENTERPRISE",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c2-enterprise"
   },
   {
     "id": 316,
     "name": "C3 AIRCROSS I",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c3-aircross-i"
   },
   {
     "id": 317,
     "name": "C3 AIRCROSS II",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c3-aircross-ii"
   },
   {
     "id": 318,
     "name": "C3 AIRCROSS II Van",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c3-aircross-ii-van"
   },
   {
     "id": 319,
     "name": "C3 I",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c3-i"
   },
   {
     "id": 320,
     "name": "C3 II",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c3-ii"
   },
   {
     "id": 321,
     "name": "C3 III",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c3-iii"
   },
   {
     "id": 322,
     "name": "C3 III Van",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c3-iii-van"
   },
   {
     "id": 323,
     "name": "C3 Picasso",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c3-picasso"
   },
   {
     "id": 324,
     "name": "C3 Pluriel",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c3-pluriel"
   },
   {
     "id": 325,
     "name": "C4 AIRCROSS",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-aircross"
   },
   {
     "id": 326,
     "name": "C4 CACTUS",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-cactus"
   },
   {
     "id": 327,
     "name": "C4 CACTUS Van",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-cactus-van"
   },
   {
     "id": 328,
     "name": "C4 Coupe",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-coupe"
   },
   {
     "id": 329,
     "name": "C4 Grand Picasso I",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-grand-picasso-i"
   },
   {
     "id": 330,
     "name": "C4 Grand Picasso II",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-grand-picasso-ii"
   },
   {
     "id": 331,
     "name": "C4 I",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-i"
   },
   {
     "id": 332,
     "name": "C4 I Saloon",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-i-saloon"
   },
   {
     "id": 333,
     "name": "C4 II",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-ii"
   },
   {
     "id": 334,
     "name": "C4 II Saloon",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-ii-saloon"
   },
   {
     "id": 335,
     "name": "C4 III",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-iii"
   },
   {
     "id": 336,
     "name": "C4 Picasso I MPV",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-picasso-i-mpv"
   },
   {
     "id": 337,
     "name": "C4 Picasso II",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-picasso-ii"
   },
   {
     "id": 338,
     "name": "C4 PICASSO II Van",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-picasso-ii-van"
   },
   {
     "id": 339,
     "name": "C4 SPACETOURER",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c4-spacetourer"
   },
   {
     "id": 340,
     "name": "C5 AIRCROSS",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c5-aircross"
   },
   {
     "id": 341,
     "name": "C5 I",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c5-i"
   },
   {
     "id": 342,
     "name": "C5 I Break",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c5-i-break"
   },
   {
     "id": 343,
     "name": "C5 II",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c5-ii"
   },
   {
     "id": 344,
     "name": "C5 II Break",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c5-ii-break"
   },
   {
     "id": 345,
     "name": "C5 III",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c5-iii"
   },
   {
     "id": 346,
     "name": "C5 III Break",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c5-iii-break"
   },
   {
     "id": 347,
     "name": "C6",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c6"
   },
   {
     "id": 348,
     "name": "C8",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "c8"
   },
   {
     "id": 349,
     "name": "DS3",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "ds3"
   },
   {
     "id": 350,
     "name": "DS3 Convertible",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "ds3-convertible"
   },
   {
     "id": 351,
     "name": "DS4",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "ds4"
   },
   {
     "id": 352,
     "name": "DS5",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "ds5"
   },
   {
     "id": 353,
     "name": "E-MEHARI",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "e-mehari"
   },
   {
     "id": 354,
     "name": "EVASION MPV",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "evasion-mpv"
   },
   {
     "id": 355,
-    "name": "FIRST Box Body/MPV\"",
-    "brandSlug": "citron",
-    "modelSlug": "first-box-bodympv"
+    "name": "FIRST Box Body/MPV",
+    "brandSlug": "citroen",
+    "modelSlug": "first-box-body-mpv"
   },
   {
     "id": 356,
     "name": "GRAND C4 SPACETOURER",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "grand-c4-spacetourer"
   },
   {
     "id": 357,
     "name": "JUMPER Bus",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "jumper-bus"
   },
   {
     "id": 358,
     "name": "JUMPER Platform/ Chassis",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "jumper-platform-chassis"
   },
   {
     "id": 359,
     "name": "JUMPER Van",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "jumper-van"
   },
   {
     "id": 360,
     "name": "JUMPY",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "jumpy"
   },
   {
     "id": 361,
     "name": "JUMPY Bus",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "jumpy-bus"
   },
   {
     "id": 362,
     "name": "JUMPY Platform/Chassis",
-    "brandSlug": "citron",
-    "modelSlug": "jumpy-platformchassis"
+    "brandSlug": "citroen",
+    "modelSlug": "jumpy-platform-chassis"
   },
   {
     "id": 363,
     "name": "JUMPY Van",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "jumpy-van"
   },
   {
     "id": 364,
     "name": "NEMO Box Body/MPV",
-    "brandSlug": "citron",
-    "modelSlug": "nemo-box-bodympv"
+    "brandSlug": "citroen",
+    "modelSlug": "nemo-box-body-mpv"
   },
   {
     "id": 365,
     "name": "NEMO MPV",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "nemo-mpv"
   },
   {
     "id": 366,
     "name": "SAXO",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "saxo"
   },
   {
     "id": 367,
     "name": "SPACETOURER Bus",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "spacetourer-bus"
   },
   {
     "id": 368,
     "name": "XANTIA",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "xantia"
   },
   {
     "id": 369,
     "name": "XANTIA Break",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "xantia-break"
   },
   {
     "id": 370,
     "name": "XM",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "xm"
   },
   {
     "id": 371,
     "name": "XM Break",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "xm-break"
   },
   {
     "id": 372,
     "name": "XSARA",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "xsara"
   },
   {
     "id": 373,
     "name": "XSARA Break",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "xsara-break"
   },
   {
     "id": 374,
     "name": "XSARA Coupe",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "xsara-coupe"
   },
   {
     "id": 375,
     "name": "XSARA PICASSO",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "xsara-picasso"
   },
   {
     "id": 376,
     "name": "ZX",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "zx"
   },
   {
     "id": 377,
     "name": "ZX Break",
-    "brandSlug": "citron",
+    "brandSlug": "citroen",
     "modelSlug": "zx-break"
   },
   {
@@ -2301,7 +2301,7 @@
     "id": 384,
     "name": "DOKKER Express Box Body/MPV",
     "brandSlug": "dacia",
-    "modelSlug": "dokker-express-box-bodympv"
+    "modelSlug": "dokker-express-box-body-mpv"
   },
   {
     "id": 385,
@@ -2701,9 +2701,9 @@
   },
   {
     "id": 451,
-    "name": "_, FS_ _, FZ_ _, FC_ _)\"",
+    "name": "_, FS_ _, FZ_ _, FC_ _)",
     "brandSlug": "daimler",
-    "modelSlug": "-fs-fz-fc-"
+    "modelSlug": "_,-fs_-_,-fz_-_,-fc_-_)"
   },
   {
     "id": 452,
@@ -2785,9 +2785,9 @@
   },
   {
     "id": 465,
-    "name": "Box Body/MPV\"",
+    "name": "Box Body/MPV",
     "brandSlug": "daimler",
-    "modelSlug": "box-bodympv"
+    "modelSlug": "box-body-mpv"
   },
   {
     "id": 466,
@@ -2883,7 +2883,7 @@
     "id": 481,
     "name": "DOBLO Box Body/MPV",
     "brandSlug": "daimler",
-    "modelSlug": "doblo-box-bodympv"
+    "modelSlug": "doblo-box-body-mpv"
   },
   {
     "id": 482,
@@ -2901,7 +2901,7 @@
     "id": 484,
     "name": "DOBLO Platform/Chassis",
     "brandSlug": "daimler",
-    "modelSlug": "doblo-platformchassis"
+    "modelSlug": "doblo-platform-chassis"
   },
   {
     "id": 485,
@@ -2961,7 +2961,7 @@
     "id": 494,
     "name": "DUCATO Platform/Chassis",
     "brandSlug": "daimler",
-    "modelSlug": "ducato-platformchassis"
+    "modelSlug": "ducato-platform-chassis"
   },
   {
     "id": 495,
@@ -3063,7 +3063,7 @@
     "id": 511,
     "name": "FIESTA Box Body/MPV",
     "brandSlug": "daimler",
-    "modelSlug": "fiesta-box-bodympv"
+    "modelSlug": "fiesta-box-body-mpv"
   },
   {
     "id": 512,
@@ -3129,7 +3129,7 @@
     "id": 522,
     "name": "FIORINO Box Body/MPV",
     "brandSlug": "daimler",
-    "modelSlug": "fiorino-box-bodympv"
+    "modelSlug": "fiorino-box-body-mpv"
   },
   {
     "id": 523,
@@ -3253,9 +3253,9 @@
   },
   {
     "id": 543,
-    "name": "FULLBACK Pickup (502_,",
+    "name": "FULLBACK Pickup",
     "brandSlug": "daimler",
-    "modelSlug": "fullback-pickup-502"
+    "modelSlug": "fullback-pickup"
   },
   {
     "id": 544,
@@ -3487,7 +3487,7 @@
   },
   {
     "id": 582,
-    "name": "NECT Kombi\"",
+    "name": "NECT Kombi",
     "brandSlug": "daimler",
     "modelSlug": "nect-kombi"
   },
@@ -3529,9 +3529,9 @@
   },
   {
     "id": 589,
-    "name": "PALIO Weekend (178_,",
+    "name": "PALIO Weekend",
     "brandSlug": "daimler",
-    "modelSlug": "palio-weekend-178"
+    "modelSlug": "palio-weekend"
   },
   {
     "id": 590,
@@ -3645,7 +3645,7 @@
     "id": 608,
     "name": "SCUDO Platform/Chassis",
     "brandSlug": "daimler",
-    "modelSlug": "scudo-platformchassis"
+    "modelSlug": "scudo-platform-chassis"
   },
   {
     "id": 609,
@@ -3691,9 +3691,9 @@
   },
   {
     "id": 616,
-    "name": "STRADA Pickup (178_,",
+    "name": "STRADA Pickup",
     "brandSlug": "daimler",
-    "modelSlug": "strada-pickup-178"
+    "modelSlug": "strada-pickup"
   },
   {
     "id": 617,
@@ -3957,7 +3957,7 @@
     "id": 660,
     "name": "DUCATO Platform/Chassis",
     "brandSlug": "fiat",
-    "modelSlug": "ducato-platformchassis"
+    "modelSlug": "ducato-platform-chassis"
   },
   {
     "id": 661,
@@ -4725,7 +4725,7 @@
     "id": 788,
     "name": "H-1 Platform/Chassis",
     "brandSlug": "hyundai",
-    "modelSlug": "h-1-platformchassis"
+    "modelSlug": "h-1-platform-chassis"
   },
   {
     "id": 789,
@@ -4761,7 +4761,7 @@
     "id": 794,
     "name": "H350 Platform/Chassis",
     "brandSlug": "hyundai",
-    "modelSlug": "h350-platformchassis"
+    "modelSlug": "h350-platform-chassis"
   },
   {
     "id": 795,
@@ -4819,9 +4819,9 @@
   },
   {
     "id": 804,
-    "name": "i20 II Hatchback Van (GB,",
+    "name": "i20 II Hatchback Van",
     "brandSlug": "hyundai",
-    "modelSlug": "i20-ii-hatchback-van-gb"
+    "modelSlug": "i20-ii-hatchback-van"
   },
   {
     "id": 805,
@@ -4849,9 +4849,9 @@
   },
   {
     "id": 809,
-    "name": "i30 FASTBACK (PDE,",
+    "name": "i30 FASTBACK",
     "brandSlug": "hyundai",
-    "modelSlug": "i30-fastback-pde"
+    "modelSlug": "i30-fastback"
   },
   {
     "id": 810,
@@ -5215,7 +5215,7 @@
   },
   {
     "id": 870,
-    "name": "Road Vehicle\"",
+    "name": "Road Vehicle",
     "brandSlug": "isuzu",
     "modelSlug": "road-vehicle"
   },
@@ -5235,7 +5235,7 @@
     "id": 873,
     "name": "DAILY I Platform/Chassis",
     "brandSlug": "iveco",
-    "modelSlug": "daily-i-platformchassis"
+    "modelSlug": "daily-i-platform-chassis"
   },
   {
     "id": 874,
@@ -5253,13 +5253,13 @@
     "id": 876,
     "name": "DAILY III Platform/Chassis",
     "brandSlug": "iveco",
-    "modelSlug": "daily-iii-platformchassis"
+    "modelSlug": "daily-iii-platform-chassis"
   },
   {
     "id": 877,
     "name": "DAILY III Platform/Chassis 29 L 12",
     "brandSlug": "iveco",
-    "modelSlug": "daily-iii-platformchassis-29-l-12"
+    "modelSlug": "daily-iii-platform-chassis-29-l-12"
   },
   {
     "id": 878,
@@ -5283,7 +5283,7 @@
     "id": 881,
     "name": "DAILY IV Platform/Chassis",
     "brandSlug": "iveco",
-    "modelSlug": "daily-iv-platformchassis"
+    "modelSlug": "daily-iv-platform-chassis"
   },
   {
     "id": 882,
@@ -5313,7 +5313,7 @@
     "id": 886,
     "name": "DAILY V Platform/Chassis",
     "brandSlug": "iveco",
-    "modelSlug": "daily-v-platformchassis"
+    "modelSlug": "daily-v-platform-chassis"
   },
   {
     "id": 887,
@@ -5325,7 +5325,7 @@
     "id": 888,
     "name": "DAILY VI Platform/Chassis",
     "brandSlug": "iveco",
-    "modelSlug": "daily-vi-platformchassis"
+    "modelSlug": "daily-vi-platform-chassis"
   },
   {
     "id": 889,
@@ -5703,7 +5703,7 @@
     "id": 951,
     "name": "K2500 Platform/Chassis",
     "brandSlug": "kia",
-    "modelSlug": "k2500-platformchassis"
+    "modelSlug": "k2500-platform-chassis"
   },
   {
     "id": 952,
@@ -6079,15 +6079,15 @@
   },
   {
     "id": 1014,
-    "name": "2113, 2114)\"",
+    "name": "2113, 2114)",
     "brandSlug": "lada",
-    "modelSlug": "2113-2114"
+    "modelSlug": "2113,-2114)"
   },
   {
     "id": 1015,
-    "name": "2115)\"",
+    "name": "2115)",
     "brandSlug": "lada",
-    "modelSlug": "2115"
+    "modelSlug": "2115)"
   },
   {
     "id": 1016,
@@ -6331,7 +6331,7 @@
   },
   {
     "id": 1056,
-    "name": "Convertible\"",
+    "name": "Convertible",
     "brandSlug": "land-rover",
     "modelSlug": "convertible"
   },
@@ -6609,7 +6609,7 @@
     "id": 1102,
     "name": "TGE Platform/Chassis",
     "brandSlug": "man",
-    "modelSlug": "tge-platformchassis"
+    "modelSlug": "tge-platform-chassis"
   },
   {
     "id": 1103,
@@ -6829,9 +6829,9 @@
   },
   {
     "id": 1139,
-    "name": "BT-50 II Pickup (B22,",
+    "name": "BT-50 II Pickup",
     "brandSlug": "mazda",
-    "modelSlug": "bt-50-ii-pickup-b22"
+    "modelSlug": "bt-50-ii-pickup"
   },
   {
     "id": 1140,
@@ -6843,7 +6843,7 @@
     "id": 1141,
     "name": "BT-50 Platform/Chassis",
     "brandSlug": "mazda",
-    "modelSlug": "bt-50-platformchassis"
+    "modelSlug": "bt-50-platform-chassis"
   },
   {
     "id": 1142,
@@ -7101,7 +7101,7 @@
     "id": 1184,
     "name": "CITAN Box Body/MPV",
     "brandSlug": "mercedes",
-    "modelSlug": "citan-box-bodympv"
+    "modelSlug": "citan-box-body-mpv"
   },
   {
     "id": 1185,
@@ -7111,9 +7111,9 @@
   },
   {
     "id": 1186,
-    "name": "CITAN Mixto (Double",
+    "name": "CITAN Mixto",
     "brandSlug": "mercedes",
-    "modelSlug": "citan-mixto-double"
+    "modelSlug": "citan-mixto"
   },
   {
     "id": 1187,
@@ -7323,7 +7323,7 @@
     "id": 1221,
     "name": "MB Platform/Chassis",
     "brandSlug": "mercedes",
-    "modelSlug": "mb-platformchassis"
+    "modelSlug": "mb-platform-chassis"
   },
   {
     "id": 1222,
@@ -7449,7 +7449,7 @@
     "id": 1242,
     "name": "SPRINTER 3,5-t Platform/ Chassis",
     "brandSlug": "mercedes",
-    "modelSlug": "sprinter-35-t-platform-chassis"
+    "modelSlug": "sprinter-3,5-t-platform-chassis"
   },
   {
     "id": 1243,
@@ -7473,7 +7473,7 @@
     "id": 1246,
     "name": "SPRINTER 4-t Platform/",
     "brandSlug": "mercedes",
-    "modelSlug": "sprinter-4-t-platform"
+    "modelSlug": "sprinter-4-t-platform-"
   },
   {
     "id": 1247,
@@ -7491,7 +7491,7 @@
     "id": 1249,
     "name": "SPRINTER 4,6-t Platform/ Chassis",
     "brandSlug": "mercedes",
-    "modelSlug": "sprinter-46-t-platform-chassis"
+    "modelSlug": "sprinter-4,6-t-platform-chassis"
   },
   {
     "id": 1250,
@@ -7503,7 +7503,7 @@
     "id": 1251,
     "name": "SPRINTER 5-t Platform/",
     "brandSlug": "mercedes",
-    "modelSlug": "sprinter-5-t-platform"
+    "modelSlug": "sprinter-5-t-platform-"
   },
   {
     "id": 1252,
@@ -7539,31 +7539,31 @@
     "id": 1257,
     "name": "T2/LN1 Bus",
     "brandSlug": "mercedes",
-    "modelSlug": "t2ln1-bus"
+    "modelSlug": "t2-ln1-bus"
   },
   {
     "id": 1258,
     "name": "T2/LN1 Cab with engine",
     "brandSlug": "mercedes",
-    "modelSlug": "t2ln1-cab-with-engine"
+    "modelSlug": "t2-ln1-cab-with-engine"
   },
   {
     "id": 1259,
     "name": "T2/LN1 Dump Truck",
     "brandSlug": "mercedes",
-    "modelSlug": "t2ln1-dump-truck"
+    "modelSlug": "t2-ln1-dump-truck"
   },
   {
     "id": 1260,
     "name": "T2/LN1 Platform/Chassis",
     "brandSlug": "mercedes",
-    "modelSlug": "t2ln1-platformchassis"
+    "modelSlug": "t2-ln1-platform-chassis"
   },
   {
     "id": 1261,
     "name": "T2/LN1 Van",
     "brandSlug": "mercedes",
-    "modelSlug": "t2ln1-van"
+    "modelSlug": "t2-ln1-van"
   },
   {
     "id": 1262,
@@ -7599,13 +7599,13 @@
     "id": 1267,
     "name": "VARIO Platform/Chassis",
     "brandSlug": "mercedes",
-    "modelSlug": "vario-platformchassis"
+    "modelSlug": "vario-platform-chassis"
   },
   {
     "id": 1268,
-    "name": "VARIO Van (B667, B670,",
+    "name": "VARIO Van",
     "brandSlug": "mercedes",
-    "modelSlug": "vario-van-b667-b670"
+    "modelSlug": "vario-van"
   },
   {
     "id": 1269,
@@ -7627,9 +7627,9 @@
   },
   {
     "id": 1272,
-    "name": "VITO Mixto (Double",
+    "name": "VITO Mixto",
     "brandSlug": "mercedes",
-    "modelSlug": "vito-mixto-double"
+    "modelSlug": "vito-mixto"
   },
   {
     "id": 1273,
@@ -7653,7 +7653,7 @@
     "id": 1276,
     "name": "X-CLASS Platform/",
     "brandSlug": "mercedes",
-    "modelSlug": "x-class-platform"
+    "modelSlug": "x-class-platform-"
   },
   {
     "id": 1277,
@@ -7969,21 +7969,21 @@
   },
   {
     "id": 1329,
-    "name": "GALANT IX Saloon (DJ_,",
+    "name": "GALANT IX Saloon",
     "brandSlug": "mitsubishi",
-    "modelSlug": "galant-ix-saloon-dj"
+    "modelSlug": "galant-ix-saloon"
   },
   {
     "id": 1330,
-    "name": "GALANT VII (E5_A, E7_A,",
+    "name": "GALANT VII",
     "brandSlug": "mitsubishi",
-    "modelSlug": "galant-vii-e5a-e7a"
+    "modelSlug": "galant-vii"
   },
   {
     "id": 1331,
-    "name": "GALANT VII Saloon (E5_A,",
+    "name": "GALANT VII Saloon",
     "brandSlug": "mitsubishi",
-    "modelSlug": "galant-vii-saloon-e5a"
+    "modelSlug": "galant-vii-saloon"
   },
   {
     "id": 1332,
@@ -8035,27 +8035,27 @@
   },
   {
     "id": 1340,
-    "name": "L 200 / TRITON (KJ_, KK_,",
+    "name": "L 200 / TRITON",
     "brandSlug": "mitsubishi",
-    "modelSlug": "l-200-triton-kj-kk"
+    "modelSlug": "l-200-triton"
   },
   {
     "id": 1341,
-    "name": "L 300 III Bus (P0_W,",
+    "name": "L 300 III Bus",
     "brandSlug": "mitsubishi",
-    "modelSlug": "l-300-iii-bus-p0w"
+    "modelSlug": "l-300-iii-bus"
   },
   {
     "id": 1342,
     "name": "L 300 III Platform/Chassis",
     "brandSlug": "mitsubishi",
-    "modelSlug": "l-300-iii-platformchassis"
+    "modelSlug": "l-300-iii-platform-chassis"
   },
   {
     "id": 1343,
-    "name": "L 300 III Van (P0_V, P1_V,",
+    "name": "L 300 III Van",
     "brandSlug": "mitsubishi",
-    "modelSlug": "l-300-iii-van-p0v-p1v"
+    "modelSlug": "l-300-iii-van"
   },
   {
     "id": 1344,
@@ -8065,39 +8065,39 @@
   },
   {
     "id": 1345,
-    "name": "L200 (K3_T, K2_T, K1_T,",
+    "name": "L200",
     "brandSlug": "mitsubishi",
-    "modelSlug": "l200-k3t-k2t-k1t"
+    "modelSlug": "l200"
   },
   {
     "id": 1346,
-    "name": "L200 / TRITON (KA_T,",
+    "name": "L200 / TRITON",
     "brandSlug": "mitsubishi",
-    "modelSlug": "l200-triton-kat"
+    "modelSlug": "l200-triton"
   },
   {
     "id": 1347,
     "name": "L200 / TRITON Platform/",
     "brandSlug": "mitsubishi",
-    "modelSlug": "l200-triton-platform"
+    "modelSlug": "l200-triton-platform-"
   },
   {
     "id": 1348,
     "name": "L200 Platform/Chassis",
     "brandSlug": "mitsubishi",
-    "modelSlug": "l200-platformchassis"
+    "modelSlug": "l200-platform-chassis"
   },
   {
     "id": 1349,
-    "name": "L400 Bus (PD_W, PC_W,",
+    "name": "L400 Bus",
     "brandSlug": "mitsubishi",
-    "modelSlug": "l400-bus-pdw-pcw"
+    "modelSlug": "l400-bus"
   },
   {
     "id": 1350,
-    "name": "L400 Van (PD_W, PC_W,",
+    "name": "L400 Van",
     "brandSlug": "mitsubishi",
-    "modelSlug": "l400-van-pdw-pcw"
+    "modelSlug": "l400-van"
   },
   {
     "id": 1351,
@@ -8113,9 +8113,9 @@
   },
   {
     "id": 1353,
-    "name": "LANCER V (CB_A, CD_A,",
+    "name": "LANCER V",
     "brandSlug": "mitsubishi",
-    "modelSlug": "lancer-v-cba-cda"
+    "modelSlug": "lancer-v"
   },
   {
     "id": 1354,
@@ -8137,9 +8137,9 @@
   },
   {
     "id": 1357,
-    "name": "LANCER VII Estate (CS_W,",
+    "name": "LANCER VII Estate",
     "brandSlug": "mitsubishi",
-    "modelSlug": "lancer-vii-estate-csw"
+    "modelSlug": "lancer-vii-estate"
   },
   {
     "id": 1358,
@@ -8185,9 +8185,9 @@
   },
   {
     "id": 1365,
-    "name": "OUTLANDER III (GG_W,",
+    "name": "OUTLANDER III",
     "brandSlug": "mitsubishi",
-    "modelSlug": "outlander-iii-ggw"
+    "modelSlug": "outlander-iii"
   },
   {
     "id": 1366,
@@ -8197,15 +8197,15 @@
   },
   {
     "id": 1367,
-    "name": "PAJERO CLASSIC (V2_W,",
+    "name": "PAJERO CLASSIC",
     "brandSlug": "mitsubishi",
-    "modelSlug": "pajero-classic-v2w"
+    "modelSlug": "pajero-classic"
   },
   {
     "id": 1368,
-    "name": "PAJERO II (V3_W, V2_W,",
+    "name": "PAJERO II",
     "brandSlug": "mitsubishi",
-    "modelSlug": "pajero-ii-v3w-v2w"
+    "modelSlug": "pajero-ii"
   },
   {
     "id": 1369,
@@ -8517,7 +8517,7 @@
     "id": 1420,
     "name": "NAVARA Platform/Chassis",
     "brandSlug": "nissan",
-    "modelSlug": "navara-platformchassis"
+    "modelSlug": "navara-platform-chassis"
   },
   {
     "id": 1421,
@@ -8547,7 +8547,7 @@
     "id": 1425,
     "name": "NP300 NAVARA Platform/",
     "brandSlug": "nissan",
-    "modelSlug": "np300-navara-platform"
+    "modelSlug": "np300-navara-platform-"
   },
   {
     "id": 1426,
@@ -8595,7 +8595,7 @@
     "id": 1433,
     "name": "NV300 Platform/Chassis",
     "brandSlug": "nissan",
-    "modelSlug": "nv300-platformchassis"
+    "modelSlug": "nv300-platform-chassis"
   },
   {
     "id": 1434,
@@ -8613,7 +8613,7 @@
     "id": 1436,
     "name": "NV400 Platform/Chassis",
     "brandSlug": "nissan",
-    "modelSlug": "nv400-platformchassis"
+    "modelSlug": "nv400-platform-chassis"
   },
   {
     "id": 1437,
@@ -8721,7 +8721,7 @@
     "id": 1454,
     "name": "QASHQAI / QASHQAI +2 I",
     "brandSlug": "nissan",
-    "modelSlug": "qashqai-qashqai-2-i"
+    "modelSlug": "qashqai-qashqai-+2-i"
   },
   {
     "id": 1455,
@@ -9079,7 +9079,7 @@
   },
   {
     "id": 1514,
-    "name": "back\"",
+    "name": "back",
     "brandSlug": "opel",
     "modelSlug": "back"
   },
@@ -9111,7 +9111,7 @@
     "id": 1519,
     "name": "COMBO Box Body/MPV",
     "brandSlug": "opel",
-    "modelSlug": "combo-box-bodympv"
+    "modelSlug": "combo-box-body-mpv"
   },
   {
     "id": 1520,
@@ -9123,7 +9123,7 @@
     "id": 1521,
     "name": "COMBO Platform/Chassis",
     "brandSlug": "opel",
-    "modelSlug": "combo-platformchassis"
+    "modelSlug": "combo-platform-chassis"
   },
   {
     "id": 1522,
@@ -9201,7 +9201,7 @@
     "id": 1534,
     "name": "CROSSLAND X / CROSS- LAND",
     "brandSlug": "opel",
-    "modelSlug": "crossland-x-cross-land"
+    "modelSlug": "crossland-x-cross--land"
   },
   {
     "id": 1535,
@@ -9367,9 +9367,9 @@
   },
   {
     "id": 1562,
-    "name": "207 Hatchback Van (WA_,",
+    "name": "207 Hatchback Van",
     "brandSlug": "peugeot",
-    "modelSlug": "207-hatchback-van-wa"
+    "modelSlug": "207-hatchback-van"
   },
   {
     "id": 1563,
@@ -9409,9 +9409,9 @@
   },
   {
     "id": 1569,
-    "name": "208 II (UB_, UP_, UW_,",
+    "name": "208 II",
     "brandSlug": "peugeot",
-    "modelSlug": "208-ii-ub-up-uw"
+    "modelSlug": "208-ii"
   },
   {
     "id": 1570,
@@ -9427,9 +9427,9 @@
   },
   {
     "id": 1572,
-    "name": "3008 SUV (MC_, MR_,",
+    "name": "3008 SUV",
     "brandSlug": "peugeot",
-    "modelSlug": "3008-suv-mc-mr"
+    "modelSlug": "3008-suv"
   },
   {
     "id": 1573,
@@ -9451,9 +9451,9 @@
   },
   {
     "id": 1576,
-    "name": "306 Convertible (7D, N3,",
+    "name": "306 Convertible",
     "brandSlug": "peugeot",
-    "modelSlug": "306-convertible-7d-n3"
+    "modelSlug": "306-convertible"
   },
   {
     "id": 1577,
@@ -9463,9 +9463,9 @@
   },
   {
     "id": 1578,
-    "name": "306 Hatchback (7A, 7C,",
+    "name": "306 Hatchback",
     "brandSlug": "peugeot",
-    "modelSlug": "306-hatchback-7a-7c"
+    "modelSlug": "306-hatchback"
   },
   {
     "id": 1579,
@@ -9511,15 +9511,15 @@
   },
   {
     "id": 1586,
-    "name": "308 II (LB_, LP_, LW_,",
+    "name": "308 II",
     "brandSlug": "peugeot",
-    "modelSlug": "308-ii-lb-lp-lw"
+    "modelSlug": "308-ii"
   },
   {
     "id": 1587,
-    "name": "308 III (FB_, FH_, FP_,",
+    "name": "308 III",
     "brandSlug": "peugeot",
-    "modelSlug": "308-iii-fb-fh-fp"
+    "modelSlug": "308-iii"
   },
   {
     "id": 1588,
@@ -9535,9 +9535,9 @@
   },
   {
     "id": 1590,
-    "name": "308 SW II (LC_, LJ_, LR_,",
+    "name": "308 SW II",
     "brandSlug": "peugeot",
-    "modelSlug": "308-sw-ii-lc-lj-lr"
+    "modelSlug": "308-sw-ii"
   },
   {
     "id": 1591,
@@ -9547,9 +9547,9 @@
   },
   {
     "id": 1592,
-    "name": "308 SW III (FC_, FJ_, FR_,",
+    "name": "308 SW III",
     "brandSlug": "peugeot",
-    "modelSlug": "308-sw-iii-fc-fj-fr"
+    "modelSlug": "308-sw-iii"
   },
   {
     "id": 1593,
@@ -9637,9 +9637,9 @@
   },
   {
     "id": 1607,
-    "name": "5008 II (MC_, MJ_, MR_,",
+    "name": "5008 II",
     "brandSlug": "peugeot",
-    "modelSlug": "5008-ii-mc-mj-mr"
+    "modelSlug": "5008-ii"
   },
   {
     "id": 1608,
@@ -9711,7 +9711,7 @@
     "id": 1619,
     "name": "BOXER Platform/Chassis",
     "brandSlug": "peugeot",
-    "modelSlug": "boxer-platformchassis"
+    "modelSlug": "boxer-platform-chassis"
   },
   {
     "id": 1620,
@@ -9741,7 +9741,7 @@
     "id": 1624,
     "name": "EXPERT Platform/Chassis",
     "brandSlug": "peugeot",
-    "modelSlug": "expert-platformchassis"
+    "modelSlug": "expert-platform-chassis"
   },
   {
     "id": 1625,
@@ -9757,9 +9757,9 @@
   },
   {
     "id": 1627,
-    "name": "EXPERT Van (VF3A_,",
+    "name": "EXPERT Van",
     "brandSlug": "peugeot",
-    "modelSlug": "expert-van-vf3a"
+    "modelSlug": "expert-van"
   },
   {
     "id": 1628,
@@ -9777,7 +9777,7 @@
     "id": 1630,
     "name": "J5 Platform/Chassis",
     "brandSlug": "peugeot",
-    "modelSlug": "j5-platformchassis"
+    "modelSlug": "j5-platform-chassis"
   },
   {
     "id": 1631,
@@ -9795,7 +9795,7 @@
     "id": 1633,
     "name": "PARTNER Box Body/MPV",
     "brandSlug": "peugeot",
-    "modelSlug": "partner-box-bodympv"
+    "modelSlug": "partner-box-body-mpv"
   },
   {
     "id": 1634,
@@ -9825,7 +9825,7 @@
     "id": 1638,
     "name": "PARTNER Platform/",
     "brandSlug": "peugeot",
-    "modelSlug": "partner-platform"
+    "modelSlug": "partner-platform-"
   },
   {
     "id": 1639,
@@ -9855,7 +9855,7 @@
     "id": 1643,
     "name": "PORTER Platform/Chassis",
     "brandSlug": "peugeot",
-    "modelSlug": "porter-platformchassis"
+    "modelSlug": "porter-platform-chassis"
   },
   {
     "id": 1644,
@@ -10039,9 +10039,9 @@
   },
   {
     "id": 1674,
-    "name": "19 II Cabriolet (D53_,",
+    "name": "19 II Cabriolet",
     "brandSlug": "renault",
-    "modelSlug": "19-ii-cabriolet-d53"
+    "modelSlug": "19-ii-cabriolet"
   },
   {
     "id": 1675,
@@ -10305,7 +10305,7 @@
     "id": 1718,
     "name": "KANGOO III Box Body/",
     "brandSlug": "renault",
-    "modelSlug": "kangoo-iii-box-body"
+    "modelSlug": "kangoo-iii-box-body-"
   },
   {
     "id": 1719,
@@ -10413,7 +10413,7 @@
     "id": 1736,
     "name": "LOGAN/STEPWAY II",
     "brandSlug": "renault",
-    "modelSlug": "loganstepway-ii"
+    "modelSlug": "logan-stepway-ii"
   },
   {
     "id": 1737,
@@ -10431,13 +10431,13 @@
     "id": 1739,
     "name": "MASTER II Platform/",
     "brandSlug": "renault",
-    "modelSlug": "master-ii-platform"
+    "modelSlug": "master-ii-platform-"
   },
   {
     "id": 1740,
     "name": "MASTER II Platform/Chassis",
     "brandSlug": "renault",
-    "modelSlug": "master-ii-platformchassis"
+    "modelSlug": "master-ii-platform-chassis"
   },
   {
     "id": 1741,
@@ -10461,13 +10461,13 @@
     "id": 1744,
     "name": "MASTER III Platform/",
     "brandSlug": "renault",
-    "modelSlug": "master-iii-platform"
+    "modelSlug": "master-iii-platform-"
   },
   {
     "id": 1745,
     "name": "MASTER III Platform/Chassis",
     "brandSlug": "renault",
-    "modelSlug": "master-iii-platformchassis"
+    "modelSlug": "master-iii-platform-chassis"
   },
   {
     "id": 1746,
@@ -10519,9 +10519,9 @@
   },
   {
     "id": 1754,
-    "name": "MEGANE II (BM0/1_,",
+    "name": "MEGANE II",
     "brandSlug": "renault",
-    "modelSlug": "megane-ii-bm01"
+    "modelSlug": "megane-ii"
   },
   {
     "id": 1755,
@@ -10611,13 +10611,13 @@
     "id": 1769,
     "name": "SANDERO/STEPWAY I",
     "brandSlug": "renault",
-    "modelSlug": "sanderostepway-i"
+    "modelSlug": "sandero-stepway-i"
   },
   {
     "id": 1770,
     "name": "SANDERO/STEPWAY II",
     "brandSlug": "renault",
-    "modelSlug": "sanderostepway-ii"
+    "modelSlug": "sandero-stepway-ii"
   },
   {
     "id": 1771,
@@ -10645,9 +10645,9 @@
   },
   {
     "id": 1775,
-    "name": "SC�NIC I MPV (JA0/1_,",
+    "name": "SC�NIC I MPV",
     "brandSlug": "renault",
-    "modelSlug": "scnic-i-mpv-ja01"
+    "modelSlug": "sc�nic-i-mpv"
   },
   {
     "id": 1776,
@@ -10725,13 +10725,13 @@
     "id": 1788,
     "name": "TRAFIC II Platform/",
     "brandSlug": "renault",
-    "modelSlug": "trafic-ii-platform"
+    "modelSlug": "trafic-ii-platform-"
   },
   {
     "id": 1789,
     "name": "TRAFIC II Platform/Chassis",
     "brandSlug": "renault",
-    "modelSlug": "trafic-ii-platformchassis"
+    "modelSlug": "trafic-ii-platform-chassis"
   },
   {
     "id": 1790,
@@ -10755,7 +10755,7 @@
     "id": 1793,
     "name": "TRAFIC III Platform/",
     "brandSlug": "renault",
-    "modelSlug": "trafic-iii-platform"
+    "modelSlug": "trafic-iii-platform-"
   },
   {
     "id": 1794,
@@ -10767,7 +10767,7 @@
     "id": 1795,
     "name": "TRAFIC Platform/Chassis",
     "brandSlug": "renault",
-    "modelSlug": "trafic-platformchassis"
+    "modelSlug": "trafic-platform-chassis"
   },
   {
     "id": 1796,
@@ -10839,7 +10839,7 @@
     "id": 1807,
     "name": "B Platform/Chassis",
     "brandSlug": "renault-trucks",
-    "modelSlug": "b-platformchassis"
+    "modelSlug": "b-platform-chassis"
   },
   {
     "id": 1808,
@@ -10885,7 +10885,7 @@
   },
   {
     "id": 1815,
-    "name": "Tractor\"",
+    "name": "Tractor",
     "brandSlug": "renault-trucks",
     "modelSlug": "tractor"
   },
@@ -12079,9 +12079,9 @@
   },
   {
     "id": 2014,
-    "name": "_N2_, _N3_)\"",
+    "name": "_N2_, _N3_)",
     "brandSlug": "toyota",
-    "modelSlug": "n2-n3"
+    "modelSlug": "_n2_,-_n3_)"
   },
   {
     "id": 2015,
@@ -12235,7 +12235,7 @@
   },
   {
     "id": 2040,
-    "name": "Estate\"",
+    "name": "Estate",
     "brandSlug": "toyota",
     "modelSlug": "estate"
   },
@@ -12549,7 +12549,7 @@
     "id": 2092,
     "name": "PROFI Platform/Chassis",
     "brandSlug": "uaz",
-    "modelSlug": "profi-platformchassis"
+    "modelSlug": "profi-platform-chassis"
   },
   {
     "id": 2093,
@@ -12709,21 +12709,21 @@
   },
   {
     "id": 2119,
-    "name": "back\"",
+    "name": "back",
     "brandSlug": "vauxhall",
     "modelSlug": "back"
   },
   {
     "id": 2120,
-    "name": "Body / Estate\"",
+    "name": "Body / Estate",
     "brandSlug": "vauxhall",
     "modelSlug": "body-estate"
   },
   {
     "id": 2121,
-    "name": "Body/MPV\"",
+    "name": "Body/MPV",
     "brandSlug": "vauxhall",
-    "modelSlug": "bodympv"
+    "modelSlug": "body-mpv"
   },
   {
     "id": 2122,
@@ -12807,11 +12807,11 @@
     "id": 2135,
     "name": "CROSSLAND X / CROSS- LAND",
     "brandSlug": "vauxhall",
-    "modelSlug": "crossland-x-cross-land"
+    "modelSlug": "crossland-x-cross--land"
   },
   {
     "id": 2136,
-    "name": "Estate Van\"",
+    "name": "Estate Van",
     "brandSlug": "vauxhall",
     "modelSlug": "estate-van"
   },
@@ -12837,11 +12837,11 @@
     "id": 2140,
     "name": "GRANDLAND X / GRAND- LAND",
     "brandSlug": "vauxhall",
-    "modelSlug": "grandland-x-grand-land"
+    "modelSlug": "grandland-x-grand--land"
   },
   {
     "id": 2141,
-    "name": "Hatchback Van\"",
+    "name": "Hatchback Van",
     "brandSlug": "vauxhall",
     "modelSlug": "hatchback-van"
   },
@@ -12973,9 +12973,9 @@
   },
   {
     "id": 2163,
-    "name": "sis/Cab\"",
+    "name": "sis/Cab",
     "brandSlug": "vauxhall",
-    "modelSlug": "siscab"
+    "modelSlug": "sis-cab"
   },
   {
     "id": 2164,
@@ -12991,13 +12991,13 @@
   },
   {
     "id": 2166,
-    "name": "Tourer\"",
+    "name": "Tourer",
     "brandSlug": "vauxhall",
     "modelSlug": "tourer"
   },
   {
     "id": 2167,
-    "name": "try Tourer\"",
+    "name": "try Tourer",
     "brandSlug": "vauxhall",
     "modelSlug": "try-tourer"
   },
@@ -13179,7 +13179,7 @@
     "id": 2197,
     "name": "CADDY ALLTRACK Box Body/MPV",
     "brandSlug": "volkswagen",
-    "modelSlug": "caddy-alltrack-box-bodympv"
+    "modelSlug": "caddy-alltrack-box-body-mpv"
   },
   {
     "id": 2198,
@@ -13191,7 +13191,7 @@
     "id": 2199,
     "name": "CADDY II Box Body/MPV",
     "brandSlug": "volkswagen",
-    "modelSlug": "caddy-ii-box-bodympv"
+    "modelSlug": "caddy-ii-box-body-mpv"
   },
   {
     "id": 2200,
@@ -13215,7 +13215,7 @@
     "id": 2203,
     "name": "CADDY III Box Body/MPV",
     "brandSlug": "volkswagen",
-    "modelSlug": "caddy-iii-box-bodympv"
+    "modelSlug": "caddy-iii-box-body-mpv"
   },
   {
     "id": 2204,
@@ -13227,7 +13227,7 @@
     "id": 2205,
     "name": "CADDY IV Box Body/MPV",
     "brandSlug": "volkswagen",
-    "modelSlug": "caddy-iv-box-bodympv"
+    "modelSlug": "caddy-iv-box-body-mpv"
   },
   {
     "id": 2206,
@@ -13239,7 +13239,7 @@
     "id": 2207,
     "name": "CADDY V Box Body/MPV",
     "brandSlug": "volkswagen",
-    "modelSlug": "caddy-v-box-bodympv"
+    "modelSlug": "caddy-v-box-body-mpv"
   },
   {
     "id": 2208,
@@ -13275,7 +13275,7 @@
     "id": 2213,
     "name": "CRAFTER 30-50 Platform/Chassis",
     "brandSlug": "volkswagen",
-    "modelSlug": "crafter-30-50-platformchassis"
+    "modelSlug": "crafter-30-50-platform-chassis"
   },
   {
     "id": 2214,
@@ -13293,7 +13293,7 @@
     "id": 2216,
     "name": "CRAFTER Platform/Chassis",
     "brandSlug": "volkswagen",
-    "modelSlug": "crafter-platformchassis"
+    "modelSlug": "crafter-platform-chassis"
   },
   {
     "id": 2217,
@@ -13491,7 +13491,7 @@
     "id": 2249,
     "name": "LT 28-35 I Platform/Chassis",
     "brandSlug": "volkswagen",
-    "modelSlug": "lt-28-35-i-platformchassis"
+    "modelSlug": "lt-28-35-i-platform-chassis"
   },
   {
     "id": 2250,
@@ -13509,7 +13509,7 @@
     "id": 2252,
     "name": "LT 28-46 II Platform/Chassis",
     "brandSlug": "volkswagen",
-    "modelSlug": "lt-28-46-ii-platformchassis"
+    "modelSlug": "lt-28-46-ii-platform-chassis"
   },
   {
     "id": 2253,
@@ -13521,7 +13521,7 @@
     "id": 2254,
     "name": "LT 40-55 I Platform/",
     "brandSlug": "volkswagen",
-    "modelSlug": "lt-40-55-i-platform"
+    "modelSlug": "lt-40-55-i-platform-"
   },
   {
     "id": 2255,
@@ -13587,13 +13587,13 @@
     "id": 2265,
     "name": "PASSAT B3/B4",
     "brandSlug": "volkswagen",
-    "modelSlug": "passat-b3b4"
+    "modelSlug": "passat-b3-b4"
   },
   {
     "id": 2266,
     "name": "PASSAT B3/B4 Variant",
     "brandSlug": "volkswagen",
-    "modelSlug": "passat-b3b4-variant"
+    "modelSlug": "passat-b3-b4-variant"
   },
   {
     "id": 2267,
@@ -13639,9 +13639,9 @@
   },
   {
     "id": 2274,
-    "name": "PASSAT Variant (3G5,",
+    "name": "PASSAT Variant",
     "brandSlug": "volkswagen",
-    "modelSlug": "passat-variant-3g5"
+    "modelSlug": "passat-variant"
   },
   {
     "id": 2275,
@@ -13827,7 +13827,7 @@
     "id": 2305,
     "name": "TRANSPORTER IV Platform/Chassis",
     "brandSlug": "volkswagen",
-    "modelSlug": "transporter-iv-platformchassis"
+    "modelSlug": "transporter-iv-platform-chassis"
   },
   {
     "id": 2306,
@@ -13843,9 +13843,9 @@
   },
   {
     "id": 2308,
-    "name": "TRANSPORTER V Platform/Chassis (7JD, 7JE, 7JL, 7JY, 7JZ, 7FD",
+    "name": "TRANSPORTER V Platform/Chassis",
     "brandSlug": "volkswagen",
-    "modelSlug": "transporter-v-platformchassis-7jd-7je-7jl-7jy-7jz-7fd"
+    "modelSlug": "transporter-v-platform-chassis"
   },
   {
     "id": 2309,
@@ -13863,7 +13863,7 @@
     "id": 2311,
     "name": "TRANSPORTER VI Platform/Chassis",
     "brandSlug": "volkswagen",
-    "modelSlug": "transporter-vi-platformchassis"
+    "modelSlug": "transporter-vi-platform-chassis"
   },
   {
     "id": 2312,

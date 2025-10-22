@@ -7,6 +7,9 @@ import QuestionsScreen from '../pages/QuestionsScreen';
 import ProductsScreen from '../pages/ProductsScreen';
 import ProductDetailsScreen from '../pages/ProductDetailsScreen';
 import NoProductsAvailableScreen from '../pages/NoProductsAvailableScreen';
+import LightsTestPage from '../pages/test/LightsTestPage';
+import WipersTestPage from '../pages/test/WipersTestPage';
+import WipersTestPageNew from '../pages/test/WipersTestPageNew';
 import CategorySpecificForm from '../components/CategorySpecificForm';
 import VehicleSelectionForm from '../components/VehicleSelectionForm';
 import Layout from '../components/Layout';
@@ -27,10 +30,26 @@ const AppRouterContent = () => {
   const navigate = useNavigate();
 
   const updateUserSelection = (updates: Partial<UserSelection>) => {
-    console.log('updateUserSelection called with:', updates);
+    console.log('🔄 updateUserSelection called with:', updates);
     setUserSelection(prev => {
       const newState = prev ? { ...prev, ...updates } : updates as UserSelection;
-      console.log('New userSelection state:', newState);
+      console.log('✅ New userSelection state:', newState);
+      if (newState.vehicle) {
+        console.log('🚗 Vehicle data preserved:', {
+          brand: newState.vehicle.brand,
+          model: newState.vehicle.model,
+          year: newState.vehicle.year,
+          brandSlug: newState.vehicle.brandSlug,
+          modelSlug: newState.vehicle.modelSlug
+        });
+      }
+      if (newState.category) {
+        console.log('📂 Category data preserved:', {
+          name: newState.category.name,
+          slug: newState.category.slug,
+          id: newState.category.id
+        });
+      }
       return newState;
     });
   };
@@ -93,6 +112,8 @@ const AppRouterContent = () => {
                 <PageTransition direction={navigationDirection}>
                   <VehicleSelectionForm 
                     vehicleType={userSelection.vehicleType}
+                    userSelection={userSelection}
+                    updateUserSelection={updateUserSelection}
                     onComplete={() => {
                       // Navigate to category selection after vehicle is complete
                       navigate('/category');
@@ -163,6 +184,7 @@ const AppRouterContent = () => {
                     <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                       <PageTransition direction={navigationDirection}>
                         <CategoryScreen 
+                          vehicle={userSelection?.vehicle}
                           onCategorySelect={(category) => {
                             updateUserSelection({ category });
                           }}
@@ -206,22 +228,32 @@ const AppRouterContent = () => {
               <Layout userSelection={userSelection} updateUserSelection={updateUserSelection}>
                 <PageTransition direction={navigationDirection}>
                   <CategorySpecificForm 
+                    category={userSelection?.category}
+                    vehicle={userSelection?.vehicle}
                     onComplete={(finalVehicleData) => {
-                      // Create final vehicle object
+                      // Create final vehicle object, preserving all existing vehicle data
                       const vehicle = {
-                        id: Date.now(),
-                        type: finalVehicleData.vehicleType!,
-                        brand: finalVehicleData.brand,
-                        model: finalVehicleData.model,
-                        dateCirculation: finalVehicleData.dateCirculation,
+                        id: userSelection?.vehicle?.id || Date.now(), // Preserve existing ID
+                        type: finalVehicleData.vehicleType || userSelection?.vehicle?.type!,
+                        brand: finalVehicleData.brand || userSelection?.vehicle?.brand,
+                        model: finalVehicleData.model || userSelection?.vehicle?.model,
+                        dateCirculation: finalVehicleData.dateCirculation || userSelection?.vehicle?.dateCirculation,
+                        year: finalVehicleData.year || userSelection?.vehicle?.year,
+                        brandSlug: finalVehicleData.brandSlug || userSelection?.vehicle?.brandSlug,
+                        modelSlug: finalVehicleData.modelSlug || userSelection?.vehicle?.modelSlug,
                         motorisation: finalVehicleData.motorisation,
                         position: finalVehicleData.position,
                         viscosity: finalVehicleData.viscosity,
                       };
                       
+                      console.log('Updating userSelection with preserved vehicle data:', vehicle);
                       updateUserSelection({ vehicle });
-                      // Navigate to products
-                      navigate('/products');
+                      // For battery category, let the form handle navigation to products
+                      // For other categories, navigate to products
+                      if (userSelection?.category?.slug !== 'batteries') {
+                        navigate('/products');
+                      }
+                      // If it's batteries, the form will handle navigation to /products
                     }}
                   />
                 </PageTransition>
@@ -267,11 +299,11 @@ const AppRouterContent = () => {
             element={
               (() => {
                 const hasAnswers = !!userSelection?.answers;
-                const hasBatteryCategory = userSelection?.vehicle && userSelection?.category?.slug === 'battery';
+                const hasBatteryCategory = userSelection?.vehicle && userSelection?.category?.slug === 'batteries';
                 const hasLightsCategory = userSelection?.vehicle && userSelection?.category?.slug === 'lights';
-                const hasOilCategory = userSelection?.vehicle && userSelection?.category?.slug === 'oil';
+                const hasOilCategory = userSelection?.vehicle && userSelection?.category?.slug === 'oils';
                 const hasFiltrationCategory = userSelection?.vehicle && userSelection?.category?.slug === 'filtration';
-                const hasWipersCategory = userSelection?.vehicle && userSelection?.category?.slug === 'beg';
+                const hasWipersCategory = userSelection?.vehicle && userSelection?.category?.slug === 'wipers';
                 const hasRequiredState = hasAnswers || hasBatteryCategory || hasLightsCategory || hasOilCategory || hasFiltrationCategory || hasWipersCategory;
                 
                 if (!hasRequiredState) {
@@ -329,6 +361,30 @@ const AppRouterContent = () => {
                   />
                 </PageTransition>
               </Layout>
+            } 
+          />
+
+          {/* Test Page for Lights Integration */}
+          <Route 
+            path="/test/lights" 
+            element={
+              <LightsTestPage />
+            } 
+          />
+
+          {/* Test Page for Wipers Integration */}
+          <Route 
+            path="/test/wipers" 
+            element={
+              <WipersTestPage />
+            } 
+          />
+
+          {/* Test Page for NEW Wipers Position-Based Filtering */}
+          <Route 
+            path="/test/wipers-new" 
+            element={
+              <WipersTestPageNew />
             } 
           />
 

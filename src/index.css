@@ -59,6 +59,35 @@
   background-repeat: no-repeat;
 }
 
+.bg-waves-batteries{
+  background-image: url('assets/img/homepage/background-waves-batteries.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+.bg-waves-lights{
+  background-image: url('assets/img/homepage/background-waves-lights.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+.bg-waves-wipers{
+  background-image: url('assets/img/homepage/background-waves-wipers.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+
+.bg-waves-oil{
+  background-image: url('assets/img/homepage/background-waves-oil.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
 .gradient-background {
   background-image: linear-gradient(90deg, #275384 10%, #EA5F03 90%);
 }
@@ -95,6 +124,71 @@
 
 .category-card {
   scroll-snap-align: center;
+}
+
+.bg-motorisation{
+  background-color: rgba(163, 201, 211, 0.8);
+  
+}
+
+/* ===== TOUCH-FRIENDLY STYLES FOR TABLET ===== */
+/* Global touch optimizations */
+* {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Form elements touch optimization */
+input, select, button, textarea {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Allow text selection in input fields */
+input[type="text"], 
+input[type="email"], 
+input[type="search"], 
+input[type="password"], 
+input[type="number"], 
+input[type="tel"], 
+input[type="url"], 
+textarea {
+  -webkit-user-select: text;
+  user-select: text;
+  cursor: text;
+}
+
+/* Select dropdowns optimization */
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+/* Button touch optimization */
+button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Prevent zoom on double tap for form elements */
+input, select, textarea, button {
+  font-size: 16px; /* Prevents zoom on iOS */
 }
 
 /* Tablet-specific styles for 1200x1980 resolution */
@@ -145,21 +239,58 @@
     font-size: 1.1rem;
   }
   
-  /* Adjust button sizes for tablet */
+  /* Enhanced button sizes for tablet touch */
   button {
-    min-height: 48px;
-    min-width: 48px;
+    min-height: 56px;
+    min-width: 56px;
+    font-size: 1.2rem;
+    padding: 12px 24px;
   }
   
-  /* Adjust input sizes for tablet */
+  /* Enhanced input sizes for tablet touch */
   input, select, textarea {
-    min-height: 48px;
-    font-size: 1.1rem;
+    min-height: 56px;
+    font-size: 1.2rem;
+    padding: 16px;
+    border-radius: 8px;
   }
   
-  /* Adjust spacing for better touch targets */
+  /* Enhanced spacing for better touch targets */
   .touch-target {
-    min-height: 48px;
-    min-width: 48px;
+    min-height: 56px;
+    min-width: 56px;
+  }
+  
+  /* Form-specific tablet optimizations */
+  .form-input, .form-select {
+    min-height: 56px;
+    font-size: 1.2rem;
+    padding: 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .form-input:focus, .form-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+  }
+  
+  /* Enhanced select dropdown for tablet */
+  select.form-select {
+    background-size: 20px;
+    padding-right: 50px;
+  }
+  
+  /* Button hover states for tablet */
+  button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 }

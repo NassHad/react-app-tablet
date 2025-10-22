@@ -1,0 +1,451 @@
+{
+  "timestamp": "2025-09-25T14:09:20.535Z",
+  "results": {
+    "basicEndpoints": {
+      "batteryProducts": {
+        "success": false,
+        "error": {
+          "data": null,
+          "error": {
+            "status": 500,
+            "name": "InternalServerError",
+            "message": "Internal Server Error"
+          }
+        },
+        "status": 500
+      },
+      "brands": {
+        "success": true,
+        "data": {
+          "data": [
+            {
+              "id": 2,
+              "documentId": "p4dsx03xsdu1r08rww14znyk",
+              "name": "ABARTH",
+              "slug": "abarth",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:38.804Z",
+              "updatedAt": "2025-09-21T07:53:38.804Z",
+              "publishedAt": "2025-09-21T07:53:38.818Z"
+            },
+            {
+              "id": 4,
+              "documentId": "k05o27y6hj93z9wu4huxdzpr",
+              "name": "ALFA ROMEO",
+              "slug": "alfa-romeo",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:38.872Z",
+              "updatedAt": "2025-09-21T07:53:38.872Z",
+              "publishedAt": "2025-09-21T07:53:38.879Z"
+            },
+            {
+              "id": 6,
+              "documentId": "jyswk18jimycvzglosdakrcy",
+              "name": "ALPINA",
+              "slug": "alpina",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:38.934Z",
+              "updatedAt": "2025-09-21T07:53:38.934Z",
+              "publishedAt": "2025-09-21T07:53:38.942Z"
+            },
+            {
+              "id": 8,
+              "documentId": "fpifkph7ymu61gs9otwyhgsh",
+              "name": "ALPINE",
+              "slug": "alpine",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:38.990Z",
+              "updatedAt": "2025-09-21T07:53:38.990Z",
+              "publishedAt": "2025-09-21T07:53:38.997Z"
+            },
+            {
+              "id": 10,
+              "documentId": "q4hqy364uhrcj3risivcm84m",
+              "name": "AUDI",
+              "slug": "audi",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.045Z",
+              "updatedAt": "2025-09-21T07:53:39.045Z",
+              "publishedAt": "2025-09-21T07:53:39.053Z"
+            },
+            {
+              "id": 12,
+              "documentId": "nkeztcqcq663xhwv066z2a7x",
+              "name": "AUTOBIANCHI",
+              "slug": "autobianchi",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.102Z",
+              "updatedAt": "2025-09-21T07:53:39.102Z",
+              "publishedAt": "2025-09-21T07:53:39.109Z"
+            },
+            {
+              "id": 14,
+              "documentId": "i64vy50p7sf3ug0s1ylk7v3u",
+              "name": "BMW",
+              "slug": "bmw",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.160Z",
+              "updatedAt": "2025-09-21T07:53:39.160Z",
+              "publishedAt": "2025-09-21T07:53:39.168Z"
+            },
+            {
+              "id": 16,
+              "documentId": "o08z3m92qladwghai9do6f69",
+              "name": "CADILLAC",
+              "slug": "cadillac",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.222Z",
+              "updatedAt": "2025-09-21T07:53:39.222Z",
+              "publishedAt": "2025-09-21T07:53:39.229Z"
+            },
+            {
+              "id": 18,
+              "documentId": "um281r9lxfo5mcyt73w0fa9k",
+              "name": "CHEVROLET",
+              "slug": "chevrolet",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.286Z",
+              "updatedAt": "2025-09-21T07:53:39.286Z",
+              "publishedAt": "2025-09-21T07:53:39.294Z"
+            },
+            {
+              "id": 20,
+              "documentId": "jahnkhqo0a5yhszw8oee0hde",
+              "name": "CHRYSLER",
+              "slug": "chrysler",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.339Z",
+              "updatedAt": "2025-09-21T07:53:39.339Z",
+              "publishedAt": "2025-09-21T07:53:39.345Z"
+            },
+            {
+              "id": 22,
+              "documentId": "vvd4mg1meakr4unkd1dtyuj2",
+              "name": "CITRO�N",
+              "slug": "citron",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.445Z",
+              "updatedAt": "2025-09-21T07:53:39.445Z",
+              "publishedAt": "2025-09-21T07:53:39.454Z"
+            },
+            {
+              "id": 24,
+              "documentId": "hyton916wt34957k5udma7lz",
+              "name": "CUPRA",
+              "slug": "cupra",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.497Z",
+              "updatedAt": "2025-09-21T07:53:39.497Z",
+              "publishedAt": "2025-09-21T07:53:39.506Z"
+            },
+            {
+              "id": 26,
+              "documentId": "kdir33esx5pxldrpu42d80ld",
+              "name": "DACIA",
+              "slug": "dacia",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.581Z",
+              "updatedAt": "2025-09-21T07:53:39.581Z",
+              "publishedAt": "2025-09-21T07:53:39.591Z"
+            },
+            {
+              "id": 28,
+              "documentId": "q8ptq05jzg3mjy3d0xyqyz9a",
+              "name": "DAEWOO",
+              "slug": "daewoo",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.664Z",
+              "updatedAt": "2025-09-21T07:53:39.664Z",
+              "publishedAt": "2025-09-21T07:53:39.672Z"
+            },
+            {
+              "id": 30,
+              "documentId": "yiuvg83vchikiq9l4co54768",
+              "name": "DAIHATSU",
+              "slug": "daihatsu",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.717Z",
+              "updatedAt": "2025-09-21T07:53:39.717Z",
+              "publishedAt": "2025-09-21T07:53:39.723Z"
+            },
+            {
+              "id": 32,
+              "documentId": "l8zn5g24c9h9ltzqj9j7to9w",
+              "name": "DAIMLER",
+              "slug": "daimler",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.769Z",
+              "updatedAt": "2025-09-21T07:53:39.769Z",
+              "publishedAt": "2025-09-21T07:53:39.776Z"
+            },
+            {
+              "id": 34,
+              "documentId": "b7b7vih8460bae9fohe8kgc1",
+              "name": "DS",
+              "slug": "ds",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.818Z",
+              "updatedAt": "2025-09-21T07:53:39.818Z",
+              "publishedAt": "2025-09-21T07:53:39.823Z"
+            },
+            {
+              "id": 36,
+              "documentId": "ydtponlx8plilaw0oet31xtc",
+              "name": "FIAT",
+              "slug": "fiat",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.863Z",
+              "updatedAt": "2025-09-21T07:53:39.863Z",
+              "publishedAt": "2025-09-21T07:53:39.869Z"
+            },
+            {
+              "id": 38,
+              "documentId": "xa9raig30nxg3agvaiawa6eh",
+              "name": "FORD",
+              "slug": "ford",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.910Z",
+              "updatedAt": "2025-09-21T07:53:39.910Z",
+              "publishedAt": "2025-09-21T07:53:39.917Z"
+            },
+            {
+              "id": 40,
+              "documentId": "cikn90cmagpeywoym7zgkncj",
+              "name": "FORD USA",
+              "slug": "ford-usa",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:39.954Z",
+              "updatedAt": "2025-09-21T07:53:39.954Z",
+              "publishedAt": "2025-09-21T07:53:39.960Z"
+            },
+            {
+              "id": 42,
+              "documentId": "o1uxt42siou5qvuuw3q95lhu",
+              "name": "HONDA",
+              "slug": "honda",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:40.004Z",
+              "updatedAt": "2025-09-21T07:53:40.004Z",
+              "publishedAt": "2025-09-21T07:53:40.010Z"
+            },
+            {
+              "id": 44,
+              "documentId": "ceiit5fea2ww70ifsj0136s7",
+              "name": "HYUNDAI",
+              "slug": "hyundai",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:40.059Z",
+              "updatedAt": "2025-09-21T07:53:40.059Z",
+              "publishedAt": "2025-09-21T07:53:40.065Z"
+            },
+            {
+              "id": 46,
+              "documentId": "higsl6wgtkeyq5o0v8dc05vv",
+              "name": "INFINITI",
+              "slug": "infiniti",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:40.107Z",
+              "updatedAt": "2025-09-21T07:53:40.107Z",
+              "publishedAt": "2025-09-21T07:53:40.114Z"
+            },
+            {
+              "id": 48,
+              "documentId": "xapyqsjlecs9x3xj6a34o58z",
+              "name": "IRMSCHER",
+              "slug": "irmscher",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:40.159Z",
+              "updatedAt": "2025-09-21T07:53:40.159Z",
+              "publishedAt": "2025-09-21T07:53:40.164Z"
+            },
+            {
+              "id": 50,
+              "documentId": "s0su7nco9un1riywxv5vzpsa",
+              "name": "ISUZU",
+              "slug": "isuzu",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:40.213Z",
+              "updatedAt": "2025-09-21T07:53:40.213Z",
+              "publishedAt": "2025-09-21T07:53:40.219Z"
+            }
+          ],
+          "meta": {
+            "pagination": {
+              "page": 1,
+              "pageSize": 25,
+              "pageCount": 3,
+              "total": 71
+            }
+          }
+        },
+        "status": 200
+      }
+    },
+    "customEndpoints": {
+      "bySlugs": {
+        "success": false,
+        "error": {
+          "data": null,
+          "error": {
+            "status": 500,
+            "name": "InternalServerError",
+            "message": "Internal Server Error"
+          }
+        },
+        "status": 500
+      },
+      "byBrand": {
+        "success": false,
+        "error": {
+          "data": null,
+          "error": {
+            "status": 500,
+            "name": "InternalServerError",
+            "message": "Internal Server Error"
+          }
+        },
+        "status": 500
+      },
+      "summary": {
+        "success": false,
+        "error": {
+          "data": null,
+          "error": {
+            "status": 500,
+            "name": "InternalServerError",
+            "message": "Internal Server Error"
+          }
+        },
+        "status": 500
+      }
+    },
+    "fallbackEndpoints": {
+      "motorisations": {
+        "success": true,
+        "data": {
+          "data": [
+            {
+              "id": "motor-0",
+              "motorisation": "1.6 16V T.SPARK",
+              "fuel": "Petrole",
+              "startDate": "2000-12-31T23:00:00.000Z",
+              "endDate": "2010-02-28T23:00:00.000Z",
+              "batteryModelId": 1,
+              "batteryModelSlug": "alfa-romeo-147"
+            },
+            {
+              "id": "motor-1",
+              "motorisation": "ECO",
+              "fuel": "Petrole",
+              "startDate": "2000-12-31T23:00:00.000Z",
+              "endDate": "2010-02-28T23:00:00.000Z",
+              "batteryModelId": 1,
+              "batteryModelSlug": "alfa-romeo-147"
+            },
+            {
+              "id": "motor-2",
+              "motorisation": "1.9 JTD",
+              "fuel": "Diesel",
+              "startDate": "2001-03-31T22:00:00.000Z",
+              "endDate": "2010-02-28T23:00:00.000Z",
+              "batteryModelId": 1,
+              "batteryModelSlug": "alfa-romeo-147"
+            },
+            {
+              "id": "motor-3",
+              "motorisation": "1.9 JTD 16V",
+              "fuel": "Diesel",
+              "startDate": "2001-03-31T22:00:00.000Z",
+              "endDate": "2010-02-28T23:00:00.000Z",
+              "batteryModelId": 1,
+              "batteryModelSlug": "alfa-romeo-147"
+            },
+            {
+              "id": "motor-4",
+              "motorisation": "1.9 JTDM",
+              "fuel": "Diesel",
+              "startDate": "2001-03-31T22:00:00.000Z",
+              "endDate": "2010-02-28T23:00:00.000Z",
+              "batteryModelId": 1,
+              "batteryModelSlug": "alfa-romeo-147"
+            },
+            {
+              "id": "motor-5",
+              "motorisation": "16V",
+              "fuel": "Diesel",
+              "startDate": "2001-03-31T22:00:00.000Z",
+              "endDate": "2010-02-28T23:00:00.000Z",
+              "batteryModelId": 1,
+              "batteryModelSlug": "alfa-romeo-147"
+            }
+          ],
+          "success": true,
+          "message": "Found 6 motorisation(s) for alfa-romeo 147",
+          "model": {
+            "id": 15,
+            "name": "147",
+            "slug": "147",
+            "brand": {
+              "id": 3,
+              "documentId": "k05o27y6hj93z9wu4huxdzpr",
+              "name": "ALFA ROMEO",
+              "slug": "alfa-romeo",
+              "isActive": true,
+              "createdAt": "2025-09-21T07:53:38.872Z",
+              "updatedAt": "2025-09-21T07:53:38.872Z",
+              "publishedAt": null,
+              "locale": null
+            }
+          },
+          "batteryModel": {
+            "id": 1,
+            "name": "147",
+            "slug": "alfa-romeo-147",
+            "modelSlug": "alfa-romeo-147"
+          }
+        },
+        "status": 200
+      },
+      "products": {
+        "success": false,
+        "error": {
+          "data": null,
+          "error": {
+            "status": 404,
+            "name": "NotFoundError",
+            "message": "Not Found",
+            "details": {}
+          }
+        },
+        "status": 404
+      },
+      "motorisationBatteries": {
+        "success": false,
+        "error": {
+          "data": null,
+          "error": {
+            "status": 404,
+            "name": "NotFoundError",
+            "message": "Not Found",
+            "details": {}
+          }
+        },
+        "status": 404
+      }
+    },
+    "summary": {}
+  },
+  "summary": {
+    "workingEndpoints": [
+      "battery-selection/motorisations"
+    ],
+    "brokenEndpoints": [
+      "battery-products/bySlugs",
+      "battery-products/byBrand",
+      "battery-products/summary"
+    ],
+    "hasBatteryTypes": false,
+    "hasData": true,
+    "recommendedApproach": "Use fallback battery-selection endpoints (no battery types)"
+  }
+}

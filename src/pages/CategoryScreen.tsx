@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import type { ProductCategory, Vehicle } from '../types';
 import { dataService } from '../services/dataService';
 import { useClickAnimation } from '../hooks/useClickAnimation';
-import { useSimpleVehicleContext } from '../contexts/SimpleVehicleContext';
 
 // Import category images
 import batteryImage from '../assets/img/categories/battery.png';
@@ -18,9 +17,8 @@ interface CategoryScreenProps {
   onCategorySelect: (category: ProductCategory) => void;
 }
 
-const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
+const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
   const navigate = useNavigate();
-  const { vehicleData, setCategory } = useSimpleVehicleContext();
   const [categories, setCategories] = useState<ProductCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -36,9 +34,29 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
         
         // Filter only active categories
         const activeCategories = categoriesData.filter(category => category.active);
-        console.log("Active categories:", activeCategories);
         
-        setCategories(activeCategories);
+        // Sort categories: available first, then disabled
+        const sortedCategories = activeCategories.sort((a, b) => {
+          const aDisabled = a.slug === 'wipers' || a.slug === 'oil' || a.slug === 'filters' ||
+                           a.name.toLowerCase().includes('balai') || 
+                           a.name.toLowerCase().includes('huile') ||
+                           a.name.toLowerCase().includes('filtration');
+          const bDisabled = b.slug === 'wipers' || b.slug === 'oil' || b.slug === 'filters' ||
+                           b.name.toLowerCase().includes('balai') || 
+                           b.name.toLowerCase().includes('huile') ||
+                           b.name.toLowerCase().includes('filtration');
+          
+          // Available categories (not disabled) come first
+          if (!aDisabled && bDisabled) return -1;
+          if (aDisabled && !bDisabled) return 1;
+          return 0; // Keep original order for same type
+        });
+        
+        console.log("Active categories:", sortedCategories);
+        console.log("Categories count:", sortedCategories.length);
+        console.log("Categories IDs:", sortedCategories.map(c => c.id));
+        
+        setCategories(sortedCategories);
       } catch (error) {
         console.error('Error loading categories:', error);
       } finally {
@@ -99,21 +117,21 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
 
   const handleCategorySelect = async (category: ProductCategory) => {
     console.log('Category selected:', category);
-    console.log('Vehicle data from context:', vehicleData);
+    console.log('Vehicle data from props:', vehicle);
     onCategorySelect(category);
     
-    // Store category in context
-    setCategory(category);
-    
-    // Check if we have vehicle data from context
-    if (vehicleData.vehicleType && vehicleData.brand && vehicleData.model) {
+    // Check if we have vehicle data from props
+    if (vehicle && vehicle.type && vehicle.brand && vehicle.model) {
       // We have vehicle data, check if category needs specific form
       if (category.slug === 'batteries' || category.name.toLowerCase().includes('batterie')) {
         // Navigate to battery-specific form
         navigate('/category-specific');
       } else if (category.slug === 'lights' || category.name.toLowerCase().includes('éclairage')) {
-        // Navigate to lights-specific form
-        navigate('/category-specific');
+        // Navigate directly to questions page for lights
+        navigate('/questions');
+      } else if (category.slug === 'wipers' || category.slug === 'beg' || category.name.toLowerCase().includes('essuie-glace') || category.name.toLowerCase().includes('balais')) {
+        // Navigate directly to questions page for wipers
+        navigate('/questions');
       } else if (category.slug === 'oil' || category.name.toLowerCase().includes('huile')) {
         // Navigate to oil-specific form
         navigate('/category-specific');
@@ -177,12 +195,16 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
   const getCategoryAnimation = (categoryName: string) => {
     switch (categoryName) {
       case "Balais essuie-glace":
+      case "Essuie-glaces":
         return wiperAnimation;
       case 'Batterie':
+      case 'Batteries':
         return batteryAnimation;
       case 'Huile':
+      case 'Huiles':
         return oilAnimation;
       case 'Éclairage':
+      case 'Eclairage':
         return bulbAnimation;
       case 'Filtration':
         return filtrationAnimation;
@@ -195,12 +217,16 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
   const getCategoryImage = (categoryName: string) => {
     switch (categoryName) {
       case "Balais essuie-glace":
+      case "Essuie-glaces":
         return begImage; // Wiper blades image
       case 'Batterie':
+      case 'Batteries':
         return batteryImage; // Battery image
       case 'Huile':
+      case 'Huiles':
         return oilImage; // Oil image
       case 'Éclairage':
+      case 'Eclairage':
         return lightsImage; // Lighting image
       case 'Filtration':
         return filtrationImage; // Filter image
@@ -213,12 +239,16 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
   const getCategoryColor = (categoryName: string) => {
     switch (categoryName) {
       case "Balais essuie-glace":
+      case "Essuie-glaces":
         return 'bg-[#93C452]'; // Green for wipers
       case 'Batterie':
+      case 'Batteries':
         return 'bg-[#FD171F]'; // Red for batteries
       case 'Huile':
+      case 'Huiles':
         return 'bg-[#F3B11F]'; // Orange/Yellow for oil
       case 'Éclairage':
+      case 'Eclairage':
         return 'bg-[#235387]'; // Dark blue for lighting
       case 'Filtration':
         return 'bg-[#96A7B9]'; // Light gray for filtration
@@ -239,13 +269,13 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Main content */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6 bg-waves-hp tablet-main-content">
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6 tablet-main-content">
         {/* Instruction text */}
-        <div className="text-center mb-16 mt-16">
+        <div className="text-center mb-16 mt-8">
           <h2 className="text-5xl text-gray-500 tablet-title">
-            Cliquez sur une catégorie pour voir les produits
+            Choisissez une catégorie
           </h2>
         </div>
 
@@ -284,17 +314,26 @@ const CategoryScreen = ({ onCategorySelect }: CategoryScreenProps) => {
             className="w-full max-w-full overflow-x-auto category-scroll-container"
           >
             <div className="flex flex-col md:flex-row gap-8 justify-center items-center min-w-max px-4 md:px-0 category-cards-container tablet-category-cards">
+              {(() => { console.log("Rendering categories:", categories.map(c => ({ id: c.id, name: c.name }))); return null; })()}
               {categories.map((category) => {
                 const animation = getCategoryAnimation(category.name);
                 const imageSrc = getCategoryImage(category.name);
                 const bgColor = getCategoryColor(category.name);
                 
+                // Check if category should be disabled
+                const isDisabled = category.slug === 'oil' || category.slug === 'filters' ||
+                                 category.name.toLowerCase().includes('balai') || 
+                                 category.name.toLowerCase().includes('huile') ||
+                                 category.name.toLowerCase().includes('filtration');
+                
                 return (
                   <motion.div
                     key={category.id}
-                    onClick={animation.handleClick}
-                    className="relative w-80 h-102 rounded-lg shadow-lg cursor-pointer overflow-hidden flex-shrink-0 category-card tablet-category-card"
-                    {...animation.animationProps}
+                    onClick={isDisabled ? undefined : () => handleCategorySelect(category)}
+                    className={`relative w-80 h-102 rounded-lg shadow-lg overflow-hidden flex-shrink-0 category-card tablet-category-card ${
+                      isDisabled ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'
+                    }`}
+                    {...(isDisabled ? {} : animation.animationProps)}
                   >
                     {/* Image */}
                     <img 

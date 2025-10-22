@@ -18,7 +18,7 @@ export interface DataSourceConfig {
 
 // Configuration to easily switch between data sources
 export const DATA_SOURCE_CONFIG: DataSourceConfig = {
-  currentSource: DataSource.STRAPI, // Change this to switch between sources
+  currentSource: DataSource.STRAPI, // Use STRAPI for web development
   
   strapi: {
     baseUrl: 'http://localhost:1338',
@@ -28,7 +28,7 @@ export const DATA_SOURCE_CONFIG: DataSourceConfig = {
   
   localDatabase: {
     enabled: true, // Keep local DB as fallback
-    fallbackToMock: true,
+    fallbackToMock: true, // Enable mock data for web development
   }
 };
 

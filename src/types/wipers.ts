@@ -49,6 +49,23 @@ export interface WipersPositionData {
   ref: string;
   description: string;
   category: string;
+  wiperData?: {
+    id: number;
+    ref: string;
+    brand: string;
+    description: string;
+    category: string;
+    gtiCode: string;
+    genCode: string;
+    isActive: boolean;
+    size: string;
+    img?: {
+      url: string;
+    };
+    brandImg?: {
+      url: string;
+    };
+  };
 }
 
 // Brand Types (reused from lights)

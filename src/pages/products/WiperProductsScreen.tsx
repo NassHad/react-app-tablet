@@ -67,8 +67,8 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
       console.log(`🔍 Searching for wiper data with ref: "${ref}"`);
       
        const searchStrategies = [
-         { type: 'exact', query: `filters[ref][$eq]=${encodeURIComponent(ref)}&populate=brandImg,img` },
-         { type: 'contains', query: `filters[ref][$contains]=${encodeURIComponent(ref)}&populate=brandImg,img` },
+         { type: 'exact', query: `filters[ref][$eq]=${encodeURIComponent(ref)}&populate=*` },
+         { type: 'contains', query: `filters[ref][$contains]=${encodeURIComponent(ref)}&populate=*` },
        ];
 
       // Try each search strategy
@@ -86,7 +86,7 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
        const cleanRef = ref.replace(/[^a-zA-Z0-9]/g, '');
        if (cleanRef !== ref) {
          console.log(`🔍 Trying clean ref match for "${cleanRef}"`);
-         const response = await fetch(`http://localhost:1338/api/wipers-data?filters[ref][$contains]=${encodeURIComponent(cleanRef)}&populate=brandImg,img`);
+         const response = await fetch(`http://localhost:1338/api/wipers-data?filters[ref][$contains]=${encodeURIComponent(cleanRef)}&populate=*`);
          const result = await response.json();
         
         if (result.data?.length > 0) {
@@ -107,7 +107,7 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
   // Function to get all wiper data to debug what's in the database
   const getAllWiperData = async () => {
     try {
-      const response = await fetch('http://localhost:1338/api/wipers-data?populate=brandImg,img');
+      const response = await fetch('http://localhost:1338/api/wipers-data?populate=*');
       const result = await response.json();
       console.log('🔍 All wiper data in database:', result.data);
       return result.data || [];
@@ -217,9 +217,6 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
     }
   }, [fetchAllWiperData]);
 
-  const handleProductDetails = (productId: string) => {
-    navigate(`/product-details/${productId}`);
-  };
 
   if (loadingProducts || loadingWiperData) {
     return (
@@ -257,7 +254,6 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
         
         {/* Vertical scrollable container */}
         <div className="overflow-y-auto max-h-110 pb-8">
-          <div className="">
             {products.length === 0 ? (
               <div className="text-center py-12">
                 <p className="text-xl text-gray-600">Aucun produit trouvé pour cette position.</p>
@@ -291,74 +287,65 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
                   wipersPositions: product.wipersPositions
                 });
                 
-                // Get all wiper data variants for this reference
-                const allWiperData = positionRef ? getAllWiperDataForRef(positionRef) : [];
-                console.log('🔍 allWiperData:', allWiperData);
+                // Use the wiperData from the API response instead of fetching separately
+                const wiperDataItem = positionData?.wiperData;
+                console.log('🔍 wiperDataItem from API:', wiperDataItem);
+                console.log('🔍 positionData full structure:', positionData);
+                console.log('🔍 positionData.ref:', positionData?.ref);
                 
                 return (
-                  <div key={product.id}>
-                    {allWiperData.length > 0 ? (
-                      // Show all wiper data variants for this reference
-                      allWiperData.map((wiperDataItem, wiperIndex) => (
-                        <div
-                          key={`${product.id}-${positionRef}-${wiperDataItem.id}`}
-                          className="bg-white rounded-lg flex items-center justify-between"
-                        >
-                          {/* Wiper Product Info */}
-                          <div className="flex flex-row justify-center w-full border-b-1 border-[#E5E5E5] items-center">
-                            <div className="w-full max-w-4xl">
-                              <div className="ml-2 text-sm text-gray-700">
-                                <div className="flex flex-row items-center">
-                                    {/* 1. Brand Image */}
-                                    <div className="w-32 h-16 ml-4 flex items-center justify-center">
-                                      {wiperDataItem.brandImg?.url ? (
-                                        <img 
-                                          src={`http://localhost:1338${wiperDataItem.brandImg.url}`}
-                                          alt={`${wiperDataItem.brand} Logo`}
-                                          className="w-32 h-16 object-contain"
-                                          onError={(e) => {
-                                            e.currentTarget.src = '/assets/img/placeholder-brand.svg';
-                                          }}
-                                        />
-                                      ) : (
-                                        <div className="w-32 h-16 flex items-center justify-center text-gray-400 text-xs">
-                                          {wiperDataItem.brand}
-                                        </div>
-                                      )}
-                                    </div>
-                                  
-                                  {/* 2. Description */}
-                                  <div className="text-xl text-black flex-1 ml-4">
-                                    {wiperDataItem.ref}
-                                  </div>
-                                  
-                                  {/* 3. Reference */}
-                                  <div className="w-24 h-24 ml-4 flex items-center justify-center text-xl text-black">
-                                    {wiperDataItem.size}
-                                  </div>
-
-                                  <div className="w-24 h-24 ml-4 flex items-center justify-center text-xl text-black">
-                                  {wiperDataItem.img?.url ? (
-                                        <img 
-                                          src={`http://localhost:1338${wiperDataItem.img.url}`}
-                                          alt={`Image de l'essuie-glace ${wiperDataItem.ref}`}
-                                          className="w-24 h-24 object-contain"
-                                          onError={(e) => {
-                                            e.currentTarget.src = '/assets/img/placeholder-brand.svg';
-                                          }}
-                                        />
-                                      ) : (
-                                        <div className="w-24 h-24 flex items-center justify-center text-gray-400 text-xs">
-                                          Aucune image disponible
-                                        </div>
-                                      )}
-                                  </div>
-                                </div>
-                              </div>
+                  <>
+                    {wiperDataItem ? (
+                      // Show the wiper data from the API response
+                      <div
+                        key={`${product.id}-${positionRef}-${wiperDataItem.id}`}
+                        className="bg-white rounded-lg flex flex-row justify-center w-full border-b-1 border-[#E5E5E5] items-center overflow-hidden"
+                      >
+                        {/* Wiper Product Info */}
+                        {/* 1. Brand Image */}
+                        <div className="w-1/4 h-16 ml-4 flex items-center justify-center">
+                          {wiperDataItem.brandImg?.url ? (
+                            <img 
+                              src={`http://localhost:1338${wiperDataItem.brandImg.url}`}
+                              alt={`${wiperDataItem.brand} Logo`}
+                              className="w-32 h-16 object-contain"
+                              onError={(e) => {
+                                e.currentTarget.src = '/assets/img/placeholder-brand.svg';
+                              }}
+                            />
+                          ) : (
+                            <div className="w-32 h-16 flex items-center justify-center text-gray-400 text-xs">
+                              {wiperDataItem.brand}
                             </div>
-                          </div>
+                          )}
                         </div>
-                      ))
+                        
+                        {/* 2. Description */}
+                        <div className="w-1/4 text-xl text-black flex-1 ml-4">
+                          {positionData?.ref || wiperDataItem?.ref || 'N/A'}
+                        </div>
+                        
+                        {/* 3. Reference */}
+                        <div className="w-1/4 h-24 ml-4 text-center leading-24 text-xl text-black">
+                          {wiperDataItem.size}
+                        </div>
+
+                        <div className="w-1/4 h-24 ml-4 leading-24 text-center text-xl text-black">
+                        {wiperDataItem.img?.url ? (
+                              <img 
+                                src={`http://localhost:1338${wiperDataItem.img.url}`}
+                                alt={`Image de l'essuie-glace ${wiperDataItem.ref}`}
+                                className="w-24 h-24 object-contain"
+                                onError={(e) => {
+                                  e.currentTarget.src = '/assets/img/placeholder-brand.svg';
+                                }}
+                              />
+                            ) : (<>
+                                Aucune image disponible
+                              </>
+                            )}
+                        </div>
+                      </div>
                     ) : (
                       // Fallback: show product without wiper data
                       <div
@@ -377,13 +364,12 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
                             </div>
                           </div>
                         </div>
-                      </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
+                  </>
                 );
               })
             )}
-          </div>
         </div>
 
         {/* Scroll indicator */}
@@ -398,4 +384,4 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
   );
 };
 
-export default WiperProductsScreen;
+export default WiperProductsScreen; 

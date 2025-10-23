@@ -239,19 +239,26 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
     );
   }
 
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-red-600 mb-4">Erreur</h2>
+          <p className="text-gray-600 mb-4">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex justify-center">
       <div className="w-1/4">
         <img src="/src/assets/img/categories/wiper/beg_classique.png" alt="Wiper" className="max-w-3xl h-auto object-contain m-[-5rem]" />
       </div>
       <div className="text-center w-1/2 flex flex-col">
-        <h1 className="text-5xl font-bold text-gray-category mb-8 leading-15">
-          Balais d'essuie-glace pour {positionName || 'position sélectionnée'}
+        <h1 className="text-5xl font-semibold text-gray-category mt-20 mb-8 leading-15">
+          Liste des balais, <span className='text-green-wiper-category capitalize-first-letter'>{positionName || 'position sélectionnée'}</span> pour votre <span className='text-green-wiper-category capitalize-first-letter'>{userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</span>
         </h1>
-        <p className="text-2xl text-gray-600 mb-12">
-          Compatible avec votre <span className='text-blue-wiper-category capitalize-first-letter'>{userSelection?.vehicle?.brand} {userSelection?.vehicle?.model}</span>
-        </p>
-        
         {/* Vertical scrollable container */}
         <div className="overflow-y-auto max-h-110 pb-8">
             {products.length === 0 ? (

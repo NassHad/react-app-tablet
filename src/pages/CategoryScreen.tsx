@@ -321,10 +321,7 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
                 const bgColor = getCategoryColor(category.name);
                 
                 // Check if category should be disabled
-                const isDisabled = category.slug === 'oil' || category.slug === 'filters' ||
-                                 category.name.toLowerCase().includes('balai') || 
-                                 category.name.toLowerCase().includes('huile') ||
-                                 category.name.toLowerCase().includes('filtration');
+                const isDisabled = category.slug === 'oil' ||category.name.toLowerCase().includes('huile');
                 
                 return (
                   <motion.div

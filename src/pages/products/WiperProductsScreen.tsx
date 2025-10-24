@@ -19,180 +19,108 @@ interface WiperData {
   isActive: boolean;
   size: string;
   img?: {
+    id: number;
+    name: string;
     url: string;
+    alternativeText?: string;
+    caption?: string;
+    width: number;
+    height: number;
     formats?: {
-      thumbnail?: { url: string };
-      small?: { url: string };
-      medium?: { url: string };
-      large?: { url: string };
+      thumbnail?: { 
+        name: string;
+        hash: string;
+        ext: string;
+        url: string;
+        width: number;
+        height: number;
+      };
+      small?: { 
+        name: string;
+        hash: string;
+        ext: string;
+        url: string;
+        width: number;
+        height: number;
+      };
+      medium?: { 
+        name: string;
+        hash: string;
+        ext: string;
+        url: string;
+        width: number;
+        height: number;
+      };
+      large?: { 
+        name: string;
+        hash: string;
+        ext: string;
+        url: string;
+        width: number;
+        height: number;
+      };
     };
   };
   brandImg?: { 
+    id: number;
+    name: string;
     url: string;
+    alternativeText?: string;
+    caption?: string;
+    width: number;
+    height: number;
     formats?: {
-      thumbnail?: { url: string };
-      small?: { url: string };
-      medium?: { url: string };
-      large?: { url: string };
+      thumbnail?: { 
+        name: string;
+        hash: string;
+        ext: string;
+        url: string;
+        width: number;
+        height: number;
+      };
+      small?: { 
+        name: string;
+        hash: string;
+        ext: string;
+        url: string;
+        width: number;
+        height: number;
+      };
+      medium?: { 
+        name: string;
+        hash: string;
+        ext: string;
+        url: string;
+        width: number;
+        height: number;
+      };
     };
   };
 }
 
 const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
   const navigate = useNavigate();
-  
+  const [zoomedImage, setZoomedImage] = useState<{ url: string; alt: string } | null>(null);
+
+  // Function to handle image zoom
+  const handleImageZoom = (imageUrl: string, alt: string) => {
+    setZoomedImage({ url: imageUrl, alt });
+  };
+
+  // Function to close zoom modal
+  const closeZoomModal = () => {
+    setZoomedImage(null);
+  };
+
   // Use the wipers data hook to get the filtered products
   const {
     products,
     loadingProducts,
-    error,
     fetchProductsBySlugsAndPosition
   } = useWipersData();
-
-  // State for wiper data (stores arrays of wiper data per reference)
-  const [wiperData, setWiperData] = useState<Record<string, WiperData[]>>({});
-  const [loadingWiperData, setLoadingWiperData] = useState(false);
-
-  console.log('🔍 products:', products);
-  console.log('🔍 userSelection:', userSelection);
-  console.log('🔍 loadingProducts:', loadingProducts);
   
   // Get the selected position from userSelection answers
-  const selectedPosition = userSelection?.answers?.position;
   const positionName = userSelection?.answers?.positionName;
-
-  // Function to fetch wiper data for a specific reference
-  const fetchWiperDataByRef = async (ref: string): Promise<WiperData[]> => {
-    try {
-      console.log(`🔍 Searching for wiper data with ref: "${ref}"`);
-      
-       const searchStrategies = [
-         { type: 'exact', query: `filters[ref][$eq]=${encodeURIComponent(ref)}&populate=*` },
-         { type: 'contains', query: `filters[ref][$contains]=${encodeURIComponent(ref)}&populate=*` },
-       ];
-
-      // Try each search strategy
-      for (const strategy of searchStrategies) {
-        const response = await fetch(`http://localhost:1338/api/wipers-data?${strategy.query}`);
-        const result = await response.json();
-
-        if (result.data?.length > 0) {
-          console.log(`✅ Found ${result.data.length} ${strategy.type} matches for "${ref}"`);
-          return result.data;
-        }
-      }
-
-       // Try clean ref as last resort
-       const cleanRef = ref.replace(/[^a-zA-Z0-9]/g, '');
-       if (cleanRef !== ref) {
-         console.log(`🔍 Trying clean ref match for "${cleanRef}"`);
-         const response = await fetch(`http://localhost:1338/api/wipers-data?filters[ref][$contains]=${encodeURIComponent(cleanRef)}&populate=*`);
-         const result = await response.json();
-        
-        if (result.data?.length > 0) {
-          console.log(`✅ Found ${result.data.length} clean ref matches for "${cleanRef}"`);
-          return result.data;
-        }
-      }
-      
-      console.log(`❌ No wiper data found for reference: "${ref}"`);
-      return [];
-
-    } catch (error) {
-      console.error(`Error fetching wiper data for ${ref}:`, error);
-      return [];
-    }
-  };
-
-  // Function to get all wiper data to debug what's in the database
-  const getAllWiperData = async () => {
-    try {
-      const response = await fetch('http://localhost:1338/api/wipers-data?populate=*');
-      const result = await response.json();
-      console.log('🔍 All wiper data in database:', result.data);
-      return result.data || [];
-    } catch (error) {
-      console.error('Error fetching all wiper data:', error);
-      return [];
-    }
-  };
-
-  // Function to fetch wiper data for all wiper references in products
-  const fetchAllWiperData = useCallback(async () => {
-    if (products.length === 0) return;
-    
-    setLoadingWiperData(true);
-    const wiperDataMap: Record<string, WiperData[]> = {};
-    
-    // First, let's see what's in the database
-    console.log('🔍 Getting all wiper data to debug...');
-    await getAllWiperData();
-    
-    // Collect all unique wiper references from products
-    const wiperRefs = new Set<string>();
-    products.forEach(product => {
-      console.log(`🔍 Processing wiper product: ${product.name}`);
-      
-      // Extract refs from wipersPositions array
-      if (product.wipersPositions && Array.isArray(product.wipersPositions)) {
-        product.wipersPositions.forEach((pos: any) => {
-          // Match position by slug
-          const selectedPos = Array.isArray(selectedPosition) ? selectedPosition[0] : selectedPosition;
-          if (pos.slug === selectedPos || pos.name.toLowerCase() === selectedPos?.toLowerCase()) {
-            wiperRefs.add(pos.ref);
-            console.log(`   Adding wiper ref: ${pos.ref} for position ${pos.position} (${pos.category})`);
-          }
-        });
-      }
-      
-      // Fallback: use product ref if no wipersPositions
-      if (product.ref && product.ref !== 'Multiple') {
-        wiperRefs.add(product.ref);
-        console.log(`   Adding product ref as fallback: ${product.ref}`);
-      }
-    });
-    
-    console.log('🔍 Fetching wiper data for refs:', Array.from(wiperRefs));
-    
-    // Fetch data for each wiper reference
-    const promises = Array.from(wiperRefs).map(async (ref) => {
-      console.log(`🔍 Fetching data for wiper ref: ${ref}`);
-      const dataArray = await fetchWiperDataByRef(ref);
-      if (dataArray && dataArray.length > 0) {
-        console.log(`✅ Found ${dataArray.length} wiper data entries for ${ref}:`, dataArray);
-        wiperDataMap[ref] = dataArray;
-      } else {
-        console.log(`❌ No data found for ${ref}`);
-        wiperDataMap[ref] = [];
-      }
-    });
-    
-    await Promise.all(promises);
-    
-    console.log('🔍 Wiper data fetched:', wiperDataMap);
-    setWiperData(wiperDataMap);
-    setLoadingWiperData(false);
-  }, [products, selectedPosition]);
-
-  // Helper function to get wiper data for a specific reference (returns first item)
-  const getWiperDataForRef = (ref: string) => {
-    const dataArray = wiperData[ref];
-    if (!dataArray || dataArray.length === 0) {
-      console.log(`⚠️  No wiper data found for ref: ${ref}`);
-      return null;
-    }
-    return dataArray[0];
-  };
-
-  // Helper function to get all wiper data for a specific reference
-  const getAllWiperDataForRef = (ref: string) => {
-    const dataArray = wiperData[ref];
-    if (!dataArray || dataArray.length === 0) {
-      console.log(`⚠️  No wiper data found for ref: ${ref}`);
-      return [];
-    }
-    return dataArray;
-  };
   
   // Fetch products when component mounts if we have the required data
   useEffect(() => {
@@ -210,15 +138,8 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
     fetchProducts();
   }, [userSelection, products.length, fetchProductsBySlugsAndPosition]);
 
-  // Fetch wiper data when products change
-  useEffect(() => {
-    if (products.length > 0) {
-      fetchAllWiperData();
-    }
-  }, [fetchAllWiperData]);
 
-
-  if (loadingProducts || loadingWiperData) {
+  if (loadingProducts) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-2xl text-gray-600">
@@ -228,32 +149,10 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
     );
   }
 
-  if (error) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-red-600 mb-4">Erreur</h2>
-          <p className="text-gray-600 mb-4">{error}</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-red-600 mb-4">Erreur</h2>
-          <p className="text-gray-600 mb-4">{error}</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="flex justify-center">
       <div className="w-1/4">
-        <img src="/src/assets/img/categories/wiper/beg_classique.png" alt="Wiper" className="max-w-3xl h-auto object-contain m-[-5rem]" />
+        <img src="/src/assets/img/categories/wiper/beg_classique.png" alt="Wiper" className="h-auto object-contain m-[-5rem]" />
       </div>
       <div className="text-center w-1/2 flex flex-col">
         <h1 className="text-5xl font-semibold text-gray-category mt-20 mb-8 leading-15">
@@ -267,54 +166,23 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
               </div>
             ) : (
               products.map((product: WipersProduct) => {
-                // Find the matching wiper position from wipersPositions array
-                let positionRef = null;
-                let positionData = null;
-                
-                if (product.wipersPositions && Array.isArray(product.wipersPositions)) {
-                  // Find the position that matches the selected position
-                  const matchingPosition = product.wipersPositions.find((pos: any) => {
-                    const selectedPos = Array.isArray(selectedPosition) ? selectedPosition[0] : selectedPosition;
-                    return pos.slug === selectedPos || pos.name.toLowerCase() === selectedPos?.toLowerCase();
-                  });
-                  console.log('🔍 matchingPosition:', matchingPosition);
-                  positionRef = matchingPosition?.ref;
-                  positionData = matchingPosition;
-                }
-                
-                // Fallback to product ref if no position found
-                if (!positionRef && product.ref) {
-                  positionRef = product.ref;
-                }
-                
-                console.log(`🔍 Product ${product.id}:`, {
-                  productName: product.name,
-                  positionRef,
-                  hasPositionData: !!positionData,
-                  wipersPositions: product.wipersPositions
-                });
-                
-                // Use the wiperData from the API response instead of fetching separately
-                const wiperDataItem = positionData?.wiperData;
-                console.log('🔍 wiperDataItem from API:', wiperDataItem);
-                console.log('🔍 positionData full structure:', positionData);
-                console.log('🔍 positionData.ref:', positionData?.ref);
-                
+
                 return (
                   <>
-                    {wiperDataItem ? (
+                    {product.wipersPositions.map((wiperPos: any, index: number) => (
                       // Show the wiper data from the API response
                       <div
-                        key={`${product.id}-${positionRef}-${wiperDataItem.id}`}
+                        key={`${product.id}-${index}-${wiperPos.id}`}
                         className="bg-white rounded-lg flex flex-row justify-center w-full border-b-1 border-[#E5E5E5] items-center overflow-hidden"
                       >
                         {/* Wiper Product Info */}
                         {/* 1. Brand Image */}
                         <div className="w-1/4 h-16 ml-4 flex items-center justify-center">
-                          {wiperDataItem.brandImg?.url ? (
+                          {wiperPos?.wiperData?.brandImg?.url ? (
+                            console.log('🔍 wiperPos?.wiperData?.img?.url:', wiperPos?.wiperData?.img?.url),
                             <img 
-                              src={`http://localhost:1338${wiperDataItem.brandImg.url}`}
-                              alt={`${wiperDataItem.brand} Logo`}
+                              src={`http://localhost:1338${wiperPos?.wiperData?.brandImg?.url}`}
+                              alt={`${wiperPos?.wiperData?.brand} Logo`}
                               className="w-32 h-16 object-contain"
                               onError={(e) => {
                                 e.currentTarget.src = '/assets/img/placeholder-brand.svg';
@@ -322,27 +190,32 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
                             />
                           ) : (
                             <div className="w-32 h-16 flex items-center justify-center text-gray-400 text-xs">
-                              {wiperDataItem.brand}
+                              {wiperPos.brand}
                             </div>
                           )}
                         </div>
                         
                         {/* 2. Description */}
                         <div className="w-1/4 text-xl text-black flex-1 ml-4">
-                          {positionData?.ref || wiperDataItem?.ref || 'N/A'}
+                          {wiperPos.ref}
                         </div>
                         
                         {/* 3. Reference */}
                         <div className="w-1/4 h-24 ml-4 text-center leading-24 text-xl text-black">
-                          {wiperDataItem.size}
+                          {wiperPos.wiperData?.size}
                         </div>
 
                         <div className="w-1/4 h-24 ml-4 leading-24 text-center text-xl text-black">
-                        {wiperDataItem.img?.url ? (
+                        {wiperPos?.wiperData?.img?.url ? (
+                          
                               <img 
-                                src={`http://localhost:1338${wiperDataItem.img.url}`}
-                                alt={`Image de l'essuie-glace ${wiperDataItem.ref}`}
-                                className="w-24 h-24 object-contain"
+                                src={`http://localhost:1338${wiperPos?.wiperData?.img?.formats?.thumbnail?.url}`}
+                                alt={`Image de l'essuie-glace ${wiperPos.ref}`}
+                                className="w-24 h-24 object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                                onClick={() => handleImageZoom(
+                                  `http://localhost:1338${wiperPos?.wiperData?.img?.formats?.large?.url}`,
+                                  `Image de l'essuie-glace ${wiperPos.ref}`
+                                )}
                                 onError={(e) => {
                                   e.currentTarget.src = '/assets/img/placeholder-brand.svg';
                                 }}
@@ -353,26 +226,7 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
                             )}
                         </div>
                       </div>
-                    ) : (
-                      // Fallback: show product without wiper data
-                      <div
-                        key={`${product.id}-${positionRef}-no-data`}
-                        className="bg-white rounded-lg flex items-center justify-between"
-                      >
-                        <div className="flex flex-row justify-center w-full border-b-1 border-[#E5E5E5] items-center py-4">
-                          <div className="w-full max-w-4xl">
-                            <div className="ml-2 text-sm text-gray-700">
-                              <div className="flex flex-row items-center p-3">
-                                <div className="font-semibold text-lg">{positionRef}</div>
-                                <div className="text-2xl text-orange-600 italic flex-1 ml-4">
-                                  Données d'essuie-glace non disponibles dans la base de données
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                  )}
+                    ))}
                   </>
                 );
               })
@@ -385,8 +239,30 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
         </div>
       </div>
       <div className="w-1/4">
-        <img src="/src/assets/img/categories/wiper/beg_plat.png" alt="Wiper" className="max-w-3xl h-auto object-contain ml-[-15rem]" />
+        <img src="/src/assets/img/categories/wiper/beg_plat.png" alt="Wiper" className="h-auto object-contain ml-[-15rem]" />
       </div>
+      {/* Image Zoom Modal */}
+      {zoomedImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closeZoomModal}
+        >
+          <div className="relative max-w-4xl max-h-full p-4">
+            <button
+              onClick={closeZoomModal}
+              className="absolute top-2 right-2 text-white text-2xl font-bold hover:text-gray-300 z-10"
+            >
+              ×
+            </button>
+            <img
+              src={zoomedImage.url}
+              alt={zoomedImage.alt}
+              className="max-w-full max-h-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -143,7 +143,7 @@ const WipersTestPage: React.FC = () => {
                 <p><strong>Category:</strong> {mockCategory.name}</p>
               </div>
               <div>
-                <p><strong>Expected Positions:</strong> Kit Avant, Côté Conducteur, Côté Passager, Arrière</p>
+                <p><strong>Expected Positions:</strong> Kit Avant, Conducteur, Passager, Arrière</p>
                 <p><strong>API Base:</strong> /api/wipers-selection</p>
               </div>
             </div>

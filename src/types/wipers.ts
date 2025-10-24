@@ -60,10 +60,82 @@ export interface WipersPositionData {
     isActive: boolean;
     size: string;
     img?: {
+      id: number;
+      name: string;
       url: string;
+      alternativeText?: string;
+      caption?: string;
+      width: number;
+      height: number;
+      formats?: {
+        thumbnail?: { 
+          name: string;
+          hash: string;
+          ext: string;
+          url: string;
+          width: number;
+          height: number;
+        };
+        small?: { 
+          name: string;
+          hash: string;
+          ext: string;
+          url: string;
+          width: number;
+          height: number;
+        };
+        medium?: { 
+          name: string;
+          hash: string;
+          ext: string;
+          url: string;
+          width: number;
+          height: number;
+        };
+        large?: { 
+          name: string;
+          hash: string;
+          ext: string;
+          url: string;
+          width: number;
+          height: number;
+        };
+      };
     };
     brandImg?: {
+      id: number;
+      name: string;
       url: string;
+      alternativeText?: string;
+      caption?: string;
+      width: number;
+      height: number;
+      formats?: {
+        thumbnail?: { 
+          name: string;
+          hash: string;
+          ext: string;
+          url: string;
+          width: number;
+          height: number;
+        };
+        small?: { 
+          name: string;
+          hash: string;
+          ext: string;
+          url: string;
+          width: number;
+          height: number;
+        };
+        medium?: { 
+          name: string;
+          hash: string;
+          ext: string;
+          url: string;
+          width: number;
+          height: number;
+        };
+      };
     };
   };
 }

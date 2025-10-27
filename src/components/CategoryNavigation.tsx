@@ -126,11 +126,7 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
           const displayName = category.name === "Balais d'essuie-glace" ? "Balai essuie-glace" : 
                              category.name === "Eclairage" ? "Éclairage" : category.name;
           const colors = getCategoryColors(category.slug);
-          
-          // Check if category should be disabled
-          const isDisabled = category.slug === 'oil' || category.slug === 'filters' ||
-                           category.name.toLowerCase().includes('huile') ||
-                           category.name.toLowerCase().includes('filtration');
+          const isDisabled = category.slug === 'oil' || category.name.toLowerCase().includes('huile');
           
           return (
             <motion.button

@@ -22,7 +22,6 @@ const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestio
   const navigate = useNavigate();
   const [showHelp, setShowHelp] = useState(false);
   const [selectedPosition, setSelectedPosition] = useState<string | null>(null);
-  const [products, setProducts] = useState<WipersProduct[]>([]);
   
   // Use the wipers data hook
   const {
@@ -43,15 +42,6 @@ const WipersQuestions = ({ vehicle, category, onAnswersComplete }: WipersQuestio
     });
     return modelSlug;
   };
-
-  // Animation hook for position selection
-  const positionAnimation = useClickAnimation({
-    onComplete: () => {
-      if (selectedPosition) {
-        handlePositionSelect(selectedPosition);
-      }
-    }
-  });
 
   const handlePositionSelect = async (position: string) => {
     console.log('🎯 Wiper position selected:', position);

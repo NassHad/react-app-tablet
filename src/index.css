@@ -26,6 +26,9 @@
   --color-blue-title-bulbs-category: #235387;
   --color-orange-bulbs-category: #ED6205;
   --color-green-wiper-category: #93C452
+  --color-blue-filters-category: #96A7B9;
+  --color-gray-filters-category: #7E7E7E;
+  
 }
 
 @layer components {

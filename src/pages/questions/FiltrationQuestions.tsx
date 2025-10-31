@@ -1,4 +1,8 @@
 import type { Vehicle, ProductCategory } from '../../types';
+import filterCabin from '../../assets/img/categories/filters/cabin-filter.svg';
+import filterAir from '../../assets/img/categories/filters/air-filter.svg';
+import filterGazole from '../../assets/img/categories/filters/gazole-filter.svg';
+import filterOil from '../../assets/img/categories/filters/oil-filter.svg';
 
 interface FiltrationQuestionsProps {
   vehicle: Vehicle;
@@ -6,44 +10,15 @@ interface FiltrationQuestionsProps {
   onAnswersComplete: (answers: Record<string, string | string[]>) => void;
 }
 
-const FiltrationQuestions = ({ onAnswersComplete }: FiltrationQuestionsProps) => {
+const FiltrationQuestions = ({ vehicle, onAnswersComplete }: FiltrationQuestionsProps) => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20">Questions - Filtration</h1>
-        <div className="mb-12">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8">Type de filtre</h2>
-          <div className="flex flex-row space-x-8 justify-center">
-            <button
-              onClick={() => onAnswersComplete({ filterType: 'gazole' })}
-              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              <div className="text-6xl mb-4">⛽</div>
-              <h3 className="text-2xl font-semibold">Filtres à gazole</h3>
-            </button>
-            <button
-              onClick={() => onAnswersComplete({ filterType: 'air' })}
-              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              <div className="text-6xl mb-4">🌬️</div>
-              <h3 className="text-2xl font-semibold">Filtres à Air</h3>
-            </button>
-            <button
-              onClick={() => onAnswersComplete({ filterType: 'habitacle' })}
-              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              <div className="text-6xl mb-4">🏠</div>
-              <h3 className="text-2xl font-semibold">Filtres d'Habitacle</h3>
-            </button>
-            <button
-              onClick={() => onAnswersComplete({ filterType: 'huile' })}
-              className="block w-48 h-48 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              <div className="text-6xl mb-4">🛢️</div>
-              <h3 className="text-2xl font-semibold">Filtres à huile</h3>
-            </button>
-          </div>
-        </div>
+    <div className="flex flex-col items-center justify-center">
+      <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-20 text-center text-gray-filters-category leading-15"><span className='text-blue-filters-category'>Sélectionnez le type de filtrations,</span><br/> pour voir les produits compatibles avec votre {vehicle.brand} {vehicle.model}</h1>
+      <div className="flex flex-row flex-wrap justify-center min-w-2xl max-w-[95%]">
+          <img onClick={() => onAnswersComplete({ filterType: 'cabin' })} src={filterCabin} alt="Filtre habitacle" className="min-w-48 w-1/4 cursor-pointer" />
+          <img onClick={() => onAnswersComplete({ filterType: 'air' })} src={filterAir} alt="Filtre à air" className="min-w-48 w-1/4 cursor-pointer" />
+          <img onClick={() => onAnswersComplete({ filterType: 'gazole' })} src={filterGazole} alt="Filtre à carburant" className="min-w-48 w-1/4 cursor-pointer" />
+          <img onClick={() => onAnswersComplete({ filterType: 'oil' })} src={filterOil} alt="Filtre à huile" className="min-w-48 w-1/4 cursor-pointer" />
       </div>
     </div>
   );

@@ -129,7 +129,7 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
       } else if (category.slug === 'lights' || category.name.toLowerCase().includes('éclairage')) {
         // Navigate directly to questions page for lights
         navigate('/questions');
-      } else if (category.slug === 'wipers' || category.slug === 'beg' || category.name.toLowerCase().includes('essuie-glace') || category.name.toLowerCase().includes('balais')) {
+      } else if (category.slug === 'wipers' || category.slug === 'beg' || category.name.toLowerCase().includes('essuie-glace') || category.name.toLowerCase().includes('balais') || category.slug === 'filters' || category.name.toLowerCase().includes('filtration')) {
         // Navigate directly to questions page for wipers
         navigate('/questions');
       } else if (category.slug === 'oil' || category.name.toLowerCase().includes('huile')) {
@@ -321,10 +321,7 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
                 const bgColor = getCategoryColor(category.name);
                 
                 // Check if category should be disabled
-                const isDisabled = category.slug === 'oil' || category.slug === 'filters' ||
-                                 category.name.toLowerCase().includes('balai') || 
-                                 category.name.toLowerCase().includes('huile') ||
-                                 category.name.toLowerCase().includes('filtration');
+                const isDisabled = category.slug === 'oil' ||category.name.toLowerCase().includes('huile');
                 
                 return (
                   <motion.div

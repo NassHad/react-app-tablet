@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { UserSelection } from '../../types';
-import { dataService } from '../../services/dataService';
+import filtersService, { type FilterType, type FindProductsResponse } from '../../services/filtersService';
 
 interface FiltrationProductsScreenProps {
   userSelection: UserSelection;
@@ -9,14 +9,47 @@ interface FiltrationProductsScreenProps {
 
 const FiltrationProductsScreen = ({ userSelection }: FiltrationProductsScreenProps) => {
   const navigate = useNavigate();
-  const [products, setProducts] = useState<any[]>([]);
+  const [products, setProducts] = useState<FindProductsResponse['data']>([]);
+  const [refs, setRefs] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const answers = userSelection?.answers as Record<string, string | string[]> | undefined;
+  const variant = useMemo(() => (answers?.variant as string) || '', [answers]);
+  const uiFilterType = (answers?.filterType as string) || '';
+  const apiFilterType: FilterType | null = useMemo(() => {
+    if (!uiFilterType) return null;
+    if (uiFilterType === 'gazole') return 'diesel';
+    return uiFilterType as FilterType;
+  }, [uiFilterType]);
 
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        const filtrationProducts = await dataService.getProducts('filtration');
-        setProducts(filtrationProducts);
+        if (!apiFilterType) {
+          setProducts([]);
+          return;
+        }
+        // 1) Fetch refs from FilterCompatibility
+        const fetchedRefs = await filtersService.getRefs({
+          brand: userSelection?.vehicle?.brand?.toUpperCase() || '',
+          model: userSelection?.vehicle?.model || '',
+          variant: variant || undefined,
+          filterType: apiFilterType,
+        });
+        setRefs(fetchedRefs);
+
+        // 2) Resolve refs to products through backend convenience endpoint
+        const res = await filtersService.findProducts({
+          brand: userSelection?.vehicle?.brand?.toUpperCase() || '',
+          model: userSelection?.vehicle?.model || '',
+          variant: variant || undefined,
+          filterType: apiFilterType,
+        });
+        if (!res?.meta?.found) {
+          console.info(res?.meta?.availability?.message ?? 'No product available for this vehicle');
+          setProducts([]);
+        } else {
+          setProducts(res.data || []);
+        }
       } catch (error) {
         console.error('Error loading filtration products:', error);
         setProducts([]);
@@ -26,7 +59,7 @@ const FiltrationProductsScreen = ({ userSelection }: FiltrationProductsScreenPro
     };
 
     loadProducts();
-  }, []);
+  }, [apiFilterType, userSelection?.vehicle?.brand, userSelection?.vehicle?.model, variant]);
 
   const handleProductDetails = (productId: number) => {
     navigate(`/product-details/${productId}`);
@@ -48,7 +81,11 @@ const FiltrationProductsScreen = ({ userSelection }: FiltrationProductsScreenPro
         {/* Vertical scrollable container */}
         <div className="overflow-y-auto max-h-110 pb-8">
           <div className="">
-            {products.map((product) => (
+            {products.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-xl text-gray-600">Aucun produit trouvé pour ce véhicule.</p>
+              </div>
+            ) : products.map((product) => (
               <div
                 key={product.id}
                 className="bg-white rounded-lg flex items-center justify-between"
@@ -60,7 +97,7 @@ const FiltrationProductsScreen = ({ userSelection }: FiltrationProductsScreenPro
                   </div>
                   
                   <div className="w-1/4">
-                    <span className="ml-2 text-xl font-semibold text-gray-900 text-left">{product.type}</span>
+                    <span className="ml-2 text-xl font-semibold text-gray-900 text-left">{product.fullName}</span>
                   </div>
                   
                   <div className="w-1/4">
@@ -77,6 +114,12 @@ const FiltrationProductsScreen = ({ userSelection }: FiltrationProductsScreenPro
                 {/* Action Button */}
               </div>
             ))}
+            {/* Optional: show refs used */}
+            {refs.length > 0 && (
+              <div className="mt-6 text-sm text-gray-500">
+                Références utilisées: {refs.join(', ')}
+              </div>
+            )}
           </div>
         </div>
 

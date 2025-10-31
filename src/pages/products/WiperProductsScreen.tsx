@@ -306,9 +306,7 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
                         >
                           {/* Wiper Product Info */}
                           <div className="flex flex-row justify-center w-full border-b-1 border-[#E5E5E5] items-center">
-                            <div className="w-full max-w-4xl">
-                              <div className="ml-2 text-sm text-gray-700">
-                                <div className="flex flex-row items-center">
+                            <div className="w-full max-w-4xl ml-2 text-sm text-gray-700 flex flex-row items-center">
                                     {/* 1. Brand Image */}
                                     <div className="w-32 h-16 ml-4 flex items-center justify-center">
                                       {wiperDataItem.brandImg?.url ? (
@@ -356,8 +354,6 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
                       ))
                     ) : (
                       // Fallback: show product without wiper data

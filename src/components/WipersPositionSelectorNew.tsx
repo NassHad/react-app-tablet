@@ -13,15 +13,15 @@ const POSITION_OPTIONS = [
   {
     id: 'driver',
     name: 'Driver',
-    displayName: 'Côté Conducteur',
-    description: 'Essuie-glace côté conducteur',
+    displayName: 'Conducteur',
+    description: 'Essuie-glace conducteur',
     icon: begIcon
   },
   {
     id: 'passenger',
     name: 'Passenger',
-    displayName: 'Côté Passager',
-    description: 'Essuie-glace côté passager',
+    displayName: 'Passager',
+    description: 'Essuie-glacepassager',
     icon: begIcon
   },
   {

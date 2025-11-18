@@ -10,6 +10,7 @@ import NoProductsAvailableScreen from '../pages/NoProductsAvailableScreen';
 import LightsTestPage from '../pages/test/LightsTestPage';
 import WipersTestPage from '../pages/test/WipersTestPage';
 import WipersTestPageNew from '../pages/test/WipersTestPageNew';
+import AllProductsScreen from '../pages/AllProductsScreen';
 import CategorySpecificForm from '../components/CategorySpecificForm';
 import VehicleSelectionForm from '../components/VehicleSelectionForm';
 import Layout from '../components/Layout';
@@ -386,6 +387,12 @@ const AppRouterContent = () => {
             element={
               <WipersTestPageNew />
             } 
+          />
+
+          {/* All Products by Vehicle View */}
+          <Route 
+            path="/all-products" 
+            element={<AllProductsScreen />} 
           />
 
           {/* Route de fallback */}

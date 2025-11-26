@@ -123,6 +123,25 @@ class VehicleProductsService {
     };
     
     console.log('Normalized response:', normalizedData);
+    const { lights, batteries, wipers, filters, oil } = normalizedData.data;
+    const totalsLog = {
+      brandSlug: params.brandSlug,
+      modelSlug: params.modelSlug,
+      batteries: batteries?.length || 0,
+      lights: lights?.length || 0,
+      wipers: wipers?.length || 0,
+      filters: filters?.length || 0,
+      oil: oil?.length || 0
+    };
+    console.log('📦 Category totals:', totalsLog);
+    if (!lights || lights.length === 0) {
+      console.warn('⚠️ No lights products returned for vehicle:', {
+        brandSlug: params.brandSlug,
+        modelSlug: params.modelSlug,
+        motorisation: params.motorisation,
+        vehicleModel: params.vehicleModel
+      });
+    }
     
     return normalizedData;
   }

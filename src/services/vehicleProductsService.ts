@@ -26,6 +26,11 @@ export interface VehicleProduct {
   brandImg?: {
     url: string;
   };
+  lightPositions?: Array<{
+    ref: string;
+    position: string;
+    category: string;
+  }>;
   [key: string]: any; // Allow additional fields
 }
 
@@ -68,8 +73,18 @@ class VehicleProductsService {
     
     console.log('🚗 Fetching all products for vehicle:', url.toString());
     
+    const headers: HeadersInit = {
+      'Content-Type': 'application/json'
+    };
+
+    // Add authentication token if available
+    const token = localStorage.getItem('strapi_jwt');
+    if (token) {
+      headers['Authorization'] = `Bearer ${token}`;
+    }
+
     const res = await fetch(url.toString(), {
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       cache: 'no-store'
     });
     

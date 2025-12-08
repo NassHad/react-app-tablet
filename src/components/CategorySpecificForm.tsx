@@ -26,6 +26,9 @@ const CategorySpecificForm: React.FC<CategorySpecificFormProps> = ({ onComplete,
     if (category?.slug === 'batteries' && vehicle?.brandSlug && vehicle?.modelSlug) {
       console.log(`🔋 Fetching battery products for battery category: ${vehicle.brandSlug} - ${vehicle.modelSlug}`);
       fetchBatteryProductsBySlugs(vehicle.brandSlug, vehicle.modelSlug);
+    } else if (category?.slug === 'oil' && vehicle?.brandSlug && vehicle?.modelSlug) {
+      console.log(`🛢️ Fetching motorisations for oil category: ${vehicle.brandSlug} - ${vehicle.modelSlug}`);
+      fetchBatteryProductsBySlugs(vehicle.brandSlug, vehicle.modelSlug);
     }
   }, [category?.slug, vehicle?.brandSlug, vehicle?.modelSlug, fetchBatteryProductsBySlugs]);
 
@@ -65,6 +68,8 @@ const CategorySpecificForm: React.FC<CategorySpecificFormProps> = ({ onComplete,
       ...vehicleData,
       ...categoryData,
       selectedCategory: category,
+      // Include motorisation for oil and battery categories
+      motorisation: (category?.slug === 'oil' || category?.slug === 'batteries') ? selectedMotorisation : vehicleData.motorisation,
       // Ensure vehicle data from UserSelection is preserved
       brand: vehicle?.brand || vehicleData.brand,
       model: vehicle?.model || vehicleData.model,
@@ -180,27 +185,61 @@ const CategorySpecificForm: React.FC<CategorySpecificFormProps> = ({ onComplete,
   );
 
   const OilForm = () => (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-gray-800 text-center">
-        Configuration Huile
+    <div className="flex flex-col gap-8">
+      <h2 className="text-5xl text-[#F3B11F] text-center mt-16 mb-10">
+        Configuration complémentaire
       </h2>
       
-      <div className="bg-blue-50 p-4 rounded-lg">
-        <h3 className="font-semibold text-blue-800 mb-2">Véhicule sélectionné :</h3>
-        <p className="text-blue-700">
+      <h3 className="font-semibold text-2xl mb-2">Véhicule sélectionné :</h3>
+      <div className="bg-blue-50 p-4 rounded-lg bg-motorisation">
+        <p className="text-[#1590AD] font-semibold py-4 text-xl">
           {vehicle?.brand} {vehicle?.model} ({vehicle?.dateCirculation})
         </p>
       </div>
 
       <div className="space-y-4">
-        <label htmlFor="viscosity" className="block text-xl font-bold text-gray-800">
+        <label htmlFor="motorisation" className="block text-2xl font-bold text-gray-800">
+          Motorisation
+        </label>
+        {loadingMotorisations ? (
+          <div className="flex items-center justify-center p-4">
+            <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+            <span className="ml-3 text-gray-600">Chargement des motorisations...</span>
+          </div>
+        ) : (
+          <select
+            id="motorisation"
+            value={selectedMotorisation}
+            onChange={(e) => handleMotorisationChange(e.target.value)}
+            className="form-select w-full bg-white py-7 pl-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
+            required
+          >
+            <option value="">Sélectionnez une motorisation</option>
+            {motorisations.map((motor, index) => (
+              <option key={`${motor.id}-${index}`} value={motor.motorisation}>
+                {motor.motorisation} ({motor.fuel}) - {motor.startDate ? new Date(motor.startDate).getFullYear() : 'N/A'} à {motor.endDate ? new Date(motor.endDate).getFullYear() : 'Présent'}
+              </option>
+            ))}
+          </select>
+        )}
+        
+        {motorisations.length === 0 && !loadingMotorisations && (
+          <div className="text-center text-gray-500 p-4">
+            <p>Aucune motorisation trouvée pour ce véhicule.</p>
+            <p className="text-sm mt-1">Vérifiez que le véhicule est correctement sélectionné.</p>
+          </div>
+        )}
+      </div>
+
+      <div className="space-y-4">
+        <label htmlFor="viscosity" className="block text-2xl font-bold text-gray-800">
           Viscosité
         </label>
         <select
           id="viscosity"
-          value={vehicle?.viscosity || ''}
+          value={vehicleData?.viscosity || vehicle?.viscosity || ''}
           onChange={(e) => updateVehicleData({ viscosity: e.target.value })}
-          className="form-select w-full bg-white p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+          className="form-select w-full bg-white py-7 pl-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl"
           required
         >
           <option value="">Sélectionnez une viscosité</option>

@@ -270,6 +270,31 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      {/* Previous button - Only shown on category page */}
+      <div className="absolute top-4 left-4 z-20">
+        <motion.button
+          onClick={() => navigate(-1)}
+          className="flex items-center space-x-2 cursor-pointer py-2 px-4 bg-white rounded-lg shadow-md hover:bg-gray-100 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <svg
+            className="w-6 h-6 text-gray-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+          <span className="text-gray-600 font-medium text-lg">Précédent</span>
+        </motion.button>
+      </div>
+
       {/* Main content */}
       <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6 tablet-main-content">
         {/* Instruction text */}
@@ -341,7 +366,7 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
                     
                     {/* Bottom bar */}
                     <div className={`absolute bottom-0 left-0 right-0 h-16 ${bgColor} flex items-center justify-center`}>
-                      <span className="text-white font-bold text-xl uppercase text-shadow-lg">
+                      <span className="text-white font-bold text-2xl uppercase text-shadow-lg">
                         {category.name}
                       </span>
                     </div>
@@ -353,7 +378,7 @@ const CategoryScreen = ({ vehicle, onCategorySelect }: CategoryScreenProps) => {
         </div>
 
         <div className="text-center mb-16">
-          <h4 className="text-4xl text-gray-500 mt-14 leading-12 tablet-subtitle">
+          <h4 className="text-5xl text-gray-500 mt-14 leading-12 tablet-subtitle">
             Nos produits sont approuvés par les principaux <br /><span className="font-bold text-[#1290AD]">constructeurs automobiles</span>
           </h4>
         </div>

@@ -3,7 +3,7 @@ import { useEffect, useRef, useCallback, useState } from 'react';
 interface UseInactivityResetOptions {
   /**
    * Time in milliseconds before triggering the reset
-   * @default 60000 (1 minute)
+   * @default 120000 (2 minutes)
    */
   timeout?: number;
   /**
@@ -34,7 +34,7 @@ interface UseInactivityResetOptions {
  * @param options Configuration options for the inactivity reset
  */
 export const useInactivityReset = ({
-  timeout = 60000, // 1 minute by default
+  timeout = 120000, // 2 minutes by default
   showTimerAfter = 5000, // Show timer after 5 seconds of inactivity
   onInactivityTimeout,
   enabled = true,

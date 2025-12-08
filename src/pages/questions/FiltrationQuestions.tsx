@@ -42,7 +42,7 @@ const FiltrationQuestions = ({ vehicle, onAnswersComplete }: FiltrationQuestions
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-10 text-center text-gray-filters-category leading-15"><span className='text-blue-filters-category'>Sélectionnez le type de filtrations,</span><br/> pour voir les produits compatibles avec votre {vehicle.brand} {vehicle.model}</h1>
+      <h1 className="text-5xl font-bold text-gray-900 mt-12 mb-10 text-center text-gray-filters-category leading-15"><span className='text-blue-filters-category'>Sélectionner la filtration pour votre</span> {vehicle.brand} {vehicle.model}</h1>
 
       <div className="w-full max-w-3xl mb-10 px-4">
         <label className="block text-lg font-semibold mb-2 text-gray-800">Variante du véhicule</label>

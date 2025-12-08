@@ -168,7 +168,7 @@ const Breadcrumbs = ({ userSelection: _userSelection }: BreadcrumbsProps) => {
               whileHover={breadcrumb.active ? {} : { scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <span className="text-lg">{breadcrumb.name}</span>
+              <span className="text-xl">{breadcrumb.name}</span>
             </motion.button>
             
             {/* Separator */}

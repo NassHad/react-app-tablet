@@ -132,10 +132,10 @@ const BulbsQuestions = ({ vehicle, category, onAnswersComplete }: BulbsQuestions
         <div className="flex w-full flex-col items-center mt-14">
           {/* Header */}
           <div className="mb-8 text-center flex flex-col items-center">
-            <h1 className="text-5xl font-bold text-blue-title-bulbs-category mb-2">
+            <h1 className="text-6xl font-bold text-blue-title-bulbs-category mb-2">
               Liste des ampoules compatibles
             </h1>
-            <p className="text-5xl text-gray-600">
+            <p className="text-6xl text-gray-600">
               pour votre <span className='text-orange-bulbs-category'>{vehicle.brand} {vehicle.model}</span>
             </p>
             <img src={carBulbsPage} alt="Page des ampoules de voiture" className='mt-12' />
@@ -165,7 +165,7 @@ const BulbsQuestions = ({ vehicle, category, onAnswersComplete }: BulbsQuestions
         <div className="w-128 mt-4 mr-10">
           {/* Header */}
           <div className="text-white p-4 rounded-3xl flex items-center justify-between gradient-background ">
-            <span className="font-bold text-lg">Choisissez le type d'ampoule</span>
+            <span className="font-bold text-xl">Choisissez le type d'ampoule</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>

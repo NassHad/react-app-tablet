@@ -299,7 +299,7 @@ const VehicleSelectionForm: React.FC<VehicleSelectionFormProps> = ({ vehicleType
               }`}
               {...submitAnimation.animationProps}
             >
-              Continuer vers les catégories
+              Suivant
             </motion.button>
           </div>
         </form>

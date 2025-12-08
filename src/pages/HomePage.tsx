@@ -63,7 +63,7 @@ const HomePage = ({ onVehicleTypeSelect }: HomePageProps) => {
         
         {/* Prompt text */}
         <div className="text-center my-16">
-          <h2 className="text-6xl text-[#1290AD]">
+          <h2 className="text-7xl text-[#1290AD]">
             <span className="">Choisissez votre </span>
             <span className="font-bold">type</span>
             <span className=""> de véhicule</span>

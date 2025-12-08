@@ -10,11 +10,9 @@ import CategoryNavigation from './CategoryNavigation';
 // import SyncButton from './SyncButton';
 import { DataModeToggle } from './DataModeToggle';
 import { MockVehicleSelector } from './MockVehicleSelector';
-import InactivityTimer from './InactivityTimer';
 import { FLOW_CONFIG } from '../config/flowConfig';
 import { getVehicleTypeDisplayName } from '../utils';
 import { useInactivityReset } from '../hooks/useInactivityReset';
-import backToHp from '../assets/img/icons/back-to-hp.svg';
 import motoFooter from '../assets/img/layout/moto-footer.png';
 import carFooter from '../assets/img/layout/car-footer.png';
 
@@ -44,11 +42,11 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
     navigate('/');
   };
 
-  // Set up automatic reset after 1 minute of inactivity
+  // Set up automatic reset after 2 minutes of inactivity
   // Show timer after 5 seconds of inactivity
   // Only enable when not on homepage to avoid unnecessary resets
   const { remainingTime, showTimer } = useInactivityReset({
-    timeout: 60000, // 1 minute
+    timeout: 120000, // 2 minutes
     showTimerAfter: 5000, // Show timer after 5 seconds of inactivity
     onInactivityTimeout: handleHomeClick,
     enabled: location.pathname !== '/', // Disable on homepage
@@ -96,12 +94,12 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
             {/* Home Logo */}
             <motion.button
               onClick={handleHomeClick}
-              className="cursor-pointer p-2 rounded-lg transition-colors fixed"
+              className="cursor-pointer py-2 px-4 rounded-lg transition-colors text-[#1290AD] font-bold text-xl border-r-4 border-black pr-8"
               title="Accueil"
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <img src={backToHp} alt="Retour à l'accueil" className="w-24 h-24 border-r-4 border-black pr-8" />
+              Accueil
             </motion.button>
 
             {/* Back Arrow */}
@@ -182,9 +180,6 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
               <h1 className="text-5xl text-[#1290AD] text-center tablet-nav-title py-6 w-full">J'identifie ma <span className="font-bold">{userSelection?.vehicleType ? getVehicleTypeDisplayName(userSelection.vehicleType) : ''}</span></h1>
             )}
 
-            {location.pathname === '/category' && (
-              <h1 className="text-5xl text-[#1290AD] text-center tablet-nav-title py-6 w-full">Que recherchez-vous ?</h1>
-            )}
             
             {/* Category Navigation */}
             {userSelection && (userSelection.category || location.pathname === '/questions' || location.pathname === '/products' || location.pathname.startsWith('/product-details/')) && location.pathname !== '/category' && location.pathname !== '/vehicle-selection' && location.pathname !== '/vehicle' && (
@@ -197,31 +192,8 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
           </div>
 
 
-          {/* Right side - Inactivity Timer, Reset button, Sync button and Help button */}
+          {/* Right side - Sync button and Help button */}
           <div className="flex items-center space-x-3">
-            {/* Inactivity Timer - Show when timer is active */}
-            <InactivityTimer
-              remainingTime={remainingTime}
-              show={showTimer}
-              totalTime={60000}
-            />
-
-            {/* Reset button - Show when not on homepage */}
-            {location.pathname !== '/' && (
-              <motion.button
-                onClick={handleHomeClick}
-                className="cursor-pointer py-2 px-4 bg-[#1290AD] text-white font-bold rounded-lg hover:bg-[#0f7a93] transition-colors text-lg flex items-center space-x-2"
-                title="Réinitialiser et retourner à l'accueil"
-                whileTap={{ scale: 0.95 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-                <span>Réinitialiser</span>
-              </motion.button>
-            )}
 
             {/* Sync Button - Hidden for now */}
             {/* <SyncButton

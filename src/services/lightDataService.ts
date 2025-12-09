@@ -1,4 +1,4 @@
-import { ENV } from '../config/environment';
+import { ENV, getImageUrl as getEnvImageUrl } from '../config/environment';
 
 export interface LightDataProduct {
   id: number;
@@ -108,15 +108,11 @@ class LightDataService {
 
     // Try to get formatted size first
     if (img.formats && img.formats[size]?.url) {
-      return `${ENV.STRAPI_API_URL.replace('/api', '')}${img.formats[size].url}`;
+      return getEnvImageUrl(img.formats[size].url);
     }
 
     // Fallback to original URL
-    if (img.url) {
-      return `${ENV.STRAPI_API_URL.replace('/api', '')}${img.url}`;
-    }
-
-    return null;
+    return getEnvImageUrl(img.url);
   }
 }
 

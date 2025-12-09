@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useMemo } from 'react';
 import type { UserSelection } from '../../types';
 import filtersService, { type FilterType, type FindProductsResponse } from '../../services/filtersService';
+import { getImageUrl, getBrandImageUrl } from '../../config/environment';
 
 interface FiltrationProductsScreenProps {
   userSelection: UserSelection;
@@ -160,8 +161,8 @@ const FiltrationProductsScreen = ({ userSelection }: FiltrationProductsScreenPro
                     {/* 1. Brand Image */}
                     <div className="w-1/4 h-16 ml-4 flex items-center justify-center">
                       {productWithImages?.brandImg?.url ? (
-                        <img 
-                          src={`http://localhost:1338${productWithImages.brandImg.url}`}
+                        <img
+                          src={getBrandImageUrl(productWithImages.brandImg.url)}
                           alt={`${product.brand} Logo`}
                           className="w-32 h-16 object-contain"
                           onError={(e) => {
@@ -188,12 +189,12 @@ const FiltrationProductsScreen = ({ userSelection }: FiltrationProductsScreenPro
                     {/* 4. Product Image */}
                     <div className="w-1/4 h-24 ml-4 leading-24 text-center text-xl text-black">
                       {productWithImages?.img?.url ? (
-                        <img 
-                          src={`http://localhost:1338${productWithImages.img.formats?.thumbnail?.url || productWithImages.img.url}`}
+                        <img
+                          src={getImageUrl(productWithImages.img.formats?.thumbnail?.url || productWithImages.img.url)}
                           alt={`Image du filtre ${product.reference}`}
                           className="w-24 h-24 object-contain cursor-pointer hover:opacity-80 transition-opacity"
                           onClick={() => handleImageZoom(
-                            `http://localhost:1338${productWithImages.img?.formats?.large?.url || productWithImages.img?.url || ''}`,
+                            getImageUrl(productWithImages.img?.formats?.large?.url || productWithImages.img?.url),
                             `Image du filtre ${product.reference}`
                           )}
                           onError={(e) => {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import type { VehicleProduct, VehicleProductsResponse } from '../services/vehicleProductsService';
 import { lightDataService, type LightDataProduct } from '../services/lightDataService';
+import { getImageUrl, getBrandImageUrl } from '../config/environment';
 
 interface AllProductsByCategoryProps {
   data: VehicleProductsResponse | null;
@@ -104,29 +105,29 @@ const AllProductsByCategory: React.FC<AllProductsByCategoryProps> = ({ data, loa
     return grouped;
   };
 
-  const getProductImageUrl = (product: VehicleProduct): string | null => {
+  const getProductImageUrl = (product: VehicleProduct): string => {
     if (product.img?.formats?.thumbnail?.url) {
-      return `http://localhost:1338${product.img.formats.thumbnail.url}`;
+      return getImageUrl(product.img.formats.thumbnail.url);
     }
     if (product.img?.url) {
-      return `http://localhost:1338${product.img.url}`;
+      return getImageUrl(product.img.url);
     }
-    return null;
+    return getImageUrl(); // Returns placeholder
   };
 
-  const getBrandImageUrl = (product: VehicleProduct): string | null => {
+  const getProductBrandImageUrl = (product: VehicleProduct): string => {
     // Handle brandImg from product directly
     if (product.brandImg?.url) {
-      return `http://localhost:1338${product.brandImg.url}`;
+      return getBrandImageUrl(product.brandImg.url);
     }
     // Handle brand object with image
     if (typeof product.brand === 'object' && product.brand !== null && 'img' in product.brand) {
       const brandWithImg = product.brand as { img?: { url: string } };
       if (brandWithImg.img?.url) {
-        return `http://localhost:1338${brandWithImg.img.url}`;
+        return getBrandImageUrl(brandWithImg.img.url);
       }
     }
-    return null;
+    return getBrandImageUrl(); // Returns placeholder
   };
 
   if (loading || loadingLightData) {
@@ -203,7 +204,7 @@ const AllProductsByCategory: React.FC<AllProductsByCategoryProps> = ({ data, loa
         <div className="w-24 h-16 flex items-center justify-center mr-4">
           {bulb.brandImg?.url ? (
             <img
-              src={`http://localhost:1338${bulb.brandImg.url}`}
+              src={getBrandImageUrl(bulb.brandImg.url)}
               alt={`${bulb.brand} Logo`}
               className="max-w-full max-h-full object-contain"
               onError={(e) => { e.currentTarget.src = '/assets/img/placeholder-brand.svg'; }}
@@ -222,7 +223,7 @@ const AllProductsByCategory: React.FC<AllProductsByCategoryProps> = ({ data, loa
         <div className="w-20 h-20 flex items-center justify-center">
           {bulb.img?.url ? (
             <img
-              src={`http://localhost:1338${bulb.img.url}`}
+              src={getImageUrl(bulb.img.url)}
               alt={`${bulb.ref} Image`}
               className="max-w-full max-h-full object-contain"
               onError={(e) => { e.currentTarget.src = '/assets/img/placeholder-product.svg'; }}
@@ -264,7 +265,7 @@ const AllProductsByCategory: React.FC<AllProductsByCategoryProps> = ({ data, loa
                 {lightBulbs.length > 0 && lightBulbs[0].brandImg?.url && (
                   <div className="w-20 h-12 flex items-center justify-center mr-4">
                     <img
-                      src={`http://localhost:1338${lightBulbs[0].brandImg.url}`}
+                      src={getBrandImageUrl(lightBulbs[0].brandImg.url)}
                       alt="Brand"
                       className="max-w-full max-h-full object-contain"
                     />
@@ -406,7 +407,7 @@ const AllProductsByCategory: React.FC<AllProductsByCategoryProps> = ({ data, loa
 
                           // Existing rendering for other categories (batteries, wipers, filters, oil)
                           const productImageUrl = getProductImageUrl(product);
-                          const brandImageUrl = getBrandImageUrl(product);
+                          const brandImageUrl = getProductBrandImageUrl(product);
                           // Handle different product structures from API
                           const reference = product.reference || product.ref || product.fullName || product.name || 'N/A';
                           // Brand can be a string or an object with a name property

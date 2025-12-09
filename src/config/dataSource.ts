@@ -1,3 +1,5 @@
+import { ENV } from './environment';
+
 export const DataSource = {
   LOCAL_DATABASE: 'local_database',
   STRAPI: 'strapi'
@@ -19,10 +21,10 @@ export interface DataSourceConfig {
 // Configuration to easily switch between data sources
 export const DATA_SOURCE_CONFIG: DataSourceConfig = {
   currentSource: DataSource.STRAPI, // Use STRAPI for web development
-  
+
   strapi: {
-    baseUrl: 'http://localhost:1338',
-    apiUrl: 'http://localhost:1338/api',
+    baseUrl: ENV.STRAPI_BASE_URL,
+    apiUrl: ENV.STRAPI_API_URL,
     timeout: 10000,
   },
   

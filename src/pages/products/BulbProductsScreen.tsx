@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import type { UserSelection } from '../../types';
 import { useLightsData } from '../../hooks/useLightsData';
+import { ENV, getImageUrl, getBrandImageUrl } from '../../config/environment';
 
 interface BulbProductsScreenProps {
   userSelection: UserSelection;
@@ -85,7 +86,7 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
   // Function to fetch light data for a specific reference (now returns array)
   const fetchLightDataByRef = async (ref: string): Promise<LightData[]> => {
     try {
-      const response = await fetch(`http://localhost:1338/api/lights-data/ref/${ref}`);
+      const response = await fetch(`${ENV.STRAPI_API_URL}/lights-data/ref/${ref}`);
       if (!response.ok) {
         console.warn(`No light data found for reference: ${ref}`);
         return [];
@@ -362,8 +363,8 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
                                 <div className="flex flex-row items-center ">
                                   {/* 1. Brand Image */}
                                   {lightDataItem.brandImg?.url ? (
-                                    <img 
-                                      src={lightDataItem.brandImg?.url ? `http://localhost:1338${lightDataItem.brandImg.url}` : '/assets/img/placeholder-brand.svg'}
+                                    <img
+                                      src={getBrandImageUrl(lightDataItem.brandImg.url)}
                                       onError={(e) => {
                                         e.currentTarget.src = '/assets/img/placeholder-brand.svg';
                                       }}
@@ -389,15 +390,15 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
                                   
                                   {/* 3. Light Image */}
                                   {lightDataItem.img ? (
-                                    <img 
-                                      src={lightDataItem.img?.url ? `http://localhost:1338${lightDataItem.img.url}` : '/assets/img/placeholder-product.svg'}
+                                    <img
+                                      src={getImageUrl(lightDataItem.img.url)}
                                       onError={(e) => {
                                         e.currentTarget.src = '/assets/img/placeholder-product.svg';
                                       }}
                                       alt="Ampoule"
                                       className="w-24 h-24 object-contain cursor-pointer hover:opacity-80 transition-opacity ml-4"
                                       onClick={() => handleImageZoom(
-                                        lightDataItem.img?.url ? `http://localhost:1338${lightDataItem.img.url}` : '/assets/img/placeholder-product.svg',
+                                        getImageUrl(lightDataItem.img?.url),
                                         `Light ${positionRef} - ${lightDataItem.description}`
                                       )}
                                     />

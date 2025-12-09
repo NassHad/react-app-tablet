@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 import type { UserSelection } from '../../types';
 import { useWipersData } from '../../hooks/useWipersData';
 import type { WipersProduct } from '../../types/wipers';
+import { getImageUrl, getBrandImageUrl } from '../../config/environment';
 
 interface WiperProductsScreenProps {
   userSelection: UserSelection;
@@ -180,8 +181,8 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
                         <div className="w-1/4 h-16 ml-4 flex items-center justify-center">
                           {wiperPos?.wiperData?.brandImg?.url ? (
                             console.log('🔍 wiperPos?.wiperData?.img?.url:', wiperPos?.wiperData?.img?.url),
-                            <img 
-                              src={`http://localhost:1338${wiperPos?.wiperData?.brandImg?.url}`}
+                            <img
+                              src={getBrandImageUrl(wiperPos?.wiperData?.brandImg?.url)}
                               alt={`${wiperPos?.wiperData?.brand} Logo`}
                               className="w-32 h-16 object-contain"
                               onError={(e) => {
@@ -207,13 +208,13 @@ const WiperProductsScreen = ({ userSelection }: WiperProductsScreenProps) => {
 
                         <div className="w-1/4 h-24 ml-4 leading-24 text-center text-xl text-black">
                         {wiperPos?.wiperData?.img?.url ? (
-                          
-                              <img 
-                                src={`http://localhost:1338${wiperPos?.wiperData?.img?.formats?.thumbnail?.url}`}
+
+                              <img
+                                src={getImageUrl(wiperPos?.wiperData?.img?.formats?.thumbnail?.url)}
                                 alt={`Image de l'essuie-glace ${wiperPos.ref || wiperPos.description || 'essuie-glace'}`}
                                 className="w-24 h-24 object-contain cursor-pointer hover:opacity-80 transition-opacity"
                                 onClick={() => handleImageZoom(
-                                  `http://localhost:1338${wiperPos?.wiperData?.img?.formats?.large?.url}`,
+                                  getImageUrl(wiperPos?.wiperData?.img?.formats?.large?.url),
                                   `Image de l'essuie-glace ${wiperPos.ref || wiperPos.description || 'essuie-glace'}`
                                 )}
                                 onError={(e) => {

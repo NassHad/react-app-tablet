@@ -90,44 +90,19 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
       <nav className="bg-white shadow-sm border border-[#989898] px-4 py-3 tablet-nav">
         <div className="flex items-center justify-between">
           {/* Left side - Home and Back */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 border-1 border-black rounded-lg">
             {/* Home Logo */}
             <motion.button
               onClick={handleHomeClick}
-              className="cursor-pointer py-2 px-4 rounded-lg transition-colors text-[#1290AD] font-bold text-xl border-r-4 border-black pr-8"
+              className="cursor-pointer py-2 px-4 text-black font-bold text-xl"
               title="Accueil"
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              Accueil
+              <span className="text-sm">Retour à</span><br/><span className="text-xl">l'Accueil</span>
             </motion.button>
 
-            {/* Back Arrow */}
-            {/* {showBackButton && (
-              <motion.button
-                onClick={handleBackClick}
-                className="cursor-pointer p-2 rounded-lg hover:bg-gray-100 transition-colors"
-                title="Retour"
-                whileTap={{ scale: 0.95 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                <svg
-                  className="w-10 h-10 text-gray-700"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </motion.button>
-            )} */}
+            {/* Previous Button - Only shown after category selection */}
           </div>
 
           {/* Center - Dynamic Content */}

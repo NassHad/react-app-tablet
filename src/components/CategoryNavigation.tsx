@@ -92,7 +92,7 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
   }
 
   return (
-    <div className="flex items-center justify-center text-center w-full h-20">
+    <div className="flex items-center justify-center text-center w-full h-20 ml-[-5rem]">
       {/* Left side - Previous button - Hidden */}
       {/* <motion.button
         onClick={handlePreviousClick}
@@ -118,7 +118,33 @@ const CategoryNavigation = ({ selectedCategory, updateUserSelection, userSelecti
 
       {/* Separator line - Hidden */}
       {/* <div className="w-px h-6 bg-gray-300 mx-4"></div> */}
-
+      {userSelection?.category && (
+        <div className="mr-20">
+            <motion.button
+              onClick={() => navigate('/category')}
+              className="flex items-center space-x-2 cursor-pointer py-2 px-4 hover:bg-gray-100 transition-colors rounded-lg"
+              title="Précédent"
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <svg
+                className="w-6 h-6 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+              <span className="text-gray-600 font-medium text-lg">Précédent</span>
+            </motion.button>
+        </div>
+      )}
       {/* Center - Category navigation */}
       <div className="flex items-center space-x-8">
         {categories.map((category) => {

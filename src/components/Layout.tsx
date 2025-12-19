@@ -12,7 +12,7 @@ import { DataModeToggle } from './DataModeToggle';
 import { MockVehicleSelector } from './MockVehicleSelector';
 import { FLOW_CONFIG } from '../config/flowConfig';
 import { getVehicleTypeDisplayName } from '../utils';
-import { useInactivityReset } from '../hooks/useInactivityReset';
+// import { useInactivityReset } from '../hooks/useInactivityReset';
 import motoFooter from '../assets/img/layout/moto-footer.png';
 import carFooter from '../assets/img/layout/car-footer.png';
 
@@ -45,12 +45,12 @@ const Layout = ({ children, userSelection, updateUserSelection }: LayoutProps) =
   // Set up automatic reset after 2 minutes of inactivity
   // Show timer after 5 seconds of inactivity
   // Only enable when not on homepage to avoid unnecessary resets
-  const { remainingTime, showTimer } = useInactivityReset({
-    timeout: 120000, // 2 minutes
-    showTimerAfter: 5000, // Show timer after 5 seconds of inactivity
-    onInactivityTimeout: handleHomeClick,
-    enabled: location.pathname !== '/', // Disable on homepage
-  });
+  // const { remainingTime, showTimer } = useInactivityReset({
+  //   timeout: 120000, // 2 minutes
+  //   showTimerAfter: 5000, // Show timer after 5 seconds of inactivity
+  //   onInactivityTimeout: handleHomeClick,
+  //   enabled: location.pathname !== '/', // Disable on homepage
+  // });
 
   // const handleBackClick = () => {
   //   navigate(-1);

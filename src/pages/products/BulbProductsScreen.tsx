@@ -32,6 +32,8 @@ interface LightData {
   isActive: boolean;
   description?: string;
   category: string;
+  EAN?: number;
+  refGTI?: number;
   createdAt: string;
   updatedAt: string;
 }
@@ -346,6 +348,7 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
                 
                 // Get all light data variants for this reference
                 const allLightData = getAllLightDataForRef(positionRef);
+                console.log('🔍 allLightData:', allLightData);
                 
                 return (
                   <div key={`${product.id}-${positionRef}`}>
@@ -379,7 +382,7 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
                                   
                                   {/* 2. Description */}
                                   {lightDataItem.description ? (
-                                    <div className="text-xl text-black flex-1 ml-4">
+                                    <div className="text-lg text-black flex-1 ml-4">
                                       {lightDataItem.description}
                                     </div>
                                   ) : (
@@ -387,6 +390,18 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
                                           Données d'éclairage non disponibles dans la base de données
                                     </div>
                                   )}
+
+                                    <div className="text-xl text-black flex-1 ml-4">
+                                      {lightDataItem.brand === 'Imdicar' ? (
+                                        <span className="text-lg ">
+                                          {lightDataItem.refGTI}
+                                        </span>
+                                      ) : (
+                                        <span className="text-lg ">
+                                          {lightDataItem.EAN}
+                                        </span>
+                                      )}
+                                    </div>
                                   
                                   {/* 3. Light Image */}
                                   {lightDataItem.img ? (
@@ -404,7 +419,7 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
                                     />
                                   ) : (
                                     <div className="w-24 h-24 ml-4 flex items-center justify-center text-gray-400 text-xs">
-                                             Aucune image
+                                      Aucune image disponible
                                     </div>
                                   )}
                                 </div>
@@ -425,7 +440,7 @@ const BulbProductsScreen = ({ userSelection }: BulbProductsScreenProps) => {
                               <div className="flex flex-row items-center p-3">
                                 <div className="font-semibold text-lg">{positionRef}</div>
                                 <div className="text-2xl text-orange-600 italic flex-1 ml-4">
-                                          Données d'éclairage non disponibles dans la base de données
+                                    Données d'éclairage non disponibles dans la base de données
                                 </div>
                               </div>
                             </div>

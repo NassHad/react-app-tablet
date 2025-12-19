@@ -6,7 +6,7 @@ interface InactivityTimerProps {
   totalTime?: number;
 }
 
-const InactivityTimer = ({ remainingTime, show, totalTime = 60000 }: InactivityTimerProps) => {
+const InactivityTimer = ({ remainingTime, show, totalTime = 600000 }: InactivityTimerProps) => {
   // Calculate progress percentage (0-100)
   const progress = (remainingTime / totalTime) * 100;
 
